@@ -365,6 +365,60 @@ Death → Execute composite on-death Game Action → [Spawn Death VFX → Drop L
 
 ---
 
+### Global Events
+
+Global Events are `GameEvent` ScriptableObjects that broadcast health-related information to the **entire game**. They are assigned once in the configuration asset and shared by all entities, ensuring a single authoritative source for framework-level communication.
+
+> [!WARNING]
+> Three events are **required** — the framework logs an assertion error at startup if they are missing. Assign them before entering Play Mode.
+
+#### Global Pre Damage Info Event <span style="color:red;">*</span>
+**Type:** `PreDamageGameEvent`  
+**Required:** Yes  
+**Description:** Raised before any entity takes damage and before the [damage calculation pipeline](./damage.md#damage-calculation-pipeline) runs. Carries the full `PreDamageContext` (raw amount, type, source, dealer, critical state). Subscribe to this event to implement effects that inspect or modify incoming damage, such as damage-amplifying debuffs or conditional immunity logic.
+
+#### Global Damage Resolution Event <span style="color:red;">*</span>
+**Type:** `DamageResolutionGameEvent`  
+**Required:** Yes  
+**Description:** Raised after any entity takes or ignores damage. Carries the full `DamageResolutionContext` including the outcome (`Applied` or `Prevented`), net amount, and prevention reasons. Also used internally by the framework for lifesteal resolution.
+
+#### Global Entity Died Event <span style="color:red;">*</span>
+**Type:** `EntityDiedGameEvent`  
+**Required:** Yes  
+**Description:** Raised when an entity's HP reaches the death threshold. Carries `EntityDiedContext` with the entity reference and the damage context that caused the death. Used by the [Experience Collection](experience-collection.md) system.
+
+#### Global Max Health Changed Event
+**Type:** `EntityMaxHealthChangedGameEvent`  
+**Required:** No  
+**Description:** Raised when any entity's total max HP changes (both increases and decreases). Carries `EntityMaxHealthChangedContext`. Useful for updating UI, recalculating derived stats, or triggering game-wide reactions to stat changes.
+
+#### Global Gained Health Event
+**Type:** `EntityGainedHealthGameEvent`  
+**Required:** No  
+**Description:** Raised whenever any entity gains HP (from healing, resurrection, or max HP modifier increases). Carries `EntityHealthChangedContext`.
+
+#### Global Lost Health Event
+**Type:** `EntityLostHealthGameEvent`  
+**Required:** No  
+**Description:** Raised whenever any entity loses HP (from damage, or max HP modifier decreases). Carries `EntityHealthChangedContext`.
+
+#### Global Pre Heal Event
+**Type:** `PreHealGameEvent`  
+**Required:** No  
+**Description:** Raised before any entity is healed and before healing modifiers are applied. Carries `PreHealContext` (base amount, source, healer, target). Subscribe to modify heal amounts or trigger pre-heal effects.
+
+#### Global Entity Healed Event
+**Type:** `EntityHealedGameEvent`  
+**Required:** No  
+**Description:** Raised after any entity is healed. Carries `ReceivedHealContext` with the final net heal amount after all modifiers.
+
+#### Global Entity Resurrected Event
+**Type:** `EntityResurrectedGameEvent`  
+**Required:** No  
+**Description:** Raised after any entity is resurrected. Carries `ResurrectionContext` with HP before and after resurrection.
+
+---
+
 ## Troubleshooting
 
 ### "No Configuration found!" error

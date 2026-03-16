@@ -59,15 +59,12 @@ Events are, by default, collapsed as there are many of them and they would expan
 
 In the image, you see already assigned events, but when you first add the component, all events will be unassigned and empty.
 
-Let's start by introducing the difference between _Global Events_ and _Extra Events_.
+The `EntityHealth` events are split into two categories: _Global Events_ and _Extra Events_.
 
 ### Global Events
-Global Events are fundamental events that transmit important information to the whole framework. Events assigned to these slots must have a global scope, i.e., they must be able to be listened to by any entity or system in the game.
-These events are used by the framework to handle essential features, such as lifesteal and other mechanics that require centralized communication between the various parts of the system.
+Global Events broadcast health-related information to the entire game and are configured once at the project level in the [AstraRpgHealthConfig](package-configuration.md#global-events) asset — not per entity on `EntityHealth`. This guarantees a single authoritative source for framework-level communication and eliminates the risk of misconfiguration caused by different entities referencing different event assets.
 
-> [!WARNING]
-> Reserving these slots for events of a global nature is fundamental to ensure the correct functioning of the framework.
-> Assigning Game Event instances that are specific to one or a few entities would involve operating problems at the framework level.
+The framework uses several global events internally: for example, the _Damage Resolution_ event powers lifesteal, and the _Entity Died_ event is what experience collectors listen to for XP awards. See [Global Events](package-configuration.md#global-events) in Package Configuration for the full reference, including which events are required and which framework features depend on each.
 
 ### Extra Events
 Extra Events, instead, are designed to transmit information to specific components or a restricted circle of entities. A practical example is the communication between the player's EntityHealth and the HUD displaying their HP: only the player possesses a dedicated HUD, so it is useful to assign an exclusive event for this interaction. In this way, the GameEvent associated with the player's EntityHealth is listened to only by the HUD, guaranteeing clear compartmentation and greater efficiency. Thus, the HUD does not receive events from all entities, but only those relevant to the player.

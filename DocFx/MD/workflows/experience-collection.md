@@ -2,10 +2,10 @@
 
 _Experience collection_ is the mechanism through which entities earn experience points when they contribute to enemy kills (or entities deaths in general in some cases). In Astra RPG Health, the system revolves around two actors: the _collector_, the entity that receives experience, and the _victim_, the entity that dies and provides it.
 
-When a victim dies, its `EntityHealth` raises a global [EntityDied](entity-health.md#global-events) event. Any `ExpCollector` component listening to that event evaluates its configured strategy to determine whether XP should be awarded — and if so, extracts the XP amount from the victim and forwards it to the collector's `EntityLevel`. The entire validation and collection logic lives inside a dedicated _Experience Collection Strategy_ asset, making it straightforward to swap, extend, or compose strategies without touching any component code.
+When a victim dies, its `EntityHealth` raises the [Global Entity Died](package-configuration.md#global-entity-died-event) event. Any `ExpCollector` component listening to that event evaluates its configured strategy to determine whether XP should be awarded — and if so, extracts the XP amount from the victim and forwards it to the collector's `EntityLevel`. The entire validation and collection logic lives inside a dedicated _Experience Collection Strategy_ asset, making it straightforward to swap, extend, or compose strategies without touching any component code.
 
 > [!IMPORTANT]
-> Experience collection relies on the global `EntityDied` event being correctly configured on each entity's `EntityHealth`. Without it, `ExpCollector` will never be notified of kills. See [Global Events](entity-health.md#global-events) for the setup details.
+> Experience collection relies on the **Global Entity Died** event configured in your `AstraRpgHealthConfigSO`. Ensure this event is assigned before entering Play Mode — without it, `ExpCollector` will never be notified of kills. See [Global Entity Died Event](package-configuration.md#global-entity-died-event) for details.
 
 ## Prerequisites
 
@@ -23,18 +23,10 @@ On the **collector** entity:
 
 `ExpCollector` is the component that bridges the global death event and the configured strategy. Add it to any entity that should receive XP from kills.
 
-Because `ExpCollector` carries `[RequireComponent(typeof(EntityDiedGameEventListener))]`, Unity automatically attaches an `EntityDiedGameEventListener` to the same GameObject when you add `ExpCollector`. This listener is what connects the global `EntityDied` event to the component's logic.
+`ExpCollector` automatically subscribes to the [Global Entity Died Event](package-configuration.md#global-entity-died-event) configured in `AstraRpgHealthConfigSO` — no manual event wiring is required. Whenever any entity dies, the component evaluates its configured strategy to determine whether XP should be awarded.
 
 The following image shows the `ExpCollector` inspector:  
-![ExpCollector status boxes](../../images/AstraRPG/workflows/experience-collection/exp-collector.png)
-
-Once both components are on the GameObject, two things must be wired manually in the inspector:
-
-1. On the `EntityDiedGameEventListener`, assign the **global `EntityDied` game event SO** to its **Event** field. This must be the same event asset that is assigned to each `EntityHealth` in the scene — that is what makes the listener fire when any entity dies.
-2. On the **Response** UnityEvent of the `EntityDiedGameEventListener`, add a callback and wire it to `ExpCollector.CheckCollectKillExp`. You should find it under the `Dynamic EntityDiedContext` section of the context menu.
-
-> [!NOTE]
-> The event wiring described above is fully manual and must be done in the inspector. An automatic setup will be evaluated for a future release.
+![ExpCollector inspector](../../images/AstraRPG/workflows/experience-collection/exp-collector.png)
 
 **Custom Exp Collection Strategy** is the optional per-entity override. Assign a strategy here to give this specific collector its own behavior — for example, a boss that earns XP only from specific kill types, or a trap system with its own award logic. When left empty, the collector falls back to the project-wide default configured in `AstraRpgHealthConfigSO` (see [Default Strategy in Package Configuration](#default-strategy-in-package-configuration)).
 
