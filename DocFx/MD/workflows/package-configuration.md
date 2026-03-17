@@ -123,6 +123,10 @@ If for any reason you need to create a new `AstraRpgHealthConfigSO` asset, you c
 
 ---
 
+The red asterisks (<span style="color:red;">*</span>) indicate fields that are required for the system to function properly. Make sure to assign them before entering Play Mode to avoid runtime errors.
+
+---
+
 ## Health Configuration Reference
 > [!NOTE]
 > In the `AstraRpgHealthConfigSO` asset, you can hover over each field to see a tooltip with a brief description.
@@ -327,7 +331,7 @@ See also: [Experience Collection](./experience-collection.md)
 
 ### Death
 
-#### Default On Death Game Action
+#### Default On Death Game Action <span style="color:red;">*</span>
 **Type:** `GameAction`  
 **Required:** Yes  
 **Description:** The game action executed when an entity dies (if the entity doesn't have its own on-death game action). Use a composite game action to chain multiple effects.
@@ -353,7 +357,7 @@ Death → Execute composite on-death Game Action → [Spawn Death VFX → Drop L
 - **Resurrection VFX** - Plays visual effects during resurrection
 - **Stat Penalties** - Applies temporary debuffs after resurrection
 
-#### Default Resurrection Source
+#### Default Resurrection Source <span style="color:red;">*</span>
 **Type:** `HealSourceSO`  
 **Required:** Yes  
 **Description:** The heal source used when an entity is resurrected via convenience overload `Resurrect` methods, or via the built-in [Resurrect Game Action](resurrection.md#the-resurrect-game-action).

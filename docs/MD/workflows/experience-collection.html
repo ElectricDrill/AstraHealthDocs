@@ -88,10 +88,10 @@
 <h1 id="experience-collection">Experience Collection</h1>
 
 <p><em>Experience collection</em> is the mechanism through which entities earn experience points when they contribute to enemy kills (or entities deaths in general in some cases). In Astra RPG Health, the system revolves around two actors: the <em>collector</em>, the entity that receives experience, and the <em>victim</em>, the entity that dies and provides it.</p>
-<p>When a victim dies, its <code>EntityHealth</code> raises a global <a href="entity-health.html#global-events">EntityDied</a> event. Any <code>ExpCollector</code> component listening to that event evaluates its configured strategy to determine whether XP should be awarded — and if so, extracts the XP amount from the victim and forwards it to the collector's <code>EntityLevel</code>. The entire validation and collection logic lives inside a dedicated <em>Experience Collection Strategy</em> asset, making it straightforward to swap, extend, or compose strategies without touching any component code.</p>
+<p>When a victim dies, its <code>EntityHealth</code> raises the <a href="package-configuration.html#global-entity-died-event-">Global Entity Died</a> event. Any <code>ExpCollector</code> component listening to that event evaluates its configured strategy to determine whether XP should be awarded — and if so, extracts the XP amount from the victim and forwards it to the collector's <code>EntityLevel</code>. The entire validation and collection logic lives inside a dedicated <em>Experience Collection Strategy</em> asset, making it straightforward to swap, extend, or compose strategies without touching any component code.</p>
 <div class="IMPORTANT">
 <h5>Important</h5>
-<p>Experience collection relies on the global <code>EntityDied</code> event being correctly configured on each entity's <code>EntityHealth</code>. Without it, <code>ExpCollector</code> will never be notified of kills. See <a href="entity-health.html#global-events">Global Events</a> for the setup details.</p>
+<p>Experience collection relies on the <strong>Global Entity Died</strong> event configured in your <code>AstraRpgHealthConfigSO</code>. Ensure this event is assigned before entering Play Mode — without it, <code>ExpCollector</code> will never be notified of kills. See <a href="package-configuration.html#global-entity-died-event-">Global Entity Died Event</a> for details.</p>
 </div>
 <h2 id="prerequisites">Prerequisites</h2>
 <p>Before setting up experience collection, ensure the following are in place.</p>
@@ -105,18 +105,9 @@
 </ul>
 <h2 id="setting-up-the-exp-collector">Setting Up the Exp Collector</h2>
 <p><code>ExpCollector</code> is the component that bridges the global death event and the configured strategy. Add it to any entity that should receive XP from kills.</p>
-<p>Because <code>ExpCollector</code> carries <code>[RequireComponent(typeof(EntityDiedGameEventListener))]</code>, Unity automatically attaches an <code>EntityDiedGameEventListener</code> to the same GameObject when you add <code>ExpCollector</code>. This listener is what connects the global <code>EntityDied</code> event to the component's logic.</p>
+<p><code>ExpCollector</code> automatically subscribes to the <a href="package-configuration.html#global-entity-died-event-">Global Entity Died Event</a> configured in <code>AstraRpgHealthConfigSO</code> — no manual event wiring is required. Whenever any entity dies, the component evaluates its configured strategy to determine whether XP should be awarded.</p>
 <p>The following image shows the <code>ExpCollector</code> inspector:<br>
-<img src="../../images/AstraRPG/workflows/experience-collection/exp-collector.png" alt="ExpCollector status boxes"></p>
-<p>Once both components are on the GameObject, two things must be wired manually in the inspector:</p>
-<ol>
-<li>On the <code>EntityDiedGameEventListener</code>, assign the <strong>global <code>EntityDied</code> game event SO</strong> to its <strong>Event</strong> field. This must be the same event asset that is assigned to each <code>EntityHealth</code> in the scene — that is what makes the listener fire when any entity dies.</li>
-<li>On the <strong>Response</strong> UnityEvent of the <code>EntityDiedGameEventListener</code>, add a callback and wire it to <code>ExpCollector.CheckCollectKillExp</code>. You should find it under the <code>Dynamic EntityDiedContext</code> section of the context menu.</li>
-</ol>
-<div class="NOTE">
-<h5>Note</h5>
-<p>The event wiring described above is fully manual and must be done in the inspector. An automatic setup will be evaluated for a future release.</p>
-</div>
+<img src="../../images/AstraRPG/workflows/experience-collection/exp-collector.png" alt="ExpCollector inspector"></p>
 <p><strong>Custom Exp Collection Strategy</strong> is the optional per-entity override. Assign a strategy here to give this specific collector its own behavior — for example, a boss that earns XP only from specific kill types, or a trap system with its own award logic. When left empty, the collector falls back to the project-wide default configured in <code>AstraRpgHealthConfigSO</code> (see <a href="#default-strategy-in-package-configuration">Default Strategy in Package Configuration</a>).</p>
 <h3 id="inspector-status-box">Inspector Status Box</h3>
 <p>The custom <code>ExpCollector</code> inspector includes a status indicator that shows at a glance whether an active strategy is in place:</p>

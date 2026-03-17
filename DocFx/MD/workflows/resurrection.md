@@ -14,7 +14,7 @@ Before resurrection can be triggered, two fields in the `AstraRpgHealthConfigSO`
 
 The `HealSourceSO` used automatically by the convenience `Resurrect` overloads and by the built-in [Resurrect Game Action](#the-resurrect-game-action) when no explicit source is provided. It categorises resurrection healing as a distinct type, enabling `HealSourceSO`-specific modifiers to apply. Without this field assigned, the convenience overloads fail at runtime with an assertion error.
 
-See [Heal Source](healing.md#heal-source) for guidance on configuring `HealSourceSO` assets and [Default Resurrection Source](package-configuration.md#default-resurrection-source) in the Package Configuration reference.
+See [Heal Source](healing.md#heal-source) for guidance on configuring `HealSourceSO` assets and [Default Resurrection Source](package-configuration.md#default-resurrection-source-) in the Package Configuration reference.
 
 ### Default On Resurrection Game Action
 

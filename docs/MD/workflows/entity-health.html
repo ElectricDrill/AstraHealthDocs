@@ -121,7 +121,7 @@ Also recall that a default strategy can be assigned via configuration. See <a hr
 <ul>
 <li><strong>Health Can Be Negative</strong>: Boolean indicating whether the entity's health points can drop below 0 before dying. If disabled, the entity's health points will never drop below 0, and the entity will die as soon as its health points reach 0. If enabled, the entity's health points can drop below 0, and the entity will die only when its health points reach a specified negative value (Death Threshold).</li>
 <li><strong>Death Threshold</strong>: LongRef representing the entity's death threshold. Visible only if &quot;Health Can Be Negative&quot; is enabled. If the entity's health points reach this threshold, the entity dies.</li>
-<li><strong>Override On Death Game Action</strong>: <a href="https://electricdrill.github.io/AstraRpgFrameworkDocs/MD/workflows.html#game-actions">Game Action</a> that is automatically executed when the entity dies. If defined, this takes precedence over the one defined <a href="package-configuration.html#default-on-death-game-action">in the configuration</a>. Useful for implementing special behaviors upon an entity's death (for example, entities that explode upon death dealing area damage).</li>
+<li><strong>Override On Death Game Action</strong>: <a href="https://electricdrill.github.io/AstraRpgFrameworkDocs/MD/workflows.html#game-actions">Game Action</a> that is automatically executed when the entity dies. If defined, this takes precedence over the one defined <a href="package-configuration.html#default-on-death-game-action-">in the configuration</a>. Useful for implementing special behaviors upon an entity's death (for example, entities that explode upon death dealing area damage).</li>
 <li><strong>Override On Resurrection Game Action</strong>: <a href="https://electricdrill.github.io/AstraRpgFrameworkDocs/MD/workflows.html#game-actions">Game Action</a> that is automatically executed when the entity is resurrected. If defined, this takes precedence over the one defined <a href="package-configuration.html#default-on-resurrection-game-action">in the configuration</a>. Useful for implementing special behaviors upon an entity's resurrection.</li>
 </ul>
 <h2 id="damage-vs-removehealth-and-heal-vs-addhealth">Damage vs RemoveHealth and Heal vs AddHealth</h2>
@@ -141,15 +141,10 @@ Unsurprisingly, <code>Heal</code> and <code>TakeDamage</code> internally use <co
 <p>Events are, by default, collapsed as there are many of them and they would expand excessively in the inspector. By opening them, we should see something like this:<br>
 <img src="../../images/AstraRPG/workflows/entity-health/entity-health-events-section.png" alt="EntityHealth Events"></p>
 <p>In the image, you see already assigned events, but when you first add the component, all events will be unassigned and empty.</p>
-<p>Let's start by introducing the difference between <em>Global Events</em> and <em>Extra Events</em>.</p>
+<p>The <code>EntityHealth</code> events are split into two categories: <em>Global Events</em> and <em>Extra Events</em>.</p>
 <h3 id="global-events">Global Events</h3>
-<p>Global Events are fundamental events that transmit important information to the whole framework. Events assigned to these slots must have a global scope, i.e., they must be able to be listened to by any entity or system in the game.
-These events are used by the framework to handle essential features, such as lifesteal and other mechanics that require centralized communication between the various parts of the system.</p>
-<div class="WARNING">
-<h5>Warning</h5>
-<p>Reserving these slots for events of a global nature is fundamental to ensure the correct functioning of the framework.
-Assigning Game Event instances that are specific to one or a few entities would involve operating problems at the framework level.</p>
-</div>
+<p>Global Events broadcast health-related information to the entire game and are configured once at the project level in the <a href="package-configuration.html#global-events">AstraRpgHealthConfig</a> asset — not per entity on <code>EntityHealth</code>. This guarantees a single authoritative source for framework-level communication and eliminates the risk of misconfiguration caused by different entities referencing different event assets.</p>
+<p>The framework uses several global events internally: for example, the <em>Damage Resolution</em> event powers lifesteal, and the <em>Entity Died</em> event is what experience collectors listen to for XP awards. See <a href="package-configuration.html#global-events">Global Events</a> in Package Configuration for the full reference, including which events are required and which framework features depend on each.</p>
 <h3 id="extra-events">Extra Events</h3>
 <p>Extra Events, instead, are designed to transmit information to specific components or a restricted circle of entities. A practical example is the communication between the player's EntityHealth and the HUD displaying their HP: only the player possesses a dedicated HUD, so it is useful to assign an exclusive event for this interaction. In this way, the GameEvent associated with the player's EntityHealth is listened to only by the HUD, guaranteeing clear compartmentation and greater efficiency. Thus, the HUD does not receive events from all entities, but only those relevant to the player.</p>
 <h3 id="events-breakdown">Events Breakdown</h3>

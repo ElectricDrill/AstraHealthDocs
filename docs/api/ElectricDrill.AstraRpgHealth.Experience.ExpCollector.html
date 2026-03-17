@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Class ExpCollector | Astra RPG Health ">
       
-      <meta name="description" content="Collects experience when this entity deals killing blows. Requires an  on the GameObject. Uses a configurable  to determine when and how experience is collected. If no custom strategy is assigned, falls back to the default strategy from .">
+      <meta name="description" content="Collects experience when this entity contributes to enemy kills. Subscribes automatically to the global  configured in , so no manual event wiring is required. Uses a configurable  to determine when and how experience is collected. If no custom strategy is assigned, falls back to the default strategy from .">
       <link rel="icon" href="../images/astra-health-ico.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -89,7 +89,7 @@
 
 
   <h1 id="ElectricDrill_AstraRpgHealth_Experience_ExpCollector" data-uid="ElectricDrill.AstraRpgHealth.Experience.ExpCollector" class="text-break">
-Class ExpCollector  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/Experience/ExpCollector.cs/#L14"><i class="bi bi-code-slash"></i></a>
+Class ExpCollector  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/Experience/ExpCollector.cs/#L16"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -97,16 +97,17 @@ Class ExpCollector  <a class="header-action link-secondary" title="View source" 
   <dl><dt>Assembly</dt><dd>com.electricdrill.astra-rpg-health.Runtime.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>Collects experience when this entity deals killing blows.
-Requires an <a class="xref" href="ElectricDrill.AstraRpgHealth.Events.EntityDiedGameEventListener.html">EntityDiedGameEventListener</a> on the GameObject.
-Uses a configurable <a class="xref" href="ElectricDrill.AstraRpgHealth.Experience.ExpCollectionStrategySO.html">ExpCollectionStrategySO</a> to determine when and how experience is collected.
-If no custom strategy is assigned, falls back to the default strategy from <a class="xref" href="ElectricDrill.AstraRpgHealth.Config.IAstraRpgHealthConfig.html">IAstraRpgHealthConfig</a>.</p>
+  <div class="markdown summary"><p>Collects experience when this entity contributes to enemy kills.
+Subscribes automatically to the global <a class="xref" href="ElectricDrill.AstraRpgHealth.Events.EntityDiedGameEvent.html">EntityDiedGameEvent</a> configured in
+<a class="xref" href="ElectricDrill.AstraRpgHealth.Config.IAstraRpgHealthConfig.html">IAstraRpgHealthConfig</a>, so no manual event wiring is required.
+Uses a configurable <a class="xref" href="ElectricDrill.AstraRpgHealth.Experience.ExpCollectionStrategySO.html">ExpCollectionStrategySO</a> to determine when and how
+experience is collected. If no custom strategy is assigned, falls back to the default
+strategy from <a class="xref" href="ElectricDrill.AstraRpgHealth.Config.IAstraRpgHealthConfig.html">IAstraRpgHealthConfig</a>.</p>
 </div>
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[RequireComponent(typeof(EntityDiedGameEventListener))]
-public class ExpCollector : MonoBehaviour</code></pre>
+    <pre><code class="lang-csharp hljs">public class ExpCollector : MonoBehaviour</code></pre>
   </div>
 
 
@@ -140,7 +141,7 @@ public class ExpCollector : MonoBehaviour</code></pre>
 
   <h3 id="ElectricDrill_AstraRpgHealth_Experience_ExpCollector_ActiveStrategy" data-uid="ElectricDrill.AstraRpgHealth.Experience.ExpCollector.ActiveStrategy">
   ActiveStrategy
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/Experience/ExpCollector.cs/#L26"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/Experience/ExpCollector.cs/#L27"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the active experience collection strategy.
@@ -161,44 +162,6 @@ Returns the custom strategy if assigned, otherwise the default from configuratio
     <dt><a class="xref" href="ElectricDrill.AstraRpgHealth.Experience.ExpCollectionStrategySO.html">ExpCollectionStrategySO</a></dt>
     <dd></dd>
   </dl>
-
-
-
-
-
-
-
-
-  <h2 class="section" id="methods">Methods
-</h2>
-
-
-  <a id="ElectricDrill_AstraRpgHealth_Experience_ExpCollector_CheckCollectKillExp_" data-uid="ElectricDrill.AstraRpgHealth.Experience.ExpCollector.CheckCollectKillExp*"></a>
-
-  <h3 id="ElectricDrill_AstraRpgHealth_Experience_ExpCollector_CheckCollectKillExp_ElectricDrill_AstraRpgHealth_Events_EntityDiedContext_" data-uid="ElectricDrill.AstraRpgHealth.Experience.ExpCollector.CheckCollectKillExp(ElectricDrill.AstraRpgHealth.Events.EntityDiedContext)">
-  CheckCollectKillExp(EntityDiedContext)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/Experience/ExpCollector.cs/#L40"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"><p>Attempts to collect experience from an entity that died.
-Delegates all validation, extraction, calculation, and collection logic to the active strategy.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void CheckCollectKillExp(EntityDiedContext context)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>context</code> <a class="xref" href="ElectricDrill.AstraRpgHealth.Events.EntityDiedContext.html">EntityDiedContext</a></dt>
-    <dd><p>The context of the entity death event.</p>
-</dd>
-  </dl>
-
-
-
-
 
 
 

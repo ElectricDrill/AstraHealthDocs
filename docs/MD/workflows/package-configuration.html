@@ -203,6 +203,8 @@ AstraRpgHealthConfigProvider.Reset();
 <li>Assign it in Project Settings or in the Global Settings asset</li>
 </ol>
 <hr>
+<p>The red asterisks (<span style="color:red;">*</span>) indicate fields that are required for the system to function properly. Make sure to assign them before entering Play Mode to avoid runtime errors.</p>
+<hr>
 <h2 id="health-configuration-reference">Health Configuration Reference</h2>
 <div class="NOTE">
 <h5>Note</h5>
@@ -409,7 +411,7 @@ entityHealth.ManualHealthRegenerationTick();
 <p>See also: <a href="experience-collection.html">Experience Collection</a></p>
 <hr>
 <h3 id="death">Death</h3>
-<h4 id="default-on-death-game-action">Default On Death Game Action</h4>
+<h4 id="default-on-death-game-action-">Default On Death Game Action <span style="color:red;">*</span></h4>
 <p><strong>Type:</strong> <code>GameAction</code><br>
 <strong>Required:</strong> Yes<br>
 <strong>Description:</strong> The game action executed when an entity dies (if the entity doesn't have its own on-death game action). Use a composite game action to chain multiple effects.</p>
@@ -433,7 +435,7 @@ entityHealth.ManualHealthRegenerationTick();
 <li><strong>Resurrection VFX</strong> - Plays visual effects during resurrection</li>
 <li><strong>Stat Penalties</strong> - Applies temporary debuffs after resurrection</li>
 </ul>
-<h4 id="default-resurrection-source">Default Resurrection Source</h4>
+<h4 id="default-resurrection-source-">Default Resurrection Source <span style="color:red;">*</span></h4>
 <p><strong>Type:</strong> <code>HealSourceSO</code><br>
 <strong>Required:</strong> Yes<br>
 <strong>Description:</strong> The heal source used when an entity is resurrected via convenience overload <code>Resurrect</code> methods, or via the built-in <a href="resurrection.html#the-resurrect-game-action">Resurrect Game Action</a>.</p>
@@ -443,6 +445,49 @@ entityHealth.ManualHealthRegenerationTick();
 <li>Allows effects like &quot;Increase Resurrection Healing by 50%&quot;</li>
 <li>Used for analytics and gameplay feedback</li>
 </ul>
+<hr>
+<h3 id="global-events">Global Events</h3>
+<p>Global Events are <code>GameEvent</code> ScriptableObjects that broadcast health-related information to the <strong>entire game</strong>. They are assigned once in the configuration asset and shared by all entities, ensuring a single authoritative source for framework-level communication.</p>
+<div class="WARNING">
+<h5>Warning</h5>
+<p>Three events are <strong>required</strong> — the framework logs an assertion error at startup if they are missing. Assign them before entering Play Mode.</p>
+</div>
+<h4 id="global-pre-damage-info-event-">Global Pre Damage Info Event <span style="color:red;">*</span></h4>
+<p><strong>Type:</strong> <code>PreDamageGameEvent</code><br>
+<strong>Required:</strong> Yes<br>
+<strong>Description:</strong> Raised before any entity takes damage and before the <a href="damage.html#damage-calculation-pipeline">damage calculation pipeline</a> runs. Carries the full <code>PreDamageContext</code> (raw amount, type, source, dealer, critical state). Subscribe to this event to implement effects that inspect or modify incoming damage, such as damage-amplifying debuffs or conditional immunity logic.</p>
+<h4 id="global-damage-resolution-event-">Global Damage Resolution Event <span style="color:red;">*</span></h4>
+<p><strong>Type:</strong> <code>DamageResolutionGameEvent</code><br>
+<strong>Required:</strong> Yes<br>
+<strong>Description:</strong> Raised after any entity takes or ignores damage. Carries the full <code>DamageResolutionContext</code> including the outcome (<code>Applied</code> or <code>Prevented</code>), net amount, and prevention reasons. Also used internally by the framework for lifesteal resolution.</p>
+<h4 id="global-entity-died-event-">Global Entity Died Event <span style="color:red;">*</span></h4>
+<p><strong>Type:</strong> <code>EntityDiedGameEvent</code><br>
+<strong>Required:</strong> Yes<br>
+<strong>Description:</strong> Raised when an entity's HP reaches the death threshold. Carries <code>EntityDiedContext</code> with the entity reference and the damage context that caused the death. Used by the <a href="experience-collection.html">Experience Collection</a> system.</p>
+<h4 id="global-max-health-changed-event">Global Max Health Changed Event</h4>
+<p><strong>Type:</strong> <code>EntityMaxHealthChangedGameEvent</code><br>
+<strong>Required:</strong> No<br>
+<strong>Description:</strong> Raised when any entity's total max HP changes (both increases and decreases). Carries <code>EntityMaxHealthChangedContext</code>. Useful for updating UI, recalculating derived stats, or triggering game-wide reactions to stat changes.</p>
+<h4 id="global-gained-health-event">Global Gained Health Event</h4>
+<p><strong>Type:</strong> <code>EntityGainedHealthGameEvent</code><br>
+<strong>Required:</strong> No<br>
+<strong>Description:</strong> Raised whenever any entity gains HP (from healing, resurrection, or max HP modifier increases). Carries <code>EntityHealthChangedContext</code>.</p>
+<h4 id="global-lost-health-event">Global Lost Health Event</h4>
+<p><strong>Type:</strong> <code>EntityLostHealthGameEvent</code><br>
+<strong>Required:</strong> No<br>
+<strong>Description:</strong> Raised whenever any entity loses HP (from damage, or max HP modifier decreases). Carries <code>EntityHealthChangedContext</code>.</p>
+<h4 id="global-pre-heal-event">Global Pre Heal Event</h4>
+<p><strong>Type:</strong> <code>PreHealGameEvent</code><br>
+<strong>Required:</strong> No<br>
+<strong>Description:</strong> Raised before any entity is healed and before healing modifiers are applied. Carries <code>PreHealContext</code> (base amount, source, healer, target). Subscribe to modify heal amounts or trigger pre-heal effects.</p>
+<h4 id="global-entity-healed-event">Global Entity Healed Event</h4>
+<p><strong>Type:</strong> <code>EntityHealedGameEvent</code><br>
+<strong>Required:</strong> No<br>
+<strong>Description:</strong> Raised after any entity is healed. Carries <code>ReceivedHealContext</code> with the final net heal amount after all modifiers.</p>
+<h4 id="global-entity-resurrected-event">Global Entity Resurrected Event</h4>
+<p><strong>Type:</strong> <code>EntityResurrectedGameEvent</code><br>
+<strong>Required:</strong> No<br>
+<strong>Description:</strong> Raised after any entity is resurrected. Carries <code>ResurrectionContext</code> with HP before and after resurrection.</p>
 <hr>
 <h2 id="troubleshooting">Troubleshooting</h2>
 <h3 id="no-configuration-found-error">&quot;No Configuration found!&quot; error</h3>

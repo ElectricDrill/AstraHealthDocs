@@ -103,10 +103,12 @@ Derive from this class to create custom experience collection logic.</p>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="ElectricDrill.AstraRpgHealth.Experience.ExpCollector.html">ExpCollector</a></dt>
-      <dd><p>Collects experience when this entity deals killing blows.
-Requires an <a class="xref" href="ElectricDrill.AstraRpgHealth.Events.EntityDiedGameEventListener.html">EntityDiedGameEventListener</a> on the GameObject.
-Uses a configurable <a class="xref" href="ElectricDrill.AstraRpgHealth.Experience.ExpCollectionStrategySO.html">ExpCollectionStrategySO</a> to determine when and how experience is collected.
-If no custom strategy is assigned, falls back to the default strategy from <a class="xref" href="ElectricDrill.AstraRpgHealth.Config.IAstraRpgHealthConfig.html">IAstraRpgHealthConfig</a>.</p>
+      <dd><p>Collects experience when this entity contributes to enemy kills.
+Subscribes automatically to the global <a class="xref" href="ElectricDrill.AstraRpgHealth.Events.EntityDiedGameEvent.html">EntityDiedGameEvent</a> configured in
+<a class="xref" href="ElectricDrill.AstraRpgHealth.Config.IAstraRpgHealthConfig.html">IAstraRpgHealthConfig</a>, so no manual event wiring is required.
+Uses a configurable <a class="xref" href="ElectricDrill.AstraRpgHealth.Experience.ExpCollectionStrategySO.html">ExpCollectionStrategySO</a> to determine when and how
+experience is collected. If no custom strategy is assigned, falls back to the default
+strategy from <a class="xref" href="ElectricDrill.AstraRpgHealth.Config.IAstraRpgHealthConfig.html">IAstraRpgHealthConfig</a>.</p>
 </dd>
     </dl>
 
