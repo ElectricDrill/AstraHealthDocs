@@ -57,9 +57,9 @@ In 99% of cases, you will use `Heal` and `TakeDamage` to apply healing and damag
 Events are, by default, collapsed as there are many of them and they would expand excessively in the inspector. By opening them, we should see something like this:  
 ![EntityHealth Events](../../images/AstraRPG/workflows/entity-health/entity-health-events-section.png)
 
-In the image, you see already assigned events, but when you first add the component, all events will be unassigned and empty.
+In the image, you don't see any assigned event. Therefore, this is the view of the inspector you should get when you freshly add the `EntityHealth` component to an entity.
 
-The `EntityHealth` events are split into two categories: _Global Events_ and _Extra Events_.
+Through `EntityHealth` we can assign _Extra Events_. However, for each event type (e.g., Pre Damage Info Event, Entity Died Event, etc.) you should know that there are two categories: Global Events and Extra Events.
 
 ### Global Events
 Global Events broadcast health-related information to the entire game and are configured once at the project level in the [AstraRpgHealthConfig](package-configuration.md#global-events) asset — not per entity on `EntityHealth`. This guarantees a single authoritative source for framework-level communication and eliminates the risk of misconfiguration caused by different entities referencing different event assets.
@@ -67,7 +67,9 @@ Global Events broadcast health-related information to the entire game and are co
 The framework uses several global events internally: for example, the _Damage Resolution_ event powers lifesteal, and the _Entity Died_ event is what experience collectors listen to for XP awards. See [Global Events](package-configuration.md#global-events) in Package Configuration for the full reference, including which events are required and which framework features depend on each.
 
 ### Extra Events
-Extra Events, instead, are designed to transmit information to specific components or a restricted circle of entities. A practical example is the communication between the player's EntityHealth and the HUD displaying their HP: only the player possesses a dedicated HUD, so it is useful to assign an exclusive event for this interaction. In this way, the GameEvent associated with the player's EntityHealth is listened to only by the HUD, guaranteeing clear compartmentation and greater efficiency. Thus, the HUD does not receive events from all entities, but only those relevant to the player.
+Extra Events, instead, are designed to transmit information to specific components, to a single entity, or to a restricted circle of entities. A practical example is the communication between the player's EntityHealth and the HUD displaying their HP: only the player possesses a dedicated HUD, so it is useful to assign an exclusive event for this interaction. In this way, the GameEvent associated with the player's EntityHealth is listened to only by the HUD, guaranteeing clear compartmentation and greater efficiency. Thus, the HUD does not receive events from all entities, but only those relevant to the player.
+
+These events are assigned directly on the `EntityHealth` component. For each event type, you can assign multiple Extra Events, which will be raised simultaneously along with the corresponding Global Event when the relevant action occurs (e.g., the entity takes damage, the entity dies, etc.).
 
 ### Events Breakdown
 Here is a detailed description of each event. Each type of event has both the global event and a list of extra events, but it is sufficient to describe each event once.
