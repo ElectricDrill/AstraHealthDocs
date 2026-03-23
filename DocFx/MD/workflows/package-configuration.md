@@ -34,7 +34,7 @@ The package automatically creates the Global Settings asset on first import or w
 
 ### Project Settings
 
-You can manage the health system configuration through Unity's Project Settings window:
+You can manage the package configuration through Unity's Project Settings window:
 
 1. Open **Edit → Project Settings**
 2. Navigate to **Astra RPG Health**
@@ -47,6 +47,10 @@ You can manage the health system configuration through Unity's Project Settings 
 
 **Quick Actions:**
 - **Create New Config Asset** - Opens a save dialog to create a new configuration
+
+### Manual Configuration (alternative to Project Settings)
+
+You can also manage the package configuration manually by directly editing the `AstraRpgHealthGlobalSettings` asset in the `Assets/Resources` folder. This approach allows you to assign a specific `AstraRpgHealthConfigSO` asset without using the Project Settings window.
 
 ### Convention Over Configuration
 
