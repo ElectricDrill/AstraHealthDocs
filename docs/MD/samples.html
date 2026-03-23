@@ -87,6 +87,112 @@
         <article data-uid="">
 <h1 id="samples">Samples</h1>
 
+<h2 id="no-more-utils-folder">No More Utils Folder</h2>
+<p>Diversamente da Astra RPG Framework, in questo package non troverete una cartella <code>Utils</code> tra i vari samples. Ho preso questa decisione perche' ritengo che sia piu' saggio e robusto lasciare che siate voi crearvi le vostre istanze. Questo perche' se costruite il vostro progetto attorno alle istanze che vi fornisco nei samples, e poi decidete di importare una nuova versione del package e reimportare i samples, rischiate di fare confusione su quali istanze di quale versione state attualmente usando per il vostro progetto. Lasciandovi creare a voi tutte le istanze degli oggetti del framework questa problematica viene completamente evitata.<br>
+Inoltre, le istanze presenti nei samples della scena di esempio sono marchiati con un suffisso <code>(Astra Health Samples)</code> che li rende facilmente identificabili e distinguibili da eventuali istanze che potreste creare voi per il vostro progetto.</p>
+<p>Se volete prendere ispirazione dalle istanze presenti nei samples, potete farlo tranquillamente, ma vi consiglio di creare nuove istanze per il vostro progetto, in modo da evitare qualsiasi confusione futura.</p>
+<h2 id="examples-folder---overview">Examples Folder - Overview</h2>
+<p>All'interno della cartella <code>Examples</code> troverete una scena di esempio: e' il vostro sandbox per provare le funzionalita' di Astra RPG Health. Rispetto a quella minimale di Astra RPG Framework, questa scena ha piu' contenuti e funzionalita' da esplorare.
+La scena copre tutte le funzionalita' principali di Astra RPG Health:</p>
+<ul>
+<li>Health System</li>
+<li>Damage Types</li>
+<li>Damage Sources</li>
+<li>Damage Reduction</li>
+<li>Defense Penetration</li>
+<li>Healing System</li>
+<li>Heal and Damage Modifiers</li>
+<li>Passive Regeneration</li>
+<li>Resurrection System</li>
+<li>Event System</li>
+<li>Health Scaling Component</li>
+<li>Experience Collection System</li>
+</ul>
+<h3 id="the-scene---overview">The Scene - Overview</h3>
+<p><img src="../images/AstraRPG/samples/scene-overview.png" alt="Screenshot of the sample scene"><br>
+<em>Sample scene as you enter in play mode</em></p>
+<p>Se aprite e avviate la scena di esempio, vedrete un combattente stilizzato sulla sinistra (Duelist) e un manichino sulla destra (Dummy). Senza troppe sorprese, potrete scatenare l'ira del vostro personaggio contro il povero manichino al fine di testare le funzionalita' di Astra RPG Health.
+Prima di prendercela con il manichino, diamo un'occhiata al resto della scena. Sopra il duelist c'e' un pannello contenente il nome del personaggio, il livello, l'eventuale classe, l'health bar, e infine i valori delle statistiche del personaggio. Un analogo pannello e' presente sopra il manichino. Potete scorrere con la rotellina del mouse su questi pannelli per visualizzare tutte le statistiche. Noterete che a differenza della scena di esempio di Astra RPG Framework, in questa scena i pannelli non mostrano gli attributi. Questo perche' ho volontariamente escluso il loro utilizzo in questa scena, al fine di concentrarci sulle funzionalita' di Astra RPG Health. Se avessi incluso anche gli attributi, sarebbe stato piu' complesso ragionare ragionare sull'effetto delle formule di calcolo del danno, delle riduzioni, delle penetrazioni e cosi' via, dal momento che i valori delle statistiche sarebbero stati influenzati anche dagli attributi. Quindi, per semplicitá, in questa scena di esempio dovrete concentrarvi solo sulle statistiche.</p>
+<p>Oltre ai pannelli delle statistiche, noterete che sono presenti anche dei pulsanti con una o due icone alla loro sinistra. Questi rappresentano le abilita' che ogni personaggio puo' utilizzare. E si', anche il dummy in questo caso ha voce in capitolo e puo' vendicarsi dei sopprusi subiti nei vari videogiochi negli ultimi decenni.<br>
+Ogni personaggio ha 3 abilita'; ogni riga di icona/e + 2 pulsanti costituisce una abilita' a se'. Per ciascuna abilita', il primo pulsante ne contiene il nome ed e' il punto d'attivazione. Il pulsante alla sua destra e' un toggle che definisce se l'abilita' effettuera' un colpo critico o meno. Infine, l'icona, o le icone, alla sinistra del nome dell'abilita' rappresentano i tipi di danno che i vari effetti dell'abilita' possono infliggere, o una cura se l'effetto dell'abilita' e' di guarigione. Una singola icona significa che l'abilita' ha un singolo effetto, mentre due icone indicano che l'abilita' ha due o piu' effetti. Nel caso vi fossero, 3 o piu' effetti, solo le icone dei primi 2 effetti saranno mostrate.
+Le icone che troverete saranno in tutto 4:</p>
+<ul>
+<li>Una spada arancione, che rappresenta il danno fisico</li>
+<li>Una fiamma viola, che rappresenta il danno magico</li>
+<li>Uno scudo bianco perforato, che rappresenta il danno puro</li>
+<li>Una croce verde, che rappresenta la guarigione</li>
+</ul>
+<p>La spada, la fiamma e lo scudo rappresentano quindi effetti di danno, e sono associate ai rispettivi damage types. La croce verde rappresenta invece un effetto di guarigione.</p>
+<div class="WARNING">
+<h5>Warning</h5>
+<p>Ci tengo a specificare che l'implementazione data per le abilita' in questa scena di esempio e' semplicistica e non rappresenta un sistema di abilita' completo. Era necessario introdurre un ability system minimale per poter dimostrare le funzionalita' di Astra RPG Health, ma non considerate questa implementazione come un punto di riferimento per la creazione di un sistema di abilita' piu' complesso.<br>
+Sara' responsabilita' di un futuro package di estensione di Astra fornire un sistema di abilita' completo e flessibile. Per ora, considerate questa implementazione come un semplice strumento per testare le funzionalita' di Astra RPG Health.</p>
+</div>
+<p>Noterete inoltre che appena sopra la testa del duelist ci sono un paio di pulsanti, che recitano &quot;Next Hero&quot; e &quot;Previous Hero&quot;. Questi pulsanti vi permettono di cambiare il vostro personaggio. Oltre al duelist, che si focalizza su abilita' che arrecano danno fisico e di guarigione, ci sono altri 2 personaggi, ognuno con un focus diverso. Il secondo personaggio, l'Assassin, si focalizza su abilita' che arrecano danno fisico e puro, talvolta con scaling sulla salute del nemico. Il terzo personaggio, il Mage, si focalizza su abilita' che arrecano danno magico.</p>
+<h3 id="the-hierarchy---overview">The Hierarchy - Overview</h3>
+<p>Se date ora un'occhiata alla gerarchia della scena vedrete che, oltre gli oggetti principali di default, contiene:</p>
+<ul>
+<li>l'entita' dummy</li>
+<li>il canvas del dummy (pannello delle statistiche e pannello delle abilita')</li>
+<li>una sezione con le entita' dei tre personaggi giocabili (duelist, assassin e mage). Il duelist e' attivo all'avvio della scena, mentre gli altri due personaggi sono disattivati. Cambiando personaggio con i pulsanti &quot;Next Hero&quot; e &quot;Previous Hero&quot;, ciclerete tra questi tre personaggi, attivandone uno alla volta e disattivando gli altri due.</li>
+<li>una sezione con i canvas dei tre personaggi giocabili (pannello delle statistiche e pannello delle abilita' per ciascun personaggio). Anche in questo caso, il canvas del duelist e' attivo all'avvio della scena, mentre gli altri due canvas sono disattivati.</li>
+<li>Un oggetto <code>HeroSelector</code>. Questo oggetto ha come figli i game object che rappresentano i pulsanti &quot;Next Hero&quot; e &quot;Previous Hero&quot;.</li>
+<li>Un oggetto <code>PopupCanvas</code>, che contiene due sotto-oggetti: <code>DamagePopupManager</code> e <code>HealPopupManager</code>. Questi oggetti sono responsabili della creazione dei popup di danno e guarigione che appaiono sopra la testa dei personaggi quando subiscono danno o ricevono guarigione.</li>
+</ul>
+<p><strong>Ciascuna entita' ha i componenti Astra <code>EntityCore</code>, <code>EntityClass</code>, <code>EntityStats</code>, e il nuovo <code>EntityHealth</code> nell'oggetto radicale.</strong> Il manichino non possiede una classe. Questa scelta non e' per discriminare il nostro amico legnoso, ma semplicemente perche' semplifica il cambiamento delle statistiche del manichino al fine di agevolare il testing delle funzionalita' del package. In questo modo, se voleste cambiare l'Armor per vedere come cambia la riduzione del danno in real-time, non dovete andare ad operare attraverso la Growth Formula associata a quella statistica nella classe del manichino, ma potete semplicemente modificarne il valore attraverso <code>EntityStats</code>. Semplice ed efficace.</p>
+<p>Ogni entita' (compreso il dummy) ha inoltre due sotto-oggetti: <code>Visuals</code> e <code>Skills</code>. Il primo contiene tutti gli oggetti responsabili della rappresentazione visiva del personaggio (sprite e health bar per il dummy, sprite e sprite dell'attacco per i personaggi del giocatore), mentre il secondo serve per specificare le abilita' del personaggio.</p>
+<p>Gli oggetti relativi ai canvas delle entita' hanno invece i seguenti sotto-oggetti: un <code>HeroPanel</code> responsabile di mostrare il pannello con nome, livello, classe, health bar e statistiche del personaggio, e uno <code>SkillsPanel</code>, che contiene i pulsanti e le icone relativi alle abilita' del personaggio.</p>
+<h3 id="the-project-files---overview">The Project Files - Overview</h3>
+<p>Nell'esplorer delle risorse, nei samples del package, oltre la scena di esempio, avrete queste cartelle:</p>
+<ul>
+<li><strong>Art</strong>: Contiene tutte le risorse artistiche utilizzate nella scena di esempio.</li>
+<li><strong>Instances</strong>: Questa e' la cartella piu' importante, in quanto contiene tutte le istanze degli oggetti forniti da Astra RPG Health. Vi ritroverete a interagire molto con queste istanze per testare le funzionalita' del package, e potrete prendere ispirazione da esse per creare le vostre istanze personalizzate per il vostro progetto.</li>
+<li><strong>Prefabs</strong>: Contiene i prefab di tutti gli oggetti presenti nella scena di esempio.</li>
+<li><strong>Resources</strong>: Contiene l'istanza di configurazione di Astra RPG Health per la scena di esempio.</li>
+<li><strong>Scripts</strong>: Contiene tutti gli script utilizzati nella scena di esempio.</li>
+</ul>
+<div class="WARNING">
+<h5>Warning</h5>
+<p>Una nota in merito a <code>Resources</code>. Come spiegato in <a href="workflows/package-configuration.html#global-settings">Global Settings</a>, Astra RPG Health utilizza un'istanza di <code>AstraRpgHealthConfigSO</code> per configurare le sue funzionalita' nel vostro progetto Unity. Questa specifica istanza fornita nei samples e' stata configurata per la scena di esempio. La scena funziona sin da subito perche la risorsa di configurazione, chiamandosi esattamente <code>Astra Rpg Health Config</code>, viene automaticamente caricata da Astra RPG Health all'import del package e assegnata nella configurazione globale del package.</p>
+<p>Quando andrete a creare la vostra istanza <code>AstraRpgHealthConfigSO</code> di configurazione per il vostro progetto, dovrete assegnarla manualmente alla configurazione globale di Astra RPG Health, come spiegato in <a href="workflows/package-configuration.html#project-settings">Project Settings</a> attraverso le project settings, o in alternativa, come spiegato in <a href="workflows/package-configuration.html#manual-configuration-alternative-to-project-settings">Manual Configuration</a>, assegnandola direttamente all'istanza <code>AstraRpgHealthGlobalSettings</code> presente nella cartella <code>Assets/Resources</code> (questa cartella resources e' collocata radicalmente negli Assets, non nei samples del package).</p>
+<p>Se non assegnate la vostra istanza di configurazione alla configurazione globale di Astra RPG Health, il package continuera' ad utilizzare la configurazione dei samples, creando confusione e potenziali problemi di configurazione.</p>
+</div>
+<h3 id="instances-folder">Instances Folder</h3>
+<p>Ora ci concentreremo sulla cartella <code>Instances</code>, che e' quella piu' rilevante per voi.</p>
+<h4 id="spare-objects-default-damage-calculation-strategy-and-lifesteal-config">Spare objects: Default Damage Calculation Strategy and Lifesteal Config</h4>
+<p>Partiamo da due oggetti sfusi: <code>Default Damage Calculation Strategy</code> e <code>Lifesteal Config</code>. Il primo rappresenta la <a href="workflows/damage.html#damage-calculation-strategy">strategia di calcolo del danno</a> utilizzata di default nella scena. Il secondo rappresenta la <a href="workflows/lifesteal.html#lifesteal-config">configurazione del lifesteal</a>; tutti i tipi di danno utilizzano la stessa stat <code>Lifesteal</code> per il calcolo del lifesteal.</p>
+<h4 id="statistics-and-stat-sets">Statistics and Stat Sets</h4>
+<p>Nella cartella <code>Stats</code> trovate tutte le istanze delle <code>Stat</code> e degli <code>StatSet</code> utilizzati nella scena di esempio. Potete esplorare voi nel dettaglio le statistiche e gli stat set, l'unica cosa che sottolineo e' che l'<code>Hero Stat Set</code> e' lo stat set utilizzato da tutti e 4 i personaggi della scena di esempio (duelist, assassin, mage e dummy).</p>
+<h4 id="classes">Classes</h4>
+<p>Nella sottocartella <code>Classes</code> trovate tutte le classi per i 3 personaggi giocabili e tutte le relative growth formula che definiscono la progressione delle loro statistiche. C'e' anche una cartella <code>Common</code> che contiene alcune utilita' condivise da piu' classi. Ad esempio, la <code>200% Const Critical Multiplier GF</code> e' una growth formula che restituisce un moltiplicatore di 200% per i colpi critici a tutti i livelli. Solitamente un gioco utilizza un moltiplicatore fisso per tutte le entita' a tutti i livelli, quindi non ha senso duplicare questa growth formula in ogni classe, ma e' piu' efficiente creare un'unica istanza singola e condividerla tra tutte le classi che ne hanno bisogno.</p>
+<h4 id="damage-sources">Damage Sources</h4>
+<p>Nella sottocartella <code>Damage Sources</code> trovate tutte due damage sources: <code>Skill</code> e <code>Environmental</code>. La scena non fa uso di danni ambientali, ma la damage source e' utilizzata nella <a href="workflows/experience-collection.html">Experience Collection</a>, in particolare nella strategia <code>Environmental Kill Exp Strategy</code>. Quindi, sebbene non sia testabile nella scena, ha valore di esempio per mostrarvi come creare e configurare una strategia multipla che usa sia la direct kill che la environmental kill strategies.</p>
+<h4 id="damage-types">Damage Types</h4>
+<p>Nella sottocartella <code>Damage Types</code> trovate i tre tipi di danno utilizzati nella scena di esempio: Physical, Magical e True, e due cartelle contenenti le tre varianti di Damage Reduction Functions e Defense Reduction Functions. Attualmente, sia physical che magical damage utilizzano la formula logaritmica per la riduzione del danno sulla base della statistica difensiva, e la riduzione percentuale per la penetrazione della statistica difensiva. Le ho fornite tutte e tre per agevolarvi il testing qualora voleste sostituire le formule al volo.</p>
+<h4 id="events">Events</h4>
+<p>In <code>Events</code> invece trovate tutte le istanze degli eventi di gioco utilizzate dalla scena di esempio. Tutte le istanze appartengono ad Astra RPG Health eccetto per <code>Entity Leveled Up Game Event</code> e <code>Entity Leveled Down Game Event</code>.
+Questi eventi sono stati collegati come <a href="workflows/package-configuration.html#global-events">global events</a> nella configurazione <code>AstraRpgHealthConfigSO</code>.</p>
+<p>Tutte le comunicazioni tra i vari oggetti della scena di esempio vengono gestite attraverso questi eventi.</p>
+<h4 id="experience-collection">Experience Collection</h4>
+<p>Nella cartella <code>Experience Collection</code> ci sono tutte le istanze e le strategie utilizzate per la raccolta dell'esperienza nella scena di esempio. Come menzionato in precedenza, la scena di esempio non prevede l'utilizzo di danni ambientali, ma ho comunque incluso una strategia <code>Environmental Kill Exp Strategy</code> per mostrarvi come creare e configurare una strategia multipla che utilizza sia la direct kill che la environmental kill strategies.</p>
+<h4 id="heal-sources">Heal Sources</h4>
+<p>A differenza delle damage sources, nella scena di esempio vengono usate tutte e 4 le <code>HealSourceSO</code> che trovate nella cartella <code>Heal Sources</code>:</p>
+<ul>
+<li><code>HP Regeneration</code>: utilizzata dagli eventi di rigenerazione passiva della salute</li>
+<li><code>Lifesteal</code>: utilizzata dagli effetti di lifesteal</li>
+<li><code>Resurrection</code>: utilizzata dalla cura applicata alla resurrezione di un'entita'</li>
+<li><code>Skill</code>: utilizzata dalle abilita' che hanno effetti di guarigione</li>
+</ul>
+<h4 id="on-death-game-actions--on-resurrection-game-actions">On Death Game Actions &amp; On Resurrection Game Actions</h4>
+<p>In <code>On Death Game Actions</code> e <code>On Resurrection Game Actions</code> trovate invece le istanze delle game actions utilizzate per definire il comportamento delle entita' in risposta alla loro morte e resurrezione rispettivamente. Tratteremo meglio questo argomento piu' tardi in questa pagina.</p>
+<h4 id="skills">Skills</h4>
+<p>Infine, nella cartella <code>Skills</code> trovate tutte le istanze delle abilita' utilizzate nella scena di esempio, suddivise per personaggio. Ogni abilita' ha una propria istanza di <code>SkillSO</code>, e una <code>ScalingFormula</code> con uno o piu' <code>ScalingComponent</code> associati. Alcune abilita', come menzionato prima, possono avere piu' di un effetto. In tal caso, hanno una scaling formula per ogni effetto.</p>
+<h2 id="interacting-with-the-scene">Interacting with the Scene</h2>
+<p>Ora che abbiamo esplorato la scena di esempio, la gerarchia e i file di progetto, vi do alcune informazioni su alcune configurazioni specifiche che meritano due parole in piu'.</p>
+<h3 id="casting-skills-to-deal-damage-and-heal">Casting skills to deal damage and heal</h3>
+<p>Le skill della sample scene si possono riassumere, dal punto di vista tecnico, come dei costruttori di <code>PreDamageContext</code> e <code>PreHealContext</code> che instradano questi contesti verso le entita' bersaglio. Il bersaglio processerà questi contesti nei suoi metodi <code>heal</code> e <code>TakeDamage</code>. Il calcolo dei danni che avviene all'interno di <code>TakeDamage</code>, come abbiamo visto nei workflows, passa attraverso la pipeline del calcolo del danno. La pipeline usa la strategia che è stata configurata a livello di configurazione <code>AstraRPGHealthConfigSO</code>.<br>
+Quando l'entità viene curata o subisce danni, invocherà i rispettivi Global Events configurati anch'essi nella configurazione del package. E gli heal e damage pop-up managers che trovate nella hierarchy sono in ascolto di questi due eventi rispettivamente. Quando ricevono l'evento, creano un pop-up sopra la testa del personaggio bersaglio che mostra l'ammontare di danno subito o guarigione ricevuta. I pop up del danno avranno colori e icone diverse in base al tipo di danno inferto. Le icone (e il colore) combaceranno con quelle che vedete alla sinistra dell'abilità che avete lanciato.</p>
+<p><img src="../images/AstraRPG/samples/casting-skills.gif" alt="Casting Skills"></p>
 
 </article>
 

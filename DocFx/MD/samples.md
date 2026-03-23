@@ -6,7 +6,7 @@ Inoltre, le istanze presenti nei samples della scena di esempio sono marchiati c
 
 Se volete prendere ispirazione dalle istanze presenti nei samples, potete farlo tranquillamente, ma vi consiglio di creare nuove istanze per il vostro progetto, in modo da evitare qualsiasi confusione futura.
 
-## Examples Folder
+## Examples Folder - Overview
 All'interno della cartella `Examples` troverete una scena di esempio: e' il vostro sandbox per provare le funzionalita' di Astra RPG Health. Rispetto a quella minimale di Astra RPG Framework, questa scena ha piu' contenuti e funzionalita' da esplorare.
 La scena copre tutte le funzionalita' principali di Astra RPG Health:
 - Health System
@@ -23,6 +23,9 @@ La scena copre tutte le funzionalita' principali di Astra RPG Health:
 - Experience Collection System
 
 ### The Scene - Overview
+![Screenshot of the sample scene](../images/AstraRPG/samples/scene-overview.png)  
+_Sample scene as you enter in play mode_
+
 Se aprite e avviate la scena di esempio, vedrete un combattente stilizzato sulla sinistra (Duelist) e un manichino sulla destra (Dummy). Senza troppe sorprese, potrete scatenare l'ira del vostro personaggio contro il povero manichino al fine di testare le funzionalita' di Astra RPG Health.
 Prima di prendercela con il manichino, diamo un'occhiata al resto della scena. Sopra il duelist c'e' un pannello contenente il nome del personaggio, il livello, l'eventuale classe, l'health bar, e infine i valori delle statistiche del personaggio. Un analogo pannello e' presente sopra il manichino. Potete scorrere con la rotellina del mouse su questi pannelli per visualizzare tutte le statistiche. Noterete che a differenza della scena di esempio di Astra RPG Framework, in questa scena i pannelli non mostrano gli attributi. Questo perche' ho volontariamente escluso il loro utilizzo in questa scena, al fine di concentrarci sulle funzionalita' di Astra RPG Health. Se avessi incluso anche gli attributi, sarebbe stato piu' complesso ragionare ragionare sull'effetto delle formule di calcolo del danno, delle riduzioni, delle penetrazioni e cosi' via, dal momento che i valori delle statistiche sarebbero stati influenzati anche dagli attributi. Quindi, per semplicitá, in questa scena di esempio dovrete concentrarvi solo sulle statistiche.
 
@@ -99,4 +102,40 @@ Questi eventi sono stati collegati come [global events](./workflows/package-conf
 Tutte le comunicazioni tra i vari oggetti della scena di esempio vengono gestite attraverso questi eventi.
 
 #### Experience Collection
-Nella cartella `Experience Collection` ci sono tutte le istanze e le strategie utilizzate per la raccolta dell'esperienza nella scena di esempio.
+Nella cartella `Experience Collection` ci sono tutte le istanze e le strategie utilizzate per la raccolta dell'esperienza nella scena di esempio. Come menzionato in precedenza, la scena di esempio non prevede l'utilizzo di danni ambientali, ma ho comunque incluso una strategia `Environmental Kill Exp Strategy` per mostrarvi come creare e configurare una strategia multipla che utilizza sia la direct kill che la environmental kill strategies.
+
+#### Heal Sources
+A differenza delle damage sources, nella scena di esempio vengono usate tutte e 4 le `HealSourceSO` che trovate nella cartella `Heal Sources`:
+- `HP Regeneration`: utilizzata dagli eventi di rigenerazione passiva della salute
+- `Lifesteal`: utilizzata dagli effetti di lifesteal
+- `Resurrection`: utilizzata dalla cura applicata alla resurrezione di un'entita'
+- `Skill`: utilizzata dalle abilita' che hanno effetti di guarigione
+
+#### On Death Game Actions & On Resurrection Game Actions
+In `On Death Game Actions` e `On Resurrection Game Actions` trovate invece le istanze delle game actions utilizzate per definire il comportamento delle entita' in risposta alla loro morte e resurrezione rispettivamente. Tratteremo meglio questo argomento piu' tardi in questa pagina.
+
+#### Skills
+Infine, nella cartella `Skills` trovate tutte le istanze delle abilita' utilizzate nella scena di esempio, suddivise per personaggio. Ogni abilita' ha una propria istanza di `SkillSO`, e una `ScalingFormula` con uno o piu' `ScalingComponent` associati. Alcune abilita', come menzionato prima, possono avere piu' di un effetto. In tal caso, hanno una scaling formula per ogni effetto.
+
+## Interacting with the Scene
+Ora che abbiamo esplorato la scena di esempio, la gerarchia e i file di progetto, vi do alcune informazioni su alcune configurazioni specifiche che meritano due parole in piu'.
+
+### Casting Skills to Deal Damage and Heal
+Le skill della sample scene si possono riassumere, dal punto di vista tecnico, come dei costruttori di `PreDamageContext` e `PreHealContext` che instradano questi contesti verso le entita' bersaglio. Il bersaglio processerà questi contesti nei suoi metodi `heal` e `TakeDamage`. Il calcolo dei danni che avviene all'interno di `TakeDamage`, come abbiamo visto nei workflows, passa attraverso la pipeline del calcolo del danno. La pipeline usa la strategia che è stata configurata a livello di configurazione `AstraRPGHealthConfigSO`.  
+Quando l'entità viene curata o subisce danni, invocherà i rispettivi Global Events configurati anch'essi nella configurazione del package. E gli heal e damage pop-up managers che trovate nella hierarchy sono in ascolto di questi due eventi rispettivamente. Quando ricevono l'evento, creano un pop-up sopra la testa del personaggio bersaglio che mostra l'ammontare di danno subito o guarigione ricevuta. I pop up del danno avranno colori e icone diverse in base al tipo di danno inferto. Le icone (e il colore) combaceranno con quelle che vedete alla sinistra dell'abilità che avete lanciato.
+
+![Casting Skills](../images/AstraRPG/samples/casting-skills.gif)  
+_Casting Skills and Damage and Heal Pop-Ups_
+
+Se premete sul pulsante "Don't crit", il testo cambiera' in "Do crit", e l'abilita' che lancerete da quel momento in poi infliggera' un colpo critico. Il pop-up di un danno critico ha un icona personalizzata in alto a destra, e appare cosi:  
+![Critical Hit Pop-Up](../images/AstraRPG/samples/critical-hit-pop-up.png)
+
+### Messing Around with Damage Types, Damage Reduction and Defense Penetration
+
+### Playing with Passive HP Regeneration
+
+### Health Scaling Component
+
+### Death and Resurrection
+
+### Experience Collection

@@ -2048,6 +2048,26 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "images/AstraRPG/samples/casting-skills.gif",
+      "output": {
+        "resource": {
+          "relative_path": "images/AstraRPG/samples/casting-skills.gif"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/AstraRPG/samples/scene-overview.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/AstraRPG/samples/scene-overview.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "images/AstraRPG/workflows/damage/damage-calculation-pipeline/damage-calculation-pipeline-empty-strategy.png",
       "output": {
         "resource": {
