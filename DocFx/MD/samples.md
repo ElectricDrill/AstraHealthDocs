@@ -37,21 +37,21 @@ Le icone che troverete saranno in tutto 4:
 - Uno scudo bianco perforato, che rappresenta il danno puro
 - Una croce verde, che rappresenta la guarigione
 
-La spada, la fiamma e lo scudo rappresentano quindi effetti di danno, e sono associate ai rispettivi damage types. La croce verde rappresenta invece un effetto di guarigione.
+La spada, la fiamma e lo scudo perforato rappresentano quindi effetti di danno, e sono associate ai rispettivi damage types. La croce verde rappresenta invece un effetto di guarigione.
 
 > [!WARNING]
 > Ci tengo a specificare che l'implementazione data per le abilita' in questa scena di esempio e' semplicistica e non rappresenta un sistema di abilita' completo. Era necessario introdurre un ability system minimale per poter dimostrare le funzionalita' di Astra RPG Health, ma non considerate questa implementazione come un punto di riferimento per la creazione di un sistema di abilita' piu' complesso.  
 > Sara' responsabilita' di un futuro package di estensione di Astra fornire un sistema di abilita' completo e flessibile. Per ora, considerate questa implementazione come un semplice strumento per testare le funzionalita' di Astra RPG Health.
 
-Noterete inoltre che appena sopra la testa del duelist ci sono un paio di pulsanti, che recitano "Next Hero" e "Previous Hero". Questi pulsanti vi permettono di cambiare il vostro personaggio. Oltre al duelist, che si focalizza su abilita' che arrecano danno fisico e di guarigione, ci sono altri 2 personaggi, ognuno con un focus diverso. Il secondo personaggio, l'Assassin, si focalizza su abilita' che arrecano danno fisico e puro, talvolta con scaling sulla salute del nemico. Il terzo personaggio, il Mage, si focalizza su abilita' che arrecano danno magico.
+Noterete inoltre che appena sopra la testa del duelist ci sono un paio di pulsanti, che recitano "\[D\] Next Hero" e "\[A\] Previous Hero". Questi pulsanti vi permettono di cambiare il vostro personaggio. Alternativamente ai pulsanti potete utilizzare i tasti D e A sulla tastiera. Oltre al duelist, che si focalizza su abilita' che arrecano danno fisico e di guarigione, ci sono altri 2 personaggi, ognuno con un focus diverso. Il secondo personaggio, l'Assassin, si focalizza su abilita' che arrecano danno fisico e puro, talvolta con scaling sulla salute del nemico. Il terzo personaggio, il Mage, si focalizza su abilita' che arrecano danno magico.
 
 ### The Hierarchy - Overview
 Se date ora un'occhiata alla gerarchia della scena vedrete che, oltre gli oggetti principali di default, contiene:
 - l'entita' dummy
 - il canvas del dummy (pannello delle statistiche e pannello delle abilita')
-- una sezione con le entita' dei tre personaggi giocabili (duelist, assassin e mage). Il duelist e' attivo all'avvio della scena, mentre gli altri due personaggi sono disattivati. Cambiando personaggio con i pulsanti "Next Hero" e "Previous Hero", ciclerete tra questi tre personaggi, attivandone uno alla volta e disattivando gli altri due.
+- una sezione con le entita' dei tre personaggi giocabili (duelist, assassin e mage). Il duelist e' attivo all'avvio della scena, mentre gli altri due personaggi sono disattivati. Cambiando personaggio con i pulsanti "\[D\] Next Hero" e "\[A\] Previous Hero", ciclerete tra questi tre personaggi, attivandone uno alla volta e disattivando gli altri due.
 - una sezione con i canvas dei tre personaggi giocabili (pannello delle statistiche e pannello delle abilita' per ciascun personaggio). Anche in questo caso, il canvas del duelist e' attivo all'avvio della scena, mentre gli altri due canvas sono disattivati.
-- Un oggetto `HeroSelector`. Questo oggetto ha come figli i game object che rappresentano i pulsanti "Next Hero" e "Previous Hero".
+- Un oggetto `HeroSelector`. Questo oggetto ha come figli i game object che rappresentano i pulsanti "\[D\] Next Hero" e "\[A\] Previous Hero".
 - Un oggetto `PopupCanvas`, che contiene due sotto-oggetti: `DamagePopupManager` e `HealPopupManager`. Questi oggetti sono responsabili della creazione dei popup di danno e guarigione che appaiono sopra la testa dei personaggi quando subiscono danno o ricevono guarigione.
 
 **Ciascuna entita' ha i componenti Astra `EntityCore`, `EntityClass`, `EntityStats`, e il nuovo `EntityHealth` nell'oggetto radicale.** Il manichino non possiede una classe. Questa scelta non e' per discriminare il nostro amico legnoso, ma semplicemente perche' semplifica il cambiamento delle statistiche del manichino al fine di agevolare il testing delle funzionalita' del package. In questo modo, se voleste cambiare l'Armor per vedere come cambia la riduzione del danno in real-time, non dovete andare ad operare attraverso la Growth Formula associata a quella statistica nella classe del manichino, ma potete semplicemente modificarne il valore attraverso `EntityStats`. Semplice ed efficace.
@@ -127,10 +127,24 @@ Quando l'entità viene curata o subisce danni, invocherà i rispettivi Global Ev
 ![Casting Skills](../images/AstraRPG/samples/casting-skills.gif)  
 _Casting Skills and Damage and Heal Pop-Ups_
 
+Se andate in hover sopra un pulsante di un'abilita', vedrete comparire un tooltip che mostra una descrizione dell'abilita'. Se tenete premuto il tasto `Alt` mentre il tooltip e' visibile, vedrete comparire i dettagli dello scaling dei vari effetti dell'abilita'. Queste descrizioni dovrebbero aiutarvi a prevedere l'ordine di grandezza dei danni e delle cure che i vari effetti dell'abilita' possono infliggere, e a capire come il level up dei personaggi influenzino la potenza delle loro abilita'.
+
+![Tooltip]()  
+_Collapsed tooltip_
+
+![Tooltip with details]()
+_Expanded tooltip with details_
+
 Se premete sul pulsante "Don't crit", il testo cambiera' in "Do crit", e l'abilita' che lancerete da quel momento in poi infliggera' un colpo critico. Il pop-up di un danno critico ha un icona personalizzata in alto a destra, e appare cosi:  
 ![Critical Hit Pop-Up](../images/AstraRPG/samples/critical-hit-pop-up.png)
 
 ### Messing Around with Damage Types, Damage Reduction and Defense Penetration
+Qui potete sbizzarrirvi e giocare con varie impostazioni per cambiare radicalmente il modo in cui il danno viene calcolato. Partiamo con l'osservare la configurazione dei tipi di danno:
+| Damage Type | Defensive Stat | Damage Reduction Function | Defense Penetration Stat | Defense Penetration Function |
+| --- | --- | --- | --- | --- |
+| Physical | Armor | Logarithmic DR | Armor Penetration | Percentage DP |
+| Magical | Magic Resist | Logarithmic DR | Magic Penetration | Percentage DP |
+| True | None | None | None | None |
 
 ### Playing with Passive HP Regeneration
 
