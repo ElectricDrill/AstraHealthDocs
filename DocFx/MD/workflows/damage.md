@@ -527,16 +527,22 @@ Applies percentage-based damage modifiers from up to three layers, in order:
 
 Each layer is evaluated individually for full immunity before contributions are summed. If the generic layer alone reaches ≤ −100%, `DamagePreventionReason.AllDamageImmune` is set and the step exits immediately. If the source-specific layer alone reaches ≤ −100%, `DamagePreventionReason.DamageSourceImmune` is set. If the type-specific layer alone reaches ≤ −100%, `DamagePreventionReason.DamageTypeImmune` is set. If no single layer triggers immunity, the three contributions are summed additively into a single net percentage applied to `Current` in one operation.
 
+> [!NOTE]
+> If the cumulative percentage is ≤ −100%, `DamageInfo.Amounts.Current` clamps to a minimum of 0: percentage modifiers cannot bring damage below zero. In such case, the damage is prevented with `DamagePreventionReason.PipelineReducedToZero`.
+
 #### ApplyFlatDmgModifiersStep
 
 Where percentage modifiers scale damage proportionally, flat modifiers add or subtract a fixed amount regardless of the hit's magnitude. A −15 flat absorb always removes 15 damage, whether the incoming hit was 20 or 2000. Flat modifiers are typically placed after percentage modifiers so they adjust the already-scaled value — but you are free to order them as your game design requires.
 
 Applies flat damage modifiers from the same three layers as `ApplyPercentageDmgModifiersStep`:
-1. **Generic** — reads `AstraRpgHealthConfigSO.GenericFlatDamageModificationStat`. Skipped if the `DamageTypeSO` has **Ignore Generic Flat Modifiers** enabled.
-2. **DamageSource-specific** — reads `DamageSourceSO.FlatDamageModificationStat`.
-3. **DamageType-specific** — reads `DamageTypeSO.FlatDamageModificationStat`.
+1. **Generic** — reads `AstraRpgHealthConfigSO.GenericFlatDamageModificationStat` from the target's stats. Skipped if the `DamageTypeSO` has **Ignore Generic Flat Modifiers** enabled.
+2. **DamageSource-specific** — reads `DamageSourceSO.FlatDamageModificationStat` from the target's stats.
+3. **DamageType-specific** — reads `DamageTypeSO.FlatDamageModificationStat` from the target's stats.
 
-All three contributions are summed additively. The net value is added to or subtracted from `DamageInfo.Amounts.Current`. The result is clamped to a minimum of 0: flat modifiers cannot bring damage below zero.
+All three contributions are summed additively. The net value is added to or subtracted from `DamageInfo.Amounts.Current`.
+
+> [!NOTE]
+> `DamageInfo.Amounts.Current` clamps to a minimum of 0: flat modifiers cannot bring damage below zero. In such case, the damage is prevented with `DamagePreventionReason.PipelineReducedToZero`.
 
 > [!NOTE]
 > The conventional order is to run percentage modifiers before flat modifiers, so that flat additions or reductions are applied to the already-scaled value. This ordering is not enforced by the system; you can arrange steps freely.

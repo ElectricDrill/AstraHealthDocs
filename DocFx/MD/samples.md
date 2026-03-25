@@ -111,11 +111,14 @@ A differenza delle damage sources, nella scena di esempio vengono usate tutte e 
 - `Resurrection`: utilizzata dalla cura applicata alla resurrezione di un'entita'
 - `Skill`: utilizzata dalle abilita' che hanno effetti di guarigione
 
-#### On Death Game Actions & On Resurrection Game Actions
-In `On Death Game Actions` e `On Resurrection Game Actions` trovate invece le istanze delle game actions utilizzate per definire il comportamento delle entita' in risposta alla loro morte e resurrezione rispettivamente. Tratteremo meglio questo argomento piu' tardi in questa pagina.
+#### Game Actions
+In `Game Actions` trovate `On Death Game Actions` e `On Resurrection Game Actions`. Queste sono utilizzate per definire il comportamento delle entita' in risposta alla loro morte e resurrezione rispettivamente. Tratteremo meglio questo argomento piu' tardi in questa pagina.
 
 #### Skills
 Infine, nella cartella `Skills` trovate tutte le istanze delle abilita' utilizzate nella scena di esempio, suddivise per personaggio. Ogni abilita' ha una propria istanza di `SkillSO`, e una `ScalingFormula` con uno o piu' `ScalingComponent` associati. Alcune abilita', come menzionato prima, possono avere piu' di un effetto. In tal caso, hanno una scaling formula per ogni effetto.
+
+#### Passives
+Nella cartella `Passives` trovate le istanze di oggetti necessari per il funzionamento delle abilita' passive implementate per la scena di esempio. Vedremo le abilita' passive piu' avanti in [Implementing Custom Passive Abilities](#implementig-custom-passive-abilities).
 
 ## Interacting with the Scene
 Ora che abbiamo esplorato la scena di esempio, la gerarchia e i file di progetto, vi do alcune informazioni su alcune configurazioni specifiche che meritano due parole in piu'.
@@ -138,18 +141,75 @@ _Expanded tooltip with details_
 Se premete sul pulsante "Don't crit", il testo cambiera' in "Do crit", e l'abilita' che lancerete da quel momento in poi infliggera' un colpo critico. Il pop-up di un danno critico ha un icona personalizzata in alto a destra, e appare cosi:  
 ![Critical Hit Pop-Up](../images/AstraRPG/samples/critical-hit-pop-up.png)
 
-### Messing Around with Damage Types, Damage Reduction and Defense Penetration
+### Messing Around with Damage Types and Damage Calculation Strategy
 Qui potete sbizzarrirvi e giocare con varie impostazioni per cambiare radicalmente il modo in cui il danno viene calcolato. Partiamo con l'osservare la configurazione dei tipi di danno:
-| Damage Type | Defensive Stat | Damage Reduction Function | Defense Penetration Stat | Defense Penetration Function |
-| --- | --- | --- | --- | --- |
-| Physical | Armor | Logarithmic DR | Armor Penetration | Percentage DP |
-| Magical | Magic Resist | Logarithmic DR | Magic Penetration | Percentage DP |
-| True | None | None | None | None |
+| Damage Type | Defensive Stat | Damage Reduction Function | Defense Penetration Stat | Defense Penetration Function | Flat Damage Modifier Stat | Percentage Damage Modifier Stat | Ignores Barrier | Ignores Generic Perc. Dmg Modifiers | Ignores Generic Flat Dmg Modifiers |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Physical | Armor | Logarithmic DR | Armor Penetration | Percentage DP | Physical Flat Dmg Mod | Physical Percentage Dmg Mod | ✘ | ✘ | ✘ |
+| Magical | Magic Resist | Logarithmic DR | Magic Penetration | Percentage DP | Magical Flat Dmg Mod | Magical Percentage Dmg Mod | ✘ | ✘ | ✘ |
+| True | None | None | None | None | None | None | ✔ | ✔ | ✔ |
+
+Potete notare che il danno fisico e magico utilizzano entrambi la stessa formula logaritmica per la riduzione del danno e la stessa per la penetrazione della difesa, ma chiaramente utilizzano statistiche diverse per la riduzione e penetrazione. Il true damage invece non ha nessuna statistica difensiva associata, quindi non subisce nessuna riduzione. Non avendo statistiche difensive associate, non ha neanche penetrazione della difesa.  
+Oltre alle statistiche difensive e alle relative formule di riduzione e penetrazione, danno fisico e magico definiscono anche delle statistiche per modificatori flat e percentuali per lo specifico tipo di danno. Rimando alla documentazione dei [Damage Type's Damage Modifiers](./workflows/damage.md#damage-types-damage-modifiers) per maggiori dettagli su come funzionano queste statistiche e su come vengono utilizzate nella pipeline del calcolo del danno. Potete testare l'impatto di queste statistiche modificando i loro valori nell'`EntityStats` del Dummy. **Ricordatevi inoltre che l'ordine di applicazione dei modificatori flat e percentuali è definito nella strategia di calcolo del danno configurata. Nella scena di esempio la trovate sotto `Examples/Instances/Default Damage Calculation Strategy`.** La sua configurazione iniziale e':
+1. Apply Critical Multiplier
+2. Apply Defenses
+3. Apply Barrier
+4. Apply Percentage Damage Modifiers
+5. Apply Flat Damage Modifiers
+
+Potete ovviamente riordinare questi step come preferite per vedere come cambia il risultato finale del danno in base all'ordine di applicazione degli step.
+
+Per concludere le osservazioni sui tipi di danno, potete osservare che il true damage ignora sia i modificatori flat che quelli percentuali, oltre che la barrier. Questo significa che il danno, oltre a non venir ridotto, non puo' neanche venire amplificato. **L'unica meccanica che modifica il valore del true damage e' il moltiplicatore del critico.**
+
+C'e' un'ultima cosa che merita due parole in merito a questo argomento, ed e' la configurazione delle statistiche per i flat e percentage damage modifiers (vale sia per quelli damage-type specific che per quelli generici). Le statistiche per i percentage damage modifiers sono configurate diversamente da quelle flat. Se aprite la statistica `Physical Dmg Perc Mod` nell'inspector, noterete infatti che ha minimum value di -100, mentre la statisticha `Physical Dmg Flat Mod` **non** ha un minimum value. Questo perche' una percentuale di modificatore del danno non puo' mai superare il -100% (completa negazione del danno), mentre un modificatore flat puo' teoricamente ridurre il danno di un qualsiasi valore.  
+E' responsabilita' dello step dei flat damage modifiers nella pipeline del calcolo del danno assicurarsi che il danno finale non scenda sotto lo zero a causa di un flat damage modifier che supera il valore del danno.  
+Un'osservazione che potreste sollevare e' "E se un'entita' ha il generic damage percentage modifier a `-70`% e il damage-type specific percentage modifier a `-50`%? In questo caso, il danno subira' una riduzione totale del 120%, no?". Corretto! Tuttavia, come spiegato in [ApplyPercentageDmgModifiersStep](./workflows/damage.md#applypercentagedmgmodifiersstep), il costrutto usato internamente dalla pipeline del calcolo del danno limita inferiormente a 0 le trasformazioni del damage amount. Quindi, in questo caso, il danno finale sara' 0, e il danno verra' prevenuto con `DamagePreventionReason.PipelineReducedToZero`.  
+Pertanto, anche se non impostaste un limite inferiore di -100% alle statistiche dei percentage damage modifiers, il sistema si assicurerebbe comunque che il danno non scenda sotto lo zero a causa di modificatori percentuali, tuttavia, e' piu' semanticamente corretto e piu' chiaro impostare un limite di -100% a queste statistiche. Questo sarebbe utile anche al momento della creazione di interfacce di gioco per la visualizzazione di queste statistiche, in quanto un giocatore potrebbe essere confuso nel vedere un modificatore del danno del -150%, non sapendo che in realta' il danno non puo' scendere sotto lo zero.
 
 ### Playing with Passive HP Regeneration
+Nella scena di esempio la rigenerazione passiva della salute e' abilitata per tutti i personaggi, ma potete disabilitarla togliendo la spunta da `Passive Health Regeneration` nell'`EntityHealth` dell'entita' in questione. Di default inoltre verranno mostrati dei popup curativi per ogni tick di rigenerazione passiva. Se questi popup vi danno fastidio, potete disabilitarli in questo modo:
+1. Dalla hierarchy aprite il game object `PopupCanvas`
+2. Selezionate il game object `HealPopupManager`
+3. Nell'inspector, nel componente `Heal Popup Manager`, espandete la sezione `Hea; Sources To Ignore` e premete il pulsante `+`. Trascinate qui la Heal Source `HP Regeneration HS` che trovate in `Examples/Instances/Heal Sources`.
+
+In questo modo, il `Heal Popup Manager` ignorerà tutti gli eventi di guarigione che hanno come fonte di guarigione `HP Regeneration`, e quindi non creerà pop-up per i tick di rigenerazione passiva.
+
+Gia' da questo semplice esempio risulta chiaro il valore di creare e utilizzare heal source differenti. Cure che provengono da meccaniche diverse possono sollevare casi d'uso diversi.
+
+Ho configurato il tick rate della rigenerazione a 1 secondo. Se voleste invece cambiare il tick-rate della rigenerazione passiva, potete farlo modificando il valore `Passive HP Regeneration Interval` nell'istanza di configurazione `Astra Rpg Health Config` che trovate in `Examples/Resoures`. Rimando anche alla documentazione sulla [Package Configuration | Health Regeneration](./workflows/package-configuration.md#health-regeneration) e sulla [Healing | Passive Health Regeneration](./workflows/healing.md#passive-health-regeneration) per i dettagli.  
+
+Per modificare la vita rigenerata passivamente, dovete modificare il valore della statistica `Passive Regeneration`. Per i tre personaggi giocabili, questa statistica e' controllata attraverso le Growth Formula associate alla rispettive classi, mentre per il Dummy potete modificarla direttamente attraverso `EntityStats`.
+
+> [!WARNING]
+> Ricordatevi che, come menzionato in [Passive Health Regeneration Stat (HP/10s)](./workflows/package-configuration.md#passive-health-regeneration-stat-hp10s) in Package Configuration, il valore di questa statistica rappresenta la quantita' di salute rigenerata ogni 10 secondi. Quindi, se volete che un personaggio rigeneri passivamente 5 HP al secondo, dovrete impostare il valore di `Passive Regeneration` a 50, non a 5.
 
 ### Health Scaling Component
 
 ### Death and Resurrection
 
 ### Experience Collection
+
+### Implementig Custom Passive Abilities
+
+Nonostante questo package non si occupa di definire costrutti di alto livello per le abilita' e le passive (e sara' responsabilita' di una futura estensione del framework farlo), e' comunque possibile implementare certe abilita' passive per i vostri personaggi in maniera semplice e veloce usando i costrutti di questo package e quello base. Di seguito alcuni esempi.
+
+#### Passive Ability (Duelist) - Excellent Recovery
+*Implementation difficulty: easy*
+
+Il duelist ha un'abilita' passiva che aumenta la rigenerazione passiva della salute del 400% al livello 10, e del 1000% al livello 20.
+
+L'implementazione di questa abilita' e' molto semplice: ho creato una GrowthFormula specifica per il Duelist per la statistica `Passive Reg Heal Perc Mod`, ovvero la statistica che rappresenta il modificatore percentuale alla rigenerazione passiva della salute che e' stata assegnata alla Heal Source `HP Regeneration`. La growth formula restituisce un valore di 0% fino al livello 9, un valore di 400% dal livello 10 al livello 19, e un valore di 1000% dal livello 20 in poi.
+
+#### Passive Ability (Assassin) - Vengence In Death
+*Implementation difficulty: medium*
+
+L'assassin ha un'abilita' passiva che fa si che quando subisce un danno fatale, contrattacca il nemico infliggendogli l'80% dei danni letali ricevuti come danno fisico. Questo danno e' un colpo critico garantito.
+
+L'implementazione di questa abilita' e' leggermente piu' complessa della precedente. Per ottenere l'effetto descritto possiamo ricorrere alla [`CounterDamageOnDeathGameActionSO`](./workflows/game-actions.md#counterdamageondeathgameactionso) fornita dal package. Questa Game Action, prende in input un parametro di tipo `entityDiedContext`, lo stesso contesto che viene passato dagli eventi di morte. Pertanto attraverso un `EntityDiedGameEventListener` possiamo intercettare la morte di un'entita', e lanciare questa Game Action passando il contesto di morte intercettato. La Game Action utilizza il `DamageResolutionContext` contenuto nel contesto di morte per risalire all'ammontare di danno che ha causato la morte dell'entita', e infligge un danno pari all'80% di questo ammontare al colpevole del danno letale (moltiplicato per il moltiplicatore del critico dell'Assassin).  
+Tuttavia c'e' un problema, noi non vogliamo attivare la Game Action alla morte di una qualunque entita', ma solo alla morte dell'Assassin. Qui entrano in gioco gli [Extra Events](./workflows/entity-health.md#extra-events). Possiamo creare un `EntityDiedGameEvent` specifico per comunicare la morte dell'Assassin soltanto, e assegnarlo nell'`EntityHealth` dell'Assassin come `Extra Death Event`. In questo modo, quando l'Assassin muore, oltre a lanciare il `Entity Died Game Event` globale, lancerà anche questo evento extra specifico. Quindi, invece di ascoltare il `Entity Died Game Event` globale con il nostro `EntityDiedGameEventListener`, ascolteremo questo evento extra specifico per l'Assassin. In questo modo, la nostra Game Action verrà attivata solo quando muore l'Assassin, e non alla morte di altre entita'.
+
+#### Passive Ability (Sorcerer) - Glass Cannon
+*Implementation difficulty: medium*
+Lo sorcerer ha un'abilita' passiva che aumenta del 75% il moltiplicatore dei colpi critici, ma ogni volta che subisce danno subisce anche il 15% del suo Magic Power come danno magico extra.
+
+L'implementazione di questa abilita' e' un po' l'unione delle due precedenti. Per aumentare il moltiplicatore dei colpi critici, basta creare una Growth Formula specifica per il Sorcerer per la statistica `Critical Multiplier`, che restituisce un valore di 275% a tutti i livelli. Per quanto riguarda il secondo effetto, ovvero subire danno magico extra pari al 15% del Magic Power ogni volta che subisce danno, possiamo ricorrere sempre alla `CounterDamageOnDeathGameActionSO` per infliggere danno magico extra ogni volta che il Sorcerer subisce danno. Tuttavia, a differenza dell'Assassin, vogliamo che questa game action bersagli il Sorcerer anziche' chi ci ha inflitto danni. Per l'ammontare di danno, usiamo una `ScalingFormula` dedicata. Infine, anche in questo caso, non vogliamo che questa game action venga attivata ogni volta che un'entita' subisce danno, ma solo quando a subire danno e' lo Sorcerer. Anche in questo caso, possiamo ricorrere agli Extra Events. Ho creato un evento dedicato per comunicare quando lo Sorcerer subisce danno, e l'ho assegnato come `Extra Damage Taken Event` nell'`EntityHealth` dello Sorcerer.
