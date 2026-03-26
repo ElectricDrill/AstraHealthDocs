@@ -40,8 +40,8 @@ if (target.TryGetComponent(out EntityHealth targetHealth)) {
     PreHealContext context = PreHealContext.Builder
         .WithAmount(targetHealth.MaxHp / 2)   // 50% of max HP as base amount, before modifiers
         .WithSource(resurrectionSource)
-        .WithHealer(healer)
         .WithTarget(target)
+        .WithHealer(healer)                    // optional
         .Build();
 
     targetHealth.Resurrect(context);
@@ -121,7 +121,7 @@ After the healing pipeline completes and the resurrection game action has been d
   - **ReceivedHeal**: the full `ReceivedHealContext` produced by the internal `Heal` call, exposing:
     - **HealAmount**: a `HealAmountContext` with `RawAmount` (base amount before modifiers), `AfterModifierAmount` (after flat and percentage modifiers), and `NetAmount` (final HP actually added, capped to max HP)
     - **HealSource**: the `HealSourceSO` used for this resurrection
-    - **Source**: the healer `EntityCore` (`null` for system-initiated resurrections, such as those triggered via the convenience overloads or the `ResurrectComponentGameActionSO`)
+    - **Performer**: the entity that performed the resurrection (`null` for system-initiated resurrections, such as those triggered via the convenience overloads or the `ResurrectComponentGameActionSO`)
     - **IsCritical**: whether the resurrection heal was flagged as a critical
 
 Each event is available in both global and extra variants on `EntityHealth`. Use global events when any GameObject in the game needs to receive the signal; use extra events for targeted, component-specific or GO-hierarchy-specific communications. See [Global Events](entity-health.md#global-events) for guidance on choosing between them.

@@ -89,8 +89,8 @@ if (target.TryGetComponent(out EntityHealth targetHealth)) {
     PreHealContext preHealContext = PreHealContext.Builder
         .WithAmount(healAmount)
         .WithSource(healSource)
-        .WithHealer(skillCaster)
         .WithTarget(target.EntityCore)
+        .WithHealer(skillCaster)       // optional
         .Build();
 
     targetHealth.Heal(preHealContext);
@@ -112,8 +112,8 @@ long healAmount = scalingFormula.CalculateValue(skillCaster);
 PreHealContext preHealContext = PreHealContext.Builder
     .WithAmount(healAmount)
     .WithSource(healSource)
-    .WithHealer(skillCaster)
     .WithTarget(target.EntityCore)
+    .WithHealer(skillCaster)       // optional
     .Build();
 
 targetHealth.Heal(preHealContext);
@@ -123,7 +123,7 @@ Recommended pattern when healing programmatically:
 1. Construct a `PreHealContext` with all relevant information using the fluent builder.
 2. Call `Heal` passing the constructed context.
 
-The `PreHealContext` fluent builder is helpful because it guides you through required inputs first — the IDE will typically present required builder steps one at a time. When the builder presents multiple fields together, those fields are optional and can be omitted.
+The `PreHealContext` fluent builder is helpful because it guides you through required inputs first — the IDE will typically present required builder steps one at a time. When the builder presents multiple fields together, those fields are optional and can be omitted. Optional fields include the healer entity (`WithHealer`), the critical hit flag, and the critical multiplier.
 
 ## Health Regeneration
 Health regeneration is a mechanism that allows an entity to passively regenerate its health over time. In games generally, this mechanic is implemented through discrete regeneration ticks. Ticks, depending on the game, can be marked by the passage of time, or by certain events, like the end of a turn in a turn-based game.  

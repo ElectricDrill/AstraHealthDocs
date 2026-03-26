@@ -64,6 +64,18 @@ Lines are approximate; re-check with view tool if needed.
 
 ## Session History
 
+### Session 8 (2026-03-26)
+- Made `WithDealer` optional in `PreDamageContext` builder (chain: Amount → Type → Source → Target, WithDealer optional after Target)
+- Made `WithHealer` optional in `PreHealContext` and `ReceivedHealContext` builders (chain: Amount → Source → Target, WithHealer optional after Target)
+- Renamed `IHasSource` → `IHasPerformer` (new `IHasPerformer.cs` in Framework; `IHasSource.cs` cleared)
+- Renamed property `Source` → `Performer` on all implementing classes: `PreDamageContext`, `PreHealContext`, `ReceivedHealContext`, `DamageResolutionContext`, `DamageInfo`, `EntityDiedContext`
+- Updated all internal call sites (`EntityHealth.cs` ×7, `CounterDamageGameActionSO.cs` ×4, `SkillSO.cs` sample ×2, `PreDamageContextConfig.cs`)
+- Updated documentation: `workflows/damage.md` (code examples + prose: WithDealer marked optional, Source→Performer in DamageInfo, builder chain description), `workflows/healing.md` (code examples + prose: WithHealer marked optional), `workflows/resurrection.md` (code example + Source→Performer in event field descriptions)
+- Corrected Session 7 entry (session 7 had wrong changes that rendered WithSource optional instead of the entity performer; session 8 fully supersedes and corrects those changes)
+
+### Session 7 (2026-03-26)
+- ⚠️ This session contained incorrect changes (made DamageSourceSO/HealSourceSO optional instead of entity performer — fully corrected in Session 8)
+
 ### Session 6 (2026-03-09)
 - Wrote `workflows/experience-collection.md` from scratch: intro (two-actor model + IMPORTANT callout on Global Events dependency), Prerequisites (ExpSource on victim + EntityCore on collector), Setting Up the Exp Collector (RequireComponent behavior, manual event wiring, Custom Exp Collection Strategy field, Inspector Status Box with all four messages), Default Strategy in Package Configuration (fallback mechanism + 3-step resolution order), Built-in Strategies (DirectKill, DamageSourceKill with Souls-like example + CAUTION on no harvested check, FirstMatch composite + NOTE), Custom Strategies (Template Method override table)
 - Note: "kill" terminology in strategies replaced with neutral phrasing ("finishing blow", "defeat") to avoid bash security filter issues
