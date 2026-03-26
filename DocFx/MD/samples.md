@@ -1,14 +1,14 @@
 # Samples
 
 ## No More Utils Folder
-Diversamente da Astra RPG Framework, in questo package non troverete una cartella `Utils` tra i vari samples. Ho preso questa decisione perche' ritengo che sia piu' saggio e robusto lasciare che siate voi crearvi le vostre istanze. Questo perche' se costruite il vostro progetto attorno alle istanze che vi fornisco nei samples, e poi decidete di importare una nuova versione del package e reimportare i samples, rischiate di fare confusione su quali istanze di quale versione state attualmente usando per il vostro progetto. Lasciandovi creare a voi tutte le istanze degli oggetti del framework questa problematica viene completamente evitata.  
-Inoltre, le istanze presenti nei samples della scena di esempio sono marchiati con un suffisso `(Astra Health Samples)` che li rende facilmente identificabili e distinguibili da eventuali istanze che potreste creare voi per il vostro progetto.
+Unlike Astra RPG Framework, in this package you will not find a `Utils` folder among the various samples. I made this decision because I believe it is wiser and more robust to let you create your own instances. This is because if you build your project around the instances I provide in the samples, and then decide to import a new version of the package and reimport the samples, you risk getting confused about which instances from which version you are currently using for your project. By letting you create all the framework object instances yourself, this problem is completely avoided.
+Furthermore, the instances present in the sample scene's samples are marked with a `(Astra Health Samples)` suffix, making them easily identifiable and distinguishable from any instances you might create for your own project.
 
-Se volete prendere ispirazione dalle istanze presenti nei samples, potete farlo tranquillamente, ma vi consiglio di creare nuove istanze per il vostro progetto, in modo da evitare qualsiasi confusione futura.
+If you want to draw inspiration from the instances in the samples, feel free to do so, but I recommend creating new instances for your project to avoid any future confusion.
 
 ## Examples Folder - Overview
-All'interno della cartella `Examples` troverete una scena di esempio: e' il vostro sandbox per provare le funzionalita' di Astra RPG Health. Rispetto a quella minimale di Astra RPG Framework, questa scena ha piu' contenuti e funzionalita' da esplorare.
-La scena copre tutte le funzionalita' principali di Astra RPG Health:
+Inside the `Examples` folder you will find a sample scene: it is your sandbox for trying out the features of Astra RPG Health. Compared to the minimal one in Astra RPG Framework, this scene has more content and features to explore.
+The scene covers all the main features of Astra RPG Health:
 - Health System
 - Damage Types
 - Damage Sources
@@ -23,193 +23,214 @@ La scena copre tutte le funzionalita' principali di Astra RPG Health:
 - Experience Collection System
 
 ### The Scene - Overview
-![Screenshot of the sample scene](../images/AstraRPG/samples/scene-overview.png)  
+![Screenshot of the sample scene](../images/AstraRPG/samples/scene-overview.png)
 _Sample scene as you enter in play mode_
 
-Se aprite e avviate la scena di esempio, vedrete un combattente stilizzato sulla sinistra (Duelist) e un manichino sulla destra (Dummy). Senza troppe sorprese, potrete scatenare l'ira del vostro personaggio contro il povero manichino al fine di testare le funzionalita' di Astra RPG Health.
-Prima di prendercela con il manichino, diamo un'occhiata al resto della scena. Sopra il duelist c'e' un pannello contenente il nome del personaggio, il livello, l'eventuale classe, l'health bar, e infine i valori delle statistiche del personaggio. Un analogo pannello e' presente sopra il manichino. Potete scorrere con la rotellina del mouse su questi pannelli per visualizzare tutte le statistiche. Noterete che a differenza della scena di esempio di Astra RPG Framework, in questa scena i pannelli non mostrano gli attributi. Questo perche' ho volontariamente escluso il loro utilizzo in questa scena, al fine di concentrarci sulle funzionalita' di Astra RPG Health. Se avessi incluso anche gli attributi, sarebbe stato piu' complesso ragionare ragionare sull'effetto delle formule di calcolo del danno, delle riduzioni, delle penetrazioni e cosi' via, dal momento che i valori delle statistiche sarebbero stati influenzati anche dagli attributi. Quindi, per semplicitá, in questa scena di esempio dovrete concentrarvi solo sulle statistiche.
+If you open and start the sample scene, you will see a stylized fighter on the left (Duelist) and a dummy on the right (Dummy). Without much surprise, you can unleash the wrath of your character against the poor dummy in order to test the features of Astra RPG Health.
+Before taking it out on the dummy, let's take a look at the rest of the scene. Above the duelist there is a panel containing the character's name, level, optional class, health bar, and finally the character's stat values. A similar panel is present above the dummy. You can scroll with the mouse wheel on these panels to view all the statistics. You will notice that unlike the Astra RPG Framework sample scene, the panels in this scene do not show attributes. This is because I intentionally excluded their use in this scene, in order to focus on the features of Astra RPG Health. Had I included attributes as well, it would have been more complex to reason about the effect of damage calculation formulas, reductions, penetrations and so on, since the stat values would also have been influenced by the attributes. Therefore, for simplicity, in this sample scene you will only need to focus on statistics.
 
-Oltre ai pannelli delle statistiche, noterete che sono presenti anche dei pulsanti con una o due icone alla loro sinistra. Questi rappresentano le abilita' che ogni personaggio puo' utilizzare. E si', anche il dummy in questo caso ha voce in capitolo e puo' vendicarsi dei sopprusi subiti nei vari videogiochi negli ultimi decenni.  
-Ogni personaggio ha 3 abilita'; ogni riga di icona/e + 2 pulsanti costituisce una abilita' a se'. Per ciascuna abilita', il primo pulsante ne contiene il nome ed e' il punto d'attivazione. Il pulsante alla sua destra e' un toggle che definisce se l'abilita' effettuera' un colpo critico o meno. Infine, l'icona, o le icone, alla sinistra del nome dell'abilita' rappresentano i tipi di danno che i vari effetti dell'abilita' possono infliggere, o una cura se l'effetto dell'abilita' e' di guarigione. Una singola icona significa che l'abilita' ha un singolo effetto, mentre due icone indicano che l'abilita' ha due o piu' effetti. Nel caso vi fossero, 3 o piu' effetti, solo le icone dei primi 2 effetti saranno mostrate.
-Le icone che troverete saranno in tutto 4:
-- Una spada arancione, che rappresenta il danno fisico
-- Una fiamma viola, che rappresenta il danno magico
-- Uno scudo bianco perforato, che rappresenta il danno puro
-- Una croce verde, che rappresenta la guarigione
+In addition to the stats panels, you will notice that there are also buttons with one or two icons to their left. These represent the abilities that each character can use. And yes, even the dummy has a say in this and can take revenge for the mistreatment it has suffered in various video games over the decades.
+Each character has 3 abilities; each row of icon(s) + 2 buttons constitutes a single ability. For each ability, the first button contains its name and is the activation point. The button to its right is a toggle that defines whether the ability will perform a critical hit or not. Finally, the icon, or icons, to the left of the ability name represent the damage types that the various effects of the ability can inflict, or a heal if the ability's effect is a healing one. A single icon means the ability has a single effect, while two icons indicate the ability has two or more effects. If there are 3 or more effects, only the icons of the first 2 effects will be shown.
+The icons you will find are 4 in total:
+- An orange sword, representing physical damage
+- A purple flame, representing magical damage
+- A white perforated shield, representing pure damage
+- A green cross, representing healing
 
-La spada, la fiamma e lo scudo perforato rappresentano quindi effetti di danno, e sono associate ai rispettivi damage types. La croce verde rappresenta invece un effetto di guarigione.
+The sword, the flame and the perforated shield therefore represent damage effects, and are associated with the respective damage types. The green cross instead represents a healing effect.
 
 > [!WARNING]
-> Ci tengo a specificare che l'implementazione data per le abilita' in questa scena di esempio e' semplicistica e non rappresenta un sistema di abilita' completo. Era necessario introdurre un ability system minimale per poter dimostrare le funzionalita' di Astra RPG Health, ma non considerate questa implementazione come un punto di riferimento per la creazione di un sistema di abilita' piu' complesso.  
-> Sara' responsabilita' di un futuro package di estensione di Astra fornire un sistema di abilita' completo e flessibile. Per ora, considerate questa implementazione come un semplice strumento per testare le funzionalita' di Astra RPG Health.
+> I want to specify that the implementation given for abilities in this sample scene is simplistic and does not represent a complete ability system. It was necessary to introduce a minimal ability system to demonstrate the features of Astra RPG Health, but do not consider this implementation as a reference point for creating a more complex ability system.
+> It will be the responsibility of a future Astra extension package to provide a complete and flexible ability system. For now, consider this implementation as a simple tool for testing the features of Astra RPG Health.
 
-Noterete inoltre che appena sopra la testa del duelist ci sono un paio di pulsanti, che recitano "\[D\] Next Hero" e "\[A\] Previous Hero". Questi pulsanti vi permettono di cambiare il vostro personaggio. Alternativamente ai pulsanti potete utilizzare i tasti D e A sulla tastiera. Oltre al duelist, che si focalizza su abilita' che arrecano danno fisico e di guarigione, ci sono altri 2 personaggi, ognuno con un focus diverso. Il secondo personaggio, l'Assassin, si focalizza su abilita' che arrecano danno fisico e puro, talvolta con scaling sulla salute del nemico. Il terzo personaggio, il Mage, si focalizza su abilita' che arrecano danno magico.
+You will also notice that just above the duelist's head there are a couple of buttons, reading "\[D\] Next Hero" and "\[A\] Previous Hero". These buttons allow you to change your character. Alternatively to the buttons you can use the D and A keys on the keyboard. In addition to the duelist, who focuses on abilities that deal physical damage and healing, there are 2 other characters, each with a different focus. The second character, the Assassin, focuses on abilities that deal physical and pure damage, sometimes with scaling based on the enemy's health. The third character, the Mage, focuses on abilities that deal magical damage.
 
 ### The Hierarchy - Overview
-Se date ora un'occhiata alla gerarchia della scena vedrete che, oltre gli oggetti principali di default, contiene:
-- l'entita' dummy
-- il canvas del dummy (pannello delle statistiche e pannello delle abilita')
-- una sezione con le entita' dei tre personaggi giocabili (duelist, assassin e mage). Il duelist e' attivo all'avvio della scena, mentre gli altri due personaggi sono disattivati. Cambiando personaggio con i pulsanti "\[D\] Next Hero" e "\[A\] Previous Hero", ciclerete tra questi tre personaggi, attivandone uno alla volta e disattivando gli altri due.
-- una sezione con i canvas dei tre personaggi giocabili (pannello delle statistiche e pannello delle abilita' per ciascun personaggio). Anche in questo caso, il canvas del duelist e' attivo all'avvio della scena, mentre gli altri due canvas sono disattivati.
-- Un oggetto `HeroSelector`. Questo oggetto ha come figli i game object che rappresentano i pulsanti "\[D\] Next Hero" e "\[A\] Previous Hero".
-- Un oggetto `PopupCanvas`, che contiene due sotto-oggetti: `DamagePopupManager` e `HealPopupManager`. Questi oggetti sono responsabili della creazione dei popup di danno e guarigione che appaiono sopra la testa dei personaggi quando subiscono danno o ricevono guarigione.
+If you now take a look at the scene hierarchy you will see that, in addition to the default main objects, it contains:
+- the dummy entity
+- the dummy's canvas (stats panel and abilities panel)
+- a section with the entities of the three playable characters (duelist, assassin and mage). The duelist is active at scene start, while the other two characters are disabled. Changing characters with the "\[D\] Next Hero" and "\[A\] Previous Hero" buttons, you will cycle through these three characters, activating one at a time and deactivating the other two.
+- a section with the canvases of the three playable characters (stats panel and abilities panel for each character). Also in this case, the duelist's canvas is active at scene start, while the other two canvases are disabled.
+- A `HeroSelector` object. This object has as children the game objects representing the "\[D\] Next Hero" and "\[A\] Previous Hero" buttons.
+- A `PopupCanvas` object, which contains two sub-objects: `DamagePopupManager` and `HealPopupManager`. These objects are responsible for creating the damage and healing popups that appear above the characters' heads when they take damage or receive healing.
 
-**Ciascuna entita' ha i componenti Astra `EntityCore`, `EntityClass`, `EntityStats`, e il nuovo `EntityHealth` nell'oggetto radicale.** Il manichino non possiede una classe. Questa scelta non e' per discriminare il nostro amico legnoso, ma semplicemente perche' semplifica il cambiamento delle statistiche del manichino al fine di agevolare il testing delle funzionalita' del package. In questo modo, se voleste cambiare l'Armor per vedere come cambia la riduzione del danno in real-time, non dovete andare ad operare attraverso la Growth Formula associata a quella statistica nella classe del manichino, ma potete semplicemente modificarne il valore attraverso `EntityStats`. Semplice ed efficace.
+**Each entity has the Astra components `EntityCore`, `EntityClass`, `EntityStats`, and the new `EntityHealth` on the root object.** The dummy does not have a class. This choice is not to discriminate against our wooden friend, but simply because it simplifies changing the dummy's statistics to facilitate testing the package's features. This way, if you wanted to change the Armor to see how the damage reduction changes in real-time, you don't need to go through the Growth Formula associated with that stat in the dummy's class, but you can simply modify its value through `EntityStats`. Simple and effective.
 
-Ogni entita' (compreso il dummy) ha inoltre due sotto-oggetti: `Visuals` e `Skills`. Il primo contiene tutti gli oggetti responsabili della rappresentazione visiva del personaggio (sprite e health bar per il dummy, sprite e sprite dell'attacco per i personaggi del giocatore), mentre il secondo serve per specificare le abilita' del personaggio.
+Each entity (including the dummy) also has two sub-objects: `Visuals` and `Skills`. The first contains all the objects responsible for the character's visual representation (sprite and health bar for the dummy, sprite and attack sprite for the player characters), while the second is used to specify the character's abilities.
 
-Gli oggetti relativi ai canvas delle entita' hanno invece i seguenti sotto-oggetti: un `HeroPanel` responsabile di mostrare il pannello con nome, livello, classe, health bar e statistiche del personaggio, e uno `SkillsPanel`, che contiene i pulsanti e le icone relativi alle abilita' del personaggio.
+The objects related to the entity canvases instead have the following sub-objects: a `HeroPanel` responsible for showing the panel with the character's name, level, class, health bar and statistics, and a `SkillsPanel`, which contains the buttons and icons related to the character's abilities.
 
 ### The Project Files - Overview
 
-Nell'esplorer delle risorse, nei samples del package, oltre la scena di esempio, avrete queste cartelle:
-- **Art**: Contiene tutte le risorse artistiche utilizzate nella scena di esempio.
-- **Instances**: Questa e' la cartella piu' importante, in quanto contiene tutte le istanze degli oggetti forniti da Astra RPG Health. Vi ritroverete a interagire molto con queste istanze per testare le funzionalita' del package, e potrete prendere ispirazione da esse per creare le vostre istanze personalizzate per il vostro progetto.
-- **Prefabs**: Contiene i prefab di tutti gli oggetti presenti nella scena di esempio.
-- **Resources**: Contiene l'istanza di configurazione di Astra RPG Health per la scena di esempio.
-- **Scripts**: Contiene tutti gli script utilizzati nella scena di esempio.
+In the resource explorer, in the package samples, in addition to the sample scene, you will have these folders:
+- **Art**: Contains all the artistic resources used in the sample scene.
+- **Instances**: This is the most important folder, as it contains all the instances of the objects provided by Astra RPG Health. You will find yourself interacting a lot with these instances to test the package's features, and you can draw inspiration from them to create your own custom instances for your project.
+- **Prefabs**: Contains the prefabs of all the objects present in the sample scene.
+- **Resources**: Contains the Astra RPG Health configuration instance for the sample scene.
+- **Scripts**: Contains all the scripts used in the sample scene.
 
 
 > [!WARNING]
-> Una nota in merito a `Resources`. Come spiegato in [Global Settings](./workflows/package-configuration.md#global-settings), Astra RPG Health utilizza un'istanza di `AstraRpgHealthConfigSO` per configurare le sue funzionalita' nel vostro progetto Unity. Questa specifica istanza fornita nei samples e' stata configurata per la scena di esempio. La scena funziona sin da subito perche la risorsa di configurazione, chiamandosi esattamente `Astra Rpg Health Config`, viene automaticamente caricata da Astra RPG Health all'import del package e assegnata nella configurazione globale del package.
+> A note regarding `Resources`. As explained in [Global Settings](./workflows/package-configuration.md#global-settings), Astra RPG Health uses an `AstraRpgHealthConfigSO` instance to configure its features in your Unity project. This specific instance provided in the samples has been configured for the sample scene. The scene works right out of the box because the configuration resource, being named exactly `Astra Rpg Health Config`, is automatically loaded by Astra RPG Health upon package import and assigned in the package's global configuration.
 >
-> Quando andrete a creare la vostra istanza `AstraRpgHealthConfigSO` di configurazione per il vostro progetto, dovrete assegnarla manualmente alla configurazione globale di Astra RPG Health, come spiegato in [Project Settings](./workflows/package-configuration.md#project-settings) attraverso le project settings, o in alternativa, come spiegato in [Manual Configuration](./workflows/package-configuration.md#manual-configuration-alternative-to-project-settings), assegnandola direttamente all'istanza `AstraRpgHealthGlobalSettings` presente nella cartella `Assets/Resources` (questa cartella resources e' collocata radicalmente negli Assets, non nei samples del package).
+> When you go to create your own `AstraRpgHealthConfigSO` configuration instance for your project, you will need to assign it manually to the global configuration of Astra RPG Health, as explained in [Project Settings](./workflows/package-configuration.md#project-settings) through the project settings, or alternatively, as explained in [Manual Configuration](./workflows/package-configuration.md#manual-configuration-alternative-to-project-settings), by assigning it directly to the `AstraRpgHealthGlobalSettings` instance found in the `Assets/Resources` folder (this resources folder is located at the root of Assets, not in the package samples).
 >
-> Se non assegnate la vostra istanza di configurazione alla configurazione globale di Astra RPG Health, il package continuera' ad utilizzare la configurazione dei samples, creando confusione e potenziali problemi di configurazione.
+> If you do not assign your configuration instance to the global configuration of Astra RPG Health, the package will continue to use the samples configuration, creating confusion and potential configuration issues.
 
 ### Instances Folder
-Ora ci concentreremo sulla cartella `Instances`, che e' quella piu' rilevante per voi.
+Now we will focus on the `Instances` folder, which is the most relevant one for you.
 
 #### Spare objects: Default Damage Calculation Strategy and Lifesteal Config
-Partiamo da due oggetti sfusi: `Default Damage Calculation Strategy` e `Lifesteal Config`. Il primo rappresenta la [strategia di calcolo del danno](./workflows/damage.md#damage-calculation-strategy) utilizzata di default nella scena. Il secondo rappresenta la [configurazione del lifesteal](./workflows/lifesteal.md#lifesteal-config); tutti i tipi di danno utilizzano la stessa stat `Lifesteal` per il calcolo del lifesteal.
+Let's start with two loose objects: `Default Damage Calculation Strategy` and `Lifesteal Config`. The first represents the [damage calculation strategy](./workflows/damage.md#damage-calculation-strategy) used by default in the scene. The second represents the [lifesteal configuration](./workflows/lifesteal.md#lifesteal-config); all damage types use the same `Lifesteal` stat for the lifesteal calculation.
 
 #### Statistics and Stat Sets
-Nella cartella `Stats` trovate tutte le istanze delle `Stat` e degli `StatSet` utilizzati nella scena di esempio. Potete esplorare voi nel dettaglio le statistiche e gli stat set, l'unica cosa che sottolineo e' che l'`Hero Stat Set` e' lo stat set utilizzato da tutti e 4 i personaggi della scena di esempio (duelist, assassin, mage e dummy).
+In the `Stats` folder you will find all the instances of the `Stat` and `StatSet` used in the sample scene. You can explore the statistics and stat sets in detail yourself; the only thing I want to highlight is that the `Hero Stat Set` is the stat set used by all 4 characters in the sample scene (duelist, assassin, mage and dummy).
 
 #### Classes
-Nella sottocartella `Classes` trovate tutte le classi per i 3 personaggi giocabili e tutte le relative growth formula che definiscono la progressione delle loro statistiche. C'e' anche una cartella `Common` che contiene alcune utilita' condivise da piu' classi. Ad esempio, la `200% Const Critical Multiplier GF` e' una growth formula che restituisce un moltiplicatore di 200% per i colpi critici a tutti i livelli. Solitamente un gioco utilizza un moltiplicatore fisso per tutte le entita' a tutti i livelli, quindi non ha senso duplicare questa growth formula in ogni classe, ma e' piu' efficiente creare un'unica istanza singola e condividerla tra tutte le classi che ne hanno bisogno.
+In the `Classes` subfolder you will find all the classes for the 3 playable characters and all the related growth formulas that define the progression of their statistics. There is also a `Common` folder that contains some utilities shared by multiple classes. For example, the `200% Const Critical Multiplier GF` is a growth formula that returns a 200% multiplier for critical hits at all levels. Usually a game uses a fixed multiplier for all entities at all levels, so it makes no sense to duplicate this growth formula in every class, but it is more efficient to create a single instance and share it among all the classes that need it.
 
 #### Damage Sources
-Nella sottocartella `Damage Sources` trovate tutte due damage sources: `Skill` e `Environmental`. La scena non fa uso di danni ambientali, ma la damage source e' utilizzata nella [Experience Collection](./workflows/experience-collection.md), in particolare nella strategia `Environmental Kill Exp Strategy`. Quindi, sebbene non sia testabile nella scena, ha valore di esempio per mostrarvi come creare e configurare una strategia multipla che usa sia la direct kill che la environmental kill strategies.
+In the `Damage Sources` subfolder you will find two damage sources: `Skill` and `Environmental`. The scene does not make use of environmental damage, but the damage source is used in [Experience Collection](./workflows/experience-collection.md), particularly in the `Environmental Kill Exp Strategy` strategy. Therefore, although it cannot be tested in the scene, it has value as an example to show you how to create and configure a multiple strategy that uses both the direct kill and the environmental kill strategies.
 
 #### Damage Types
-Nella sottocartella `Damage Types` trovate i tre tipi di danno utilizzati nella scena di esempio: Physical, Magical e True, e due cartelle contenenti le tre varianti di Damage Reduction Functions e Defense Reduction Functions. Attualmente, sia physical che magical damage utilizzano la formula logaritmica per la riduzione del danno sulla base della statistica difensiva, e la riduzione percentuale per la penetrazione della statistica difensiva. Le ho fornite tutte e tre per agevolarvi il testing qualora voleste sostituire le formule al volo.
+In the `Damage Types` subfolder you will find the three damage types used in the sample scene: Physical, Magical and True, and two folders containing the three variants of Damage Reduction Functions and Defense Reduction Functions. Currently, both physical and magical damage use the logarithmic formula for damage reduction based on the defensive stat, and percentage reduction for defensive stat penetration. I have provided all three to make it easier for you to test should you want to swap the formulas on the fly.
 
 #### Events
-In `Events` invece trovate tutte le istanze degli eventi di gioco utilizzate dalla scena di esempio. Tutte le istanze appartengono ad Astra RPG Health eccetto per `Entity Leveled Up Game Event` e `Entity Leveled Down Game Event`.
-Questi eventi sono stati collegati come [global events](./workflows/package-configuration.md#global-events) nella configurazione `AstraRpgHealthConfigSO`.
+In `Events` you will find all the instances of the game events used by the sample scene. All the instances belong to Astra RPG Health except for `Entity Leveled Up Game Event` and `Entity Leveled Down Game Event`.
+These events have been connected as [global events](./workflows/package-configuration.md#global-events) in the `AstraRpgHealthConfigSO` configuration.
 
-Tutte le comunicazioni tra i vari oggetti della scena di esempio vengono gestite attraverso questi eventi.
+All communications between the various objects in the sample scene are handled through these events.
 
 #### Experience Collection
-Nella cartella `Experience Collection` ci sono tutte le istanze e le strategie utilizzate per la raccolta dell'esperienza nella scena di esempio. Come menzionato in precedenza, la scena di esempio non prevede l'utilizzo di danni ambientali, ma ho comunque incluso una strategia `Environmental Kill Exp Strategy` per mostrarvi come creare e configurare una strategia multipla che utilizza sia la direct kill che la environmental kill strategies.
+In the `Experience Collection` folder there are all the instances and strategies used for experience collection in the sample scene. As mentioned earlier, the sample scene does not involve the use of environmental damage, but I have nonetheless included an `Environmental Kill Exp Strategy` strategy to show you how to create and configure a multiple strategy that uses both the direct kill and the environmental kill strategies.
 
 #### Heal Sources
-A differenza delle damage sources, nella scena di esempio vengono usate tutte e 4 le `HealSourceSO` che trovate nella cartella `Heal Sources`:
-- `HP Regeneration`: utilizzata dagli eventi di rigenerazione passiva della salute
-- `Lifesteal`: utilizzata dagli effetti di lifesteal
-- `Resurrection`: utilizzata dalla cura applicata alla resurrezione di un'entita'
-- `Skill`: utilizzata dalle abilita' che hanno effetti di guarigione
+Unlike the damage sources, in the sample scene all 4 `HealSourceSO` instances found in the `Heal Sources` folder are used:
+- `HP Regeneration`: used by passive health regeneration events
+- `Lifesteal`: used by lifesteal effects
+- `Resurrection`: used by the heal applied upon an entity's resurrection
+- `Skill`: used by abilities that have healing effects
 
 #### Game Actions
-In `Game Actions` trovate `On Death Game Actions` e `On Resurrection Game Actions`. Queste sono utilizzate per definire il comportamento delle entita' in risposta alla loro morte e resurrezione rispettivamente. Tratteremo meglio questo argomento piu' tardi in questa pagina.
+In `Game Actions` you will find `On Death Game Actions` and `On Resurrection Game Actions`. These are used to define the behavior of entities in response to their death and resurrection respectively. We will cover this topic in more detail later on this page.
 
 #### Skills
-Infine, nella cartella `Skills` trovate tutte le istanze delle abilita' utilizzate nella scena di esempio, suddivise per personaggio. Ogni abilita' ha una propria istanza di `SkillSO`, e una `ScalingFormula` con uno o piu' `ScalingComponent` associati. Alcune abilita', come menzionato prima, possono avere piu' di un effetto. In tal caso, hanno una scaling formula per ogni effetto.
+Finally, in the `Skills` folder you will find all the instances of the abilities used in the sample scene, divided by character. Each ability has its own `SkillSO` instance, and a `ScalingFormula` with one or more associated `ScalingComponent`s. Some abilities, as mentioned before, can have more than one effect. In that case, they have a scaling formula for each effect.
 
 #### Passives
-Nella cartella `Passives` trovate le istanze di oggetti necessari per il funzionamento delle abilita' passive implementate per la scena di esempio. Vedremo le abilita' passive piu' avanti in [Implementing Custom Passive Abilities](#implementig-custom-passive-abilities).
+In the `Passives` folder you will find the object instances needed for the passive abilities implemented for the sample scene to work. We will look at passive abilities later in [Implementing Custom Passive Abilities](#implementig-custom-passive-abilities).
 
 ## Interacting with the Scene
-Ora che abbiamo esplorato la scena di esempio, la gerarchia e i file di progetto, vi do alcune informazioni su alcune configurazioni specifiche che meritano due parole in piu'.
+Now that we have explored the sample scene, the hierarchy and the project files, let me give you some information about some specific configurations that deserve a bit more explanation.
 
 ### Casting Skills to Deal Damage and Heal
-Le skill della sample scene si possono riassumere, dal punto di vista tecnico, come dei costruttori di `PreDamageContext` e `PreHealContext` che instradano questi contesti verso le entita' bersaglio. Il bersaglio processerà questi contesti nei suoi metodi `heal` e `TakeDamage`. Il calcolo dei danni che avviene all'interno di `TakeDamage`, come abbiamo visto nei workflows, passa attraverso la pipeline del calcolo del danno. La pipeline usa la strategia che è stata configurata a livello di configurazione `AstraRPGHealthConfigSO`.  
-Quando l'entità viene curata o subisce danni, invocherà i rispettivi Global Events configurati anch'essi nella configurazione del package. E gli heal e damage pop-up managers che trovate nella hierarchy sono in ascolto di questi due eventi rispettivamente. Quando ricevono l'evento, creano un pop-up sopra la testa del personaggio bersaglio che mostra l'ammontare di danno subito o guarigione ricevuta. I pop up del danno avranno colori e icone diverse in base al tipo di danno inferto. Le icone (e il colore) combaceranno con quelle che vedete alla sinistra dell'abilità che avete lanciato.
+The skills of the sample scene can be summarized, from a technical standpoint, as builders of `PreDamageContext` and `PreHealContext` that route these contexts toward the target entities. The target will process these contexts in its `heal` and `TakeDamage` methods. The damage calculation that takes place inside `TakeDamage`, as we have seen in the workflows, passes through the damage calculation pipeline. The pipeline uses the strategy that has been configured at the `AstraRPGHealthConfigSO` configuration level.
+When the entity is healed or takes damage, it will invoke the respective Global Events also configured in the package configuration. And the heal and damage pop-up managers found in the hierarchy are listening to these two events respectively. When they receive the event, they create a pop-up above the target character's head showing the amount of damage taken or healing received. The damage pop-ups will have different colors and icons based on the type of damage dealt. The icons (and color) will match those you see to the left of the ability you cast.
 
-![Casting Skills](../images/AstraRPG/samples/casting-skills.gif)  
+![Casting Skills](../images/AstraRPG/samples/casting-skills.gif)
 _Casting Skills and Damage and Heal Pop-Ups_
 
-Se andate in hover sopra un pulsante di un'abilita', vedrete comparire un tooltip che mostra una descrizione dell'abilita'. Se tenete premuto il tasto `Alt` mentre il tooltip e' visibile, vedrete comparire i dettagli dello scaling dei vari effetti dell'abilita'. Queste descrizioni dovrebbero aiutarvi a prevedere l'ordine di grandezza dei danni e delle cure che i vari effetti dell'abilita' possono infliggere, e a capire come il level up dei personaggi influenzino la potenza delle loro abilita'.
+If you hover over an ability button, you will see a tooltip appear showing a description of the ability. If you hold the `Alt` key while the tooltip is visible, you will see the scaling details of the various ability effects appear. These descriptions should help you predict the order of magnitude of the damage and heals that the various ability effects can deal, and understand how the characters' level up influences the power of their abilities.
 
-![Tooltip]()  
+![Tooltip]()
 _Collapsed tooltip_
 
 ![Tooltip with details]()
 _Expanded tooltip with details_
 
-Se premete sul pulsante "Don't crit", il testo cambiera' in "Do crit", e l'abilita' che lancerete da quel momento in poi infliggera' un colpo critico. Il pop-up di un danno critico ha un icona personalizzata in alto a destra, e appare cosi:  
+If you press the "Don't crit" button, the text will change to "Do crit", and the ability you cast from that point on will deal a critical hit. The pop-up of a critical hit has a custom icon in the top right, and looks like this:
 ![Critical Hit Pop-Up](../images/AstraRPG/samples/critical-hit-pop-up.png)
 
 ### Messing Around with Damage Types and Damage Calculation Strategy
-Qui potete sbizzarrirvi e giocare con varie impostazioni per cambiare radicalmente il modo in cui il danno viene calcolato. Partiamo con l'osservare la configurazione dei tipi di danno:
+Here you can go wild and play with various settings to radically change the way damage is calculated. Let's start by observing the configuration of the damage types:
+
 | Damage Type | Defensive Stat | Damage Reduction Function | Defense Penetration Stat | Defense Penetration Function | Flat Damage Modifier Stat | Percentage Damage Modifier Stat | Ignores Barrier | Ignores Generic Perc. Dmg Modifiers | Ignores Generic Flat Dmg Modifiers |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| Physical | Armor | Logarithmic DR | Armor Penetration | Percentage DP | Physical Flat Dmg Mod | Physical Percentage Dmg Mod | ✘ | ✘ | ✘ |
-| Magical | Magic Resist | Logarithmic DR | Magic Penetration | Percentage DP | Magical Flat Dmg Mod | Magical Percentage Dmg Mod | ✘ | ✘ | ✘ |
-| True | None | None | None | None | None | None | ✔ | ✔ | ✔ |
+| Physical | Armor | Logarithmic DR | Armor Penetration | Percentage DP | Physical Flat Dmg Mod | Physical Percentage Dmg Mod | ✗ | ✗ | ✗ |
+| Magical | Magic Resist | Logarithmic DR | Magic Penetration | Percentage DP | Magical Flat Dmg Mod | Magical Percentage Dmg Mod | ✗ | ✗ | ✗ |
+| True | None | None | None | None | None | None | ✓ | ✓ | ✓ |
 
-Potete notare che il danno fisico e magico utilizzano entrambi la stessa formula logaritmica per la riduzione del danno e la stessa per la penetrazione della difesa, ma chiaramente utilizzano statistiche diverse per la riduzione e penetrazione. Il true damage invece non ha nessuna statistica difensiva associata, quindi non subisce nessuna riduzione. Non avendo statistiche difensive associate, non ha neanche penetrazione della difesa.  
-Oltre alle statistiche difensive e alle relative formule di riduzione e penetrazione, danno fisico e magico definiscono anche delle statistiche per modificatori flat e percentuali per lo specifico tipo di danno. Rimando alla documentazione dei [Damage Type's Damage Modifiers](./workflows/damage.md#damage-types-damage-modifiers) per maggiori dettagli su come funzionano queste statistiche e su come vengono utilizzate nella pipeline del calcolo del danno. Potete testare l'impatto di queste statistiche modificando i loro valori nell'`EntityStats` del Dummy. **Ricordatevi inoltre che l'ordine di applicazione dei modificatori flat e percentuali è definito nella strategia di calcolo del danno configurata. Nella scena di esempio la trovate sotto `Examples/Instances/Default Damage Calculation Strategy`.** La sua configurazione iniziale e':
+You can notice that physical and magical damage both use the same logarithmic formula for damage reduction and the same one for defense penetration, but clearly use different statistics for reduction and penetration. True damage instead has no associated defensive stat, so it does not suffer any reduction. Having no associated defensive stats, it also has no defense penetration.
+In addition to the defensive stats and the related reduction and penetration formulas, physical and magical damage also define statistics for flat and percentage modifiers for the specific damage type. I refer you to the documentation on [Damage Type's Damage Modifiers](./workflows/damage.md#damage-types-damage-modifiers) for more details on how these stats work and how they are used in the damage calculation pipeline. You can test the impact of these stats by modifying their values in the Dummy's `EntityStats`. **Also remember that the order of application of flat and percentage modifiers is defined in the configured damage calculation strategy. In the sample scene you will find it under `Examples/Instances/Default Damage Calculation Strategy`.** Its initial configuration is:
 1. Apply Critical Multiplier
 2. Apply Defenses
 3. Apply Barrier
 4. Apply Percentage Damage Modifiers
 5. Apply Flat Damage Modifiers
 
-Potete ovviamente riordinare questi step come preferite per vedere come cambia il risultato finale del danno in base all'ordine di applicazione degli step.
+You can of course reorder these steps as you prefer to see how the final damage result changes based on the order of application of the steps.
 
-Per concludere le osservazioni sui tipi di danno, potete osservare che il true damage ignora sia i modificatori flat che quelli percentuali, oltre che la barrier. Questo significa che il danno, oltre a non venir ridotto, non puo' neanche venire amplificato. **L'unica meccanica che modifica il valore del true damage e' il moltiplicatore del critico.**
+To conclude the observations on damage types, you can notice that true damage ignores both flat and percentage modifiers, in addition to the barrier. This means that the damage, besides not being reduced, cannot be amplified either. **The only mechanic that modifies the value of true damage is the critical multiplier.**
 
-C'e' un'ultima cosa che merita due parole in merito a questo argomento, ed e' la configurazione delle statistiche per i flat e percentage damage modifiers (vale sia per quelli damage-type specific che per quelli generici). Le statistiche per i percentage damage modifiers sono configurate diversamente da quelle flat. Se aprite la statistica `Physical Dmg Perc Mod` nell'inspector, noterete infatti che ha minimum value di -100, mentre la statisticha `Physical Dmg Flat Mod` **non** ha un minimum value. Questo perche' una percentuale di modificatore del danno non puo' mai superare il -100% (completa negazione del danno), mentre un modificatore flat puo' teoricamente ridurre il danno di un qualsiasi valore.  
-E' responsabilita' dello step dei flat damage modifiers nella pipeline del calcolo del danno assicurarsi che il danno finale non scenda sotto lo zero a causa di un flat damage modifier che supera il valore del danno.  
-Un'osservazione che potreste sollevare e' "E se un'entita' ha il generic damage percentage modifier a `-70`% e il damage-type specific percentage modifier a `-50`%? In questo caso, il danno subira' una riduzione totale del 120%, no?". Corretto! Tuttavia, come spiegato in [ApplyPercentageDmgModifiersStep](./workflows/damage.md#applypercentagedmgmodifiersstep), il costrutto usato internamente dalla pipeline del calcolo del danno limita inferiormente a 0 le trasformazioni del damage amount. Quindi, in questo caso, il danno finale sara' 0, e il danno verra' prevenuto con `DamagePreventionReason.PipelineReducedToZero`.  
-Pertanto, anche se non impostaste un limite inferiore di -100% alle statistiche dei percentage damage modifiers, il sistema si assicurerebbe comunque che il danno non scenda sotto lo zero a causa di modificatori percentuali, tuttavia, e' piu' semanticamente corretto e piu' chiaro impostare un limite di -100% a queste statistiche. Questo sarebbe utile anche al momento della creazione di interfacce di gioco per la visualizzazione di queste statistiche, in quanto un giocatore potrebbe essere confuso nel vedere un modificatore del danno del -150%, non sapendo che in realta' il danno non puo' scendere sotto lo zero.
+There is one last thing worth mentioning on this topic, and it is the configuration of the stats for flat and percentage damage modifiers (this applies to both damage-type specific and generic ones). The stats for percentage damage modifiers are configured differently from flat ones. If you open the `Physical Dmg Perc Mod` stat in the inspector, you will notice that it has a minimum value of -100, while the `Physical Dmg Flat Mod` stat does **not** have a minimum value. This is because a damage modifier percentage can never exceed -100% (complete damage negation), while a flat modifier can theoretically reduce damage by any value.
+It is the responsibility of the flat damage modifiers step in the damage calculation pipeline to ensure that the final damage does not drop below zero due to a flat damage modifier that exceeds the damage value.
+An observation you might raise is "What if an entity has the generic damage percentage modifier at `-70`% and the damage-type specific percentage modifier at `-50`%? In that case, the damage will suffer a total reduction of 120%, right?". Correct! However, as explained in [ApplyPercentageDmgModifiersStep](./workflows/damage.md#applypercentagedmgmodifiersstep), the construct used internally by the damage calculation pipeline lower-bounds the damage amount transformations at 0. Therefore, in this case, the final damage will be 0, and the damage will be prevented with `DamagePreventionReason.PipelineReducedToZero`.
+Therefore, even if you did not set a lower bound of -100% on the percentage damage modifier stats, the system would still ensure that the damage does not drop below zero due to percentage modifiers; however, it is more semantically correct and clearer to set a -100% limit on these stats. This would also be useful when creating game interfaces for displaying these stats, as a player might be confused seeing a damage modifier of -150%, not knowing that in reality the damage cannot drop below zero.
 
 ### Playing with Passive HP Regeneration
-Nella scena di esempio la rigenerazione passiva della salute e' abilitata per tutti i personaggi, ma potete disabilitarla togliendo la spunta da `Passive Health Regeneration` nell'`EntityHealth` dell'entita' in questione. Di default inoltre verranno mostrati dei popup curativi per ogni tick di rigenerazione passiva. Se questi popup vi danno fastidio, potete disabilitarli in questo modo:
-1. Dalla hierarchy aprite il game object `PopupCanvas`
-2. Selezionate il game object `HealPopupManager`
-3. Nell'inspector, nel componente `Heal Popup Manager`, espandete la sezione `Hea; Sources To Ignore` e premete il pulsante `+`. Trascinate qui la Heal Source `HP Regeneration HS` che trovate in `Examples/Instances/Heal Sources`.
+In the sample scene, passive health regeneration is enabled for all characters, but you can disable it by unchecking `Passive Health Regeneration` in the `EntityHealth` of the entity in question. By default, healing popups will also be shown for each passive regeneration tick. If these popups bother you, you can disable them as follows:
+1. From the hierarchy, open the `PopupCanvas` game object
+2. Select the `HealPopupManager` game object
+3. In the inspector, in the `Heal Popup Manager` component, expand the `Heal Sources To Ignore` section and press the `+` button. Drag the `HP Regeneration HS` Heal Source found in `Examples/Instances/Heal Sources` here.
 
-In questo modo, il `Heal Popup Manager` ignorerà tutti gli eventi di guarigione che hanno come fonte di guarigione `HP Regeneration`, e quindi non creerà pop-up per i tick di rigenerazione passiva.
+This way, the `Heal Popup Manager` will ignore all healing events that have `HP Regeneration` as their heal source, and therefore will not create pop-ups for passive regeneration ticks.
 
-Gia' da questo semplice esempio risulta chiaro il valore di creare e utilizzare heal source differenti. Cure che provengono da meccaniche diverse possono sollevare casi d'uso diversi.
+Even from this simple example, the value of creating and using different heal sources becomes clear. Heals coming from different mechanics can raise different use cases.
 
-Ho configurato il tick rate della rigenerazione a 1 secondo. Se voleste invece cambiare il tick-rate della rigenerazione passiva, potete farlo modificando il valore `Passive HP Regeneration Interval` nell'istanza di configurazione `Astra Rpg Health Config` che trovate in `Examples/Resoures`. Rimando anche alla documentazione sulla [Package Configuration | Health Regeneration](./workflows/package-configuration.md#health-regeneration) e sulla [Healing | Passive Health Regeneration](./workflows/healing.md#passive-health-regeneration) per i dettagli.  
+I have configured the regeneration tick rate to 1 second. If you wanted to change the tick rate of passive regeneration, you can do so by modifying the `Passive HP Regeneration Interval` value in the `Astra Rpg Health Config` configuration instance found in `Examples/Resources`. I also refer you to the documentation on [Package Configuration | Health Regeneration](./workflows/package-configuration.md#health-regeneration) and on [Healing | Passive Health Regeneration](./workflows/healing.md#passive-health-regeneration) for details.
 
-Per modificare la vita rigenerata passivamente, dovete modificare il valore della statistica `Passive Regeneration`. Per i tre personaggi giocabili, questa statistica e' controllata attraverso le Growth Formula associate alla rispettive classi, mentre per il Dummy potete modificarla direttamente attraverso `EntityStats`.
+To modify the passively regenerated health, you need to change the value of the `Passive Regeneration` stat. For the three playable characters, this stat is controlled through the Growth Formulas associated with their respective classes, while for the Dummy you can modify it directly through `EntityStats`.
 
 > [!WARNING]
-> Ricordatevi che, come menzionato in [Passive Health Regeneration Stat (HP/10s)](./workflows/package-configuration.md#passive-health-regeneration-stat-hp10s) in Package Configuration, il valore di questa statistica rappresenta la quantita' di salute rigenerata ogni 10 secondi. Quindi, se volete che un personaggio rigeneri passivamente 5 HP al secondo, dovrete impostare il valore di `Passive Regeneration` a 50, non a 5.
+> Remember that, as mentioned in [Passive Health Regeneration Stat (HP/10s)](./workflows/package-configuration.md#passive-health-regeneration-stat-hp10s) in Package Configuration, the value of this stat represents the amount of health regenerated every 10 seconds. Therefore, if you want a character to passively regenerate 5 HP per second, you will need to set the value of `Passive Regeneration` to 50, not 5.
 
 ### Health Scaling Component
+Some abilities use a `HealthScalingComponent` to scale their damage based on the health of themselves or the target.
 
-### Death and Resurrection
+- The duelist has the `Syphoning Strike` ability, which heals him based on maximum health.
+- The Assassin has the `Slice And Dice` ability, where the second effect deals pure damage based on the target's current health. Additionally, `Throat Cut` deals physical damage based on the target's maximum health.
+- The Sorcerer has the `Soul Explosion` ability that deals magical damage based on the target's missing health.
+- All of the Dummy's abilities scale based on health.
 
-### Experience Collection
+You can explore the details of the abilities through the popup that appears on hover over the respective buttons, and you can inspect the scaling formulas and scaling components associated with each ability to see how the health-based scaling has been configured.
+
+### Experience Collection and Death & Resurrection
+In the sample scene you have the opportunity to see both the base package's `ExpSource` and the brand new `ExpCollector` of Astra RPG Health in action. I refer you to the documentation on [Experience Collection](./workflows/experience-collection.md) for details on `ExpCollector`.
+
+All three playable characters, who have classes and therefore a level progression, have an associated `ExpCollector`. The Dummy instead has an associated `ExpSource`, and acts as a source of experience for the playable characters. As explained in the Experience Collection documentation, `ExpCollector` relies on an `ExpCollectionStrategySO` to define the experience collection rules. In the sample scene, the playable characters use a multiple strategy that involves both collecting experience through the `Direct Kill Exp Strategy` and through the `Environmental Kill Exp Strategy`, all thanks to the `FirstMatchExpStrategySO` which considers the first strategy that matches the experience collection conditions. I refer you to the configuration documentation [Package Configuration | Default Exp Collection Strategy](./workflows/package-configuration.md#default-damage-calculation-strategy) for configuring the package's default experience collection strategy.
+However, I remind you that the sample scene does not involve the use of environmental damage, so the `Environmental Kill Exp Strategy` will never be activated. I have nonetheless included this strategy in the sample scene to show you how to create and configure a multiple strategy that uses both the direct kill and the environmental kill strategies.
+
+By default the `DirectKillExpStrategySO` marks the Dummy's `ExpSource` as harvested once a playable character kills the Dummy, and therefore does not allow experience to be collected from that `ExpSource` more than once. However, at the package configuration level a multiple [Default On Resurrection Game Action](./workflows/package-configuration.md#default-on-resurrection-game-action) has been set which, among other things, resets the `ExpSource` of the resurrected entity. Therefore, since the `Default On Death Game Action` resurrects entities after 3 seconds, and the `Default On Resurrection Game Action` resets the `ExpSource`, you will be able to collect experience from the Dummy every time you kill it, even if you are using the `Direct Kill Exp Strategy`.
+
+Let's spend a few more words on the Game Actions configured for death and resurrection.
+The `Default On Death Game Action` is a `CompositeComponentGameAction` that contains 2 Game Actions within it:
+1. `ToggleActiveGameObjectGameAction`: allows you to decide whether to activate or deactivate the game object related to the `Component` passed as context (in this case the entity that died). In this case, it is configured to deactivate the game object.
+2. `DelayedGameAction`: allows you to delay the execution of a Game Action by a certain amount of time. In this case, it is configured to delay by 3 seconds the execution of a `ResurrectGameAction`, which resurrects the dead entity.
+The `Default On Resurrection Game Action` is also a `CompositeComponentGameAction` that contains 2 Game Actions within it:
+1. `ToggleActiveGameObjectGameAction`: used in contrast to the one in the `Default On Death Game Action` that deactivates the game object upon death.
+2. `ToggleHarvestedExpSourceGameAction`: allows you to decide whether to mark as harvested or unharvested the `ExpSource` passed as context (in this case, the `ExpSource` of the resurrected entity). In this case, it is configured to mark the `ExpSource` as unharvested.
 
 ### Implementig Custom Passive Abilities
 
-Nonostante questo package non si occupa di definire costrutti di alto livello per le abilita' e le passive (e sara' responsabilita' di una futura estensione del framework farlo), e' comunque possibile implementare certe abilita' passive per i vostri personaggi in maniera semplice e veloce usando i costrutti di questo package e quello base. Di seguito alcuni esempi.
+Although this package does not deal with defining high-level constructs for abilities and passives (and it will be the responsibility of a future framework extension to do so), it is still possible to implement certain passive abilities for your characters in a simple and fast way using the constructs of this package and the base one. Below are some examples.
 
 #### Passive Ability (Duelist) - Excellent Recovery
 *Implementation difficulty: easy*
 
-Il duelist ha un'abilita' passiva che aumenta la rigenerazione passiva della salute del 400% al livello 10, e del 1000% al livello 20.
+The duelist has a passive ability that increases passive health regeneration by 400% at level 10, and by 1000% at level 20.
 
-L'implementazione di questa abilita' e' molto semplice: ho creato una GrowthFormula specifica per il Duelist per la statistica `Passive Reg Heal Perc Mod`, ovvero la statistica che rappresenta il modificatore percentuale alla rigenerazione passiva della salute che e' stata assegnata alla Heal Source `HP Regeneration`. La growth formula restituisce un valore di 0% fino al livello 9, un valore di 400% dal livello 10 al livello 19, e un valore di 1000% dal livello 20 in poi.
+The implementation of this ability is very simple: I created a specific GrowthFormula for the Duelist for the `Passive Reg Heal Perc Mod` stat, which is the stat that represents the percentage modifier to passive health regeneration that has been assigned to the `HP Regeneration` Heal Source. The growth formula returns a value of 0% up to level 9, a value of 400% from level 10 to level 19, and a value of 1000% from level 20 onwards.
 
 #### Passive Ability (Assassin) - Vengence In Death
 *Implementation difficulty: medium*
 
-L'assassin ha un'abilita' passiva che fa si che quando subisce un danno fatale, contrattacca il nemico infliggendogli l'80% dei danni letali ricevuti come danno fisico. Questo danno e' un colpo critico garantito.
+The assassin has a passive ability that causes him, when receiving a fatal blow, to counter-attack the enemy dealing 80% of the lethal damage received as physical damage. This damage is a guaranteed critical hit.
 
-L'implementazione di questa abilita' e' leggermente piu' complessa della precedente. Per ottenere l'effetto descritto possiamo ricorrere alla [`CounterDamageOnDeathGameActionSO`](./workflows/game-actions.md#counterdamageondeathgameactionso) fornita dal package. Questa Game Action, prende in input un parametro di tipo `entityDiedContext`, lo stesso contesto che viene passato dagli eventi di morte. Pertanto attraverso un `EntityDiedGameEventListener` possiamo intercettare la morte di un'entita', e lanciare questa Game Action passando il contesto di morte intercettato. La Game Action utilizza il `DamageResolutionContext` contenuto nel contesto di morte per risalire all'ammontare di danno che ha causato la morte dell'entita', e infligge un danno pari all'80% di questo ammontare al colpevole del danno letale (moltiplicato per il moltiplicatore del critico dell'Assassin).  
-Tuttavia c'e' un problema, noi non vogliamo attivare la Game Action alla morte di una qualunque entita', ma solo alla morte dell'Assassin. Qui entrano in gioco gli [Extra Events](./workflows/entity-health.md#extra-events). Possiamo creare un `EntityDiedGameEvent` specifico per comunicare la morte dell'Assassin soltanto, e assegnarlo nell'`EntityHealth` dell'Assassin come `Extra Death Event`. In questo modo, quando l'Assassin muore, oltre a lanciare il `Entity Died Game Event` globale, lancerà anche questo evento extra specifico. Quindi, invece di ascoltare il `Entity Died Game Event` globale con il nostro `EntityDiedGameEventListener`, ascolteremo questo evento extra specifico per l'Assassin. In questo modo, la nostra Game Action verrà attivata solo quando muore l'Assassin, e non alla morte di altre entita'.
+The implementation of this ability is slightly more complex than the previous one. To obtain the described effect we can resort to the [`CounterDamageOnDeathGameActionSO`](./workflows/game-actions.md#counter-damage) provided by the package. This Game Action takes as input a parameter of type `entityDiedContext`, the same context that is passed by death events. Therefore, through an `EntityDiedGameEventListener` we can intercept the death of an entity and trigger this Game Action passing the intercepted death context. The Game Action uses the `DamageResolutionContext` contained in the death context to trace back to the amount of damage that caused the entity's death, and deals damage equal to 80% of this amount to the perpetrator of the lethal damage (multiplied by the Assassin's critical multiplier).
+However there is a problem: we don't want to trigger the Game Action at the death of any entity, but only at the death of the Assassin. This is where [Extra Events](./workflows/entity-health.md#extra-events) come into play. We can create a dedicated `EntityDiedGameEvent` to communicate only the Assassin's death, and assign it in the Assassin's `EntityHealth` as an `Extra Death Event`. This way, when the Assassin dies, in addition to firing the global `Entity Died Game Event`, it will also fire this specific extra event. Therefore, instead of listening to the global `Entity Died Game Event` with our `EntityDiedGameEventListener`, we will listen to this specific extra event for the Assassin. This way, our Game Action will only be triggered when the Assassin dies, and not at the death of other entities.
 
 #### Passive Ability (Sorcerer) - Glass Cannon
 *Implementation difficulty: medium*
-Lo sorcerer ha un'abilita' passiva che aumenta del 75% il moltiplicatore dei colpi critici, ma ogni volta che subisce danno subisce anche il 15% del suo Magic Power come danno magico extra.
+The sorcerer has a passive ability that increases the critical hit multiplier by 75%, but every time he takes damage he also takes 15% of his Magic Power as extra magical damage.
 
-L'implementazione di questa abilita' e' un po' l'unione delle due precedenti. Per aumentare il moltiplicatore dei colpi critici, basta creare una Growth Formula specifica per il Sorcerer per la statistica `Critical Multiplier`, che restituisce un valore di 275% a tutti i livelli. Per quanto riguarda il secondo effetto, ovvero subire danno magico extra pari al 15% del Magic Power ogni volta che subisce danno, possiamo ricorrere sempre alla `CounterDamageOnDeathGameActionSO` per infliggere danno magico extra ogni volta che il Sorcerer subisce danno. Tuttavia, a differenza dell'Assassin, vogliamo che questa game action bersagli il Sorcerer anziche' chi ci ha inflitto danni. Per l'ammontare di danno, usiamo una `ScalingFormula` dedicata. Infine, anche in questo caso, non vogliamo che questa game action venga attivata ogni volta che un'entita' subisce danno, ma solo quando a subire danno e' lo Sorcerer. Anche in questo caso, possiamo ricorrere agli Extra Events. Ho creato un evento dedicato per comunicare quando lo Sorcerer subisce danno, e l'ho assegnato come `Extra Damage Taken Event` nell'`EntityHealth` dello Sorcerer.
+The implementation of this ability is somewhat a union of the previous two. To increase the critical hit multiplier, simply create a specific Growth Formula for the Sorcerer for the `Critical Multiplier` stat, which returns a value of 275% at all levels. As for the second effect, namely taking extra magical damage equal to 15% of Magic Power every time he takes damage, we can again resort to the `CounterDamageOnDeathGameActionSO` to deal extra magical damage every time the Sorcerer takes damage. However, unlike the Assassin, we want this game action to target the Sorcerer rather than whoever dealt the damage to us. For the damage amount, we use a dedicated `ScalingFormula`. Finally, also in this case, we don't want this game action to be triggered every time any entity takes damage, but only when the Sorcerer takes damage. Also in this case, we can resort to Extra Events. I created a dedicated event to communicate when the Sorcerer takes damage, and assigned it as an `Extra Damage Taken Event` in the Sorcerer's `EntityHealth`.

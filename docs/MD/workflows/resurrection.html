@@ -111,8 +111,8 @@ if (target.TryGetComponent(out EntityHealth targetHealth)) {
     PreHealContext context = PreHealContext.Builder
         .WithAmount(targetHealth.MaxHp / 2)   // 50% of max HP as base amount, before modifiers
         .WithSource(resurrectionSource)
-        .WithHealer(healer)
         .WithTarget(target)
+        .WithHealer(healer)                    // optional
         .Build();
 
     targetHealth.Resurrect(context);
@@ -178,7 +178,7 @@ targetHealth.Resurrect(thirtyPercent);
 <ul>
 <li><strong>HealAmount</strong>: a <code>HealAmountContext</code> with <code>RawAmount</code> (base amount before modifiers), <code>AfterModifierAmount</code> (after flat and percentage modifiers), and <code>NetAmount</code> (final HP actually added, capped to max HP)</li>
 <li><strong>HealSource</strong>: the <code>HealSourceSO</code> used for this resurrection</li>
-<li><strong>Source</strong>: the healer <code>EntityCore</code> (<code>null</code> for system-initiated resurrections, such as those triggered via the convenience overloads or the <code>ResurrectComponentGameActionSO</code>)</li>
+<li><strong>Performer</strong>: the entity that performed the resurrection (<code>null</code> for system-initiated resurrections, such as those triggered via the convenience overloads or the <code>ResurrectComponentGameActionSO</code>)</li>
 <li><strong>IsCritical</strong>: whether the resurrection heal was flagged as a critical</li>
 </ul>
 </li>

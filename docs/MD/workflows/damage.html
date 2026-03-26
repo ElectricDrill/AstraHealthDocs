@@ -544,14 +544,14 @@ if (target.TryGetComponent(out EntityHealth targetHealth)) {
             .WithType(dmgType)
             .WithSource(dmgSource)
             .WithTarget(target)
-            .WithDealer(skillCaster)
+            .WithDealer(skillCaster)   // optional
             .Build();
 
     // finally, we call TakeDamage to apply the damage to the target
     targetHealth.TakeDamage(preDamageContext);
 }
 </code></pre>
-<p>Thanks to the <code>PreDamageContext</code> fluent builder, the IDE will automatically suggest the fields to fill in one at a time. As long as it presents them one at a time, it means they are required fields. If instead it presents more than one at a time, it means those fields are optional, and you can decide whether to fill them in or build the context without them. Optional fields are, for example, the critical hit flag and the critical multiplier. In the example, for simplicity, I did not fill in these fields.</p>
+<p>Thanks to the <code>PreDamageContext</code> fluent builder, the IDE will automatically suggest the fields to fill in one at a time. As long as it presents them one at a time, it means they are required fields. If instead it presents more than one at a time, it means those fields are optional, and you can decide whether to fill them in or build the context without them. Optional fields include the damage dealer (<code>WithDealer</code>), the critical hit flag, the critical multiplier, the instigator (<code>WithInstigator</code>), and the reactability flag (<code>WithIsReactable</code>). In the example, for simplicity, I did not fill in these fields.</p>
 <p>Now, we know that hardcoding the damage value directly in the code is not a good practice. Let's see how to use a <code>ScalingFormula</code> to dynamically calculate the amount of damage to inflict. The step builder creation would become the following:</p>
 <pre><code class="lang-csharp">// Assuming that scalingFormula is a ScalingFormula that calculates the damage amount based on the skill caster's stats...
 
@@ -562,7 +562,7 @@ var preDamageContext = PreDamageContext.Builder
         .WithType(dmgType)
         .WithSource(dmgSource)
         .WithTarget(target)
-        .WithDealer(skillCaster)
+        .WithDealer(skillCaster)   // optional
         .Build();
 </code></pre>
 <h2 id="damage-modifiers">Damage Modifiers</h2>
@@ -597,11 +597,11 @@ var preDamageContext = PreDamageContext.Builder
 <p>Internally, the pipeline runs its steps sequentially on a shared state object and short-circuits the moment damage is marked as prevented: if a barrier fully absorbs the hit, or a modifier grants immunity, all remaining steps are skipped and the result is returned immediately.</p>
 <h3 id="pipeline-data-types">Pipeline Data Types</h3>
 <p>The pipeline uses a small set of dedicated types to keep concerns cleanly separated — there is one type for what you request, one for what flows through the steps, and one for what you receive back. As a designer integrating <code>TakeDamage</code> into your game code, you will interact with two of these directly: <code>PreDamageContext</code> to describe the damage you want to apply, and <code>DamageResolutionContext</code> to inspect the outcome. The others are managed internally by the pipeline and are primarily relevant if you are implementing custom steps or hooking into damage events for analytics or reactions.</p>
-<p><strong><code>PreDamageContext</code></strong> is the descriptor you build before calling <code>TakeDamage</code>. Its mandatory fields are enforced by a fluent step-builder that requires them in order: amount → type → damage source → target → source/dealer. Optional fields include <code>IsCritical</code>, <code>CriticalMultiplier</code>, and <code>Ignore</code>. Setting <code>Ignore = true</code> causes the pipeline to be bypassed entirely; the damage is flagged as prevented with <code>PrePhaseIgnored</code> before any calculation begins.</p>
+<p><strong><code>PreDamageContext</code></strong> is the descriptor you build before calling <code>TakeDamage</code>. Its mandatory fields are enforced by a fluent step-builder that requires them in order: amount → type → damage source → target. The dealer entity (<code>WithDealer</code>) is optional and can be omitted when no specific entity is responsible for the damage (e.g. traps, environmental hazards, or system-initiated damage). Other optional fields include <code>IsCritical</code>, <code>CriticalMultiplier</code>, <code>Ignore</code>, <code>Instigator</code>, and <code>IsReactable</code>. Setting <code>Ignore = true</code> causes the pipeline to be bypassed entirely; the damage is flagged as prevented with <code>PrePhaseIgnored</code> before any calculation begins. <code>IsReactable</code> defaults to <code>true</code> and signals whether reactive systems (such as counter-damage actions) may respond to this event — set it to <code>false</code> when building a secondary effect to prevent chain reactions. See <a href="game-actions.html#preventing-infinite-cycles">Preventing Infinite Cycles</a> for details.</p>
 <p><strong><code>DamageInfo</code></strong> is the mutable state object that flows through the pipeline. It is constructed from a <code>PreDamageContext</code> at the start of <code>TakeDamage</code> and holds:</p>
 <ul>
 <li><strong><code>Amounts</code></strong> — a <code>DamageAmountContext</code> tracking the current damage value and step-by-step history.</li>
-<li><strong><code>Type</code></strong>, <strong><code>DamageSourceSO</code></strong>, <strong><code>Target</code></strong>, <strong><code>Source</code></strong>, <strong><code>IsCritical</code></strong>, <strong><code>CriticalMultiplier</code></strong> — metadata forwarded from the <code>PreDamageContext</code>.</li>
+<li><strong><code>Type</code></strong>, <strong><code>DamageSourceSO</code></strong>, <strong><code>Target</code></strong>, <strong><code>Performer</code></strong>, <strong><code>IsCritical</code></strong>, <strong><code>CriticalMultiplier</code></strong> — metadata forwarded from the <code>PreDamageContext</code>.</li>
 <li><strong><code>Reasons</code></strong> — a <code>DamagePreventionReason</code> flags enum accumulating all reasons why damage was prevented.</li>
 <li><strong><code>IsPrevented</code></strong> — returns <code>true</code> when <code>Reasons</code> is not <code>None</code>; used to short-circuit the pipeline.</li>
 </ul>
@@ -618,6 +618,7 @@ var preDamageContext = PreDamageContext.Builder
 <li><strong><code>TerminationStepType</code></strong> — the <code>Type</code> of the step that caused early termination, if any.</li>
 <li><strong><code>FinalDamageInfo</code></strong> — the <code>DamageInfo</code> at the end of the pipeline; may be <code>null</code> when damage was prevented in the pre-phase.</li>
 <li><strong><code>PreDamageContext</code></strong> — the original input that initiated this damage attempt.</li>
+<li><strong><code>IsReactable</code></strong> — propagated from <code>PreDamageContext.IsReactable</code>. When <code>false</code>, reactive systems listening to damage resolution events should not respond to this outcome.</li>
 </ul>
 <p><strong><code>DamageOutcome</code></strong> is a two-value enum: <code>Applied</code> (damage was applied to the entity's health or barrier) and <code>Prevented</code> (damage was stopped before affecting the entity).</p>
 <p><strong><code>DamagePreventionReason</code></strong> is a flags enum that accumulates one or more reasons why damage was prevented:</p>
@@ -719,15 +720,23 @@ var preDamageContext = PreDamageContext.Builder
 <li><strong>DamageType-specific</strong> — reads <code>DamageTypeSO.PercentageDamageModificationStat</code> from the target's stats.</li>
 </ol>
 <p>Each layer is evaluated individually for full immunity before contributions are summed. If the generic layer alone reaches ≤ −100%, <code>DamagePreventionReason.AllDamageImmune</code> is set and the step exits immediately. If the source-specific layer alone reaches ≤ −100%, <code>DamagePreventionReason.DamageSourceImmune</code> is set. If the type-specific layer alone reaches ≤ −100%, <code>DamagePreventionReason.DamageTypeImmune</code> is set. If no single layer triggers immunity, the three contributions are summed additively into a single net percentage applied to <code>Current</code> in one operation.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>If the cumulative percentage is ≤ −100%, <code>DamageInfo.Amounts.Current</code> clamps to a minimum of 0: percentage modifiers cannot bring damage below zero. In such case, the damage is prevented with <code>DamagePreventionReason.PipelineReducedToZero</code>.</p>
+</div>
 <h4 id="applyflatdmgmodifiersstep">ApplyFlatDmgModifiersStep</h4>
 <p>Where percentage modifiers scale damage proportionally, flat modifiers add or subtract a fixed amount regardless of the hit's magnitude. A −15 flat absorb always removes 15 damage, whether the incoming hit was 20 or 2000. Flat modifiers are typically placed after percentage modifiers so they adjust the already-scaled value — but you are free to order them as your game design requires.</p>
 <p>Applies flat damage modifiers from the same three layers as <code>ApplyPercentageDmgModifiersStep</code>:</p>
 <ol>
-<li><strong>Generic</strong> — reads <code>AstraRpgHealthConfigSO.GenericFlatDamageModificationStat</code>. Skipped if the <code>DamageTypeSO</code> has <strong>Ignore Generic Flat Modifiers</strong> enabled.</li>
-<li><strong>DamageSource-specific</strong> — reads <code>DamageSourceSO.FlatDamageModificationStat</code>.</li>
-<li><strong>DamageType-specific</strong> — reads <code>DamageTypeSO.FlatDamageModificationStat</code>.</li>
+<li><strong>Generic</strong> — reads <code>AstraRpgHealthConfigSO.GenericFlatDamageModificationStat</code> from the target's stats. Skipped if the <code>DamageTypeSO</code> has <strong>Ignore Generic Flat Modifiers</strong> enabled.</li>
+<li><strong>DamageSource-specific</strong> — reads <code>DamageSourceSO.FlatDamageModificationStat</code> from the target's stats.</li>
+<li><strong>DamageType-specific</strong> — reads <code>DamageTypeSO.FlatDamageModificationStat</code> from the target's stats.</li>
 </ol>
-<p>All three contributions are summed additively. The net value is added to or subtracted from <code>DamageInfo.Amounts.Current</code>. The result is clamped to a minimum of 0: flat modifiers cannot bring damage below zero.</p>
+<p>All three contributions are summed additively. The net value is added to or subtracted from <code>DamageInfo.Amounts.Current</code>.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p><code>DamageInfo.Amounts.Current</code> clamps to a minimum of 0: flat modifiers cannot bring damage below zero. In such case, the damage is prevented with <code>DamagePreventionReason.PipelineReducedToZero</code>.</p>
+</div>
 <div class="NOTE">
 <h5>Note</h5>
 <p>The conventional order is to run percentage modifiers before flat modifiers, so that flat additions or reductions are applied to the already-scaled value. This ordering is not enforced by the system; you can arrange steps freely.</p>

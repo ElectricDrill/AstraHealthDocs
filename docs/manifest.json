@@ -145,6 +145,16 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "MD/workflows/game-actions.md",
+      "output": {
+        ".html": {
+          "relative_path": "MD/workflows/game-actions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "MD/workflows/healing.md",
       "output": {
         ".html": {
@@ -2058,6 +2068,16 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "images/AstraRPG/samples/critical-hit-pop-up.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/AstraRPG/samples/critical-hit-pop-up.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "images/AstraRPG/samples/scene-overview.png",
       "output": {
         "resource": {
@@ -2272,6 +2292,36 @@
       "output": {
         "resource": {
           "relative_path": "images/AstraRPG/workflows/experience-collection/first-match-strategy.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/AstraRPG/workflows/game-actions/counter-damage.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/AstraRPG/workflows/game-actions/counter-damage.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/AstraRPG/workflows/game-actions/set-override-on-death.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/AstraRPG/workflows/game-actions/set-override-on-death.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/AstraRPG/workflows/game-actions/set-override-on-resurrection.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/AstraRPG/workflows/game-actions/set-override-on-resurrection.png"
         }
       },
       "version": ""

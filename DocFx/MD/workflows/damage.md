@@ -369,7 +369,7 @@ if (target.TryGetComponent(out EntityHealth targetHealth)) {
 }
 ```
 
-Thanks to the `PreDamageContext` fluent builder, the IDE will automatically suggest the fields to fill in one at a time. As long as it presents them one at a time, it means they are required fields. If instead it presents more than one at a time, it means those fields are optional, and you can decide whether to fill them in or build the context without them. Optional fields include the damage dealer (`WithDealer`), the critical hit flag, and the critical multiplier. In the example, for simplicity, I did not fill in these fields.
+Thanks to the `PreDamageContext` fluent builder, the IDE will automatically suggest the fields to fill in one at a time. As long as it presents them one at a time, it means they are required fields. If instead it presents more than one at a time, it means those fields are optional, and you can decide whether to fill them in or build the context without them. Optional fields include the damage dealer (`WithDealer`), the critical hit flag, the critical multiplier, the instigator (`WithInstigator`), and the reactability flag (`WithIsReactable`). In the example, for simplicity, I did not fill in these fields.
 
 Now, we know that hardcoding the damage value directly in the code is not a good practice. Let's see how to use a `ScalingFormula` to dynamically calculate the amount of damage to inflict. The step builder creation would become the following:
 ```csharp
@@ -429,7 +429,7 @@ Internally, the pipeline runs its steps sequentially on a shared state object an
 
 The pipeline uses a small set of dedicated types to keep concerns cleanly separated — there is one type for what you request, one for what flows through the steps, and one for what you receive back. As a designer integrating `TakeDamage` into your game code, you will interact with two of these directly: `PreDamageContext` to describe the damage you want to apply, and `DamageResolutionContext` to inspect the outcome. The others are managed internally by the pipeline and are primarily relevant if you are implementing custom steps or hooking into damage events for analytics or reactions.
 
-**`PreDamageContext`** is the descriptor you build before calling `TakeDamage`. Its mandatory fields are enforced by a fluent step-builder that requires them in order: amount → type → damage source → target. The dealer entity (`WithDealer`) is optional and can be omitted when no specific entity is responsible for the damage (e.g. traps, environmental hazards, or system-initiated damage). Other optional fields include `IsCritical`, `CriticalMultiplier`, and `Ignore`. Setting `Ignore = true` causes the pipeline to be bypassed entirely; the damage is flagged as prevented with `PrePhaseIgnored` before any calculation begins.
+**`PreDamageContext`** is the descriptor you build before calling `TakeDamage`. Its mandatory fields are enforced by a fluent step-builder that requires them in order: amount → type → damage source → target. The dealer entity (`WithDealer`) is optional and can be omitted when no specific entity is responsible for the damage (e.g. traps, environmental hazards, or system-initiated damage). Other optional fields include `IsCritical`, `CriticalMultiplier`, `Ignore`, `Instigator`, and `IsReactable`. Setting `Ignore = true` causes the pipeline to be bypassed entirely; the damage is flagged as prevented with `PrePhaseIgnored` before any calculation begins. `IsReactable` defaults to `true` and signals whether reactive systems (such as counter-damage actions) may respond to this event — set it to `false` when building a secondary effect to prevent chain reactions. See [Preventing Infinite Cycles](./game-actions.md#preventing-infinite-cycles) for details.
 
 **`DamageInfo`** is the mutable state object that flows through the pipeline. It is constructed from a `PreDamageContext` at the start of `TakeDamage` and holds:
 - **`Amounts`** — a `DamageAmountContext` tracking the current damage value and step-by-step history.
@@ -448,6 +448,7 @@ The pipeline uses a small set of dedicated types to keep concerns cleanly separa
 - **`TerminationStepType`** — the `Type` of the step that caused early termination, if any.
 - **`FinalDamageInfo`** — the `DamageInfo` at the end of the pipeline; may be `null` when damage was prevented in the pre-phase.
 - **`PreDamageContext`** — the original input that initiated this damage attempt.
+- **`IsReactable`** — propagated from `PreDamageContext.IsReactable`. When `false`, reactive systems listening to damage resolution events should not respond to this outcome.
 
 **`DamageOutcome`** is a two-value enum: `Applied` (damage was applied to the entity's health or barrier) and `Prevented` (damage was stopped before affecting the entity).
 

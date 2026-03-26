@@ -188,8 +188,8 @@ if (target.TryGetComponent(out EntityHealth targetHealth)) {
     PreHealContext preHealContext = PreHealContext.Builder
         .WithAmount(healAmount)
         .WithSource(healSource)
-        .WithHealer(skillCaster)
         .WithTarget(target.EntityCore)
+        .WithHealer(skillCaster)       // optional
         .Build();
 
     targetHealth.Heal(preHealContext);
@@ -208,8 +208,8 @@ long healAmount = scalingFormula.CalculateValue(skillCaster);
 PreHealContext preHealContext = PreHealContext.Builder
     .WithAmount(healAmount)
     .WithSource(healSource)
-    .WithHealer(skillCaster)
     .WithTarget(target.EntityCore)
+    .WithHealer(skillCaster)       // optional
     .Build();
 
 targetHealth.Heal(preHealContext);
@@ -219,7 +219,7 @@ targetHealth.Heal(preHealContext);
 <li>Construct a <code>PreHealContext</code> with all relevant information using the fluent builder.</li>
 <li>Call <code>Heal</code> passing the constructed context.</li>
 </ol>
-<p>The <code>PreHealContext</code> fluent builder is helpful because it guides you through required inputs first — the IDE will typically present required builder steps one at a time. When the builder presents multiple fields together, those fields are optional and can be omitted.</p>
+<p>The <code>PreHealContext</code> fluent builder is helpful because it guides you through required inputs first — the IDE will typically present required builder steps one at a time. When the builder presents multiple fields together, those fields are optional and can be omitted. Optional fields include the healer entity (<code>WithHealer</code>), the critical hit flag, the critical multiplier, the instigator (<code>WithInstigator</code>), and the reactability flag (<code>WithIsReactable</code>). <code>IsReactable</code> defaults to <code>true</code>; set it to <code>false</code> when building a secondary heal that reacts to another event, to prevent chain reactions. See <a href="game-actions.html#preventing-infinite-cycles">Preventing Infinite Cycles</a> for details.</p>
 <h2 id="health-regeneration">Health Regeneration</h2>
 <p>Health regeneration is a mechanism that allows an entity to passively regenerate its health over time. In games generally, this mechanic is implemented through discrete regeneration ticks. Ticks, depending on the game, can be marked by the passage of time, or by certain events, like the end of a turn in a turn-based game.<br>
 This package supports both passive and manual regeneration.</p>

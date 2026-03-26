@@ -123,7 +123,7 @@ Recommended pattern when healing programmatically:
 1. Construct a `PreHealContext` with all relevant information using the fluent builder.
 2. Call `Heal` passing the constructed context.
 
-The `PreHealContext` fluent builder is helpful because it guides you through required inputs first — the IDE will typically present required builder steps one at a time. When the builder presents multiple fields together, those fields are optional and can be omitted. Optional fields include the healer entity (`WithHealer`), the critical hit flag, and the critical multiplier.
+The `PreHealContext` fluent builder is helpful because it guides you through required inputs first — the IDE will typically present required builder steps one at a time. When the builder presents multiple fields together, those fields are optional and can be omitted. Optional fields include the healer entity (`WithHealer`), the critical hit flag, the critical multiplier, the instigator (`WithInstigator`), and the reactability flag (`WithIsReactable`). `IsReactable` defaults to `true`; set it to `false` when building a secondary heal that reacts to another event, to prevent chain reactions. See [Preventing Infinite Cycles](./game-actions.md#preventing-infinite-cycles) for details.
 
 ## Health Regeneration
 Health regeneration is a mechanism that allows an entity to passively regenerate its health over time. In games generally, this mechanic is implemented through discrete regeneration ticks. Ticks, depending on the game, can be marked by the passage of time, or by certain events, like the end of a turn in a turn-based game.  

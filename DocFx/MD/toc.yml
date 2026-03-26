@@ -18,6 +18,8 @@
     href: workflows/experience-collection.md
   - name: Resurrection
     href: workflows/resurrection.md
+  - name: Game Actions
+    href: workflows/game-actions.md
 #- name: Advanced Topics
 #  href: advanced-topics.md
 - name: Limitations
