@@ -132,13 +132,15 @@ _Casting Skills and Damage and Heal Pop-Ups_
 
 If you hover over an ability button, you will see a tooltip appear showing a description of the ability. If you hold the `Alt` key while the tooltip is visible, you will see the scaling details of the various ability effects appear. These descriptions should help you predict the order of magnitude of the damage and heals that the various ability effects can deal, and understand how the characters' level up influences the power of their abilities.
 
-![Tooltip]()
+![Tooltip](../images/AstraRPG/samples/skill-tooltip.png)  
 _Collapsed tooltip_
 
-![Tooltip with details]()
+![Tooltip with details](../images/AstraRPG/samples/skill-tooltip-details.png)  
 _Expanded tooltip with details_
 
-If you press the "Don't crit" button, the text will change to "Do crit", and the ability you cast from that point on will deal a critical hit. The pop-up of a critical hit has a custom icon in the top right, and looks like this:
+You can also toggle whether to show or not the description by clicking `Ctrl`.
+
+If you press the "Don't crit" button, the text will change to "Do crit", and the ability you cast from that point on will deal a critical hit. The pop-up of a critical hit has a custom icon in the top right, and looks like this:  
 ![Critical Hit Pop-Up](../images/AstraRPG/samples/critical-hit-pop-up.png)
 
 ### Messing Around with Damage Types and Damage Calculation Strategy

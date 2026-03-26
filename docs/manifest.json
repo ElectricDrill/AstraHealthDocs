@@ -2088,6 +2088,26 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "images/AstraRPG/samples/skill-tooltip-details.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/AstraRPG/samples/skill-tooltip-details.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/AstraRPG/samples/skill-tooltip.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/AstraRPG/samples/skill-tooltip.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "images/AstraRPG/workflows/damage/damage-calculation-pipeline/damage-calculation-pipeline-empty-strategy.png",
       "output": {
         "resource": {
