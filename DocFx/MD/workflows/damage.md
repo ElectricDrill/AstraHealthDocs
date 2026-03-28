@@ -421,7 +421,7 @@ For percentage modifiers, the system also performs individual immunity checks be
 
 When you call `TakeDamage` on an `EntityHealth`, the raw damage amount you specify does not reach the entity's health pool directly. Instead, it passes through the **Damage Calculation Pipeline**: an ordered sequence of processing steps, each responsible for one aspect of the calculation — barriers, critical multipliers, modifiers, and defenses. Think of it as a production line: raw damage enters at the first station and is transformed by each step in turn; what exits the last step is what the entity actually loses from its health.
 
-The strength of this design is its configurability. Which steps are active, and in what order, is defined entirely by a `DamageCalculationStrategy` asset that you set up in the Inspector — no scripting required. Different entities can use different strategies: a boss might have its own pipeline featuring an extra final step that limits the incoming damage to a maximum value of 10% of the Max HP, while regular enemies fall back to the project-wide default. Strategies can also be swapped at runtime, enabling mechanics such as temporary invincibility phases or damage rules that change mid-encounter.
+The strength of this design is its configurability. Which steps are active, and in what order, is defined entirely by a `DamageCalculationStrategy` asset that you set up in the Inspector — no scripting required. Different entities can use different strategies: a boss might have its own pipeline featuring an [ApplyDamageCapStep](#applydamagecapstep) as its final step — limiting incoming damage to at most 10% of the boss's max HP — while regular enemies fall back to the project-wide default. Strategies can also be swapped at runtime, enabling mechanics such as temporary invincibility phases or damage rules that change mid-encounter.
 
 Internally, the pipeline runs its steps sequentially on a shared state object and short-circuits the moment damage is marked as prevented: if a barrier fully absorbs the hit, or a modifier grants immunity, all remaining steps are skipped and the result is returned immediately.
 
@@ -473,7 +473,7 @@ The pipeline uses a small set of dedicated types to keep concerns cleanly separa
 
 ### Damage Step
 
-Each station in the pipeline is a `DamageStep` — an independent, composable unit of work that applies one focused transformation to the damage in flight. The five built-in steps cover the most common scenarios out of the box. If your game needs specialised behaviour — for example, a step that clamps the damage to a maximum value of 10% of the Max HP — you can implement a custom step by creating a class that inherits from [`DamageStep`](xref:ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.DamageStep) and implements `ProcessStep()`.
+Each station in the pipeline is a `DamageStep` — an independent, composable unit of work that applies one focused transformation to the damage in flight. The seven built-in steps cover the most common scenarios out of the box. If your game needs specialised behaviour — for example, a step that triggers a status effect when damage exceeds a certain threshold — you can implement a custom step by creating a class that inherits from [`DamageStep`](xref:ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.DamageStep) and implements `ProcessStep()`.
 
 Step order matters. Each step receives the output of the one before it, so a different arrangement of the same steps produces a different result. Placing a critical multiplier step before defensive steps amplifies the pre-mitigation damage; placing it after scales a lower, post-mitigation value. We will see how to compose and reorder steps from the Inspector in the [Damage Calculation Strategy](#damage-calculation-strategy) section.
 
@@ -485,7 +485,7 @@ Step order matters. Each step receives the output of the one before it, so a dif
 
 After `ProcessStep()` returns, `Process()` appends a `StepAmountRecord` to `DamageAmountContext.Records` with the before and after amounts. If the step brought a positive amount to zero without setting a more specific prevention reason, `DamagePreventionReason.PipelineReducedToZero` is set automatically.
 
-The package includes five built-in `DamageStep` implementations:
+The package includes seven built-in `DamageStep` implementations:
 
 #### ApplyCriticalMultiplierStep
 
@@ -548,11 +548,55 @@ All three contributions are summed additively. The net value is added to or subt
 > [!NOTE]
 > The conventional order is to run percentage modifiers before flat modifiers, so that flat additions or reductions are applied to the already-scaled value. This ordering is not enforced by the system; you can arrange steps freely.
 
+#### ApplyDamageCapStep
+
+Enforces an upper bound on the damage an entity can receive from a single hit. Place this step wherever your design requires — typically at the end of the pipeline — to prevent any single attack from dealing more damage than the configured limit, regardless of multipliers, modifiers, or critical hits that may have amplified the amount.
+
+The step looks for a component implementing `IDamageCap` on the target entity (see [Damage Bound Components](#damage-bound-components)). If no such component is present, the step is a no-op. When a provider is found, the step clamps `DamageAmountContext.Current` to at most the value returned by `IDamageCap.GetDamageCap()`. A cap value of 0 or below is treated as a misconfiguration and ignored.
+
+> [!NOTE]
+> If the cap reduces `Current` to exactly 0, `DamagePreventionReason.PipelineReducedToZero` is set automatically by the base class.
+
+#### ApplyDamageFloorStep
+
+Guarantees a minimum damage an entity receives from a single hit, provided the damage has not already been fully prevented by an earlier step. Use this to implement mechanics such as "this hit always deals at least N damage" — ensuring that heavy mitigation from armor, barriers, or modifiers never reduces the effective hit below a design-defined baseline.
+
+The step looks for a component implementing `IDamageFloor` on the target entity (see [Damage Bound Components](#damage-bound-components)). If no such component is present, the step is a no-op. When a provider is found and `Current` is below the floor, the step raises `Current` to that floor value. A floor value of 0 or below is treated as a misconfiguration and ignored.
+
+> [!IMPORTANT]
+> `DamageStep.Process()` skips any step when `Current` is already ≤ 0 or the damage is already prevented. `ApplyDamageFloorStep` therefore cannot restore damage that was fully absorbed by an earlier step (for example, by a barrier that brought `Current` to zero). To guarantee a minimum amount even after heavy mitigation, place this step **before** the reducing steps in the pipeline.
+
+### Damage Bound Components
+
+`ApplyDamageCapStep` and `ApplyDamageFloorStep` are pure logic steps — they do not hold the bound value themselves. The value is provided at runtime by a component attached to the target entity that implements one of two interfaces: `IDamageCap` (upper bound) or `IDamageFloor` (lower bound). The package ships a concrete `MonoBehaviour` implementation for each.
+
+- **`DamageCap`** — implements `IDamageCap`. Attach it to any entity to activate an upper bound on incoming damage.
+- **`DamageFloor`** — implements `IDamageFloor`. Attach it to any entity to activate a lower bound on incoming damage.
+
+Both components share the same configuration structure. The **Source** field (a `DamageBoundSource` enum) selects how the bound value is computed at runtime:
+
+- **Fixed Value** — a constant `long` configured directly on the component (e.g., "never take more than 200 damage per hit").
+- **Health Scaling** — a fraction of a chosen health metric at the moment the step executes. Two inline fields control the result: **Health Metric** (Current HP, Max HP, or Missing HP) and **Portion** (0.0 to 1.0). Setting Health Metric to **Max HP** and Portion to **0.1**, for instance, yields a cap or floor equal to 10% of the entity's max HP — evaluated dynamically each time a hit is processed.
+- **Scaling Component** — delegates the calculation to any `ScalingComponent` ScriptableObject asset. Useful when the bound logic is already captured in a reusable scaling asset, or when it depends on values beyond the entity's health pool.
+
+The inspector adapts to the selected source, showing only the fields relevant to the current mode:
+
+![DamageCap inspector — Fixed Value](../../images/AstraRPG/workflows/damage/damage-calculation-pipeline/damage-cap-inspector-fixed-value.png)
+
+![DamageCap inspector — Health Scaling](../../images/AstraRPG/workflows/damage/damage-calculation-pipeline/damage-cap-inspector-health-scaling.png)
+
+![DamageCap inspector — Scaling Component](../../images/AstraRPG/workflows/damage/damage-calculation-pipeline/damage-cap-inspector-scaling-component.png)
+
+`DamageFloor` has an identical inspector layout; only the semantic meaning of the value changes.
+
+> [!WARNING]
+> Both `DamageCap` and `DamageFloor` require an `EntityCore` component on the same `GameObject`. The **Health Scaling** source additionally requires an `EntityHealth` component on the same entity. If `EntityHealth` is missing when Health Scaling is selected, a warning is logged at runtime and the bound evaluates to 0, effectively disabling it for that hit.
+
 ### Damage Calculation Strategy
 
 *Relative path:* `Damage Calculation Strategy`
 
-Rather than embedding damage calculation logic in scripts, Astra RPG Health externalises the pipeline into a `DamageCalculationStrategy` asset — a `ScriptableObject` you control entirely from the Inspector. Each strategy holds an ordered list of steps; changing the list changes the pipeline. This separation lets you design, tune, and swap calculation behaviours without touching any code. A boss encounter can use a custom strategy with a specific subset of steps (e.g., one final extra step that limits the incoming damage to a maximum value of 10% of the Max HP); regular enemies fall back to the project-wide default; a runtime debuff can temporarily replace an entity's strategy to alter how it takes damage during a special encounter phase (e.g., all lightning damage is doubled).
+Rather than embedding damage calculation logic in scripts, Astra RPG Health externalises the pipeline into a `DamageCalculationStrategy` asset — a `ScriptableObject` you control entirely from the Inspector. Each strategy holds an ordered list of steps; changing the list changes the pipeline. This separation lets you design, tune, and swap calculation behaviours without touching any code. A boss encounter can use a custom strategy with a specific subset of steps (e.g., an [ApplyDamageCapStep](#applydamagecapstep) as its final step that limits the incoming damage to a maximum of 10% of the Max HP); regular enemies fall back to the project-wide default; a runtime debuff can temporarily replace an entity's strategy to alter how it takes damage during a special encounter phase (e.g., all lightning damage is doubled).
 
 In the Inspector, the strategy exposes a reorderable list labelled **Damage Pipeline Steps**. Steps can be added via a type-selection dropdown (the "Step" suffix is trimmed from display names for readability), removed, and reordered via drag. A newly created, empty strategy looks like this:
 
@@ -569,3 +613,23 @@ Every `EntityHealth` component resolves the active strategy at runtime through a
 
 > [!IMPORTANT]
 > If no strategy is resolved — neither custom nor override is set on the entity, and no default is configured in `AstraRpgHealthConfigSO` — `TakeDamage` logs an error and the pipeline does not run.
+
+#### Extending a Strategy Without Duplication
+
+A common pattern is building a specialised pipeline by extending the project-wide default. For example, a boss entity might need all the same mitigation steps as regular enemies, plus one extra capping step. Maintaining two separate assets with identical steps creates a maintenance burden: every change to the default pipeline must be manually replicated in every dependent asset.
+
+To address this, each `DamageCalculationStrategySO` exposes a **Pre-Strategy** section above the step list and a **Post-Strategy** section below it. When enabled, each section executes an entire other strategy before or after the steps defined on the current asset, without duplicating any step.
+
+Both sections share the same layout:
+- **Enabled** toggle — when enabled, the strategy in this section will run before (for Pre) or after (for Post) the steps defined on this asset.
+- **Use Default Pipeline** checkbox — when checked, the global default `DamageCalculationStrategy` configured in `AstraRpgHealthConfigSO` is used. When unchecked, a **Custom Strategy** drag-and-drop field appears to assign any other `DamageCalculationStrategySO` asset explicitly.
+
+A typical example: to create a boss pipeline that applies all standard mitigation and then limits incoming damage to 10% of the boss's max HP, configure the strategy asset as follows:
+- **Pre-Strategy**: enabled → **Use Default Pipeline** checked (runs the project-wide default pipeline first).
+- **Own steps**: `ApplyDamageCapStep` (with a `DamageCap` component on the boss, **Source** set to Health Scaling, Max HP, 0.1).
+- **Post-Strategy**: disabled.
+
+With this setup, any change to the default pipeline is automatically picked up by the boss strategy — no duplication required.
+
+> [!CAUTION]
+> The system includes a recursion guard that prevents a strategy from executing itself directly or indirectly. If a cycle is detected at runtime — for example, Strategy A uses Strategy B as its post-strategy, and Strategy B uses Strategy A as its pre-strategy — a warning is logged and the repeated execution is skipped. Design strategy chains as directed acyclic graphs to avoid this.

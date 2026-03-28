@@ -2498,6 +2498,16 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "images/slides/slide-1-project.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/slides/slide-1-project.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "images/slides/slide-2-boss-damage-calculation-strategy.png",
       "output": {
         "resource": {
