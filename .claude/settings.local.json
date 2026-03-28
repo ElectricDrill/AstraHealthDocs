@@ -1,0 +1,19 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(export PATH=\"$HOME/.local/bin:$PATH\")",
+      "Bash(uv sync:*)",
+      "Bash(uv run:*)",
+      "Bash(python3 -c \":*)",
+      "Bash(python3:*)",
+      "Bash(/tmp/gen_damage2.py:*)",
+      "mcp__claude_ai_Excalidraw__read_me",
+      "mcp__claude_ai_Excalidraw__create_view"
+    ],
+    "additionalDirectories": [
+      "C:\\Users\\emaci\\Documents\\AstraRpgFrameworkDocs\\DocFx",
+      "C:\\Users\\emaci\\Documents\\AstraPublishing_6_3_8_2D\\Packages\\com.electricdrill.astra-rpg-health",
+      "C:\\Users\\emaci\\Documents\\AstraPublishing_6_3_8_2D\\Packages\\com.electricdrill.astra-rpg-framework"
+    ]
+  }
+}

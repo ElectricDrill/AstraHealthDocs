@@ -2128,6 +2128,36 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "images/AstraRPG/workflows/damage/damage-calculation-pipeline/damage-cap-inspector-fixed-value.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/AstraRPG/workflows/damage/damage-calculation-pipeline/damage-cap-inspector-fixed-value.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/AstraRPG/workflows/damage/damage-calculation-pipeline/damage-cap-inspector-health-scaling.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/AstraRPG/workflows/damage/damage-calculation-pipeline/damage-cap-inspector-health-scaling.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/AstraRPG/workflows/damage/damage-calculation-pipeline/damage-cap-inspector-scaling-component.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/AstraRPG/workflows/damage/damage-calculation-pipeline/damage-cap-inspector-scaling-component.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "images/AstraRPG/workflows/damage/damage-source.png",
       "output": {
         "resource": {
@@ -2452,6 +2482,36 @@
       "output": {
         "resource": {
           "relative_path": "images/logo-health.svg"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/slides/slide-1-astra-rpg-config-so.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/slides/slide-1-astra-rpg-config-so.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/slides/slide-2-boss-damage-calculation-strategy.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/slides/slide-2-boss-damage-calculation-strategy.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/slides/slide-2-default-damage-calculation-strategy.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/slides/slide-2-default-damage-calculation-strategy.png"
         }
       },
       "version": ""
