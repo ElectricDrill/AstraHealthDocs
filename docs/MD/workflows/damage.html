@@ -206,14 +206,14 @@ Because the non-linear nature of the formula makes it difficult to reason about 
 <li><strong>Scale Factor</strong>: the reference Scale Factor to analyze, matching the value you have set on your asset.</li>
 <li><strong>Max Defensive Stat</strong>: the upper bound of the X-axis, i.e., the maximum defensive stat value to plot.</li>
 </ul>
-<p>The window displays two separate graphs, each plotting <strong>Damage Reduction %</strong> on the Y-axis and the <strong>Defensive Stat value</strong> on the X-axis:</p>
-<ol>
-<li><p><strong>Scale Factor fixed, Base Value varying</strong> — shows five curves corresponding to different Base Values centered around the reference value you configured, while Scale Factor is held constant. This lets you compare how increasing or decreasing Base Value shifts the reduction curve, making it easier to find a value that achieves the desired behavior for your game's stat range.</p>
+<p>The window displays one graph at a time, plotting <strong>Damage Reduction %</strong> on the Y-axis and the <strong>Defensive Stat value</strong> on the X-axis. A toggle button lets you switch between two views:</p>
+<ul>
+<li><p><strong>Varying Base Value (Scale Factor Fixed)</strong> — shows five curves corresponding to different Base Values centered around the reference value you configured, while Scale Factor is held constant. This lets you compare how increasing or decreasing Base Value shifts the reduction curve, making it easier to find a value that achieves the desired behavior for your game's stat range. Click <strong>Switch to: Varying Scale Factor (Base Value Fixed)</strong> to move to the other view.</p>
 </li>
-<li><p><strong>Base Value fixed, Scale Factor varying</strong> — shows five curves corresponding to different Scale Factors centered around the reference value, while Base Value is held constant. This lets you compare how Scale Factor affects the steepness of the initial climb of the curve.</p>
+<li><p><strong>Varying Scale Factor (Base Value Fixed)</strong> — shows five curves corresponding to different Scale Factors centered around the reference value, while Base Value is held constant. This lets you compare how Scale Factor affects the steepness of the initial climb of the curve. Click <strong>Switch to: Varying Base Value (Scale Factor Fixed)</strong> to return to the previous view.</p>
 </li>
-</ol>
-<p>In both graphs the legend labels each curve with its exact parameter value, and the middle curve (marked <em>Current</em>) corresponds to the reference value you entered. Hovering the mouse over either graph shows a tooltip with the exact damage reduction percentage produced by each curve for the defensive stat value under the cursor, like this:
+</ul>
+<p>The legend labels each curve with its exact parameter value, and the middle curve (marked <em>Current</em>) corresponds to the reference value you entered. Hovering the mouse over the graph shows a tooltip with the exact damage reduction percentage produced by each curve for the defensive stat value under the cursor, like this:
 <img src="../../images/AstraRPG/workflows/damage/damage-type/log-dmg-red-graph-visualizer-hover.png" alt="Log Dmg Reduction Graph Tooltip"></p>
 <p><strong>Use Cases</strong>:</p>
 <ul>

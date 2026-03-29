@@ -2487,46 +2487,6 @@
       "version": ""
     },
     {
-      "type": "Resource",
-      "source_relative_path": "images/slides/slide-1-astra-rpg-config-so.png",
-      "output": {
-        "resource": {
-          "relative_path": "images/slides/slide-1-astra-rpg-config-so.png"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "images/slides/slide-1-project.png",
-      "output": {
-        "resource": {
-          "relative_path": "images/slides/slide-1-project.png"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "images/slides/slide-2-boss-damage-calculation-strategy.png",
-      "output": {
-        "resource": {
-          "relative_path": "images/slides/slide-2-boss-damage-calculation-strategy.png"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "images/slides/slide-2-default-damage-calculation-strategy.png",
-      "output": {
-        "resource": {
-          "relative_path": "images/slides/slide-2-default-damage-calculation-strategy.png"
-        }
-      },
-      "version": ""
-    },
-    {
       "type": "Conceptual",
       "source_relative_path": "index.md",
       "output": {

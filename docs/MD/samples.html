@@ -166,7 +166,7 @@ It will be the responsibility of a future Astra extension package to provide a c
 <h4 id="classes">Classes</h4>
 <p>In the <code>Classes</code> subfolder you will find all the classes for the 3 playable characters and all the related growth formulas that define the progression of their statistics. There is also a <code>Common</code> folder that contains some utilities shared by multiple classes. For example, the <code>200% Const Critical Multiplier GF</code> is a growth formula that returns a 200% multiplier for critical hits at all levels. Usually a game uses a fixed multiplier for all entities at all levels, so it makes no sense to duplicate this growth formula in every class, but it is more efficient to create a single instance and share it among all the classes that need it.</p>
 <h4 id="damage-sources">Damage Sources</h4>
-<p>In the <code>Damage Sources</code> subfolder you will find two damage sources: <code>Skill</code> and <code>Environmental</code>. The scene does not make use of environmental damage, but the damage source is used in <a href="workflows/experience-collection.html">Experience Collection</a>, particularly in the <code>Environmental Kill Exp Strategy</code> strategy. Therefore, although it cannot be tested in the scene, it has value as an example to show you how to create and configure a multiple strategy that uses both the direct kill and the environmental kill strategies.</p>
+<p>In the <code>Sources - Damage</code> subfolder you will find two damage sources: <code>Skill</code> and <code>Environmental</code>. The scene does not make use of environmental damage, but the damage source is used in <a href="workflows/experience-collection.html">Experience Collection</a>, particularly in the <code>Environmental Kill Exp Strategy</code> strategy. Therefore, although it cannot be tested in the scene, it has value as an example to show you how to create and configure a multiple strategy that uses both the direct kill and the environmental kill strategies.</p>
 <h4 id="damage-types">Damage Types</h4>
 <p>In the <code>Damage Types</code> subfolder you will find the three damage types used in the sample scene: Physical, Magical and True, and two folders containing the three variants of Damage Reduction Functions and Defense Reduction Functions. Currently, both physical and magical damage use the logarithmic formula for damage reduction based on the defensive stat, and percentage reduction for defensive stat penetration. I have provided all three to make it easier for you to test should you want to swap the formulas on the fly.</p>
 <h4 id="events">Events</h4>
@@ -176,7 +176,7 @@ These events have been connected as <a href="workflows/package-configuration.htm
 <h4 id="experience-collection">Experience Collection</h4>
 <p>In the <code>Experience Collection</code> folder there are all the instances and strategies used for experience collection in the sample scene. As mentioned earlier, the sample scene does not involve the use of environmental damage, but I have nonetheless included an <code>Environmental Kill Exp Strategy</code> strategy to show you how to create and configure a multiple strategy that uses both the direct kill and the environmental kill strategies.</p>
 <h4 id="heal-sources">Heal Sources</h4>
-<p>Unlike the damage sources, in the sample scene all 4 <code>HealSourceSO</code> instances found in the <code>Heal Sources</code> folder are used:</p>
+<p>Unlike the damage sources, in the sample scene all 4 <code>HealSourceSO</code> instances found in the <code>Sources - Heal</code> folder are used:</p>
 <ul>
 <li><code>HP Regeneration</code>: used by passive health regeneration events</li>
 <li><code>Lifesteal</code>: used by lifesteal effects</li>
@@ -280,7 +280,7 @@ Therefore, even if you did not set a lower bound of -100% on the percentage dama
 <ol>
 <li>From the hierarchy, open the <code>PopupCanvas</code> game object</li>
 <li>Select the <code>HealPopupManager</code> game object</li>
-<li>In the inspector, in the <code>Heal Popup Manager</code> component, expand the <code>Heal Sources To Ignore</code> section and press the <code>+</code> button. Drag the <code>HP Regeneration HS</code> Heal Source found in <code>Examples/Instances/Heal Sources</code> here.</li>
+<li>In the inspector, in the <code>Heal Popup Manager</code> component, expand the <code>Heal Sources To Ignore</code> section and press the <code>+</code> button. Drag the <code>HP Regeneration HS</code> Heal Source found in <code>Examples/Instances/Sources - Heal</code> here.</li>
 </ol>
 <p>This way, the <code>Heal Popup Manager</code> will ignore all healing events that have <code>HP Regeneration</code> as their heal source, and therefore will not create pop-ups for passive regeneration ticks.</p>
 <p>Even from this simple example, the value of creating and using different heal sources becomes clear. Heals coming from different mechanics can raise different use cases.</p>

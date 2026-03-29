@@ -124,13 +124,13 @@ Once the window is open, three fields let you configure the visualization:
 - **Scale Factor**: the reference Scale Factor to analyze, matching the value you have set on your asset.
 - **Max Defensive Stat**: the upper bound of the X-axis, i.e., the maximum defensive stat value to plot.
 
-The window displays two separate graphs, each plotting **Damage Reduction %** on the Y-axis and the **Defensive Stat value** on the X-axis:
+The window displays one graph at a time, plotting **Damage Reduction %** on the Y-axis and the **Defensive Stat value** on the X-axis. A toggle button lets you switch between two views:
 
-1. **Scale Factor fixed, Base Value varying** — shows five curves corresponding to different Base Values centered around the reference value you configured, while Scale Factor is held constant. This lets you compare how increasing or decreasing Base Value shifts the reduction curve, making it easier to find a value that achieves the desired behavior for your game's stat range.
+- **Varying Base Value (Scale Factor Fixed)** — shows five curves corresponding to different Base Values centered around the reference value you configured, while Scale Factor is held constant. This lets you compare how increasing or decreasing Base Value shifts the reduction curve, making it easier to find a value that achieves the desired behavior for your game's stat range. Click **Switch to: Varying Scale Factor (Base Value Fixed)** to move to the other view.
 
-2. **Base Value fixed, Scale Factor varying** — shows five curves corresponding to different Scale Factors centered around the reference value, while Base Value is held constant. This lets you compare how Scale Factor affects the steepness of the initial climb of the curve.
+- **Varying Scale Factor (Base Value Fixed)** — shows five curves corresponding to different Scale Factors centered around the reference value, while Base Value is held constant. This lets you compare how Scale Factor affects the steepness of the initial climb of the curve. Click **Switch to: Varying Base Value (Scale Factor Fixed)** to return to the previous view.
 
-In both graphs the legend labels each curve with its exact parameter value, and the middle curve (marked *Current*) corresponds to the reference value you entered. Hovering the mouse over either graph shows a tooltip with the exact damage reduction percentage produced by each curve for the defensive stat value under the cursor, like this:
+The legend labels each curve with its exact parameter value, and the middle curve (marked *Current*) corresponds to the reference value you entered. Hovering the mouse over the graph shows a tooltip with the exact damage reduction percentage produced by each curve for the defensive stat value under the cursor, like this:
 ![Log Dmg Reduction Graph Tooltip](../../images/AstraRPG/workflows/damage/damage-type/log-dmg-red-graph-visualizer-hover.png)
 
 **Use Cases**:

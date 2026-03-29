@@ -90,7 +90,7 @@ In the `Stats` folder you will find all the instances of the `Stat` and `StatSet
 In the `Classes` subfolder you will find all the classes for the 3 playable characters and all the related growth formulas that define the progression of their statistics. There is also a `Common` folder that contains some utilities shared by multiple classes. For example, the `200% Const Critical Multiplier GF` is a growth formula that returns a 200% multiplier for critical hits at all levels. Usually a game uses a fixed multiplier for all entities at all levels, so it makes no sense to duplicate this growth formula in every class, but it is more efficient to create a single instance and share it among all the classes that need it.
 
 #### Damage Sources
-In the `Damage Sources` subfolder you will find two damage sources: `Skill` and `Environmental`. The scene does not make use of environmental damage, but the damage source is used in [Experience Collection](./workflows/experience-collection.md), particularly in the `Environmental Kill Exp Strategy` strategy. Therefore, although it cannot be tested in the scene, it has value as an example to show you how to create and configure a multiple strategy that uses both the direct kill and the environmental kill strategies.
+In the `Sources - Damage` subfolder you will find two damage sources: `Skill` and `Environmental`. The scene does not make use of environmental damage, but the damage source is used in [Experience Collection](./workflows/experience-collection.md), particularly in the `Environmental Kill Exp Strategy` strategy. Therefore, although it cannot be tested in the scene, it has value as an example to show you how to create and configure a multiple strategy that uses both the direct kill and the environmental kill strategies.
 
 #### Damage Types
 In the `Damage Types` subfolder you will find the three damage types used in the sample scene: Physical, Magical and True, and two folders containing the three variants of Damage Reduction Functions and Defense Reduction Functions. Currently, both physical and magical damage use the logarithmic formula for damage reduction based on the defensive stat, and percentage reduction for defensive stat penetration. I have provided all three to make it easier for you to test should you want to swap the formulas on the fly.
@@ -105,7 +105,7 @@ All communications between the various objects in the sample scene are handled t
 In the `Experience Collection` folder there are all the instances and strategies used for experience collection in the sample scene. As mentioned earlier, the sample scene does not involve the use of environmental damage, but I have nonetheless included an `Environmental Kill Exp Strategy` strategy to show you how to create and configure a multiple strategy that uses both the direct kill and the environmental kill strategies.
 
 #### Heal Sources
-Unlike the damage sources, in the sample scene all 4 `HealSourceSO` instances found in the `Heal Sources` folder are used:
+Unlike the damage sources, in the sample scene all 4 `HealSourceSO` instances found in the `Sources - Heal` folder are used:
 - `HP Regeneration`: used by passive health regeneration events
 - `Lifesteal`: used by lifesteal effects
 - `Resurrection`: used by the heal applied upon an entity's resurrection
@@ -173,7 +173,7 @@ Therefore, even if you did not set a lower bound of -100% on the percentage dama
 In the sample scene, passive health regeneration is enabled for all characters, but you can disable it by unchecking `Passive Health Regeneration` in the `EntityHealth` of the entity in question. By default, healing popups will also be shown for each passive regeneration tick. If these popups bother you, you can disable them as follows:
 1. From the hierarchy, open the `PopupCanvas` game object
 2. Select the `HealPopupManager` game object
-3. In the inspector, in the `Heal Popup Manager` component, expand the `Heal Sources To Ignore` section and press the `+` button. Drag the `HP Regeneration HS` Heal Source found in `Examples/Instances/Heal Sources` here.
+3. In the inspector, in the `Heal Popup Manager` component, expand the `Heal Sources To Ignore` section and press the `+` button. Drag the `HP Regeneration HS` Heal Source found in `Examples/Instances/Sources - Heal` here.
 
 This way, the `Heal Popup Manager` will ignore all healing events that have `HP Regeneration` as their heal source, and therefore will not create pop-ups for passive regeneration ticks.
 
