@@ -89,7 +89,7 @@
 
 
   <h1 id="ElectricDrill_AstraRpgHealth_Heal_LifestealConfigSO" data-uid="ElectricDrill.AstraRpgHealth.Heal.LifestealConfigSO" class="text-break">
-Class LifestealConfigSO  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/Heal/LifestealConfigSO.cs/#L167"><i class="bi bi-code-slash"></i></a>
+Class LifestealConfigSO  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/Heal/LifestealConfigSO.cs/#L168"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -102,7 +102,7 @@ Class LifestealConfigSO  <a class="header-action link-secondary" title="View sou
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class LifestealConfigSO : ScriptableObject</code></pre>
+    <pre><code class="lang-csharp hljs">public class LifestealConfigSO : ScriptableObject, ITaggable</code></pre>
   </div>
 
 
@@ -118,6 +118,12 @@ Class LifestealConfigSO  <a class="header-action link-secondary" title="View sou
     </dd>
   </dl>
 
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><span class="xref">ITaggable</span></div>
+    </dd>
+  </dl>
 
 
 
@@ -134,7 +140,7 @@ Class LifestealConfigSO  <a class="header-action link-secondary" title="View sou
 
   <h3 id="ElectricDrill_AstraRpgHealth_Heal_LifestealConfigSO_LifestealMappings" data-uid="ElectricDrill.AstraRpgHealth.Heal.LifestealConfigSO.LifestealMappings">
   LifestealMappings
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/Heal/LifestealConfigSO.cs/#L178"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/Heal/LifestealConfigSO.cs/#L185"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Read-only mapping from DamageType to LifestealStatConfig.</p>
@@ -161,6 +167,38 @@ Class LifestealConfigSO  <a class="header-action link-secondary" title="View sou
   <h4 class="section" id="ElectricDrill_AstraRpgHealth_Heal_LifestealConfigSO_LifestealMappings_remarks">Remarks</h4>
   <div class="markdown level1 remarks"><p>The dictionary is guaranteed to be non-null when accessed; calling code can safely enumerate it.</p>
 </div>
+
+
+
+
+  <a id="ElectricDrill_AstraRpgHealth_Heal_LifestealConfigSO_Tags_" data-uid="ElectricDrill.AstraRpgHealth.Heal.LifestealConfigSO.Tags*"></a>
+
+  <h3 id="ElectricDrill_AstraRpgHealth_Heal_LifestealConfigSO_Tags" data-uid="ElectricDrill.AstraRpgHealth.Heal.LifestealConfigSO.Tags">
+  Tags
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/Heal/LifestealConfigSO.cs/#L173"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The tags associated with this object.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public GameTagSet Tags { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">GameTagSet</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
 
 
 

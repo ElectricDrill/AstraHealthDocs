@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Interface PreHealContext.HealInfoSource | Astra RPG Health ">
       
-      <meta name="description" content="Builder step interface for specifying the heal source.">
+      <meta name="description" content="Builder step interface for specifying the heal source category.">
       <link rel="icon" href="../images/astra-health-ico.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -89,7 +89,7 @@
 
 
   <h1 id="ElectricDrill_AstraRpgHealth_Heal_PreHealContext_HealInfoSource" data-uid="ElectricDrill.AstraRpgHealth.Heal.PreHealContext.HealInfoSource" class="text-break">
-Interface PreHealContext.HealInfoSource  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/Heal/PreHealContext.cs/#L71"><i class="bi bi-code-slash"></i></a>
+Interface PreHealContext.HealInfoSource  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/Heal/PreHealContext.cs/#L98"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -97,7 +97,7 @@ Interface PreHealContext.HealInfoSource  <a class="header-action link-secondary"
   <dl><dt>Assembly</dt><dd>com.electricdrill.astra-rpg-health.Runtime.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>Builder step interface for specifying the heal source.</p>
+  <div class="markdown summary"><p>Builder step interface for specifying the heal source category.</p>
 </div>
   <div class="markdown conceptual"></div>
 
@@ -125,15 +125,15 @@ Interface PreHealContext.HealInfoSource  <a class="header-action link-secondary"
 
   <h3 id="ElectricDrill_AstraRpgHealth_Heal_PreHealContext_HealInfoSource_WithSource_ElectricDrill_AstraRpgHealth_Heal_HealSourceSO_" data-uid="ElectricDrill.AstraRpgHealth.Heal.PreHealContext.HealInfoSource.WithSource(ElectricDrill.AstraRpgHealth.Heal.HealSourceSO)">
   WithSource(HealSourceSO)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/Heal/PreHealContext.cs/#L76"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/Heal/PreHealContext.cs/#L103"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Specify the <a class="xref" href="ElectricDrill.AstraRpgHealth.Heal.HealSourceSO.html">HealSourceSO</a> for the heal.</p>
+  <div class="markdown level1 summary"><p>Specify the <a class="xref" href="ElectricDrill.AstraRpgHealth.Heal.HealSourceSO.html">HealSourceSO</a> for the heal and advance to the next step.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">PreHealContext.HealInfoHealer WithSource(HealSourceSO healSource)</code></pre>
+    <pre><code class="lang-csharp hljs">PreHealContext.HealInfoTarget WithSource(HealSourceSO healSource)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -144,7 +144,7 @@ Interface PreHealContext.HealInfoSource  <a class="header-action link-secondary"
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="ElectricDrill.AstraRpgHealth.Heal.PreHealContext.html">PreHealContext</a>.<a class="xref" href="ElectricDrill.AstraRpgHealth.Heal.PreHealContext.HealInfoHealer.html">HealInfoHealer</a></dt>
+    <dt><a class="xref" href="ElectricDrill.AstraRpgHealth.Heal.PreHealContext.html">PreHealContext</a>.<a class="xref" href="ElectricDrill.AstraRpgHealth.Heal.PreHealContext.HealInfoTarget.html">HealInfoTarget</a></dt>
     <dd></dd>
   </dl>
 

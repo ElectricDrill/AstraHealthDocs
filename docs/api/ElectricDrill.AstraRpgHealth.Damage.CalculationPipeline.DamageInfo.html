@@ -103,7 +103,7 @@ Holds the amounts being transformed, the source/type metadata and accumulated pr
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class DamageInfo : IHasSource, IHasTarget</code></pre>
+    <pre><code class="lang-csharp hljs">public class DamageInfo : IHasPerformer, IHasTarget, IHasInstigator</code></pre>
   </div>
 
 
@@ -120,8 +120,9 @@ Holds the amounts being transformed, the source/type metadata and accumulated pr
   <dl class="typelist implements">
     <dt>Implements</dt>
     <dd>
-      <div><span class="xref">IHasSource</span></div>
+      <div><span class="xref">IHasPerformer</span></div>
       <div><span class="xref">IHasTarget</span></div>
+      <div><span class="xref">IHasInstigator</span></div>
     </dd>
   </dl>
 
@@ -140,7 +141,7 @@ Holds the amounts being transformed, the source/type metadata and accumulated pr
 
   <h3 id="ElectricDrill_AstraRpgHealth_Damage_CalculationPipeline_DamageInfo__ctor_ElectricDrill_AstraRpgHealth_Damage_PreDamageContext_" data-uid="ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.DamageInfo.#ctor(ElectricDrill.AstraRpgHealth.Damage.PreDamageContext)">
   DamageInfo(PreDamageContext)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/Damage/CalculationPipeline/DamageInfo.cs/#L69"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/Damage/CalculationPipeline/DamageInfo.cs/#L75"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.DamageInfo.html">DamageInfo</a> from the provided <a class="xref" href="ElectricDrill.AstraRpgHealth.Damage.PreDamageContext.html">PreDamageContext</a>.
@@ -270,6 +271,39 @@ The constructor initializes amounts, metadata and sets pre-phase prevention reas
 
 
 
+  <a id="ElectricDrill_AstraRpgHealth_Damage_CalculationPipeline_DamageInfo_Instigator_" data-uid="ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.DamageInfo.Instigator*"></a>
+
+  <h3 id="ElectricDrill_AstraRpgHealth_Damage_CalculationPipeline_DamageInfo_Instigator" data-uid="ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.DamageInfo.Instigator">
+  Instigator
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/Damage/CalculationPipeline/DamageInfo.cs/#L68"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The specific thing that caused this damage — propagated from the originating
+<a class="xref" href="ElectricDrill.AstraRpgHealth.Damage.PreDamageContext.html">PreDamageContext</a>. May be <code>null</code> if unspecified.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IEffectInstigator Instigator { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">IEffectInstigator</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="ElectricDrill_AstraRpgHealth_Damage_CalculationPipeline_DamageInfo_IsCritical_" data-uid="ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.DamageInfo.IsCritical*"></a>
 
   <h3 id="ElectricDrill_AstraRpgHealth_Damage_CalculationPipeline_DamageInfo_IsCritical" data-uid="ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.DamageInfo.IsCritical">
@@ -334,6 +368,38 @@ The constructor initializes amounts, metadata and sets pre-phase prevention reas
 
 
 
+  <a id="ElectricDrill_AstraRpgHealth_Damage_CalculationPipeline_DamageInfo_Performer_" data-uid="ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.DamageInfo.Performer*"></a>
+
+  <h3 id="ElectricDrill_AstraRpgHealth_Damage_CalculationPipeline_DamageInfo_Performer" data-uid="ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.DamageInfo.Performer">
+  Performer
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/Damage/CalculationPipeline/DamageInfo.cs/#L36"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Entity that deals the damage (may be the same as target for self damage or null for environmental damage).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public EntityCore Performer { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">EntityCore</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="ElectricDrill_AstraRpgHealth_Damage_CalculationPipeline_DamageInfo_Reasons_" data-uid="ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.DamageInfo.Reasons*"></a>
 
   <h3 id="ElectricDrill_AstraRpgHealth_Damage_CalculationPipeline_DamageInfo_Reasons" data-uid="ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.DamageInfo.Reasons">
@@ -357,38 +423,6 @@ This is a flag enum that can contain multiple reasons.</p>
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="ElectricDrill.AstraRpgHealth.Damage.DamagePreventionReason.html">DamagePreventionReason</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-  <a id="ElectricDrill_AstraRpgHealth_Damage_CalculationPipeline_DamageInfo_Source_" data-uid="ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.DamageInfo.Source*"></a>
-
-  <h3 id="ElectricDrill_AstraRpgHealth_Damage_CalculationPipeline_DamageInfo_Source" data-uid="ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.DamageInfo.Source">
-  Source
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/Damage/CalculationPipeline/DamageInfo.cs/#L36"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"><p>Entity that deals the damage (may be the same as target for self damage or null for environmental damage).</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public EntityCore Source { get; }</code></pre>
-  </div>
-
-
-
-
-
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><span class="xref">EntityCore</span></dt>
     <dd></dd>
   </dl>
 
@@ -503,7 +537,7 @@ This is a flag enum that can contain multiple reasons.</p>
 
   <h3 id="ElectricDrill_AstraRpgHealth_Damage_CalculationPipeline_DamageInfo_AddReason_ElectricDrill_AstraRpgHealth_Damage_DamagePreventionReason_System_Type_System_Boolean_" data-uid="ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.DamageInfo.AddReason(ElectricDrill.AstraRpgHealth.Damage.DamagePreventionReason,System.Type,System.Boolean)">
   AddReason(DamagePreventionReason, Type, bool)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/Damage/CalculationPipeline/DamageInfo.cs/#L92"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/Damage/CalculationPipeline/DamageInfo.cs/#L99"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Adds a prevention reason to the accumulated flags and optionally marks the termination step.</p>

@@ -102,7 +102,7 @@ Class HealthScalingComponentSO  <a class="header-action link-secondary" title="V
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class HealthScalingComponentSO : ScalingComponent</code></pre>
+    <pre><code class="lang-csharp hljs">public class HealthScalingComponentSO : ScalingComponent, IEntityValueCalculator, ITaggable</code></pre>
   </div>
 
 
@@ -119,6 +119,57 @@ Class HealthScalingComponentSO  <a class="header-action link-secondary" title="V
     </dd>
   </dl>
 
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><span class="xref">IEntityValueCalculator</span></div>
+      <div><span class="xref">ITaggable</span></div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <span class="xref">ScalingComponent.Tags</span>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="ElectricDrill_AstraRpgHealth_Scaling_ScalingComponents_HealthScalingComponentSO_ScalingMetricValues_" data-uid="ElectricDrill.AstraRpgHealth.Scaling.ScalingComponents.HealthScalingComponentSO.ScalingMetricValues*"></a>
+
+  <h3 id="ElectricDrill_AstraRpgHealth_Scaling_ScalingComponents_HealthScalingComponentSO_ScalingMetricValues" data-uid="ElectricDrill.AstraRpgHealth.Scaling.ScalingComponents.HealthScalingComponentSO.ScalingMetricValues">
+  ScalingMetricValues
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/Scaling/ScalingComponents/HealthScalingComponentSO.cs/#L29"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Read-only view of every metric/multiplier pair defined on this component.
+Intended for tooling and UI display (e.g. tooltips) — not for runtime calculations.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IReadOnlyList&lt;HealthScalingComponentSO.HealthScalingMetricValue&gt; ScalingMetricValues { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">IReadOnlyList</span>&lt;<a class="xref" href="ElectricDrill.AstraRpgHealth.Scaling.ScalingComponents.HealthScalingComponentSO.html">HealthScalingComponentSO</a>.<a class="xref" href="ElectricDrill.AstraRpgHealth.Scaling.ScalingComponents.HealthScalingComponentSO.HealthScalingMetricValue.html">HealthScalingMetricValue</a>&gt;</dt>
+    <dd></dd>
+  </dl>
 
 
 
@@ -135,7 +186,7 @@ Class HealthScalingComponentSO  <a class="header-action link-secondary" title="V
 
   <h3 id="ElectricDrill_AstraRpgHealth_Scaling_ScalingComponents_HealthScalingComponentSO_CalculateValue_ElectricDrill_AstraRpgFramework_EntityCore_" data-uid="ElectricDrill.AstraRpgHealth.Scaling.ScalingComponents.HealthScalingComponentSO.CalculateValue(ElectricDrill.AstraRpgFramework.EntityCore)">
   CalculateValue(EntityCore)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/Scaling/ScalingComponents/HealthScalingComponentSO.cs/#L30"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/Scaling/ScalingComponents/HealthScalingComponentSO.cs/#L36"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Calculates the scaling value based on the entity's health component.</p>

@@ -100,6 +100,21 @@ Classes
 Handles damage calculation, health regeneration, barriers (temporary HP), and death events.</p>
 </dd>
     </dl>
+    <h3 id="interfaces">
+Interfaces
+</h3>
+    <dl class="jumplist">
+      <dt><a class="xref" href="ElectricDrill.AstraRpgHealth.IReactable.html">IReactable</a></dt>
+      <dd><p>Marks a context as carrying a reactability flag that signals whether
+the receiver of the associated event should act on it.</p>
+<p>
+First-order events (direct attacks, skills, abilities) set <a class="xref" href="ElectricDrill.AstraRpgHealth.IReactable.html#ElectricDrill_AstraRpgHealth_IReactable_IsReactable">IsReactable</a> to
+<code>true</code>. Secondary events produced by counter-damage actions, passive modifiers, or
+other reactive effects set it to <code>false</code> to prevent further downstream reactions and
+break potential infinite chains.
+</p>
+</dd>
+    </dl>
     <h3 id="enums">
 Enums
 </h3>

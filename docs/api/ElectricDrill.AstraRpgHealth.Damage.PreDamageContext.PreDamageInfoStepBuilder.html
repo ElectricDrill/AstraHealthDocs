@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Class PreDamageContext.PreDamageInfoStepBuilder | Astra RPG Health ">
       
-      <meta name="description" content="Concrete step builder implementing the fluent interfaces. After setting required fields, optional flags (critical, multiplier) can be configured before calling .">
+      <meta name="description" content="Concrete step builder implementing the fluent interfaces. After all required fields are set, optional fields (dealer, critical, multiplier, instigator) can be configured before calling .">
       <link rel="icon" href="../images/astra-health-ico.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -89,7 +89,7 @@
 
 
   <h1 id="ElectricDrill_AstraRpgHealth_Damage_PreDamageContext_PreDamageInfoStepBuilder" data-uid="ElectricDrill.AstraRpgHealth.Damage.PreDamageContext.PreDamageInfoStepBuilder" class="text-break">
-Class PreDamageContext.PreDamageInfoStepBuilder  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/Damage/PreDamageContext.cs/#L138"><i class="bi bi-code-slash"></i></a>
+Class PreDamageContext.PreDamageInfoStepBuilder  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/Damage/PreDamageContext.cs/#L154"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -97,13 +97,13 @@ Class PreDamageContext.PreDamageInfoStepBuilder  <a class="header-action link-se
   <dl><dt>Assembly</dt><dd>com.electricdrill.astra-rpg-health.Runtime.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>Concrete step builder implementing the fluent interfaces. After setting required fields,
-optional flags (critical, multiplier) can be configured before calling <a class="xref" href="ElectricDrill.AstraRpgHealth.Damage.PreDamageContext.PreDamageInfoStepBuilder.html#ElectricDrill_AstraRpgHealth_Damage_PreDamageContext_PreDamageInfoStepBuilder_Build">Build()</a>.</p>
+  <div class="markdown summary"><p>Concrete step builder implementing the fluent interfaces. After all required fields are set,
+optional fields (dealer, critical, multiplier, instigator) can be configured before calling <a class="xref" href="ElectricDrill.AstraRpgHealth.Damage.PreDamageContext.PreDamageInfoStepBuilder.html#ElectricDrill_AstraRpgHealth_Damage_PreDamageContext_PreDamageInfoStepBuilder_Build">Build()</a>.</p>
 </div>
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class PreDamageContext.PreDamageInfoStepBuilder : PreDamageContext.DamageInfoAmount, PreDamageContext.DamageInfoType, PreDamageContext.DamageInfoSource, PreDamageContext.DamageInfoTarget, PreDamageContext.DamageInfoDealer</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class PreDamageContext.PreDamageInfoStepBuilder : PreDamageContext.DamageInfoAmount, PreDamageContext.DamageInfoType, PreDamageContext.DamageInfoSource, PreDamageContext.DamageInfoTarget</code></pre>
   </div>
 
 
@@ -124,7 +124,6 @@ optional flags (critical, multiplier) can be configured before calling <a class=
       <div><a class="xref" href="ElectricDrill.AstraRpgHealth.Damage.PreDamageContext.html">PreDamageContext</a>.<a class="xref" href="ElectricDrill.AstraRpgHealth.Damage.PreDamageContext.DamageInfoType.html">DamageInfoType</a></div>
       <div><a class="xref" href="ElectricDrill.AstraRpgHealth.Damage.PreDamageContext.html">PreDamageContext</a>.<a class="xref" href="ElectricDrill.AstraRpgHealth.Damage.PreDamageContext.DamageInfoSource.html">DamageInfoSource</a></div>
       <div><a class="xref" href="ElectricDrill.AstraRpgHealth.Damage.PreDamageContext.html">PreDamageContext</a>.<a class="xref" href="ElectricDrill.AstraRpgHealth.Damage.PreDamageContext.DamageInfoTarget.html">DamageInfoTarget</a></div>
-      <div><a class="xref" href="ElectricDrill.AstraRpgHealth.Damage.PreDamageContext.html">PreDamageContext</a>.<a class="xref" href="ElectricDrill.AstraRpgHealth.Damage.PreDamageContext.DamageInfoDealer.html">DamageInfoDealer</a></div>
     </dd>
   </dl>
 
@@ -143,7 +142,7 @@ optional flags (critical, multiplier) can be configured before calling <a class=
 
   <h3 id="ElectricDrill_AstraRpgHealth_Damage_PreDamageContext_PreDamageInfoStepBuilder_Build" data-uid="ElectricDrill.AstraRpgHealth.Damage.PreDamageContext.PreDamageInfoStepBuilder.Build">
   Build()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/Damage/PreDamageContext.cs/#L216"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/Damage/PreDamageContext.cs/#L259"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Build the <a class="xref" href="ElectricDrill.AstraRpgHealth.Damage.PreDamageContext.html">PreDamageContext</a> instance with the previously configured values.</p>
@@ -175,7 +174,7 @@ optional flags (critical, multiplier) can be configured before calling <a class=
 
   <h3 id="ElectricDrill_AstraRpgHealth_Damage_PreDamageContext_PreDamageInfoStepBuilder_WithAmount_System_Int64_" data-uid="ElectricDrill.AstraRpgHealth.Damage.PreDamageContext.PreDamageInfoStepBuilder.WithAmount(System.Int64)">
   WithAmount(long)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/Damage/PreDamageContext.cs/#L153"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/Damage/PreDamageContext.cs/#L171"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Set the damage amount.</p>
@@ -212,7 +211,7 @@ optional flags (critical, multiplier) can be configured before calling <a class=
 
   <h3 id="ElectricDrill_AstraRpgHealth_Damage_PreDamageContext_PreDamageInfoStepBuilder_WithCriticalMultiplier_System_Double_" data-uid="ElectricDrill.AstraRpgHealth.Damage.PreDamageContext.PreDamageInfoStepBuilder.WithCriticalMultiplier(System.Double)">
   WithCriticalMultiplier(double)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/Damage/PreDamageContext.cs/#L207"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/Damage/PreDamageContext.cs/#L227"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Set the critical damage multiplier. Values &lt;= 0 will be normalized to 1.0 by the constructor.</p>
@@ -249,10 +248,12 @@ optional flags (critical, multiplier) can be configured before calling <a class=
 
   <h3 id="ElectricDrill_AstraRpgHealth_Damage_PreDamageContext_PreDamageInfoStepBuilder_WithDealer_ElectricDrill_AstraRpgFramework_EntityCore_" data-uid="ElectricDrill.AstraRpgHealth.Damage.PreDamageContext.PreDamageInfoStepBuilder.WithDealer(ElectricDrill.AstraRpgFramework.EntityCore)">
   WithDealer(EntityCore)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/Damage/PreDamageContext.cs/#L189"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/Damage/PreDamageContext.cs/#L209"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Set the dealer entity (the entity causing the damage).</p>
+  <div class="markdown level1 summary"><p>Set the dealer entity (the entity causing the damage). Optional — pass <code>null</code> or
+omit entirely when no specific entity performed the damage (e.g. environmental, traps,
+system-initiated).</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -282,11 +283,50 @@ optional flags (critical, multiplier) can be configured before calling <a class=
 
 
 
+  <a id="ElectricDrill_AstraRpgHealth_Damage_PreDamageContext_PreDamageInfoStepBuilder_WithInstigator_" data-uid="ElectricDrill.AstraRpgHealth.Damage.PreDamageContext.PreDamageInfoStepBuilder.WithInstigator*"></a>
+
+  <h3 id="ElectricDrill_AstraRpgHealth_Damage_PreDamageContext_PreDamageInfoStepBuilder_WithInstigator_ElectricDrill_AstraRpgFramework_Contexts_IEffectInstigator_" data-uid="ElectricDrill.AstraRpgHealth.Damage.PreDamageContext.PreDamageInfoStepBuilder.WithInstigator(ElectricDrill.AstraRpgFramework.Contexts.IEffectInstigator)">
+  WithInstigator(IEffectInstigator)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/Damage/PreDamageContext.cs/#L238"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Set the specific cause of this damage — for example an ability definition, a modifier
+definition or instance, or a passive. Use this to allow downstream listeners to identify
+the exact origin beyond entity (<a class="xref" href="ElectricDrill.AstraRpgHealth.Damage.PreDamageContext.PreDamageInfoStepBuilder.html#ElectricDrill_AstraRpgHealth_Damage_PreDamageContext_PreDamageInfoStepBuilder_WithDealer_ElectricDrill_AstraRpgFramework_EntityCore_">WithDealer(EntityCore)</a>) and category (<a class="xref" href="ElectricDrill.AstraRpgHealth.Damage.PreDamageContext.PreDamageInfoStepBuilder.html#ElectricDrill_AstraRpgHealth_Damage_PreDamageContext_PreDamageInfoStepBuilder_WithSource_ElectricDrill_AstraRpgHealth_Damage_DamageSourceSO_">WithSource(DamageSourceSO)</a>).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PreDamageContext.PreDamageInfoStepBuilder WithInstigator(IEffectInstigator instigator)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>instigator</code> <span class="xref">IEffectInstigator</span></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="ElectricDrill.AstraRpgHealth.Damage.PreDamageContext.html">PreDamageContext</a>.<a class="xref" href="ElectricDrill.AstraRpgHealth.Damage.PreDamageContext.PreDamageInfoStepBuilder.html">PreDamageInfoStepBuilder</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
   <a id="ElectricDrill_AstraRpgHealth_Damage_PreDamageContext_PreDamageInfoStepBuilder_WithIsCritical_" data-uid="ElectricDrill.AstraRpgHealth.Damage.PreDamageContext.PreDamageInfoStepBuilder.WithIsCritical*"></a>
 
   <h3 id="ElectricDrill_AstraRpgHealth_Damage_PreDamageContext_PreDamageInfoStepBuilder_WithIsCritical_System_Boolean_" data-uid="ElectricDrill.AstraRpgHealth.Damage.PreDamageContext.PreDamageInfoStepBuilder.WithIsCritical(System.Boolean)">
   WithIsCritical(bool)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/Damage/PreDamageContext.cs/#L198"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/Damage/PreDamageContext.cs/#L218"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Mark this damage as critical or not.</p>
@@ -319,14 +359,54 @@ optional flags (critical, multiplier) can be configured before calling <a class=
 
 
 
+  <a id="ElectricDrill_AstraRpgHealth_Damage_PreDamageContext_PreDamageInfoStepBuilder_WithIsReactable_" data-uid="ElectricDrill.AstraRpgHealth.Damage.PreDamageContext.PreDamageInfoStepBuilder.WithIsReactable*"></a>
+
+  <h3 id="ElectricDrill_AstraRpgHealth_Damage_PreDamageContext_PreDamageInfoStepBuilder_WithIsReactable_System_Boolean_" data-uid="ElectricDrill.AstraRpgHealth.Damage.PreDamageContext.PreDamageInfoStepBuilder.WithIsReactable(System.Boolean)">
+  WithIsReactable(bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/Damage/PreDamageContext.cs/#L250"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Set the reactability flag for the built context.
+Pass <code>false</code> when building a context for a secondary effect (counter-damage,
+passive modifier) so that reactive systems do not respond to it and infinite chains
+are prevented. Defaults to <code>true</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PreDamageContext.PreDamageInfoStepBuilder WithIsReactable(bool isReactable)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>isReactable</code> <span class="xref">bool</span></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="ElectricDrill.AstraRpgHealth.Damage.PreDamageContext.html">PreDamageContext</a>.<a class="xref" href="ElectricDrill.AstraRpgHealth.Damage.PreDamageContext.PreDamageInfoStepBuilder.html">PreDamageInfoStepBuilder</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
   <a id="ElectricDrill_AstraRpgHealth_Damage_PreDamageContext_PreDamageInfoStepBuilder_WithSource_" data-uid="ElectricDrill.AstraRpgHealth.Damage.PreDamageContext.PreDamageInfoStepBuilder.WithSource*"></a>
 
   <h3 id="ElectricDrill_AstraRpgHealth_Damage_PreDamageContext_PreDamageInfoStepBuilder_WithSource_ElectricDrill_AstraRpgHealth_Damage_DamageSourceSO_" data-uid="ElectricDrill.AstraRpgHealth.Damage.PreDamageContext.PreDamageInfoStepBuilder.WithSource(ElectricDrill.AstraRpgHealth.Damage.DamageSourceSO)">
   WithSource(DamageSourceSO)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/Damage/PreDamageContext.cs/#L171"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/Damage/PreDamageContext.cs/#L189"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Set the damage source.</p>
+  <div class="markdown level1 summary"><p>Set the damage source category.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -360,7 +440,7 @@ optional flags (critical, multiplier) can be configured before calling <a class=
 
   <h3 id="ElectricDrill_AstraRpgHealth_Damage_PreDamageContext_PreDamageInfoStepBuilder_WithTarget_ElectricDrill_AstraRpgFramework_EntityCore_" data-uid="ElectricDrill.AstraRpgHealth.Damage.PreDamageContext.PreDamageInfoStepBuilder.WithTarget(ElectricDrill.AstraRpgFramework.EntityCore)">
   WithTarget(EntityCore)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/Damage/PreDamageContext.cs/#L180"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/Damage/PreDamageContext.cs/#L198"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Set the target entity that will receive the damage.</p>
@@ -368,7 +448,7 @@ optional flags (critical, multiplier) can be configured before calling <a class=
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public PreDamageContext.DamageInfoDealer WithTarget(EntityCore target)</code></pre>
+    <pre><code class="lang-csharp hljs">public PreDamageContext.PreDamageInfoStepBuilder WithTarget(EntityCore target)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -379,7 +459,7 @@ optional flags (critical, multiplier) can be configured before calling <a class=
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="ElectricDrill.AstraRpgHealth.Damage.PreDamageContext.html">PreDamageContext</a>.<a class="xref" href="ElectricDrill.AstraRpgHealth.Damage.PreDamageContext.DamageInfoDealer.html">DamageInfoDealer</a></dt>
+    <dt><a class="xref" href="ElectricDrill.AstraRpgHealth.Damage.PreDamageContext.html">PreDamageContext</a>.<a class="xref" href="ElectricDrill.AstraRpgHealth.Damage.PreDamageContext.PreDamageInfoStepBuilder.html">PreDamageInfoStepBuilder</a></dt>
     <dd></dd>
   </dl>
 
@@ -397,7 +477,7 @@ optional flags (critical, multiplier) can be configured before calling <a class=
 
   <h3 id="ElectricDrill_AstraRpgHealth_Damage_PreDamageContext_PreDamageInfoStepBuilder_WithType_ElectricDrill_AstraRpgHealth_Damage_DamageTypeSO_" data-uid="ElectricDrill.AstraRpgHealth.Damage.PreDamageContext.PreDamageInfoStepBuilder.WithType(ElectricDrill.AstraRpgHealth.Damage.DamageTypeSO)">
   WithType(DamageTypeSO)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/Damage/PreDamageContext.cs/#L162"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/Damage/PreDamageContext.cs/#L180"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Set the damage type.</p>

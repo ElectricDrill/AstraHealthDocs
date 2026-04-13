@@ -89,7 +89,7 @@
 
 
   <h1 id="ElectricDrill_AstraRpgHealth_Heal_HealSourceSO" data-uid="ElectricDrill.AstraRpgHealth.Heal.HealSourceSO" class="text-break">
-Class HealSourceSO  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/Heal/HealSourceSO.cs/#L9"><i class="bi bi-code-slash"></i></a>
+Class HealSourceSO  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/Heal/HealSourceSO.cs/#L10"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -103,7 +103,7 @@ Create instances via Assets -&gt; Create -&gt; Astra RPG Health / Heal Source.</
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class HealSourceSO : ScriptableObject</code></pre>
+    <pre><code class="lang-csharp hljs">public class HealSourceSO : ScriptableObject, ITaggable</code></pre>
   </div>
 
 
@@ -119,6 +119,12 @@ Create instances via Assets -&gt; Create -&gt; Astra RPG Health / Heal Source.</
     </dd>
   </dl>
 
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><span class="xref">ITaggable</span></div>
+    </dd>
+  </dl>
 
 
 
@@ -135,7 +141,7 @@ Create instances via Assets -&gt; Create -&gt; Astra RPG Health / Heal Source.</
 
   <h3 id="ElectricDrill_AstraRpgHealth_Heal_HealSourceSO_FlatHealModificationStat" data-uid="ElectricDrill.AstraRpgHealth.Heal.HealSourceSO.FlatHealModificationStat">
   FlatHealModificationStat
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/Heal/HealSourceSO.cs/#L19"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/Heal/HealSourceSO.cs/#L25"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>The stat representing the flat heal modifier for this source.
@@ -169,7 +175,7 @@ that affect healing from this source linearly.</p>
 
   <h3 id="ElectricDrill_AstraRpgHealth_Heal_HealSourceSO_PercentageHealModificationStat" data-uid="ElectricDrill.AstraRpgHealth.Heal.HealSourceSO.PercentageHealModificationStat">
   PercentageHealModificationStat
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/Heal/HealSourceSO.cs/#L30"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/Heal/HealSourceSO.cs/#L36"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>The stat representing the percentage heal modifier for this source.
@@ -200,6 +206,38 @@ Percentage heal modifiers are applied after flat modifiers.</p>
 
 
 
+  <a id="ElectricDrill_AstraRpgHealth_Heal_HealSourceSO_Tags_" data-uid="ElectricDrill.AstraRpgHealth.Heal.HealSourceSO.Tags*"></a>
+
+  <h3 id="ElectricDrill_AstraRpgHealth_Heal_HealSourceSO_Tags" data-uid="ElectricDrill.AstraRpgHealth.Heal.HealSourceSO.Tags">
+  Tags
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/Heal/HealSourceSO.cs/#L15"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The tags associated with this object.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public GameTagSet Tags { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">GameTagSet</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
   <h2 class="section" id="methods">Methods
 </h2>
 
@@ -208,7 +246,7 @@ Percentage heal modifiers are applied after flat modifiers.</p>
 
   <h3 id="ElectricDrill_AstraRpgHealth_Heal_HealSourceSO_ToString" data-uid="ElectricDrill.AstraRpgHealth.Heal.HealSourceSO.ToString">
   ToString()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/Heal/HealSourceSO.cs/#L38"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/Heal/HealSourceSO.cs/#L44"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Returns the asset name of this heal source.</p>

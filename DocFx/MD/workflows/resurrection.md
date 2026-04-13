@@ -18,7 +18,7 @@ See [Heal Source](healing.md#heal-source) for guidance on configuring `HealSourc
 
 ### Default On Resurrection Game Action
 
-**Type:** `GameAction<Component>` — **Required:** No
+**Type:** `GameAction<IHasEntity>` — **Required:** No
 
 The [Game Action](https://electricdrill.github.io/AstraRpgFrameworkDocs/MD/workflows.html#game-actions) executed automatically whenever any entity is resurrected, unless the entity defines its own [Override On Resurrection Game Action](#per-entity-customization). Use this to implement a common post-resurrection behavior shared across all entities — playing a revival visual effect, re-enabling a disabled GameObject, or resetting specific state. Leave it empty if no shared behavior is needed.
 
@@ -80,11 +80,13 @@ The entity's HP after resurrection may therefore differ from the base amount req
 
 ## The Resurrect Game Action
 
-*Relative path:* `Astra RPG Framework/Game Actions/Context: Component/Resurrect`
+*Relative path:* `Astra RPG Framework/Game Actions/Context: Entity/Resurrect`
 
-`ResurrectComponentGameActionSO` is a ready-made [Game Action](https://electricdrill.github.io/AstraRpgFrameworkDocs/MD/workflows.html#game-actions) that can be dropped into any Game Action slot in the inspector to resurrect an entity. It always uses the **Default Resurrection Source** from the configuration; no source field is exposed in the inspector.
+`ResurrectEntityIHasEntityGameActionSO` is a ready-made [Game Action](https://electricdrill.github.io/AstraRpgFrameworkDocs/MD/workflows.html#game-actions) that can be dropped into any Game Action slot in the inspector to resurrect an entity. It always uses the **Default Resurrection Source** from the configuration; no source field is exposed in the inspector.
 
-The following image shows the `ResurrectComponentGameActionSO` inspector:  
+Because its context type is `IHasEntity`, it connects directly to any `GameEventListener` whose payload implements `IHasEntity` — which includes all health event listeners such as `EntityDiedGameEventListener`, `DamageResolutionGameEventListener`, and `EntityResurrectedGameEventListener` — without requiring a Component reference.
+
+The following image shows the `ResurrectEntityIHasEntityGameActionSO` inspector:  
 ![Resurrect Game Action inspector](../../images/AstraRPG/workflows/resurrection/resurrect-game-action.png)
 
 The configurable fields are:
@@ -96,7 +98,7 @@ The configurable fields are:
 > [!NOTE]
 > If **Percentage HP to Recover** or **Flat HP to Recover** is set to 0, the game action falls back to resurrecting the entity with exactly 1 HP, guaranteeing the resurrection is always valid.
 
-**Common use case — automatic resurrection after a delay:** combine `ResurrectComponentGameActionSO` with a [Delayed Game Action](https://electricdrill.github.io/AstraRpgFrameworkDocs/api/ElectricDrill.AstraRpgFramework.GameActions.Actions.DelayedGameAction-1.html) inside the entity's **Override On Death Game Action** (or the global **Default On Death Game Action**). When the entity dies, the death game action fires a delayed sequence that triggers the `ResurrectComponentGameActionSO` after a configured number of seconds — implementing an automatic respawn without a single line of code. See the [Game Actions](https://electricdrill.github.io/AstraRpgFrameworkDocs/MD/workflows.html#game-actions) documentation for details on composing and chaining game actions.
+**Common use case — automatic resurrection after a delay:** combine `ResurrectEntityIHasEntityGameActionSO` with a [Delayed Game Action](https://electricdrill.github.io/AstraRpgFrameworkDocs/api/ElectricDrill.AstraRpgFramework.GameActions.Actions.DelayedGameAction-1.html) inside the entity's **Override On Death Game Action** (or the global **Default On Death Game Action**). When the entity dies, the death game action fires a delayed sequence that triggers the `ResurrectEntityIHasEntityGameActionSO` after a configured number of seconds — implementing an automatic respawn without a single line of code. See the [Game Actions](https://electricdrill.github.io/AstraRpgFrameworkDocs/MD/workflows.html#game-actions) documentation for details on composing and chaining game actions.
 
 ## Per-Entity Customization
 
@@ -121,7 +123,7 @@ After the healing pipeline completes and the resurrection game action has been d
   - **ReceivedHeal**: the full `ReceivedHealContext` produced by the internal `Heal` call, exposing:
     - **HealAmount**: a `HealAmountContext` with `RawAmount` (base amount before modifiers), `AfterModifierAmount` (after flat and percentage modifiers), and `NetAmount` (final HP actually added, capped to max HP)
     - **HealSource**: the `HealSourceSO` used for this resurrection
-    - **Performer**: the entity that performed the resurrection (`null` for system-initiated resurrections, such as those triggered via the convenience overloads or the `ResurrectComponentGameActionSO`)
+    - **Performer**: the entity that performed the resurrection (`null` for system-initiated resurrections, such as those triggered via the convenience overloads or the `ResurrectEntityIHasEntityGameActionSO`)
     - **IsCritical**: whether the resurrection heal was flagged as a critical
 
 Each event is available in both global and extra variants on `EntityHealth`. Use global events when any GameObject in the game needs to receive the signal; use extra events for targeted, component-specific or GO-hierarchy-specific communications. See [Global Events](entity-health.md#global-events) for guidance on choosing between them.

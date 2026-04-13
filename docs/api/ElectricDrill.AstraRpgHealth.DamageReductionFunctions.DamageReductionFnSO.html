@@ -89,7 +89,7 @@
 
 
   <h1 id="ElectricDrill_AstraRpgHealth_DamageReductionFunctions_DamageReductionFnSO" data-uid="ElectricDrill.AstraRpgHealth.DamageReductionFunctions.DamageReductionFnSO" class="text-break">
-Class DamageReductionFnSO  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/DamageReductionFunctions/DamageReductionFnSO.cs/#L13"><i class="bi bi-code-slash"></i></a>
+Class DamageReductionFnSO  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/DamageReductionFunctions/DamageReductionFnSO.cs/#L14"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -103,7 +103,7 @@ Implementations compute how an incoming damage amount is reduced using a defensi
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract class DamageReductionFnSO : ScriptableObject</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract class DamageReductionFnSO : ScriptableObject, ITaggable</code></pre>
   </div>
 
 
@@ -119,6 +119,12 @@ Implementations compute how an incoming damage amount is reduced using a defensi
     </dd>
   </dl>
 
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><span class="xref">ITaggable</span></div>
+    </dd>
+  </dl>
 
   <dl class="typelist derived">
     <dt>Derived</dt>
@@ -139,6 +145,42 @@ for any rounding or clamping behavior (for example, ensuring the returned value 
 </div>
 
 
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="ElectricDrill_AstraRpgHealth_DamageReductionFunctions_DamageReductionFnSO_Tags_" data-uid="ElectricDrill.AstraRpgHealth.DamageReductionFunctions.DamageReductionFnSO.Tags*"></a>
+
+  <h3 id="ElectricDrill_AstraRpgHealth_DamageReductionFunctions_DamageReductionFnSO_Tags" data-uid="ElectricDrill.AstraRpgHealth.DamageReductionFunctions.DamageReductionFnSO.Tags">
+  Tags
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/DamageReductionFunctions/DamageReductionFnSO.cs/#L19"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The tags associated with this object.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public GameTagSet Tags { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">GameTagSet</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
   <h2 class="section" id="methods">Methods
 </h2>
 
@@ -147,7 +189,7 @@ for any rounding or clamping behavior (for example, ensuring the returned value 
 
   <h3 id="ElectricDrill_AstraRpgHealth_DamageReductionFunctions_DamageReductionFnSO_CalculateReducedDamage_System_Int64_System_Double_" data-uid="ElectricDrill.AstraRpgHealth.DamageReductionFunctions.DamageReductionFnSO.CalculateReducedDamage(System.Int64,System.Double)">
   CalculateReducedDamage(long, double)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/DamageReductionFunctions/DamageReductionFnSO.cs/#L26"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/DamageReductionFunctions/DamageReductionFnSO.cs/#L33"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Reduces the specified <code class="paramref">amount</code> of damage using the provided defensive

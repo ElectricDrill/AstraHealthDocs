@@ -89,7 +89,7 @@
 
 
   <h1 id="ElectricDrill_AstraRpgHealth_Damage_DamageSourceSO" data-uid="ElectricDrill.AstraRpgHealth.Damage.DamageSourceSO" class="text-break">
-Class DamageSourceSO  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/Damage/DamageSourceSO.cs/#L10"><i class="bi bi-code-slash"></i></a>
+Class DamageSourceSO  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/Damage/DamageSourceSO.cs/#L11"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -104,7 +104,7 @@ Create instances via Assets -&gt; Create -&gt; Astra RPG Health / Damage Source.
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class DamageSourceSO : ScriptableObject</code></pre>
+    <pre><code class="lang-csharp hljs">public class DamageSourceSO : ScriptableObject, ITaggable</code></pre>
   </div>
 
 
@@ -120,6 +120,12 @@ Create instances via Assets -&gt; Create -&gt; Astra RPG Health / Damage Source.
     </dd>
   </dl>
 
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><span class="xref">ITaggable</span></div>
+    </dd>
+  </dl>
 
 
 
@@ -136,7 +142,7 @@ Create instances via Assets -&gt; Create -&gt; Astra RPG Health / Damage Source.
 
   <h3 id="ElectricDrill_AstraRpgHealth_Damage_DamageSourceSO_FlatDamageModificationStat" data-uid="ElectricDrill.AstraRpgHealth.Damage.DamageSourceSO.FlatDamageModificationStat">
   FlatDamageModificationStat
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/Damage/DamageSourceSO.cs/#L20"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/Damage/DamageSourceSO.cs/#L26"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>The stat representing the flat damage accumulator for this source.
@@ -170,7 +176,7 @@ that affect damage from this source linearly.</p>
 
   <h3 id="ElectricDrill_AstraRpgHealth_Damage_DamageSourceSO_PercentageDamageModificationStat" data-uid="ElectricDrill.AstraRpgHealth.Damage.DamageSourceSO.PercentageDamageModificationStat">
   PercentageDamageModificationStat
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/Damage/DamageSourceSO.cs/#L30"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/Damage/DamageSourceSO.cs/#L36"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>The stat representing the percentage damage accumulator for this source.
@@ -200,6 +206,38 @@ that affect damage from this source.</p>
 
 
 
+  <a id="ElectricDrill_AstraRpgHealth_Damage_DamageSourceSO_Tags_" data-uid="ElectricDrill.AstraRpgHealth.Damage.DamageSourceSO.Tags*"></a>
+
+  <h3 id="ElectricDrill_AstraRpgHealth_Damage_DamageSourceSO_Tags" data-uid="ElectricDrill.AstraRpgHealth.Damage.DamageSourceSO.Tags">
+  Tags
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/Damage/DamageSourceSO.cs/#L16"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The tags associated with this object.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public GameTagSet Tags { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">GameTagSet</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
   <h2 class="section" id="methods">Methods
 </h2>
 
@@ -208,7 +246,7 @@ that affect damage from this source.</p>
 
   <h3 id="ElectricDrill_AstraRpgHealth_Damage_DamageSourceSO_ToString" data-uid="ElectricDrill.AstraRpgHealth.Damage.DamageSourceSO.ToString">
   ToString()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/Damage/DamageSourceSO.cs/#L38"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/Damage/DamageSourceSO.cs/#L44"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Returns the asset name of this damage source.</p>

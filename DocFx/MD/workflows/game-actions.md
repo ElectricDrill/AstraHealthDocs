@@ -4,44 +4,74 @@ Astra RPG Health extends the framework's [`GameAction`](https://electricdrill.gi
 
 For an introduction to the `GameAction` execution model, execution with Unity Events, and the difference between `ExecuteAsync` and `RunFireAndForget`, refer to the [Game Actions](https://electricdrill.github.io/AstraRpgFrameworkDocs/MD/workflows.html#game-actions) section of the Astra RPG Framework documentation.
 
+## IHasEntity-Based Actions
+
+The recommended way to use the health game actions is through the `IHasEntity`-based variants. Most event context payloads raised by the health package — `DamageResolutionContext`, `EntityDiedContext`, `PreDamageContext`, `ResurrectionContext`, and others — implement the framework's `IHasEntity` interface, which exposes the primary `EntityCore` subject of the event. This means that any `GameEventListener` whose payload implements `IHasEntity` can drive these actions directly without any adapter or component extraction.
+
+The `IHasEntity`-based variants are listed under `Astra RPG Framework/Game Actions/Context: Entity/` in the asset creation menu and should be the first choice whenever actions are wired to a `GameEventListener` response.
+
 ## Resurrect
 
-`ResurrectGameActionSO<TContext>` is the abstract base action for resurrecting a dead entity. It locates the `EntityHealth` component on the context object and calls the appropriate convenience `Resurrect` overload — either with a percentage of max HP or with a flat HP amount — depending on the inspector configuration.
+`ResurrectEntityGameActionSO<TContext>` is the abstract base action for resurrecting a dead entity. It resolves the `EntityHealth` component from `context.Entity` and calls the appropriate convenience `Resurrect` overload — either with a percentage of max HP or with a flat HP amount — depending on the inspector configuration.
 
-The sealed `ResurrectComponentGameActionSO` is the ready-to-use instantiable variant with `Component` as the context type. Its inspector fields, configuration options, and a common automatic-respawn use case are documented in the [Resurrect Game Action](./resurrection.md#the-resurrect-game-action) section of the Resurrection workflow.
+The sealed `ResurrectEntityIHasEntityGameActionSO` is the ready-to-use instantiable variant with `IHasEntity` as the context type.  
+*Relative path:* `Astra RPG Framework/Game Actions/Context: Entity/Resurrect`
+
+Its inspector fields, configuration options, and a common automatic-respawn use case are documented in the [Resurrect Game Action](./resurrection.md#the-resurrect-game-action) section of the Resurrection workflow.
+
+> [!NOTE]
+> Because all health event payloads implement `IHasEntity`, `ResurrectEntityIHasEntityGameActionSO` can be connected directly to any `GameEventListener` in the package — for example to an `EntityDiedGameEventListener` to trigger an automatic resurrection on death — without extracting a `Component` reference first.
 
 ## Set Override On Death
-*Relative path:* `Astra RPG Framework/Game Actions/Context: Component/Set Override On Death`  
+*Relative path:* `Astra RPG Framework/Game Actions/Context: Entity/Set Override On Death`  
 
-`SetOverrideOnDeathGameActionSO<TContext>` assigns or clears the `OverrideOnDeathGameAction` property on an entity's `EntityHealth` component at runtime. It gives any system or workflow the ability to redirect what happens the next time a specific entity dies, without modifying the global configuration or the entity's inspector directly.
+`SetEntityOverrideOnDeathGameActionSO<TContext>` assigns or clears the `OverrideOnDeathGameAction` property on an entity's `EntityHealth` component at runtime. It gives any system or workflow the ability to redirect what happens the next time a specific entity dies, without modifying the global configuration or the entity's inspector directly.
 
 The configurable field is:
 
-- **New Override Game Action**: the `GameAction<Component>` to assign as the entity's next on-death action. Leave this field empty to clear any previously set override, causing the entity to fall back to the **Default On Death Game Action** from the package configuration
+- **New Override Game Action**: the `GameAction<IHasEntity>` to assign as the entity's next on-death action. Leave this field empty to clear any previously set override, causing the entity to fall back to the **Default On Death Game Action** from the package configuration
 
 **Use Cases**:
-- One-shot death mechanics: place a `SetOverrideOnDeathGameActionSO` inside a `CompositeGameAction` that first resurrects the entity and then clears the override (by leaving **New Override Game Action** empty). The first time the entity dies the override fires — resurrecting it — and removes itself so subsequent deaths use the default behavior
+- One-shot death mechanics: place a `SetEntityOverrideOnDeathGameActionSO` inside a `CompositeGameAction` that first resurrects the entity and then clears the override (by leaving **New Override Game Action** empty). The first time the entity dies the override fires — resurrecting it — and removes itself so subsequent deaths use the default behavior
 - Dynamic difficulty: assign a stronger or weaker on-death routine to a specific entity at runtime based on game state
 
 > [!NOTE]
-> The action resolves `EntityHealth` from the context by casting directly (when the context already is an `EntityHealth`) or via `GetComponent`. If neither succeeds, a warning is logged and the action does nothing.
+> The action resolves `EntityHealth` from the context via `context.Entity.GetComponent<EntityHealth>()`. If the entity does not have an `EntityHealth` component, a warning is logged and the action does nothing.
 
-The sealed `SetOverrideOnDeathComponentGameActionSO` is the instantiable variant with `Component` as the context type:
+The sealed `SetEntityOverrideOnDeathIHasEntityGameActionSo` is the instantiable variant with `IHasEntity` as the context type:
 
 ![Set Override On Death Game Action inspector](../../images/AstraRPG/workflows/game-actions/set-override-on-death.png)
 
 ## Set Override On Resurrection
-*Relative path:* `Astra RPG Framework/Game Actions/Context: Component/Set Override On Resurrection`  
+*Relative path:* `Astra RPG Framework/Game Actions/Context: Entity/Set Override On Resurrection`  
 
-`SetOverrideOnResurrectionGameActionSO<TContext>` mirrors its death counterpart: it assigns or clears the `OverrideOnResurrectionGameAction` property on an entity's `EntityHealth` component, redirecting the post-resurrection behavior the next time that entity is resurrected.
+`SetEntityOverrideOnResurrectionGameActionSO<TContext>` mirrors its death counterpart: it assigns or clears the `OverrideOnResurrectionGameAction` property on an entity's `EntityHealth` component, redirecting the post-resurrection behavior the next time that entity is resurrected.
 
 The configurable field is:
 
-- **New Override Game Action**: the `GameAction<Component>` to assign as the entity's next on-resurrection action. Leave this field empty to clear the override and fall back to the **Default On Resurrection Game Action** from the package configuration
+- **New Override Game Action**: the `GameAction<IHasEntity>` to assign as the entity's next on-resurrection action. Leave this field empty to clear the override and fall back to the **Default On Resurrection Game Action** from the package configuration
 
-The sealed `SetOverrideOnResurrectionComponentGameActionSO` is the instantiable variant with `Component` as the context type:
+The sealed `SetEntityOverrideOnResurrectionIHasEntityGameActionSo` is the instantiable variant with `IHasEntity` as the context type:
 
 ![Set Override On Resurrection Game Action inspector](../../images/AstraRPG/workflows/game-actions/set-override-on-resurrection.png)
+
+## Context Projection Actions
+
+Context projection actions allow a broad `IHasEntity` listener to forward its payload to an action that expects a richer, more specific context type. The base class `EntityContextCastProjectionGameAction<TProjectedContext>` attempts a runtime cast from `IHasEntity` to `TProjectedContext` and, if the cast succeeds, delegates to the wrapped inner action; if the cast fails, the action silently does nothing.
+
+Use these actions when a single `GameEventListener` needs to drive logic that lives inside an action typed on a concrete context — for example, routing an `EntityDiedGameEventListener` response through to a `CounterDamageOnDeathGameActionSO` without writing a custom listener.
+
+Three sealed implementations are provided:
+
+- **`EntityContextToDamageResolutionContextProjectionGameAction`** — narrows `IHasEntity` to `DamageResolutionContext` and forwards to a `GameAction<DamageResolutionContext>`. Created via `Astra RPG Framework/Game Actions/Context: Entity/Projections/→ DamageResolutionContext Projection`
+
+- **`EntityContextToEntityDiedContextProjectionGameAction`** — narrows `IHasEntity` to `EntityDiedContext` and forwards to a `GameAction<EntityDiedContext>`. Created via `Astra RPG Framework/Game Actions/Context: Entity/Projections/→ EntityDiedContext Projection`
+
+- **`EntityContextToPreDamageContextProjectionGameAction`** — narrows `IHasEntity` to `PreDamageContext` and forwards to a `GameAction<PreDamageContext>`. Created via `Astra RPG Framework/Game Actions/Context: Entity/Projections/→ PreDamageContext Projection`
+
+The configurable field on each projection action is:
+
+- **Inner Action**: the `GameAction<TProjectedContext>` to execute when the cast succeeds. Leave empty to produce a no-op.
 
 ## Counter Damage
 

@@ -104,7 +104,7 @@ Useful for implementing fallback behavior (e.g., try direct kill first, then env
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class FirstMatchExpStrategySO : ExpCollectionStrategySO</code></pre>
+    <pre><code class="lang-csharp hljs">public class FirstMatchExpStrategySO : ExpCollectionStrategySO, ITaggable</code></pre>
   </div>
 
 
@@ -121,11 +121,20 @@ Useful for implementing fallback behavior (e.g., try direct kill first, then env
     </dd>
   </dl>
 
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><span class="xref">ITaggable</span></div>
+    </dd>
+  </dl>
 
 
   <dl class="typelist inheritedMembers">
     <dt>Inherited Members</dt>
     <dd>
+    <div>
+      <a class="xref" href="ElectricDrill.AstraRpgHealth.Experience.ExpCollectionStrategySO.html#ElectricDrill_AstraRpgHealth_Experience_ExpCollectionStrategySO_Tags">ExpCollectionStrategySO.Tags</a>
+    </div>
     <div>
       <a class="xref" href="ElectricDrill.AstraRpgHealth.Experience.ExpCollectionStrategySO.html#ElectricDrill_AstraRpgHealth_Experience_ExpCollectionStrategySO_CollectExp_ElectricDrill_AstraRpgFramework_EntityCore_ElectricDrill_AstraRpgFramework_Experience_IExpSource_System_Single_">ExpCollectionStrategySO.CollectExp(EntityCore, IExpSource, float)</a>
     </div>

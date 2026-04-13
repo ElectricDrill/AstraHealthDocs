@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Class DamageCalculationStrategySO | Astra RPG Health ">
       
-      <meta name="description" content="ScriptableObject that defines a configurable damage calculation pipeline. The pipeline is composed of ordered  instances executed sequentially.">
+      <meta name="description" content="ScriptableObject that defines a configurable damage calculation pipeline. The pipeline is composed of ordered  instances executed sequentially.  Optionally, a pre-strategy and/or post-strategy can be configured to run another  before or after this strategy&#39;s own steps. This enables composition without duplicating the default pipeline: a custom strategy can delegate to the global default pipeline (or any other strategy) and then apply additional steps on top.">
       <link rel="icon" href="../images/astra-health-ico.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -89,7 +89,7 @@
 
 
   <h1 id="ElectricDrill_AstraRpgHealth_Damage_CalculationPipeline_DamageCalculationStrategySO" data-uid="ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.DamageCalculationStrategySO" class="text-break">
-Class DamageCalculationStrategySO  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/Damage/CalculationPipeline/DamageCalculationStrategySO.cs/#L10"><i class="bi bi-code-slash"></i></a>
+Class DamageCalculationStrategySO  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/Damage/CalculationPipeline/DamageCalculationStrategySO.cs/#L19"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -99,11 +99,18 @@ Class DamageCalculationStrategySO  <a class="header-action link-secondary" title
 
   <div class="markdown summary"><p>ScriptableObject that defines a configurable damage calculation pipeline.
 The pipeline is composed of ordered <a class="xref" href="ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.DamageStep.html">DamageStep</a> instances executed sequentially.</p>
+<p>
+Optionally, a <b>pre-strategy</b> and/or <b>post-strategy</b> can be configured to run
+another <a class="xref" href="ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.DamageCalculationStrategySO.html">DamageCalculationStrategySO</a> before or after this strategy's own steps.
+This enables composition without duplicating the default pipeline: a custom strategy can
+delegate to the global default pipeline (or any other strategy) and then apply additional
+steps on top.
+</p>
 </div>
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class DamageCalculationStrategySO : ScriptableObject</code></pre>
+    <pre><code class="lang-csharp hljs">public class DamageCalculationStrategySO : ScriptableObject, ITaggable</code></pre>
   </div>
 
 
@@ -119,6 +126,12 @@ The pipeline is composed of ordered <a class="xref" href="ElectricDrill.AstraRpg
     </dd>
   </dl>
 
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><span class="xref">ITaggable</span></div>
+    </dd>
+  </dl>
 
 
 
@@ -134,7 +147,7 @@ The pipeline is composed of ordered <a class="xref" href="ElectricDrill.AstraRpg
 
   <h3 id="ElectricDrill_AstraRpgHealth_Damage_CalculationPipeline_DamageCalculationStrategySO_steps" data-uid="ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.DamageCalculationStrategySO.steps">
   steps
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/Damage/CalculationPipeline/DamageCalculationStrategySO.cs/#L15"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/Damage/CalculationPipeline/DamageCalculationStrategySO.cs/#L36"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Ordered list of steps composing this calculation strategy. Steps are executed in sequence.</p>
@@ -163,6 +176,42 @@ public List&lt;DamageStep&gt; steps</code></pre>
 
 
 
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="ElectricDrill_AstraRpgHealth_Damage_CalculationPipeline_DamageCalculationStrategySO_Tags_" data-uid="ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.DamageCalculationStrategySO.Tags*"></a>
+
+  <h3 id="ElectricDrill_AstraRpgHealth_Damage_CalculationPipeline_DamageCalculationStrategySO_Tags" data-uid="ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.DamageCalculationStrategySO.Tags">
+  Tags
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/Damage/CalculationPipeline/DamageCalculationStrategySO.cs/#L24"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The tags associated with this object.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public GameTagSet Tags { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">GameTagSet</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
   <h2 class="section" id="methods">Methods
 </h2>
 
@@ -171,10 +220,11 @@ public List&lt;DamageStep&gt; steps</code></pre>
 
   <h3 id="ElectricDrill_AstraRpgHealth_Damage_CalculationPipeline_DamageCalculationStrategySO_CalculateDamage_ElectricDrill_AstraRpgHealth_Damage_CalculationPipeline_DamageInfo_" data-uid="ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.DamageCalculationStrategySO.CalculateDamage(ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.DamageInfo)">
   CalculateDamage(DamageInfo)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/Damage/CalculationPipeline/DamageCalculationStrategySO.cs/#L22"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/Damage/CalculationPipeline/DamageCalculationStrategySO.cs/#L53"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Executes the entire damage calculation pipeline defined in this asset.</p>
+  <div class="markdown level1 summary"><p>Executes the entire damage calculation pipeline defined in this asset,
+including optional pre-strategy and post-strategy delegation.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 

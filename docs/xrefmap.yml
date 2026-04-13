@@ -615,6 +615,19 @@ references:
   isSpec: "True"
   fullName: ElectricDrill.AstraRpgHealth.Config.AstraRpgHealthConfigSO.SuppressPassiveRegenerationEvents
   nameWithType: AstraRpgHealthConfigSO.SuppressPassiveRegenerationEvents
+- uid: ElectricDrill.AstraRpgHealth.Config.AstraRpgHealthConfigSO.Tags
+  name: Tags
+  href: api/ElectricDrill.AstraRpgHealth.Config.AstraRpgHealthConfigSO.html#ElectricDrill_AstraRpgHealth_Config_AstraRpgHealthConfigSO_Tags
+  commentId: P:ElectricDrill.AstraRpgHealth.Config.AstraRpgHealthConfigSO.Tags
+  fullName: ElectricDrill.AstraRpgHealth.Config.AstraRpgHealthConfigSO.Tags
+  nameWithType: AstraRpgHealthConfigSO.Tags
+- uid: ElectricDrill.AstraRpgHealth.Config.AstraRpgHealthConfigSO.Tags*
+  name: Tags
+  href: api/ElectricDrill.AstraRpgHealth.Config.AstraRpgHealthConfigSO.html#ElectricDrill_AstraRpgHealth_Config_AstraRpgHealthConfigSO_Tags_
+  commentId: Overload:ElectricDrill.AstraRpgHealth.Config.AstraRpgHealthConfigSO.Tags
+  isSpec: "True"
+  fullName: ElectricDrill.AstraRpgHealth.Config.AstraRpgHealthConfigSO.Tags
+  nameWithType: AstraRpgHealthConfigSO.Tags
 - uid: ElectricDrill.AstraRpgHealth.Config.AstraRpgHealthGlobalSettings
   name: AstraRpgHealthGlobalSettings
   href: api/ElectricDrill.AstraRpgHealth.Config.AstraRpgHealthGlobalSettings.html
@@ -1034,6 +1047,112 @@ references:
   commentId: N:ElectricDrill.AstraRpgHealth.Damage
   fullName: ElectricDrill.AstraRpgHealth.Damage
   nameWithType: ElectricDrill.AstraRpgHealth.Damage
+- uid: ElectricDrill.AstraRpgHealth.Damage.Bounds
+  name: ElectricDrill.AstraRpgHealth.Damage.Bounds
+  href: api/ElectricDrill.AstraRpgHealth.Damage.Bounds.html
+  commentId: N:ElectricDrill.AstraRpgHealth.Damage.Bounds
+  fullName: ElectricDrill.AstraRpgHealth.Damage.Bounds
+  nameWithType: ElectricDrill.AstraRpgHealth.Damage.Bounds
+- uid: ElectricDrill.AstraRpgHealth.Damage.Bounds.DamageBoundSource
+  name: DamageBoundSource
+  href: api/ElectricDrill.AstraRpgHealth.Damage.Bounds.DamageBoundSource.html
+  commentId: T:ElectricDrill.AstraRpgHealth.Damage.Bounds.DamageBoundSource
+  fullName: ElectricDrill.AstraRpgHealth.Damage.Bounds.DamageBoundSource
+  nameWithType: DamageBoundSource
+- uid: ElectricDrill.AstraRpgHealth.Damage.Bounds.DamageBoundSource.FixedValue
+  name: FixedValue
+  href: api/ElectricDrill.AstraRpgHealth.Damage.Bounds.DamageBoundSource.html#ElectricDrill_AstraRpgHealth_Damage_Bounds_DamageBoundSource_FixedValue
+  commentId: F:ElectricDrill.AstraRpgHealth.Damage.Bounds.DamageBoundSource.FixedValue
+  fullName: ElectricDrill.AstraRpgHealth.Damage.Bounds.DamageBoundSource.FixedValue
+  nameWithType: DamageBoundSource.FixedValue
+- uid: ElectricDrill.AstraRpgHealth.Damage.Bounds.DamageBoundSource.HealthScaling
+  name: HealthScaling
+  href: api/ElectricDrill.AstraRpgHealth.Damage.Bounds.DamageBoundSource.html#ElectricDrill_AstraRpgHealth_Damage_Bounds_DamageBoundSource_HealthScaling
+  commentId: F:ElectricDrill.AstraRpgHealth.Damage.Bounds.DamageBoundSource.HealthScaling
+  fullName: ElectricDrill.AstraRpgHealth.Damage.Bounds.DamageBoundSource.HealthScaling
+  nameWithType: DamageBoundSource.HealthScaling
+- uid: ElectricDrill.AstraRpgHealth.Damage.Bounds.DamageBoundSource.ScalingComponent
+  name: ScalingComponent
+  href: api/ElectricDrill.AstraRpgHealth.Damage.Bounds.DamageBoundSource.html#ElectricDrill_AstraRpgHealth_Damage_Bounds_DamageBoundSource_ScalingComponent
+  commentId: F:ElectricDrill.AstraRpgHealth.Damage.Bounds.DamageBoundSource.ScalingComponent
+  fullName: ElectricDrill.AstraRpgHealth.Damage.Bounds.DamageBoundSource.ScalingComponent
+  nameWithType: DamageBoundSource.ScalingComponent
+- uid: ElectricDrill.AstraRpgHealth.Damage.Bounds.DamageCap
+  name: DamageCap
+  href: api/ElectricDrill.AstraRpgHealth.Damage.Bounds.DamageCap.html
+  commentId: T:ElectricDrill.AstraRpgHealth.Damage.Bounds.DamageCap
+  fullName: ElectricDrill.AstraRpgHealth.Damage.Bounds.DamageCap
+  nameWithType: DamageCap
+- uid: ElectricDrill.AstraRpgHealth.Damage.Bounds.DamageCap.GetDamageCap
+  name: GetDamageCap()
+  href: api/ElectricDrill.AstraRpgHealth.Damage.Bounds.DamageCap.html#ElectricDrill_AstraRpgHealth_Damage_Bounds_DamageCap_GetDamageCap
+  commentId: M:ElectricDrill.AstraRpgHealth.Damage.Bounds.DamageCap.GetDamageCap
+  fullName: ElectricDrill.AstraRpgHealth.Damage.Bounds.DamageCap.GetDamageCap()
+  nameWithType: DamageCap.GetDamageCap()
+- uid: ElectricDrill.AstraRpgHealth.Damage.Bounds.DamageCap.GetDamageCap*
+  name: GetDamageCap
+  href: api/ElectricDrill.AstraRpgHealth.Damage.Bounds.DamageCap.html#ElectricDrill_AstraRpgHealth_Damage_Bounds_DamageCap_GetDamageCap_
+  commentId: Overload:ElectricDrill.AstraRpgHealth.Damage.Bounds.DamageCap.GetDamageCap
+  isSpec: "True"
+  fullName: ElectricDrill.AstraRpgHealth.Damage.Bounds.DamageCap.GetDamageCap
+  nameWithType: DamageCap.GetDamageCap
+- uid: ElectricDrill.AstraRpgHealth.Damage.Bounds.DamageFloor
+  name: DamageFloor
+  href: api/ElectricDrill.AstraRpgHealth.Damage.Bounds.DamageFloor.html
+  commentId: T:ElectricDrill.AstraRpgHealth.Damage.Bounds.DamageFloor
+  fullName: ElectricDrill.AstraRpgHealth.Damage.Bounds.DamageFloor
+  nameWithType: DamageFloor
+- uid: ElectricDrill.AstraRpgHealth.Damage.Bounds.DamageFloor.GetDamageFloor
+  name: GetDamageFloor()
+  href: api/ElectricDrill.AstraRpgHealth.Damage.Bounds.DamageFloor.html#ElectricDrill_AstraRpgHealth_Damage_Bounds_DamageFloor_GetDamageFloor
+  commentId: M:ElectricDrill.AstraRpgHealth.Damage.Bounds.DamageFloor.GetDamageFloor
+  fullName: ElectricDrill.AstraRpgHealth.Damage.Bounds.DamageFloor.GetDamageFloor()
+  nameWithType: DamageFloor.GetDamageFloor()
+- uid: ElectricDrill.AstraRpgHealth.Damage.Bounds.DamageFloor.GetDamageFloor*
+  name: GetDamageFloor
+  href: api/ElectricDrill.AstraRpgHealth.Damage.Bounds.DamageFloor.html#ElectricDrill_AstraRpgHealth_Damage_Bounds_DamageFloor_GetDamageFloor_
+  commentId: Overload:ElectricDrill.AstraRpgHealth.Damage.Bounds.DamageFloor.GetDamageFloor
+  isSpec: "True"
+  fullName: ElectricDrill.AstraRpgHealth.Damage.Bounds.DamageFloor.GetDamageFloor
+  nameWithType: DamageFloor.GetDamageFloor
+- uid: ElectricDrill.AstraRpgHealth.Damage.Bounds.IDamageCap
+  name: IDamageCap
+  href: api/ElectricDrill.AstraRpgHealth.Damage.Bounds.IDamageCap.html
+  commentId: T:ElectricDrill.AstraRpgHealth.Damage.Bounds.IDamageCap
+  fullName: ElectricDrill.AstraRpgHealth.Damage.Bounds.IDamageCap
+  nameWithType: IDamageCap
+- uid: ElectricDrill.AstraRpgHealth.Damage.Bounds.IDamageCap.GetDamageCap
+  name: GetDamageCap()
+  href: api/ElectricDrill.AstraRpgHealth.Damage.Bounds.IDamageCap.html#ElectricDrill_AstraRpgHealth_Damage_Bounds_IDamageCap_GetDamageCap
+  commentId: M:ElectricDrill.AstraRpgHealth.Damage.Bounds.IDamageCap.GetDamageCap
+  fullName: ElectricDrill.AstraRpgHealth.Damage.Bounds.IDamageCap.GetDamageCap()
+  nameWithType: IDamageCap.GetDamageCap()
+- uid: ElectricDrill.AstraRpgHealth.Damage.Bounds.IDamageCap.GetDamageCap*
+  name: GetDamageCap
+  href: api/ElectricDrill.AstraRpgHealth.Damage.Bounds.IDamageCap.html#ElectricDrill_AstraRpgHealth_Damage_Bounds_IDamageCap_GetDamageCap_
+  commentId: Overload:ElectricDrill.AstraRpgHealth.Damage.Bounds.IDamageCap.GetDamageCap
+  isSpec: "True"
+  fullName: ElectricDrill.AstraRpgHealth.Damage.Bounds.IDamageCap.GetDamageCap
+  nameWithType: IDamageCap.GetDamageCap
+- uid: ElectricDrill.AstraRpgHealth.Damage.Bounds.IDamageFloor
+  name: IDamageFloor
+  href: api/ElectricDrill.AstraRpgHealth.Damage.Bounds.IDamageFloor.html
+  commentId: T:ElectricDrill.AstraRpgHealth.Damage.Bounds.IDamageFloor
+  fullName: ElectricDrill.AstraRpgHealth.Damage.Bounds.IDamageFloor
+  nameWithType: IDamageFloor
+- uid: ElectricDrill.AstraRpgHealth.Damage.Bounds.IDamageFloor.GetDamageFloor
+  name: GetDamageFloor()
+  href: api/ElectricDrill.AstraRpgHealth.Damage.Bounds.IDamageFloor.html#ElectricDrill_AstraRpgHealth_Damage_Bounds_IDamageFloor_GetDamageFloor
+  commentId: M:ElectricDrill.AstraRpgHealth.Damage.Bounds.IDamageFloor.GetDamageFloor
+  fullName: ElectricDrill.AstraRpgHealth.Damage.Bounds.IDamageFloor.GetDamageFloor()
+  nameWithType: IDamageFloor.GetDamageFloor()
+- uid: ElectricDrill.AstraRpgHealth.Damage.Bounds.IDamageFloor.GetDamageFloor*
+  name: GetDamageFloor
+  href: api/ElectricDrill.AstraRpgHealth.Damage.Bounds.IDamageFloor.html#ElectricDrill_AstraRpgHealth_Damage_Bounds_IDamageFloor_GetDamageFloor_
+  commentId: Overload:ElectricDrill.AstraRpgHealth.Damage.Bounds.IDamageFloor.GetDamageFloor
+  isSpec: "True"
+  fullName: ElectricDrill.AstraRpgHealth.Damage.Bounds.IDamageFloor.GetDamageFloor
+  nameWithType: IDamageFloor.GetDamageFloor
 - uid: ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline
   name: ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline
   href: api/ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.html
@@ -1104,6 +1223,70 @@ references:
   isSpec: "True"
   fullName: ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.ApplyCriticalMultiplierStep.ProcessStep
   nameWithType: ApplyCriticalMultiplierStep.ProcessStep
+- uid: ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.ApplyDamageCapStep
+  name: ApplyDamageCapStep
+  href: api/ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.ApplyDamageCapStep.html
+  commentId: T:ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.ApplyDamageCapStep
+  fullName: ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.ApplyDamageCapStep
+  nameWithType: ApplyDamageCapStep
+- uid: ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.ApplyDamageCapStep.DisplayName
+  name: DisplayName
+  href: api/ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.ApplyDamageCapStep.html#ElectricDrill_AstraRpgHealth_Damage_CalculationPipeline_ApplyDamageCapStep_DisplayName
+  commentId: P:ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.ApplyDamageCapStep.DisplayName
+  fullName: ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.ApplyDamageCapStep.DisplayName
+  nameWithType: ApplyDamageCapStep.DisplayName
+- uid: ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.ApplyDamageCapStep.DisplayName*
+  name: DisplayName
+  href: api/ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.ApplyDamageCapStep.html#ElectricDrill_AstraRpgHealth_Damage_CalculationPipeline_ApplyDamageCapStep_DisplayName_
+  commentId: Overload:ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.ApplyDamageCapStep.DisplayName
+  isSpec: "True"
+  fullName: ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.ApplyDamageCapStep.DisplayName
+  nameWithType: ApplyDamageCapStep.DisplayName
+- uid: ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.ApplyDamageCapStep.ProcessStep(ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.DamageInfo)
+  name: ProcessStep(DamageInfo)
+  href: api/ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.ApplyDamageCapStep.html#ElectricDrill_AstraRpgHealth_Damage_CalculationPipeline_ApplyDamageCapStep_ProcessStep_ElectricDrill_AstraRpgHealth_Damage_CalculationPipeline_DamageInfo_
+  commentId: M:ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.ApplyDamageCapStep.ProcessStep(ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.DamageInfo)
+  fullName: ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.ApplyDamageCapStep.ProcessStep(ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.DamageInfo)
+  nameWithType: ApplyDamageCapStep.ProcessStep(DamageInfo)
+- uid: ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.ApplyDamageCapStep.ProcessStep*
+  name: ProcessStep
+  href: api/ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.ApplyDamageCapStep.html#ElectricDrill_AstraRpgHealth_Damage_CalculationPipeline_ApplyDamageCapStep_ProcessStep_
+  commentId: Overload:ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.ApplyDamageCapStep.ProcessStep
+  isSpec: "True"
+  fullName: ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.ApplyDamageCapStep.ProcessStep
+  nameWithType: ApplyDamageCapStep.ProcessStep
+- uid: ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.ApplyDamageFloorStep
+  name: ApplyDamageFloorStep
+  href: api/ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.ApplyDamageFloorStep.html
+  commentId: T:ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.ApplyDamageFloorStep
+  fullName: ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.ApplyDamageFloorStep
+  nameWithType: ApplyDamageFloorStep
+- uid: ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.ApplyDamageFloorStep.DisplayName
+  name: DisplayName
+  href: api/ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.ApplyDamageFloorStep.html#ElectricDrill_AstraRpgHealth_Damage_CalculationPipeline_ApplyDamageFloorStep_DisplayName
+  commentId: P:ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.ApplyDamageFloorStep.DisplayName
+  fullName: ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.ApplyDamageFloorStep.DisplayName
+  nameWithType: ApplyDamageFloorStep.DisplayName
+- uid: ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.ApplyDamageFloorStep.DisplayName*
+  name: DisplayName
+  href: api/ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.ApplyDamageFloorStep.html#ElectricDrill_AstraRpgHealth_Damage_CalculationPipeline_ApplyDamageFloorStep_DisplayName_
+  commentId: Overload:ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.ApplyDamageFloorStep.DisplayName
+  isSpec: "True"
+  fullName: ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.ApplyDamageFloorStep.DisplayName
+  nameWithType: ApplyDamageFloorStep.DisplayName
+- uid: ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.ApplyDamageFloorStep.ProcessStep(ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.DamageInfo)
+  name: ProcessStep(DamageInfo)
+  href: api/ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.ApplyDamageFloorStep.html#ElectricDrill_AstraRpgHealth_Damage_CalculationPipeline_ApplyDamageFloorStep_ProcessStep_ElectricDrill_AstraRpgHealth_Damage_CalculationPipeline_DamageInfo_
+  commentId: M:ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.ApplyDamageFloorStep.ProcessStep(ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.DamageInfo)
+  fullName: ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.ApplyDamageFloorStep.ProcessStep(ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.DamageInfo)
+  nameWithType: ApplyDamageFloorStep.ProcessStep(DamageInfo)
+- uid: ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.ApplyDamageFloorStep.ProcessStep*
+  name: ProcessStep
+  href: api/ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.ApplyDamageFloorStep.html#ElectricDrill_AstraRpgHealth_Damage_CalculationPipeline_ApplyDamageFloorStep_ProcessStep_
+  commentId: Overload:ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.ApplyDamageFloorStep.ProcessStep
+  isSpec: "True"
+  fullName: ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.ApplyDamageFloorStep.ProcessStep
+  nameWithType: ApplyDamageFloorStep.ProcessStep
 - uid: ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.ApplyDefenseStep
   name: ApplyDefenseStep
   href: api/ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.ApplyDefenseStep.html
@@ -1276,6 +1459,19 @@ references:
   isSpec: "True"
   fullName: ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.DamageCalculationStrategySO.CalculateDamage
   nameWithType: DamageCalculationStrategySO.CalculateDamage
+- uid: ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.DamageCalculationStrategySO.Tags
+  name: Tags
+  href: api/ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.DamageCalculationStrategySO.html#ElectricDrill_AstraRpgHealth_Damage_CalculationPipeline_DamageCalculationStrategySO_Tags
+  commentId: P:ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.DamageCalculationStrategySO.Tags
+  fullName: ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.DamageCalculationStrategySO.Tags
+  nameWithType: DamageCalculationStrategySO.Tags
+- uid: ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.DamageCalculationStrategySO.Tags*
+  name: Tags
+  href: api/ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.DamageCalculationStrategySO.html#ElectricDrill_AstraRpgHealth_Damage_CalculationPipeline_DamageCalculationStrategySO_Tags_
+  commentId: Overload:ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.DamageCalculationStrategySO.Tags
+  isSpec: "True"
+  fullName: ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.DamageCalculationStrategySO.Tags
+  nameWithType: DamageCalculationStrategySO.Tags
 - uid: ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.DamageCalculationStrategySO.steps
   name: steps
   href: api/ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.DamageCalculationStrategySO.html#ElectricDrill_AstraRpgHealth_Damage_CalculationPipeline_DamageCalculationStrategySO_steps
@@ -1362,6 +1558,19 @@ references:
   isSpec: "True"
   fullName: ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.DamageInfo.DamageSource
   nameWithType: DamageInfo.DamageSource
+- uid: ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.DamageInfo.Instigator
+  name: Instigator
+  href: api/ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.DamageInfo.html#ElectricDrill_AstraRpgHealth_Damage_CalculationPipeline_DamageInfo_Instigator
+  commentId: P:ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.DamageInfo.Instigator
+  fullName: ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.DamageInfo.Instigator
+  nameWithType: DamageInfo.Instigator
+- uid: ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.DamageInfo.Instigator*
+  name: Instigator
+  href: api/ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.DamageInfo.html#ElectricDrill_AstraRpgHealth_Damage_CalculationPipeline_DamageInfo_Instigator_
+  commentId: Overload:ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.DamageInfo.Instigator
+  isSpec: "True"
+  fullName: ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.DamageInfo.Instigator
+  nameWithType: DamageInfo.Instigator
 - uid: ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.DamageInfo.IsCritical
   name: IsCritical
   href: api/ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.DamageInfo.html#ElectricDrill_AstraRpgHealth_Damage_CalculationPipeline_DamageInfo_IsCritical
@@ -1388,6 +1597,19 @@ references:
   isSpec: "True"
   fullName: ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.DamageInfo.IsPrevented
   nameWithType: DamageInfo.IsPrevented
+- uid: ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.DamageInfo.Performer
+  name: Performer
+  href: api/ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.DamageInfo.html#ElectricDrill_AstraRpgHealth_Damage_CalculationPipeline_DamageInfo_Performer
+  commentId: P:ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.DamageInfo.Performer
+  fullName: ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.DamageInfo.Performer
+  nameWithType: DamageInfo.Performer
+- uid: ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.DamageInfo.Performer*
+  name: Performer
+  href: api/ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.DamageInfo.html#ElectricDrill_AstraRpgHealth_Damage_CalculationPipeline_DamageInfo_Performer_
+  commentId: Overload:ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.DamageInfo.Performer
+  isSpec: "True"
+  fullName: ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.DamageInfo.Performer
+  nameWithType: DamageInfo.Performer
 - uid: ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.DamageInfo.Reasons
   name: Reasons
   href: api/ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.DamageInfo.html#ElectricDrill_AstraRpgHealth_Damage_CalculationPipeline_DamageInfo_Reasons
@@ -1401,19 +1623,6 @@ references:
   isSpec: "True"
   fullName: ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.DamageInfo.Reasons
   nameWithType: DamageInfo.Reasons
-- uid: ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.DamageInfo.Source
-  name: Source
-  href: api/ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.DamageInfo.html#ElectricDrill_AstraRpgHealth_Damage_CalculationPipeline_DamageInfo_Source
-  commentId: P:ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.DamageInfo.Source
-  fullName: ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.DamageInfo.Source
-  nameWithType: DamageInfo.Source
-- uid: ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.DamageInfo.Source*
-  name: Source
-  href: api/ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.DamageInfo.html#ElectricDrill_AstraRpgHealth_Damage_CalculationPipeline_DamageInfo_Source_
-  commentId: Overload:ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.DamageInfo.Source
-  isSpec: "True"
-  fullName: ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.DamageInfo.Source
-  nameWithType: DamageInfo.Source
 - uid: ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.DamageInfo.Target
   name: Target
   href: api/ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.DamageInfo.html#ElectricDrill_AstraRpgHealth_Damage_CalculationPipeline_DamageInfo_Target
@@ -1498,6 +1707,48 @@ references:
   isSpec: "True"
   fullName: ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.DamageStep.ProcessStep
   nameWithType: DamageStep.ProcessStep
+- uid: ElectricDrill.AstraRpgHealth.Damage.ContextDealerRole
+  name: ContextDealerRole
+  href: api/ElectricDrill.AstraRpgHealth.Damage.ContextDealerRole.html
+  commentId: T:ElectricDrill.AstraRpgHealth.Damage.ContextDealerRole
+  fullName: ElectricDrill.AstraRpgHealth.Damage.ContextDealerRole
+  nameWithType: ContextDealerRole
+- uid: ElectricDrill.AstraRpgHealth.Damage.ContextDealerRole.ContextSource
+  name: ContextSource
+  href: api/ElectricDrill.AstraRpgHealth.Damage.ContextDealerRole.html#ElectricDrill_AstraRpgHealth_Damage_ContextDealerRole_ContextSource
+  commentId: F:ElectricDrill.AstraRpgHealth.Damage.ContextDealerRole.ContextSource
+  fullName: ElectricDrill.AstraRpgHealth.Damage.ContextDealerRole.ContextSource
+  nameWithType: ContextDealerRole.ContextSource
+- uid: ElectricDrill.AstraRpgHealth.Damage.ContextDealerRole.ContextTarget
+  name: ContextTarget
+  href: api/ElectricDrill.AstraRpgHealth.Damage.ContextDealerRole.html#ElectricDrill_AstraRpgHealth_Damage_ContextDealerRole_ContextTarget
+  commentId: F:ElectricDrill.AstraRpgHealth.Damage.ContextDealerRole.ContextTarget
+  fullName: ElectricDrill.AstraRpgHealth.Damage.ContextDealerRole.ContextTarget
+  nameWithType: ContextDealerRole.ContextTarget
+- uid: ElectricDrill.AstraRpgHealth.Damage.ContextDealerRole.None
+  name: None
+  href: api/ElectricDrill.AstraRpgHealth.Damage.ContextDealerRole.html#ElectricDrill_AstraRpgHealth_Damage_ContextDealerRole_None
+  commentId: F:ElectricDrill.AstraRpgHealth.Damage.ContextDealerRole.None
+  fullName: ElectricDrill.AstraRpgHealth.Damage.ContextDealerRole.None
+  nameWithType: ContextDealerRole.None
+- uid: ElectricDrill.AstraRpgHealth.Damage.ContextEntityRole
+  name: ContextEntityRole
+  href: api/ElectricDrill.AstraRpgHealth.Damage.ContextEntityRole.html
+  commentId: T:ElectricDrill.AstraRpgHealth.Damage.ContextEntityRole
+  fullName: ElectricDrill.AstraRpgHealth.Damage.ContextEntityRole
+  nameWithType: ContextEntityRole
+- uid: ElectricDrill.AstraRpgHealth.Damage.ContextEntityRole.ContextSource
+  name: ContextSource
+  href: api/ElectricDrill.AstraRpgHealth.Damage.ContextEntityRole.html#ElectricDrill_AstraRpgHealth_Damage_ContextEntityRole_ContextSource
+  commentId: F:ElectricDrill.AstraRpgHealth.Damage.ContextEntityRole.ContextSource
+  fullName: ElectricDrill.AstraRpgHealth.Damage.ContextEntityRole.ContextSource
+  nameWithType: ContextEntityRole.ContextSource
+- uid: ElectricDrill.AstraRpgHealth.Damage.ContextEntityRole.ContextTarget
+  name: ContextTarget
+  href: api/ElectricDrill.AstraRpgHealth.Damage.ContextEntityRole.html#ElectricDrill_AstraRpgHealth_Damage_ContextEntityRole_ContextTarget
+  commentId: F:ElectricDrill.AstraRpgHealth.Damage.ContextEntityRole.ContextTarget
+  fullName: ElectricDrill.AstraRpgHealth.Damage.ContextEntityRole.ContextTarget
+  nameWithType: ContextEntityRole.ContextTarget
 - uid: ElectricDrill.AstraRpgHealth.Damage.DamageAmountContext
   name: DamageAmountContext
   href: api/ElectricDrill.AstraRpgHealth.Damage.DamageAmountContext.html
@@ -1838,6 +2089,30 @@ references:
   isSpec: "True"
   fullName: ElectricDrill.AstraRpgHealth.Damage.DamageAmountInfo.StepAmountRecord.ToString
   nameWithType: DamageAmountInfo.StepAmountRecord.ToString
+- uid: ElectricDrill.AstraRpgHealth.Damage.DamageAmountMode
+  name: DamageAmountMode
+  href: api/ElectricDrill.AstraRpgHealth.Damage.DamageAmountMode.html
+  commentId: T:ElectricDrill.AstraRpgHealth.Damage.DamageAmountMode
+  fullName: ElectricDrill.AstraRpgHealth.Damage.DamageAmountMode
+  nameWithType: DamageAmountMode
+- uid: ElectricDrill.AstraRpgHealth.Damage.DamageAmountMode.DamageFromContext
+  name: DamageFromContext
+  href: api/ElectricDrill.AstraRpgHealth.Damage.DamageAmountMode.html#ElectricDrill_AstraRpgHealth_Damage_DamageAmountMode_DamageFromContext
+  commentId: F:ElectricDrill.AstraRpgHealth.Damage.DamageAmountMode.DamageFromContext
+  fullName: ElectricDrill.AstraRpgHealth.Damage.DamageAmountMode.DamageFromContext
+  nameWithType: DamageAmountMode.DamageFromContext
+- uid: ElectricDrill.AstraRpgHealth.Damage.DamageAmountMode.Fixed
+  name: Fixed
+  href: api/ElectricDrill.AstraRpgHealth.Damage.DamageAmountMode.html#ElectricDrill_AstraRpgHealth_Damage_DamageAmountMode_Fixed
+  commentId: F:ElectricDrill.AstraRpgHealth.Damage.DamageAmountMode.Fixed
+  fullName: ElectricDrill.AstraRpgHealth.Damage.DamageAmountMode.Fixed
+  nameWithType: DamageAmountMode.Fixed
+- uid: ElectricDrill.AstraRpgHealth.Damage.DamageAmountMode.ScalingFormula
+  name: ScalingFormula
+  href: api/ElectricDrill.AstraRpgHealth.Damage.DamageAmountMode.html#ElectricDrill_AstraRpgHealth_Damage_DamageAmountMode_ScalingFormula
+  commentId: F:ElectricDrill.AstraRpgHealth.Damage.DamageAmountMode.ScalingFormula
+  fullName: ElectricDrill.AstraRpgHealth.Damage.DamageAmountMode.ScalingFormula
+  nameWithType: DamageAmountMode.ScalingFormula
 - uid: ElectricDrill.AstraRpgHealth.Damage.DamageOutcome
   name: DamageOutcome
   href: api/ElectricDrill.AstraRpgHealth.Damage.DamageOutcome.html
@@ -2076,6 +2351,19 @@ references:
   isSpec: "True"
   fullName: ElectricDrill.AstraRpgHealth.Damage.DamageResolutionContext.Applied
   nameWithType: DamageResolutionContext.Applied
+- uid: ElectricDrill.AstraRpgHealth.Damage.DamageResolutionContext.Entity
+  name: Entity
+  href: api/ElectricDrill.AstraRpgHealth.Damage.DamageResolutionContext.html#ElectricDrill_AstraRpgHealth_Damage_DamageResolutionContext_Entity
+  commentId: P:ElectricDrill.AstraRpgHealth.Damage.DamageResolutionContext.Entity
+  fullName: ElectricDrill.AstraRpgHealth.Damage.DamageResolutionContext.Entity
+  nameWithType: DamageResolutionContext.Entity
+- uid: ElectricDrill.AstraRpgHealth.Damage.DamageResolutionContext.Entity*
+  name: Entity
+  href: api/ElectricDrill.AstraRpgHealth.Damage.DamageResolutionContext.html#ElectricDrill_AstraRpgHealth_Damage_DamageResolutionContext_Entity_
+  commentId: Overload:ElectricDrill.AstraRpgHealth.Damage.DamageResolutionContext.Entity
+  isSpec: "True"
+  fullName: ElectricDrill.AstraRpgHealth.Damage.DamageResolutionContext.Entity
+  nameWithType: DamageResolutionContext.Entity
 - uid: ElectricDrill.AstraRpgHealth.Damage.DamageResolutionContext.FinalDamageInfo
   name: FinalDamageInfo
   href: api/ElectricDrill.AstraRpgHealth.Damage.DamageResolutionContext.html#ElectricDrill_AstraRpgHealth_Damage_DamageResolutionContext_FinalDamageInfo
@@ -2089,6 +2377,32 @@ references:
   isSpec: "True"
   fullName: ElectricDrill.AstraRpgHealth.Damage.DamageResolutionContext.FinalDamageInfo
   nameWithType: DamageResolutionContext.FinalDamageInfo
+- uid: ElectricDrill.AstraRpgHealth.Damage.DamageResolutionContext.Instigator
+  name: Instigator
+  href: api/ElectricDrill.AstraRpgHealth.Damage.DamageResolutionContext.html#ElectricDrill_AstraRpgHealth_Damage_DamageResolutionContext_Instigator
+  commentId: P:ElectricDrill.AstraRpgHealth.Damage.DamageResolutionContext.Instigator
+  fullName: ElectricDrill.AstraRpgHealth.Damage.DamageResolutionContext.Instigator
+  nameWithType: DamageResolutionContext.Instigator
+- uid: ElectricDrill.AstraRpgHealth.Damage.DamageResolutionContext.Instigator*
+  name: Instigator
+  href: api/ElectricDrill.AstraRpgHealth.Damage.DamageResolutionContext.html#ElectricDrill_AstraRpgHealth_Damage_DamageResolutionContext_Instigator_
+  commentId: Overload:ElectricDrill.AstraRpgHealth.Damage.DamageResolutionContext.Instigator
+  isSpec: "True"
+  fullName: ElectricDrill.AstraRpgHealth.Damage.DamageResolutionContext.Instigator
+  nameWithType: DamageResolutionContext.Instigator
+- uid: ElectricDrill.AstraRpgHealth.Damage.DamageResolutionContext.IsReactable
+  name: IsReactable
+  href: api/ElectricDrill.AstraRpgHealth.Damage.DamageResolutionContext.html#ElectricDrill_AstraRpgHealth_Damage_DamageResolutionContext_IsReactable
+  commentId: P:ElectricDrill.AstraRpgHealth.Damage.DamageResolutionContext.IsReactable
+  fullName: ElectricDrill.AstraRpgHealth.Damage.DamageResolutionContext.IsReactable
+  nameWithType: DamageResolutionContext.IsReactable
+- uid: ElectricDrill.AstraRpgHealth.Damage.DamageResolutionContext.IsReactable*
+  name: IsReactable
+  href: api/ElectricDrill.AstraRpgHealth.Damage.DamageResolutionContext.html#ElectricDrill_AstraRpgHealth_Damage_DamageResolutionContext_IsReactable_
+  commentId: Overload:ElectricDrill.AstraRpgHealth.Damage.DamageResolutionContext.IsReactable
+  isSpec: "True"
+  fullName: ElectricDrill.AstraRpgHealth.Damage.DamageResolutionContext.IsReactable
+  nameWithType: DamageResolutionContext.IsReactable
 - uid: ElectricDrill.AstraRpgHealth.Damage.DamageResolutionContext.Outcome
   name: Outcome
   href: api/ElectricDrill.AstraRpgHealth.Damage.DamageResolutionContext.html#ElectricDrill_AstraRpgHealth_Damage_DamageResolutionContext_Outcome
@@ -2102,6 +2416,19 @@ references:
   isSpec: "True"
   fullName: ElectricDrill.AstraRpgHealth.Damage.DamageResolutionContext.Outcome
   nameWithType: DamageResolutionContext.Outcome
+- uid: ElectricDrill.AstraRpgHealth.Damage.DamageResolutionContext.Performer
+  name: Performer
+  href: api/ElectricDrill.AstraRpgHealth.Damage.DamageResolutionContext.html#ElectricDrill_AstraRpgHealth_Damage_DamageResolutionContext_Performer
+  commentId: P:ElectricDrill.AstraRpgHealth.Damage.DamageResolutionContext.Performer
+  fullName: ElectricDrill.AstraRpgHealth.Damage.DamageResolutionContext.Performer
+  nameWithType: DamageResolutionContext.Performer
+- uid: ElectricDrill.AstraRpgHealth.Damage.DamageResolutionContext.Performer*
+  name: Performer
+  href: api/ElectricDrill.AstraRpgHealth.Damage.DamageResolutionContext.html#ElectricDrill_AstraRpgHealth_Damage_DamageResolutionContext_Performer_
+  commentId: Overload:ElectricDrill.AstraRpgHealth.Damage.DamageResolutionContext.Performer
+  isSpec: "True"
+  fullName: ElectricDrill.AstraRpgHealth.Damage.DamageResolutionContext.Performer
+  nameWithType: DamageResolutionContext.Performer
 - uid: ElectricDrill.AstraRpgHealth.Damage.DamageResolutionContext.PreDamageContext
   name: PreDamageContext
   href: api/ElectricDrill.AstraRpgHealth.Damage.DamageResolutionContext.html#ElectricDrill_AstraRpgHealth_Damage_DamageResolutionContext_PreDamageContext
@@ -2141,6 +2468,19 @@ references:
   isSpec: "True"
   fullName: ElectricDrill.AstraRpgHealth.Damage.DamageResolutionContext.Reasons
   nameWithType: DamageResolutionContext.Reasons
+- uid: ElectricDrill.AstraRpgHealth.Damage.DamageResolutionContext.Target
+  name: Target
+  href: api/ElectricDrill.AstraRpgHealth.Damage.DamageResolutionContext.html#ElectricDrill_AstraRpgHealth_Damage_DamageResolutionContext_Target
+  commentId: P:ElectricDrill.AstraRpgHealth.Damage.DamageResolutionContext.Target
+  fullName: ElectricDrill.AstraRpgHealth.Damage.DamageResolutionContext.Target
+  nameWithType: DamageResolutionContext.Target
+- uid: ElectricDrill.AstraRpgHealth.Damage.DamageResolutionContext.Target*
+  name: Target
+  href: api/ElectricDrill.AstraRpgHealth.Damage.DamageResolutionContext.html#ElectricDrill_AstraRpgHealth_Damage_DamageResolutionContext_Target_
+  commentId: Overload:ElectricDrill.AstraRpgHealth.Damage.DamageResolutionContext.Target
+  isSpec: "True"
+  fullName: ElectricDrill.AstraRpgHealth.Damage.DamageResolutionContext.Target
+  nameWithType: DamageResolutionContext.Target
 - uid: ElectricDrill.AstraRpgHealth.Damage.DamageResolutionContext.TerminationStepType
   name: TerminationStepType
   href: api/ElectricDrill.AstraRpgHealth.Damage.DamageResolutionContext.html#ElectricDrill_AstraRpgHealth_Damage_DamageResolutionContext_TerminationStepType
@@ -2205,6 +2545,19 @@ references:
   isSpec: "True"
   fullName: ElectricDrill.AstraRpgHealth.Damage.DamageSourceSO.PercentageDamageModificationStat
   nameWithType: DamageSourceSO.PercentageDamageModificationStat
+- uid: ElectricDrill.AstraRpgHealth.Damage.DamageSourceSO.Tags
+  name: Tags
+  href: api/ElectricDrill.AstraRpgHealth.Damage.DamageSourceSO.html#ElectricDrill_AstraRpgHealth_Damage_DamageSourceSO_Tags
+  commentId: P:ElectricDrill.AstraRpgHealth.Damage.DamageSourceSO.Tags
+  fullName: ElectricDrill.AstraRpgHealth.Damage.DamageSourceSO.Tags
+  nameWithType: DamageSourceSO.Tags
+- uid: ElectricDrill.AstraRpgHealth.Damage.DamageSourceSO.Tags*
+  name: Tags
+  href: api/ElectricDrill.AstraRpgHealth.Damage.DamageSourceSO.html#ElectricDrill_AstraRpgHealth_Damage_DamageSourceSO_Tags_
+  commentId: Overload:ElectricDrill.AstraRpgHealth.Damage.DamageSourceSO.Tags
+  isSpec: "True"
+  fullName: ElectricDrill.AstraRpgHealth.Damage.DamageSourceSO.Tags
+  nameWithType: DamageSourceSO.Tags
 - uid: ElectricDrill.AstraRpgHealth.Damage.DamageSourceSO.ToString
   name: ToString()
   href: api/ElectricDrill.AstraRpgHealth.Damage.DamageSourceSO.html#ElectricDrill_AstraRpgHealth_Damage_DamageSourceSO_ToString
@@ -2425,6 +2778,19 @@ references:
   isSpec: "True"
   fullName: ElectricDrill.AstraRpgHealth.Damage.DamageTypeSO.PercentageDamageModificationStat
   nameWithType: DamageTypeSO.PercentageDamageModificationStat
+- uid: ElectricDrill.AstraRpgHealth.Damage.DamageTypeSO.Tags
+  name: Tags
+  href: api/ElectricDrill.AstraRpgHealth.Damage.DamageTypeSO.html#ElectricDrill_AstraRpgHealth_Damage_DamageTypeSO_Tags
+  commentId: P:ElectricDrill.AstraRpgHealth.Damage.DamageTypeSO.Tags
+  fullName: ElectricDrill.AstraRpgHealth.Damage.DamageTypeSO.Tags
+  nameWithType: DamageTypeSO.Tags
+- uid: ElectricDrill.AstraRpgHealth.Damage.DamageTypeSO.Tags*
+  name: Tags
+  href: api/ElectricDrill.AstraRpgHealth.Damage.DamageTypeSO.html#ElectricDrill_AstraRpgHealth_Damage_DamageTypeSO_Tags_
+  commentId: Overload:ElectricDrill.AstraRpgHealth.Damage.DamageTypeSO.Tags
+  isSpec: "True"
+  fullName: ElectricDrill.AstraRpgHealth.Damage.DamageTypeSO.Tags
+  nameWithType: DamageTypeSO.Tags
 - uid: ElectricDrill.AstraRpgHealth.Damage.DamageTypeSO.ToString
   name: ToString()
   href: api/ElectricDrill.AstraRpgHealth.Damage.DamageTypeSO.html#ElectricDrill_AstraRpgHealth_Damage_DamageTypeSO_ToString
@@ -2457,6 +2823,25 @@ references:
   isSpec: "True"
   fullName: ElectricDrill.AstraRpgHealth.Damage.IDamageable.TakeDamage
   nameWithType: IDamageable.TakeDamage
+- uid: ElectricDrill.AstraRpgHealth.Damage.IHasAmount
+  name: IHasAmount
+  href: api/ElectricDrill.AstraRpgHealth.Damage.IHasAmount.html
+  commentId: T:ElectricDrill.AstraRpgHealth.Damage.IHasAmount
+  fullName: ElectricDrill.AstraRpgHealth.Damage.IHasAmount
+  nameWithType: IHasAmount
+- uid: ElectricDrill.AstraRpgHealth.Damage.IHasAmount.Amount
+  name: Amount
+  href: api/ElectricDrill.AstraRpgHealth.Damage.IHasAmount.html#ElectricDrill_AstraRpgHealth_Damage_IHasAmount_Amount
+  commentId: P:ElectricDrill.AstraRpgHealth.Damage.IHasAmount.Amount
+  fullName: ElectricDrill.AstraRpgHealth.Damage.IHasAmount.Amount
+  nameWithType: IHasAmount.Amount
+- uid: ElectricDrill.AstraRpgHealth.Damage.IHasAmount.Amount*
+  name: Amount
+  href: api/ElectricDrill.AstraRpgHealth.Damage.IHasAmount.html#ElectricDrill_AstraRpgHealth_Damage_IHasAmount_Amount_
+  commentId: Overload:ElectricDrill.AstraRpgHealth.Damage.IHasAmount.Amount
+  isSpec: "True"
+  fullName: ElectricDrill.AstraRpgHealth.Damage.IHasAmount.Amount
+  nameWithType: IHasAmount.Amount
 - uid: ElectricDrill.AstraRpgHealth.Damage.PreDamageContext
   name: PreDamageContext
   href: api/ElectricDrill.AstraRpgHealth.Damage.PreDamageContext.html
@@ -2613,6 +2998,19 @@ references:
   isSpec: "True"
   fullName: ElectricDrill.AstraRpgHealth.Damage.PreDamageContext.DamageSource
   nameWithType: PreDamageContext.DamageSource
+- uid: ElectricDrill.AstraRpgHealth.Damage.PreDamageContext.Entity
+  name: Entity
+  href: api/ElectricDrill.AstraRpgHealth.Damage.PreDamageContext.html#ElectricDrill_AstraRpgHealth_Damage_PreDamageContext_Entity
+  commentId: P:ElectricDrill.AstraRpgHealth.Damage.PreDamageContext.Entity
+  fullName: ElectricDrill.AstraRpgHealth.Damage.PreDamageContext.Entity
+  nameWithType: PreDamageContext.Entity
+- uid: ElectricDrill.AstraRpgHealth.Damage.PreDamageContext.Entity*
+  name: Entity
+  href: api/ElectricDrill.AstraRpgHealth.Damage.PreDamageContext.html#ElectricDrill_AstraRpgHealth_Damage_PreDamageContext_Entity_
+  commentId: Overload:ElectricDrill.AstraRpgHealth.Damage.PreDamageContext.Entity
+  isSpec: "True"
+  fullName: ElectricDrill.AstraRpgHealth.Damage.PreDamageContext.Entity
+  nameWithType: PreDamageContext.Entity
 - uid: ElectricDrill.AstraRpgHealth.Damage.PreDamageContext.Ignore
   name: Ignore
   href: api/ElectricDrill.AstraRpgHealth.Damage.PreDamageContext.html#ElectricDrill_AstraRpgHealth_Damage_PreDamageContext_Ignore
@@ -2626,6 +3024,19 @@ references:
   isSpec: "True"
   fullName: ElectricDrill.AstraRpgHealth.Damage.PreDamageContext.Ignore
   nameWithType: PreDamageContext.Ignore
+- uid: ElectricDrill.AstraRpgHealth.Damage.PreDamageContext.Instigator
+  name: Instigator
+  href: api/ElectricDrill.AstraRpgHealth.Damage.PreDamageContext.html#ElectricDrill_AstraRpgHealth_Damage_PreDamageContext_Instigator
+  commentId: P:ElectricDrill.AstraRpgHealth.Damage.PreDamageContext.Instigator
+  fullName: ElectricDrill.AstraRpgHealth.Damage.PreDamageContext.Instigator
+  nameWithType: PreDamageContext.Instigator
+- uid: ElectricDrill.AstraRpgHealth.Damage.PreDamageContext.Instigator*
+  name: Instigator
+  href: api/ElectricDrill.AstraRpgHealth.Damage.PreDamageContext.html#ElectricDrill_AstraRpgHealth_Damage_PreDamageContext_Instigator_
+  commentId: Overload:ElectricDrill.AstraRpgHealth.Damage.PreDamageContext.Instigator
+  isSpec: "True"
+  fullName: ElectricDrill.AstraRpgHealth.Damage.PreDamageContext.Instigator
+  nameWithType: PreDamageContext.Instigator
 - uid: ElectricDrill.AstraRpgHealth.Damage.PreDamageContext.IsCritical
   name: IsCritical
   href: api/ElectricDrill.AstraRpgHealth.Damage.PreDamageContext.html#ElectricDrill_AstraRpgHealth_Damage_PreDamageContext_IsCritical
@@ -2639,6 +3050,32 @@ references:
   isSpec: "True"
   fullName: ElectricDrill.AstraRpgHealth.Damage.PreDamageContext.IsCritical
   nameWithType: PreDamageContext.IsCritical
+- uid: ElectricDrill.AstraRpgHealth.Damage.PreDamageContext.IsReactable
+  name: IsReactable
+  href: api/ElectricDrill.AstraRpgHealth.Damage.PreDamageContext.html#ElectricDrill_AstraRpgHealth_Damage_PreDamageContext_IsReactable
+  commentId: P:ElectricDrill.AstraRpgHealth.Damage.PreDamageContext.IsReactable
+  fullName: ElectricDrill.AstraRpgHealth.Damage.PreDamageContext.IsReactable
+  nameWithType: PreDamageContext.IsReactable
+- uid: ElectricDrill.AstraRpgHealth.Damage.PreDamageContext.IsReactable*
+  name: IsReactable
+  href: api/ElectricDrill.AstraRpgHealth.Damage.PreDamageContext.html#ElectricDrill_AstraRpgHealth_Damage_PreDamageContext_IsReactable_
+  commentId: Overload:ElectricDrill.AstraRpgHealth.Damage.PreDamageContext.IsReactable
+  isSpec: "True"
+  fullName: ElectricDrill.AstraRpgHealth.Damage.PreDamageContext.IsReactable
+  nameWithType: PreDamageContext.IsReactable
+- uid: ElectricDrill.AstraRpgHealth.Damage.PreDamageContext.Performer
+  name: Performer
+  href: api/ElectricDrill.AstraRpgHealth.Damage.PreDamageContext.html#ElectricDrill_AstraRpgHealth_Damage_PreDamageContext_Performer
+  commentId: P:ElectricDrill.AstraRpgHealth.Damage.PreDamageContext.Performer
+  fullName: ElectricDrill.AstraRpgHealth.Damage.PreDamageContext.Performer
+  nameWithType: PreDamageContext.Performer
+- uid: ElectricDrill.AstraRpgHealth.Damage.PreDamageContext.Performer*
+  name: Performer
+  href: api/ElectricDrill.AstraRpgHealth.Damage.PreDamageContext.html#ElectricDrill_AstraRpgHealth_Damage_PreDamageContext_Performer_
+  commentId: Overload:ElectricDrill.AstraRpgHealth.Damage.PreDamageContext.Performer
+  isSpec: "True"
+  fullName: ElectricDrill.AstraRpgHealth.Damage.PreDamageContext.Performer
+  nameWithType: PreDamageContext.Performer
 - uid: ElectricDrill.AstraRpgHealth.Damage.PreDamageContext.PreDamageInfoStepBuilder
   name: PreDamageContext.PreDamageInfoStepBuilder
   href: api/ElectricDrill.AstraRpgHealth.Damage.PreDamageContext.PreDamageInfoStepBuilder.html
@@ -2703,6 +3140,19 @@ references:
   isSpec: "True"
   fullName: ElectricDrill.AstraRpgHealth.Damage.PreDamageContext.PreDamageInfoStepBuilder.WithDealer
   nameWithType: PreDamageContext.PreDamageInfoStepBuilder.WithDealer
+- uid: ElectricDrill.AstraRpgHealth.Damage.PreDamageContext.PreDamageInfoStepBuilder.WithInstigator(ElectricDrill.AstraRpgFramework.Contexts.IEffectInstigator)
+  name: WithInstigator(IEffectInstigator)
+  href: api/ElectricDrill.AstraRpgHealth.Damage.PreDamageContext.PreDamageInfoStepBuilder.html#ElectricDrill_AstraRpgHealth_Damage_PreDamageContext_PreDamageInfoStepBuilder_WithInstigator_ElectricDrill_AstraRpgFramework_Contexts_IEffectInstigator_
+  commentId: M:ElectricDrill.AstraRpgHealth.Damage.PreDamageContext.PreDamageInfoStepBuilder.WithInstigator(ElectricDrill.AstraRpgFramework.Contexts.IEffectInstigator)
+  fullName: ElectricDrill.AstraRpgHealth.Damage.PreDamageContext.PreDamageInfoStepBuilder.WithInstigator(ElectricDrill.AstraRpgFramework.Contexts.IEffectInstigator)
+  nameWithType: PreDamageContext.PreDamageInfoStepBuilder.WithInstigator(IEffectInstigator)
+- uid: ElectricDrill.AstraRpgHealth.Damage.PreDamageContext.PreDamageInfoStepBuilder.WithInstigator*
+  name: WithInstigator
+  href: api/ElectricDrill.AstraRpgHealth.Damage.PreDamageContext.PreDamageInfoStepBuilder.html#ElectricDrill_AstraRpgHealth_Damage_PreDamageContext_PreDamageInfoStepBuilder_WithInstigator_
+  commentId: Overload:ElectricDrill.AstraRpgHealth.Damage.PreDamageContext.PreDamageInfoStepBuilder.WithInstigator
+  isSpec: "True"
+  fullName: ElectricDrill.AstraRpgHealth.Damage.PreDamageContext.PreDamageInfoStepBuilder.WithInstigator
+  nameWithType: PreDamageContext.PreDamageInfoStepBuilder.WithInstigator
 - uid: ElectricDrill.AstraRpgHealth.Damage.PreDamageContext.PreDamageInfoStepBuilder.WithIsCritical(System.Boolean)
   name: WithIsCritical(bool)
   href: api/ElectricDrill.AstraRpgHealth.Damage.PreDamageContext.PreDamageInfoStepBuilder.html#ElectricDrill_AstraRpgHealth_Damage_PreDamageContext_PreDamageInfoStepBuilder_WithIsCritical_System_Boolean_
@@ -2719,6 +3169,22 @@ references:
   isSpec: "True"
   fullName: ElectricDrill.AstraRpgHealth.Damage.PreDamageContext.PreDamageInfoStepBuilder.WithIsCritical
   nameWithType: PreDamageContext.PreDamageInfoStepBuilder.WithIsCritical
+- uid: ElectricDrill.AstraRpgHealth.Damage.PreDamageContext.PreDamageInfoStepBuilder.WithIsReactable(System.Boolean)
+  name: WithIsReactable(bool)
+  href: api/ElectricDrill.AstraRpgHealth.Damage.PreDamageContext.PreDamageInfoStepBuilder.html#ElectricDrill_AstraRpgHealth_Damage_PreDamageContext_PreDamageInfoStepBuilder_WithIsReactable_System_Boolean_
+  commentId: M:ElectricDrill.AstraRpgHealth.Damage.PreDamageContext.PreDamageInfoStepBuilder.WithIsReactable(System.Boolean)
+  name.vb: WithIsReactable(Boolean)
+  fullName: ElectricDrill.AstraRpgHealth.Damage.PreDamageContext.PreDamageInfoStepBuilder.WithIsReactable(bool)
+  fullName.vb: ElectricDrill.AstraRpgHealth.Damage.PreDamageContext.PreDamageInfoStepBuilder.WithIsReactable(Boolean)
+  nameWithType: PreDamageContext.PreDamageInfoStepBuilder.WithIsReactable(bool)
+  nameWithType.vb: PreDamageContext.PreDamageInfoStepBuilder.WithIsReactable(Boolean)
+- uid: ElectricDrill.AstraRpgHealth.Damage.PreDamageContext.PreDamageInfoStepBuilder.WithIsReactable*
+  name: WithIsReactable
+  href: api/ElectricDrill.AstraRpgHealth.Damage.PreDamageContext.PreDamageInfoStepBuilder.html#ElectricDrill_AstraRpgHealth_Damage_PreDamageContext_PreDamageInfoStepBuilder_WithIsReactable_
+  commentId: Overload:ElectricDrill.AstraRpgHealth.Damage.PreDamageContext.PreDamageInfoStepBuilder.WithIsReactable
+  isSpec: "True"
+  fullName: ElectricDrill.AstraRpgHealth.Damage.PreDamageContext.PreDamageInfoStepBuilder.WithIsReactable
+  nameWithType: PreDamageContext.PreDamageInfoStepBuilder.WithIsReactable
 - uid: ElectricDrill.AstraRpgHealth.Damage.PreDamageContext.PreDamageInfoStepBuilder.WithSource(ElectricDrill.AstraRpgHealth.Damage.DamageSourceSO)
   name: WithSource(DamageSourceSO)
   href: api/ElectricDrill.AstraRpgHealth.Damage.PreDamageContext.PreDamageInfoStepBuilder.html#ElectricDrill_AstraRpgHealth_Damage_PreDamageContext_PreDamageInfoStepBuilder_WithSource_ElectricDrill_AstraRpgHealth_Damage_DamageSourceSO_
@@ -2758,19 +3224,6 @@ references:
   isSpec: "True"
   fullName: ElectricDrill.AstraRpgHealth.Damage.PreDamageContext.PreDamageInfoStepBuilder.WithType
   nameWithType: PreDamageContext.PreDamageInfoStepBuilder.WithType
-- uid: ElectricDrill.AstraRpgHealth.Damage.PreDamageContext.Source
-  name: Source
-  href: api/ElectricDrill.AstraRpgHealth.Damage.PreDamageContext.html#ElectricDrill_AstraRpgHealth_Damage_PreDamageContext_Source
-  commentId: P:ElectricDrill.AstraRpgHealth.Damage.PreDamageContext.Source
-  fullName: ElectricDrill.AstraRpgHealth.Damage.PreDamageContext.Source
-  nameWithType: PreDamageContext.Source
-- uid: ElectricDrill.AstraRpgHealth.Damage.PreDamageContext.Source*
-  name: Source
-  href: api/ElectricDrill.AstraRpgHealth.Damage.PreDamageContext.html#ElectricDrill_AstraRpgHealth_Damage_PreDamageContext_Source_
-  commentId: Overload:ElectricDrill.AstraRpgHealth.Damage.PreDamageContext.Source
-  isSpec: "True"
-  fullName: ElectricDrill.AstraRpgHealth.Damage.PreDamageContext.Source
-  nameWithType: PreDamageContext.Source
 - uid: ElectricDrill.AstraRpgHealth.Damage.PreDamageContext.Target
   name: Target
   href: api/ElectricDrill.AstraRpgHealth.Damage.PreDamageContext.html#ElectricDrill_AstraRpgHealth_Damage_PreDamageContext_Target
@@ -2797,6 +3250,54 @@ references:
   isSpec: "True"
   fullName: ElectricDrill.AstraRpgHealth.Damage.PreDamageContext.Type
   nameWithType: PreDamageContext.Type
+- uid: ElectricDrill.AstraRpgHealth.Damage.PreDamageContextConfig
+  name: PreDamageContextConfig
+  href: api/ElectricDrill.AstraRpgHealth.Damage.PreDamageContextConfig.html
+  commentId: T:ElectricDrill.AstraRpgHealth.Damage.PreDamageContextConfig
+  fullName: ElectricDrill.AstraRpgHealth.Damage.PreDamageContextConfig
+  nameWithType: PreDamageContextConfig
+- uid: ElectricDrill.AstraRpgHealth.Damage.PreDamageContextConfig.Build(ElectricDrill.AstraRpgFramework.EntityCore,ElectricDrill.AstraRpgFramework.EntityCore,System.Nullable{System.Int64},ElectricDrill.AstraRpgFramework.Contexts.IEffectInstigator,System.Boolean)
+  name: Build(EntityCore, EntityCore, long?, IEffectInstigator, bool)
+  href: api/ElectricDrill.AstraRpgHealth.Damage.PreDamageContextConfig.html#ElectricDrill_AstraRpgHealth_Damage_PreDamageContextConfig_Build_ElectricDrill_AstraRpgFramework_EntityCore_ElectricDrill_AstraRpgFramework_EntityCore_System_Nullable_System_Int64__ElectricDrill_AstraRpgFramework_Contexts_IEffectInstigator_System_Boolean_
+  commentId: M:ElectricDrill.AstraRpgHealth.Damage.PreDamageContextConfig.Build(ElectricDrill.AstraRpgFramework.EntityCore,ElectricDrill.AstraRpgFramework.EntityCore,System.Nullable{System.Int64},ElectricDrill.AstraRpgFramework.Contexts.IEffectInstigator,System.Boolean)
+  name.vb: Build(EntityCore, EntityCore, Long?, IEffectInstigator, Boolean)
+  fullName: ElectricDrill.AstraRpgHealth.Damage.PreDamageContextConfig.Build(ElectricDrill.AstraRpgFramework.EntityCore, ElectricDrill.AstraRpgFramework.EntityCore, long?, ElectricDrill.AstraRpgFramework.Contexts.IEffectInstigator, bool)
+  fullName.vb: ElectricDrill.AstraRpgHealth.Damage.PreDamageContextConfig.Build(ElectricDrill.AstraRpgFramework.EntityCore, ElectricDrill.AstraRpgFramework.EntityCore, Long?, ElectricDrill.AstraRpgFramework.Contexts.IEffectInstigator, Boolean)
+  nameWithType: PreDamageContextConfig.Build(EntityCore, EntityCore, long?, IEffectInstigator, bool)
+  nameWithType.vb: PreDamageContextConfig.Build(EntityCore, EntityCore, Long?, IEffectInstigator, Boolean)
+- uid: ElectricDrill.AstraRpgHealth.Damage.PreDamageContextConfig.Build*
+  name: Build
+  href: api/ElectricDrill.AstraRpgHealth.Damage.PreDamageContextConfig.html#ElectricDrill_AstraRpgHealth_Damage_PreDamageContextConfig_Build_
+  commentId: Overload:ElectricDrill.AstraRpgHealth.Damage.PreDamageContextConfig.Build
+  isSpec: "True"
+  fullName: ElectricDrill.AstraRpgHealth.Damage.PreDamageContextConfig.Build
+  nameWithType: PreDamageContextConfig.Build
+- uid: ElectricDrill.AstraRpgHealth.Damage.PreDamageContextConfig.DamageDealer
+  name: DamageDealer
+  href: api/ElectricDrill.AstraRpgHealth.Damage.PreDamageContextConfig.html#ElectricDrill_AstraRpgHealth_Damage_PreDamageContextConfig_DamageDealer
+  commentId: P:ElectricDrill.AstraRpgHealth.Damage.PreDamageContextConfig.DamageDealer
+  fullName: ElectricDrill.AstraRpgHealth.Damage.PreDamageContextConfig.DamageDealer
+  nameWithType: PreDamageContextConfig.DamageDealer
+- uid: ElectricDrill.AstraRpgHealth.Damage.PreDamageContextConfig.DamageDealer*
+  name: DamageDealer
+  href: api/ElectricDrill.AstraRpgHealth.Damage.PreDamageContextConfig.html#ElectricDrill_AstraRpgHealth_Damage_PreDamageContextConfig_DamageDealer_
+  commentId: Overload:ElectricDrill.AstraRpgHealth.Damage.PreDamageContextConfig.DamageDealer
+  isSpec: "True"
+  fullName: ElectricDrill.AstraRpgHealth.Damage.PreDamageContextConfig.DamageDealer
+  nameWithType: PreDamageContextConfig.DamageDealer
+- uid: ElectricDrill.AstraRpgHealth.Damage.PreDamageContextConfig.DamageTarget
+  name: DamageTarget
+  href: api/ElectricDrill.AstraRpgHealth.Damage.PreDamageContextConfig.html#ElectricDrill_AstraRpgHealth_Damage_PreDamageContextConfig_DamageTarget
+  commentId: P:ElectricDrill.AstraRpgHealth.Damage.PreDamageContextConfig.DamageTarget
+  fullName: ElectricDrill.AstraRpgHealth.Damage.PreDamageContextConfig.DamageTarget
+  nameWithType: PreDamageContextConfig.DamageTarget
+- uid: ElectricDrill.AstraRpgHealth.Damage.PreDamageContextConfig.DamageTarget*
+  name: DamageTarget
+  href: api/ElectricDrill.AstraRpgHealth.Damage.PreDamageContextConfig.html#ElectricDrill_AstraRpgHealth_Damage_PreDamageContextConfig_DamageTarget_
+  commentId: Overload:ElectricDrill.AstraRpgHealth.Damage.PreDamageContextConfig.DamageTarget
+  isSpec: "True"
+  fullName: ElectricDrill.AstraRpgHealth.Damage.PreDamageContextConfig.DamageTarget
+  nameWithType: PreDamageContextConfig.DamageTarget
 - uid: ElectricDrill.AstraRpgHealth.Damage.PreDamageInfo
   name: PreDamageInfo
   href: api/ElectricDrill.AstraRpgHealth.Damage.PreDamageInfo.html
@@ -3187,6 +3688,19 @@ references:
   isSpec: "True"
   fullName: ElectricDrill.AstraRpgHealth.DamageReductionFunctions.DamageReductionFnSO.CalculateReducedDamage
   nameWithType: DamageReductionFnSO.CalculateReducedDamage
+- uid: ElectricDrill.AstraRpgHealth.DamageReductionFunctions.DamageReductionFnSO.Tags
+  name: Tags
+  href: api/ElectricDrill.AstraRpgHealth.DamageReductionFunctions.DamageReductionFnSO.html#ElectricDrill_AstraRpgHealth_DamageReductionFunctions_DamageReductionFnSO_Tags
+  commentId: P:ElectricDrill.AstraRpgHealth.DamageReductionFunctions.DamageReductionFnSO.Tags
+  fullName: ElectricDrill.AstraRpgHealth.DamageReductionFunctions.DamageReductionFnSO.Tags
+  nameWithType: DamageReductionFnSO.Tags
+- uid: ElectricDrill.AstraRpgHealth.DamageReductionFunctions.DamageReductionFnSO.Tags*
+  name: Tags
+  href: api/ElectricDrill.AstraRpgHealth.DamageReductionFunctions.DamageReductionFnSO.html#ElectricDrill_AstraRpgHealth_DamageReductionFunctions_DamageReductionFnSO_Tags_
+  commentId: Overload:ElectricDrill.AstraRpgHealth.DamageReductionFunctions.DamageReductionFnSO.Tags
+  isSpec: "True"
+  fullName: ElectricDrill.AstraRpgHealth.DamageReductionFunctions.DamageReductionFnSO.Tags
+  nameWithType: DamageReductionFnSO.Tags
 - uid: ElectricDrill.AstraRpgHealth.DamageReductionFunctions.DamageReductionFunctions
   name: ElectricDrill.AstraRpgHealth.DamageReductionFunctions.DamageReductionFunctions
   href: api/ElectricDrill.AstraRpgHealth.DamageReductionFunctions.DamageReductionFunctions.html
@@ -3476,6 +3990,19 @@ references:
   isSpec: "True"
   fullName: ElectricDrill.AstraRpgHealth.DefenseReductionFunctions.DefenseReductionFnSO.CalculateReducedDefense
   nameWithType: DefenseReductionFnSO.CalculateReducedDefense
+- uid: ElectricDrill.AstraRpgHealth.DefenseReductionFunctions.DefenseReductionFnSO.Tags
+  name: Tags
+  href: api/ElectricDrill.AstraRpgHealth.DefenseReductionFunctions.DefenseReductionFnSO.html#ElectricDrill_AstraRpgHealth_DefenseReductionFunctions_DefenseReductionFnSO_Tags
+  commentId: P:ElectricDrill.AstraRpgHealth.DefenseReductionFunctions.DefenseReductionFnSO.Tags
+  fullName: ElectricDrill.AstraRpgHealth.DefenseReductionFunctions.DefenseReductionFnSO.Tags
+  nameWithType: DefenseReductionFnSO.Tags
+- uid: ElectricDrill.AstraRpgHealth.DefenseReductionFunctions.DefenseReductionFnSO.Tags*
+  name: Tags
+  href: api/ElectricDrill.AstraRpgHealth.DefenseReductionFunctions.DefenseReductionFnSO.html#ElectricDrill_AstraRpgHealth_DefenseReductionFunctions_DefenseReductionFnSO_Tags_
+  commentId: Overload:ElectricDrill.AstraRpgHealth.DefenseReductionFunctions.DefenseReductionFnSO.Tags
+  isSpec: "True"
+  fullName: ElectricDrill.AstraRpgHealth.DefenseReductionFunctions.DefenseReductionFnSO.Tags
+  nameWithType: DefenseReductionFnSO.Tags
 - uid: ElectricDrill.AstraRpgHealth.DefenseReductionFunctions.DefenseReductionFunctions
   name: ElectricDrill.AstraRpgHealth.DefenseReductionFunctions.DefenseReductionFunctions
   href: api/ElectricDrill.AstraRpgHealth.DefenseReductionFunctions.DefenseReductionFunctions.html
@@ -3834,6 +4361,19 @@ references:
   isSpec: "True"
   fullName: ElectricDrill.AstraRpgHealth.EntityHealth.ClearMaxHpScalings
   nameWithType: EntityHealth.ClearMaxHpScalings
+- uid: ElectricDrill.AstraRpgHealth.EntityHealth.Entity
+  name: Entity
+  href: api/ElectricDrill.AstraRpgHealth.EntityHealth.html#ElectricDrill_AstraRpgHealth_EntityHealth_Entity
+  commentId: P:ElectricDrill.AstraRpgHealth.EntityHealth.Entity
+  fullName: ElectricDrill.AstraRpgHealth.EntityHealth.Entity
+  nameWithType: EntityHealth.Entity
+- uid: ElectricDrill.AstraRpgHealth.EntityHealth.Entity*
+  name: Entity
+  href: api/ElectricDrill.AstraRpgHealth.EntityHealth.html#ElectricDrill_AstraRpgHealth_EntityHealth_Entity_
+  commentId: Overload:ElectricDrill.AstraRpgHealth.EntityHealth.Entity
+  isSpec: "True"
+  fullName: ElectricDrill.AstraRpgHealth.EntityHealth.Entity
+  nameWithType: EntityHealth.Entity
 - uid: ElectricDrill.AstraRpgHealth.EntityHealth.EntityAttributes
   name: EntityAttributes
   href: api/ElectricDrill.AstraRpgHealth.EntityHealth.html#ElectricDrill_AstraRpgHealth_EntityHealth_EntityAttributes
@@ -4092,6 +4632,19 @@ references:
   isSpec: "True"
   fullName: ElectricDrill.AstraRpgHealth.EntityHealth.OverrideOnDeathGameAction
   nameWithType: EntityHealth.OverrideOnDeathGameAction
+- uid: ElectricDrill.AstraRpgHealth.EntityHealth.OverrideOnResurrectionGameAction
+  name: OverrideOnResurrectionGameAction
+  href: api/ElectricDrill.AstraRpgHealth.EntityHealth.html#ElectricDrill_AstraRpgHealth_EntityHealth_OverrideOnResurrectionGameAction
+  commentId: P:ElectricDrill.AstraRpgHealth.EntityHealth.OverrideOnResurrectionGameAction
+  fullName: ElectricDrill.AstraRpgHealth.EntityHealth.OverrideOnResurrectionGameAction
+  nameWithType: EntityHealth.OverrideOnResurrectionGameAction
+- uid: ElectricDrill.AstraRpgHealth.EntityHealth.OverrideOnResurrectionGameAction*
+  name: OverrideOnResurrectionGameAction
+  href: api/ElectricDrill.AstraRpgHealth.EntityHealth.html#ElectricDrill_AstraRpgHealth_EntityHealth_OverrideOnResurrectionGameAction_
+  commentId: Overload:ElectricDrill.AstraRpgHealth.EntityHealth.OverrideOnResurrectionGameAction
+  isSpec: "True"
+  fullName: ElectricDrill.AstraRpgHealth.EntityHealth.OverrideOnResurrectionGameAction
+  nameWithType: EntityHealth.OverrideOnResurrectionGameAction
 - uid: ElectricDrill.AstraRpgHealth.EntityHealth.PassiveHealthRegeneration
   name: PassiveHealthRegeneration
   href: api/ElectricDrill.AstraRpgHealth.EntityHealth.html#ElectricDrill_AstraRpgHealth_EntityHealth_PassiveHealthRegeneration
@@ -4191,6 +4744,424 @@ references:
   commentId: N:ElectricDrill.AstraRpgHealth.Events
   fullName: ElectricDrill.AstraRpgHealth.Events
   nameWithType: ElectricDrill.AstraRpgHealth.Events
+- uid: ElectricDrill.AstraRpgHealth.Events.Contexts
+  name: ElectricDrill.AstraRpgHealth.Events.Contexts
+  href: api/ElectricDrill.AstraRpgHealth.Events.Contexts.html
+  commentId: N:ElectricDrill.AstraRpgHealth.Events.Contexts
+  fullName: ElectricDrill.AstraRpgHealth.Events.Contexts
+  nameWithType: ElectricDrill.AstraRpgHealth.Events.Contexts
+- uid: ElectricDrill.AstraRpgHealth.Events.Contexts.EntityDiedContext
+  name: EntityDiedContext
+  href: api/ElectricDrill.AstraRpgHealth.Events.Contexts.EntityDiedContext.html
+  commentId: T:ElectricDrill.AstraRpgHealth.Events.Contexts.EntityDiedContext
+  fullName: ElectricDrill.AstraRpgHealth.Events.Contexts.EntityDiedContext
+  nameWithType: EntityDiedContext
+- uid: ElectricDrill.AstraRpgHealth.Events.Contexts.EntityDiedContext.#ctor(ElectricDrill.AstraRpgFramework.EntityCore,ElectricDrill.AstraRpgFramework.EntityCore,ElectricDrill.AstraRpgHealth.Damage.DamageResolutionContext)
+  name: EntityDiedContext(EntityCore, EntityCore, DamageResolutionContext)
+  href: api/ElectricDrill.AstraRpgHealth.Events.Contexts.EntityDiedContext.html#ElectricDrill_AstraRpgHealth_Events_Contexts_EntityDiedContext__ctor_ElectricDrill_AstraRpgFramework_EntityCore_ElectricDrill_AstraRpgFramework_EntityCore_ElectricDrill_AstraRpgHealth_Damage_DamageResolutionContext_
+  commentId: M:ElectricDrill.AstraRpgHealth.Events.Contexts.EntityDiedContext.#ctor(ElectricDrill.AstraRpgFramework.EntityCore,ElectricDrill.AstraRpgFramework.EntityCore,ElectricDrill.AstraRpgHealth.Damage.DamageResolutionContext)
+  name.vb: New(EntityCore, EntityCore, DamageResolutionContext)
+  fullName: ElectricDrill.AstraRpgHealth.Events.Contexts.EntityDiedContext.EntityDiedContext(ElectricDrill.AstraRpgFramework.EntityCore, ElectricDrill.AstraRpgFramework.EntityCore, ElectricDrill.AstraRpgHealth.Damage.DamageResolutionContext)
+  fullName.vb: ElectricDrill.AstraRpgHealth.Events.Contexts.EntityDiedContext.New(ElectricDrill.AstraRpgFramework.EntityCore, ElectricDrill.AstraRpgFramework.EntityCore, ElectricDrill.AstraRpgHealth.Damage.DamageResolutionContext)
+  nameWithType: EntityDiedContext.EntityDiedContext(EntityCore, EntityCore, DamageResolutionContext)
+  nameWithType.vb: EntityDiedContext.New(EntityCore, EntityCore, DamageResolutionContext)
+- uid: ElectricDrill.AstraRpgHealth.Events.Contexts.EntityDiedContext.#ctor*
+  name: EntityDiedContext
+  href: api/ElectricDrill.AstraRpgHealth.Events.Contexts.EntityDiedContext.html#ElectricDrill_AstraRpgHealth_Events_Contexts_EntityDiedContext__ctor_
+  commentId: Overload:ElectricDrill.AstraRpgHealth.Events.Contexts.EntityDiedContext.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: ElectricDrill.AstraRpgHealth.Events.Contexts.EntityDiedContext.EntityDiedContext
+  fullName.vb: ElectricDrill.AstraRpgHealth.Events.Contexts.EntityDiedContext.New
+  nameWithType: EntityDiedContext.EntityDiedContext
+  nameWithType.vb: EntityDiedContext.New
+- uid: ElectricDrill.AstraRpgHealth.Events.Contexts.EntityDiedContext.DamageResolutionContext
+  name: DamageResolutionContext
+  href: api/ElectricDrill.AstraRpgHealth.Events.Contexts.EntityDiedContext.html#ElectricDrill_AstraRpgHealth_Events_Contexts_EntityDiedContext_DamageResolutionContext
+  commentId: P:ElectricDrill.AstraRpgHealth.Events.Contexts.EntityDiedContext.DamageResolutionContext
+  fullName: ElectricDrill.AstraRpgHealth.Events.Contexts.EntityDiedContext.DamageResolutionContext
+  nameWithType: EntityDiedContext.DamageResolutionContext
+- uid: ElectricDrill.AstraRpgHealth.Events.Contexts.EntityDiedContext.DamageResolutionContext*
+  name: DamageResolutionContext
+  href: api/ElectricDrill.AstraRpgHealth.Events.Contexts.EntityDiedContext.html#ElectricDrill_AstraRpgHealth_Events_Contexts_EntityDiedContext_DamageResolutionContext_
+  commentId: Overload:ElectricDrill.AstraRpgHealth.Events.Contexts.EntityDiedContext.DamageResolutionContext
+  isSpec: "True"
+  fullName: ElectricDrill.AstraRpgHealth.Events.Contexts.EntityDiedContext.DamageResolutionContext
+  nameWithType: EntityDiedContext.DamageResolutionContext
+- uid: ElectricDrill.AstraRpgHealth.Events.Contexts.EntityDiedContext.Entity
+  name: Entity
+  href: api/ElectricDrill.AstraRpgHealth.Events.Contexts.EntityDiedContext.html#ElectricDrill_AstraRpgHealth_Events_Contexts_EntityDiedContext_Entity
+  commentId: P:ElectricDrill.AstraRpgHealth.Events.Contexts.EntityDiedContext.Entity
+  fullName: ElectricDrill.AstraRpgHealth.Events.Contexts.EntityDiedContext.Entity
+  nameWithType: EntityDiedContext.Entity
+- uid: ElectricDrill.AstraRpgHealth.Events.Contexts.EntityDiedContext.Entity*
+  name: Entity
+  href: api/ElectricDrill.AstraRpgHealth.Events.Contexts.EntityDiedContext.html#ElectricDrill_AstraRpgHealth_Events_Contexts_EntityDiedContext_Entity_
+  commentId: Overload:ElectricDrill.AstraRpgHealth.Events.Contexts.EntityDiedContext.Entity
+  isSpec: "True"
+  fullName: ElectricDrill.AstraRpgHealth.Events.Contexts.EntityDiedContext.Entity
+  nameWithType: EntityDiedContext.Entity
+- uid: ElectricDrill.AstraRpgHealth.Events.Contexts.EntityDiedContext.Instigator
+  name: Instigator
+  href: api/ElectricDrill.AstraRpgHealth.Events.Contexts.EntityDiedContext.html#ElectricDrill_AstraRpgHealth_Events_Contexts_EntityDiedContext_Instigator
+  commentId: P:ElectricDrill.AstraRpgHealth.Events.Contexts.EntityDiedContext.Instigator
+  fullName: ElectricDrill.AstraRpgHealth.Events.Contexts.EntityDiedContext.Instigator
+  nameWithType: EntityDiedContext.Instigator
+- uid: ElectricDrill.AstraRpgHealth.Events.Contexts.EntityDiedContext.Instigator*
+  name: Instigator
+  href: api/ElectricDrill.AstraRpgHealth.Events.Contexts.EntityDiedContext.html#ElectricDrill_AstraRpgHealth_Events_Contexts_EntityDiedContext_Instigator_
+  commentId: Overload:ElectricDrill.AstraRpgHealth.Events.Contexts.EntityDiedContext.Instigator
+  isSpec: "True"
+  fullName: ElectricDrill.AstraRpgHealth.Events.Contexts.EntityDiedContext.Instigator
+  nameWithType: EntityDiedContext.Instigator
+- uid: ElectricDrill.AstraRpgHealth.Events.Contexts.EntityDiedContext.IsReactable
+  name: IsReactable
+  href: api/ElectricDrill.AstraRpgHealth.Events.Contexts.EntityDiedContext.html#ElectricDrill_AstraRpgHealth_Events_Contexts_EntityDiedContext_IsReactable
+  commentId: P:ElectricDrill.AstraRpgHealth.Events.Contexts.EntityDiedContext.IsReactable
+  fullName: ElectricDrill.AstraRpgHealth.Events.Contexts.EntityDiedContext.IsReactable
+  nameWithType: EntityDiedContext.IsReactable
+- uid: ElectricDrill.AstraRpgHealth.Events.Contexts.EntityDiedContext.IsReactable*
+  name: IsReactable
+  href: api/ElectricDrill.AstraRpgHealth.Events.Contexts.EntityDiedContext.html#ElectricDrill_AstraRpgHealth_Events_Contexts_EntityDiedContext_IsReactable_
+  commentId: Overload:ElectricDrill.AstraRpgHealth.Events.Contexts.EntityDiedContext.IsReactable
+  isSpec: "True"
+  fullName: ElectricDrill.AstraRpgHealth.Events.Contexts.EntityDiedContext.IsReactable
+  nameWithType: EntityDiedContext.IsReactable
+- uid: ElectricDrill.AstraRpgHealth.Events.Contexts.EntityDiedContext.Performer
+  name: Performer
+  href: api/ElectricDrill.AstraRpgHealth.Events.Contexts.EntityDiedContext.html#ElectricDrill_AstraRpgHealth_Events_Contexts_EntityDiedContext_Performer
+  commentId: P:ElectricDrill.AstraRpgHealth.Events.Contexts.EntityDiedContext.Performer
+  fullName: ElectricDrill.AstraRpgHealth.Events.Contexts.EntityDiedContext.Performer
+  nameWithType: EntityDiedContext.Performer
+- uid: ElectricDrill.AstraRpgHealth.Events.Contexts.EntityDiedContext.Performer*
+  name: Performer
+  href: api/ElectricDrill.AstraRpgHealth.Events.Contexts.EntityDiedContext.html#ElectricDrill_AstraRpgHealth_Events_Contexts_EntityDiedContext_Performer_
+  commentId: Overload:ElectricDrill.AstraRpgHealth.Events.Contexts.EntityDiedContext.Performer
+  isSpec: "True"
+  fullName: ElectricDrill.AstraRpgHealth.Events.Contexts.EntityDiedContext.Performer
+  nameWithType: EntityDiedContext.Performer
+- uid: ElectricDrill.AstraRpgHealth.Events.Contexts.EntityDiedContext.Target
+  name: Target
+  href: api/ElectricDrill.AstraRpgHealth.Events.Contexts.EntityDiedContext.html#ElectricDrill_AstraRpgHealth_Events_Contexts_EntityDiedContext_Target
+  commentId: P:ElectricDrill.AstraRpgHealth.Events.Contexts.EntityDiedContext.Target
+  fullName: ElectricDrill.AstraRpgHealth.Events.Contexts.EntityDiedContext.Target
+  nameWithType: EntityDiedContext.Target
+- uid: ElectricDrill.AstraRpgHealth.Events.Contexts.EntityDiedContext.Target*
+  name: Target
+  href: api/ElectricDrill.AstraRpgHealth.Events.Contexts.EntityDiedContext.html#ElectricDrill_AstraRpgHealth_Events_Contexts_EntityDiedContext_Target_
+  commentId: Overload:ElectricDrill.AstraRpgHealth.Events.Contexts.EntityDiedContext.Target
+  isSpec: "True"
+  fullName: ElectricDrill.AstraRpgHealth.Events.Contexts.EntityDiedContext.Target
+  nameWithType: EntityDiedContext.Target
+- uid: ElectricDrill.AstraRpgHealth.Events.Contexts.EntityDiedContext.Victim
+  name: Victim
+  href: api/ElectricDrill.AstraRpgHealth.Events.Contexts.EntityDiedContext.html#ElectricDrill_AstraRpgHealth_Events_Contexts_EntityDiedContext_Victim
+  commentId: P:ElectricDrill.AstraRpgHealth.Events.Contexts.EntityDiedContext.Victim
+  fullName: ElectricDrill.AstraRpgHealth.Events.Contexts.EntityDiedContext.Victim
+  nameWithType: EntityDiedContext.Victim
+- uid: ElectricDrill.AstraRpgHealth.Events.Contexts.EntityDiedContext.Victim*
+  name: Victim
+  href: api/ElectricDrill.AstraRpgHealth.Events.Contexts.EntityDiedContext.html#ElectricDrill_AstraRpgHealth_Events_Contexts_EntityDiedContext_Victim_
+  commentId: Overload:ElectricDrill.AstraRpgHealth.Events.Contexts.EntityDiedContext.Victim
+  isSpec: "True"
+  fullName: ElectricDrill.AstraRpgHealth.Events.Contexts.EntityDiedContext.Victim
+  nameWithType: EntityDiedContext.Victim
+- uid: ElectricDrill.AstraRpgHealth.Events.Contexts.EntityHealthChangedContext
+  name: EntityHealthChangedContext
+  href: api/ElectricDrill.AstraRpgHealth.Events.Contexts.EntityHealthChangedContext.html
+  commentId: T:ElectricDrill.AstraRpgHealth.Events.Contexts.EntityHealthChangedContext
+  fullName: ElectricDrill.AstraRpgHealth.Events.Contexts.EntityHealthChangedContext
+  nameWithType: EntityHealthChangedContext
+- uid: ElectricDrill.AstraRpgHealth.Events.Contexts.EntityHealthChangedContext.#ctor(ElectricDrill.AstraRpgFramework.EntityCore,System.Int64,System.Int64)
+  name: EntityHealthChangedContext(EntityCore, long, long)
+  href: api/ElectricDrill.AstraRpgHealth.Events.Contexts.EntityHealthChangedContext.html#ElectricDrill_AstraRpgHealth_Events_Contexts_EntityHealthChangedContext__ctor_ElectricDrill_AstraRpgFramework_EntityCore_System_Int64_System_Int64_
+  commentId: M:ElectricDrill.AstraRpgHealth.Events.Contexts.EntityHealthChangedContext.#ctor(ElectricDrill.AstraRpgFramework.EntityCore,System.Int64,System.Int64)
+  name.vb: New(EntityCore, Long, Long)
+  fullName: ElectricDrill.AstraRpgHealth.Events.Contexts.EntityHealthChangedContext.EntityHealthChangedContext(ElectricDrill.AstraRpgFramework.EntityCore, long, long)
+  fullName.vb: ElectricDrill.AstraRpgHealth.Events.Contexts.EntityHealthChangedContext.New(ElectricDrill.AstraRpgFramework.EntityCore, Long, Long)
+  nameWithType: EntityHealthChangedContext.EntityHealthChangedContext(EntityCore, long, long)
+  nameWithType.vb: EntityHealthChangedContext.New(EntityCore, Long, Long)
+- uid: ElectricDrill.AstraRpgHealth.Events.Contexts.EntityHealthChangedContext.#ctor*
+  name: EntityHealthChangedContext
+  href: api/ElectricDrill.AstraRpgHealth.Events.Contexts.EntityHealthChangedContext.html#ElectricDrill_AstraRpgHealth_Events_Contexts_EntityHealthChangedContext__ctor_
+  commentId: Overload:ElectricDrill.AstraRpgHealth.Events.Contexts.EntityHealthChangedContext.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: ElectricDrill.AstraRpgHealth.Events.Contexts.EntityHealthChangedContext.EntityHealthChangedContext
+  fullName.vb: ElectricDrill.AstraRpgHealth.Events.Contexts.EntityHealthChangedContext.New
+  nameWithType: EntityHealthChangedContext.EntityHealthChangedContext
+  nameWithType.vb: EntityHealthChangedContext.New
+- uid: ElectricDrill.AstraRpgHealth.Events.Contexts.EntityHealthChangedContext.AbsAmount
+  name: AbsAmount
+  href: api/ElectricDrill.AstraRpgHealth.Events.Contexts.EntityHealthChangedContext.html#ElectricDrill_AstraRpgHealth_Events_Contexts_EntityHealthChangedContext_AbsAmount
+  commentId: P:ElectricDrill.AstraRpgHealth.Events.Contexts.EntityHealthChangedContext.AbsAmount
+  fullName: ElectricDrill.AstraRpgHealth.Events.Contexts.EntityHealthChangedContext.AbsAmount
+  nameWithType: EntityHealthChangedContext.AbsAmount
+- uid: ElectricDrill.AstraRpgHealth.Events.Contexts.EntityHealthChangedContext.AbsAmount*
+  name: AbsAmount
+  href: api/ElectricDrill.AstraRpgHealth.Events.Contexts.EntityHealthChangedContext.html#ElectricDrill_AstraRpgHealth_Events_Contexts_EntityHealthChangedContext_AbsAmount_
+  commentId: Overload:ElectricDrill.AstraRpgHealth.Events.Contexts.EntityHealthChangedContext.AbsAmount
+  isSpec: "True"
+  fullName: ElectricDrill.AstraRpgHealth.Events.Contexts.EntityHealthChangedContext.AbsAmount
+  nameWithType: EntityHealthChangedContext.AbsAmount
+- uid: ElectricDrill.AstraRpgHealth.Events.Contexts.EntityHealthChangedContext.Entity
+  name: Entity
+  href: api/ElectricDrill.AstraRpgHealth.Events.Contexts.EntityHealthChangedContext.html#ElectricDrill_AstraRpgHealth_Events_Contexts_EntityHealthChangedContext_Entity
+  commentId: P:ElectricDrill.AstraRpgHealth.Events.Contexts.EntityHealthChangedContext.Entity
+  fullName: ElectricDrill.AstraRpgHealth.Events.Contexts.EntityHealthChangedContext.Entity
+  nameWithType: EntityHealthChangedContext.Entity
+- uid: ElectricDrill.AstraRpgHealth.Events.Contexts.EntityHealthChangedContext.Entity*
+  name: Entity
+  href: api/ElectricDrill.AstraRpgHealth.Events.Contexts.EntityHealthChangedContext.html#ElectricDrill_AstraRpgHealth_Events_Contexts_EntityHealthChangedContext_Entity_
+  commentId: Overload:ElectricDrill.AstraRpgHealth.Events.Contexts.EntityHealthChangedContext.Entity
+  isSpec: "True"
+  fullName: ElectricDrill.AstraRpgHealth.Events.Contexts.EntityHealthChangedContext.Entity
+  nameWithType: EntityHealthChangedContext.Entity
+- uid: ElectricDrill.AstraRpgHealth.Events.Contexts.EntityHealthChangedContext.NewValue
+  name: NewValue
+  href: api/ElectricDrill.AstraRpgHealth.Events.Contexts.EntityHealthChangedContext.html#ElectricDrill_AstraRpgHealth_Events_Contexts_EntityHealthChangedContext_NewValue
+  commentId: P:ElectricDrill.AstraRpgHealth.Events.Contexts.EntityHealthChangedContext.NewValue
+  fullName: ElectricDrill.AstraRpgHealth.Events.Contexts.EntityHealthChangedContext.NewValue
+  nameWithType: EntityHealthChangedContext.NewValue
+- uid: ElectricDrill.AstraRpgHealth.Events.Contexts.EntityHealthChangedContext.NewValue*
+  name: NewValue
+  href: api/ElectricDrill.AstraRpgHealth.Events.Contexts.EntityHealthChangedContext.html#ElectricDrill_AstraRpgHealth_Events_Contexts_EntityHealthChangedContext_NewValue_
+  commentId: Overload:ElectricDrill.AstraRpgHealth.Events.Contexts.EntityHealthChangedContext.NewValue
+  isSpec: "True"
+  fullName: ElectricDrill.AstraRpgHealth.Events.Contexts.EntityHealthChangedContext.NewValue
+  nameWithType: EntityHealthChangedContext.NewValue
+- uid: ElectricDrill.AstraRpgHealth.Events.Contexts.EntityHealthChangedContext.PreviousValue
+  name: PreviousValue
+  href: api/ElectricDrill.AstraRpgHealth.Events.Contexts.EntityHealthChangedContext.html#ElectricDrill_AstraRpgHealth_Events_Contexts_EntityHealthChangedContext_PreviousValue
+  commentId: P:ElectricDrill.AstraRpgHealth.Events.Contexts.EntityHealthChangedContext.PreviousValue
+  fullName: ElectricDrill.AstraRpgHealth.Events.Contexts.EntityHealthChangedContext.PreviousValue
+  nameWithType: EntityHealthChangedContext.PreviousValue
+- uid: ElectricDrill.AstraRpgHealth.Events.Contexts.EntityHealthChangedContext.PreviousValue*
+  name: PreviousValue
+  href: api/ElectricDrill.AstraRpgHealth.Events.Contexts.EntityHealthChangedContext.html#ElectricDrill_AstraRpgHealth_Events_Contexts_EntityHealthChangedContext_PreviousValue_
+  commentId: Overload:ElectricDrill.AstraRpgHealth.Events.Contexts.EntityHealthChangedContext.PreviousValue
+  isSpec: "True"
+  fullName: ElectricDrill.AstraRpgHealth.Events.Contexts.EntityHealthChangedContext.PreviousValue
+  nameWithType: EntityHealthChangedContext.PreviousValue
+- uid: ElectricDrill.AstraRpgHealth.Events.Contexts.EntityHealthChangedContext.Target
+  name: Target
+  href: api/ElectricDrill.AstraRpgHealth.Events.Contexts.EntityHealthChangedContext.html#ElectricDrill_AstraRpgHealth_Events_Contexts_EntityHealthChangedContext_Target
+  commentId: P:ElectricDrill.AstraRpgHealth.Events.Contexts.EntityHealthChangedContext.Target
+  fullName: ElectricDrill.AstraRpgHealth.Events.Contexts.EntityHealthChangedContext.Target
+  nameWithType: EntityHealthChangedContext.Target
+- uid: ElectricDrill.AstraRpgHealth.Events.Contexts.EntityHealthChangedContext.Target*
+  name: Target
+  href: api/ElectricDrill.AstraRpgHealth.Events.Contexts.EntityHealthChangedContext.html#ElectricDrill_AstraRpgHealth_Events_Contexts_EntityHealthChangedContext_Target_
+  commentId: Overload:ElectricDrill.AstraRpgHealth.Events.Contexts.EntityHealthChangedContext.Target
+  isSpec: "True"
+  fullName: ElectricDrill.AstraRpgHealth.Events.Contexts.EntityHealthChangedContext.Target
+  nameWithType: EntityHealthChangedContext.Target
+- uid: ElectricDrill.AstraRpgHealth.Events.Contexts.EntityMaxHealthChangedContext
+  name: EntityMaxHealthChangedContext
+  href: api/ElectricDrill.AstraRpgHealth.Events.Contexts.EntityMaxHealthChangedContext.html
+  commentId: T:ElectricDrill.AstraRpgHealth.Events.Contexts.EntityMaxHealthChangedContext
+  fullName: ElectricDrill.AstraRpgHealth.Events.Contexts.EntityMaxHealthChangedContext
+  nameWithType: EntityMaxHealthChangedContext
+- uid: ElectricDrill.AstraRpgHealth.Events.Contexts.EntityMaxHealthChangedContext.#ctor(ElectricDrill.AstraRpgFramework.EntityCore,System.Int64,System.Int64)
+  name: EntityMaxHealthChangedContext(EntityCore, long, long)
+  href: api/ElectricDrill.AstraRpgHealth.Events.Contexts.EntityMaxHealthChangedContext.html#ElectricDrill_AstraRpgHealth_Events_Contexts_EntityMaxHealthChangedContext__ctor_ElectricDrill_AstraRpgFramework_EntityCore_System_Int64_System_Int64_
+  commentId: M:ElectricDrill.AstraRpgHealth.Events.Contexts.EntityMaxHealthChangedContext.#ctor(ElectricDrill.AstraRpgFramework.EntityCore,System.Int64,System.Int64)
+  name.vb: New(EntityCore, Long, Long)
+  fullName: ElectricDrill.AstraRpgHealth.Events.Contexts.EntityMaxHealthChangedContext.EntityMaxHealthChangedContext(ElectricDrill.AstraRpgFramework.EntityCore, long, long)
+  fullName.vb: ElectricDrill.AstraRpgHealth.Events.Contexts.EntityMaxHealthChangedContext.New(ElectricDrill.AstraRpgFramework.EntityCore, Long, Long)
+  nameWithType: EntityMaxHealthChangedContext.EntityMaxHealthChangedContext(EntityCore, long, long)
+  nameWithType.vb: EntityMaxHealthChangedContext.New(EntityCore, Long, Long)
+- uid: ElectricDrill.AstraRpgHealth.Events.Contexts.EntityMaxHealthChangedContext.#ctor*
+  name: EntityMaxHealthChangedContext
+  href: api/ElectricDrill.AstraRpgHealth.Events.Contexts.EntityMaxHealthChangedContext.html#ElectricDrill_AstraRpgHealth_Events_Contexts_EntityMaxHealthChangedContext__ctor_
+  commentId: Overload:ElectricDrill.AstraRpgHealth.Events.Contexts.EntityMaxHealthChangedContext.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: ElectricDrill.AstraRpgHealth.Events.Contexts.EntityMaxHealthChangedContext.EntityMaxHealthChangedContext
+  fullName.vb: ElectricDrill.AstraRpgHealth.Events.Contexts.EntityMaxHealthChangedContext.New
+  nameWithType: EntityMaxHealthChangedContext.EntityMaxHealthChangedContext
+  nameWithType.vb: EntityMaxHealthChangedContext.New
+- uid: ElectricDrill.AstraRpgHealth.Events.Contexts.EntityMaxHealthChangedContext.AbsAmount
+  name: AbsAmount
+  href: api/ElectricDrill.AstraRpgHealth.Events.Contexts.EntityMaxHealthChangedContext.html#ElectricDrill_AstraRpgHealth_Events_Contexts_EntityMaxHealthChangedContext_AbsAmount
+  commentId: P:ElectricDrill.AstraRpgHealth.Events.Contexts.EntityMaxHealthChangedContext.AbsAmount
+  fullName: ElectricDrill.AstraRpgHealth.Events.Contexts.EntityMaxHealthChangedContext.AbsAmount
+  nameWithType: EntityMaxHealthChangedContext.AbsAmount
+- uid: ElectricDrill.AstraRpgHealth.Events.Contexts.EntityMaxHealthChangedContext.AbsAmount*
+  name: AbsAmount
+  href: api/ElectricDrill.AstraRpgHealth.Events.Contexts.EntityMaxHealthChangedContext.html#ElectricDrill_AstraRpgHealth_Events_Contexts_EntityMaxHealthChangedContext_AbsAmount_
+  commentId: Overload:ElectricDrill.AstraRpgHealth.Events.Contexts.EntityMaxHealthChangedContext.AbsAmount
+  isSpec: "True"
+  fullName: ElectricDrill.AstraRpgHealth.Events.Contexts.EntityMaxHealthChangedContext.AbsAmount
+  nameWithType: EntityMaxHealthChangedContext.AbsAmount
+- uid: ElectricDrill.AstraRpgHealth.Events.Contexts.EntityMaxHealthChangedContext.Entity
+  name: Entity
+  href: api/ElectricDrill.AstraRpgHealth.Events.Contexts.EntityMaxHealthChangedContext.html#ElectricDrill_AstraRpgHealth_Events_Contexts_EntityMaxHealthChangedContext_Entity
+  commentId: P:ElectricDrill.AstraRpgHealth.Events.Contexts.EntityMaxHealthChangedContext.Entity
+  fullName: ElectricDrill.AstraRpgHealth.Events.Contexts.EntityMaxHealthChangedContext.Entity
+  nameWithType: EntityMaxHealthChangedContext.Entity
+- uid: ElectricDrill.AstraRpgHealth.Events.Contexts.EntityMaxHealthChangedContext.Entity*
+  name: Entity
+  href: api/ElectricDrill.AstraRpgHealth.Events.Contexts.EntityMaxHealthChangedContext.html#ElectricDrill_AstraRpgHealth_Events_Contexts_EntityMaxHealthChangedContext_Entity_
+  commentId: Overload:ElectricDrill.AstraRpgHealth.Events.Contexts.EntityMaxHealthChangedContext.Entity
+  isSpec: "True"
+  fullName: ElectricDrill.AstraRpgHealth.Events.Contexts.EntityMaxHealthChangedContext.Entity
+  nameWithType: EntityMaxHealthChangedContext.Entity
+- uid: ElectricDrill.AstraRpgHealth.Events.Contexts.EntityMaxHealthChangedContext.NewValue
+  name: NewValue
+  href: api/ElectricDrill.AstraRpgHealth.Events.Contexts.EntityMaxHealthChangedContext.html#ElectricDrill_AstraRpgHealth_Events_Contexts_EntityMaxHealthChangedContext_NewValue
+  commentId: P:ElectricDrill.AstraRpgHealth.Events.Contexts.EntityMaxHealthChangedContext.NewValue
+  fullName: ElectricDrill.AstraRpgHealth.Events.Contexts.EntityMaxHealthChangedContext.NewValue
+  nameWithType: EntityMaxHealthChangedContext.NewValue
+- uid: ElectricDrill.AstraRpgHealth.Events.Contexts.EntityMaxHealthChangedContext.NewValue*
+  name: NewValue
+  href: api/ElectricDrill.AstraRpgHealth.Events.Contexts.EntityMaxHealthChangedContext.html#ElectricDrill_AstraRpgHealth_Events_Contexts_EntityMaxHealthChangedContext_NewValue_
+  commentId: Overload:ElectricDrill.AstraRpgHealth.Events.Contexts.EntityMaxHealthChangedContext.NewValue
+  isSpec: "True"
+  fullName: ElectricDrill.AstraRpgHealth.Events.Contexts.EntityMaxHealthChangedContext.NewValue
+  nameWithType: EntityMaxHealthChangedContext.NewValue
+- uid: ElectricDrill.AstraRpgHealth.Events.Contexts.EntityMaxHealthChangedContext.PreviousValue
+  name: PreviousValue
+  href: api/ElectricDrill.AstraRpgHealth.Events.Contexts.EntityMaxHealthChangedContext.html#ElectricDrill_AstraRpgHealth_Events_Contexts_EntityMaxHealthChangedContext_PreviousValue
+  commentId: P:ElectricDrill.AstraRpgHealth.Events.Contexts.EntityMaxHealthChangedContext.PreviousValue
+  fullName: ElectricDrill.AstraRpgHealth.Events.Contexts.EntityMaxHealthChangedContext.PreviousValue
+  nameWithType: EntityMaxHealthChangedContext.PreviousValue
+- uid: ElectricDrill.AstraRpgHealth.Events.Contexts.EntityMaxHealthChangedContext.PreviousValue*
+  name: PreviousValue
+  href: api/ElectricDrill.AstraRpgHealth.Events.Contexts.EntityMaxHealthChangedContext.html#ElectricDrill_AstraRpgHealth_Events_Contexts_EntityMaxHealthChangedContext_PreviousValue_
+  commentId: Overload:ElectricDrill.AstraRpgHealth.Events.Contexts.EntityMaxHealthChangedContext.PreviousValue
+  isSpec: "True"
+  fullName: ElectricDrill.AstraRpgHealth.Events.Contexts.EntityMaxHealthChangedContext.PreviousValue
+  nameWithType: EntityMaxHealthChangedContext.PreviousValue
+- uid: ElectricDrill.AstraRpgHealth.Events.Contexts.EntityMaxHealthChangedContext.Target
+  name: Target
+  href: api/ElectricDrill.AstraRpgHealth.Events.Contexts.EntityMaxHealthChangedContext.html#ElectricDrill_AstraRpgHealth_Events_Contexts_EntityMaxHealthChangedContext_Target
+  commentId: P:ElectricDrill.AstraRpgHealth.Events.Contexts.EntityMaxHealthChangedContext.Target
+  fullName: ElectricDrill.AstraRpgHealth.Events.Contexts.EntityMaxHealthChangedContext.Target
+  nameWithType: EntityMaxHealthChangedContext.Target
+- uid: ElectricDrill.AstraRpgHealth.Events.Contexts.EntityMaxHealthChangedContext.Target*
+  name: Target
+  href: api/ElectricDrill.AstraRpgHealth.Events.Contexts.EntityMaxHealthChangedContext.html#ElectricDrill_AstraRpgHealth_Events_Contexts_EntityMaxHealthChangedContext_Target_
+  commentId: Overload:ElectricDrill.AstraRpgHealth.Events.Contexts.EntityMaxHealthChangedContext.Target
+  isSpec: "True"
+  fullName: ElectricDrill.AstraRpgHealth.Events.Contexts.EntityMaxHealthChangedContext.Target
+  nameWithType: EntityMaxHealthChangedContext.Target
+- uid: ElectricDrill.AstraRpgHealth.Events.Contexts.ResurrectionContext
+  name: ResurrectionContext
+  href: api/ElectricDrill.AstraRpgHealth.Events.Contexts.ResurrectionContext.html
+  commentId: T:ElectricDrill.AstraRpgHealth.Events.Contexts.ResurrectionContext
+  fullName: ElectricDrill.AstraRpgHealth.Events.Contexts.ResurrectionContext
+  nameWithType: ResurrectionContext
+- uid: ElectricDrill.AstraRpgHealth.Events.Contexts.ResurrectionContext.#ctor(System.Int64,ElectricDrill.AstraRpgHealth.Heal.ReceivedHealContext)
+  name: ResurrectionContext(long, ReceivedHealContext)
+  href: api/ElectricDrill.AstraRpgHealth.Events.Contexts.ResurrectionContext.html#ElectricDrill_AstraRpgHealth_Events_Contexts_ResurrectionContext__ctor_System_Int64_ElectricDrill_AstraRpgHealth_Heal_ReceivedHealContext_
+  commentId: M:ElectricDrill.AstraRpgHealth.Events.Contexts.ResurrectionContext.#ctor(System.Int64,ElectricDrill.AstraRpgHealth.Heal.ReceivedHealContext)
+  name.vb: New(Long, ReceivedHealContext)
+  fullName: ElectricDrill.AstraRpgHealth.Events.Contexts.ResurrectionContext.ResurrectionContext(long, ElectricDrill.AstraRpgHealth.Heal.ReceivedHealContext)
+  fullName.vb: ElectricDrill.AstraRpgHealth.Events.Contexts.ResurrectionContext.New(Long, ElectricDrill.AstraRpgHealth.Heal.ReceivedHealContext)
+  nameWithType: ResurrectionContext.ResurrectionContext(long, ReceivedHealContext)
+  nameWithType.vb: ResurrectionContext.New(Long, ReceivedHealContext)
+- uid: ElectricDrill.AstraRpgHealth.Events.Contexts.ResurrectionContext.#ctor*
+  name: ResurrectionContext
+  href: api/ElectricDrill.AstraRpgHealth.Events.Contexts.ResurrectionContext.html#ElectricDrill_AstraRpgHealth_Events_Contexts_ResurrectionContext__ctor_
+  commentId: Overload:ElectricDrill.AstraRpgHealth.Events.Contexts.ResurrectionContext.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: ElectricDrill.AstraRpgHealth.Events.Contexts.ResurrectionContext.ResurrectionContext
+  fullName.vb: ElectricDrill.AstraRpgHealth.Events.Contexts.ResurrectionContext.New
+  nameWithType: ResurrectionContext.ResurrectionContext
+  nameWithType.vb: ResurrectionContext.New
+- uid: ElectricDrill.AstraRpgHealth.Events.Contexts.ResurrectionContext.AbsAmount
+  name: AbsAmount
+  href: api/ElectricDrill.AstraRpgHealth.Events.Contexts.ResurrectionContext.html#ElectricDrill_AstraRpgHealth_Events_Contexts_ResurrectionContext_AbsAmount
+  commentId: P:ElectricDrill.AstraRpgHealth.Events.Contexts.ResurrectionContext.AbsAmount
+  fullName: ElectricDrill.AstraRpgHealth.Events.Contexts.ResurrectionContext.AbsAmount
+  nameWithType: ResurrectionContext.AbsAmount
+- uid: ElectricDrill.AstraRpgHealth.Events.Contexts.ResurrectionContext.AbsAmount*
+  name: AbsAmount
+  href: api/ElectricDrill.AstraRpgHealth.Events.Contexts.ResurrectionContext.html#ElectricDrill_AstraRpgHealth_Events_Contexts_ResurrectionContext_AbsAmount_
+  commentId: Overload:ElectricDrill.AstraRpgHealth.Events.Contexts.ResurrectionContext.AbsAmount
+  isSpec: "True"
+  fullName: ElectricDrill.AstraRpgHealth.Events.Contexts.ResurrectionContext.AbsAmount
+  nameWithType: ResurrectionContext.AbsAmount
+- uid: ElectricDrill.AstraRpgHealth.Events.Contexts.ResurrectionContext.Entity
+  name: Entity
+  href: api/ElectricDrill.AstraRpgHealth.Events.Contexts.ResurrectionContext.html#ElectricDrill_AstraRpgHealth_Events_Contexts_ResurrectionContext_Entity
+  commentId: P:ElectricDrill.AstraRpgHealth.Events.Contexts.ResurrectionContext.Entity
+  fullName: ElectricDrill.AstraRpgHealth.Events.Contexts.ResurrectionContext.Entity
+  nameWithType: ResurrectionContext.Entity
+- uid: ElectricDrill.AstraRpgHealth.Events.Contexts.ResurrectionContext.Entity*
+  name: Entity
+  href: api/ElectricDrill.AstraRpgHealth.Events.Contexts.ResurrectionContext.html#ElectricDrill_AstraRpgHealth_Events_Contexts_ResurrectionContext_Entity_
+  commentId: Overload:ElectricDrill.AstraRpgHealth.Events.Contexts.ResurrectionContext.Entity
+  isSpec: "True"
+  fullName: ElectricDrill.AstraRpgHealth.Events.Contexts.ResurrectionContext.Entity
+  nameWithType: ResurrectionContext.Entity
+- uid: ElectricDrill.AstraRpgHealth.Events.Contexts.ResurrectionContext.Instigator
+  name: Instigator
+  href: api/ElectricDrill.AstraRpgHealth.Events.Contexts.ResurrectionContext.html#ElectricDrill_AstraRpgHealth_Events_Contexts_ResurrectionContext_Instigator
+  commentId: P:ElectricDrill.AstraRpgHealth.Events.Contexts.ResurrectionContext.Instigator
+  fullName: ElectricDrill.AstraRpgHealth.Events.Contexts.ResurrectionContext.Instigator
+  nameWithType: ResurrectionContext.Instigator
+- uid: ElectricDrill.AstraRpgHealth.Events.Contexts.ResurrectionContext.Instigator*
+  name: Instigator
+  href: api/ElectricDrill.AstraRpgHealth.Events.Contexts.ResurrectionContext.html#ElectricDrill_AstraRpgHealth_Events_Contexts_ResurrectionContext_Instigator_
+  commentId: Overload:ElectricDrill.AstraRpgHealth.Events.Contexts.ResurrectionContext.Instigator
+  isSpec: "True"
+  fullName: ElectricDrill.AstraRpgHealth.Events.Contexts.ResurrectionContext.Instigator
+  nameWithType: ResurrectionContext.Instigator
+- uid: ElectricDrill.AstraRpgHealth.Events.Contexts.ResurrectionContext.NewValue
+  name: NewValue
+  href: api/ElectricDrill.AstraRpgHealth.Events.Contexts.ResurrectionContext.html#ElectricDrill_AstraRpgHealth_Events_Contexts_ResurrectionContext_NewValue
+  commentId: P:ElectricDrill.AstraRpgHealth.Events.Contexts.ResurrectionContext.NewValue
+  fullName: ElectricDrill.AstraRpgHealth.Events.Contexts.ResurrectionContext.NewValue
+  nameWithType: ResurrectionContext.NewValue
+- uid: ElectricDrill.AstraRpgHealth.Events.Contexts.ResurrectionContext.NewValue*
+  name: NewValue
+  href: api/ElectricDrill.AstraRpgHealth.Events.Contexts.ResurrectionContext.html#ElectricDrill_AstraRpgHealth_Events_Contexts_ResurrectionContext_NewValue_
+  commentId: Overload:ElectricDrill.AstraRpgHealth.Events.Contexts.ResurrectionContext.NewValue
+  isSpec: "True"
+  fullName: ElectricDrill.AstraRpgHealth.Events.Contexts.ResurrectionContext.NewValue
+  nameWithType: ResurrectionContext.NewValue
+- uid: ElectricDrill.AstraRpgHealth.Events.Contexts.ResurrectionContext.PreviousValue
+  name: PreviousValue
+  href: api/ElectricDrill.AstraRpgHealth.Events.Contexts.ResurrectionContext.html#ElectricDrill_AstraRpgHealth_Events_Contexts_ResurrectionContext_PreviousValue
+  commentId: P:ElectricDrill.AstraRpgHealth.Events.Contexts.ResurrectionContext.PreviousValue
+  fullName: ElectricDrill.AstraRpgHealth.Events.Contexts.ResurrectionContext.PreviousValue
+  nameWithType: ResurrectionContext.PreviousValue
+- uid: ElectricDrill.AstraRpgHealth.Events.Contexts.ResurrectionContext.PreviousValue*
+  name: PreviousValue
+  href: api/ElectricDrill.AstraRpgHealth.Events.Contexts.ResurrectionContext.html#ElectricDrill_AstraRpgHealth_Events_Contexts_ResurrectionContext_PreviousValue_
+  commentId: Overload:ElectricDrill.AstraRpgHealth.Events.Contexts.ResurrectionContext.PreviousValue
+  isSpec: "True"
+  fullName: ElectricDrill.AstraRpgHealth.Events.Contexts.ResurrectionContext.PreviousValue
+  nameWithType: ResurrectionContext.PreviousValue
+- uid: ElectricDrill.AstraRpgHealth.Events.Contexts.ResurrectionContext.ReceivedHeal
+  name: ReceivedHeal
+  href: api/ElectricDrill.AstraRpgHealth.Events.Contexts.ResurrectionContext.html#ElectricDrill_AstraRpgHealth_Events_Contexts_ResurrectionContext_ReceivedHeal
+  commentId: P:ElectricDrill.AstraRpgHealth.Events.Contexts.ResurrectionContext.ReceivedHeal
+  fullName: ElectricDrill.AstraRpgHealth.Events.Contexts.ResurrectionContext.ReceivedHeal
+  nameWithType: ResurrectionContext.ReceivedHeal
+- uid: ElectricDrill.AstraRpgHealth.Events.Contexts.ResurrectionContext.ReceivedHeal*
+  name: ReceivedHeal
+  href: api/ElectricDrill.AstraRpgHealth.Events.Contexts.ResurrectionContext.html#ElectricDrill_AstraRpgHealth_Events_Contexts_ResurrectionContext_ReceivedHeal_
+  commentId: Overload:ElectricDrill.AstraRpgHealth.Events.Contexts.ResurrectionContext.ReceivedHeal
+  isSpec: "True"
+  fullName: ElectricDrill.AstraRpgHealth.Events.Contexts.ResurrectionContext.ReceivedHeal
+  nameWithType: ResurrectionContext.ReceivedHeal
+- uid: ElectricDrill.AstraRpgHealth.Events.Contexts.ResurrectionContext.Target
+  name: Target
+  href: api/ElectricDrill.AstraRpgHealth.Events.Contexts.ResurrectionContext.html#ElectricDrill_AstraRpgHealth_Events_Contexts_ResurrectionContext_Target
+  commentId: P:ElectricDrill.AstraRpgHealth.Events.Contexts.ResurrectionContext.Target
+  fullName: ElectricDrill.AstraRpgHealth.Events.Contexts.ResurrectionContext.Target
+  nameWithType: ResurrectionContext.Target
+- uid: ElectricDrill.AstraRpgHealth.Events.Contexts.ResurrectionContext.Target*
+  name: Target
+  href: api/ElectricDrill.AstraRpgHealth.Events.Contexts.ResurrectionContext.html#ElectricDrill_AstraRpgHealth_Events_Contexts_ResurrectionContext_Target_
+  commentId: Overload:ElectricDrill.AstraRpgHealth.Events.Contexts.ResurrectionContext.Target
+  isSpec: "True"
+  fullName: ElectricDrill.AstraRpgHealth.Events.Contexts.ResurrectionContext.Target
+  nameWithType: ResurrectionContext.Target
 - uid: ElectricDrill.AstraRpgHealth.Events.DamageResolutionGameEvent
   name: DamageResolutionGameEvent
   href: api/ElectricDrill.AstraRpgHealth.Events.DamageResolutionGameEvent.html
@@ -4657,6 +5628,19 @@ references:
   isSpec: "True"
   fullName: ElectricDrill.AstraRpgHealth.Experience.ExpCollectionStrategySO.CollectExp
   nameWithType: ExpCollectionStrategySO.CollectExp
+- uid: ElectricDrill.AstraRpgHealth.Experience.ExpCollectionStrategySO.Tags
+  name: Tags
+  href: api/ElectricDrill.AstraRpgHealth.Experience.ExpCollectionStrategySO.html#ElectricDrill_AstraRpgHealth_Experience_ExpCollectionStrategySO_Tags
+  commentId: P:ElectricDrill.AstraRpgHealth.Experience.ExpCollectionStrategySO.Tags
+  fullName: ElectricDrill.AstraRpgHealth.Experience.ExpCollectionStrategySO.Tags
+  nameWithType: ExpCollectionStrategySO.Tags
+- uid: ElectricDrill.AstraRpgHealth.Experience.ExpCollectionStrategySO.Tags*
+  name: Tags
+  href: api/ElectricDrill.AstraRpgHealth.Experience.ExpCollectionStrategySO.html#ElectricDrill_AstraRpgHealth_Experience_ExpCollectionStrategySO_Tags_
+  commentId: Overload:ElectricDrill.AstraRpgHealth.Experience.ExpCollectionStrategySO.Tags
+  isSpec: "True"
+  fullName: ElectricDrill.AstraRpgHealth.Experience.ExpCollectionStrategySO.Tags
+  nameWithType: ExpCollectionStrategySO.Tags
 - uid: ElectricDrill.AstraRpgHealth.Experience.ExpCollectionStrategySO.TryCollectExp(ElectricDrill.AstraRpgFramework.EntityCore,ElectricDrill.AstraRpgFramework.EntityCore,ElectricDrill.AstraRpgHealth.Damage.DamageResolutionContext)
   name: TryCollectExp(EntityCore, EntityCore, DamageResolutionContext)
   href: api/ElectricDrill.AstraRpgHealth.Experience.ExpCollectionStrategySO.html#ElectricDrill_AstraRpgHealth_Experience_ExpCollectionStrategySO_TryCollectExp_ElectricDrill_AstraRpgFramework_EntityCore_ElectricDrill_AstraRpgFramework_EntityCore_ElectricDrill_AstraRpgHealth_Damage_DamageResolutionContext_
@@ -4824,6 +5808,82 @@ references:
   commentId: T:ElectricDrill.AstraRpgHealth.GameActions.Actions.Component.ResurrectComponentGameActionSO
   fullName: ElectricDrill.AstraRpgHealth.GameActions.Actions.Component.ResurrectComponentGameActionSO
   nameWithType: ResurrectComponentGameActionSO
+- uid: ElectricDrill.AstraRpgHealth.GameActions.Actions.CounterDamageGameActionSO`1
+  name: CounterDamageGameActionSO<TContext>
+  href: api/ElectricDrill.AstraRpgHealth.GameActions.Actions.CounterDamageGameActionSO-1.html
+  commentId: T:ElectricDrill.AstraRpgHealth.GameActions.Actions.CounterDamageGameActionSO`1
+  name.vb: CounterDamageGameActionSO(Of TContext)
+  fullName: ElectricDrill.AstraRpgHealth.GameActions.Actions.CounterDamageGameActionSO<TContext>
+  fullName.vb: ElectricDrill.AstraRpgHealth.GameActions.Actions.CounterDamageGameActionSO(Of TContext)
+  nameWithType: CounterDamageGameActionSO<TContext>
+  nameWithType.vb: CounterDamageGameActionSO(Of TContext)
+- uid: ElectricDrill.AstraRpgHealth.GameActions.Actions.CounterDamageGameActionSO`1.ExecuteAsync(`0,System.Threading.CancellationToken)
+  name: ExecuteAsync(TContext, CancellationToken)
+  href: api/ElectricDrill.AstraRpgHealth.GameActions.Actions.CounterDamageGameActionSO-1.html#ElectricDrill_AstraRpgHealth_GameActions_Actions_CounterDamageGameActionSO_1_ExecuteAsync__0_System_Threading_CancellationToken_
+  commentId: M:ElectricDrill.AstraRpgHealth.GameActions.Actions.CounterDamageGameActionSO`1.ExecuteAsync(`0,System.Threading.CancellationToken)
+  fullName: ElectricDrill.AstraRpgHealth.GameActions.Actions.CounterDamageGameActionSO<TContext>.ExecuteAsync(TContext, System.Threading.CancellationToken)
+  fullName.vb: ElectricDrill.AstraRpgHealth.GameActions.Actions.CounterDamageGameActionSO(Of TContext).ExecuteAsync(TContext, System.Threading.CancellationToken)
+  nameWithType: CounterDamageGameActionSO<TContext>.ExecuteAsync(TContext, CancellationToken)
+  nameWithType.vb: CounterDamageGameActionSO(Of TContext).ExecuteAsync(TContext, CancellationToken)
+- uid: ElectricDrill.AstraRpgHealth.GameActions.Actions.CounterDamageGameActionSO`1.ExecuteAsync*
+  name: ExecuteAsync
+  href: api/ElectricDrill.AstraRpgHealth.GameActions.Actions.CounterDamageGameActionSO-1.html#ElectricDrill_AstraRpgHealth_GameActions_Actions_CounterDamageGameActionSO_1_ExecuteAsync_
+  commentId: Overload:ElectricDrill.AstraRpgHealth.GameActions.Actions.CounterDamageGameActionSO`1.ExecuteAsync
+  isSpec: "True"
+  fullName: ElectricDrill.AstraRpgHealth.GameActions.Actions.CounterDamageGameActionSO<TContext>.ExecuteAsync
+  fullName.vb: ElectricDrill.AstraRpgHealth.GameActions.Actions.CounterDamageGameActionSO(Of TContext).ExecuteAsync
+  nameWithType: CounterDamageGameActionSO<TContext>.ExecuteAsync
+  nameWithType.vb: CounterDamageGameActionSO(Of TContext).ExecuteAsync
+- uid: ElectricDrill.AstraRpgHealth.GameActions.Actions.ResurrectEntityGameActionSO`1
+  name: ResurrectEntityGameActionSO<TContext>
+  href: api/ElectricDrill.AstraRpgHealth.GameActions.Actions.ResurrectEntityGameActionSO-1.html
+  commentId: T:ElectricDrill.AstraRpgHealth.GameActions.Actions.ResurrectEntityGameActionSO`1
+  name.vb: ResurrectEntityGameActionSO(Of TContext)
+  fullName: ElectricDrill.AstraRpgHealth.GameActions.Actions.ResurrectEntityGameActionSO<TContext>
+  fullName.vb: ElectricDrill.AstraRpgHealth.GameActions.Actions.ResurrectEntityGameActionSO(Of TContext)
+  nameWithType: ResurrectEntityGameActionSO<TContext>
+  nameWithType.vb: ResurrectEntityGameActionSO(Of TContext)
+- uid: ElectricDrill.AstraRpgHealth.GameActions.Actions.ResurrectEntityGameActionSO`1.ExecuteAsync(`0,System.Threading.CancellationToken)
+  name: ExecuteAsync(TContext, CancellationToken)
+  href: api/ElectricDrill.AstraRpgHealth.GameActions.Actions.ResurrectEntityGameActionSO-1.html#ElectricDrill_AstraRpgHealth_GameActions_Actions_ResurrectEntityGameActionSO_1_ExecuteAsync__0_System_Threading_CancellationToken_
+  commentId: M:ElectricDrill.AstraRpgHealth.GameActions.Actions.ResurrectEntityGameActionSO`1.ExecuteAsync(`0,System.Threading.CancellationToken)
+  fullName: ElectricDrill.AstraRpgHealth.GameActions.Actions.ResurrectEntityGameActionSO<TContext>.ExecuteAsync(TContext, System.Threading.CancellationToken)
+  fullName.vb: ElectricDrill.AstraRpgHealth.GameActions.Actions.ResurrectEntityGameActionSO(Of TContext).ExecuteAsync(TContext, System.Threading.CancellationToken)
+  nameWithType: ResurrectEntityGameActionSO<TContext>.ExecuteAsync(TContext, CancellationToken)
+  nameWithType.vb: ResurrectEntityGameActionSO(Of TContext).ExecuteAsync(TContext, CancellationToken)
+- uid: ElectricDrill.AstraRpgHealth.GameActions.Actions.ResurrectEntityGameActionSO`1.ExecuteAsync*
+  name: ExecuteAsync
+  href: api/ElectricDrill.AstraRpgHealth.GameActions.Actions.ResurrectEntityGameActionSO-1.html#ElectricDrill_AstraRpgHealth_GameActions_Actions_ResurrectEntityGameActionSO_1_ExecuteAsync_
+  commentId: Overload:ElectricDrill.AstraRpgHealth.GameActions.Actions.ResurrectEntityGameActionSO`1.ExecuteAsync
+  isSpec: "True"
+  fullName: ElectricDrill.AstraRpgHealth.GameActions.Actions.ResurrectEntityGameActionSO<TContext>.ExecuteAsync
+  fullName.vb: ElectricDrill.AstraRpgHealth.GameActions.Actions.ResurrectEntityGameActionSO(Of TContext).ExecuteAsync
+  nameWithType: ResurrectEntityGameActionSO<TContext>.ExecuteAsync
+  nameWithType.vb: ResurrectEntityGameActionSO(Of TContext).ExecuteAsync
+- uid: ElectricDrill.AstraRpgHealth.GameActions.Actions.ResurrectEntityGameActionSO`1._flatHpToRecover
+  name: _flatHpToRecover
+  href: api/ElectricDrill.AstraRpgHealth.GameActions.Actions.ResurrectEntityGameActionSO-1.html#ElectricDrill_AstraRpgHealth_GameActions_Actions_ResurrectEntityGameActionSO_1__flatHpToRecover
+  commentId: F:ElectricDrill.AstraRpgHealth.GameActions.Actions.ResurrectEntityGameActionSO`1._flatHpToRecover
+  fullName: ElectricDrill.AstraRpgHealth.GameActions.Actions.ResurrectEntityGameActionSO<TContext>._flatHpToRecover
+  fullName.vb: ElectricDrill.AstraRpgHealth.GameActions.Actions.ResurrectEntityGameActionSO(Of TContext)._flatHpToRecover
+  nameWithType: ResurrectEntityGameActionSO<TContext>._flatHpToRecover
+  nameWithType.vb: ResurrectEntityGameActionSO(Of TContext)._flatHpToRecover
+- uid: ElectricDrill.AstraRpgHealth.GameActions.Actions.ResurrectEntityGameActionSO`1._percentageHpToRecover
+  name: _percentageHpToRecover
+  href: api/ElectricDrill.AstraRpgHealth.GameActions.Actions.ResurrectEntityGameActionSO-1.html#ElectricDrill_AstraRpgHealth_GameActions_Actions_ResurrectEntityGameActionSO_1__percentageHpToRecover
+  commentId: F:ElectricDrill.AstraRpgHealth.GameActions.Actions.ResurrectEntityGameActionSO`1._percentageHpToRecover
+  fullName: ElectricDrill.AstraRpgHealth.GameActions.Actions.ResurrectEntityGameActionSO<TContext>._percentageHpToRecover
+  fullName.vb: ElectricDrill.AstraRpgHealth.GameActions.Actions.ResurrectEntityGameActionSO(Of TContext)._percentageHpToRecover
+  nameWithType: ResurrectEntityGameActionSO<TContext>._percentageHpToRecover
+  nameWithType.vb: ResurrectEntityGameActionSO(Of TContext)._percentageHpToRecover
+- uid: ElectricDrill.AstraRpgHealth.GameActions.Actions.ResurrectEntityGameActionSO`1._usePercentageHp
+  name: _usePercentageHp
+  href: api/ElectricDrill.AstraRpgHealth.GameActions.Actions.ResurrectEntityGameActionSO-1.html#ElectricDrill_AstraRpgHealth_GameActions_Actions_ResurrectEntityGameActionSO_1__usePercentageHp
+  commentId: F:ElectricDrill.AstraRpgHealth.GameActions.Actions.ResurrectEntityGameActionSO`1._usePercentageHp
+  fullName: ElectricDrill.AstraRpgHealth.GameActions.Actions.ResurrectEntityGameActionSO<TContext>._usePercentageHp
+  fullName.vb: ElectricDrill.AstraRpgHealth.GameActions.Actions.ResurrectEntityGameActionSO(Of TContext)._usePercentageHp
+  nameWithType: ResurrectEntityGameActionSO<TContext>._usePercentageHp
+  nameWithType.vb: ResurrectEntityGameActionSO(Of TContext)._usePercentageHp
 - uid: ElectricDrill.AstraRpgHealth.GameActions.Actions.ResurrectGameActionSO`1
   name: ResurrectGameActionSO<TContext>
   href: api/ElectricDrill.AstraRpgHealth.GameActions.Actions.ResurrectGameActionSO-1.html
@@ -4874,6 +5934,142 @@ references:
   fullName.vb: ElectricDrill.AstraRpgHealth.GameActions.Actions.ResurrectGameActionSO(Of TContext)._usePercentageHp
   nameWithType: ResurrectGameActionSO<TContext>._usePercentageHp
   nameWithType.vb: ResurrectGameActionSO(Of TContext)._usePercentageHp
+- uid: ElectricDrill.AstraRpgHealth.GameActions.Actions.SetEntityOverrideOnDeathGameActionSO`1
+  name: SetEntityOverrideOnDeathGameActionSO<TContext>
+  href: api/ElectricDrill.AstraRpgHealth.GameActions.Actions.SetEntityOverrideOnDeathGameActionSO-1.html
+  commentId: T:ElectricDrill.AstraRpgHealth.GameActions.Actions.SetEntityOverrideOnDeathGameActionSO`1
+  name.vb: SetEntityOverrideOnDeathGameActionSO(Of TContext)
+  fullName: ElectricDrill.AstraRpgHealth.GameActions.Actions.SetEntityOverrideOnDeathGameActionSO<TContext>
+  fullName.vb: ElectricDrill.AstraRpgHealth.GameActions.Actions.SetEntityOverrideOnDeathGameActionSO(Of TContext)
+  nameWithType: SetEntityOverrideOnDeathGameActionSO<TContext>
+  nameWithType.vb: SetEntityOverrideOnDeathGameActionSO(Of TContext)
+- uid: ElectricDrill.AstraRpgHealth.GameActions.Actions.SetEntityOverrideOnDeathGameActionSO`1.ExecuteAsync(`0,System.Threading.CancellationToken)
+  name: ExecuteAsync(TContext, CancellationToken)
+  href: api/ElectricDrill.AstraRpgHealth.GameActions.Actions.SetEntityOverrideOnDeathGameActionSO-1.html#ElectricDrill_AstraRpgHealth_GameActions_Actions_SetEntityOverrideOnDeathGameActionSO_1_ExecuteAsync__0_System_Threading_CancellationToken_
+  commentId: M:ElectricDrill.AstraRpgHealth.GameActions.Actions.SetEntityOverrideOnDeathGameActionSO`1.ExecuteAsync(`0,System.Threading.CancellationToken)
+  fullName: ElectricDrill.AstraRpgHealth.GameActions.Actions.SetEntityOverrideOnDeathGameActionSO<TContext>.ExecuteAsync(TContext, System.Threading.CancellationToken)
+  fullName.vb: ElectricDrill.AstraRpgHealth.GameActions.Actions.SetEntityOverrideOnDeathGameActionSO(Of TContext).ExecuteAsync(TContext, System.Threading.CancellationToken)
+  nameWithType: SetEntityOverrideOnDeathGameActionSO<TContext>.ExecuteAsync(TContext, CancellationToken)
+  nameWithType.vb: SetEntityOverrideOnDeathGameActionSO(Of TContext).ExecuteAsync(TContext, CancellationToken)
+- uid: ElectricDrill.AstraRpgHealth.GameActions.Actions.SetEntityOverrideOnDeathGameActionSO`1.ExecuteAsync*
+  name: ExecuteAsync
+  href: api/ElectricDrill.AstraRpgHealth.GameActions.Actions.SetEntityOverrideOnDeathGameActionSO-1.html#ElectricDrill_AstraRpgHealth_GameActions_Actions_SetEntityOverrideOnDeathGameActionSO_1_ExecuteAsync_
+  commentId: Overload:ElectricDrill.AstraRpgHealth.GameActions.Actions.SetEntityOverrideOnDeathGameActionSO`1.ExecuteAsync
+  isSpec: "True"
+  fullName: ElectricDrill.AstraRpgHealth.GameActions.Actions.SetEntityOverrideOnDeathGameActionSO<TContext>.ExecuteAsync
+  fullName.vb: ElectricDrill.AstraRpgHealth.GameActions.Actions.SetEntityOverrideOnDeathGameActionSO(Of TContext).ExecuteAsync
+  nameWithType: SetEntityOverrideOnDeathGameActionSO<TContext>.ExecuteAsync
+  nameWithType.vb: SetEntityOverrideOnDeathGameActionSO(Of TContext).ExecuteAsync
+- uid: ElectricDrill.AstraRpgHealth.GameActions.Actions.SetEntityOverrideOnResurrectionGameActionSO`1
+  name: SetEntityOverrideOnResurrectionGameActionSO<TContext>
+  href: api/ElectricDrill.AstraRpgHealth.GameActions.Actions.SetEntityOverrideOnResurrectionGameActionSO-1.html
+  commentId: T:ElectricDrill.AstraRpgHealth.GameActions.Actions.SetEntityOverrideOnResurrectionGameActionSO`1
+  name.vb: SetEntityOverrideOnResurrectionGameActionSO(Of TContext)
+  fullName: ElectricDrill.AstraRpgHealth.GameActions.Actions.SetEntityOverrideOnResurrectionGameActionSO<TContext>
+  fullName.vb: ElectricDrill.AstraRpgHealth.GameActions.Actions.SetEntityOverrideOnResurrectionGameActionSO(Of TContext)
+  nameWithType: SetEntityOverrideOnResurrectionGameActionSO<TContext>
+  nameWithType.vb: SetEntityOverrideOnResurrectionGameActionSO(Of TContext)
+- uid: ElectricDrill.AstraRpgHealth.GameActions.Actions.SetEntityOverrideOnResurrectionGameActionSO`1.ExecuteAsync(`0,System.Threading.CancellationToken)
+  name: ExecuteAsync(TContext, CancellationToken)
+  href: api/ElectricDrill.AstraRpgHealth.GameActions.Actions.SetEntityOverrideOnResurrectionGameActionSO-1.html#ElectricDrill_AstraRpgHealth_GameActions_Actions_SetEntityOverrideOnResurrectionGameActionSO_1_ExecuteAsync__0_System_Threading_CancellationToken_
+  commentId: M:ElectricDrill.AstraRpgHealth.GameActions.Actions.SetEntityOverrideOnResurrectionGameActionSO`1.ExecuteAsync(`0,System.Threading.CancellationToken)
+  fullName: ElectricDrill.AstraRpgHealth.GameActions.Actions.SetEntityOverrideOnResurrectionGameActionSO<TContext>.ExecuteAsync(TContext, System.Threading.CancellationToken)
+  fullName.vb: ElectricDrill.AstraRpgHealth.GameActions.Actions.SetEntityOverrideOnResurrectionGameActionSO(Of TContext).ExecuteAsync(TContext, System.Threading.CancellationToken)
+  nameWithType: SetEntityOverrideOnResurrectionGameActionSO<TContext>.ExecuteAsync(TContext, CancellationToken)
+  nameWithType.vb: SetEntityOverrideOnResurrectionGameActionSO(Of TContext).ExecuteAsync(TContext, CancellationToken)
+- uid: ElectricDrill.AstraRpgHealth.GameActions.Actions.SetEntityOverrideOnResurrectionGameActionSO`1.ExecuteAsync*
+  name: ExecuteAsync
+  href: api/ElectricDrill.AstraRpgHealth.GameActions.Actions.SetEntityOverrideOnResurrectionGameActionSO-1.html#ElectricDrill_AstraRpgHealth_GameActions_Actions_SetEntityOverrideOnResurrectionGameActionSO_1_ExecuteAsync_
+  commentId: Overload:ElectricDrill.AstraRpgHealth.GameActions.Actions.SetEntityOverrideOnResurrectionGameActionSO`1.ExecuteAsync
+  isSpec: "True"
+  fullName: ElectricDrill.AstraRpgHealth.GameActions.Actions.SetEntityOverrideOnResurrectionGameActionSO<TContext>.ExecuteAsync
+  fullName.vb: ElectricDrill.AstraRpgHealth.GameActions.Actions.SetEntityOverrideOnResurrectionGameActionSO(Of TContext).ExecuteAsync
+  nameWithType: SetEntityOverrideOnResurrectionGameActionSO<TContext>.ExecuteAsync
+  nameWithType.vb: SetEntityOverrideOnResurrectionGameActionSO(Of TContext).ExecuteAsync
+- uid: ElectricDrill.AstraRpgHealth.GameActions.Actions.WithDamageResolutionContext
+  name: ElectricDrill.AstraRpgHealth.GameActions.Actions.WithDamageResolutionContext
+  href: api/ElectricDrill.AstraRpgHealth.GameActions.Actions.WithDamageResolutionContext.html
+  commentId: N:ElectricDrill.AstraRpgHealth.GameActions.Actions.WithDamageResolutionContext
+  fullName: ElectricDrill.AstraRpgHealth.GameActions.Actions.WithDamageResolutionContext
+  nameWithType: ElectricDrill.AstraRpgHealth.GameActions.Actions.WithDamageResolutionContext
+- uid: ElectricDrill.AstraRpgHealth.GameActions.Actions.WithDamageResolutionContext.CounterDamageOnDamageGameActionSO
+  name: CounterDamageOnDamageGameActionSO
+  href: api/ElectricDrill.AstraRpgHealth.GameActions.Actions.WithDamageResolutionContext.CounterDamageOnDamageGameActionSO.html
+  commentId: T:ElectricDrill.AstraRpgHealth.GameActions.Actions.WithDamageResolutionContext.CounterDamageOnDamageGameActionSO
+  fullName: ElectricDrill.AstraRpgHealth.GameActions.Actions.WithDamageResolutionContext.CounterDamageOnDamageGameActionSO
+  nameWithType: CounterDamageOnDamageGameActionSO
+- uid: ElectricDrill.AstraRpgHealth.GameActions.Actions.WithEntityDiedContext
+  name: ElectricDrill.AstraRpgHealth.GameActions.Actions.WithEntityDiedContext
+  href: api/ElectricDrill.AstraRpgHealth.GameActions.Actions.WithEntityDiedContext.html
+  commentId: N:ElectricDrill.AstraRpgHealth.GameActions.Actions.WithEntityDiedContext
+  fullName: ElectricDrill.AstraRpgHealth.GameActions.Actions.WithEntityDiedContext
+  nameWithType: ElectricDrill.AstraRpgHealth.GameActions.Actions.WithEntityDiedContext
+- uid: ElectricDrill.AstraRpgHealth.GameActions.Actions.WithEntityDiedContext.CounterDamageOnDeathGameActionSO
+  name: CounterDamageOnDeathGameActionSO
+  href: api/ElectricDrill.AstraRpgHealth.GameActions.Actions.WithEntityDiedContext.CounterDamageOnDeathGameActionSO.html
+  commentId: T:ElectricDrill.AstraRpgHealth.GameActions.Actions.WithEntityDiedContext.CounterDamageOnDeathGameActionSO
+  fullName: ElectricDrill.AstraRpgHealth.GameActions.Actions.WithEntityDiedContext.CounterDamageOnDeathGameActionSO
+  nameWithType: CounterDamageOnDeathGameActionSO
+- uid: ElectricDrill.AstraRpgHealth.GameActions.Actions.WithIHasEntity
+  name: ElectricDrill.AstraRpgHealth.GameActions.Actions.WithIHasEntity
+  href: api/ElectricDrill.AstraRpgHealth.GameActions.Actions.WithIHasEntity.html
+  commentId: N:ElectricDrill.AstraRpgHealth.GameActions.Actions.WithIHasEntity
+  fullName: ElectricDrill.AstraRpgHealth.GameActions.Actions.WithIHasEntity
+  nameWithType: ElectricDrill.AstraRpgHealth.GameActions.Actions.WithIHasEntity
+- uid: ElectricDrill.AstraRpgHealth.GameActions.Actions.WithIHasEntity.EntityContextToDamageResolutionContextProjectionGameAction
+  name: EntityContextToDamageResolutionContextProjectionGameAction
+  href: api/ElectricDrill.AstraRpgHealth.GameActions.Actions.WithIHasEntity.EntityContextToDamageResolutionContextProjectionGameAction.html
+  commentId: T:ElectricDrill.AstraRpgHealth.GameActions.Actions.WithIHasEntity.EntityContextToDamageResolutionContextProjectionGameAction
+  fullName: ElectricDrill.AstraRpgHealth.GameActions.Actions.WithIHasEntity.EntityContextToDamageResolutionContextProjectionGameAction
+  nameWithType: EntityContextToDamageResolutionContextProjectionGameAction
+- uid: ElectricDrill.AstraRpgHealth.GameActions.Actions.WithIHasEntity.EntityContextToEntityDiedContextProjectionGameAction
+  name: EntityContextToEntityDiedContextProjectionGameAction
+  href: api/ElectricDrill.AstraRpgHealth.GameActions.Actions.WithIHasEntity.EntityContextToEntityDiedContextProjectionGameAction.html
+  commentId: T:ElectricDrill.AstraRpgHealth.GameActions.Actions.WithIHasEntity.EntityContextToEntityDiedContextProjectionGameAction
+  fullName: ElectricDrill.AstraRpgHealth.GameActions.Actions.WithIHasEntity.EntityContextToEntityDiedContextProjectionGameAction
+  nameWithType: EntityContextToEntityDiedContextProjectionGameAction
+- uid: ElectricDrill.AstraRpgHealth.GameActions.Actions.WithIHasEntity.EntityContextToPreDamageContextProjectionGameAction
+  name: EntityContextToPreDamageContextProjectionGameAction
+  href: api/ElectricDrill.AstraRpgHealth.GameActions.Actions.WithIHasEntity.EntityContextToPreDamageContextProjectionGameAction.html
+  commentId: T:ElectricDrill.AstraRpgHealth.GameActions.Actions.WithIHasEntity.EntityContextToPreDamageContextProjectionGameAction
+  fullName: ElectricDrill.AstraRpgHealth.GameActions.Actions.WithIHasEntity.EntityContextToPreDamageContextProjectionGameAction
+  nameWithType: EntityContextToPreDamageContextProjectionGameAction
+- uid: ElectricDrill.AstraRpgHealth.GameActions.Actions.WithIHasEntity.ResurrectEntityIHasEntityGameActionSO
+  name: ResurrectEntityIHasEntityGameActionSO
+  href: api/ElectricDrill.AstraRpgHealth.GameActions.Actions.WithIHasEntity.ResurrectEntityIHasEntityGameActionSO.html
+  commentId: T:ElectricDrill.AstraRpgHealth.GameActions.Actions.WithIHasEntity.ResurrectEntityIHasEntityGameActionSO
+  fullName: ElectricDrill.AstraRpgHealth.GameActions.Actions.WithIHasEntity.ResurrectEntityIHasEntityGameActionSO
+  nameWithType: ResurrectEntityIHasEntityGameActionSO
+- uid: ElectricDrill.AstraRpgHealth.GameActions.Actions.WithIHasEntity.SetEntityOverrideOnDeathIHasEntityGameActionSo
+  name: SetEntityOverrideOnDeathIHasEntityGameActionSo
+  href: api/ElectricDrill.AstraRpgHealth.GameActions.Actions.WithIHasEntity.SetEntityOverrideOnDeathIHasEntityGameActionSo.html
+  commentId: T:ElectricDrill.AstraRpgHealth.GameActions.Actions.WithIHasEntity.SetEntityOverrideOnDeathIHasEntityGameActionSo
+  fullName: ElectricDrill.AstraRpgHealth.GameActions.Actions.WithIHasEntity.SetEntityOverrideOnDeathIHasEntityGameActionSo
+  nameWithType: SetEntityOverrideOnDeathIHasEntityGameActionSo
+- uid: ElectricDrill.AstraRpgHealth.GameActions.Actions.WithIHasEntity.SetEntityOverrideOnResurrectionIHasEntityGameActionSo
+  name: SetEntityOverrideOnResurrectionIHasEntityGameActionSo
+  href: api/ElectricDrill.AstraRpgHealth.GameActions.Actions.WithIHasEntity.SetEntityOverrideOnResurrectionIHasEntityGameActionSo.html
+  commentId: T:ElectricDrill.AstraRpgHealth.GameActions.Actions.WithIHasEntity.SetEntityOverrideOnResurrectionIHasEntityGameActionSo
+  fullName: ElectricDrill.AstraRpgHealth.GameActions.Actions.WithIHasEntity.SetEntityOverrideOnResurrectionIHasEntityGameActionSo
+  nameWithType: SetEntityOverrideOnResurrectionIHasEntityGameActionSo
+- uid: ElectricDrill.AstraRpgHealth.GameActions.Actions.WithPreDamageContext
+  name: ElectricDrill.AstraRpgHealth.GameActions.Actions.WithPreDamageContext
+  href: api/ElectricDrill.AstraRpgHealth.GameActions.Actions.WithPreDamageContext.html
+  commentId: N:ElectricDrill.AstraRpgHealth.GameActions.Actions.WithPreDamageContext
+  fullName: ElectricDrill.AstraRpgHealth.GameActions.Actions.WithPreDamageContext
+  nameWithType: ElectricDrill.AstraRpgHealth.GameActions.Actions.WithPreDamageContext
+- uid: ElectricDrill.AstraRpgHealth.GameActions.Actions.WithPreDamageContext.CompositePreDamageContextGameActionSO
+  name: CompositePreDamageContextGameActionSO
+  href: api/ElectricDrill.AstraRpgHealth.GameActions.Actions.WithPreDamageContext.CompositePreDamageContextGameActionSO.html
+  commentId: T:ElectricDrill.AstraRpgHealth.GameActions.Actions.WithPreDamageContext.CompositePreDamageContextGameActionSO
+  fullName: ElectricDrill.AstraRpgHealth.GameActions.Actions.WithPreDamageContext.CompositePreDamageContextGameActionSO
+  nameWithType: CompositePreDamageContextGameActionSO
+- uid: ElectricDrill.AstraRpgHealth.GameActions.Actions.WithPreDamageContext.CounterDamageOnPreDamageGameActionSO
+  name: CounterDamageOnPreDamageGameActionSO
+  href: api/ElectricDrill.AstraRpgHealth.GameActions.Actions.WithPreDamageContext.CounterDamageOnPreDamageGameActionSO.html
+  commentId: T:ElectricDrill.AstraRpgHealth.GameActions.Actions.WithPreDamageContext.CounterDamageOnPreDamageGameActionSO
+  fullName: ElectricDrill.AstraRpgHealth.GameActions.Actions.WithPreDamageContext.CounterDamageOnPreDamageGameActionSO
+  nameWithType: CounterDamageOnPreDamageGameActionSO
 - uid: ElectricDrill.AstraRpgHealth.Heal
   name: ElectricDrill.AstraRpgHealth.Heal
   href: api/ElectricDrill.AstraRpgHealth.Heal.html
@@ -5059,6 +6255,19 @@ references:
   isSpec: "True"
   fullName: ElectricDrill.AstraRpgHealth.Heal.HealSourceSO.PercentageHealModificationStat
   nameWithType: HealSourceSO.PercentageHealModificationStat
+- uid: ElectricDrill.AstraRpgHealth.Heal.HealSourceSO.Tags
+  name: Tags
+  href: api/ElectricDrill.AstraRpgHealth.Heal.HealSourceSO.html#ElectricDrill_AstraRpgHealth_Heal_HealSourceSO_Tags
+  commentId: P:ElectricDrill.AstraRpgHealth.Heal.HealSourceSO.Tags
+  fullName: ElectricDrill.AstraRpgHealth.Heal.HealSourceSO.Tags
+  nameWithType: HealSourceSO.Tags
+- uid: ElectricDrill.AstraRpgHealth.Heal.HealSourceSO.Tags*
+  name: Tags
+  href: api/ElectricDrill.AstraRpgHealth.Heal.HealSourceSO.html#ElectricDrill_AstraRpgHealth_Heal_HealSourceSO_Tags_
+  commentId: Overload:ElectricDrill.AstraRpgHealth.Heal.HealSourceSO.Tags
+  isSpec: "True"
+  fullName: ElectricDrill.AstraRpgHealth.Heal.HealSourceSO.Tags
+  nameWithType: HealSourceSO.Tags
 - uid: ElectricDrill.AstraRpgHealth.Heal.HealSourceSO.ToString
   name: ToString()
   href: api/ElectricDrill.AstraRpgHealth.Heal.HealSourceSO.html#ElectricDrill_AstraRpgHealth_Heal_HealSourceSO_ToString
@@ -5239,6 +6448,19 @@ references:
   isSpec: "True"
   fullName: ElectricDrill.AstraRpgHealth.Heal.LifestealConfigSO.LifestealMappings
   nameWithType: LifestealConfigSO.LifestealMappings
+- uid: ElectricDrill.AstraRpgHealth.Heal.LifestealConfigSO.Tags
+  name: Tags
+  href: api/ElectricDrill.AstraRpgHealth.Heal.LifestealConfigSO.html#ElectricDrill_AstraRpgHealth_Heal_LifestealConfigSO_Tags
+  commentId: P:ElectricDrill.AstraRpgHealth.Heal.LifestealConfigSO.Tags
+  fullName: ElectricDrill.AstraRpgHealth.Heal.LifestealConfigSO.Tags
+  nameWithType: LifestealConfigSO.Tags
+- uid: ElectricDrill.AstraRpgHealth.Heal.LifestealConfigSO.Tags*
+  name: Tags
+  href: api/ElectricDrill.AstraRpgHealth.Heal.LifestealConfigSO.html#ElectricDrill_AstraRpgHealth_Heal_LifestealConfigSO_Tags_
+  commentId: Overload:ElectricDrill.AstraRpgHealth.Heal.LifestealConfigSO.Tags
+  isSpec: "True"
+  fullName: ElectricDrill.AstraRpgHealth.Heal.LifestealConfigSO.Tags
+  nameWithType: LifestealConfigSO.Tags
 - uid: ElectricDrill.AstraRpgHealth.Heal.LifestealStatConfig
   name: LifestealStatConfig
   href: api/ElectricDrill.AstraRpgHealth.Heal.LifestealStatConfig.html
@@ -5329,6 +6551,19 @@ references:
   isSpec: "True"
   fullName: ElectricDrill.AstraRpgHealth.Heal.PreHealContext.CriticalMultiplier
   nameWithType: PreHealContext.CriticalMultiplier
+- uid: ElectricDrill.AstraRpgHealth.Heal.PreHealContext.Entity
+  name: Entity
+  href: api/ElectricDrill.AstraRpgHealth.Heal.PreHealContext.html#ElectricDrill_AstraRpgHealth_Heal_PreHealContext_Entity
+  commentId: P:ElectricDrill.AstraRpgHealth.Heal.PreHealContext.Entity
+  fullName: ElectricDrill.AstraRpgHealth.Heal.PreHealContext.Entity
+  nameWithType: PreHealContext.Entity
+- uid: ElectricDrill.AstraRpgHealth.Heal.PreHealContext.Entity*
+  name: Entity
+  href: api/ElectricDrill.AstraRpgHealth.Heal.PreHealContext.html#ElectricDrill_AstraRpgHealth_Heal_PreHealContext_Entity_
+  commentId: Overload:ElectricDrill.AstraRpgHealth.Heal.PreHealContext.Entity
+  isSpec: "True"
+  fullName: ElectricDrill.AstraRpgHealth.Heal.PreHealContext.Entity
+  nameWithType: PreHealContext.Entity
 - uid: ElectricDrill.AstraRpgHealth.Heal.PreHealContext.HealInfoAmount
   name: PreHealContext.HealInfoAmount
   href: api/ElectricDrill.AstraRpgHealth.Heal.PreHealContext.HealInfoAmount.html
@@ -5421,6 +6656,19 @@ references:
   isSpec: "True"
   fullName: ElectricDrill.AstraRpgHealth.Heal.PreHealContext.HealSource
   nameWithType: PreHealContext.HealSource
+- uid: ElectricDrill.AstraRpgHealth.Heal.PreHealContext.Instigator
+  name: Instigator
+  href: api/ElectricDrill.AstraRpgHealth.Heal.PreHealContext.html#ElectricDrill_AstraRpgHealth_Heal_PreHealContext_Instigator
+  commentId: P:ElectricDrill.AstraRpgHealth.Heal.PreHealContext.Instigator
+  fullName: ElectricDrill.AstraRpgHealth.Heal.PreHealContext.Instigator
+  nameWithType: PreHealContext.Instigator
+- uid: ElectricDrill.AstraRpgHealth.Heal.PreHealContext.Instigator*
+  name: Instigator
+  href: api/ElectricDrill.AstraRpgHealth.Heal.PreHealContext.html#ElectricDrill_AstraRpgHealth_Heal_PreHealContext_Instigator_
+  commentId: Overload:ElectricDrill.AstraRpgHealth.Heal.PreHealContext.Instigator
+  isSpec: "True"
+  fullName: ElectricDrill.AstraRpgHealth.Heal.PreHealContext.Instigator
+  nameWithType: PreHealContext.Instigator
 - uid: ElectricDrill.AstraRpgHealth.Heal.PreHealContext.IsCritical
   name: IsCritical
   href: api/ElectricDrill.AstraRpgHealth.Heal.PreHealContext.html#ElectricDrill_AstraRpgHealth_Heal_PreHealContext_IsCritical
@@ -5434,6 +6682,32 @@ references:
   isSpec: "True"
   fullName: ElectricDrill.AstraRpgHealth.Heal.PreHealContext.IsCritical
   nameWithType: PreHealContext.IsCritical
+- uid: ElectricDrill.AstraRpgHealth.Heal.PreHealContext.IsReactable
+  name: IsReactable
+  href: api/ElectricDrill.AstraRpgHealth.Heal.PreHealContext.html#ElectricDrill_AstraRpgHealth_Heal_PreHealContext_IsReactable
+  commentId: P:ElectricDrill.AstraRpgHealth.Heal.PreHealContext.IsReactable
+  fullName: ElectricDrill.AstraRpgHealth.Heal.PreHealContext.IsReactable
+  nameWithType: PreHealContext.IsReactable
+- uid: ElectricDrill.AstraRpgHealth.Heal.PreHealContext.IsReactable*
+  name: IsReactable
+  href: api/ElectricDrill.AstraRpgHealth.Heal.PreHealContext.html#ElectricDrill_AstraRpgHealth_Heal_PreHealContext_IsReactable_
+  commentId: Overload:ElectricDrill.AstraRpgHealth.Heal.PreHealContext.IsReactable
+  isSpec: "True"
+  fullName: ElectricDrill.AstraRpgHealth.Heal.PreHealContext.IsReactable
+  nameWithType: PreHealContext.IsReactable
+- uid: ElectricDrill.AstraRpgHealth.Heal.PreHealContext.Performer
+  name: Performer
+  href: api/ElectricDrill.AstraRpgHealth.Heal.PreHealContext.html#ElectricDrill_AstraRpgHealth_Heal_PreHealContext_Performer
+  commentId: P:ElectricDrill.AstraRpgHealth.Heal.PreHealContext.Performer
+  fullName: ElectricDrill.AstraRpgHealth.Heal.PreHealContext.Performer
+  nameWithType: PreHealContext.Performer
+- uid: ElectricDrill.AstraRpgHealth.Heal.PreHealContext.Performer*
+  name: Performer
+  href: api/ElectricDrill.AstraRpgHealth.Heal.PreHealContext.html#ElectricDrill_AstraRpgHealth_Heal_PreHealContext_Performer_
+  commentId: Overload:ElectricDrill.AstraRpgHealth.Heal.PreHealContext.Performer
+  isSpec: "True"
+  fullName: ElectricDrill.AstraRpgHealth.Heal.PreHealContext.Performer
+  nameWithType: PreHealContext.Performer
 - uid: ElectricDrill.AstraRpgHealth.Heal.PreHealContext.PreHealInfoStepBuilder
   name: PreHealContext.PreHealInfoStepBuilder
   href: api/ElectricDrill.AstraRpgHealth.Heal.PreHealContext.PreHealInfoStepBuilder.html
@@ -5498,6 +6772,19 @@ references:
   isSpec: "True"
   fullName: ElectricDrill.AstraRpgHealth.Heal.PreHealContext.PreHealInfoStepBuilder.WithHealer
   nameWithType: PreHealContext.PreHealInfoStepBuilder.WithHealer
+- uid: ElectricDrill.AstraRpgHealth.Heal.PreHealContext.PreHealInfoStepBuilder.WithInstigator(ElectricDrill.AstraRpgFramework.Contexts.IEffectInstigator)
+  name: WithInstigator(IEffectInstigator)
+  href: api/ElectricDrill.AstraRpgHealth.Heal.PreHealContext.PreHealInfoStepBuilder.html#ElectricDrill_AstraRpgHealth_Heal_PreHealContext_PreHealInfoStepBuilder_WithInstigator_ElectricDrill_AstraRpgFramework_Contexts_IEffectInstigator_
+  commentId: M:ElectricDrill.AstraRpgHealth.Heal.PreHealContext.PreHealInfoStepBuilder.WithInstigator(ElectricDrill.AstraRpgFramework.Contexts.IEffectInstigator)
+  fullName: ElectricDrill.AstraRpgHealth.Heal.PreHealContext.PreHealInfoStepBuilder.WithInstigator(ElectricDrill.AstraRpgFramework.Contexts.IEffectInstigator)
+  nameWithType: PreHealContext.PreHealInfoStepBuilder.WithInstigator(IEffectInstigator)
+- uid: ElectricDrill.AstraRpgHealth.Heal.PreHealContext.PreHealInfoStepBuilder.WithInstigator*
+  name: WithInstigator
+  href: api/ElectricDrill.AstraRpgHealth.Heal.PreHealContext.PreHealInfoStepBuilder.html#ElectricDrill_AstraRpgHealth_Heal_PreHealContext_PreHealInfoStepBuilder_WithInstigator_
+  commentId: Overload:ElectricDrill.AstraRpgHealth.Heal.PreHealContext.PreHealInfoStepBuilder.WithInstigator
+  isSpec: "True"
+  fullName: ElectricDrill.AstraRpgHealth.Heal.PreHealContext.PreHealInfoStepBuilder.WithInstigator
+  nameWithType: PreHealContext.PreHealInfoStepBuilder.WithInstigator
 - uid: ElectricDrill.AstraRpgHealth.Heal.PreHealContext.PreHealInfoStepBuilder.WithIsCritical(System.Boolean)
   name: WithIsCritical(bool)
   href: api/ElectricDrill.AstraRpgHealth.Heal.PreHealContext.PreHealInfoStepBuilder.html#ElectricDrill_AstraRpgHealth_Heal_PreHealContext_PreHealInfoStepBuilder_WithIsCritical_System_Boolean_
@@ -5514,6 +6801,22 @@ references:
   isSpec: "True"
   fullName: ElectricDrill.AstraRpgHealth.Heal.PreHealContext.PreHealInfoStepBuilder.WithIsCritical
   nameWithType: PreHealContext.PreHealInfoStepBuilder.WithIsCritical
+- uid: ElectricDrill.AstraRpgHealth.Heal.PreHealContext.PreHealInfoStepBuilder.WithIsReactable(System.Boolean)
+  name: WithIsReactable(bool)
+  href: api/ElectricDrill.AstraRpgHealth.Heal.PreHealContext.PreHealInfoStepBuilder.html#ElectricDrill_AstraRpgHealth_Heal_PreHealContext_PreHealInfoStepBuilder_WithIsReactable_System_Boolean_
+  commentId: M:ElectricDrill.AstraRpgHealth.Heal.PreHealContext.PreHealInfoStepBuilder.WithIsReactable(System.Boolean)
+  name.vb: WithIsReactable(Boolean)
+  fullName: ElectricDrill.AstraRpgHealth.Heal.PreHealContext.PreHealInfoStepBuilder.WithIsReactable(bool)
+  fullName.vb: ElectricDrill.AstraRpgHealth.Heal.PreHealContext.PreHealInfoStepBuilder.WithIsReactable(Boolean)
+  nameWithType: PreHealContext.PreHealInfoStepBuilder.WithIsReactable(bool)
+  nameWithType.vb: PreHealContext.PreHealInfoStepBuilder.WithIsReactable(Boolean)
+- uid: ElectricDrill.AstraRpgHealth.Heal.PreHealContext.PreHealInfoStepBuilder.WithIsReactable*
+  name: WithIsReactable
+  href: api/ElectricDrill.AstraRpgHealth.Heal.PreHealContext.PreHealInfoStepBuilder.html#ElectricDrill_AstraRpgHealth_Heal_PreHealContext_PreHealInfoStepBuilder_WithIsReactable_
+  commentId: Overload:ElectricDrill.AstraRpgHealth.Heal.PreHealContext.PreHealInfoStepBuilder.WithIsReactable
+  isSpec: "True"
+  fullName: ElectricDrill.AstraRpgHealth.Heal.PreHealContext.PreHealInfoStepBuilder.WithIsReactable
+  nameWithType: PreHealContext.PreHealInfoStepBuilder.WithIsReactable
 - uid: ElectricDrill.AstraRpgHealth.Heal.PreHealContext.PreHealInfoStepBuilder.WithSource(ElectricDrill.AstraRpgHealth.Heal.HealSourceSO)
   name: WithSource(HealSourceSO)
   href: api/ElectricDrill.AstraRpgHealth.Heal.PreHealContext.PreHealInfoStepBuilder.html#ElectricDrill_AstraRpgHealth_Heal_PreHealContext_PreHealInfoStepBuilder_WithSource_ElectricDrill_AstraRpgHealth_Heal_HealSourceSO_
@@ -5540,19 +6843,6 @@ references:
   isSpec: "True"
   fullName: ElectricDrill.AstraRpgHealth.Heal.PreHealContext.PreHealInfoStepBuilder.WithTarget
   nameWithType: PreHealContext.PreHealInfoStepBuilder.WithTarget
-- uid: ElectricDrill.AstraRpgHealth.Heal.PreHealContext.Source
-  name: Source
-  href: api/ElectricDrill.AstraRpgHealth.Heal.PreHealContext.html#ElectricDrill_AstraRpgHealth_Heal_PreHealContext_Source
-  commentId: P:ElectricDrill.AstraRpgHealth.Heal.PreHealContext.Source
-  fullName: ElectricDrill.AstraRpgHealth.Heal.PreHealContext.Source
-  nameWithType: PreHealContext.Source
-- uid: ElectricDrill.AstraRpgHealth.Heal.PreHealContext.Source*
-  name: Source
-  href: api/ElectricDrill.AstraRpgHealth.Heal.PreHealContext.html#ElectricDrill_AstraRpgHealth_Heal_PreHealContext_Source_
-  commentId: Overload:ElectricDrill.AstraRpgHealth.Heal.PreHealContext.Source
-  isSpec: "True"
-  fullName: ElectricDrill.AstraRpgHealth.Heal.PreHealContext.Source
-  nameWithType: PreHealContext.Source
 - uid: ElectricDrill.AstraRpgHealth.Heal.PreHealContext.Target
   name: Target
   href: api/ElectricDrill.AstraRpgHealth.Heal.PreHealContext.html#ElectricDrill_AstraRpgHealth_Heal_PreHealContext_Target
@@ -5886,6 +7176,19 @@ references:
   isSpec: "True"
   fullName: ElectricDrill.AstraRpgHealth.Heal.ReceivedHealContext.Builder
   nameWithType: ReceivedHealContext.Builder
+- uid: ElectricDrill.AstraRpgHealth.Heal.ReceivedHealContext.Entity
+  name: Entity
+  href: api/ElectricDrill.AstraRpgHealth.Heal.ReceivedHealContext.html#ElectricDrill_AstraRpgHealth_Heal_ReceivedHealContext_Entity
+  commentId: P:ElectricDrill.AstraRpgHealth.Heal.ReceivedHealContext.Entity
+  fullName: ElectricDrill.AstraRpgHealth.Heal.ReceivedHealContext.Entity
+  nameWithType: ReceivedHealContext.Entity
+- uid: ElectricDrill.AstraRpgHealth.Heal.ReceivedHealContext.Entity*
+  name: Entity
+  href: api/ElectricDrill.AstraRpgHealth.Heal.ReceivedHealContext.html#ElectricDrill_AstraRpgHealth_Heal_ReceivedHealContext_Entity_
+  commentId: Overload:ElectricDrill.AstraRpgHealth.Heal.ReceivedHealContext.Entity
+  isSpec: "True"
+  fullName: ElectricDrill.AstraRpgHealth.Heal.ReceivedHealContext.Entity
+  nameWithType: ReceivedHealContext.Entity
 - uid: ElectricDrill.AstraRpgHealth.Heal.ReceivedHealContext.HealAmount
   name: HealAmount
   href: api/ElectricDrill.AstraRpgHealth.Heal.ReceivedHealContext.html#ElectricDrill_AstraRpgHealth_Heal_ReceivedHealContext_HealAmount
@@ -5988,6 +7291,19 @@ references:
   isSpec: "True"
   fullName: ElectricDrill.AstraRpgHealth.Heal.ReceivedHealContext.HealSource
   nameWithType: ReceivedHealContext.HealSource
+- uid: ElectricDrill.AstraRpgHealth.Heal.ReceivedHealContext.Instigator
+  name: Instigator
+  href: api/ElectricDrill.AstraRpgHealth.Heal.ReceivedHealContext.html#ElectricDrill_AstraRpgHealth_Heal_ReceivedHealContext_Instigator
+  commentId: P:ElectricDrill.AstraRpgHealth.Heal.ReceivedHealContext.Instigator
+  fullName: ElectricDrill.AstraRpgHealth.Heal.ReceivedHealContext.Instigator
+  nameWithType: ReceivedHealContext.Instigator
+- uid: ElectricDrill.AstraRpgHealth.Heal.ReceivedHealContext.Instigator*
+  name: Instigator
+  href: api/ElectricDrill.AstraRpgHealth.Heal.ReceivedHealContext.html#ElectricDrill_AstraRpgHealth_Heal_ReceivedHealContext_Instigator_
+  commentId: Overload:ElectricDrill.AstraRpgHealth.Heal.ReceivedHealContext.Instigator
+  isSpec: "True"
+  fullName: ElectricDrill.AstraRpgHealth.Heal.ReceivedHealContext.Instigator
+  nameWithType: ReceivedHealContext.Instigator
 - uid: ElectricDrill.AstraRpgHealth.Heal.ReceivedHealContext.IsCritical
   name: IsCritical
   href: api/ElectricDrill.AstraRpgHealth.Heal.ReceivedHealContext.html#ElectricDrill_AstraRpgHealth_Heal_ReceivedHealContext_IsCritical
@@ -6001,6 +7317,32 @@ references:
   isSpec: "True"
   fullName: ElectricDrill.AstraRpgHealth.Heal.ReceivedHealContext.IsCritical
   nameWithType: ReceivedHealContext.IsCritical
+- uid: ElectricDrill.AstraRpgHealth.Heal.ReceivedHealContext.IsReactable
+  name: IsReactable
+  href: api/ElectricDrill.AstraRpgHealth.Heal.ReceivedHealContext.html#ElectricDrill_AstraRpgHealth_Heal_ReceivedHealContext_IsReactable
+  commentId: P:ElectricDrill.AstraRpgHealth.Heal.ReceivedHealContext.IsReactable
+  fullName: ElectricDrill.AstraRpgHealth.Heal.ReceivedHealContext.IsReactable
+  nameWithType: ReceivedHealContext.IsReactable
+- uid: ElectricDrill.AstraRpgHealth.Heal.ReceivedHealContext.IsReactable*
+  name: IsReactable
+  href: api/ElectricDrill.AstraRpgHealth.Heal.ReceivedHealContext.html#ElectricDrill_AstraRpgHealth_Heal_ReceivedHealContext_IsReactable_
+  commentId: Overload:ElectricDrill.AstraRpgHealth.Heal.ReceivedHealContext.IsReactable
+  isSpec: "True"
+  fullName: ElectricDrill.AstraRpgHealth.Heal.ReceivedHealContext.IsReactable
+  nameWithType: ReceivedHealContext.IsReactable
+- uid: ElectricDrill.AstraRpgHealth.Heal.ReceivedHealContext.Performer
+  name: Performer
+  href: api/ElectricDrill.AstraRpgHealth.Heal.ReceivedHealContext.html#ElectricDrill_AstraRpgHealth_Heal_ReceivedHealContext_Performer
+  commentId: P:ElectricDrill.AstraRpgHealth.Heal.ReceivedHealContext.Performer
+  fullName: ElectricDrill.AstraRpgHealth.Heal.ReceivedHealContext.Performer
+  nameWithType: ReceivedHealContext.Performer
+- uid: ElectricDrill.AstraRpgHealth.Heal.ReceivedHealContext.Performer*
+  name: Performer
+  href: api/ElectricDrill.AstraRpgHealth.Heal.ReceivedHealContext.html#ElectricDrill_AstraRpgHealth_Heal_ReceivedHealContext_Performer_
+  commentId: Overload:ElectricDrill.AstraRpgHealth.Heal.ReceivedHealContext.Performer
+  isSpec: "True"
+  fullName: ElectricDrill.AstraRpgHealth.Heal.ReceivedHealContext.Performer
+  nameWithType: ReceivedHealContext.Performer
 - uid: ElectricDrill.AstraRpgHealth.Heal.ReceivedHealContext.ReceivedHealInfoStepBuilder
   name: ReceivedHealContext.ReceivedHealInfoStepBuilder
   href: api/ElectricDrill.AstraRpgHealth.Heal.ReceivedHealContext.ReceivedHealInfoStepBuilder.html
@@ -6059,6 +7401,19 @@ references:
   isSpec: "True"
   fullName: ElectricDrill.AstraRpgHealth.Heal.ReceivedHealContext.ReceivedHealInfoStepBuilder.WithHealer
   nameWithType: ReceivedHealContext.ReceivedHealInfoStepBuilder.WithHealer
+- uid: ElectricDrill.AstraRpgHealth.Heal.ReceivedHealContext.ReceivedHealInfoStepBuilder.WithInstigator(ElectricDrill.AstraRpgFramework.Contexts.IEffectInstigator)
+  name: WithInstigator(IEffectInstigator)
+  href: api/ElectricDrill.AstraRpgHealth.Heal.ReceivedHealContext.ReceivedHealInfoStepBuilder.html#ElectricDrill_AstraRpgHealth_Heal_ReceivedHealContext_ReceivedHealInfoStepBuilder_WithInstigator_ElectricDrill_AstraRpgFramework_Contexts_IEffectInstigator_
+  commentId: M:ElectricDrill.AstraRpgHealth.Heal.ReceivedHealContext.ReceivedHealInfoStepBuilder.WithInstigator(ElectricDrill.AstraRpgFramework.Contexts.IEffectInstigator)
+  fullName: ElectricDrill.AstraRpgHealth.Heal.ReceivedHealContext.ReceivedHealInfoStepBuilder.WithInstigator(ElectricDrill.AstraRpgFramework.Contexts.IEffectInstigator)
+  nameWithType: ReceivedHealContext.ReceivedHealInfoStepBuilder.WithInstigator(IEffectInstigator)
+- uid: ElectricDrill.AstraRpgHealth.Heal.ReceivedHealContext.ReceivedHealInfoStepBuilder.WithInstigator*
+  name: WithInstigator
+  href: api/ElectricDrill.AstraRpgHealth.Heal.ReceivedHealContext.ReceivedHealInfoStepBuilder.html#ElectricDrill_AstraRpgHealth_Heal_ReceivedHealContext_ReceivedHealInfoStepBuilder_WithInstigator_
+  commentId: Overload:ElectricDrill.AstraRpgHealth.Heal.ReceivedHealContext.ReceivedHealInfoStepBuilder.WithInstigator
+  isSpec: "True"
+  fullName: ElectricDrill.AstraRpgHealth.Heal.ReceivedHealContext.ReceivedHealInfoStepBuilder.WithInstigator
+  nameWithType: ReceivedHealContext.ReceivedHealInfoStepBuilder.WithInstigator
 - uid: ElectricDrill.AstraRpgHealth.Heal.ReceivedHealContext.ReceivedHealInfoStepBuilder.WithIsCritical(System.Boolean)
   name: WithIsCritical(bool)
   href: api/ElectricDrill.AstraRpgHealth.Heal.ReceivedHealContext.ReceivedHealInfoStepBuilder.html#ElectricDrill_AstraRpgHealth_Heal_ReceivedHealContext_ReceivedHealInfoStepBuilder_WithIsCritical_System_Boolean_
@@ -6075,6 +7430,22 @@ references:
   isSpec: "True"
   fullName: ElectricDrill.AstraRpgHealth.Heal.ReceivedHealContext.ReceivedHealInfoStepBuilder.WithIsCritical
   nameWithType: ReceivedHealContext.ReceivedHealInfoStepBuilder.WithIsCritical
+- uid: ElectricDrill.AstraRpgHealth.Heal.ReceivedHealContext.ReceivedHealInfoStepBuilder.WithIsReactable(System.Boolean)
+  name: WithIsReactable(bool)
+  href: api/ElectricDrill.AstraRpgHealth.Heal.ReceivedHealContext.ReceivedHealInfoStepBuilder.html#ElectricDrill_AstraRpgHealth_Heal_ReceivedHealContext_ReceivedHealInfoStepBuilder_WithIsReactable_System_Boolean_
+  commentId: M:ElectricDrill.AstraRpgHealth.Heal.ReceivedHealContext.ReceivedHealInfoStepBuilder.WithIsReactable(System.Boolean)
+  name.vb: WithIsReactable(Boolean)
+  fullName: ElectricDrill.AstraRpgHealth.Heal.ReceivedHealContext.ReceivedHealInfoStepBuilder.WithIsReactable(bool)
+  fullName.vb: ElectricDrill.AstraRpgHealth.Heal.ReceivedHealContext.ReceivedHealInfoStepBuilder.WithIsReactable(Boolean)
+  nameWithType: ReceivedHealContext.ReceivedHealInfoStepBuilder.WithIsReactable(bool)
+  nameWithType.vb: ReceivedHealContext.ReceivedHealInfoStepBuilder.WithIsReactable(Boolean)
+- uid: ElectricDrill.AstraRpgHealth.Heal.ReceivedHealContext.ReceivedHealInfoStepBuilder.WithIsReactable*
+  name: WithIsReactable
+  href: api/ElectricDrill.AstraRpgHealth.Heal.ReceivedHealContext.ReceivedHealInfoStepBuilder.html#ElectricDrill_AstraRpgHealth_Heal_ReceivedHealContext_ReceivedHealInfoStepBuilder_WithIsReactable_
+  commentId: Overload:ElectricDrill.AstraRpgHealth.Heal.ReceivedHealContext.ReceivedHealInfoStepBuilder.WithIsReactable
+  isSpec: "True"
+  fullName: ElectricDrill.AstraRpgHealth.Heal.ReceivedHealContext.ReceivedHealInfoStepBuilder.WithIsReactable
+  nameWithType: ReceivedHealContext.ReceivedHealInfoStepBuilder.WithIsReactable
 - uid: ElectricDrill.AstraRpgHealth.Heal.ReceivedHealContext.ReceivedHealInfoStepBuilder.WithSource(ElectricDrill.AstraRpgHealth.Heal.HealSourceSO)
   name: WithSource(HealSourceSO)
   href: api/ElectricDrill.AstraRpgHealth.Heal.ReceivedHealContext.ReceivedHealInfoStepBuilder.html#ElectricDrill_AstraRpgHealth_Heal_ReceivedHealContext_ReceivedHealInfoStepBuilder_WithSource_ElectricDrill_AstraRpgHealth_Heal_HealSourceSO_
@@ -6101,19 +7472,6 @@ references:
   isSpec: "True"
   fullName: ElectricDrill.AstraRpgHealth.Heal.ReceivedHealContext.ReceivedHealInfoStepBuilder.WithTarget
   nameWithType: ReceivedHealContext.ReceivedHealInfoStepBuilder.WithTarget
-- uid: ElectricDrill.AstraRpgHealth.Heal.ReceivedHealContext.Source
-  name: Source
-  href: api/ElectricDrill.AstraRpgHealth.Heal.ReceivedHealContext.html#ElectricDrill_AstraRpgHealth_Heal_ReceivedHealContext_Source
-  commentId: P:ElectricDrill.AstraRpgHealth.Heal.ReceivedHealContext.Source
-  fullName: ElectricDrill.AstraRpgHealth.Heal.ReceivedHealContext.Source
-  nameWithType: ReceivedHealContext.Source
-- uid: ElectricDrill.AstraRpgHealth.Heal.ReceivedHealContext.Source*
-  name: Source
-  href: api/ElectricDrill.AstraRpgHealth.Heal.ReceivedHealContext.html#ElectricDrill_AstraRpgHealth_Heal_ReceivedHealContext_Source_
-  commentId: Overload:ElectricDrill.AstraRpgHealth.Heal.ReceivedHealContext.Source
-  isSpec: "True"
-  fullName: ElectricDrill.AstraRpgHealth.Heal.ReceivedHealContext.Source
-  nameWithType: ReceivedHealContext.Source
 - uid: ElectricDrill.AstraRpgHealth.Heal.ReceivedHealContext.Target
   name: Target
   href: api/ElectricDrill.AstraRpgHealth.Heal.ReceivedHealContext.html#ElectricDrill_AstraRpgHealth_Heal_ReceivedHealContext_Target
@@ -6424,6 +7782,25 @@ references:
   commentId: F:ElectricDrill.AstraRpgHealth.Heal.StepValuePoint.Pre
   fullName: ElectricDrill.AstraRpgHealth.Heal.StepValuePoint.Pre
   nameWithType: StepValuePoint.Pre
+- uid: ElectricDrill.AstraRpgHealth.IReactable
+  name: IReactable
+  href: api/ElectricDrill.AstraRpgHealth.IReactable.html
+  commentId: T:ElectricDrill.AstraRpgHealth.IReactable
+  fullName: ElectricDrill.AstraRpgHealth.IReactable
+  nameWithType: IReactable
+- uid: ElectricDrill.AstraRpgHealth.IReactable.IsReactable
+  name: IsReactable
+  href: api/ElectricDrill.AstraRpgHealth.IReactable.html#ElectricDrill_AstraRpgHealth_IReactable_IsReactable
+  commentId: P:ElectricDrill.AstraRpgHealth.IReactable.IsReactable
+  fullName: ElectricDrill.AstraRpgHealth.IReactable.IsReactable
+  nameWithType: IReactable.IsReactable
+- uid: ElectricDrill.AstraRpgHealth.IReactable.IsReactable*
+  name: IsReactable
+  href: api/ElectricDrill.AstraRpgHealth.IReactable.html#ElectricDrill_AstraRpgHealth_IReactable_IsReactable_
+  commentId: Overload:ElectricDrill.AstraRpgHealth.IReactable.IsReactable
+  isSpec: "True"
+  fullName: ElectricDrill.AstraRpgHealth.IReactable.IsReactable
+  nameWithType: IReactable.IsReactable
 - uid: ElectricDrill.AstraRpgHealth.Resurrection
   name: ElectricDrill.AstraRpgHealth.Resurrection
   href: api/ElectricDrill.AstraRpgHealth.Resurrection.html
@@ -6770,6 +8147,61 @@ references:
   isSpec: "True"
   fullName: ElectricDrill.AstraRpgHealth.Scaling.ScalingComponents.HealthScalingComponentSO.CalculateValue
   nameWithType: HealthScalingComponentSO.CalculateValue
+- uid: ElectricDrill.AstraRpgHealth.Scaling.ScalingComponents.HealthScalingComponentSO.HealthScalingMetricValue
+  name: HealthScalingComponentSO.HealthScalingMetricValue
+  href: api/ElectricDrill.AstraRpgHealth.Scaling.ScalingComponents.HealthScalingComponentSO.HealthScalingMetricValue.html
+  commentId: T:ElectricDrill.AstraRpgHealth.Scaling.ScalingComponents.HealthScalingComponentSO.HealthScalingMetricValue
+  fullName: ElectricDrill.AstraRpgHealth.Scaling.ScalingComponents.HealthScalingComponentSO.HealthScalingMetricValue
+  nameWithType: HealthScalingComponentSO.HealthScalingMetricValue
+- uid: ElectricDrill.AstraRpgHealth.Scaling.ScalingComponents.HealthScalingComponentSO.HealthScalingMetricValue.metric
+  name: metric
+  href: api/ElectricDrill.AstraRpgHealth.Scaling.ScalingComponents.HealthScalingComponentSO.HealthScalingMetricValue.html#ElectricDrill_AstraRpgHealth_Scaling_ScalingComponents_HealthScalingComponentSO_HealthScalingMetricValue_metric
+  commentId: F:ElectricDrill.AstraRpgHealth.Scaling.ScalingComponents.HealthScalingComponentSO.HealthScalingMetricValue.metric
+  fullName: ElectricDrill.AstraRpgHealth.Scaling.ScalingComponents.HealthScalingComponentSO.HealthScalingMetricValue.metric
+  nameWithType: HealthScalingComponentSO.HealthScalingMetricValue.metric
+- uid: ElectricDrill.AstraRpgHealth.Scaling.ScalingComponents.HealthScalingComponentSO.HealthScalingMetricValue.value
+  name: value
+  href: api/ElectricDrill.AstraRpgHealth.Scaling.ScalingComponents.HealthScalingComponentSO.HealthScalingMetricValue.html#ElectricDrill_AstraRpgHealth_Scaling_ScalingComponents_HealthScalingComponentSO_HealthScalingMetricValue_value
+  commentId: F:ElectricDrill.AstraRpgHealth.Scaling.ScalingComponents.HealthScalingComponentSO.HealthScalingMetricValue.value
+  fullName: ElectricDrill.AstraRpgHealth.Scaling.ScalingComponents.HealthScalingComponentSO.HealthScalingMetricValue.value
+  nameWithType: HealthScalingComponentSO.HealthScalingMetricValue.value
+- uid: ElectricDrill.AstraRpgHealth.Scaling.ScalingComponents.HealthScalingComponentSO.HealthScalingMetrics
+  name: HealthScalingComponentSO.HealthScalingMetrics
+  href: api/ElectricDrill.AstraRpgHealth.Scaling.ScalingComponents.HealthScalingComponentSO.HealthScalingMetrics.html
+  commentId: T:ElectricDrill.AstraRpgHealth.Scaling.ScalingComponents.HealthScalingComponentSO.HealthScalingMetrics
+  fullName: ElectricDrill.AstraRpgHealth.Scaling.ScalingComponents.HealthScalingComponentSO.HealthScalingMetrics
+  nameWithType: HealthScalingComponentSO.HealthScalingMetrics
+- uid: ElectricDrill.AstraRpgHealth.Scaling.ScalingComponents.HealthScalingComponentSO.HealthScalingMetrics.Hp
+  name: Hp
+  href: api/ElectricDrill.AstraRpgHealth.Scaling.ScalingComponents.HealthScalingComponentSO.HealthScalingMetrics.html#ElectricDrill_AstraRpgHealth_Scaling_ScalingComponents_HealthScalingComponentSO_HealthScalingMetrics_Hp
+  commentId: F:ElectricDrill.AstraRpgHealth.Scaling.ScalingComponents.HealthScalingComponentSO.HealthScalingMetrics.Hp
+  fullName: ElectricDrill.AstraRpgHealth.Scaling.ScalingComponents.HealthScalingComponentSO.HealthScalingMetrics.Hp
+  nameWithType: HealthScalingComponentSO.HealthScalingMetrics.Hp
+- uid: ElectricDrill.AstraRpgHealth.Scaling.ScalingComponents.HealthScalingComponentSO.HealthScalingMetrics.MaxHp
+  name: MaxHp
+  href: api/ElectricDrill.AstraRpgHealth.Scaling.ScalingComponents.HealthScalingComponentSO.HealthScalingMetrics.html#ElectricDrill_AstraRpgHealth_Scaling_ScalingComponents_HealthScalingComponentSO_HealthScalingMetrics_MaxHp
+  commentId: F:ElectricDrill.AstraRpgHealth.Scaling.ScalingComponents.HealthScalingComponentSO.HealthScalingMetrics.MaxHp
+  fullName: ElectricDrill.AstraRpgHealth.Scaling.ScalingComponents.HealthScalingComponentSO.HealthScalingMetrics.MaxHp
+  nameWithType: HealthScalingComponentSO.HealthScalingMetrics.MaxHp
+- uid: ElectricDrill.AstraRpgHealth.Scaling.ScalingComponents.HealthScalingComponentSO.HealthScalingMetrics.MissingHp
+  name: MissingHp
+  href: api/ElectricDrill.AstraRpgHealth.Scaling.ScalingComponents.HealthScalingComponentSO.HealthScalingMetrics.html#ElectricDrill_AstraRpgHealth_Scaling_ScalingComponents_HealthScalingComponentSO_HealthScalingMetrics_MissingHp
+  commentId: F:ElectricDrill.AstraRpgHealth.Scaling.ScalingComponents.HealthScalingComponentSO.HealthScalingMetrics.MissingHp
+  fullName: ElectricDrill.AstraRpgHealth.Scaling.ScalingComponents.HealthScalingComponentSO.HealthScalingMetrics.MissingHp
+  nameWithType: HealthScalingComponentSO.HealthScalingMetrics.MissingHp
+- uid: ElectricDrill.AstraRpgHealth.Scaling.ScalingComponents.HealthScalingComponentSO.ScalingMetricValues
+  name: ScalingMetricValues
+  href: api/ElectricDrill.AstraRpgHealth.Scaling.ScalingComponents.HealthScalingComponentSO.html#ElectricDrill_AstraRpgHealth_Scaling_ScalingComponents_HealthScalingComponentSO_ScalingMetricValues
+  commentId: P:ElectricDrill.AstraRpgHealth.Scaling.ScalingComponents.HealthScalingComponentSO.ScalingMetricValues
+  fullName: ElectricDrill.AstraRpgHealth.Scaling.ScalingComponents.HealthScalingComponentSO.ScalingMetricValues
+  nameWithType: HealthScalingComponentSO.ScalingMetricValues
+- uid: ElectricDrill.AstraRpgHealth.Scaling.ScalingComponents.HealthScalingComponentSO.ScalingMetricValues*
+  name: ScalingMetricValues
+  href: api/ElectricDrill.AstraRpgHealth.Scaling.ScalingComponents.HealthScalingComponentSO.html#ElectricDrill_AstraRpgHealth_Scaling_ScalingComponents_HealthScalingComponentSO_ScalingMetricValues_
+  commentId: Overload:ElectricDrill.AstraRpgHealth.Scaling.ScalingComponents.HealthScalingComponentSO.ScalingMetricValues
+  isSpec: "True"
+  fullName: ElectricDrill.AstraRpgHealth.Scaling.ScalingComponents.HealthScalingComponentSO.ScalingMetricValues
+  nameWithType: HealthScalingComponentSO.ScalingMetricValues
 - uid: ElectricDrill.AstraRpgHealth.Utils
   name: ElectricDrill.AstraRpgHealth.Utils
   href: api/ElectricDrill.AstraRpgHealth.Utils.html

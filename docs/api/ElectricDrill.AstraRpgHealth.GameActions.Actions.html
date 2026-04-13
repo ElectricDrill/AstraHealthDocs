@@ -95,10 +95,51 @@
 Classes
 </h3>
     <dl class="jumplist">
-      <dt><a class="xref" href="ElectricDrill.AstraRpgHealth.GameActions.Actions.ResurrectGameActionSO-1.html">ResurrectGameActionSO&lt;TContext&gt;</a></dt>
+      <dt><a class="xref" href="ElectricDrill.AstraRpgHealth.GameActions.Actions.CounterDamageGameActionSO-1.html">CounterDamageGameActionSO&lt;TContext&gt;</a></dt>
+      <dd><p>Abstract base game action that reacts to a resolved damage event by inflicting damage in return.
+Works with any context implementing <span class="xref">ElectricDrill.AstraRpgFramework.Contexts.IHasTarget</span>, <span class="xref">ElectricDrill.AstraRpgFramework.Contexts.IHasPerformer</span> and
+<a class="xref" href="ElectricDrill.AstraRpgHealth.Damage.IHasAmount.html">IHasAmount</a>: compatible with <a class="xref" href="ElectricDrill.AstraRpgHealth.Damage.DamageResolutionContext.html">DamageResolutionContext</a>,
+<a class="xref" href="ElectricDrill.AstraRpgHealth.Events.Contexts.EntityDiedContext.html">EntityDiedContext</a>, and others.</p>
+<p>
+This class implements <span class="xref">ElectricDrill.AstraRpgFramework.Contexts.IEffectInstigator</span> so it can be passed as the instigator
+of the counter-damage it produces. Listeners can then check
+<code>ctx.Instigator == thisActionSO</code> to identify and filter self-triggered cycles.
+</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="ElectricDrill.AstraRpgHealth.GameActions.Actions.ResurrectEntityGameActionSO-1.html">ResurrectEntityGameActionSO&lt;TContext&gt;</a></dt>
       <dd><p>Base generic game action for resurrecting entities with EntityHealth components.
 Can be configured to resurrect with either a percentage of max HP or a flat HP amount.
 Uses the default resurrection source from config and no healer entity (system action).</p>
+<p>
+Connect to any <code>GameEventListener</code> whose payload implements <span class="xref">ElectricDrill.AstraRpgFramework.Contexts.IHasEntity</span>,
+such as <code>EntityDiedGameEventListener</code>, <code>DamageResolutionGameEventListener</code>, or
+directly from an <code>EntityHealth</code> reference.
+</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="ElectricDrill.AstraRpgHealth.GameActions.Actions.SetEntityOverrideOnDeathGameActionSO-1.html">SetEntityOverrideOnDeathGameActionSO&lt;TContext&gt;</a></dt>
+      <dd><p>Base generic game action that assigns (or clears) the <a class="xref" href="ElectricDrill.AstraRpgHealth.EntityHealth.html#ElectricDrill_AstraRpgHealth_EntityHealth_OverrideOnDeathGameAction">OverrideOnDeathGameAction</a> field.
+Useful for one-shot mechanics such as &quot;resurrect on first death&quot;: configure a CompositeAction that
+resurrects the entity and then executes this action with <span class="xref">ElectricDrill.AstraRpgHealth.GameActions.Actions.SetEntityOverrideOnDeathGameActionSO&lt;TContext&gt;._newOverrideGameAction</span> set to null,
+so the override is cleared and subsequent deaths use the default config action.</p>
+<p>
+Connect to any <code>GameEventListener</code> whose payload implements <span class="xref">ElectricDrill.AstraRpgFramework.Contexts.IHasEntity</span>,
+such as <code>EntityDiedGameEventListener</code>, <code>DamageResolutionGameEventListener</code>, or
+directly from an <code>EntityHealth</code> reference.
+</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="ElectricDrill.AstraRpgHealth.GameActions.Actions.SetEntityOverrideOnResurrectionGameActionSO-1.html">SetEntityOverrideOnResurrectionGameActionSO&lt;TContext&gt;</a></dt>
+      <dd><p>Base generic game action that assigns (or clears) the <a class="xref" href="ElectricDrill.AstraRpgHealth.EntityHealth.html#ElectricDrill_AstraRpgHealth_EntityHealth_OverrideOnResurrectionGameAction">OverrideOnResurrectionGameAction</a> field.</p>
+<p>
+Connect to any <code>GameEventListener</code> whose payload implements <span class="xref">ElectricDrill.AstraRpgFramework.Contexts.IHasEntity</span>,
+such as <code>EntityDiedGameEventListener</code>, <code>EntityResurrectedGameEventListener</code>, or
+directly from an <code>EntityHealth</code> reference.
+</p>
 </dd>
     </dl>
 

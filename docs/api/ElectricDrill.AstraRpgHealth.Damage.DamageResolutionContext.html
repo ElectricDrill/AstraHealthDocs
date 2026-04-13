@@ -89,7 +89,7 @@
 
 
   <h1 id="ElectricDrill_AstraRpgHealth_Damage_DamageResolutionContext" data-uid="ElectricDrill.AstraRpgHealth.Damage.DamageResolutionContext" class="text-break">
-Class DamageResolutionContext  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/Damage/DamageResolutionContext.cs/#L11"><i class="bi bi-code-slash"></i></a>
+Class DamageResolutionContext  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/Damage/DamageResolutionContext.cs/#L13"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -104,7 +104,7 @@ and the concrete damage information that was ultimately applied (if any).</p>
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class DamageResolutionContext</code></pre>
+    <pre><code class="lang-csharp hljs">public class DamageResolutionContext : IHasEntity, IHasTarget, IHasPerformer, IHasAmount, IHasInstigator, IReactable</code></pre>
   </div>
 
 
@@ -118,6 +118,17 @@ and the concrete damage information that was ultimately applied (if any).</p>
     </dd>
   </dl>
 
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><span class="xref">IHasEntity</span></div>
+      <div><span class="xref">IHasTarget</span></div>
+      <div><span class="xref">IHasPerformer</span></div>
+      <div><a class="xref" href="ElectricDrill.AstraRpgHealth.Damage.IHasAmount.html">IHasAmount</a></div>
+      <div><span class="xref">IHasInstigator</span></div>
+      <div><a class="xref" href="ElectricDrill.AstraRpgHealth.IReactable.html">IReactable</a></div>
+    </dd>
+  </dl>
 
 
 
@@ -130,11 +141,43 @@ and the concrete damage information that was ultimately applied (if any).</p>
 </h2>
 
 
+  <a id="ElectricDrill_AstraRpgHealth_Damage_DamageResolutionContext_Entity_" data-uid="ElectricDrill.AstraRpgHealth.Damage.DamageResolutionContext.Entity*"></a>
+
+  <h3 id="ElectricDrill_AstraRpgHealth_Damage_DamageResolutionContext_Entity" data-uid="ElectricDrill.AstraRpgHealth.Damage.DamageResolutionContext.Entity">
+  Entity
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/Damage/DamageResolutionContext.cs/#L56"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The entity that received damage. Same as <a class="xref" href="ElectricDrill.AstraRpgHealth.Damage.DamageResolutionContext.html#ElectricDrill_AstraRpgHealth_Damage_DamageResolutionContext_Target">Target</a> in this case.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public EntityCore Entity { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">EntityCore</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="ElectricDrill_AstraRpgHealth_Damage_DamageResolutionContext_FinalDamageInfo_" data-uid="ElectricDrill.AstraRpgHealth.Damage.DamageResolutionContext.FinalDamageInfo*"></a>
 
   <h3 id="ElectricDrill_AstraRpgHealth_Damage_DamageResolutionContext_FinalDamageInfo" data-uid="ElectricDrill.AstraRpgHealth.Damage.DamageResolutionContext.FinalDamageInfo">
   FinalDamageInfo
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/Damage/DamageResolutionContext.cs/#L40"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/Damage/DamageResolutionContext.cs/#L42"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>The final computed damage information that was applied to the target. This is
@@ -165,11 +208,77 @@ termination step type and any additional diagnostics produced by the pipeline.</
 
 
 
+  <a id="ElectricDrill_AstraRpgHealth_Damage_DamageResolutionContext_Instigator_" data-uid="ElectricDrill.AstraRpgHealth.Damage.DamageResolutionContext.Instigator*"></a>
+
+  <h3 id="ElectricDrill_AstraRpgHealth_Damage_DamageResolutionContext_Instigator" data-uid="ElectricDrill.AstraRpgHealth.Damage.DamageResolutionContext.Instigator">
+  Instigator
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/Damage/DamageResolutionContext.cs/#L62"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The specific thing that caused this damage — propagated from the originating
+<a class="xref" href="ElectricDrill.AstraRpgHealth.Damage.DamageResolutionContext.html#ElectricDrill_AstraRpgHealth_Damage_DamageResolutionContext_PreDamageContext">PreDamageContext</a>. May be <code>null</code> if unspecified.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IEffectInstigator Instigator { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">IEffectInstigator</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="ElectricDrill_AstraRpgHealth_Damage_DamageResolutionContext_IsReactable_" data-uid="ElectricDrill.AstraRpgHealth.Damage.DamageResolutionContext.IsReactable*"></a>
+
+  <h3 id="ElectricDrill_AstraRpgHealth_Damage_DamageResolutionContext_IsReactable" data-uid="ElectricDrill.AstraRpgHealth.Damage.DamageResolutionContext.IsReactable">
+  IsReactable
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/Damage/DamageResolutionContext.cs/#L68"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Propagated from <a class="xref" href="ElectricDrill.AstraRpgHealth.Damage.PreDamageContext.html#ElectricDrill_AstraRpgHealth_Damage_PreDamageContext_IsReactable">IsReactable</a>.
+When <code>false</code>, reactive systems should not respond to this damage resolution event.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsReactable { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">bool</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="ElectricDrill_AstraRpgHealth_Damage_DamageResolutionContext_Outcome_" data-uid="ElectricDrill.AstraRpgHealth.Damage.DamageResolutionContext.Outcome*"></a>
 
   <h3 id="ElectricDrill_AstraRpgHealth_Damage_DamageResolutionContext_Outcome" data-uid="ElectricDrill.AstraRpgHealth.Damage.DamageResolutionContext.Outcome">
   Outcome
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/Damage/DamageResolutionContext.cs/#L17"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/Damage/DamageResolutionContext.cs/#L19"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>The high-level outcome of the attempt: either <a class="xref" href="ElectricDrill.AstraRpgHealth.Damage.DamageOutcome.html#ElectricDrill_AstraRpgHealth_Damage_DamageOutcome_Applied">Applied</a>
@@ -198,11 +307,42 @@ or <a class="xref" href="ElectricDrill.AstraRpgHealth.Damage.DamageOutcome.html#
 
 
 
+  <a id="ElectricDrill_AstraRpgHealth_Damage_DamageResolutionContext_Performer_" data-uid="ElectricDrill.AstraRpgHealth.Damage.DamageResolutionContext.Performer*"></a>
+
+  <h3 id="ElectricDrill_AstraRpgHealth_Damage_DamageResolutionContext_Performer" data-uid="ElectricDrill.AstraRpgHealth.Damage.DamageResolutionContext.Performer">
+  Performer
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/Damage/DamageResolutionContext.cs/#L51"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public EntityCore Performer { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">EntityCore</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="ElectricDrill_AstraRpgHealth_Damage_DamageResolutionContext_PreDamageContext_" data-uid="ElectricDrill.AstraRpgHealth.Damage.DamageResolutionContext.PreDamageContext*"></a>
 
   <h3 id="ElectricDrill_AstraRpgHealth_Damage_DamageResolutionContext_PreDamageContext" data-uid="ElectricDrill.AstraRpgHealth.Damage.DamageResolutionContext.PreDamageContext">
   PreDamageContext
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/Damage/DamageResolutionContext.cs/#L46"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/Damage/DamageResolutionContext.cs/#L48"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>The original <a class="xref" href="ElectricDrill.AstraRpgHealth.Damage.DamageResolutionContext.html#ElectricDrill_AstraRpgHealth_Damage_DamageResolutionContext_PreDamageContext">PreDamageContext</a> that triggered this resolution.
@@ -235,7 +375,7 @@ Useful for logging and diagnostic correlation.</p>
 
   <h3 id="ElectricDrill_AstraRpgHealth_Damage_DamageResolutionContext_Reasons" data-uid="ElectricDrill.AstraRpgHealth.Damage.DamageResolutionContext.Reasons">
   Reasons
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/Damage/DamageResolutionContext.cs/#L25"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/Damage/DamageResolutionContext.cs/#L27"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>When <a class="xref" href="ElectricDrill.AstraRpgHealth.Damage.DamageResolutionContext.html#ElectricDrill_AstraRpgHealth_Damage_DamageResolutionContext_Outcome">Outcome</a> is <a class="xref" href="ElectricDrill.AstraRpgHealth.Damage.DamageOutcome.html#ElectricDrill_AstraRpgHealth_Damage_DamageOutcome_Prevented">Prevented</a>, this
@@ -266,11 +406,42 @@ is <a class="xref" href="ElectricDrill.AstraRpgHealth.Damage.DamageOutcome.html#
 
 
 
+  <a id="ElectricDrill_AstraRpgHealth_Damage_DamageResolutionContext_Target_" data-uid="ElectricDrill.AstraRpgHealth.Damage.DamageResolutionContext.Target*"></a>
+
+  <h3 id="ElectricDrill_AstraRpgHealth_Damage_DamageResolutionContext_Target" data-uid="ElectricDrill.AstraRpgHealth.Damage.DamageResolutionContext.Target">
+  Target
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/Damage/DamageResolutionContext.cs/#L50"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public EntityCore Target { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">EntityCore</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="ElectricDrill_AstraRpgHealth_Damage_DamageResolutionContext_TerminationStepType_" data-uid="ElectricDrill.AstraRpgHealth.Damage.DamageResolutionContext.TerminationStepType*"></a>
 
   <h3 id="ElectricDrill_AstraRpgHealth_Damage_DamageResolutionContext_TerminationStepType" data-uid="ElectricDrill.AstraRpgHealth.Damage.DamageResolutionContext.TerminationStepType">
   TerminationStepType
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/Damage/DamageResolutionContext.cs/#L32"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/Damage/DamageResolutionContext.cs/#L34"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>If the pipeline execution terminated early, this will contain the <span class="xref">System.Type</span>
@@ -308,7 +479,7 @@ when the pipeline completed normally.</p>
 
   <h3 id="ElectricDrill_AstraRpgHealth_Damage_DamageResolutionContext_Applied_ElectricDrill_AstraRpgHealth_Damage_CalculationPipeline_DamageInfo_ElectricDrill_AstraRpgHealth_Damage_PreDamageContext_" data-uid="ElectricDrill.AstraRpgHealth.Damage.DamageResolutionContext.Applied(ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.DamageInfo,ElectricDrill.AstraRpgHealth.Damage.PreDamageContext)">
   Applied(DamageInfo, PreDamageContext)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/Damage/DamageResolutionContext.cs/#L82"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/Damage/DamageResolutionContext.cs/#L111"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Create a <a class="xref" href="ElectricDrill.AstraRpgHealth.Damage.DamageResolutionContext.html">DamageResolutionContext</a> representing an applied damage attempt.
@@ -351,7 +522,7 @@ The <code class="paramref">info</code> parameter contains the concrete damage va
 
   <h3 id="ElectricDrill_AstraRpgHealth_Damage_DamageResolutionContext_Prevented_ElectricDrill_AstraRpgHealth_Damage_DamagePreventionReason_ElectricDrill_AstraRpgHealth_Damage_PreDamageContext_ElectricDrill_AstraRpgHealth_Damage_CalculationPipeline_DamageInfo_" data-uid="ElectricDrill.AstraRpgHealth.Damage.DamageResolutionContext.Prevented(ElectricDrill.AstraRpgHealth.Damage.DamagePreventionReason,ElectricDrill.AstraRpgHealth.Damage.PreDamageContext,ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.DamageInfo)">
   Prevented(DamagePreventionReason, PreDamageContext, DamageInfo)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/Damage/DamageResolutionContext.cs/#L72"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/Damage/DamageResolutionContext.cs/#L101"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Create a <a class="xref" href="ElectricDrill.AstraRpgHealth.Damage.DamageResolutionContext.html">DamageResolutionContext</a> representing a prevented damage attempt.

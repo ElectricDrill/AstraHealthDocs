@@ -105,6 +105,33 @@ Classes
 </dd>
     </dl>
     <dl class="jumplist">
+      <dt><a class="xref" href="ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.ApplyDamageCapStep.html">ApplyDamageCapStep</a></dt>
+      <dd><p>Damage step that enforces an upper bound (cap) on the current damage amount.</p>
+<p>
+At runtime the step looks for a component implementing <a class="xref" href="ElectricDrill.AstraRpgHealth.Damage.Bounds.IDamageCap.html">IDamageCap</a>
+on the <a class="xref" href="ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.DamageInfo.html#ElectricDrill_AstraRpgHealth_Damage_CalculationPipeline_DamageInfo_Target">Target</a>. If found and the current damage exceeds
+the cap, the amount is clamped down. If no <a class="xref" href="ElectricDrill.AstraRpgHealth.Damage.Bounds.IDamageCap.html">IDamageCap</a> component is
+present, the step is a no-op.
+</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.ApplyDamageFloorStep.html">ApplyDamageFloorStep</a></dt>
+      <dd><p>Damage step that enforces a lower bound (floor) on the current damage amount.</p>
+<p>
+At runtime the step looks for a component implementing <a class="xref" href="ElectricDrill.AstraRpgHealth.Damage.Bounds.IDamageFloor.html">IDamageFloor</a>
+on the <a class="xref" href="ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.DamageInfo.html#ElectricDrill_AstraRpgHealth_Damage_CalculationPipeline_DamageInfo_Target">Target</a>. If found and the current damage is below
+the floor, the amount is raised. If no <a class="xref" href="ElectricDrill.AstraRpgHealth.Damage.Bounds.IDamageFloor.html">IDamageFloor</a> component is
+present, the step is a no-op.
+</p><p><b>Note:</b> The base <a class="xref" href="ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.DamageStep.html#ElectricDrill_AstraRpgHealth_Damage_CalculationPipeline_DamageStep_Process_ElectricDrill_AstraRpgHealth_Damage_CalculationPipeline_DamageInfo_">Process(DamageInfo)</a> method skips steps when
+<code>Current &lt;= 0</code> or when the damage has already been prevented. This means
+the floor cannot revive damage that was fully absorbed by a previous step.
+To guarantee a minimum damage amount, place this step <em>before</em> steps that
+might reduce the value to zero.
+</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
       <dt><a class="xref" href="ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.ApplyDefenseStep.html">ApplyDefenseStep</a></dt>
       <dd><p>Damage step that applies defensive calculations based on the damage type's
 defensive and piercing stats and configured reduction functions.</p>
@@ -127,6 +154,13 @@ This step should typically be applied AFTER percentage-based modifications.</p>
       <dt><a class="xref" href="ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.DamageCalculationStrategySO.html">DamageCalculationStrategySO</a></dt>
       <dd><p>ScriptableObject that defines a configurable damage calculation pipeline.
 The pipeline is composed of ordered <a class="xref" href="ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.DamageStep.html">DamageStep</a> instances executed sequentially.</p>
+<p>
+Optionally, a <b>pre-strategy</b> and/or <b>post-strategy</b> can be configured to run
+another <a class="xref" href="ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.DamageCalculationStrategySO.html">DamageCalculationStrategySO</a> before or after this strategy's own steps.
+This enables composition without duplicating the default pipeline: a custom strategy can
+delegate to the global default pipeline (or any other strategy) and then apply additional
+steps on top.
+</p>
 </dd>
     </dl>
     <dl class="jumplist">

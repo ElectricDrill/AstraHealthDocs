@@ -104,7 +104,7 @@ For example: create an &quot;Environmental&quot; DamageSource and assign it to g
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class DamageSourceKillExpStrategySO : ExpCollectionStrategySO</code></pre>
+    <pre><code class="lang-csharp hljs">public class DamageSourceKillExpStrategySO : ExpCollectionStrategySO, ITaggable</code></pre>
   </div>
 
 
@@ -121,11 +121,20 @@ For example: create an &quot;Environmental&quot; DamageSource and assign it to g
     </dd>
   </dl>
 
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><span class="xref">ITaggable</span></div>
+    </dd>
+  </dl>
 
 
   <dl class="typelist inheritedMembers">
     <dt>Inherited Members</dt>
     <dd>
+    <div>
+      <a class="xref" href="ElectricDrill.AstraRpgHealth.Experience.ExpCollectionStrategySO.html#ElectricDrill_AstraRpgHealth_Experience_ExpCollectionStrategySO_Tags">ExpCollectionStrategySO.Tags</a>
+    </div>
     <div>
       <a class="xref" href="ElectricDrill.AstraRpgHealth.Experience.ExpCollectionStrategySO.html#ElectricDrill_AstraRpgHealth_Experience_ExpCollectionStrategySO_TryCollectExp_ElectricDrill_AstraRpgFramework_EntityCore_ElectricDrill_AstraRpgFramework_EntityCore_ElectricDrill_AstraRpgHealth_Damage_DamageResolutionContext_">ExpCollectionStrategySO.TryCollectExp(EntityCore, EntityCore, DamageResolutionContext)</a>
     </div>

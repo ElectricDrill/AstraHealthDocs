@@ -136,8 +136,15 @@ Use <a class="xref" href="ElectricDrill.AstraRpgHealth.Damage.PreDamageContext.h
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="ElectricDrill.AstraRpgHealth.Damage.PreDamageContext.PreDamageInfoStepBuilder.html">PreDamageContext.PreDamageInfoStepBuilder</a></dt>
-      <dd><p>Concrete step builder implementing the fluent interfaces. After setting required fields,
-optional flags (critical, multiplier) can be configured before calling <a class="xref" href="ElectricDrill.AstraRpgHealth.Damage.PreDamageContext.PreDamageInfoStepBuilder.html#ElectricDrill_AstraRpgHealth_Damage_PreDamageContext_PreDamageInfoStepBuilder_Build">Build()</a>.</p>
+      <dd><p>Concrete step builder implementing the fluent interfaces. After all required fields are set,
+optional fields (dealer, critical, multiplier, instigator) can be configured before calling <a class="xref" href="ElectricDrill.AstraRpgHealth.Damage.PreDamageContext.PreDamageInfoStepBuilder.html#ElectricDrill_AstraRpgHealth_Damage_PreDamageContext_PreDamageInfoStepBuilder_Build">Build()</a>.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="ElectricDrill.AstraRpgHealth.Damage.PreDamageContextConfig.html">PreDamageContextConfig</a></dt>
+      <dd><p>Serializable configuration that fully describes a damage application and can build a
+<a class="xref" href="ElectricDrill.AstraRpgHealth.Damage.PreDamageContext.html">PreDamageContext</a> at runtime.  Designed to be embedded in ScriptableObjects
+or MonoBehaviours and exposed via the PreDamageContextConfigDrawer inspector drawer.</p>
 </dd>
     </dl>
     <h3 id="structs">
@@ -161,18 +168,20 @@ describing whether the damage was applied or prevented and additional details.</
 </dd>
     </dl>
     <dl class="jumplist">
+      <dt><a class="xref" href="ElectricDrill.AstraRpgHealth.Damage.IHasAmount.html">IHasAmount</a></dt>
+      <dd><p>Represents a context that carries an associated numeric amount.
+The value is nullable to represent cases where no amount was resolved —
+for damage contexts, <code>null</code> means the damage was prevented or not applied.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
       <dt><a class="xref" href="ElectricDrill.AstraRpgHealth.Damage.PreDamageContext.DamageInfoAmount.html">PreDamageContext.DamageInfoAmount</a></dt>
       <dd><p>Fluent builder step: specify the damage amount.</p>
 </dd>
     </dl>
     <dl class="jumplist">
-      <dt><a class="xref" href="ElectricDrill.AstraRpgHealth.Damage.PreDamageContext.DamageInfoDealer.html">PreDamageContext.DamageInfoDealer</a></dt>
-      <dd><p>Fluent builder step: specify the dealer entity.</p>
-</dd>
-    </dl>
-    <dl class="jumplist">
       <dt><a class="xref" href="ElectricDrill.AstraRpgHealth.Damage.PreDamageContext.DamageInfoSource.html">PreDamageContext.DamageInfoSource</a></dt>
-      <dd><p>Fluent builder step: specify the damage source.</p>
+      <dd><p>Fluent builder step: specify the damage source category.</p>
 </dd>
     </dl>
     <dl class="jumplist">
@@ -188,6 +197,21 @@ describing whether the damage was applied or prevented and additional details.</
     <h3 id="enums">
 Enums
 </h3>
+    <dl class="jumplist">
+      <dt><a class="xref" href="ElectricDrill.AstraRpgHealth.Damage.ContextDealerRole.html">ContextDealerRole</a></dt>
+      <dd><p>Selects the entity that will act as the damage dealer, including the option of no dealer (system damage).</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="ElectricDrill.AstraRpgHealth.Damage.ContextEntityRole.html">ContextEntityRole</a></dt>
+      <dd><p>Selects one of the two entities involved in a damage context.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="ElectricDrill.AstraRpgHealth.Damage.DamageAmountMode.html">DamageAmountMode</a></dt>
+      <dd><p>Determines how the damage amount is calculated.</p>
+</dd>
+    </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="ElectricDrill.AstraRpgHealth.Damage.DamageOutcome.html">DamageOutcome</a></dt>
       <dd><p>The overall result of attempting to apply damage to a target.
