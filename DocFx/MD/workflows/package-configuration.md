@@ -400,15 +400,10 @@ Global Events are `GameEvent` ScriptableObjects that broadcast health-related in
 **Required:** No  
 **Description:** Raised when any entity's total max HP changes (both increases and decreases). Carries `EntityMaxHealthChangedContext`. Useful for updating UI, recalculating derived stats, or triggering game-wide reactions to stat changes.
 
-#### Global Gained Health Event
-**Type:** `EntityGainedHealthGameEvent`  
-**Required:** No  
-**Description:** Raised whenever any entity gains HP (from healing, resurrection, or max HP modifier increases). Carries `EntityHealthChangedContext`.
-
-#### Global Lost Health Event
-**Type:** `EntityLostHealthGameEvent`  
-**Required:** No  
-**Description:** Raised whenever any entity loses HP (from damage, or max HP modifier decreases). Carries `EntityHealthChangedContext`.
+#### Global Health Changed Event
+**Type:** `EntityHealthChangedGameEvent`<br>
+**Required:** No<br>
+**Description:** Raised whenever any entity's current HP changes, whether increasing or decreasing. Carries `EntityHealthChangedContext`. This is the global event resolved by the corresponding Health Changed Event Channel on each `EntityHealth`, and replaces the previous split between gained-health and lost-health global events.
 
 #### Global Pre Heal Event
 **Type:** `PreHealGameEvent`  

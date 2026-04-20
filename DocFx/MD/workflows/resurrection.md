@@ -111,7 +111,7 @@ See [Death](entity-health.md#death) in the Entity Health reference for the full 
 Resurrecting an entity raises multiple events. Because resurrection routes through `Heal`, the healing events fire first:
 
 - **Pre Heal Event** and **Entity Healed Event** — raised by the internal `Heal` call, carrying the standard healing context before and after modifiers. Subscribe to these if your logic needs to react to the healing component of a resurrection; for example, to trigger a heal-triggered ability even during resurrection
-- **Entity Gained Health Event** — raised when the entity's HP increases during the `Heal` call. Useful for general HP-change listeners that do not need the full context of the healing, but just want to know when HP changes and by how much. An example use case is a UI health bar that needs to update whenever HP changes, regardless of the source of the change
+- **Entity Health Changed Event** — raised when the entity's HP increases during the `Heal` call. Useful for general HP-change listeners that do not need the full context of the healing, but just want to know when HP changes and by how much. An example use case is a UI health bar that needs to update whenever HP changes, regardless of the source of the change
 
 After the healing pipeline completes and the resurrection game action has been dispatched:
 
@@ -126,4 +126,4 @@ After the healing pipeline completes and the resurrection game action has been d
     - **Performer**: the entity that performed the resurrection (`null` for system-initiated resurrections, such as those triggered via the convenience overloads or the `ResurrectEntityIHasEntityGameActionSO`)
     - **IsCritical**: whether the resurrection heal was flagged as a critical
 
-Each event is available in both global and extra variants on `EntityHealth`. Use global events when any GameObject in the game needs to receive the signal; use extra events for targeted, component-specific or GO-hierarchy-specific communications. See [Global Events](entity-health.md#global-events) for guidance on choosing between them.
+Each event has a corresponding Event Channel on `EntityHealth`. When that channel is raised, it resolves and raises the matching global event configured at package level, if any, and also raises any extra events assigned to that channel. Use global events when any GameObject in the game needs to receive the signal; use extra events on the channel for targeted, component-specific or GO-hierarchy-specific communications. See [Global Events](entity-health.md#global-events) and [Event Channels](entity-health.md#event-channels) for guidance on choosing between them.

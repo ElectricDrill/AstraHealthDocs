@@ -59,20 +59,26 @@ Events are, by default, collapsed as there are many of them and they would expan
 
 In the image, you don't see any assigned event. Therefore, this is the view of the inspector you should get when you freshly add the `EntityHealth` component to an entity.
 
-Through `EntityHealth` we can assign _Extra Events_. However, for each event type (e.g., Pre Damage Info Event, Entity Died Event, etc.) you should know that there are two categories: Global Events and Extra Events.
+Through `EntityHealth` we can configure entity-scoped _Event Channels_. For each signal (e.g., Pre Damage Info Event, Entity Died Event, etc.), the corresponding Event Channel is the per-entity mechanism that orchestrates the raise flow.
 
 ### Global Events
 Global Events broadcast health-related information to the entire game and are configured once at the project level in the [AstraRpgHealthConfig](package-configuration.md#global-events) asset — not per entity on `EntityHealth`. This guarantees a single authoritative source for framework-level communication and eliminates the risk of misconfiguration caused by different entities referencing different event assets.
 
 The framework uses several global events internally: for example, the _Damage Resolution_ event powers lifesteal, and the _Entity Died_ event is what experience collectors listen to for XP awards. See [Global Events](package-configuration.md#global-events) in Package Configuration for the full reference, including which events are required and which framework features depend on each.
 
-### Extra Events
-Extra Events, instead, are designed to transmit information to specific components, to a single entity, or to a restricted circle of entities. A practical example is the communication between the player's EntityHealth and the HUD displaying their HP: only the player possesses a dedicated HUD, so it is useful to assign an exclusive event for this interaction. In this way, the GameEvent associated with the player's EntityHealth is listened to only by the HUD, guaranteeing clear compartmentation and greater efficiency. Thus, the HUD does not receive events from all entities, but only those relevant to the player.
+### Event Channels
+Event Channels are assigned directly on the `EntityHealth` component. They are designed to bridge the package-level global communication with optional per-entity communication.
 
-These events are assigned directly on the `EntityHealth` component. For each event type, you can assign multiple Extra Events, which will be raised simultaneously along with the corresponding Global Event when the relevant action occurs (e.g., the entity takes damage, the entity dies, etc.).
+Each Event Channel contains:
+- a resolver that retrieves the corresponding Global Event from `AstraRpgHealthConfig`
+- a list of _Extra Events_ that you can assign directly on that specific entity
+
+When the relevant action occurs (e.g., the entity takes damage, the entity dies, etc.), `EntityHealth` raises the corresponding Event Channel. The channel then raises the resolved Global Event configured at package level, if any, and, in the same flow, all Extra Events assigned to that channel.
+
+Extra Events are therefore not an alternative to Event Channels: they are the entity-specific events stored inside them. A practical example is the communication between the player's `EntityHealth` and the HUD displaying their HP: only the player possesses a dedicated HUD, so it is useful to assign an exclusive extra event on the appropriate channel for this interaction. In this way, the HUD does not receive events from all entities, but only those relevant to the player, while the global event is still available for game-wide systems.
 
 ### Events Breakdown
-Here is a detailed description of each event. Each type of event has both the global event and a list of extra events, but it is sufficient to describe each event once.
+Here is a detailed description of each event. Each signal has a corresponding Event Channel on `EntityHealth`; that channel raises the global event configured in `AstraRpgHealthConfig` and any extra events assigned to the entity, so it is sufficient to describe each signal once.
 
 #### Damage Related Events
 To better understand the first two events of this section, I recommend taking a look at the [Damage](damage.md) documentation to get a better understanding of damage in Astra RPG Health.
@@ -84,13 +90,11 @@ This event can be useful for implementing passive abilities or, in general, adva
 In general, the thumb rule for deciding whether to use the Pre Damage Info Event or the Damage Resolution Event is the following: if you want to manipulate the damage an entity is about to take, it is better to subscribe to Pre Damage Info Event, and modify the context as desired; if instead you want to react to the damage an entity has just taken, and trigger effects in response to it, it is better to subscribe to Damage Resolution Event, and react based on the information transmitted by its context.
 
 #### Health Related Events
-- **Gained Health Event**: Event raised when the entity gains HP, whether through healing or other mechanisms (e.g., Max HP modifiers that caused a gain of health).
+- **Health Changed Event**: Event raised whenever the entity's current HP changes, whether the value increases or decreases. This includes healing, damage, resurrection, and other mechanics that directly modify current HP such as `AddHealth`, `RemoveHealth`, or max-HP-driven HP adjustments.
 Refer to the [EntityHealthChangedContext](xref:ElectricDrill.AstraRpgHealth.Events.EntityHealthChangedContext) API for more details on the context parameter.
-- **Lost Health Event**: Event raised when the entity loses HP, whether through taking damage or other mechanisms (e.g., Max HP modifiers that caused a loss of health).
-The context parameter of this event is the same as the previous one, so refer to the [EntityHealthChangedContext](xref:ElectricDrill.AstraRpgHealth.Events.EntityHealthChangedContext) API for more details.
 
 > [!NOTE]
-> Because `TakeDamage` and `Heal` internally invoke `RemoveHealth` and `AddHealth`, calling these methods will also raise the `EntityGainedHealth` and `EntityLostHealth` events respectively.
+> Because `TakeDamage` and `Heal` internally invoke `RemoveHealth` and `AddHealth`, calling these methods will also raise the `EntityHealthChanged` event.
 
 - **Max Health Changed Event**: Event raised when an entity's total max health points change. This event is raised both when total max hp increase and when they decrease.
 See [EntityMaxHealthChangedContext](xref:ElectricDrill.AstraRpgHealth.Events.EntityMaxHealthChangedContext) API for more details on the context parameter.
