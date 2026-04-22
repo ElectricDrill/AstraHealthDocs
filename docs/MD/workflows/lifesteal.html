@@ -130,16 +130,16 @@ Determines which damage value is used as the basis for the lifesteal computation
 <p>If <strong>Step</strong> mode is selected but no step is configured, the system falls back to <strong>Final</strong> damage. The inspector displays a warning to indicate this condition.</p>
 </div>
 <h2 id="separate-vs-unified-heals">Separate vs Unified Heals</h2>
-<p>When both <strong>Generic Lifesteal</strong> and <strong>Damage-Type Lifesteal</strong> contribute to the same hit, the framework can apply them in two different ways.</p>
+<p>When both <strong>Generic Lifesteal</strong> and <strong>Damage-Type Lifesteal</strong> contribute to the same hit, the framework can apply them in two different ways. By default, <code>Unify Lifesteal Heals</code> is enabled, so the two contributions are merged into a single heal.</p>
 <h3 id="separate-heals">Separate Heals</h3>
-<p>When <code>Unify Lifesteal Heals</code> is <strong>disabled</strong> <em>(default)</em>, each contribution produces its own heal:</p>
+<p>When <code>Unify Lifesteal Heals</code> is <strong>disabled</strong>, each contribution produces its own heal:</p>
 <ul>
 <li>the generic contribution uses the generic <code>Lifesteal Source</code></li>
 <li>the damage-type contribution uses the damage type's <code>Lifesteal Source</code></li>
 </ul>
 <p>This is the right choice when those two heal sources should remain distinguishable for heal modifiers, event listeners, combat logs, analytics, or VFX/UI feedback.</p>
 <h3 id="unified-heal">Unified Heal</h3>
-<p>When <code>Unify Lifesteal Heals</code> is <strong>enabled</strong>, the generic and damage-type lifesteal amounts are summed and applied as a <strong>single heal</strong>.</p>
+<p>When <code>Unify Lifesteal Heals</code> is <strong>enabled</strong> <em>(default)</em>, the generic and damage-type lifesteal amounts are summed and applied as a <strong>single heal</strong>.</p>
 <p>In this mode, the <code>HealSourceSO</code> is resolved as follows:</p>
 <ul>
 <li>use the damage type's <code>Lifesteal Source</code> if the damage-type contribution is active and that source is configured</li>

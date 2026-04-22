@@ -333,11 +333,11 @@ If the embedded **Lifesteal Stat** is not assigned, generic lifesteal is effecti
 #### Unify Lifesteal Heals
 **Type:** `bool`  
 **Required:** No  
-**Description:** Controls how **Generic Lifesteal** and **Damage-Type Lifesteal** are applied when both contribute to the same hit.
+**Description:** Controls how **Generic Lifesteal** and **Damage-Type Lifesteal** are applied when both contribute to the same hit. It is enabled by default.
 
 **Behavior:**
-- **Disabled** *(default)*: generic and type-specific lifesteal are applied as two separate heals, each with its own `HealSourceSO`
-- **Enabled**: the two amounts are summed into a single heal; the damage type's `HealSourceSO` takes precedence, with fallback to the generic one
+- **Enabled** *(default)*: the two amounts are summed into a single heal; the damage type's `HealSourceSO` takes precedence, with fallback to the generic one
+- **Disabled**: generic and type-specific lifesteal are applied as two separate heals, each with its own `HealSourceSO`
 
 See also: [Lifesteal](./lifesteal.md)
 

@@ -61,11 +61,11 @@ The following image shows the inspector when Step mode is selected:
 
 ## Separate vs Unified Heals
 
-When both **Generic Lifesteal** and **Damage-Type Lifesteal** contribute to the same hit, the framework can apply them in two different ways.
+When both **Generic Lifesteal** and **Damage-Type Lifesteal** contribute to the same hit, the framework can apply them in two different ways. By default, `Unify Lifesteal Heals` is enabled, so the two contributions are merged into a single heal.
 
 ### Separate Heals
 
-When `Unify Lifesteal Heals` is **disabled** *(default)*, each contribution produces its own heal:
+When `Unify Lifesteal Heals` is **disabled**, each contribution produces its own heal:
 
 - the generic contribution uses the generic `Lifesteal Source`
 - the damage-type contribution uses the damage type's `Lifesteal Source`
@@ -74,7 +74,7 @@ This is the right choice when those two heal sources should remain distinguishab
 
 ### Unified Heal
 
-When `Unify Lifesteal Heals` is **enabled**, the generic and damage-type lifesteal amounts are summed and applied as a **single heal**.
+When `Unify Lifesteal Heals` is **enabled** *(default)*, the generic and damage-type lifesteal amounts are summed and applied as a **single heal**.
 
 In this mode, the `HealSourceSO` is resolved as follows:
 

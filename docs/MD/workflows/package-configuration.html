@@ -416,11 +416,11 @@ entityHealth.ManualHealthRegenerationTick();
 <h4 id="unify-lifesteal-heals">Unify Lifesteal Heals</h4>
 <p><strong>Type:</strong> <code>bool</code><br>
 <strong>Required:</strong> No<br>
-<strong>Description:</strong> Controls how <strong>Generic Lifesteal</strong> and <strong>Damage-Type Lifesteal</strong> are applied when both contribute to the same hit.</p>
+<strong>Description:</strong> Controls how <strong>Generic Lifesteal</strong> and <strong>Damage-Type Lifesteal</strong> are applied when both contribute to the same hit. It is enabled by default.</p>
 <p><strong>Behavior:</strong></p>
 <ul>
-<li><strong>Disabled</strong> <em>(default)</em>: generic and type-specific lifesteal are applied as two separate heals, each with its own <code>HealSourceSO</code></li>
-<li><strong>Enabled</strong>: the two amounts are summed into a single heal; the damage type's <code>HealSourceSO</code> takes precedence, with fallback to the generic one</li>
+<li><strong>Enabled</strong> <em>(default)</em>: the two amounts are summed into a single heal; the damage type's <code>HealSourceSO</code> takes precedence, with fallback to the generic one</li>
+<li><strong>Disabled</strong>: generic and type-specific lifesteal are applied as two separate heals, each with its own <code>HealSourceSO</code></li>
 </ul>
 <p>See also: <a href="lifesteal.html">Lifesteal</a></p>
 <hr>
