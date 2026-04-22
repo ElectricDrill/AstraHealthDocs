@@ -23,10 +23,11 @@ A possible way to simplify the management of all the `DamageSourceSO` modifier s
 A `DamageTypeSO` represents the type of damage—such as physical, fire, ice, lightning, or damage-over-time (DoT) effects like bleeding. In the following image you cane see an example of a `DamageTypeSO` instance in the inspector:  
 ![DamageType](../../images/AstraRPG/workflows/damage/damage-type/magic-damage-type-inspector.png)
 
-You can notice that the parameters are divided in three sections:
+You can notice that the parameters are divided in four sections:
 1. **Damage Reduction**: parameters related to the damage and defense reduction mechanics for this damage type.
 2. **Damage Modifiers**: parameters related to flat and percentage damage modifiers for this damage type.
 3. **True Damage Options**: parameters related to the true damage options for this damage type.
+4. **Lifesteal**: parameters related to the type-specific lifesteal contribution for this damage type.
 
 > [!NOTE]
 > I recall the [Damage Modifiers vs. Stat-Based Damage Reduction](../introduction.md#damage-modifiers-vs-defensive-stat-based-damage-reduction) section of the introduction documentation, where I explained the difference between damage reduction and damage modifiers.
@@ -210,6 +211,20 @@ The **True Damage Options** section of a `DamageTypeSO` exposes three boolean fl
 
 > [!TIP]
 > To create a damage type that is also unaffected by any defensive stat, simply leave **Defensive Stat** and **Damage Reduction Fn** empty. The [`ApplyDefenseStep`](#damage-step) has nothing to compute and is skipped. Combined with the three True Damage Option flags and no modifier stats, this defines a fully unmitigated damage type.
+
+### Damage Type's Lifesteal
+
+Each `DamageTypeSO` exposes a **Lifesteal** field containing a `LifestealStatConfig`.
+
+When its **Lifesteal Stat** is configured and the damage dealer has that stat in its `StatSet`, successful hits of this damage type heal the attacker for a percentage of the selected damage amount. The same three parameters are available as for generic lifesteal:
+
+- **Lifesteal Stat**
+- **Lifesteal Source**
+- **Amount Selector**
+
+This contribution applies only to hits whose resolved `DamageTypeSO` is this asset. It stacks with the **Generic Lifesteal** configured in `AstraRpgHealthConfigSO`.
+
+For the full behavior — including how this stacks with generic lifesteal and how the `Unify Lifesteal Heals` flag affects the resulting healing events — see [Lifesteal](lifesteal.md).
 
 ### Damage Reduction Graph
 

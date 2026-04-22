@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Class EntityResurrectedGameEvent | Astra RPG Health ">
       
-      <meta name="description" content="Event raised when an entity is resurrected. Payload: .">
+      <meta name="description" content="Event raised when an entity is resurrected. Payload: ResurrectionInfo.">
       <link rel="icon" href="../images/astra-health-ico.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -89,7 +89,7 @@
 
 
   <h1 id="ElectricDrill_AstraRpgHealth_Events_EntityResurrectedGameEvent" data-uid="ElectricDrill.AstraRpgHealth.Events.EntityResurrectedGameEvent" class="text-break">
-Class EntityResurrectedGameEvent  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/Events/GeneratedEvents/HealthEventsGenerator/GameEvents/1/EntityResurrectedGameEvent.cs/#L12"><i class="bi bi-code-slash"></i></a>
+Class EntityResurrectedGameEvent  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/Events/GeneratedEvents/HealthEventsGenerator/GameEvents/1/EntityResurrectedGameEvent.cs/#L11"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -98,7 +98,7 @@ Class EntityResurrectedGameEvent  <a class="header-action link-secondary" title=
   </div>
 
   <div class="markdown summary"><p>Event raised when an entity is resurrected.
-Payload: <a class="xref" href="ElectricDrill.AstraRpgHealth.Events.Contexts.ResurrectionContext.html">ResurrectionContext</a>.</p>
+Payload: ResurrectionInfo.</p>
 </div>
   <div class="markdown conceptual"></div>
 
@@ -116,6 +116,7 @@ public class EntityResurrectedGameEvent : GameEventGeneric1&lt;ResurrectionConte
       <div><span class="xref">object</span></div>
       <div><a class="xref" href="https://docs.unity3d.com/ScriptReference/Object.html">Object</a></div>
       <div><a class="xref" href="https://docs.unity3d.com/ScriptReference/ScriptableObject.html">ScriptableObject</a></div>
+      <div><span class="xref">GameEventBase</span>&lt;<span class="xref">GameEventListenerGeneric1</span>&lt;<a class="xref" href="ElectricDrill.AstraRpgHealth.Events.Contexts.ResurrectionContext.html">ResurrectionContext</a>&gt;, <span class="xref">Action</span>&lt;<a class="xref" href="ElectricDrill.AstraRpgHealth.Events.Contexts.ResurrectionContext.html">ResurrectionContext</a>&gt;&gt;</div>
       <div><span class="xref">GameEventGeneric1</span>&lt;<a class="xref" href="ElectricDrill.AstraRpgHealth.Events.Contexts.ResurrectionContext.html">ResurrectionContext</a>&gt;</div>
       <div><span class="xref">EntityResurrectedGameEvent</span></div>
     </dd>
@@ -143,6 +144,21 @@ public class EntityResurrectedGameEvent : GameEventGeneric1&lt;ResurrectionConte
     </div>
     <div>
       <span class="xref">GameEventGeneric1&lt;ResurrectionContext&gt;.UnregisterListener(GameEventListenerGeneric1&lt;ResurrectionContext&gt;)</span>
+    </div>
+    <div>
+      <span class="xref">GameEventBase&lt;GameEventListenerGeneric1&lt;ResurrectionContext&gt;, Action&lt;ResurrectionContext&gt;&gt;.RegisterMonoListener(GameEventListenerGeneric1&lt;ResurrectionContext&gt;)</span>
+    </div>
+    <div>
+      <span class="xref">GameEventBase&lt;GameEventListenerGeneric1&lt;ResurrectionContext&gt;, Action&lt;ResurrectionContext&gt;&gt;.UnregisterMonoListener(GameEventListenerGeneric1&lt;ResurrectionContext&gt;)</span>
+    </div>
+    <div>
+      <span class="xref">GameEventBase&lt;GameEventListenerGeneric1&lt;ResurrectionContext&gt;, Action&lt;ResurrectionContext&gt;&gt;.RegisterCodeListener(Action&lt;ResurrectionContext&gt;)</span>
+    </div>
+    <div>
+      <span class="xref">GameEventBase&lt;GameEventListenerGeneric1&lt;ResurrectionContext&gt;, Action&lt;ResurrectionContext&gt;&gt;.UnregisterCodeListener(Action&lt;ResurrectionContext&gt;)</span>
+    </div>
+    <div>
+      <span class="xref">GameEventBase&lt;GameEventListenerGeneric1&lt;ResurrectionContext&gt;, Action&lt;ResurrectionContext&gt;&gt;.Dispatch&lt;TInvoker&gt;(TInvoker)</span>
     </div>
   </dd></dl>
 

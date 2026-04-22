@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Class ReceivedHealContext | Astra RPG Health ">
       
-      <meta name="description" content="Represents the result of a heal operation as actually received by the target. Contains the resolved heal amount, source, involved entities and whether it was critical.">
+      <meta name="description" content="Immutable result of a heal operation as actually received by the target. Contains the resolved heal amount, source, involved entities and whether it was critical.">
       <link rel="icon" href="../images/astra-health-ico.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -97,13 +97,13 @@ Class ReceivedHealContext  <a class="header-action link-secondary" title="View s
   <dl><dt>Assembly</dt><dd>com.electricdrill.astra-rpg-health.Runtime.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>Represents the result of a heal operation as actually received by the target.
+  <div class="markdown summary"><p>Immutable result of a heal operation as actually received by the target.
 Contains the resolved heal amount, source, involved entities and whether it was critical.</p>
 </div>
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class ReceivedHealContext : IHasEntity, IHasTarget, IHasPerformer, IHasAmount, IHasInstigator, IReactable</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class ReceivedHealContext : IHasEntity, IHasTarget, IHasPerformer, IHasAmount, IHasInstigator, IReactable</code></pre>
   </div>
 
 

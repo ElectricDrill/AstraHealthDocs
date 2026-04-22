@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Class DamageResolutionContext | Astra RPG Health ">
       
-      <meta name="description" content="The result returned by damage application attempts. Encapsulates whether the damage was applied or prevented, the reasons for prevention, and the concrete damage information that was ultimately applied (if any).">
+      <meta name="description" content="The immutable result returned by damage application attempts. Encapsulates whether the damage was applied or prevented, the reasons for prevention, and the concrete damage information that was ultimately applied (if any).">
       <link rel="icon" href="../images/astra-health-ico.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -97,14 +97,14 @@ Class DamageResolutionContext  <a class="header-action link-secondary" title="Vi
   <dl><dt>Assembly</dt><dd>com.electricdrill.astra-rpg-health.Runtime.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>The result returned by damage application attempts.
+  <div class="markdown summary"><p>The immutable result returned by damage application attempts.
 Encapsulates whether the damage was applied or prevented, the reasons for prevention,
 and the concrete damage information that was ultimately applied (if any).</p>
 </div>
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class DamageResolutionContext : IHasEntity, IHasTarget, IHasPerformer, IHasAmount, IHasInstigator, IReactable</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class DamageResolutionContext : IHasEntity, IHasTarget, IHasPerformer, IHasAmount, IHasInstigator, IReactable</code></pre>
   </div>
 
 

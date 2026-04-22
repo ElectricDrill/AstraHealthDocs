@@ -306,15 +306,38 @@ entityHealth.ManualHealthRegenerationTick();
 
 ### Lifesteal
 
-#### Lifesteal Config
-**Type:** `LifestealConfigSO`  
+Lifesteal now has **two configuration layers**:
+
+- a **generic** layer configured in `AstraRpgHealthConfigSO`
+- an optional **type-specific** layer configured directly on each `DamageTypeSO`
+
+Both layers use `LifestealStatConfig` and can stack on the same hit.
+
+#### Generic Lifesteal
+**Type:** `LifestealStatConfig`  
 **Required:** No  
-**Description:** Configuration for lifesteal mechanics (healing based on damage dealt).
+**Description:** Generic lifesteal configuration applied to all damage dealt by an entity, regardless of `DamageTypeSO`.
 
 **Typical Settings:**
 - Lifesteal percentage stat
-- Heal source for lifesteal effects
-- Restrictions (e.g., only on critical hits, only physical damage)
+- Heal source for generic lifesteal
+- Amount selector (initial, step, or final damage)
+
+If the embedded **Lifesteal Stat** is not assigned, generic lifesteal is effectively disabled. This generic contribution stacks with any lifesteal configured on the specific `DamageTypeSO` of the hit.
+
+#### Suppress Lifesteal Events
+**Type:** `bool`  
+**Required:** No  
+**Description:** If enabled, prevents triggering heal events for lifesteal heals. Useful when many entities can trigger lifesteal frequently and you do not need listeners, combat-log entries, or UI feedback for those heals.
+
+#### Unify Lifesteal Heals
+**Type:** `bool`  
+**Required:** No  
+**Description:** Controls how **Generic Lifesteal** and **Damage-Type Lifesteal** are applied when both contribute to the same hit.
+
+**Behavior:**
+- **Disabled** *(default)*: generic and type-specific lifesteal are applied as two separate heals, each with its own `HealSourceSO`
+- **Enabled**: the two amounts are summed into a single heal; the damage type's `HealSourceSO` takes precedence, with fallback to the generic one
 
 See also: [Lifesteal](./lifesteal.md)
 

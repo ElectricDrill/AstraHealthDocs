@@ -23,7 +23,7 @@
 Astra RPG Health extends the base framework, [](Astra RPG Framework), by adding functionality for managing health and calculating damage for entities.
 The package is designed with the same design philosophy as the base asset: a Scriptable Object-based architecture to encourage flexibility, modularity, and testability. If you're already familiar with the base package, you'll feel right at home with its features.
 
-You can define your own damage types, designate defensive statistics used to reduce each damage type, configure the damage calculation pipeline with the desired steps, configure lifesteal for certain damage types, define strategies to execute upon entity death, and much more.
+You can define your own damage types, designate defensive statistics used to reduce each damage type, configure the damage calculation pipeline with the desired steps, configure both generic and damage-type-specific lifesteal, define strategies to execute upon entity death, and much more.
 
 ## Astra RPG Health Vocabulary
 
@@ -86,7 +86,7 @@ Configuration will be deeply discussed later in [Package Configuration](workflow
 
 ### <img src="../images/AstraRPG/astra-health_damage-type.png" alt="attribute" width="30" class="icon-background"/> Damage Type
 `DamageType` is a `ScriptableObject` that represents a specific type of damage. Each damage type can be optionally configured with a defensive `Stat` that will be used to reduce incoming damage of that type. If a defensive stat is assigned, also a piercing stat can be assigned to ignore a portion of the defense when calculating damage.  
-Both for the defensive and piercing stat, you can select a `DamageReductionFormula` and a `DefenseReductionFormula` respectively, to define how the stats will affect damage reduction and defense piercing.
+Both for the defensive and piercing stat, you can select a `DamageReductionFormula` and a `DefenseReductionFormula` respectively, to define how the stats will affect damage reduction and defense piercing. Each `DamageType` also contains its own optional lifesteal configuration, allowing specific damage types to add a dedicated lifesteal contribution on top of any generic lifesteal configured globally.
 
 ### <img src="../images/AstraRPG/astra-health_damage-source.png" alt="attribute" width="30" class="icon-background"/> Damage Source
 `DamageSource`, derived from `ScriptableObject`, represents the origin of the damage inflicted. They don't have any specific properties, but they can be assigned to other objects of the package to create specific behaviors based on the damage source. We will see for what and how in the Workflows.
@@ -119,9 +119,9 @@ Astra RPG Framework v1.4.0 introduced the concept of <TODO link here>GameAction:
 
 Astra RPG Health leverages Game Actions to define custom behaviors when an entity dies or is resurrected. The framework allows you to assign a default on-death Game Action that will be executed when any entity dies, unless the entity has its own custom on-death Game Action assigned. Similarly, a default on-resurrection Game Action can be assigned to be executed when an entity is resurrected.
 
-### <img src="../images/AstraRPG/astra-health_lifesteal-config.png" alt="attribute" width="30" class="icon-background"/> Lifesteal Configuration
-`LifestealConfig`, deriving from ScriptableObject, allows you to define how lifesteal mechanics work for specific damage types. This allows to bind a statistic to each damage type you want to have lifesteal for. That statistic will be used to calculate the amount of health to restore to the attacker when they deal damage of that type.  
-The configuration allows also to configure the damage pipeline timing of the lifesteal effect. For example, you might want lifesteal to occur before or after damage reduction is applied. We will see this in detail later in the Workflows.
+### <img src="../images/AstraRPG/astra-health_lifesteal-config.png" alt="attribute" width="30" class="icon-background"/> Lifesteal
+Lifesteal is configured through two complementary layers. `AstraRpgHealthConfigSO` can define a **Generic Lifesteal** that applies to all outgoing damage, while each `DamageTypeSO` can define its own **Lifesteal** configuration that applies only to that specific damage type.  
+Both layers use the same data structure — lifesteal stat, heal source, and amount selector — and can stack on the same hit. When both are active, you can choose whether they should remain two separate heals or be merged into a single heal through the `Unify Lifesteal Heals` flag in the global configuration. We will see this in detail later in the Workflows.
 
 ### <img src="../images/AstraRPG/astra-health_health-scaling-component.png" alt="attribute" width="30" class="icon-background"/> Health Scaling Component
 Astra RPG Health provides a brand new `HealthScalingComponent` that you can use in your `ScalingFormula`s to have skills or abilities scale based on either the attacker or the target's health. You can choose to scale upon one or more among Maximum HP, Current HP, and Missing HP.

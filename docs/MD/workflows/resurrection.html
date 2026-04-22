@@ -165,7 +165,7 @@ targetHealth.Resurrect(thirtyPercent);
 <p>Resurrecting an entity raises multiple events. Because resurrection routes through <code>Heal</code>, the healing events fire first:</p>
 <ul>
 <li><strong>Pre Heal Event</strong> and <strong>Entity Healed Event</strong> — raised by the internal <code>Heal</code> call, carrying the standard healing context before and after modifiers. Subscribe to these if your logic needs to react to the healing component of a resurrection; for example, to trigger a heal-triggered ability even during resurrection</li>
-<li><strong>Entity Gained Health Event</strong> — raised when the entity's HP increases during the <code>Heal</code> call. Useful for general HP-change listeners that do not need the full context of the healing, but just want to know when HP changes and by how much. An example use case is a UI health bar that needs to update whenever HP changes, regardless of the source of the change</li>
+<li><strong>Entity Health Changed Event</strong> — raised when the entity's HP increases during the <code>Heal</code> call. Useful for general HP-change listeners that do not need the full context of the healing, but just want to know when HP changes and by how much. An example use case is a UI health bar that needs to update whenever HP changes, regardless of the source of the change</li>
 </ul>
 <p>After the healing pipeline completes and the resurrection game action has been dispatched:</p>
 <ul>
@@ -186,7 +186,7 @@ targetHealth.Resurrect(thirtyPercent);
 </ul>
 </li>
 </ul>
-<p>Each event is available in both global and extra variants on <code>EntityHealth</code>. Use global events when any GameObject in the game needs to receive the signal; use extra events for targeted, component-specific or GO-hierarchy-specific communications. See <a href="entity-health.html#global-events">Global Events</a> for guidance on choosing between them.</p>
+<p>Each event has a corresponding Event Channel on <code>EntityHealth</code>. When that channel is raised, it resolves and raises the matching global event configured at package level, if any, and also raises any extra events assigned to that channel. Use global events when any GameObject in the game needs to receive the signal; use extra events on the channel for targeted, component-specific or GO-hierarchy-specific communications. See <a href="entity-health.html#global-events">Global Events</a> and <a href="entity-health.html#event-channels">Event Channels</a> for guidance on choosing between them.</p>
 
 </article>
 

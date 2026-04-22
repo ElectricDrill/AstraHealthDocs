@@ -148,8 +148,8 @@ Create isntances via Assets -&gt; Create -&gt; Astra RPG Health / Def Reduction 
 
   <a id="ElectricDrill_AstraRpgHealth_DefenseReductionFunctions_PercentageDefenseReductionFnSO_CalculateReducedDefense_" data-uid="ElectricDrill.AstraRpgHealth.DefenseReductionFunctions.PercentageDefenseReductionFnSO.CalculateReducedDefense*"></a>
 
-  <h3 id="ElectricDrill_AstraRpgHealth_DefenseReductionFunctions_PercentageDefenseReductionFnSO_CalculateReducedDefense_System_Int64_System_Int64_ElectricDrill_AstraRpgFramework_Stats_Stat_System_Boolean_" data-uid="ElectricDrill.AstraRpgHealth.DefenseReductionFunctions.PercentageDefenseReductionFnSO.CalculateReducedDefense(System.Int64,System.Int64,ElectricDrill.AstraRpgFramework.Stats.Stat,System.Boolean)">
-  CalculateReducedDefense(long, long, Stat, bool)
+  <h3 id="ElectricDrill_AstraRpgHealth_DefenseReductionFunctions_PercentageDefenseReductionFnSO_CalculateReducedDefense_System_Int64_System_Int64_ElectricDrill_AstraRpgFramework_Stats_StatSO_System_Boolean_" data-uid="ElectricDrill.AstraRpgHealth.DefenseReductionFunctions.PercentageDefenseReductionFnSO.CalculateReducedDefense(System.Int64,System.Int64,ElectricDrill.AstraRpgFramework.Stats.StatSO,System.Boolean)">
+  CalculateReducedDefense(long, long, StatSO, bool)
   <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/DefenseReductionFunctions/PercentageDefenseReductionFnSO.cs/#L19"><i class="bi bi-code-slash"></i></a>
   </h3>
 
@@ -158,7 +158,7 @@ Create isntances via Assets -&gt; Create -&gt; Astra RPG Health / Def Reduction 
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override double CalculateReducedDefense(long piercingStatValue, long defensiveStatValue, Stat defensiveStat, bool applyClamp = true)</code></pre>
+    <pre><code class="lang-csharp hljs">public override double CalculateReducedDefense(long piercingStatValue, long defensiveStatValue, StatSO defensiveStat, bool applyClamp = true)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -169,7 +169,7 @@ Create isntances via Assets -&gt; Create -&gt; Astra RPG Health / Def Reduction 
     <dt><code>defensiveStatValue</code> <span class="xref">long</span></dt>
     <dd><p>Original defense stat.</p>
 </dd>
-    <dt><code>defensiveStat</code> <span class="xref">Stat</span></dt>
+    <dt><code>defensiveStat</code> <span class="xref">StatSO</span></dt>
     <dd><p>The defensive stat object used to clamp the result.</p>
 </dd>
     <dt><code>applyClamp</code> <span class="xref">bool</span></dt>

@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Class PreHealContext | Astra RPG Health ">
       
-      <meta name="description" content="Immutable description of a pending heal operation that can be passed through heal processing logic before the actual health change is applied.">
+      <meta name="description" content="Mutable pre-heal context raised via the pre-heal game event before the heal pipeline runs. Listeners may mutate , , ,  and  to transform the incoming heal — e.g. amplify a heal via a buff, reroute it through a different , or negate it entirely by setting  (temporary heal immunity). The pipeline reads these fields after the event is dispatched.">
       <link rel="icon" href="../images/astra-health-ico.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -89,7 +89,7 @@
 
 
   <h1 id="ElectricDrill_AstraRpgHealth_Heal_PreHealContext" data-uid="ElectricDrill.AstraRpgHealth.Heal.PreHealContext" class="text-break">
-Class PreHealContext  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/Heal/PreHealContext.cs/#L10"><i class="bi bi-code-slash"></i></a>
+Class PreHealContext  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/Heal/PreHealContext.cs/#L14"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -97,13 +97,17 @@ Class PreHealContext  <a class="header-action link-secondary" title="View source
   <dl><dt>Assembly</dt><dd>com.electricdrill.astra-rpg-health.Runtime.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>Immutable description of a pending heal operation that can be passed through
-heal processing logic before the actual health change is applied.</p>
+  <div class="markdown summary"><p>Mutable pre-heal context raised via the pre-heal game event before the heal pipeline runs.
+Listeners may mutate <a class="xref" href="ElectricDrill.AstraRpgHealth.Heal.PreHealContext.html#ElectricDrill_AstraRpgHealth_Heal_PreHealContext_Amount">Amount</a>, <a class="xref" href="ElectricDrill.AstraRpgHealth.Heal.PreHealContext.html#ElectricDrill_AstraRpgHealth_Heal_PreHealContext_HealSource">HealSource</a>, <a class="xref" href="ElectricDrill.AstraRpgHealth.Heal.PreHealContext.html#ElectricDrill_AstraRpgHealth_Heal_PreHealContext_IsCritical">IsCritical</a>,
+<a class="xref" href="ElectricDrill.AstraRpgHealth.Heal.PreHealContext.html#ElectricDrill_AstraRpgHealth_Heal_PreHealContext_CriticalMultiplier">CriticalMultiplier</a> and <a class="xref" href="ElectricDrill.AstraRpgHealth.Heal.PreHealContext.html#ElectricDrill_AstraRpgHealth_Heal_PreHealContext_Ignore">Ignore</a> to transform the incoming heal — e.g.
+amplify a heal via a buff, reroute it through a different <a class="xref" href="ElectricDrill.AstraRpgHealth.Heal.HealSourceSO.html">HealSourceSO</a>, or negate it
+entirely by setting <a class="xref" href="ElectricDrill.AstraRpgHealth.Heal.PreHealContext.html#ElectricDrill_AstraRpgHealth_Heal_PreHealContext_Ignore">Ignore</a> (temporary heal immunity). The pipeline reads these fields
+after the event is dispatched.</p>
 </div>
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class PreHealContext : IHasEntity, IHasTarget, IHasPerformer, IHasAmount, IHasInstigator, IReactable</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class PreHealContext : IHasEntity, IHasTarget, IHasPerformer, IHasAmount, IHasInstigator, IReactable</code></pre>
   </div>
 
 
@@ -144,15 +148,15 @@ heal processing logic before the actual health change is applied.</p>
 
   <h3 id="ElectricDrill_AstraRpgHealth_Heal_PreHealContext_Amount" data-uid="ElectricDrill.AstraRpgHealth.Heal.PreHealContext.Amount">
   Amount
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/Heal/PreHealContext.cs/#L15"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/Heal/PreHealContext.cs/#L19"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>The requested heal amount (base value before modifiers).</p>
+  <div class="markdown level1 summary"><p>The requested heal amount (base value before modifiers). Listeners may mutate this.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public long Amount { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public long Amount { get; set; }</code></pre>
   </div>
 
 
@@ -176,7 +180,7 @@ heal processing logic before the actual health change is applied.</p>
 
   <h3 id="ElectricDrill_AstraRpgHealth_Heal_PreHealContext_Builder" data-uid="ElectricDrill.AstraRpgHealth.Heal.PreHealContext.Builder">
   Builder
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/Heal/PreHealContext.cs/#L71"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/Heal/PreHealContext.cs/#L81"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Fluent builder entry point for creating a <a class="xref" href="ElectricDrill.AstraRpgHealth.Heal.PreHealContext.html">PreHealContext</a>.
@@ -210,15 +214,15 @@ The healer entity (<a class="xref" href="ElectricDrill.AstraRpgHealth.Heal.PreHe
 
   <h3 id="ElectricDrill_AstraRpgHealth_Heal_PreHealContext_CriticalMultiplier" data-uid="ElectricDrill.AstraRpgHealth.Heal.PreHealContext.CriticalMultiplier">
   CriticalMultiplier
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/Heal/PreHealContext.cs/#L48"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/Heal/PreHealContext.cs/#L52"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>The multiplicative factor applied when <a class="xref" href="ElectricDrill.AstraRpgHealth.Heal.PreHealContext.html#ElectricDrill_AstraRpgHealth_Heal_PreHealContext_IsCritical">IsCritical</a> is true.</p>
+  <div class="markdown level1 summary"><p>The multiplicative factor applied when <a class="xref" href="ElectricDrill.AstraRpgHealth.Heal.PreHealContext.html#ElectricDrill_AstraRpgHealth_Heal_PreHealContext_IsCritical">IsCritical</a> is true. Listeners may mutate this.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public double CriticalMultiplier { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public double CriticalMultiplier { get; set; }</code></pre>
   </div>
 
 
@@ -242,7 +246,7 @@ The healer entity (<a class="xref" href="ElectricDrill.AstraRpgHealth.Heal.PreHe
 
   <h3 id="ElectricDrill_AstraRpgHealth_Heal_PreHealContext_Entity" data-uid="ElectricDrill.AstraRpgHealth.Heal.PreHealContext.Entity">
   Entity
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/Heal/PreHealContext.cs/#L38"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/Heal/PreHealContext.cs/#L42"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>The entity receiving the healing. Same as <a class="xref" href="ElectricDrill.AstraRpgHealth.Heal.PreHealContext.html#ElectricDrill_AstraRpgHealth_Heal_PreHealContext_Target">Target</a> in this case.</p>
@@ -274,15 +278,15 @@ The healer entity (<a class="xref" href="ElectricDrill.AstraRpgHealth.Heal.PreHe
 
   <h3 id="ElectricDrill_AstraRpgHealth_Heal_PreHealContext_HealSource" data-uid="ElectricDrill.AstraRpgHealth.Heal.PreHealContext.HealSource">
   HealSource
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/Heal/PreHealContext.cs/#L22"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/Heal/PreHealContext.cs/#L26"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>The <a class="xref" href="ElectricDrill.AstraRpgHealth.Heal.PreHealContext.html#ElectricDrill_AstraRpgHealth_Heal_PreHealContext_HealSource">HealSource</a> identifying the origin/type of the healing.</p>
+  <div class="markdown level1 summary"><p>The <a class="xref" href="ElectricDrill.AstraRpgHealth.Heal.PreHealContext.html#ElectricDrill_AstraRpgHealth_Heal_PreHealContext_HealSource">HealSource</a> identifying the origin/type of the healing. Listeners may mutate this.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public HealSourceSO HealSource { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public HealSourceSO HealSource { get; set; }</code></pre>
   </div>
 
 
@@ -302,11 +306,44 @@ The healer entity (<a class="xref" href="ElectricDrill.AstraRpgHealth.Heal.PreHe
 
 
 
+  <a id="ElectricDrill_AstraRpgHealth_Heal_PreHealContext_Ignore_" data-uid="ElectricDrill.AstraRpgHealth.Heal.PreHealContext.Ignore*"></a>
+
+  <h3 id="ElectricDrill_AstraRpgHealth_Heal_PreHealContext_Ignore" data-uid="ElectricDrill.AstraRpgHealth.Heal.PreHealContext.Ignore">
+  Ignore
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/Heal/PreHealContext.cs/#L58"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>If true, the heal will be ignored and not applied to the target. Use this to model heal-immunity
+buffs or listener-driven cancellation. Listeners may mutate this.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Ignore { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">bool</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="ElectricDrill_AstraRpgHealth_Heal_PreHealContext_Instigator_" data-uid="ElectricDrill.AstraRpgHealth.Heal.PreHealContext.Instigator*"></a>
 
   <h3 id="ElectricDrill_AstraRpgHealth_Heal_PreHealContext_Instigator" data-uid="ElectricDrill.AstraRpgHealth.Heal.PreHealContext.Instigator">
   Instigator
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/Heal/PreHealContext.cs/#L56"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/Heal/PreHealContext.cs/#L66"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>The specific thing that caused this heal — for example an ability definition, a modifier
@@ -341,15 +378,15 @@ May be <code>null</code> if no specific instigator is relevant beyond <a class="
 
   <h3 id="ElectricDrill_AstraRpgHealth_Heal_PreHealContext_IsCritical" data-uid="ElectricDrill.AstraRpgHealth.Heal.PreHealContext.IsCritical">
   IsCritical
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/Heal/PreHealContext.cs/#L43"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/Heal/PreHealContext.cs/#L47"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Whether this heal is flagged as a critical heal.</p>
+  <div class="markdown level1 summary"><p>Whether this heal is flagged as a critical heal. Listeners may mutate this.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool IsCritical { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public bool IsCritical { get; set; }</code></pre>
   </div>
 
 
@@ -373,7 +410,7 @@ May be <code>null</code> if no specific instigator is relevant beyond <a class="
 
   <h3 id="ElectricDrill_AstraRpgHealth_Heal_PreHealContext_IsReactable" data-uid="ElectricDrill.AstraRpgHealth.Heal.PreHealContext.IsReactable">
   IsReactable
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/Heal/PreHealContext.cs/#L64"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/Heal/PreHealContext.cs/#L74"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>When <code>true</code>, reactive systems may respond to this heal event.
@@ -408,7 +445,7 @@ such as a passive that heals in response to another heal or damage event.</p>
 
   <h3 id="ElectricDrill_AstraRpgHealth_Heal_PreHealContext_Performer" data-uid="ElectricDrill.AstraRpgHealth.Heal.PreHealContext.Performer">
   Performer
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/Heal/PreHealContext.cs/#L28"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/Heal/PreHealContext.cs/#L32"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>The entity that performed the heal (may be null for system-initiated or non-entity sources).</p>
@@ -440,7 +477,7 @@ such as a passive that heals in response to another heal or damage event.</p>
 
   <h3 id="ElectricDrill_AstraRpgHealth_Heal_PreHealContext_Target" data-uid="ElectricDrill.AstraRpgHealth.Heal.PreHealContext.Target">
   Target
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/Heal/PreHealContext.cs/#L33"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/Heal/PreHealContext.cs/#L37"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>The target entity receiving the healing.</p>

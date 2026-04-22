@@ -1,22 +1,17 @@
 # Lifesteal
 
-Lifesteal is a mechanic that lets an entity recover health proportional to the damage it deals. When an entity successfully damages a target, a percentage of the damage — determined by a configurable stat — is healed back to the attacker. The lifesteal percentage, the heal source used, and which point in the damage pipeline is sampled as the heal basis are all configurable per damage type, giving designers fine-grained control without any additional code.
+Lifesteal is a mechanic that lets an entity recover health proportional to the damage it deals. When an entity successfully damages a target, a percentage of the damage — determined by a configurable stat — is healed back to the attacker.
 
-## Lifesteal Config
+The system supports **two lifesteal layers**:
 
-*Relative path:* `Astra RPG Health/Lifesteal Config`
+1. **Generic Lifesteal** — configured once in `AstraRpgHealthConfigSO` and applied to all damage dealt by the entity.
+2. **Damage-Type Lifesteal** — configured directly inside each `DamageTypeSO` and applied only when that specific damage type is dealt.
 
-The `LifestealConfigSO` is the root asset for lifesteal configuration. It holds a dictionary that maps each `DamageTypeSO` to a `LifestealStatConfig`, defining how lifesteal behaves for that specific damage type. Damage types not present in the dictionary do not trigger lifesteal.
+Both layers use the same `LifestealStatConfig` structure, so designers configure the same three concepts in both places: the lifesteal stat, the heal source, and the damage amount selector. If both layers are configured for the same hit, their heal amounts stack. Depending on the `Unify Lifesteal Heals` flag in `AstraRpgHealthConfigSO`, those stacked amounts can be applied either as two separate heals or as a single unified heal.
 
-The following image shows an example of a `LifestealConfigSO` with three mappings configured:  
-![Lifesteal Config inspector](../../images/AstraRPG/workflows/lifesteal/lifesteal-config.png)
+## LifestealStatConfig
 
-## Configuring Lifesteal Mappings
-
-Each entry in the dictionary pairs a `DamageTypeSO` with a `LifestealStatConfig`. The following image shows what a single mapping looks like in the inspector:  
-![Lifesteal Stat Config inspector](../../images/AstraRPG/workflows/lifesteal/lifesteal-stat-config.png)
-
-There are three fields to configure for each mapping:
+`LifestealStatConfig` is the reusable data structure used by both **Generic Lifesteal** and the per-`DamageTypeSO` **Lifesteal** section.
 
 **Lifesteal Stat**  
 The stat that drives the lifesteal percentage. At runtime, the attacker reads this stat value from its own `StatSet` and computes the heal as:
@@ -29,6 +24,26 @@ The `HealSourceSO` used when applying the lifesteal heal. As with any heal in th
 
 **Amount Selector**  
 Determines which damage value is used as the basis for the lifesteal computation. See [Amount Selector](#amount-selector) below.
+
+## Generic Lifesteal
+
+`AstraRpgHealthConfigSO` exposes a **Generic Lifesteal** field of type `LifestealStatConfig`.
+
+If its **Lifesteal Stat** is configured and the damage dealer has that stat in its `StatSet`, every successful hit can generate lifesteal from this generic configuration regardless of the hit's `DamageTypeSO`.
+
+Use this when you want a broad mechanic such as "all outgoing damage grants lifesteal", without repeating the same setup on every damage type.
+
+See also: [Lifesteal](package-configuration.md#lifesteal) in Package Configuration.
+
+## Damage-Type Lifesteal
+
+Each `DamageTypeSO` contains its own **Lifesteal** field, also of type `LifestealStatConfig`.
+
+This contribution is evaluated only when the resolved hit uses that `DamageTypeSO`. It stacks with **Generic Lifesteal**, making it possible to define a baseline lifesteal that applies to all damage plus an additional bonus or alternate source for specific damage types.
+
+Use this when lifesteal should depend on the nature of the damage — for example, only physical hits lifesteal, or fire damage lifesteal should use a dedicated `HealSourceSO`.
+
+See also: [Damage Type's Lifesteal](damage.md#damage-types-lifesteal).
 
 ### Amount Selector
 
@@ -44,9 +59,29 @@ The following image shows the inspector when Step mode is selected:
 > [!NOTE]
 > If **Step** mode is selected but no step is configured, the system falls back to **Final** damage. The inspector displays a warning to indicate this condition.
 
-## Adding Lifesteal to the Package Configuration
+## Separate vs Unified Heals
 
-Once the `LifestealConfigSO` is set up, assign it to the **Lifesteal Config** field in the `AstraRpgHealthConfigSO`. All entities that share this configuration asset will have lifesteal enabled according to the mappings defined in the assigned `LifestealConfigSO`. See [Lifesteal](package-configuration.md#lifesteal) in the Package Configuration reference for field details.
+When both **Generic Lifesteal** and **Damage-Type Lifesteal** contribute to the same hit, the framework can apply them in two different ways.
+
+### Separate Heals
+
+When `Unify Lifesteal Heals` is **disabled** *(default)*, each contribution produces its own heal:
+
+- the generic contribution uses the generic `Lifesteal Source`
+- the damage-type contribution uses the damage type's `Lifesteal Source`
+
+This is the right choice when those two heal sources should remain distinguishable for heal modifiers, event listeners, combat logs, analytics, or VFX/UI feedback.
+
+### Unified Heal
+
+When `Unify Lifesteal Heals` is **enabled**, the generic and damage-type lifesteal amounts are summed and applied as a **single heal**.
+
+In this mode, the `HealSourceSO` is resolved as follows:
+
+- use the damage type's `Lifesteal Source` if the damage-type contribution is active and that source is configured
+- otherwise fall back to the generic `Lifesteal Source`
+
+This is useful when generic lifesteal is meant to be an invisible baseline bonus and you want the final heal to behave as a single gameplay event.
 
 ## Performance Considerations
 
@@ -65,10 +100,11 @@ A similar consideration applies to passive health regeneration, which can also g
 > Lifesteal is evaluated after every damage application. The following conditions must all be met for it to trigger:
 > - The dealing entity is the source of the damage. Lifesteal does not trigger on damage dealt by others.
 > - The dealing entity is alive at the moment of damage resolution.
-> - `AstraRpgHealthConfigSO` has a `LifestealConfigSO` assigned.
-> - The `DamageTypeSO` of the hit has a mapping in the `LifestealConfigSO`.
-> - The configured **Lifesteal Stat** is present in the dealing entity's `StatSet`.
-> - The computed heal amount is greater than zero. A lifesteal stat of 0% produces no heal.
+> - At least one lifesteal layer is configured for the hit:
+>   - **Generic Lifesteal** in `AstraRpgHealthConfigSO`, and/or
+>   - **Lifesteal** on the hit's `DamageTypeSO`.
+> - For each configured layer, the corresponding **Lifesteal Stat** is present in the dealing entity's `StatSet`.
+> - The computed heal amount for that layer is greater than zero. A lifesteal stat of 0% produces no heal contribution.
 
 > [!IMPORTANT]
 > Lifesteal relies on the **Global Damage Resolution Event** being correctly configured on each entity's `EntityHealth`. This event is used by the framework to propagate damage outcomes across all listening entities — including the attacker, which uses it to detect its own successful hits and trigger lifesteal. Assigning a non-global event to this slot will break lifesteal and other framework features that depend on centralized damage communication. See [Global Events](entity-health.md#global-events) for setup details.

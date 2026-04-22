@@ -108,7 +108,7 @@ calculation pipeline (e.g. reductions, resistances, absorptions).</p>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="ElectricDrill.AstraRpgHealth.Damage.DamageResolutionContext.html">DamageResolutionContext</a></dt>
-      <dd><p>The result returned by damage application attempts.
+      <dd><p>The immutable result returned by damage application attempts.
 Encapsulates whether the damage was applied or prevented, the reasons for prevention,
 and the concrete damage information that was ultimately applied (if any).</p>
 </dd>
@@ -130,8 +130,12 @@ Create instances via Assets -&gt; Create -&gt; Astra RPG Health / DamageType.</p
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="ElectricDrill.AstraRpgHealth.Damage.PreDamageContext.html">PreDamageContext</a></dt>
-      <dd><p>Immutable container representing damage information before it is applied.
-Use <a class="xref" href="ElectricDrill.AstraRpgHealth.Damage.PreDamageContext.html#ElectricDrill_AstraRpgHealth_Damage_PreDamageContext_Builder">Builder</a> to construct instances using the fluent step builder.</p>
+      <dd><p>Mutable pre-damage context raised via the pre-damage game event before the damage pipeline runs.
+Listeners may mutate <a class="xref" href="ElectricDrill.AstraRpgHealth.Damage.PreDamageContext.html#ElectricDrill_AstraRpgHealth_Damage_PreDamageContext_Amount">Amount</a>, <a class="xref" href="ElectricDrill.AstraRpgHealth.Damage.PreDamageContext.html#ElectricDrill_AstraRpgHealth_Damage_PreDamageContext_Type">Type</a>, <a class="xref" href="ElectricDrill.AstraRpgHealth.Damage.PreDamageContext.html#ElectricDrill_AstraRpgHealth_Damage_PreDamageContext_IsCritical">IsCritical</a>,
+<a class="xref" href="ElectricDrill.AstraRpgHealth.Damage.PreDamageContext.html#ElectricDrill_AstraRpgHealth_Damage_PreDamageContext_CriticalMultiplier">CriticalMultiplier</a> and <a class="xref" href="ElectricDrill.AstraRpgHealth.Damage.PreDamageContext.html#ElectricDrill_AstraRpgHealth_Damage_PreDamageContext_Ignore">Ignore</a> to transform the incoming damage — e.g.
+convert magical damage above a threshold into physical, apply a flat reduction, or negate it entirely
+by setting <a class="xref" href="ElectricDrill.AstraRpgHealth.Damage.PreDamageContext.html#ElectricDrill_AstraRpgHealth_Damage_PreDamageContext_Ignore">Ignore</a>. The pipeline reads these fields after the event is dispatched.
+Use <a class="xref" href="ElectricDrill.AstraRpgHealth.Damage.PreDamageContext.html#ElectricDrill_AstraRpgHealth_Damage_PreDamageContext_Builder">Builder</a> to construct instances via the fluent step builder.</p>
 </dd>
     </dl>
     <dl class="jumplist">
@@ -143,8 +147,8 @@ optional fields (dealer, critical, multiplier, instigator) can be configured bef
     <dl class="jumplist">
       <dt><a class="xref" href="ElectricDrill.AstraRpgHealth.Damage.PreDamageContextConfig.html">PreDamageContextConfig</a></dt>
       <dd><p>Serializable configuration that fully describes a damage application and can build a
-<a class="xref" href="ElectricDrill.AstraRpgHealth.Damage.PreDamageContext.html">PreDamageContext</a> at runtime.  Designed to be embedded in ScriptableObjects
-or MonoBehaviours and exposed via the PreDamageContextConfigDrawer inspector drawer.</p>
+<a class="xref" href="ElectricDrill.AstraRpgHealth.Damage.PreDamageContext.html">PreDamageContext</a> at runtime. Designed to be embedded in ScriptableObjects
+or MonoBehaviours.</p>
 </dd>
     </dl>
     <h3 id="structs">

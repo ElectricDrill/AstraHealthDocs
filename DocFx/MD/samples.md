@@ -80,8 +80,9 @@ In the resource explorer, in the package samples, in addition to the sample scen
 ### Instances Folder
 Now we will focus on the `Instances` folder, which is the most relevant one for you.
 
-#### Spare objects: Default Damage Calculation Strategy and Lifesteal Config
-Let's start with two loose objects: `Default Damage Calculation Strategy` and `Lifesteal Config`. The first represents the [damage calculation strategy](./workflows/damage.md#damage-calculation-strategy) used by default in the scene. The second represents the [lifesteal configuration](./workflows/lifesteal.md#lifesteal-config); all damage types use the same `Lifesteal` stat for the lifesteal calculation.
+#### Spare object: Default Damage Calculation Strategy
+Let's start with the loose `Default Damage Calculation Strategy` object. It represents the [damage calculation strategy](./workflows/damage.md#damage-calculation-strategy) used by default in the scene.
+
 
 #### Statistics and Stat Sets
 In the `Stats` folder you will find all the instances of the `Stat` and `StatSet` used in the sample scene. You can explore the statistics and stat sets in detail yourself; the only thing I want to highlight is that the `Hero Stat Set` is the stat set used by all 4 characters in the sample scene (duelist, assassin, mage and dummy).

@@ -106,11 +106,12 @@ A <code>DamageSourceSO</code> represents the source of the damage. Some examples
 <h2 id="damage-types">Damage Types</h2>
 <p>A <code>DamageTypeSO</code> represents the type of damage—such as physical, fire, ice, lightning, or damage-over-time (DoT) effects like bleeding. In the following image you cane see an example of a <code>DamageTypeSO</code> instance in the inspector:<br>
 <img src="../../images/AstraRPG/workflows/damage/damage-type/magic-damage-type-inspector.png" alt="DamageType"></p>
-<p>You can notice that the parameters are divided in three sections:</p>
+<p>You can notice that the parameters are divided in four sections:</p>
 <ol>
 <li><strong>Damage Reduction</strong>: parameters related to the damage and defense reduction mechanics for this damage type.</li>
 <li><strong>Damage Modifiers</strong>: parameters related to flat and percentage damage modifiers for this damage type.</li>
 <li><strong>True Damage Options</strong>: parameters related to the true damage options for this damage type.</li>
+<li><strong>Lifesteal</strong>: parameters related to the type-specific lifesteal contribution for this damage type.</li>
 </ol>
 <div class="NOTE">
 <h5>Note</h5>
@@ -289,6 +290,16 @@ You can take a look at the existing damage reduction functions implementations f
 <h5>Tip</h5>
 <p>To create a damage type that is also unaffected by any defensive stat, simply leave <strong>Defensive Stat</strong> and <strong>Damage Reduction Fn</strong> empty. The <a href="#damage-step"><code>ApplyDefenseStep</code></a> has nothing to compute and is skipped. Combined with the three True Damage Option flags and no modifier stats, this defines a fully unmitigated damage type.</p>
 </div>
+<h3 id="damage-types-lifesteal">Damage Type's Lifesteal</h3>
+<p>Each <code>DamageTypeSO</code> exposes a <strong>Lifesteal</strong> field containing a <code>LifestealStatConfig</code>.</p>
+<p>When its <strong>Lifesteal Stat</strong> is configured and the damage dealer has that stat in its <code>StatSet</code>, successful hits of this damage type heal the attacker for a percentage of the selected damage amount. The same three parameters are available as for generic lifesteal:</p>
+<ul>
+<li><strong>Lifesteal Stat</strong></li>
+<li><strong>Lifesteal Source</strong></li>
+<li><strong>Amount Selector</strong></li>
+</ul>
+<p>This contribution applies only to hits whose resolved <code>DamageTypeSO</code> is this asset. It stacks with the <strong>Generic Lifesteal</strong> configured in <code>AstraRpgHealthConfigSO</code>.</p>
+<p>For the full behavior — including how this stacks with generic lifesteal and how the <code>Unify Lifesteal Heals</code> flag affects the resulting healing events — see <a href="lifesteal.html">Lifesteal</a>.</p>
 <h3 id="damage-reduction-graph">Damage Reduction Graph</h3>
 <p>The <strong>Damage Reduction Graph</strong> is an Editor window that plots how damage received scales as a function of a defender's defensive stat value. Use it to visually verify the behavior of your damage reduction and defense penetration configuration, preview the impact of armor penetration at different stat values, and compare clamped (defensive stat) vs. unclamped (defensive stat) curves.</p>
 <p>To open it, click the <strong>Open Damage Reduction Graph</strong> button in the inspector of any <code>DamageTypeSO</code>. Once opened, it should look something like this:<br>

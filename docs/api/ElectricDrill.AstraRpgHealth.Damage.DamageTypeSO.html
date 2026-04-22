@@ -89,7 +89,7 @@
 
 
   <h1 id="ElectricDrill_AstraRpgHealth_Damage_DamageTypeSO" data-uid="ElectricDrill.AstraRpgHealth.Damage.DamageTypeSO" class="text-break">
-Class DamageTypeSO  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/Damage/DamageTypeSO.cs/#L15"><i class="bi bi-code-slash"></i></a>
+Class DamageTypeSO  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/Damage/DamageTypeSO.cs/#L16"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -143,7 +143,7 @@ Create instances via Assets -&gt; Create -&gt; Astra RPG Health / DamageType.</p
 
   <h3 id="ElectricDrill_AstraRpgHealth_Damage_DamageTypeSO_DamageReductionFn" data-uid="ElectricDrill.AstraRpgHealth.Damage.DamageTypeSO.DamageReductionFn">
   DamageReductionFn
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/Damage/DamageTypeSO.cs/#L61"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/Damage/DamageTypeSO.cs/#L64"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>The reduction function used to compute how the damage amount is modified by
@@ -177,7 +177,7 @@ or custom reduction behaviour.</p>
 
   <h3 id="ElectricDrill_AstraRpgHealth_Damage_DamageTypeSO_DefenseReductionFn" data-uid="ElectricDrill.AstraRpgHealth.Damage.DamageTypeSO.DefenseReductionFn">
   DefenseReductionFn
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/Damage/DamageTypeSO.cs/#L54"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/Damage/DamageTypeSO.cs/#L57"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>The reduction function used to compute how the piercing stat modifies the defensive stat that reduces
@@ -211,7 +211,7 @@ or custom reduction behaviour.</p>
 
   <h3 id="ElectricDrill_AstraRpgHealth_Damage_DamageTypeSO_DefensiveStat" data-uid="ElectricDrill.AstraRpgHealth.Damage.DamageTypeSO.DefensiveStat">
   DefensiveStat
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/Damage/DamageTypeSO.cs/#L38"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/Damage/DamageTypeSO.cs/#L41"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>The defensive stat that reduces the raw damage amount for this <a class="xref" href="ElectricDrill.AstraRpgHealth.Damage.DamageTypeSO.html">DamageTypeSO</a>.
@@ -220,7 +220,7 @@ For example &quot;Physical&quot; damage may be reduced by an &quot;Armor&quot; s
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Stat DefensiveStat { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public StatSO DefensiveStat { get; }</code></pre>
   </div>
 
 
@@ -229,7 +229,7 @@ For example &quot;Physical&quot; damage may be reduced by an &quot;Armor&quot; s
 
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
-    <dt><span class="xref">Stat</span></dt>
+    <dt><span class="xref">StatSO</span></dt>
     <dd></dd>
   </dl>
 
@@ -244,7 +244,7 @@ For example &quot;Physical&quot; damage may be reduced by an &quot;Armor&quot; s
 
   <h3 id="ElectricDrill_AstraRpgHealth_Damage_DamageTypeSO_DefensiveStatPiercedBy" data-uid="ElectricDrill.AstraRpgHealth.Damage.DamageTypeSO.DefensiveStatPiercedBy">
   DefensiveStatPiercedBy
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/Damage/DamageTypeSO.cs/#L44"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/Damage/DamageTypeSO.cs/#L47"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>The stat that pierces the defensive stat for this damage type (for example an &quot;Armor Penetration&quot; stat pierces the &quot;Armor&quot; stat).
@@ -253,7 +253,7 @@ May be null.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Stat DefensiveStatPiercedBy { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public StatSO DefensiveStatPiercedBy { get; }</code></pre>
   </div>
 
 
@@ -262,7 +262,7 @@ May be null.</p>
 
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
-    <dt><span class="xref">Stat</span></dt>
+    <dt><span class="xref">StatSO</span></dt>
     <dd></dd>
   </dl>
 
@@ -277,7 +277,7 @@ May be null.</p>
 
   <h3 id="ElectricDrill_AstraRpgHealth_Damage_DamageTypeSO_FlatDamageModificationStat" data-uid="ElectricDrill.AstraRpgHealth.Damage.DamageTypeSO.FlatDamageModificationStat">
   FlatDamageModificationStat
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/Damage/DamageTypeSO.cs/#L105"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/Damage/DamageTypeSO.cs/#L108"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>The stat representing the flat damage accumulator for this type.
@@ -287,7 +287,7 @@ that affect damage of this type linearly.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Stat FlatDamageModificationStat { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public StatSO FlatDamageModificationStat { get; }</code></pre>
   </div>
 
 
@@ -296,7 +296,7 @@ that affect damage of this type linearly.</p>
 
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
-    <dt><span class="xref">Stat</span></dt>
+    <dt><span class="xref">StatSO</span></dt>
     <dd></dd>
   </dl>
 
@@ -311,7 +311,7 @@ that affect damage of this type linearly.</p>
 
   <h3 id="ElectricDrill_AstraRpgHealth_Damage_DamageTypeSO_IgnoreGenericFlatDamageModifiers" data-uid="ElectricDrill.AstraRpgHealth.Damage.DamageTypeSO.IgnoreGenericFlatDamageModifiers">
   IgnoreGenericFlatDamageModifiers
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/Damage/DamageTypeSO.cs/#L85"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/Damage/DamageTypeSO.cs/#L88"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>If true, this damage type ignores generic flat damage modifiers.
@@ -344,7 +344,7 @@ Useful for &quot;true damage&quot; mechanics that bypass flat reductions/increme
 
   <h3 id="ElectricDrill_AstraRpgHealth_Damage_DamageTypeSO_IgnoreGenericPercentageDamageModifiers" data-uid="ElectricDrill.AstraRpgHealth.Damage.DamageTypeSO.IgnoreGenericPercentageDamageModifiers">
   IgnoreGenericPercentageDamageModifiers
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/Damage/DamageTypeSO.cs/#L76"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/Damage/DamageTypeSO.cs/#L79"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>If true, this damage type ignores generic percentage damage modifiers.
@@ -377,7 +377,7 @@ Useful for &quot;true damage&quot; mechanics that bypass resistances/weaknesses.
 
   <h3 id="ElectricDrill_AstraRpgHealth_Damage_DamageTypeSO_IgnoresBarrier" data-uid="ElectricDrill.AstraRpgHealth.Damage.DamageTypeSO.IgnoresBarrier">
   IgnoresBarrier
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/Damage/DamageTypeSO.cs/#L67"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/Damage/DamageTypeSO.cs/#L70"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>If true, this damage type bypasses barrier mechanic and applies directly to
@@ -406,11 +406,46 @@ underlying health. Typical use: certain elemental or pure damage types.</p>
 
 
 
+  <a id="ElectricDrill_AstraRpgHealth_Damage_DamageTypeSO_Lifesteal_" data-uid="ElectricDrill.AstraRpgHealth.Damage.DamageTypeSO.Lifesteal*"></a>
+
+  <h3 id="ElectricDrill_AstraRpgHealth_Damage_DamageTypeSO_Lifesteal" data-uid="ElectricDrill.AstraRpgHealth.Damage.DamageTypeSO.Lifesteal">
+  Lifesteal
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/Damage/DamageTypeSO.cs/#L119"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Lifesteal configuration specific to this damage type.
+When the <a class="xref" href="ElectricDrill.AstraRpgHealth.Heal.LifestealStatConfig.html#ElectricDrill_AstraRpgHealth_Heal_LifestealStatConfig_LifestealStat">LifestealStat</a> is set, entities that deal damage of this type
+will steal a percentage of the damage as health, on top of any generic lifesteal configured in
+<a class="xref" href="ElectricDrill.AstraRpgHealth.Config.IAstraRpgHealthConfig.html">IAstraRpgHealthConfig</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public LifestealStatConfig Lifesteal { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="ElectricDrill.AstraRpgHealth.Heal.LifestealStatConfig.html">LifestealStatConfig</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="ElectricDrill_AstraRpgHealth_Damage_DamageTypeSO_PercentageDamageModificationStat_" data-uid="ElectricDrill.AstraRpgHealth.Damage.DamageTypeSO.PercentageDamageModificationStat*"></a>
 
   <h3 id="ElectricDrill_AstraRpgHealth_Damage_DamageTypeSO_PercentageDamageModificationStat" data-uid="ElectricDrill.AstraRpgHealth.Damage.DamageTypeSO.PercentageDamageModificationStat">
   PercentageDamageModificationStat
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/Damage/DamageTypeSO.cs/#L95"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/Damage/DamageTypeSO.cs/#L98"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>The stat representing the percentage damage accumulator for this type.
@@ -420,7 +455,7 @@ that affect damage of this type.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Stat PercentageDamageModificationStat { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public StatSO PercentageDamageModificationStat { get; }</code></pre>
   </div>
 
 
@@ -429,7 +464,7 @@ that affect damage of this type.</p>
 
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
-    <dt><span class="xref">Stat</span></dt>
+    <dt><span class="xref">StatSO</span></dt>
     <dd></dd>
   </dl>
 
@@ -444,7 +479,7 @@ that affect damage of this type.</p>
 
   <h3 id="ElectricDrill_AstraRpgHealth_Damage_DamageTypeSO_Tags" data-uid="ElectricDrill.AstraRpgHealth.Damage.DamageTypeSO.Tags">
   Tags
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/Damage/DamageTypeSO.cs/#L20"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/Damage/DamageTypeSO.cs/#L21"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>The tags associated with this object.</p>
@@ -480,7 +515,7 @@ that affect damage of this type.</p>
 
   <h3 id="ElectricDrill_AstraRpgHealth_Damage_DamageTypeSO_ToString" data-uid="ElectricDrill.AstraRpgHealth.Damage.DamageTypeSO.ToString">
   ToString()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/Damage/DamageTypeSO.cs/#L113"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/Damage/DamageTypeSO.cs/#L124"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Returns the asset name of this damage type.</p>

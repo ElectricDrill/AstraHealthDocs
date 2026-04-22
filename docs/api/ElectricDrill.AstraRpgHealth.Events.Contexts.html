@@ -107,6 +107,13 @@ Classes
       <dd></dd>
     </dl>
     <dl class="jumplist">
+      <dt><a class="xref" href="ElectricDrill.AstraRpgHealth.Events.Contexts.HealthRatioChangedContext.html">HealthRatioChangedContext</a></dt>
+      <dd><p>Fired whenever the HP/MaxHP ratio changes — either because HP changed (AddHealth/RemoveHealth)
+or because MaxHP changed (RecalculateMaxHp). Provides a single reliable signal for HP-ratio-based conditions.
+Implements <span class="xref">ElectricDrill.AstraRpgFramework.Contexts.IHasValueChange&lt;T&gt;</span> for <span class="xref">int</span> where Previous/NewValue are HP percentages (0–100).</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
       <dt><a class="xref" href="ElectricDrill.AstraRpgHealth.Events.Contexts.ResurrectionContext.html">ResurrectionContext</a></dt>
       <dd><p>Contains information about an entity resurrection event.
 All heal-related details (target, source, healer, amounts) are accessible via <a class="xref" href="ElectricDrill.AstraRpgHealth.Events.Contexts.ResurrectionContext.html#ElectricDrill_AstraRpgHealth_Events_Contexts_ResurrectionContext_ReceivedHeal">ReceivedHeal</a>,

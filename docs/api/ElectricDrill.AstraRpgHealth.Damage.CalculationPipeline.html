@@ -170,6 +170,14 @@ Holds the amounts being transformed, the source/type metadata and accumulated pr
 </dd>
     </dl>
     <dl class="jumplist">
+      <dt><a class="xref" href="ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.DamageReductionCalculator.html">DamageReductionCalculator</a></dt>
+      <dd><p>Pure, stateless helpers that compute damage after defensive and damage
+reduction functions are applied. The class is policy-free: callers are
+responsible for validating their <a class="xref" href="ElectricDrill.AstraRpgHealth.Damage.DamageTypeSO.html">DamageTypeSO</a> configuration
+(for example, the consistency warnings in <a class="xref" href="ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.ApplyDefenseStep.html">ApplyDefenseStep</a>).</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
       <dt><a class="xref" href="ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.DamageStep.html">DamageStep</a></dt>
       <dd><p>Base class for a single step in the damage calculation pipeline.
 A <a class="xref" href="ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.DamageStep.html">DamageStep</a> performs a focused transformation on a

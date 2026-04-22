@@ -112,19 +112,18 @@ Create instances via Assets -&gt; Create -&gt; Astra RPG Health / Heal Source.</
 </dd>
     </dl>
     <dl class="jumplist">
-      <dt><a class="xref" href="ElectricDrill.AstraRpgHealth.Heal.LifestealConfigSO.html">LifestealConfigSO</a></dt>
-      <dd><p>ScriptableObject for configuring lifesteal mappings for different damage types.</p>
-</dd>
-    </dl>
-    <dl class="jumplist">
       <dt><a class="xref" href="ElectricDrill.AstraRpgHealth.Heal.LifestealStatConfig.html">LifestealStatConfig</a></dt>
       <dd><p>Configuration that associates a lifesteal Stat and HealSource with an optional amount selector.</p>
 </dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="ElectricDrill.AstraRpgHealth.Heal.PreHealContext.html">PreHealContext</a></dt>
-      <dd><p>Immutable description of a pending heal operation that can be passed through
-heal processing logic before the actual health change is applied.</p>
+      <dd><p>Mutable pre-heal context raised via the pre-heal game event before the heal pipeline runs.
+Listeners may mutate <a class="xref" href="ElectricDrill.AstraRpgHealth.Heal.PreHealContext.html#ElectricDrill_AstraRpgHealth_Heal_PreHealContext_Amount">Amount</a>, <a class="xref" href="ElectricDrill.AstraRpgHealth.Heal.PreHealContext.html#ElectricDrill_AstraRpgHealth_Heal_PreHealContext_HealSource">HealSource</a>, <a class="xref" href="ElectricDrill.AstraRpgHealth.Heal.PreHealContext.html#ElectricDrill_AstraRpgHealth_Heal_PreHealContext_IsCritical">IsCritical</a>,
+<a class="xref" href="ElectricDrill.AstraRpgHealth.Heal.PreHealContext.html#ElectricDrill_AstraRpgHealth_Heal_PreHealContext_CriticalMultiplier">CriticalMultiplier</a> and <a class="xref" href="ElectricDrill.AstraRpgHealth.Heal.PreHealContext.html#ElectricDrill_AstraRpgHealth_Heal_PreHealContext_Ignore">Ignore</a> to transform the incoming heal — e.g.
+amplify a heal via a buff, reroute it through a different <a class="xref" href="ElectricDrill.AstraRpgHealth.Heal.HealSourceSO.html">HealSourceSO</a>, or negate it
+entirely by setting <a class="xref" href="ElectricDrill.AstraRpgHealth.Heal.PreHealContext.html#ElectricDrill_AstraRpgHealth_Heal_PreHealContext_Ignore">Ignore</a> (temporary heal immunity). The pipeline reads these fields
+after the event is dispatched.</p>
 </dd>
     </dl>
     <dl class="jumplist">
@@ -134,7 +133,7 @@ heal processing logic before the actual health change is applied.</p>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="ElectricDrill.AstraRpgHealth.Heal.ReceivedHealContext.html">ReceivedHealContext</a></dt>
-      <dd><p>Represents the result of a heal operation as actually received by the target.
+      <dd><p>Immutable result of a heal operation as actually received by the target.
 Contains the resolved heal amount, source, involved entities and whether it was critical.</p>
 </dd>
     </dl>

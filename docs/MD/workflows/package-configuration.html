@@ -392,15 +392,35 @@ entityHealth.ManualHealthRegenerationTick();
 </code></pre>
 <hr>
 <h3 id="lifesteal">Lifesteal</h3>
-<h4 id="lifesteal-config">Lifesteal Config</h4>
-<p><strong>Type:</strong> <code>LifestealConfigSO</code><br>
+<p>Lifesteal now has <strong>two configuration layers</strong>:</p>
+<ul>
+<li>a <strong>generic</strong> layer configured in <code>AstraRpgHealthConfigSO</code></li>
+<li>an optional <strong>type-specific</strong> layer configured directly on each <code>DamageTypeSO</code></li>
+</ul>
+<p>Both layers use <code>LifestealStatConfig</code> and can stack on the same hit.</p>
+<h4 id="generic-lifesteal">Generic Lifesteal</h4>
+<p><strong>Type:</strong> <code>LifestealStatConfig</code><br>
 <strong>Required:</strong> No<br>
-<strong>Description:</strong> Configuration for lifesteal mechanics (healing based on damage dealt).</p>
+<strong>Description:</strong> Generic lifesteal configuration applied to all damage dealt by an entity, regardless of <code>DamageTypeSO</code>.</p>
 <p><strong>Typical Settings:</strong></p>
 <ul>
 <li>Lifesteal percentage stat</li>
-<li>Heal source for lifesteal effects</li>
-<li>Restrictions (e.g., only on critical hits, only physical damage)</li>
+<li>Heal source for generic lifesteal</li>
+<li>Amount selector (initial, step, or final damage)</li>
+</ul>
+<p>If the embedded <strong>Lifesteal Stat</strong> is not assigned, generic lifesteal is effectively disabled. This generic contribution stacks with any lifesteal configured on the specific <code>DamageTypeSO</code> of the hit.</p>
+<h4 id="suppress-lifesteal-events">Suppress Lifesteal Events</h4>
+<p><strong>Type:</strong> <code>bool</code><br>
+<strong>Required:</strong> No<br>
+<strong>Description:</strong> If enabled, prevents triggering heal events for lifesteal heals. Useful when many entities can trigger lifesteal frequently and you do not need listeners, combat-log entries, or UI feedback for those heals.</p>
+<h4 id="unify-lifesteal-heals">Unify Lifesteal Heals</h4>
+<p><strong>Type:</strong> <code>bool</code><br>
+<strong>Required:</strong> No<br>
+<strong>Description:</strong> Controls how <strong>Generic Lifesteal</strong> and <strong>Damage-Type Lifesteal</strong> are applied when both contribute to the same hit.</p>
+<p><strong>Behavior:</strong></p>
+<ul>
+<li><strong>Disabled</strong> <em>(default)</em>: generic and type-specific lifesteal are applied as two separate heals, each with its own <code>HealSourceSO</code></li>
+<li><strong>Enabled</strong>: the two amounts are summed into a single heal; the damage type's <code>HealSourceSO</code> takes precedence, with fallback to the generic one</li>
 </ul>
 <p>See also: <a href="lifesteal.html">Lifesteal</a></p>
 <hr>
@@ -470,14 +490,10 @@ entityHealth.ManualHealthRegenerationTick();
 <p><strong>Type:</strong> <code>EntityMaxHealthChangedGameEvent</code><br>
 <strong>Required:</strong> No<br>
 <strong>Description:</strong> Raised when any entity's total max HP changes (both increases and decreases). Carries <code>EntityMaxHealthChangedContext</code>. Useful for updating UI, recalculating derived stats, or triggering game-wide reactions to stat changes.</p>
-<h4 id="global-gained-health-event">Global Gained Health Event</h4>
-<p><strong>Type:</strong> <code>EntityGainedHealthGameEvent</code><br>
+<h4 id="global-health-changed-event">Global Health Changed Event</h4>
+<p><strong>Type:</strong> <code>EntityHealthChangedGameEvent</code><br>
 <strong>Required:</strong> No<br>
-<strong>Description:</strong> Raised whenever any entity gains HP (from healing, resurrection, or max HP modifier increases). Carries <code>EntityHealthChangedContext</code>.</p>
-<h4 id="global-lost-health-event">Global Lost Health Event</h4>
-<p><strong>Type:</strong> <code>EntityLostHealthGameEvent</code><br>
-<strong>Required:</strong> No<br>
-<strong>Description:</strong> Raised whenever any entity loses HP (from damage, or max HP modifier decreases). Carries <code>EntityHealthChangedContext</code>.</p>
+<strong>Description:</strong> Raised whenever any entity's current HP changes, whether increasing or decreasing. Carries <code>EntityHealthChangedContext</code>. This is the global event resolved by the corresponding Health Changed Event Channel on each <code>EntityHealth</code>, and replaces the previous split between gained-health and lost-health global events.</p>
 <h4 id="global-pre-heal-event">Global Pre Heal Event</h4>
 <p><strong>Type:</strong> <code>PreHealGameEvent</code><br>
 <strong>Required:</strong> No<br>

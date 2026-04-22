@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Class EntityHealedGameEvent | Astra RPG Health ">
       
-      <meta name="description" content="Event raised when an entity is about to be healed. Payload: .">
+      <meta name="description" content="Event raised when an entity is about to be healed. Payload: PreHealInfo.">
       <link rel="icon" href="../images/astra-health-ico.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -98,7 +98,7 @@ Class EntityHealedGameEvent  <a class="header-action link-secondary" title="View
   </div>
 
   <div class="markdown summary"><p>Event raised when an entity is about to be healed.
-Payload: <a class="xref" href="ElectricDrill.AstraRpgHealth.Heal.PreHealContext.html">PreHealContext</a>.</p>
+Payload: PreHealInfo.</p>
 </div>
   <div class="markdown conceptual"></div>
 
@@ -116,6 +116,7 @@ public class EntityHealedGameEvent : GameEventGeneric1&lt;ReceivedHealContext&gt
       <div><span class="xref">object</span></div>
       <div><a class="xref" href="https://docs.unity3d.com/ScriptReference/Object.html">Object</a></div>
       <div><a class="xref" href="https://docs.unity3d.com/ScriptReference/ScriptableObject.html">ScriptableObject</a></div>
+      <div><span class="xref">GameEventBase</span>&lt;<span class="xref">GameEventListenerGeneric1</span>&lt;<a class="xref" href="ElectricDrill.AstraRpgHealth.Heal.ReceivedHealContext.html">ReceivedHealContext</a>&gt;, <span class="xref">Action</span>&lt;<a class="xref" href="ElectricDrill.AstraRpgHealth.Heal.ReceivedHealContext.html">ReceivedHealContext</a>&gt;&gt;</div>
       <div><span class="xref">GameEventGeneric1</span>&lt;<a class="xref" href="ElectricDrill.AstraRpgHealth.Heal.ReceivedHealContext.html">ReceivedHealContext</a>&gt;</div>
       <div><span class="xref">EntityHealedGameEvent</span></div>
     </dd>
@@ -143,6 +144,21 @@ public class EntityHealedGameEvent : GameEventGeneric1&lt;ReceivedHealContext&gt
     </div>
     <div>
       <span class="xref">GameEventGeneric1&lt;ReceivedHealContext&gt;.UnregisterListener(GameEventListenerGeneric1&lt;ReceivedHealContext&gt;)</span>
+    </div>
+    <div>
+      <span class="xref">GameEventBase&lt;GameEventListenerGeneric1&lt;ReceivedHealContext&gt;, Action&lt;ReceivedHealContext&gt;&gt;.RegisterMonoListener(GameEventListenerGeneric1&lt;ReceivedHealContext&gt;)</span>
+    </div>
+    <div>
+      <span class="xref">GameEventBase&lt;GameEventListenerGeneric1&lt;ReceivedHealContext&gt;, Action&lt;ReceivedHealContext&gt;&gt;.UnregisterMonoListener(GameEventListenerGeneric1&lt;ReceivedHealContext&gt;)</span>
+    </div>
+    <div>
+      <span class="xref">GameEventBase&lt;GameEventListenerGeneric1&lt;ReceivedHealContext&gt;, Action&lt;ReceivedHealContext&gt;&gt;.RegisterCodeListener(Action&lt;ReceivedHealContext&gt;)</span>
+    </div>
+    <div>
+      <span class="xref">GameEventBase&lt;GameEventListenerGeneric1&lt;ReceivedHealContext&gt;, Action&lt;ReceivedHealContext&gt;&gt;.UnregisterCodeListener(Action&lt;ReceivedHealContext&gt;)</span>
+    </div>
+    <div>
+      <span class="xref">GameEventBase&lt;GameEventListenerGeneric1&lt;ReceivedHealContext&gt;, Action&lt;ReceivedHealContext&gt;&gt;.Dispatch&lt;TInvoker&gt;(TInvoker)</span>
     </div>
   </dd></dl>
 
