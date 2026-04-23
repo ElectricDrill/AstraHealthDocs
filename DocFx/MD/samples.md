@@ -171,7 +171,7 @@ An observation you might raise is "What if an entity has the generic damage perc
 Therefore, even if you did not set a lower bound of -100% on the percentage damage modifier stats, the system would still ensure that the damage does not drop below zero due to percentage modifiers; however, it is more semantically correct and clearer to set a -100% limit on these stats. This would also be useful when creating game interfaces for displaying these stats, as a player might be confused seeing a damage modifier of -150%, not knowing that in reality the damage cannot drop below zero.
 
 ### Playing with Passive HP Regeneration
-In the sample scene, passive health regeneration is enabled for all characters, but you can disable it by unchecking `Passive Health Regeneration` in the `EntityHealth` of the entity in question. By default, healing popups will also be shown for each passive regeneration tick. If these popups bother you, you can disable them as follows:
+In the sample scene, passive health regeneration is enabled for all characters through the dedicated `EntityPassiveHpRegeneration` component. You can disable it for a specific entity by removing that component or disabling it in the inspector. By default, healing popups will also be shown for each passive regeneration tick. If these popups bother you, you can disable them as follows:
 1. From the hierarchy, open the `PopupCanvas` game object
 2. Select the `HealPopupManager` game object
 3. In the inspector, in the `Heal Popup Manager` component, expand the `Heal Sources To Ignore` section and press the `+` button. Drag the `HP Regeneration HS` Heal Source found in `Examples/Instances/Sources - Heal` here.
@@ -180,7 +180,7 @@ This way, the `Heal Popup Manager` will ignore all healing events that have `HP 
 
 Even from this simple example, the value of creating and using different heal sources becomes clear. Heals coming from different mechanics can raise different use cases.
 
-I have configured the regeneration tick rate to 1 second. If you wanted to change the tick rate of passive regeneration, you can do so by modifying the `Passive HP Regeneration Interval` value in the `Astra Rpg Health Config` configuration instance found in `Examples/Resources`. I also refer you to the documentation on [Package Configuration | Health Regeneration](./workflows/package-configuration.md#health-regeneration) and on [Healing | Passive Health Regeneration](./workflows/healing.md#passive-health-regeneration) for details.
+I have configured the regeneration tick rate to 1 second. If you wanted to change the tick rate of passive regeneration, you can do so by modifying the `Passive Health Regeneration Interval` value in the `Astra Rpg Health Config` configuration instance found in `Examples/Resources`. I also refer you to the documentation on [Package Configuration | Health Regeneration](./workflows/package-configuration.md#health-regeneration) and on [Healing | Passive Health Regeneration](./workflows/healing.md#passive-health-regeneration) for details.
 
 To modify the passively regenerated health, you need to change the value of the `Passive Regeneration` stat. For the three playable characters, this stat is controlled through the Growth Formulas associated with their respective classes, while for the Dummy you can modify it directly through `EntityStats`.
 

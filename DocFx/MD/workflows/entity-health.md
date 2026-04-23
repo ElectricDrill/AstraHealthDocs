@@ -6,6 +6,9 @@ Here is an example of the `EntityHealth` component:
 
 The events section is collapsed by default since there are many events, and it is more practical to expand it only when necessary.
 
+> [!NOTE]
+> Automatic time-based regeneration is handled by the dedicated `EntityPassiveHpRegeneration` MonoBehaviour, which you attach alongside `EntityHealth` on entities that should regenerate over time. See [Passive Health Regeneration](./healing.md#passive-health-regeneration) for setup details.
+
 Let's proceed in order and analyze every property of the `EntityHealth` component.
 
 ## Health
@@ -19,7 +22,6 @@ Let's proceed in order and analyze every property of the `EntityHealth` componen
 > This can happen if, for example, you change from 10 base max HP to 25 by deleting the text box with backspace: 10 (backspace) -> 1 (backspace) -> 0 (2 pressed) -> 2 (5 pressed) -> 25. Note that by deleting all numbers and leaving the box empty, `Base Max HP` becomes 0, and consequently `Current HP` also becomes 0. At this point, the entity is considered dead.
 
 - **Barrier**: LongRef representing any barrier points (or temporary HP) of the entity. The barrier absorbs damage before it affects the entity's health points.
-- **Passive Health Regeneration**: Boolean that decrees whether the entity passively regenerates HP over time or not. The regeneration frequency, as well as the statistic to consider for the amount of passively regenerated HP, are defined in the [Astra RPG Health Config](package-configuration.md#health-regeneration) configuration.
 - **Restore HP On Level Up**: Boolean indicating whether the entity is fully healed when leveling up.
 
 ## Damage
