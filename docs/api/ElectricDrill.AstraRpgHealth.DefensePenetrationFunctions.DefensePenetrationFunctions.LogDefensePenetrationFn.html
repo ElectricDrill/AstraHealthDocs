@@ -2,11 +2,11 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Class PercentageDamageReductionFn | Astra RPG Health </title>
+      <title>Class LogDefensePenetrationFn | Astra RPG Health </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Class PercentageDamageReductionFn | Astra RPG Health ">
+      <meta name="title" content="Class LogDefensePenetrationFn | Astra RPG Health ">
       
-      
+      <meta name="description" content="Applies a logarithmic divisive reduction to defense to provide diminishing returns as piercing increases. Create instances via Assets -&amp;gt; Create -&amp;gt; Astra RPG Health / Def Penetration Functions / Log Def Penetration.">
       <link rel="icon" href="../images/astra-health-ico.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -16,7 +16,7 @@
       <meta name="docfx:rel" content="../">
       
       
-      <meta name="docfx:docurl" content="https://github.com/Cis8/AstraRPGHealth/new/main/apiSpec/new?filename=ElectricDrill_AstraRpgHealth_DamageReductionFunctions_DamageReductionFunctions_PercentageDamageReductionFn.md&amp;value=---%0Auid%3A%20ElectricDrill.AstraRpgHealth.DamageReductionFunctions.DamageReductionFunctions.PercentageDamageReductionFn%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="docfx:docurl" content="https://github.com/Cis8/AstraRPGHealth/new/main/apiSpec/new?filename=ElectricDrill_AstraRpgHealth_DefensePenetrationFunctions_DefensePenetrationFunctions_LogDefensePenetrationFn.md&amp;value=---%0Auid%3A%20ElectricDrill.AstraRpgHealth.DefensePenetrationFunctions.DefensePenetrationFunctions.LogDefensePenetrationFn%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -84,25 +84,27 @@
           <nav id="breadcrumb"></nav>
         </div>
 
-        <article data-uid="ElectricDrill.AstraRpgHealth.DamageReductionFunctions.DamageReductionFunctions.PercentageDamageReductionFn">
+        <article data-uid="ElectricDrill.AstraRpgHealth.DefensePenetrationFunctions.DefensePenetrationFunctions.LogDefensePenetrationFn">
 
 
 
-  <h1 id="ElectricDrill_AstraRpgHealth_DamageReductionFunctions_DamageReductionFunctions_PercentageDamageReductionFn" data-uid="ElectricDrill.AstraRpgHealth.DamageReductionFunctions.DamageReductionFunctions.PercentageDamageReductionFn" class="text-break">
-Class PercentageDamageReductionFn  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/DamageReductionFunctions/DamageReductionFunctions/PercentageDamageReductionFn.cs/#L5"><i class="bi bi-code-slash"></i></a>
+  <h1 id="ElectricDrill_AstraRpgHealth_DefensePenetrationFunctions_DefensePenetrationFunctions_LogDefensePenetrationFn" data-uid="ElectricDrill.AstraRpgHealth.DefensePenetrationFunctions.DefensePenetrationFunctions.LogDefensePenetrationFn" class="text-break">
+Class LogDefensePenetrationFn  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/DefensePenetrationFunctions/DefensePenetrationFunctions/LogDefensePenetrationFn.cs/#L11"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
-    <dl><dt>Namespace</dt><dd><a class="xref" href="ElectricDrill.html">ElectricDrill</a>.<a class="xref" href="ElectricDrill.AstraRpgHealth.html">AstraRpgHealth</a>.<a class="xref" href="ElectricDrill.AstraRpgHealth.DamageReductionFunctions.html">DamageReductionFunctions</a>.<a class="xref" href="ElectricDrill.AstraRpgHealth.DamageReductionFunctions.DamageReductionFunctions.html">DamageReductionFunctions</a></dd></dl>
+    <dl><dt>Namespace</dt><dd><a class="xref" href="ElectricDrill.html">ElectricDrill</a>.<a class="xref" href="ElectricDrill.AstraRpgHealth.html">AstraRpgHealth</a>.<a class="xref" href="ElectricDrill.AstraRpgHealth.DefensePenetrationFunctions.html">DefensePenetrationFunctions</a>.<a class="xref" href="ElectricDrill.AstraRpgHealth.DefensePenetrationFunctions.DefensePenetrationFunctions.html">DefensePenetrationFunctions</a></dd></dl>
   <dl><dt>Assembly</dt><dd>com.electricdrill.astra-rpg-health.Runtime.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"></div>
+  <div class="markdown summary"><p>Applies a logarithmic divisive reduction to defense to provide diminishing returns as piercing increases.
+Create instances via Assets -&gt; Create -&gt; Astra RPG Health / Def Penetration Functions / Log Def Penetration.</p>
+</div>
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[CreateAssetMenu(fileName = &quot;Percentage Dmg Reduction Fn&quot;, menuName = &quot;Astra RPG Health/Dmg Reduction Functions/Percentage Dmg Reduction&quot;)]
-public class PercentageDamageReductionFn : DamageReductionFn</code></pre>
+    <pre><code class="lang-csharp hljs">[CreateAssetMenu(fileName = &quot;Log Def Penetration Fn&quot;, menuName = &quot;Astra RPG Health/Def Penetration Functions/Log Def Penetration&quot;)]
+public class LogDefensePenetrationFn : DefensePenetrationFn</code></pre>
   </div>
 
 
@@ -114,8 +116,8 @@ public class PercentageDamageReductionFn : DamageReductionFn</code></pre>
       <div><span class="xref">object</span></div>
       <div><a class="xref" href="https://docs.unity3d.com/ScriptReference/Object.html">Object</a></div>
       <div><a class="xref" href="https://docs.unity3d.com/ScriptReference/ScriptableObject.html">ScriptableObject</a></div>
-      <div><a class="xref" href="ElectricDrill.AstraRpgHealth.DamageReductionFunctions.DamageReductionFn.html">DamageReductionFn</a></div>
-      <div><span class="xref">PercentageDamageReductionFn</span></div>
+      <div><a class="xref" href="ElectricDrill.AstraRpgHealth.DefensePenetrationFunctions.DefensePenetrationFn.html">DefensePenetrationFn</a></div>
+      <div><span class="xref">LogDefensePenetrationFn</span></div>
     </dd>
   </dl>
 
@@ -131,36 +133,42 @@ public class PercentageDamageReductionFn : DamageReductionFn</code></pre>
 </h2>
 
 
-  <a id="ElectricDrill_AstraRpgHealth_DamageReductionFunctions_DamageReductionFunctions_PercentageDamageReductionFn_ReducedDmg_" data-uid="ElectricDrill.AstraRpgHealth.DamageReductionFunctions.DamageReductionFunctions.PercentageDamageReductionFn.ReducedDmg*"></a>
+  <a id="ElectricDrill_AstraRpgHealth_DefensePenetrationFunctions_DefensePenetrationFunctions_LogDefensePenetrationFn_ReducedDef_" data-uid="ElectricDrill.AstraRpgHealth.DefensePenetrationFunctions.DefensePenetrationFunctions.LogDefensePenetrationFn.ReducedDef*"></a>
 
-  <h3 id="ElectricDrill_AstraRpgHealth_DamageReductionFunctions_DamageReductionFunctions_PercentageDamageReductionFn_ReducedDmg_System_Int64_System_Double_" data-uid="ElectricDrill.AstraRpgHealth.DamageReductionFunctions.DamageReductionFunctions.PercentageDamageReductionFn.ReducedDmg(System.Int64,System.Double)">
-  ReducedDmg(long, double)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/DamageReductionFunctions/DamageReductionFunctions/PercentageDamageReductionFn.cs/#L19"><i class="bi bi-code-slash"></i></a>
+  <h3 id="ElectricDrill_AstraRpgHealth_DefensePenetrationFunctions_DefensePenetrationFunctions_LogDefensePenetrationFn_ReducedDef_System_Int64_System_Int64_ElectricDrill_AstraRpgFramework_Stats_Stat_System_Boolean_" data-uid="ElectricDrill.AstraRpgHealth.DefensePenetrationFunctions.DefensePenetrationFunctions.LogDefensePenetrationFn.ReducedDef(System.Int64,System.Int64,ElectricDrill.AstraRpgFramework.Stats.Stat,System.Boolean)">
+  ReducedDef(long, long, Stat, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/DefensePenetrationFunctions/DefensePenetrationFunctions/LogDefensePenetrationFn.cs/#L26"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Reduces damage by a percentage determined by <code class="paramref">defensiveStatValue</code>.
-Example: defensiveStatValue == 25 -&gt; damage reduced by 25%.</p>
+  <div class="markdown level1 summary"><p>Reduces defense using a logarithmic divisive formula that provides diminishing returns.
+Formula: Reduced Defense = Defense * (BaseValue / (BaseValue + Log(1 + PiercingStat * ScaleFactor)))</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override long ReducedDmg(long amount, double defensiveStatValue)</code></pre>
+    <pre><code class="lang-csharp hljs">public override double ReducedDef(long piercingStatValue, long defensiveStatValue, Stat defensiveStat, bool applyClamp = true)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>amount</code> <span class="xref">long</span></dt>
-    <dd><p>Incoming damage amount.</p>
+    <dt><code>piercingStatValue</code> <span class="xref">long</span></dt>
+    <dd><p>The attacker's piercing stat value.</p>
 </dd>
-    <dt><code>defensiveStatValue</code> <span class="xref">double</span></dt>
-    <dd><p>Percentage (0..100+). Treated as a percent reduction of the incoming damage.</p>
+    <dt><code>defensiveStatValue</code> <span class="xref">long</span></dt>
+    <dd><p>The defender's original defense stat value.</p>
+</dd>
+    <dt><code>defensiveStat</code> <span class="xref">Stat</span></dt>
+    <dd><p>The defensive stat object used to clamp the result.</p>
+</dd>
+    <dt><code>applyClamp</code> <span class="xref">bool</span></dt>
+    <dd><p>Whether to apply stat clamping to the result.</p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><span class="xref">long</span></dt>
-    <dd><p>The reduced damage as a non-negative <span class="xref">long</span> (rounded).</p>
+    <dt><span class="xref">double</span></dt>
+    <dd><p>The reduced defense value (clamped to stat's min/max bounds if applyClamp is true)</p>
 </dd>
   </dl>
 
@@ -170,10 +178,6 @@ Example: defensiveStatValue == 25 -&gt; damage reduced by 25%.</p>
 
 
 
-  <h4 class="section" id="ElectricDrill_AstraRpgHealth_DamageReductionFunctions_DamageReductionFunctions_PercentageDamageReductionFn_ReducedDmg_System_Int64_System_Double__remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>The computation is: reducedAmount = amount - amount * defensiveStatValue / 100.0
-The result is clamped to a minimum of 0 and rounded to the nearest integer.</p>
-</div>
 
 
 

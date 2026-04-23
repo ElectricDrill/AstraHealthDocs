@@ -108,50 +108,50 @@ A <code>DamageSourceSO</code> represents the source of the damage. Some examples
 <img src="../../images/AstraRPG/workflows/damage/damage-type/magic-damage-type-inspector.png" alt="DamageType"></p>
 <p>You can notice that the parameters are divided in four sections:</p>
 <ol>
-<li><strong>Damage Reduction</strong>: parameters related to the damage and defense reduction mechanics for this damage type.</li>
+<li><strong>Damage Mitigation</strong>: parameters related to the damage and defense penetration mechanics for this damage type.</li>
 <li><strong>Damage Modifiers</strong>: parameters related to flat and percentage damage modifiers for this damage type.</li>
 <li><strong>True Damage Options</strong>: parameters related to the true damage options for this damage type.</li>
 <li><strong>Lifesteal</strong>: parameters related to the type-specific lifesteal contribution for this damage type.</li>
 </ol>
 <div class="NOTE">
 <h5>Note</h5>
-<p>I recall the <a href="../introduction.html#damage-modifiers-vs-defensive-stat-based-damage-reduction">Damage Modifiers vs. Stat-Based Damage Reduction</a> section of the introduction documentation, where I explained the difference between damage reduction and damage modifiers.</p>
+<p>I recall the <a href="../introduction.html#damage-modifiers-vs-defensive-stat-based-damage-mitigation">Damage Modifiers vs. Stat-Based Damage Mitigation</a> section of the introduction documentation, where I explained the difference between damage mitigation and damage modifiers.</p>
 </div>
 <p>We will now see each of these sections in detail.</p>
-<h3 id="damage-types-damage-reduction">Damage Type's Damage Reduction</h3>
+<h3 id="damage-types-damage-mitigation">Damage Type's Damage Mitigation</h3>
 <p>The primary use case for <code>DamageTypeSO</code> is implementing entities with varying resistances to specific damage types. This is primarily achieved via <strong>Defensive Stats</strong>.
 For each <code>DamageTypeSO</code>, you can define a defensive statistic that reduces incoming damage of that type. For example, an <code>Armor</code> stat might reduce <code>Physical</code> damage, while a <code>Magic Resistance</code> stat reduces <code>Magic</code> damage.<br>
-The value of the defensive stat is fed into the associated <strong>Damage Reduction Fn</strong> (function) and used to calculate the actual damage reduction. The package provides some built-in damage reduction functions, such as:</p>
+The value of the defensive stat is fed into the associated <strong>Damage Mitigation Fn</strong> (function) and used to calculate the actual damage mitigation. The package provides some built-in damage mitigation functions, such as:</p>
 <ul>
-<li><strong>Flat Dmg Reduction</strong>: Reduces damage by a flat amount equal to the defensive stat value multiplied by a constant.</li>
-<li><strong>Percent Dmg Reduction</strong>: Reduces damage by a percentage equal to the defensive stat value.</li>
-<li><strong>Log Dmg Reduction</strong>: Reduces damage in a logarithmic way based on the defensive stat value, providing diminishing returns as the stat increases.</li>
+<li><strong>Flat Dmg Mitigation</strong>: Reduces damage by a flat amount equal to the defensive stat value multiplied by a constant.</li>
+<li><strong>Percent Dmg Mitigation</strong>: Reduces damage by a percentage equal to the defensive stat value.</li>
+<li><strong>Log Dmg Mitigation</strong>: Reduces damage in a logarithmic way based on the defensive stat value, providing diminishing returns as the stat increases.</li>
 </ul>
 <div class="NOTE">
 <h5>Note</h5>
-<p><strong>Defensive Stat</strong> and <strong>Damage Reduction Fn</strong> are optional. However, they must always be configured together: if one is set, the other must be set as well. If only one of them is assigned, a warning will be logged at runtime and the damage reduction step will be skipped for that <code>DamageTypeSO</code>.</p>
+<p><strong>Defensive Stat</strong> and <strong>Damage Mitigation Fn</strong> are optional. However, they must always be configured together: if one is set, the other must be set as well. If only one of them is assigned, a warning will be logged at runtime and the damage mitigation step will be skipped for that <code>DamageTypeSO</code>.</p>
 </div>
 <div class="WARNING">
 <h5>Warning</h5>
 <p>If the target entity lacks the statistic referenced by <strong>Defensive Stat</strong>, an error will be logged when applying damage of that type. Ensure that all entities with an <code>EntityHealth</code> component have the defensive statistic referenced by the <code>DamageTypeSO</code>s used in your game.</p>
 </div>
 <p>Let's see all of them in detail.</p>
-<h4 id="damage-reduction-functions---flat-dmg-reduction">Damage Reduction Functions - Flat Dmg Reduction</h4>
-<p><em>Relative path:</em> <code>Dmg Reduction Functions -&gt; Flat Dmg Reduction</code></p>
-<p><img src="../../images/AstraRPG/workflows/damage/damage-type/damage-reduction-functions-flat.png" alt="Flat Dmg Reduction"><br>
-The flat damage reduction function is the most simple and straightforward one. It reduces damage by a flat amount equal to the defensive stat value multiplied by the <strong>Factor</strong> specified via the Inspector.</p>
+<h4 id="damage-mitigation-functions---flat-dmg-mitigation">Damage Mitigation Functions - Flat Dmg Mitigation</h4>
+<p><em>Relative path:</em> <code>Dmg Mitigation Functions -&gt; Flat Dmg Mitigation</code></p>
+<p><img src="../../images/AstraRPG/workflows/damage/damage-type/damage-reduction-functions-flat.png" alt="Flat Dmg Mitigation"><br>
+The flat damage mitigation function is the most simple and straightforward one. It reduces damage by a flat amount equal to the defensive stat value multiplied by the <strong>Factor</strong> specified via the Inspector.</p>
 <p>For example:</p>
 <ul>
 <li><strong>Damage Type</strong>: Magic damage.</li>
 <li><strong>Defensive Stat for the Magic Damage Type</strong>: Magic Resistance.</li>
-<li><strong>Damage Reduction Function for the Magic Damage Type</strong>: Flat Dmg Reduction with a scaling factor of 2.</li>
+<li><strong>Damage Mitigation Function for the Magic Damage Type</strong>: Flat Dmg Mitigation with a scaling factor of 2.</li>
 </ul>
-<p>In this case, if an entity has Magic Resistance equal to 10, and is about to take 50 Magic damage, the damage reduction will be equal to 10 (Magic Resistance) * 2 (scaling factor) = 20. So the final damage taken by the entity will be 50 (initial damage) - 20 (damage reduction) = 30 Magic damage. Clearly, this example assumes that there are no other damage modifications (e.g., neutral damage modifiers).</p>
+<p>In this case, if an entity has Magic Resistance equal to 10, and is about to take 50 Magic damage, the damage mitigation will be equal to 10 (Magic Resistance) * 2 (scaling factor) = 20. So the final damage taken by the entity will be 50 (initial damage) - 20 (damage mitigation) = 30 Magic damage. Clearly, this example assumes that there are no other damage modifications (e.g., neutral damage modifiers).</p>
 <p><strong>Use Cases</strong>:
-This function is best suited for games where offensive and defensive stat values are low — close to single digits or tens at most. In these scenarios, the linear relationship between the defensive stat and the damage reduction makes it trivial to ensure that no entity can completely negate incoming damage, as long as the stat values remain within a controlled range. Percentage or logarithmic reduction functions may yield imprecise or unintuitive results at such coarse-grained stat scales.</p>
+This function is best suited for games where offensive and defensive stat values are low — close to single digits or tens at most. In these scenarios, the linear relationship between the defensive stat and the damage mitigation makes it trivial to ensure that no entity can completely negate incoming damage, as long as the stat values remain within a controlled range. Percentage or logarithmic reduction functions may yield imprecise or unintuitive results at such coarse-grained stat scales.</p>
 <p><strong>Pros</strong>:</p>
 <ul>
-<li>Damage reduction is highly predictable: knowing the defensive stat value and the factor, anyone can instantly calculate the resulting reduction.</li>
+<li>Damage mitigation is highly predictable: knowing the defensive stat value and the factor, anyone can instantly calculate the resulting reduction.</li>
 <li>Simple to debug: the math is entirely transparent, making it straightforward to verify that the damage pipeline is working as expected at every step.</li>
 <li>Easy to balance: the linear relationship between the stat and the reduction makes it trivial to tune the factor to achieve the desired game feel.</li>
 </ul>
@@ -160,14 +160,14 @@ This function is best suited for games where offensive and defensive stat values
 <li>Simplistic system: this function may not suit games that require nuanced or complex defensive mechanics.</li>
 <li>Risk of complete damage negation: if defensive stat values grow too high relative to typical damage values, entities can become entirely immune to certain damage types. This can happen, for example, if the level difference between attacker and defender is too high.</li>
 </ul>
-<h4 id="damage-reduction-functions---percent-dmg-reduction">Damage Reduction Functions - Percent Dmg Reduction</h4>
-<p><em>Relative path:</em> <code>Dmg Reduction Functions -&gt; Percentage Dmg Reduction</code></p>
-<p><img src="../../images/AstraRPG/workflows/damage/damage-type/damage-reduction-functions-percentage.png" alt="Percent Dmg Reduction"><br>
-The percentage damage reduction function reduces incoming damage by a percentage equal to the defensive stat value. For example, if an entity has a defensive stat of 30, it will receive 30% less damage of the associated type.</p>
+<h4 id="damage-mitigation-functions---percent-dmg-mitigation">Damage Mitigation Functions - Percent Dmg Mitigation</h4>
+<p><em>Relative path:</em> <code>Dmg Mitigation Functions -&gt; Percentage Dmg Mitigation</code></p>
+<p><img src="../../images/AstraRPG/workflows/damage/damage-type/damage-reduction-functions-percentage.png" alt="Percent Dmg Mitigation"><br>
+The percentage damage mitigation function reduces incoming damage by a percentage equal to the defensive stat value. For example, if an entity has a defensive stat of 30, it will receive 30% less damage of the associated type.</p>
 <p><strong>Use Cases</strong>:</p>
 <ul>
 <li>Games where players can face enemies with notable level or power differences. Because the reduction is percentage-based, even a low-level entity with a small but non-zero defensive stat will always receive a proportional reduction, preventing extreme damage scenarios that would arise from large stat disparities between the attacker and the defender.</li>
-<li>Systems that need to be less sensitive than the Flat Dmg Reduction to the exact magnitude of offensive and defensive stats, while still remaining predictable and easy to balance.</li>
+<li>Systems that need to be less sensitive than the Flat Dmg Mitigation to the exact magnitude of offensive and defensive stats, while still remaining predictable and easy to balance.</li>
 </ul>
 <p><strong>Pros</strong>:</p>
 <ul>
@@ -179,48 +179,48 @@ The percentage damage reduction function reduces incoming damage by a percentage
 <li>High risk of damage immunity at extreme values: once the defensive stat reaches 100, the entity becomes completely immune to that damage type. This can be especially problematic for tank-oriented entities or builds designed to stack defensive stats.</li>
 <li>Can make late-game balancing challenging if stat values are not tightly bounded.</li>
 </ul>
-<h4 id="damage-reduction-functions---log-dmg-reduction">Damage Reduction Functions - Log Dmg Reduction</h4>
-<p><em>Relative path:</em> <code>Dmg Reduction Functions -&gt; Log Dmg Reduction</code></p>
-<p><img src="../../images/AstraRPG/workflows/damage/damage-type/damage-reduction-functions-log.png" alt="Log Dmg Reduction"><br>
-The logarithmic damage reduction function reduces damage using a logarithmic curve, providing diminishing returns as the defensive stat value increases. A small initial investment in the defensive stat yields a substantial reduction, while further investment produces progressively smaller gains. This makes it theoretically impossible to reach 100% reduction regardless of how high the stat grows.</p>
+<h4 id="damage-mitigation-functions---log-dmg-mitigation">Damage Mitigation Functions - Log Dmg Mitigation</h4>
+<p><em>Relative path:</em> <code>Dmg Mitigation Functions -&gt; Log Dmg Mitigation</code></p>
+<p><img src="../../images/AstraRPG/workflows/damage/damage-type/damage-reduction-functions-log.png" alt="Log Dmg Mitigation"><br>
+The logarithmic damage mitigation function reduces damage using a logarithmic curve, providing diminishing returns as the defensive stat value increases. A small initial investment in the defensive stat yields a substantial reduction, while further investment produces progressively smaller gains. This makes it theoretically impossible to reach 100% reduction regardless of how high the stat grows.</p>
 <p><strong>The Formula</strong><br>
-The logarithmic damage reduction function applies the following formula to compute the final damage taken:</p>
+The logarithmic damage mitigation function applies the following formula to compute the final damage taken:</p>
 <pre><code>Reduced Damage = Damage × (BaseValue / (BaseValue + Log(1 + DefensiveStat × ScaleFactor)))
 </code></pre>
-<p>Two parameters, configurable directly on the <code>Log Dmg Reduction</code> asset, control the shape of the curve:</p>
+<p>Two parameters, configurable directly on the <code>Log Dmg Mitigation</code> asset, control the shape of the curve:</p>
 <ul>
-<li><strong>Base Value</strong>: the constant in the denominator of the reduction multiplier. A larger Base Value reduces the relative weight of the logarithmic term, making the reduction curve less aggressive — the same defensive stat value will produce less damage reduction. Conversely, a smaller Base Value amplifies the effect of the logarithm, yielding stronger reductions even at lower stat values.</li>
+<li><strong>Base Value</strong>: the constant in the denominator of the reduction multiplier. A larger Base Value reduces the relative weight of the logarithmic term, making the reduction curve less aggressive — the same defensive stat value will produce less damage mitigation. Conversely, a smaller Base Value amplifies the effect of the logarithm, yielding stronger reductions even at lower stat values.</li>
 <li><strong>Scale Factor</strong>: the multiplier applied to the defensive stat value before computing the logarithm. A larger Scale Factor causes the curve to climb more steeply at low stat values, reaching substantial reductions earlier. A smaller Scale Factor stretches the curve, requiring higher stat values to achieve the same reduction.</li>
 </ul>
 <p>Both parameters must be set to strictly positive values.</p>
-<p><strong>Log Damage Reduction Graph</strong><br>
+<p><strong>Log Damage Mitigation Graph</strong><br>
 Because the non-linear nature of the formula makes it difficult to reason about the effect of Base Value and Scale Factor at a glance, the package includes a dedicated visualization window. You can open it in two ways:</p>
 <ul>
-<li>Clicking the <strong>Open Graph Visualizer</strong> button in the inspector of any <code>Log Dmg Reduction</code> asset.</li>
-<li>From the Unity menu: <code>Window → Astra RPG Health → Log Damage Reduction Graph</code>.</li>
+<li>Clicking the <strong>Open Graph Visualizer</strong> button in the inspector of any <code>Log Dmg Mitigation</code> asset.</li>
+<li>From the Unity menu: <code>Window → Astra RPG Health → Log Damage Mitigation Graph</code>.</li>
 </ul>
 <p>The graph visualizer window should look like this:
-<img src="../../images/AstraRPG/workflows/damage/damage-type/log-dmg-red-graph-visualizer.png" alt="Log Dmg Reduction Graph"></p>
+<img src="../../images/AstraRPG/workflows/damage/damage-type/log-dmg-red-graph-visualizer.png" alt="Log Dmg Mitigation Graph"></p>
 <p>Once the window is open, three fields let you configure the visualization:</p>
 <ul>
 <li><strong>Base Value</strong>: the reference Base Value to analyze, matching the value you have set on your asset.</li>
 <li><strong>Scale Factor</strong>: the reference Scale Factor to analyze, matching the value you have set on your asset.</li>
 <li><strong>Max Defensive Stat</strong>: the upper bound of the X-axis, i.e., the maximum defensive stat value to plot.</li>
 </ul>
-<p>The window displays one graph at a time, plotting <strong>Damage Reduction %</strong> on the Y-axis and the <strong>Defensive Stat value</strong> on the X-axis. A toggle button lets you switch between two views:</p>
+<p>The window displays one graph at a time, plotting <strong>Damage Mitigation %</strong> on the Y-axis and the <strong>Defensive Stat value</strong> on the X-axis. A toggle button lets you switch between two views:</p>
 <ul>
 <li><p><strong>Varying Base Value (Scale Factor Fixed)</strong> — shows five curves corresponding to different Base Values centered around the reference value you configured, while Scale Factor is held constant. This lets you compare how increasing or decreasing Base Value shifts the reduction curve, making it easier to find a value that achieves the desired behavior for your game's stat range. Click <strong>Switch to: Varying Scale Factor (Base Value Fixed)</strong> to move to the other view.</p>
 </li>
 <li><p><strong>Varying Scale Factor (Base Value Fixed)</strong> — shows five curves corresponding to different Scale Factors centered around the reference value, while Base Value is held constant. This lets you compare how Scale Factor affects the steepness of the initial climb of the curve. Click <strong>Switch to: Varying Base Value (Scale Factor Fixed)</strong> to return to the previous view.</p>
 </li>
 </ul>
-<p>The legend labels each curve with its exact parameter value, and the middle curve (marked <em>Current</em>) corresponds to the reference value you entered. Hovering the mouse over the graph shows a tooltip with the exact damage reduction percentage produced by each curve for the defensive stat value under the cursor, like this:
-<img src="../../images/AstraRPG/workflows/damage/damage-type/log-dmg-red-graph-visualizer-hover.png" alt="Log Dmg Reduction Graph Tooltip"></p>
+<p>The legend labels each curve with its exact parameter value, and the middle curve (marked <em>Current</em>) corresponds to the reference value you entered. Hovering the mouse over the graph shows a tooltip with the exact damage mitigation percentage produced by each curve for the defensive stat value under the cursor, like this:
+<img src="../../images/AstraRPG/workflows/damage/damage-type/log-dmg-red-graph-visualizer-hover.png" alt="Log Dmg Mitigation Graph Tooltip"></p>
 <p><strong>Use Cases</strong>:</p>
 <ul>
 <li>RPGs with wide stat ranges and long progression curves — for example, games with levels 1 through 100 or beyond — where both offensive and defensive stats grow substantially over time. The diminishing returns ensure that no entity can become completely immune to a damage type simply by stacking the defensive stat.</li>
 <li>Games where investing in defense should always be viable, but never dominant: players are rewarded for defensive investment, yet the diminishing returns naturally discourage over-specialization and keep combat meaningful at all stages.</li>
-<li>Projects that need a self-capping damage reduction formula without enforcing a hard maximum: the logarithmic curve naturally prevents extreme values from causing damage immunity, reducing the need for manual clamping or caps in the game design.</li>
+<li>Projects that need a self-capping damage mitigation formula without enforcing a hard maximum: the logarithmic curve naturally prevents extreme values from causing damage immunity, reducing the need for manual clamping or caps in the game design.</li>
 </ul>
 <p><strong>Pros</strong>:</p>
 <ul>
@@ -230,22 +230,22 @@ Because the non-linear nature of the formula makes it difficult to reason about 
 </ul>
 <p><strong>Cons</strong>:</p>
 <ul>
-<li>Less intuitive than flat or percentage reduction: players and designers cannot easily predict the exact damage reduction for a given stat value at a glance — the log graph window tool is typically needed.</li>
+<li>Less intuitive than flat or percentage reduction: players and designers cannot easily predict the exact damage mitigation for a given stat value at a glance — the log graph window tool is typically needed.</li>
 <li>More complex to debug and tune: the non-linear relationship between the stat and the reduction requires more careful analysis and testing during development.</li>
 </ul>
-<h4 id="damage-reduction-functions---custom-dmg-reduction-functions">Damage Reduction Functions - Custom Dmg Reduction Functions</h4>
-<p>If you want to provide your own custom damage reduction function, you can create a new class that inherits from <a class="xref" href="../../api/ElectricDrill.AstraRpgHealth.DamageReductionFunctions.DamageReductionFnSO.html">DamageReductionFnSO</a> and implement the <code>CalculateReducedDamage</code> method. Remember to use the <code>CreateAssetMenu</code> attribute (or the <code>MenuItem</code> attribute) to make it creatable from the Unity editor.<br>
-You can take a look at the existing damage reduction functions implementations for reference.</p>
+<h4 id="damage-mitigation-functions---custom-dmg-mitigation-functions">Damage Mitigation Functions - Custom Dmg Mitigation Functions</h4>
+<p>If you want to provide your own custom damage mitigation function, you can create a new class that inherits from <a class="xref" href="../../api/ElectricDrill.AstraRpgHealth.DamageMitigationFunctions.DamageMitigationFnSO.html">DamageMitigationFnSO</a> and implement the <code>CalculateReducedDamage</code> method. Remember to use the <code>CreateAssetMenu</code> attribute (or the <code>MenuItem</code> attribute) to make it creatable from the Unity editor.<br>
+You can take a look at the existing damage mitigation functions implementations for reference.</p>
 <h4 id="defense-penetration">Defense Penetration</h4>
-<p>Defense penetration allows the damage dealer to partially bypass the target's defensive stat before damage reduction is calculated. This mechanism is useful for implementing mechanics such as armor penetration or magic penetration, where an attacker can reduce the effective defenses of the target.</p>
+<p>Defense penetration allows the damage dealer to partially bypass the target's defensive stat before damage mitigation is calculated. This mechanism is useful for implementing mechanics such as armor penetration or magic penetration, where an attacker can reduce the effective defenses of the target.</p>
 <p>Two optional parameters of the <code>DamageTypeSO</code> control this behavior:</p>
 <ul>
 <li><strong>Defensive Stat Pierced By</strong>: the statistic on the <strong>damage dealer</strong> that pierces the target's defensive stat. For example, an <code>Armor Penetration</code> stat might pierce the <code>Armor</code> stat of the target.</li>
-<li><strong>Defense Reduction Fn</strong>: the function that computes how the piercing stat lowers the target's defensive stat. The resulting reduced defensive stat value is then passed to the <strong>Damage Reduction Fn</strong> in place of the original value.</li>
+<li><strong>Defense Penetration Fn</strong>: the function that computes how the piercing stat lowers the target's defensive stat. The resulting reduced defensive stat value is then passed to the <strong>Damage Mitigation Fn</strong> in place of the original value.</li>
 </ul>
 <div class="NOTE">
 <h5>Note</h5>
-<p><strong>Defensive Stat Pierced By</strong> and <strong>Defense Reduction Fn</strong> are optional. However, they must always be configured together: if one is set, the other must be set as well. If only one of them is assigned, a warning will be logged at runtime and the defense penetration step will be skipped for that <code>DamageTypeSO</code>.</p>
+<p><strong>Defensive Stat Pierced By</strong> and <strong>Defense Penetration Fn</strong> are optional. However, they must always be configured together: if one is set, the other must be set as well. If only one of them is assigned, a warning will be logged at runtime and the defense penetration step will be skipped for that <code>DamageTypeSO</code>.</p>
 </div>
 <div class="WARNING">
 <h5>Warning</h5>
@@ -255,19 +255,19 @@ You can take a look at the existing damage reduction functions implementations f
 <ul>
 <li><strong>Damage Type</strong>: Physical damage.</li>
 <li><strong>Defensive Stat for the Physical Damage Type</strong>: Armor.</li>
-<li><strong>Damage Reduction Function for the Physical Damage Type</strong>: Flat Dmg Reduction with a factor of 1.</li>
+<li><strong>Damage Mitigation Function for the Physical Damage Type</strong>: Flat Dmg Mitigation with a factor of 1.</li>
 <li><strong>Defensive Stat Pierced By</strong>: Armor Penetration.</li>
-<li><strong>Defense Reduction Fn</strong>: Flat Def Reduction with a factor of 1.</li>
+<li><strong>Defense Penetration Fn</strong>: Flat Def Penetration with a factor of 1.</li>
 </ul>
-<p>In this case, if the target has Armor equal to 30 and the attacker has Armor Penetration equal to 10, the effective Armor value fed into the Damage Reduction Fn will be 30 (Armor) − 10 (Armor Penetration) × 1 (factor) = 20. So, if the incoming damage is 80, the final damage taken will be 80 − 20 (effective Armor) = 60 Physical damage. This example assumes no other damage modifications are active.</p>
-<p>The package provides three built-in Defense Reduction Functions — Flat, Percentage, and Logarithmic — that work in a fully analogous way to their counterparts described in the <a href="#damage-types-damage-reduction">Damage Reduction</a> section above. The parameters, trade-offs, and use cases of each variant are the same; the only difference is that these functions operate on the <strong>defensive stat value</strong> rather than directly on the damage amount. For a detailed description of each, refer to the <a href="#damage-types-damage-reduction">Damage Reduction</a> section.</p>
-<p><em>Relative path:</em> <code>Def Reduction Functions -&gt; Flat Def Reduction</code><br>
-<img src="../../images/AstraRPG/workflows/damage/damage-type/defense-reduction-functions-flat.png" alt="Flat Def Reduction"></p>
-<p><em>Relative path:</em> <code>Def Reduction Functions -&gt; Percentage Def Reduction</code><br>
-<img src="../../images/AstraRPG/workflows/damage/damage-type/defense-reduction-functions-percentage.png" alt="Percentage Def Reduction"></p>
-<p><em>Relative path:</em> <code>Def Reduction Functions -&gt; Log Def Reduction</code><br>
-<img src="../../images/AstraRPG/workflows/damage/damage-type/defense-reduction-functions-log.png" alt="Log Def Reduction"></p>
-<p>If none of the built-in Defense Reduction Functions suits your needs, you can implement a custom one by creating a class that inherits from <a class="xref" href="../../api/ElectricDrill.AstraRpgHealth.DefenseReductionFunctions.DefenseReductionFnSO.html">DefenseReductionFnSO</a> and implementing the <code>CalculateReducedDefense</code> method. As with the Damage Reduction Functions, remember to use the <code>CreateAssetMenu</code> attribute (or the <code>MenuItem</code> attribute) to make it creatable from the Unity editor.</p>
+<p>In this case, if the target has Armor equal to 30 and the attacker has Armor Penetration equal to 10, the effective Armor value fed into the Damage Mitigation Fn will be 30 (Armor) − 10 (Armor Penetration) × 1 (factor) = 20. So, if the incoming damage is 80, the final damage taken will be 80 − 20 (effective Armor) = 60 Physical damage. This example assumes no other damage modifications are active.</p>
+<p>The package provides three built-in Defense Penetration Functions — Flat, Percentage, and Logarithmic — that work in a fully analogous way to their counterparts described in the <a href="#damage-types-damage-mitigation">Damage Mitigation</a> section above. The parameters, trade-offs, and use cases of each variant are the same; the only difference is that these functions operate on the <strong>defensive stat value</strong> rather than directly on the damage amount. For a detailed description of each, refer to the <a href="#damage-types-damage-mitigation">Damage Mitigation</a> section.</p>
+<p><em>Relative path:</em> <code>Def Penetration Functions -&gt; Flat Def Penetration</code><br>
+<img src="../../images/AstraRPG/workflows/damage/damage-type/defense-reduction-functions-flat.png" alt="Flat Def Penetration"></p>
+<p><em>Relative path:</em> <code>Def Penetration Functions -&gt; Percentage Def Penetration</code><br>
+<img src="../../images/AstraRPG/workflows/damage/damage-type/defense-reduction-functions-percentage.png" alt="Percentage Def Penetration"></p>
+<p><em>Relative path:</em> <code>Def Penetration Functions -&gt; Log Def Penetration</code><br>
+<img src="../../images/AstraRPG/workflows/damage/damage-type/defense-reduction-functions-log.png" alt="Log Def Penetration"></p>
+<p>If none of the built-in Defense Penetration Functions suits your needs, you can implement a custom one by creating a class that inherits from <a class="xref" href="../../api/ElectricDrill.AstraRpgHealth.DefensePenetrationFunctions.DefensePenetrationFnSO.html">DefensePenetrationFnSO</a> and implementing the <code>CalculateReducedDefense</code> method. As with the Damage Mitigation Functions, remember to use the <code>CreateAssetMenu</code> attribute (or the <code>MenuItem</code> attribute) to make it creatable from the Unity editor.</p>
 <h3 id="damage-types-damage-modifiers">Damage Type's Damage Modifiers</h3>
 <p>The <strong>Percentage Modifier Stat</strong> and <strong>Flat Modifier Stat</strong> fields in this section let you assign stat-based damage modifiers that apply specifically when an entity receives damage of this <code>DamageTypeSO</code>. Assigning a positive value to either stat increases the damage received from this type; a negative value decreases it. For a full explanation of how all damage modifier categories work and how they stack together, see the <a href="#damage-modifiers">Damage Modifiers</a> section.</p>
 <p>A possible way to simplify the management of all the <code>DamageTypeSO</code> modifier stats is to create a <code>StatSet</code> specifically for this purpose, and include it as a <em>Included Stat Set</em> in the various entities' <code>StatSet</code>s of your game. This way, you centralize all the <code>DamageTypeSO</code> modifier stats in a single <code>StatSet</code>, and you can easily keep track of them and ensure that they are included in all the relevant entities.</p>
@@ -288,7 +288,7 @@ You can take a look at the existing damage reduction functions implementations f
 </div>
 <div class="TIP">
 <h5>Tip</h5>
-<p>To create a damage type that is also unaffected by any defensive stat, simply leave <strong>Defensive Stat</strong> and <strong>Damage Reduction Fn</strong> empty. The <a href="#damage-step"><code>ApplyDefenseStep</code></a> has nothing to compute and is skipped. Combined with the three True Damage Option flags and no modifier stats, this defines a fully unmitigated damage type.</p>
+<p>To create a damage type that is also unaffected by any defensive stat, simply leave <strong>Defensive Stat</strong> and <strong>Damage Mitigation Fn</strong> empty. The <a href="#damage-step"><code>ApplyDefenseStep</code></a> has nothing to compute and is skipped. Combined with the three True Damage Option flags and no modifier stats, this defines a fully unmitigated damage type.</p>
 </div>
 <h3 id="damage-types-lifesteal">Damage Type's Lifesteal</h3>
 <p>Each <code>DamageTypeSO</code> exposes a <strong>Lifesteal</strong> field containing a <code>LifestealStatConfig</code>.</p>
@@ -300,22 +300,22 @@ You can take a look at the existing damage reduction functions implementations f
 </ul>
 <p>This contribution applies only to hits whose resolved <code>DamageTypeSO</code> is this asset. It stacks with the <strong>Generic Lifesteal</strong> configured in <code>AstraRpgHealthConfigSO</code>.</p>
 <p>For the full behavior — including how this stacks with generic lifesteal and how the <code>Unify Lifesteal Heals</code> flag affects the resulting healing events — see <a href="lifesteal.html">Lifesteal</a>.</p>
-<h3 id="damage-reduction-graph">Damage Reduction Graph</h3>
-<p>The <strong>Damage Reduction Graph</strong> is an Editor window that plots how damage received scales as a function of a defender's defensive stat value. Use it to visually verify the behavior of your damage reduction and defense penetration configuration, preview the impact of armor penetration at different stat values, and compare clamped (defensive stat) vs. unclamped (defensive stat) curves.</p>
-<p>To open it, click the <strong>Open Damage Reduction Graph</strong> button in the inspector of any <code>DamageTypeSO</code>. Once opened, it should look something like this:<br>
-<img src="../../images/AstraRPG/workflows/damage/damage-type/damage-reduction-graph.png" alt="Damage Reduction Graph"><br>
+<h3 id="damage-mitigation-graph">Damage Mitigation Graph</h3>
+<p>The <strong>Damage Mitigation Graph</strong> is an Editor window that plots how damage received scales as a function of a defender's defensive stat value. Use it to visually verify the behavior of your damage mitigation and defense penetration configuration, preview the impact of armor penetration at different stat values, and compare clamped (defensive stat) vs. unclamped (defensive stat) curves.</p>
+<p>To open it, click the <strong>Open Damage Mitigation Graph</strong> button in the inspector of any <code>DamageTypeSO</code>. Once opened, it should look something like this:<br>
+<img src="../../images/AstraRPG/workflows/damage/damage-type/damage-reduction-graph.png" alt="Damage Mitigation Graph"><br>
 Obviously the plot and the values will vary based on the specific configuration of the <code>DamageTypeSO</code> you have.</p>
-<p>All configuration fields — <strong>Defensive Stat</strong>, <strong>Damage Reduction Fn</strong>, <strong>Pierced Stat</strong>, and <strong>Defense Reduction Fn</strong> — are read-only inside the window and reflect the asset directly. To change any of them, edit the <code>DamageTypeSO</code>.</p>
+<p>All configuration fields — <strong>Defensive Stat</strong>, <strong>Damage Mitigation Fn</strong>, <strong>Pierced Stat</strong>, and <strong>Defense Penetration Fn</strong> — are read-only inside the window and reflect the asset directly. To change any of them, edit the <code>DamageTypeSO</code>.</p>
 <div class="NOTE">
 <h5>Note</h5>
-<p>The Damage Reduction Graph is a <strong>simulation tool only</strong>. No asset or scene object is modified when you change values inside the window.</p>
+<p>The Damage Mitigation Graph is a <strong>simulation tool only</strong>. No asset or scene object is modified when you change values inside the window.</p>
 </div>
 <h4 id="control-panel">Control Panel</h4>
 <p>The window is divided into two equal columns that scale with the window width. Below them are the <strong>Resolved Values</strong> panel, an optional <strong>Defender Breakdown</strong> panel (shown only when a Defender is assigned in the Entities section), and the graph itself.</p>
 <p><strong>Context</strong> (read-only)<br>
 Displays the <code>DamageTypeSO</code> that opened the window as a disabled field. It cannot be reassigned here — to analyze a different asset, open its graph from its own inspector.</p>
 <hr>
-<p><strong>Damage Reduction</strong></p>
+<p><strong>Damage Mitigation</strong></p>
 <table>
 <thead>
 <tr>
@@ -329,8 +329,8 @@ Displays the <code>DamageTypeSO</code> that opened the window as a disabled fiel
 <td>The stat whose value sweeps the X axis of the graph. Read-only — sourced directly from the <code>DamageTypeSO</code>. To change it, edit the asset.</td>
 </tr>
 <tr>
-<td><strong>Damage Reduction Fn</strong></td>
-<td>The <code>DamageReductionFnSO</code> that converts <code>(damage, effectiveDefense)</code> into <code>finalDamage</code>. Read-only — sourced directly from the <code>DamageTypeSO</code>. To change it, edit the asset.</td>
+<td><strong>Damage Mitigation Fn</strong></td>
+<td>The <code>DamageMitigationFnSO</code> that converts <code>(damage, effectiveDefense)</code> into <code>finalDamage</code>. Read-only — sourced directly from the <code>DamageTypeSO</code>. To change it, edit the asset.</td>
 </tr>
 </tbody>
 </table>
@@ -350,8 +350,8 @@ Displays the <code>DamageTypeSO</code> that opened the window as a disabled fiel
 <td>The stat on the attacker that provides armor penetration, read-only — sourced from <code>DamageTypeSO.DefensiveStatPiercedBy</code>. To change it, edit the asset.</td>
 </tr>
 <tr>
-<td><strong>Defense Reduction Fn</strong></td>
-<td>Optional <code>DefenseReductionFnSO</code> that reduces the defender's stat before damage reduction is applied. Read-only — sourced directly from the <code>DamageTypeSO</code>. To change it, edit the asset. When assigned, a <strong>Piercing Stat Source</strong> selector appears.</td>
+<td><strong>Defense Penetration Fn</strong></td>
+<td>Optional <code>DefensePenetrationFnSO</code> that reduces the defender's stat before damage mitigation is applied. Read-only — sourced directly from the <code>DamageTypeSO</code>. To change it, edit the asset. When assigned, a <strong>Piercing Stat Source</strong> selector appears.</td>
 </tr>
 </tbody>
 </table>
@@ -384,7 +384,7 @@ Displays the <code>DamageTypeSO</code> that opened the window as a disabled fiel
 </table>
 <div class="NOTE">
 <h5>Note</h5>
-<p>If no <strong>Defense Reduction Fn</strong> is assigned, the Piercing Stat Source controls are hidden and the grey baseline line is not drawn on the graph.</p>
+<p>If no <strong>Defense Penetration Fn</strong> is assigned, the Piercing Stat Source controls are hidden and the grey baseline line is not drawn on the graph.</p>
 </div>
 <hr>
 <p><strong>Damage Amount</strong></p>
@@ -478,13 +478,13 @@ Displays the <code>DamageTypeSO</code> that opened the window as a disabled fiel
 <tr>
 <td>No-piercing baseline</td>
 <td>Grey</td>
-<td>Only when <strong>Defense Reduction Fn</strong> is assigned and effective piercing ≠ 0</td>
+<td>Only when <strong>Defense Penetration Fn</strong> is assigned and effective piercing ≠ 0</td>
 <td>The damage curve with piercing forced to zero. Lets you immediately see how much the configured penetration shifts the outcome relative to a no-penetration scenario.</td>
 </tr>
 </tbody>
 </table>
 <p>The legend below the graph labels each active line with its color and — for the green line — the exact bound(s) at which the stat is clamped.</p>
-<p><strong>Hover tooltip</strong> — moving the mouse over the graph shows a tooltip with, for each active line, the damage received and the absolute and percentage reduction at the hovered stat value. The detail rows also show the raw defensive stat value at the cursor and, when a <code>DefenseReductionFnSO</code> is set, the portion of the stat ignored by piercing and the resulting effective defense.<br>
+<p><strong>Hover tooltip</strong> — moving the mouse over the graph shows a tooltip with, for each active line, the damage received and the absolute and percentage reduction at the hovered stat value. The detail rows also show the raw defensive stat value at the cursor and, when a <code>DefensePenetrationFnSO</code> is set, the portion of the stat ignored by piercing and the resulting effective defense.<br>
 It should look like this:<br>
 <img src="../../images/AstraRPG/workflows/damage/damage-type/damage-type-graph-reduction-window-tooltip.png" alt="Damage Type Graph Hover Tooltip"></p>
 <hr>
@@ -513,18 +513,18 @@ It should look like this:<br>
 </tr>
 <tr>
 <td>Defense Reduced by Piercing</td>
-<td>How much of the defensive stat is bypassed by the piercing value (only when <strong>Defense Reduction Fn</strong> is set)</td>
+<td>How much of the defensive stat is bypassed by the piercing value (only when <strong>Defense Penetration Fn</strong> is set)</td>
 </tr>
 <tr>
 <td>Effective <code>{stat.name}</code></td>
-<td>The final defensive stat fed into the damage reduction function (only when <strong>Defense Reduction Fn</strong> is set)</td>
+<td>The final defensive stat fed into the damage mitigation function (only when <strong>Defense Penetration Fn</strong> is set)</td>
 </tr>
 <tr>
 <td>Final Damage Received</td>
 <td>The final damage the defender would receive at its current level and stats</td>
 </tr>
 <tr>
-<td>Damage Reduction (abs / %)</td>
+<td>Damage Mitigation (abs / %)</td>
 <td>The absolute and percentage difference between raw and final damage</td>
 </tr>
 </tbody>
@@ -577,7 +577,7 @@ var preDamageContext = PreDamageContext.Builder
         .Build();
 </code></pre>
 <h2 id="damage-modifiers">Damage Modifiers</h2>
-<p>Damage modifiers are a flexible tool for implementing mechanics such as resistances, weaknesses, buffs, and debuffs that affect how much damage an entity receives. Unlike <a href="../introduction.html#damage-modifiers-vs-defensive-stat-based-damage-reduction">Defensive Stat-Based Damage Reduction</a>, damage modifiers are off by default — their stats default to 0 — and can both increase and decrease the damage amount.</p>
+<p>Damage modifiers are a flexible tool for implementing mechanics such as resistances, weaknesses, buffs, and debuffs that affect how much damage an entity receives. Unlike <a href="../introduction.html#damage-modifiers-vs-defensive-stat-based-damage-mitigation">Defensive Stat-Based Damage Mitigation</a>, damage modifiers are off by default — their stats default to 0 — and can both increase and decrease the damage amount.</p>
 <p>Three categories of damage modifiers exist, and they all stack additively with one another:</p>
 <ul>
 <li><strong>Generic modifiers</strong>: apply to all damage received by an entity, regardless of damage type or source.</li>
@@ -651,7 +651,7 @@ var preDamageContext = PreDamageContext.Builder
 </tr>
 <tr>
 <td><code>AllDamageImmune</code></td>
-<td>Generic percentage damage reduction stat alone reached ≤ −100%.</td>
+<td>Generic percentage damage mitigation stat alone reached ≤ −100%.</td>
 </tr>
 <tr>
 <td><code>DamageTypeImmune</code></td>
@@ -711,9 +711,9 @@ var preDamageContext = PreDamageContext.Builder
 <p>The position of <code>ApplyCriticalMultiplierStep</code> in the pipeline determines what value the multiplier is applied to. Placing it before <code>ApplyDefenseStep</code> amplifies damage prior to defensive mitigation; placing it after scales post-defense damage. Design your strategy order accordingly.</p>
 </div>
 <h4 id="applydefensestep">ApplyDefenseStep</h4>
-<p>This step applies the target entity's defensive stat for this damage type — the primary stat-based mitigation layer in a typical RPG setup. For example, for a Physical damage type with Armor as its <strong>Defensive Stat</strong>, this step reads the target's Armor value, optionally reduces it by any armor penetration, then feeds the result into the <strong>Damage Reduction Fn</strong> to compute the mitigated damage. This is usually the step that eliminates most of the incoming damage for well-armored targets.</p>
-<p>Applies defensive stat-based damage reduction as configured in the <code>DamageTypeSO</code>. The step reads the <strong>Defensive Stat</strong> and <strong>Damage Reduction Fn</strong>, and optionally the <strong>Defense Penetration Stat</strong> and <strong>Defense Reduction Fn</strong> (see <a href="#defense-penetration">Defense Penetration</a>).</p>
-<p>The step is a no-op when both <strong>Defensive Stat</strong> and <strong>Damage Reduction Fn</strong> are unset — which is the intended configuration for a damage type that should never be mitigated by defenses. If the configuration is inconsistent (one field set, the other null), a warning is logged and the step is skipped. The effective defensive value is computed after applying any penetration reduction, then fed into the <strong>Damage Reduction Fn</strong> to yield the final reduced amount. If the result is ≤ 0, <code>DamagePreventionReason.DefenseAbsorbed</code> is set.</p>
+<p>This step applies the target entity's defensive stat for this damage type — the primary stat-based mitigation layer in a typical RPG setup. For example, for a Physical damage type with Armor as its <strong>Defensive Stat</strong>, this step reads the target's Armor value, optionally reduces it by any armor penetration, then feeds the result into the <strong>Damage Mitigation Fn</strong> to compute the mitigated damage. This is usually the step that eliminates most of the incoming damage for well-armored targets.</p>
+<p>Applies defensive stat-based damage mitigation as configured in the <code>DamageTypeSO</code>. The step reads the <strong>Defensive Stat</strong> and <strong>Damage Mitigation Fn</strong>, and optionally the <strong>Defense Penetration Stat</strong> and <strong>Defense Penetration Fn</strong> (see <a href="#defense-penetration">Defense Penetration</a>).</p>
+<p>The step is a no-op when both <strong>Defensive Stat</strong> and <strong>Damage Mitigation Fn</strong> are unset — which is the intended configuration for a damage type that should never be mitigated by defenses. If the configuration is inconsistent (one field set, the other null), a warning is logged and the step is skipped. The effective defensive value is computed after applying any penetration reduction, then fed into the <strong>Damage Mitigation Fn</strong> to yield the final reduced amount. If the result is ≤ 0, <code>DamagePreventionReason.DefenseAbsorbed</code> is set.</p>
 <h4 id="applybarrierstep">ApplyBarrierStep</h4>
 <p>Barriers act as a temporary shield layer in front of an entity's health pool: incoming damage hits the barrier first, and only what the barrier cannot absorb continues on to the next step. This step is the mechanism behind shielding abilities and any temporary protective layer you implement with the barrier system. Its position in the pipeline determines how much barrier is actually consumed: placing it after <code>ApplyDefenseStep</code> means the barrier only ever sees damage that already survived defensive mitigation, so the barrier is drained more slowly. Placing it before defensive steps causes the barrier to absorb the full, unreduced hit — making it a purer shield but one that depletes faster.</p>
 <p>Consumes the target entity's barrier (temporary shield) to reduce incoming damage before it reaches health. If the <code>DamageTypeSO</code> has <strong>Ignore Barrier</strong> enabled, this step is skipped entirely. If the target has no <code>EntityHealth</code> component or its barrier is zero, the step is also a no-op.</p>

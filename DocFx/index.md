@@ -24,7 +24,7 @@ Simple to set up, powerful in action. Customize damage types, reduction formulas
 
 - ❤️ **Health Management:** Complete system for HP, damage, healing, death, and resurrection
 - 🗡️ **Damage Types & Sources:** Define custom damage types with defensive stats and armor penetration. Define Damage Sources for damage tracking, or advanced game mechanics
-- 🛡️ **Damage Reduction:** Multiple reduction functions—flat, percentage, logarithmic, or custom
+- 🛡️ **Damage Mitigation:** Multiple reduction functions—flat, percentage, logarithmic, or custom
 - ⚙️ **Damage Pipeline:** Fully customizable calculation pipeline with reorderable steps
 - 🩹 **Healing System:** Heal sources and mechanics that integrate seamlessly with your game
 - 🧛 **Lifesteal:** Configurable lifesteal that works with any damage type
@@ -59,17 +59,17 @@ True damage can be implemented as a damage type with no associated defensive sta
 
 Assign piercing statistics to ignore portions of defense. "Armor Pierce" could reduce the effectiveness of "Armor" when calculating net damage.
 
-#### 🛡️ Damage Reduction Functions
+#### 🛡️ Damage Mitigation Functions
 
 Model how defensive stats reduce incoming damage using mathematical functions. The package includes three common functions:
 
 - **Flat reduction:** Each point of defense reduces damage by a fixed amount. Predictable and easy to balance.
-- **Percentage reduction:** Defense directly expresses damage reduction percentage. Effective across varying damage ranges.
+- **Percentage reduction:** Defense directly expresses damage mitigation percentage. Effective across varying damage ranges.
 - **Logarithmic reduction:** Diminishing returns as defense increases. Prevents complete damage negation.
 
 Implement custom reduction functions if the defaults don't fit your needs.
 
-#### 🛡️ Defense Reduction Functions
+#### 🛡️ Defense Penetration Functions
 
 Piercing stats use reduction functions too, determining how they bypass defense.
 

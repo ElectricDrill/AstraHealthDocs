@@ -25,7 +25,7 @@ Let's proceed in order and analyze every property of the `EntityHealth` componen
 - **Restore HP On Level Up**: Boolean indicating whether the entity is fully healed when leveling up.
 
 ## Damage
-For a better understanding of the first two properties of this section, I recommend taking a look at the [Damage Calculation Strategy](damage.md#damage-calculation-strategy) documentation. Simply put, a Damage Calculation Strategy defines how the damage an entity is about to take is calculated (e.g., applying damage reduction for the defensive stat first, or damage absorption by the barrier first, when to apply the critical multiplier, etc.).
+For a better understanding of the first two properties of this section, I recommend taking a look at the [Damage Calculation Strategy](damage.md#damage-calculation-strategy) documentation. Simply put, a Damage Calculation Strategy defines how the damage an entity is about to take is calculated (e.g., applying damage mitigation for the defensive stat first, or damage absorption by the barrier first, when to apply the critical multiplier, etc.).
 Also recall that a default strategy can be assigned via configuration. See [Default Damage Calculation Strategy](package-configuration.md#default-damage-calculation-strategy).
 
 - **Custom Damage Calculation Strategy**: Field of type `DamageCalculationStrategy`. If the entity should use a custom damage calculation strategy, you can specify it here. This, if defined, takes precedence over the default one defined via configuration. A common use case could be, for example, a boss that cannot take more than 10% of its max health in damage at a time.

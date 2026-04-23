@@ -90,7 +90,7 @@ Join to <strong>receive notifications</strong> about new extension releases and 
 <ul>
 <li>❤️ <strong>Health Management:</strong> Complete system for HP, damage, healing, death, and resurrection</li>
 <li>🗡️ <strong>Damage Types &amp; Sources:</strong> Define custom damage types with defensive stats and armor penetration. Define Damage Sources for damage tracking, or advanced game mechanics</li>
-<li>🛡️ <strong>Damage Reduction:</strong> Multiple reduction functions—flat, percentage, logarithmic, or custom</li>
+<li>🛡️ <strong>Damage Mitigation:</strong> Multiple reduction functions—flat, percentage, logarithmic, or custom</li>
 <li>⚙️ <strong>Damage Pipeline:</strong> Fully customizable calculation pipeline with reorderable steps</li>
 <li>🩹 <strong>Healing System:</strong> Heal sources and mechanics that integrate seamlessly with your game</li>
 <li>🧛 <strong>Lifesteal:</strong> Configurable lifesteal that works with any damage type</li>
@@ -115,15 +115,15 @@ Join to <strong>receive notifications</strong> about new extension releases and 
 <p>Optionally link each damage type to a defensive statistic. For example, &quot;Physical Damage&quot; reduced by &quot;Armor&quot;, or &quot;Magic Damage&quot; reduced by &quot;Magic Resistance&quot;.
 True damage can be implemented as a damage type with no associated defensive stat.</p>
 <p>Assign piercing statistics to ignore portions of defense. &quot;Armor Pierce&quot; could reduce the effectiveness of &quot;Armor&quot; when calculating net damage.</p>
-<h4 id="-damage-reduction-functions">🛡️ Damage Reduction Functions</h4>
+<h4 id="-damage-mitigation-functions">🛡️ Damage Mitigation Functions</h4>
 <p>Model how defensive stats reduce incoming damage using mathematical functions. The package includes three common functions:</p>
 <ul>
 <li><strong>Flat reduction:</strong> Each point of defense reduces damage by a fixed amount. Predictable and easy to balance.</li>
-<li><strong>Percentage reduction:</strong> Defense directly expresses damage reduction percentage. Effective across varying damage ranges.</li>
+<li><strong>Percentage reduction:</strong> Defense directly expresses damage mitigation percentage. Effective across varying damage ranges.</li>
 <li><strong>Logarithmic reduction:</strong> Diminishing returns as defense increases. Prevents complete damage negation.</li>
 </ul>
 <p>Implement custom reduction functions if the defaults don't fit your needs.</p>
-<h4 id="-defense-reduction-functions">🛡️ Defense Reduction Functions</h4>
+<h4 id="-defense-penetration-functions">🛡️ Defense Penetration Functions</h4>
 <p>Piercing stats use reduction functions too, determining how they bypass defense.</p>
 <p>The same flat, percentage, and logarithmic functions are available out of the box.</p>
 <h4 id="-damage-calculation-pipeline">⚙️ Damage Calculation Pipeline</h4>

@@ -11,8 +11,8 @@
 - Health
 - Damage & Calculation pipeline
 - Tmp HP
-- Damage Reduction
-- Defense Piercing
+- Damage Mitigation
+- Defense Penetration
 - Damage Types
 - Damage Sources
 - Heal Sources
@@ -42,30 +42,30 @@ The concept of temporary HP can take various names across different games, thoug
 
 ### Raw and Net Damage
 Raw Damage refers to the damage that a certain attack or skill intends to inflict. This damage does not account for defense, critical hits, modifiers, etc.
-Net Damage is the result of processing Raw Damage while accounting for damage modifiers, damage reduction, barriers, critical hits, etc.
+Net Damage is the result of processing Raw Damage while accounting for damage modifiers, damage mitigation, barriers, critical hits, etc.
 
-### Damage Reduction and Defense Piercing
-Primary damage reduction occurs through defensive statistics, which reduce damage based on their value and the assigned damage reduction formula. Each Damage Type can be configured with a specific defensive statistic that will be used to reduce damage of that type. For example, a `Physical Damage` Damage Type could be configured to be reduced by an `Armor` statistic.
+### Damage Mitigation and Defense Penetration
+Primary damage mitigation occurs through defensive statistics, which reduce damage based on their value and the assigned damage mitigation formula. Each Damage Type can be configured with a specific defensive statistic that will be used to reduce damage of that type. For example, a `Physical Damage` Damage Type could be configured to be reduced by an `Armor` statistic.
 
-Defense Piercing, instead, represents the ability to ignore part or all of the defensive statistic assigned to a Damage Type. Each Damage Type can be configured with a specific piercing statistic that will be used to ignore a portion of the defense when calculating damage. For example, the `Armor Penetration` statistic could be used to determine how much of the `Armor` to ignore when calculating the net damage of an attack that inflicts `Physical Damage`.
+Defense Penetration, instead, represents the ability to ignore part or all of the defensive statistic assigned to a Damage Type. Each Damage Type can be configured with a specific piercing statistic that will be used to ignore a portion of the defense when calculating damage. For example, the `Armor Penetration` statistic could be used to determine how much of the `Armor` to ignore when calculating the net damage of an attack that inflicts `Physical Damage`.
 
 ### Damage Modifiers
 Damage modifiers are a low-level abstraction that can alter net damage. They represent either flat or percentage-based modifications to the damage an entity receives. They can be general, applying to all damage received by the entity, or specific to a certain damage type or source.  
 They are the foundation for implementing a wide range of mechanics — such as elemental resistances and vulnerabilities, status effects, buffs, and debuffs — that affect the damage received based on varying conditions and contexts. Whether a modifier is temporary or permanent depends entirely on the higher-level logic built on top of them. Damage modifiers are generally utilized by the damage calculation pipeline (which we'll see shortly).
 
-### Damage Modifiers vs. Defensive Stat-Based Damage Reduction
-These are distinct concepts. Stat-based damage reduction (via defensive stats) is the **baseline**: entities are always expected to carry a meaningful value for each defensive stat, and that value **always reduces** incoming damage of the associated type. Damage Modifiers, on the other hand, are backed by stats that **default to zero** — meaning they have no effect unless a higher-level system (e.g. a resistance, a weakness, a status effect) changes their value. Additionally, while defensive stats can only ever reduce damage, damage modifiers can go in either direction: **reducing or amplifying** the damage received. Finally, defensive stats often also carry an explicit semantic meaning in the game world. For example, an `Armor` stat clearly indicates a defensive capability that reduces physical damage, and an heavier equipped armor values grants a greater `Armor` value.
+### Damage Modifiers vs. Defensive Stat-Based Damage Mitigation
+These are distinct concepts. Stat-based damage mitigation (via defensive stats) is the **baseline**: entities are always expected to carry a meaningful value for each defensive stat, and that value **always reduces** incoming damage of the associated type. Damage Modifiers, on the other hand, are backed by stats that **default to zero** — meaning they have no effect unless a higher-level system (e.g. a resistance, a weakness, a status effect) changes their value. Additionally, while defensive stats can only ever reduce damage, damage modifiers can go in either direction: **reducing or amplifying** the damage received. Finally, defensive stats often also carry an explicit semantic meaning in the game world. For example, an `Armor` stat clearly indicates a defensive capability that reduces physical damage, and an heavier equipped armor values grants a greater `Armor` value.
 
-Damage modifiers are a more abstract, low-level tool that can be used to implement many different mechanics; they do not carry an inherent, universal meaning. They act as a shared container for damage modifiers coming from various game mechanics. For example, a `Stone Skin` buff, a `Iron Elixir` potion, and a `Barbarian Temper` passive ability, could all rely on the same `Flat Physical Damage Modifier` stat to reduce physical damage. In this case, the `Flat Physical Damage Modifier` stat would be a shared resource that all these mechanics modify to achieve their effect on damage reduction.
+Damage modifiers are a more abstract, low-level tool that can be used to implement many different mechanics; they do not carry an inherent, universal meaning. They act as a shared container for damage modifiers coming from various game mechanics. For example, a `Stone Skin` buff, a `Iron Elixir` potion, and a `Barbarian Temper` passive ability, could all rely on the same `Flat Physical Damage Modifier` stat to reduce physical damage. In this case, the `Flat Physical Damage Modifier` stat would be a shared resource that all these mechanics modify to achieve their effect on damage mitigation.
 
 The **origin of val values** also differs between the two. Defensive stat values are typically set either as a fixed base value on the entity, or derived from its Class's `GrowthFormula` if classes are used — meaning they scale naturally with the entity's progression. Damage modifier stats, by contrast, usually rely on **flat stat modifiers**: each game mechanic (potion, passive, buff, debuff, etc.) contributes its effect by adding or removing a stat modifier on the underlying stat, temporarily or permanently altering the total modifier applied to incoming damage.
 
-|  | **Defensive Stat Damage Reduction** | **Damage Modifiers** |
+|  | **Defensive Stat Damage Mitigation** | **Damage Modifiers** |
 |---|---|---|
 | **Default effect** | Always active — entities carry a (usually) non-zero defensive stat that continuously reduces incoming damage | Neutral by default — the underlying stat starts at zero and has no effect until explicitly changed |
 | **Direction** | Can only **reduce** damage | Can **reduce or increase** damage |
 | **Scope** | Specific to a **Damage Type** — each type can have at most one defensive stat assigned. No reduction exists for Damage Sources | Can target **all damage** (any type and source), a **specific Damage Type**, or a **specific Damage Source** |
-| **Nature** | Derived from a defensive stat value, processed through a damage reduction formula | Flat or percentage-based modifications driven by higher-level systems (resistances, weaknesses, status effects, etc.) |
+| **Nature** | Derived from a defensive stat value, processed through a damage mitigation formula | Flat or percentage-based modifications driven by higher-level systems (resistances, weaknesses, status effects, etc.) |
 | **Duration** | Permanent — tied to the entity's stat value | Temporary or permanent, depending on the higher-level systems that apply them |
 | **Value origin** | Set as a fixed base value on the entity, or derived from its Class's `GrowthFormula` | Driven by **flat stat modifiers** added or removed by individual game mechanics (potions, passives, buffs, debuffs, etc.) |
 
@@ -77,7 +77,7 @@ The **origin of val values** also differs between the two. Defensive stat values
 ### <img src="../images/AstraRPG/astra-health_astra-rpg-health-config.png" alt="attribute" width="30" class="icon-background"/> Astra RPG Health Config
 The `AstraRPGHealthConfig` is a `ScriptableObject` that serves as the central configuration point for the Astra RPG Health package. It has several properties that allow you to define how the health and damage systems should behave in your game.
 
-With Astra RPG Framework, no configuration was needed. However, Astra RPG Health needs to be configured to work around the actual instances of the base framework's components defined for your game. For example, if you defined a certain statistic for general damage reduction in your game with Astra RPG Framework, you need to inform Astra RPG Health about it so that it can use it when calculating damage.
+With Astra RPG Framework, no configuration was needed. However, Astra RPG Health needs to be configured to work around the actual instances of the base framework's components defined for your game. For example, if you defined a certain statistic for general damage mitigation in your game with Astra RPG Framework, you need to inform Astra RPG Health about it so that it can use it when calculating damage.
 The needed configuration is kept minimal, and convention-over-configuration is applied where possible to reduce the amount of setup required.  
 Configuration will be deeply discussed later in [Package Configuration](workflows/package-configuration.md).
 
@@ -86,26 +86,26 @@ Configuration will be deeply discussed later in [Package Configuration](workflow
 
 ### <img src="../images/AstraRPG/astra-health_damage-type.png" alt="attribute" width="30" class="icon-background"/> Damage Type
 `DamageType` is a `ScriptableObject` that represents a specific type of damage. Each damage type can be optionally configured with a defensive `Stat` that will be used to reduce incoming damage of that type. If a defensive stat is assigned, also a piercing stat can be assigned to ignore a portion of the defense when calculating damage.  
-Both for the defensive and piercing stat, you can select a `DamageReductionFormula` and a `DefenseReductionFormula` respectively, to define how the stats will affect damage reduction and defense piercing. Each `DamageType` also contains its own optional lifesteal configuration, allowing specific damage types to add a dedicated lifesteal contribution on top of any generic lifesteal configured globally.
+Both for the defensive and piercing stat, you can select a `DamageMitigationFormula` and a `DefensePenetrationFormula` respectively, to define how the stats will affect damage mitigation and defense penetration. Each `DamageType` also contains its own optional lifesteal configuration, allowing specific damage types to add a dedicated lifesteal contribution on top of any generic lifesteal configured globally.
 
 ### <img src="../images/AstraRPG/astra-health_damage-source.png" alt="attribute" width="30" class="icon-background"/> Damage Source
 `DamageSource`, derived from `ScriptableObject`, represents the origin of the damage inflicted. They don't have any specific properties, but they can be assigned to other objects of the package to create specific behaviors based on the damage source. We will see for what and how in the Workflows.
 
-### <img src="../images/AstraRPG/astra-health_flat-dmg-red-fo.png" alt="attribute" width="30" class="icon-background"/> <img src="../images/AstraRPG/astra-health_percentage-dmg-red-fo.png" alt="attribute" width="30" class="icon-background"/> <img src="../images/AstraRPG/astra-health_log-dmg-red-fo.png" alt="attribute" width="30" class="icon-background"/> Damage Reduction Functions
-The package comes with three built-in `DamageReductionFunction`s that you can use to define how defensive stats reduce incoming damage:
-- <img src="../images/AstraRPG/astra-health_flat-dmg-red-fo.png" alt="attribute" width="23" class="icon-background"/>`FlatDamageReductionFn`: Reduces damage by a flat amount based on the defense stat value.
-- <img src="../images/AstraRPG/astra-health_percentage-dmg-red-fo.png" alt="attribute" width="23" class="icon-background"/>`PercentageDamageReductionFn`: Reduces damage by a percentage based on the defense stat value.
-- <img src="../images/AstraRPG/astra-health_log-dmg-red-fo.png" alt="attribute" width="23" class="icon-background"/>`LogarithmicDamageReductionFn`: Reduces damage using a logarithmic scale based on the defense stat value. 
+### <img src="../images/AstraRPG/astra-health_flat-dmg-red-fo.png" alt="attribute" width="30" class="icon-background"/> <img src="../images/AstraRPG/astra-health_percentage-dmg-red-fo.png" alt="attribute" width="30" class="icon-background"/> <img src="../images/AstraRPG/astra-health_log-dmg-red-fo.png" alt="attribute" width="30" class="icon-background"/> Damage Mitigation Functions
+The package comes with three built-in `DamageMitigationFunction`s that you can use to define how defensive stats reduce incoming damage:
+- <img src="../images/AstraRPG/astra-health_flat-dmg-red-fo.png" alt="attribute" width="23" class="icon-background"/>`FlatDamageMitigationFn`: Reduces damage by a flat amount based on the defense stat value.
+- <img src="../images/AstraRPG/astra-health_percentage-dmg-red-fo.png" alt="attribute" width="23" class="icon-background"/>`PercentageDamageMitigationFn`: Reduces damage by a percentage based on the defense stat value.
+- <img src="../images/AstraRPG/astra-health_log-dmg-red-fo.png" alt="attribute" width="23" class="icon-background"/>`LogarithmicDamageMitigationFn`: Reduces damage using a logarithmic scale based on the defense stat value. 
 
-In case of need, custom damage reduction functions can be created by extending the `DamageReductionFn` class.
+In case of need, custom damage mitigation functions can be created by extending the `DamageMitigationFn` class.
 
-### <img src="../images/AstraRPG/astra-health_flat-def-red-fo.png" alt="attribute" width="30" class="icon-background"/> <img src="../images/AstraRPG/astra-health_percentage-def-red-fo.png" alt="attribute" width="30" class="icon-background"/> <img src="../images/AstraRPG/astra-health_log-def-red-fo.png" alt="attribute" width="30" class="icon-background"/> Defense Piercing Functions
-As for damage reduction functions, the package comes with three built-in `DefensePiercingFunction`s that you can use to define how piercing stats ignore a portion of the defense stat:
-- <img src="../images/AstraRPG/astra-health_flat-def-red-fo.png" alt="attribute" width="23" class="icon-background"/>`FlatDefensePiercingFn`: Ignores a flat amount of the defense stat based on the piercing stat value.
-- <img src="../images/AstraRPG/astra-health_percentage-def-red-fo.png" alt="attribute" width="23" class="icon-background"/>`PercentageDefensePiercingFn`: Ignores a percentage of the defense stat based on the piercing stat value.
-- <img src="../images/AstraRPG/astra-health_log-def-red-fo.png" alt="attribute" width="23" class="icon-background"/>`LogarithmicDefensePiercingFn`: Ignores a portion of the defense stat using a logarithmic scale based on the piercing stat value.
+### <img src="../images/AstraRPG/astra-health_flat-def-red-fo.png" alt="attribute" width="30" class="icon-background"/> <img src="../images/AstraRPG/astra-health_percentage-def-red-fo.png" alt="attribute" width="30" class="icon-background"/> <img src="../images/AstraRPG/astra-health_log-def-red-fo.png" alt="attribute" width="30" class="icon-background"/> Defense Penetration Functions
+As for damage mitigation functions, the package comes with three built-in `DefensePenetrationFunction`s that you can use to define how piercing stats ignore a portion of the defense stat:
+- <img src="../images/AstraRPG/astra-health_flat-def-red-fo.png" alt="attribute" width="23" class="icon-background"/>`FlatDefensePenetrationFn`: Ignores a flat amount of the defense stat based on the piercing stat value.
+- <img src="../images/AstraRPG/astra-health_percentage-def-red-fo.png" alt="attribute" width="23" class="icon-background"/>`PercentageDefensePenetrationFn`: Ignores a percentage of the defense stat based on the piercing stat value.
+- <img src="../images/AstraRPG/astra-health_log-def-red-fo.png" alt="attribute" width="23" class="icon-background"/>`LogarithmicDefensePenetrationFn`: Ignores a portion of the defense stat using a logarithmic scale based on the piercing stat value.
 
-Also in this case, custom defense piercing functions can be created by extending the `DefensePiercingFn` class.
+Also in this case, custom defense penetration functions can be created by extending the `DefensePenetrationFn` class.
 
 ### <img src="../images/AstraRPG/astra-health_heal-source.png" alt="attribute" width="30" class="icon-background"/> Heal Source
 `HealSource`, derived from `ScriptableObject`, represents the origin of healing. Similar to `DamageSource`, they don't have any specific properties, but they can be assigned to other objects of the package to create specific behaviors based on the heal source. We will see for what and how in the Workflows.

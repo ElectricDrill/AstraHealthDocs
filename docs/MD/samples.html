@@ -98,7 +98,7 @@ The scene covers all the main features of Astra RPG Health:</p>
 <li>Health System</li>
 <li>Damage Types</li>
 <li>Damage Sources</li>
-<li>Damage Reduction</li>
+<li>Damage Mitigation</li>
 <li>Defense Penetration</li>
 <li>Healing System</li>
 <li>Heal and Damage Modifiers</li>
@@ -139,7 +139,7 @@ It will be the responsibility of a future Astra extension package to provide a c
 <li>A <code>HeroSelector</code> object. This object has as children the game objects representing the &quot;[D] Next Hero&quot; and &quot;[A] Previous Hero&quot; buttons.</li>
 <li>A <code>PopupCanvas</code> object, which contains two sub-objects: <code>DamagePopupManager</code> and <code>HealPopupManager</code>. These objects are responsible for creating the damage and healing popups that appear above the characters' heads when they take damage or receive healing.</li>
 </ul>
-<p><strong>Each entity has the Astra components <code>EntityCore</code>, <code>EntityClass</code>, <code>EntityStats</code>, and the new <code>EntityHealth</code> on the root object.</strong> The dummy does not have a class. This choice is not to discriminate against our wooden friend, but simply because it simplifies changing the dummy's statistics to facilitate testing the package's features. This way, if you wanted to change the Armor to see how the damage reduction changes in real-time, you don't need to go through the Growth Formula associated with that stat in the dummy's class, but you can simply modify its value through <code>EntityStats</code>. Simple and effective.</p>
+<p><strong>Each entity has the Astra components <code>EntityCore</code>, <code>EntityClass</code>, <code>EntityStats</code>, and the new <code>EntityHealth</code> on the root object.</strong> The dummy does not have a class. This choice is not to discriminate against our wooden friend, but simply because it simplifies changing the dummy's statistics to facilitate testing the package's features. This way, if you wanted to change the Armor to see how the damage mitigation changes in real-time, you don't need to go through the Growth Formula associated with that stat in the dummy's class, but you can simply modify its value through <code>EntityStats</code>. Simple and effective.</p>
 <p>Each entity (including the dummy) also has two sub-objects: <code>Visuals</code> and <code>Skills</code>. The first contains all the objects responsible for the character's visual representation (sprite and health bar for the dummy, sprite and attack sprite for the player characters), while the second is used to specify the character's abilities.</p>
 <p>The objects related to the entity canvases instead have the following sub-objects: a <code>HeroPanel</code> responsible for showing the panel with the character's name, level, class, health bar and statistics, and a <code>SkillsPanel</code>, which contains the buttons and icons related to the character's abilities.</p>
 <h3 id="the-project-files---overview">The Project Files - Overview</h3>
@@ -168,7 +168,7 @@ It will be the responsibility of a future Astra extension package to provide a c
 <h4 id="damage-sources">Damage Sources</h4>
 <p>In the <code>Sources - Damage</code> subfolder you will find two damage sources: <code>Skill</code> and <code>Environmental</code>. The scene does not make use of environmental damage, but the damage source is used in <a href="workflows/experience-collection.html">Experience Collection</a>, particularly in the <code>Environmental Kill Exp Strategy</code> strategy. Therefore, although it cannot be tested in the scene, it has value as an example to show you how to create and configure a multiple strategy that uses both the direct kill and the environmental kill strategies.</p>
 <h4 id="damage-types">Damage Types</h4>
-<p>In the <code>Damage Types</code> subfolder you will find the three damage types used in the sample scene: Physical, Magical and True, and two folders containing the three variants of Damage Reduction Functions and Defense Reduction Functions. Currently, both physical and magical damage use the logarithmic formula for damage reduction based on the defensive stat, and percentage reduction for defensive stat penetration. I have provided all three to make it easier for you to test should you want to swap the formulas on the fly.</p>
+<p>In the <code>Damage Types</code> subfolder you will find the three damage types used in the sample scene: Physical, Magical and True, and two folders containing the three variants of Damage Mitigation Functions and Defense Penetration Functions. Currently, both physical and magical damage use the logarithmic formula for damage mitigation based on the defensive stat, and percentage reduction for defensive stat penetration. I have provided all three to make it easier for you to test should you want to swap the formulas on the fly.</p>
 <h4 id="events">Events</h4>
 <p>In <code>Events</code> you will find all the instances of the game events used by the sample scene. All the instances belong to Astra RPG Health except for <code>Entity Leveled Up Game Event</code> and <code>Entity Leveled Down Game Event</code>.
 These events have been connected as <a href="workflows/package-configuration.html#global-events">global events</a> in the <code>AstraRpgHealthConfigSO</code> configuration.</p>
@@ -211,7 +211,7 @@ When the entity is healed or takes damage, it will invoke the respective Global 
 <tr>
 <th>Damage Type</th>
 <th>Defensive Stat</th>
-<th>Damage Reduction Function</th>
+<th>Damage Mitigation Function</th>
 <th>Defense Penetration Stat</th>
 <th>Defense Penetration Function</th>
 <th>Flat Damage Modifier Stat</th>
@@ -260,7 +260,7 @@ When the entity is healed or takes damage, it will invoke the respective Global 
 </tr>
 </tbody>
 </table>
-<p>You can notice that physical and magical damage both use the same logarithmic formula for damage reduction and the same one for defense penetration, but clearly use different statistics for reduction and penetration. True damage instead has no associated defensive stat, so it does not suffer any reduction. Having no associated defensive stats, it also has no defense penetration.
+<p>You can notice that physical and magical damage both use the same logarithmic formula for damage mitigation and the same one for defense penetration, but clearly use different statistics for reduction and penetration. True damage instead has no associated defensive stat, so it does not suffer any reduction. Having no associated defensive stats, it also has no defense penetration.
 In addition to the defensive stats and the related reduction and penetration formulas, physical and magical damage also define statistics for flat and percentage modifiers for the specific damage type. I refer you to the documentation on <a href="workflows/damage.html#damage-types-damage-modifiers">Damage Type's Damage Modifiers</a> for more details on how these stats work and how they are used in the damage calculation pipeline. You can test the impact of these stats by modifying their values in the Dummy's <code>EntityStats</code>. <strong>Also remember that the order of application of flat and percentage modifiers is defined in the configured damage calculation strategy. In the sample scene you will find it under <code>Examples/Instances/Default Damage Calculation Strategy</code>.</strong> Its initial configuration is:</p>
 <ol>
 <li>Apply Critical Multiplier</li>

@@ -209,8 +209,8 @@ Applied by `ApplyFlatDmgModifiersStep` when that step is included in the active 
 
 **Example:**
 - Incoming Damage: 150
-- Generic Flat Damage Modification: -20 (means -20 HP of damage taken)
-- **Damage Reduction:** -20 → Final Damage: **130**
+- Generic Flat Damage Modifier: -20 (means -20 HP of damage taken)
+- **Damage Mitigation:** -20 → Final Damage: **130**
 
 #### Generic Percentage Damage Modification Stat
 **Type:** `Stat`
@@ -224,8 +224,8 @@ Applied by `ApplyPercentageDmgModifiersStep` when that step is included in the a
 
 **Example:**
 - Incoming Damage: 150
-- Generic Percentage Damage Modification: -20 (means -20% damage taken)
-- **Damage Reduction:** -20% → Final Damage: 150 × 0.80 = **120**
+- Generic Percentage Damage Modifier: -20 (means -20% damage taken)
+- **Damage Mitigation:** -20% → Final Damage: 150 × 0.80 = **120**
 
 > [!NOTE]
 > If the entity to be healed doesn't have the specified flat/percentage heal modification stats, they will be considered as having a value of 0 for those stats, and therefore no modification will be applied to the healing amount for that entity.

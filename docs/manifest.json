@@ -675,10 +675,10 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.DamageReductionCalculator.yml",
+      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.DamageMitigationCalculator.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.DamageReductionCalculator.html"
+          "relative_path": "api/ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.DamageMitigationCalculator.html"
         }
       },
       "version": ""
@@ -1045,100 +1045,100 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.DamageReductionFunctions.DamageReductionFn.yml",
+      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.DamageMitigationFunctions.DamageMitigationFn.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.DamageReductionFunctions.DamageReductionFn.html"
+          "relative_path": "api/ElectricDrill.AstraRpgHealth.DamageMitigationFunctions.DamageMitigationFn.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.DamageReductionFunctions.DamageReductionFnSO.yml",
+      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.DamageMitigationFunctions.DamageMitigationFnSO.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.DamageReductionFunctions.DamageReductionFnSO.html"
+          "relative_path": "api/ElectricDrill.AstraRpgHealth.DamageMitigationFunctions.DamageMitigationFnSO.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.DamageReductionFunctions.DamageReductionFunctions.FlatDamageReductionFn.yml",
+      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.DamageMitigationFunctions.DamageMitigationFunctions.FlatDamageMitigationFn.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.DamageReductionFunctions.DamageReductionFunctions.FlatDamageReductionFn.html"
+          "relative_path": "api/ElectricDrill.AstraRpgHealth.DamageMitigationFunctions.DamageMitigationFunctions.FlatDamageMitigationFn.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.DamageReductionFunctions.DamageReductionFunctions.LogDamageReductionFn.yml",
+      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.DamageMitigationFunctions.DamageMitigationFunctions.LogDamageMitigationFn.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.DamageReductionFunctions.DamageReductionFunctions.LogDamageReductionFn.html"
+          "relative_path": "api/ElectricDrill.AstraRpgHealth.DamageMitigationFunctions.DamageMitigationFunctions.LogDamageMitigationFn.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.DamageReductionFunctions.DamageReductionFunctions.PercentageDamageReductionFn.yml",
+      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.DamageMitigationFunctions.DamageMitigationFunctions.PercentageDamageMitigationFn.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.DamageReductionFunctions.DamageReductionFunctions.PercentageDamageReductionFn.html"
+          "relative_path": "api/ElectricDrill.AstraRpgHealth.DamageMitigationFunctions.DamageMitigationFunctions.PercentageDamageMitigationFn.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.DamageReductionFunctions.DamageReductionFunctions.yml",
+      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.DamageMitigationFunctions.DamageMitigationFunctions.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.DamageReductionFunctions.DamageReductionFunctions.html"
+          "relative_path": "api/ElectricDrill.AstraRpgHealth.DamageMitigationFunctions.DamageMitigationFunctions.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.DamageReductionFunctions.FlatDamageReductionFnSO.yml",
+      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.DamageMitigationFunctions.FlatDamageMitigationFnSO.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.DamageReductionFunctions.FlatDamageReductionFnSO.html"
+          "relative_path": "api/ElectricDrill.AstraRpgHealth.DamageMitigationFunctions.FlatDamageMitigationFnSO.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.DamageReductionFunctions.LogDamageReductionFnSO.yml",
+      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.DamageMitigationFunctions.LogDamageMitigationFnSO.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.DamageReductionFunctions.LogDamageReductionFnSO.html"
+          "relative_path": "api/ElectricDrill.AstraRpgHealth.DamageMitigationFunctions.LogDamageMitigationFnSO.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.DamageReductionFunctions.PercentageDamageReductionFnSO.yml",
+      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.DamageMitigationFunctions.PercentageDamageMitigationFnSO.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.DamageReductionFunctions.PercentageDamageReductionFnSO.html"
+          "relative_path": "api/ElectricDrill.AstraRpgHealth.DamageMitigationFunctions.PercentageDamageMitigationFnSO.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.DamageReductionFunctions.yml",
+      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.DamageMitigationFunctions.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.DamageReductionFunctions.html"
+          "relative_path": "api/ElectricDrill.AstraRpgHealth.DamageMitigationFunctions.html"
         }
       },
       "version": ""
@@ -1205,100 +1205,100 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.DefenseReductionFunctions.DefenseReductionFn.yml",
+      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.DefensePenetrationFunctions.DefensePenetrationFn.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.DefenseReductionFunctions.DefenseReductionFn.html"
+          "relative_path": "api/ElectricDrill.AstraRpgHealth.DefensePenetrationFunctions.DefensePenetrationFn.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.DefenseReductionFunctions.DefenseReductionFnSO.yml",
+      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.DefensePenetrationFunctions.DefensePenetrationFnSO.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.DefenseReductionFunctions.DefenseReductionFnSO.html"
+          "relative_path": "api/ElectricDrill.AstraRpgHealth.DefensePenetrationFunctions.DefensePenetrationFnSO.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.DefenseReductionFunctions.DefenseReductionFunctions.FlatDefenseReductionFn.yml",
+      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.DefensePenetrationFunctions.DefensePenetrationFunctions.FlatDefensePenetrationFn.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.DefenseReductionFunctions.DefenseReductionFunctions.FlatDefenseReductionFn.html"
+          "relative_path": "api/ElectricDrill.AstraRpgHealth.DefensePenetrationFunctions.DefensePenetrationFunctions.FlatDefensePenetrationFn.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.DefenseReductionFunctions.DefenseReductionFunctions.LogDefenseReductionFn.yml",
+      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.DefensePenetrationFunctions.DefensePenetrationFunctions.LogDefensePenetrationFn.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.DefenseReductionFunctions.DefenseReductionFunctions.LogDefenseReductionFn.html"
+          "relative_path": "api/ElectricDrill.AstraRpgHealth.DefensePenetrationFunctions.DefensePenetrationFunctions.LogDefensePenetrationFn.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.DefenseReductionFunctions.DefenseReductionFunctions.PercentageDefenseReductionFn.yml",
+      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.DefensePenetrationFunctions.DefensePenetrationFunctions.PercentageDefensePenetrationFn.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.DefenseReductionFunctions.DefenseReductionFunctions.PercentageDefenseReductionFn.html"
+          "relative_path": "api/ElectricDrill.AstraRpgHealth.DefensePenetrationFunctions.DefensePenetrationFunctions.PercentageDefensePenetrationFn.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.DefenseReductionFunctions.DefenseReductionFunctions.yml",
+      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.DefensePenetrationFunctions.DefensePenetrationFunctions.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.DefenseReductionFunctions.DefenseReductionFunctions.html"
+          "relative_path": "api/ElectricDrill.AstraRpgHealth.DefensePenetrationFunctions.DefensePenetrationFunctions.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.DefenseReductionFunctions.FlatDefenseReductionFnSO.yml",
+      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.DefensePenetrationFunctions.FlatDefensePenetrationFnSO.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.DefenseReductionFunctions.FlatDefenseReductionFnSO.html"
+          "relative_path": "api/ElectricDrill.AstraRpgHealth.DefensePenetrationFunctions.FlatDefensePenetrationFnSO.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.DefenseReductionFunctions.LogDefenseReductionFnSO.yml",
+      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.DefensePenetrationFunctions.LogDefensePenetrationFnSO.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.DefenseReductionFunctions.LogDefenseReductionFnSO.html"
+          "relative_path": "api/ElectricDrill.AstraRpgHealth.DefensePenetrationFunctions.LogDefensePenetrationFnSO.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.DefenseReductionFunctions.PercentageDefenseReductionFnSO.yml",
+      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.DefensePenetrationFunctions.PercentageDefensePenetrationFnSO.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.DefenseReductionFunctions.PercentageDefenseReductionFnSO.html"
+          "relative_path": "api/ElectricDrill.AstraRpgHealth.DefensePenetrationFunctions.PercentageDefensePenetrationFnSO.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.DefenseReductionFunctions.yml",
+      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.DefensePenetrationFunctions.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.DefenseReductionFunctions.html"
+          "relative_path": "api/ElectricDrill.AstraRpgHealth.DefensePenetrationFunctions.html"
         }
       },
       "version": ""

@@ -2126,69 +2126,69 @@ references:
   isSpec: "True"
   fullName: ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.DamageInfo.Type
   nameWithType: DamageInfo.Type
-- uid: ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.DamageReductionCalculator
-  name: DamageReductionCalculator
-  href: api/ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.DamageReductionCalculator.html
-  commentId: T:ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.DamageReductionCalculator
-  fullName: ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.DamageReductionCalculator
-  nameWithType: DamageReductionCalculator
-- uid: ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.DamageReductionCalculator.ApplyDamageReduction(System.Int64,System.Double,ElectricDrill.AstraRpgHealth.DamageReductionFunctions.DamageReductionFnSO)
-  name: ApplyDamageReduction(long, double, DamageReductionFnSO)
-  href: api/ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.DamageReductionCalculator.html#ElectricDrill_AstraRpgHealth_Damage_CalculationPipeline_DamageReductionCalculator_ApplyDamageReduction_System_Int64_System_Double_ElectricDrill_AstraRpgHealth_DamageReductionFunctions_DamageReductionFnSO_
-  commentId: M:ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.DamageReductionCalculator.ApplyDamageReduction(System.Int64,System.Double,ElectricDrill.AstraRpgHealth.DamageReductionFunctions.DamageReductionFnSO)
-  name.vb: ApplyDamageReduction(Long, Double, DamageReductionFnSO)
-  fullName: ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.DamageReductionCalculator.ApplyDamageReduction(long, double, ElectricDrill.AstraRpgHealth.DamageReductionFunctions.DamageReductionFnSO)
-  fullName.vb: ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.DamageReductionCalculator.ApplyDamageReduction(Long, Double, ElectricDrill.AstraRpgHealth.DamageReductionFunctions.DamageReductionFnSO)
-  nameWithType: DamageReductionCalculator.ApplyDamageReduction(long, double, DamageReductionFnSO)
-  nameWithType.vb: DamageReductionCalculator.ApplyDamageReduction(Long, Double, DamageReductionFnSO)
-- uid: ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.DamageReductionCalculator.ApplyDamageReduction*
-  name: ApplyDamageReduction
-  href: api/ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.DamageReductionCalculator.html#ElectricDrill_AstraRpgHealth_Damage_CalculationPipeline_DamageReductionCalculator_ApplyDamageReduction_
-  commentId: Overload:ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.DamageReductionCalculator.ApplyDamageReduction
+- uid: ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.DamageMitigationCalculator
+  name: DamageMitigationCalculator
+  href: api/ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.DamageMitigationCalculator.html
+  commentId: T:ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.DamageMitigationCalculator
+  fullName: ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.DamageMitigationCalculator
+  nameWithType: DamageMitigationCalculator
+- uid: ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.DamageMitigationCalculator.ApplyDamageMitigation(System.Int64,System.Double,ElectricDrill.AstraRpgHealth.DamageMitigationFunctions.DamageMitigationFnSO)
+  name: ApplyDamageMitigation(long, double, DamageMitigationFnSO)
+  href: api/ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.DamageMitigationCalculator.html#ElectricDrill_AstraRpgHealth_Damage_CalculationPipeline_DamageMitigationCalculator_ApplyDamageMitigation_System_Int64_System_Double_ElectricDrill_AstraRpgHealth_DamageMitigationFunctions_DamageMitigationFnSO_
+  commentId: M:ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.DamageMitigationCalculator.ApplyDamageMitigation(System.Int64,System.Double,ElectricDrill.AstraRpgHealth.DamageMitigationFunctions.DamageMitigationFnSO)
+  name.vb: ApplyDamageMitigation(Long, Double, DamageMitigationFnSO)
+  fullName: ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.DamageMitigationCalculator.ApplyDamageMitigation(long, double, ElectricDrill.AstraRpgHealth.DamageMitigationFunctions.DamageMitigationFnSO)
+  fullName.vb: ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.DamageMitigationCalculator.ApplyDamageMitigation(Long, Double, ElectricDrill.AstraRpgHealth.DamageMitigationFunctions.DamageMitigationFnSO)
+  nameWithType: DamageMitigationCalculator.ApplyDamageMitigation(long, double, DamageMitigationFnSO)
+  nameWithType.vb: DamageMitigationCalculator.ApplyDamageMitigation(Long, Double, DamageMitigationFnSO)
+- uid: ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.DamageMitigationCalculator.ApplyDamageMitigation*
+  name: ApplyDamageMitigation
+  href: api/ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.DamageMitigationCalculator.html#ElectricDrill_AstraRpgHealth_Damage_CalculationPipeline_DamageMitigationCalculator_ApplyDamageMitigation_
+  commentId: Overload:ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.DamageMitigationCalculator.ApplyDamageMitigation
   isSpec: "True"
-  fullName: ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.DamageReductionCalculator.ApplyDamageReduction
-  nameWithType: DamageReductionCalculator.ApplyDamageReduction
-- uid: ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.DamageReductionCalculator.CalculateReducedDefense(System.Int64,System.Int64,ElectricDrill.AstraRpgHealth.DefenseReductionFunctions.DefenseReductionFnSO,ElectricDrill.AstraRpgFramework.Stats.StatSO,System.Boolean)
-  name: CalculateReducedDefense(long, long, DefenseReductionFnSO, StatSO, bool)
-  href: api/ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.DamageReductionCalculator.html#ElectricDrill_AstraRpgHealth_Damage_CalculationPipeline_DamageReductionCalculator_CalculateReducedDefense_System_Int64_System_Int64_ElectricDrill_AstraRpgHealth_DefenseReductionFunctions_DefenseReductionFnSO_ElectricDrill_AstraRpgFramework_Stats_StatSO_System_Boolean_
-  commentId: M:ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.DamageReductionCalculator.CalculateReducedDefense(System.Int64,System.Int64,ElectricDrill.AstraRpgHealth.DefenseReductionFunctions.DefenseReductionFnSO,ElectricDrill.AstraRpgFramework.Stats.StatSO,System.Boolean)
-  name.vb: CalculateReducedDefense(Long, Long, DefenseReductionFnSO, StatSO, Boolean)
-  fullName: ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.DamageReductionCalculator.CalculateReducedDefense(long, long, ElectricDrill.AstraRpgHealth.DefenseReductionFunctions.DefenseReductionFnSO, ElectricDrill.AstraRpgFramework.Stats.StatSO, bool)
-  fullName.vb: ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.DamageReductionCalculator.CalculateReducedDefense(Long, Long, ElectricDrill.AstraRpgHealth.DefenseReductionFunctions.DefenseReductionFnSO, ElectricDrill.AstraRpgFramework.Stats.StatSO, Boolean)
-  nameWithType: DamageReductionCalculator.CalculateReducedDefense(long, long, DefenseReductionFnSO, StatSO, bool)
-  nameWithType.vb: DamageReductionCalculator.CalculateReducedDefense(Long, Long, DefenseReductionFnSO, StatSO, Boolean)
-- uid: ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.DamageReductionCalculator.CalculateReducedDefense*
+  fullName: ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.DamageMitigationCalculator.ApplyDamageMitigation
+  nameWithType: DamageMitigationCalculator.ApplyDamageMitigation
+- uid: ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.DamageMitigationCalculator.CalculateReducedDefense(System.Int64,System.Int64,ElectricDrill.AstraRpgHealth.DefensePenetrationFunctions.DefensePenetrationFnSO,ElectricDrill.AstraRpgFramework.Stats.StatSO,System.Boolean)
+  name: CalculateReducedDefense(long, long, DefensePenetrationFnSO, StatSO, bool)
+  href: api/ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.DamageMitigationCalculator.html#ElectricDrill_AstraRpgHealth_Damage_CalculationPipeline_DamageMitigationCalculator_CalculateReducedDefense_System_Int64_System_Int64_ElectricDrill_AstraRpgHealth_DefensePenetrationFunctions_DefensePenetrationFnSO_ElectricDrill_AstraRpgFramework_Stats_StatSO_System_Boolean_
+  commentId: M:ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.DamageMitigationCalculator.CalculateReducedDefense(System.Int64,System.Int64,ElectricDrill.AstraRpgHealth.DefensePenetrationFunctions.DefensePenetrationFnSO,ElectricDrill.AstraRpgFramework.Stats.StatSO,System.Boolean)
+  name.vb: CalculateReducedDefense(Long, Long, DefensePenetrationFnSO, StatSO, Boolean)
+  fullName: ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.DamageMitigationCalculator.CalculateReducedDefense(long, long, ElectricDrill.AstraRpgHealth.DefensePenetrationFunctions.DefensePenetrationFnSO, ElectricDrill.AstraRpgFramework.Stats.StatSO, bool)
+  fullName.vb: ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.DamageMitigationCalculator.CalculateReducedDefense(Long, Long, ElectricDrill.AstraRpgHealth.DefensePenetrationFunctions.DefensePenetrationFnSO, ElectricDrill.AstraRpgFramework.Stats.StatSO, Boolean)
+  nameWithType: DamageMitigationCalculator.CalculateReducedDefense(long, long, DefensePenetrationFnSO, StatSO, bool)
+  nameWithType.vb: DamageMitigationCalculator.CalculateReducedDefense(Long, Long, DefensePenetrationFnSO, StatSO, Boolean)
+- uid: ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.DamageMitigationCalculator.CalculateReducedDefense*
   name: CalculateReducedDefense
-  href: api/ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.DamageReductionCalculator.html#ElectricDrill_AstraRpgHealth_Damage_CalculationPipeline_DamageReductionCalculator_CalculateReducedDefense_
-  commentId: Overload:ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.DamageReductionCalculator.CalculateReducedDefense
+  href: api/ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.DamageMitigationCalculator.html#ElectricDrill_AstraRpgHealth_Damage_CalculationPipeline_DamageMitigationCalculator_CalculateReducedDefense_
+  commentId: Overload:ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.DamageMitigationCalculator.CalculateReducedDefense
   isSpec: "True"
-  fullName: ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.DamageReductionCalculator.CalculateReducedDefense
-  nameWithType: DamageReductionCalculator.CalculateReducedDefense
-- uid: ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.DamageReductionCalculator.CalculateReducedDmg(System.Int64,System.Int64,ElectricDrill.AstraRpgHealth.DefenseReductionFunctions.DefenseReductionFnSO,System.Int64,ElectricDrill.AstraRpgFramework.Stats.StatSO,ElectricDrill.AstraRpgHealth.DamageReductionFunctions.DamageReductionFnSO,System.Boolean)
-  name: CalculateReducedDmg(long, long, DefenseReductionFnSO, long, StatSO, DamageReductionFnSO, bool)
-  href: api/ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.DamageReductionCalculator.html#ElectricDrill_AstraRpgHealth_Damage_CalculationPipeline_DamageReductionCalculator_CalculateReducedDmg_System_Int64_System_Int64_ElectricDrill_AstraRpgHealth_DefenseReductionFunctions_DefenseReductionFnSO_System_Int64_ElectricDrill_AstraRpgFramework_Stats_StatSO_ElectricDrill_AstraRpgHealth_DamageReductionFunctions_DamageReductionFnSO_System_Boolean_
-  commentId: M:ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.DamageReductionCalculator.CalculateReducedDmg(System.Int64,System.Int64,ElectricDrill.AstraRpgHealth.DefenseReductionFunctions.DefenseReductionFnSO,System.Int64,ElectricDrill.AstraRpgFramework.Stats.StatSO,ElectricDrill.AstraRpgHealth.DamageReductionFunctions.DamageReductionFnSO,System.Boolean)
-  name.vb: CalculateReducedDmg(Long, Long, DefenseReductionFnSO, Long, StatSO, DamageReductionFnSO, Boolean)
-  fullName: ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.DamageReductionCalculator.CalculateReducedDmg(long, long, ElectricDrill.AstraRpgHealth.DefenseReductionFunctions.DefenseReductionFnSO, long, ElectricDrill.AstraRpgFramework.Stats.StatSO, ElectricDrill.AstraRpgHealth.DamageReductionFunctions.DamageReductionFnSO, bool)
-  fullName.vb: ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.DamageReductionCalculator.CalculateReducedDmg(Long, Long, ElectricDrill.AstraRpgHealth.DefenseReductionFunctions.DefenseReductionFnSO, Long, ElectricDrill.AstraRpgFramework.Stats.StatSO, ElectricDrill.AstraRpgHealth.DamageReductionFunctions.DamageReductionFnSO, Boolean)
-  nameWithType: DamageReductionCalculator.CalculateReducedDmg(long, long, DefenseReductionFnSO, long, StatSO, DamageReductionFnSO, bool)
-  nameWithType.vb: DamageReductionCalculator.CalculateReducedDmg(Long, Long, DefenseReductionFnSO, Long, StatSO, DamageReductionFnSO, Boolean)
-- uid: ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.DamageReductionCalculator.CalculateReducedDmg(System.Int64,System.Int64,System.Int64,ElectricDrill.AstraRpgHealth.Damage.DamageTypeSO,System.Boolean)
+  fullName: ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.DamageMitigationCalculator.CalculateReducedDefense
+  nameWithType: DamageMitigationCalculator.CalculateReducedDefense
+- uid: ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.DamageMitigationCalculator.CalculateReducedDmg(System.Int64,System.Int64,ElectricDrill.AstraRpgHealth.DefensePenetrationFunctions.DefensePenetrationFnSO,System.Int64,ElectricDrill.AstraRpgFramework.Stats.StatSO,ElectricDrill.AstraRpgHealth.DamageMitigationFunctions.DamageMitigationFnSO,System.Boolean)
+  name: CalculateReducedDmg(long, long, DefensePenetrationFnSO, long, StatSO, DamageMitigationFnSO, bool)
+  href: api/ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.DamageMitigationCalculator.html#ElectricDrill_AstraRpgHealth_Damage_CalculationPipeline_DamageMitigationCalculator_CalculateReducedDmg_System_Int64_System_Int64_ElectricDrill_AstraRpgHealth_DefensePenetrationFunctions_DefensePenetrationFnSO_System_Int64_ElectricDrill_AstraRpgFramework_Stats_StatSO_ElectricDrill_AstraRpgHealth_DamageMitigationFunctions_DamageMitigationFnSO_System_Boolean_
+  commentId: M:ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.DamageMitigationCalculator.CalculateReducedDmg(System.Int64,System.Int64,ElectricDrill.AstraRpgHealth.DefensePenetrationFunctions.DefensePenetrationFnSO,System.Int64,ElectricDrill.AstraRpgFramework.Stats.StatSO,ElectricDrill.AstraRpgHealth.DamageMitigationFunctions.DamageMitigationFnSO,System.Boolean)
+  name.vb: CalculateReducedDmg(Long, Long, DefensePenetrationFnSO, Long, StatSO, DamageMitigationFnSO, Boolean)
+  fullName: ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.DamageMitigationCalculator.CalculateReducedDmg(long, long, ElectricDrill.AstraRpgHealth.DefensePenetrationFunctions.DefensePenetrationFnSO, long, ElectricDrill.AstraRpgFramework.Stats.StatSO, ElectricDrill.AstraRpgHealth.DamageMitigationFunctions.DamageMitigationFnSO, bool)
+  fullName.vb: ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.DamageMitigationCalculator.CalculateReducedDmg(Long, Long, ElectricDrill.AstraRpgHealth.DefensePenetrationFunctions.DefensePenetrationFnSO, Long, ElectricDrill.AstraRpgFramework.Stats.StatSO, ElectricDrill.AstraRpgHealth.DamageMitigationFunctions.DamageMitigationFnSO, Boolean)
+  nameWithType: DamageMitigationCalculator.CalculateReducedDmg(long, long, DefensePenetrationFnSO, long, StatSO, DamageMitigationFnSO, bool)
+  nameWithType.vb: DamageMitigationCalculator.CalculateReducedDmg(Long, Long, DefensePenetrationFnSO, Long, StatSO, DamageMitigationFnSO, Boolean)
+- uid: ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.DamageMitigationCalculator.CalculateReducedDmg(System.Int64,System.Int64,System.Int64,ElectricDrill.AstraRpgHealth.Damage.DamageTypeSO,System.Boolean)
   name: CalculateReducedDmg(long, long, long, DamageTypeSO, bool)
-  href: api/ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.DamageReductionCalculator.html#ElectricDrill_AstraRpgHealth_Damage_CalculationPipeline_DamageReductionCalculator_CalculateReducedDmg_System_Int64_System_Int64_System_Int64_ElectricDrill_AstraRpgHealth_Damage_DamageTypeSO_System_Boolean_
-  commentId: M:ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.DamageReductionCalculator.CalculateReducedDmg(System.Int64,System.Int64,System.Int64,ElectricDrill.AstraRpgHealth.Damage.DamageTypeSO,System.Boolean)
+  href: api/ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.DamageMitigationCalculator.html#ElectricDrill_AstraRpgHealth_Damage_CalculationPipeline_DamageMitigationCalculator_CalculateReducedDmg_System_Int64_System_Int64_System_Int64_ElectricDrill_AstraRpgHealth_Damage_DamageTypeSO_System_Boolean_
+  commentId: M:ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.DamageMitigationCalculator.CalculateReducedDmg(System.Int64,System.Int64,System.Int64,ElectricDrill.AstraRpgHealth.Damage.DamageTypeSO,System.Boolean)
   name.vb: CalculateReducedDmg(Long, Long, Long, DamageTypeSO, Boolean)
-  fullName: ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.DamageReductionCalculator.CalculateReducedDmg(long, long, long, ElectricDrill.AstraRpgHealth.Damage.DamageTypeSO, bool)
-  fullName.vb: ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.DamageReductionCalculator.CalculateReducedDmg(Long, Long, Long, ElectricDrill.AstraRpgHealth.Damage.DamageTypeSO, Boolean)
-  nameWithType: DamageReductionCalculator.CalculateReducedDmg(long, long, long, DamageTypeSO, bool)
-  nameWithType.vb: DamageReductionCalculator.CalculateReducedDmg(Long, Long, Long, DamageTypeSO, Boolean)
-- uid: ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.DamageReductionCalculator.CalculateReducedDmg*
+  fullName: ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.DamageMitigationCalculator.CalculateReducedDmg(long, long, long, ElectricDrill.AstraRpgHealth.Damage.DamageTypeSO, bool)
+  fullName.vb: ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.DamageMitigationCalculator.CalculateReducedDmg(Long, Long, Long, ElectricDrill.AstraRpgHealth.Damage.DamageTypeSO, Boolean)
+  nameWithType: DamageMitigationCalculator.CalculateReducedDmg(long, long, long, DamageTypeSO, bool)
+  nameWithType.vb: DamageMitigationCalculator.CalculateReducedDmg(Long, Long, Long, DamageTypeSO, Boolean)
+- uid: ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.DamageMitigationCalculator.CalculateReducedDmg*
   name: CalculateReducedDmg
-  href: api/ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.DamageReductionCalculator.html#ElectricDrill_AstraRpgHealth_Damage_CalculationPipeline_DamageReductionCalculator_CalculateReducedDmg_
-  commentId: Overload:ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.DamageReductionCalculator.CalculateReducedDmg
+  href: api/ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.DamageMitigationCalculator.html#ElectricDrill_AstraRpgHealth_Damage_CalculationPipeline_DamageMitigationCalculator_CalculateReducedDmg_
+  commentId: Overload:ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.DamageMitigationCalculator.CalculateReducedDmg
   isSpec: "True"
-  fullName: ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.DamageReductionCalculator.CalculateReducedDmg
-  nameWithType: DamageReductionCalculator.CalculateReducedDmg
+  fullName: ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.DamageMitigationCalculator.CalculateReducedDmg
+  nameWithType: DamageMitigationCalculator.CalculateReducedDmg
 - uid: ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.DamageStep
   name: DamageStep
   href: api/ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.DamageStep.html
@@ -3104,32 +3104,32 @@ references:
   commentId: T:ElectricDrill.AstraRpgHealth.Damage.DamageType
   fullName: ElectricDrill.AstraRpgHealth.Damage.DamageType
   nameWithType: DamageType
-- uid: ElectricDrill.AstraRpgHealth.Damage.DamageType.DamageReductionFn
-  name: DamageReductionFn
-  href: api/ElectricDrill.AstraRpgHealth.Damage.DamageType.html#ElectricDrill_AstraRpgHealth_Damage_DamageType_DamageReductionFn
-  commentId: P:ElectricDrill.AstraRpgHealth.Damage.DamageType.DamageReductionFn
-  fullName: ElectricDrill.AstraRpgHealth.Damage.DamageType.DamageReductionFn
-  nameWithType: DamageType.DamageReductionFn
-- uid: ElectricDrill.AstraRpgHealth.Damage.DamageType.DamageReductionFn*
-  name: DamageReductionFn
-  href: api/ElectricDrill.AstraRpgHealth.Damage.DamageType.html#ElectricDrill_AstraRpgHealth_Damage_DamageType_DamageReductionFn_
-  commentId: Overload:ElectricDrill.AstraRpgHealth.Damage.DamageType.DamageReductionFn
+- uid: ElectricDrill.AstraRpgHealth.Damage.DamageType.DamageMitigationFn
+  name: DamageMitigationFn
+  href: api/ElectricDrill.AstraRpgHealth.Damage.DamageType.html#ElectricDrill_AstraRpgHealth_Damage_DamageType_DamageMitigationFn
+  commentId: P:ElectricDrill.AstraRpgHealth.Damage.DamageType.DamageMitigationFn
+  fullName: ElectricDrill.AstraRpgHealth.Damage.DamageType.DamageMitigationFn
+  nameWithType: DamageType.DamageMitigationFn
+- uid: ElectricDrill.AstraRpgHealth.Damage.DamageType.DamageMitigationFn*
+  name: DamageMitigationFn
+  href: api/ElectricDrill.AstraRpgHealth.Damage.DamageType.html#ElectricDrill_AstraRpgHealth_Damage_DamageType_DamageMitigationFn_
+  commentId: Overload:ElectricDrill.AstraRpgHealth.Damage.DamageType.DamageMitigationFn
   isSpec: "True"
-  fullName: ElectricDrill.AstraRpgHealth.Damage.DamageType.DamageReductionFn
-  nameWithType: DamageType.DamageReductionFn
-- uid: ElectricDrill.AstraRpgHealth.Damage.DamageType.DefenseReductionFn
-  name: DefenseReductionFn
-  href: api/ElectricDrill.AstraRpgHealth.Damage.DamageType.html#ElectricDrill_AstraRpgHealth_Damage_DamageType_DefenseReductionFn
-  commentId: P:ElectricDrill.AstraRpgHealth.Damage.DamageType.DefenseReductionFn
-  fullName: ElectricDrill.AstraRpgHealth.Damage.DamageType.DefenseReductionFn
-  nameWithType: DamageType.DefenseReductionFn
-- uid: ElectricDrill.AstraRpgHealth.Damage.DamageType.DefenseReductionFn*
-  name: DefenseReductionFn
-  href: api/ElectricDrill.AstraRpgHealth.Damage.DamageType.html#ElectricDrill_AstraRpgHealth_Damage_DamageType_DefenseReductionFn_
-  commentId: Overload:ElectricDrill.AstraRpgHealth.Damage.DamageType.DefenseReductionFn
+  fullName: ElectricDrill.AstraRpgHealth.Damage.DamageType.DamageMitigationFn
+  nameWithType: DamageType.DamageMitigationFn
+- uid: ElectricDrill.AstraRpgHealth.Damage.DamageType.DefensePenetrationFn
+  name: DefensePenetrationFn
+  href: api/ElectricDrill.AstraRpgHealth.Damage.DamageType.html#ElectricDrill_AstraRpgHealth_Damage_DamageType_DefensePenetrationFn
+  commentId: P:ElectricDrill.AstraRpgHealth.Damage.DamageType.DefensePenetrationFn
+  fullName: ElectricDrill.AstraRpgHealth.Damage.DamageType.DefensePenetrationFn
+  nameWithType: DamageType.DefensePenetrationFn
+- uid: ElectricDrill.AstraRpgHealth.Damage.DamageType.DefensePenetrationFn*
+  name: DefensePenetrationFn
+  href: api/ElectricDrill.AstraRpgHealth.Damage.DamageType.html#ElectricDrill_AstraRpgHealth_Damage_DamageType_DefensePenetrationFn_
+  commentId: Overload:ElectricDrill.AstraRpgHealth.Damage.DamageType.DefensePenetrationFn
   isSpec: "True"
-  fullName: ElectricDrill.AstraRpgHealth.Damage.DamageType.DefenseReductionFn
-  nameWithType: DamageType.DefenseReductionFn
+  fullName: ElectricDrill.AstraRpgHealth.Damage.DamageType.DefensePenetrationFn
+  nameWithType: DamageType.DefensePenetrationFn
 - uid: ElectricDrill.AstraRpgHealth.Damage.DamageType.DefensiveStatPiercedBy
   name: DefensiveStatPiercedBy
   href: api/ElectricDrill.AstraRpgHealth.Damage.DamageType.html#ElectricDrill_AstraRpgHealth_Damage_DamageType_DefensiveStatPiercedBy
@@ -3188,32 +3188,32 @@ references:
   commentId: T:ElectricDrill.AstraRpgHealth.Damage.DamageTypeSO
   fullName: ElectricDrill.AstraRpgHealth.Damage.DamageTypeSO
   nameWithType: DamageTypeSO
-- uid: ElectricDrill.AstraRpgHealth.Damage.DamageTypeSO.DamageReductionFn
-  name: DamageReductionFn
-  href: api/ElectricDrill.AstraRpgHealth.Damage.DamageTypeSO.html#ElectricDrill_AstraRpgHealth_Damage_DamageTypeSO_DamageReductionFn
-  commentId: P:ElectricDrill.AstraRpgHealth.Damage.DamageTypeSO.DamageReductionFn
-  fullName: ElectricDrill.AstraRpgHealth.Damage.DamageTypeSO.DamageReductionFn
-  nameWithType: DamageTypeSO.DamageReductionFn
-- uid: ElectricDrill.AstraRpgHealth.Damage.DamageTypeSO.DamageReductionFn*
-  name: DamageReductionFn
-  href: api/ElectricDrill.AstraRpgHealth.Damage.DamageTypeSO.html#ElectricDrill_AstraRpgHealth_Damage_DamageTypeSO_DamageReductionFn_
-  commentId: Overload:ElectricDrill.AstraRpgHealth.Damage.DamageTypeSO.DamageReductionFn
+- uid: ElectricDrill.AstraRpgHealth.Damage.DamageTypeSO.DamageMitigationFn
+  name: DamageMitigationFn
+  href: api/ElectricDrill.AstraRpgHealth.Damage.DamageTypeSO.html#ElectricDrill_AstraRpgHealth_Damage_DamageTypeSO_DamageMitigationFn
+  commentId: P:ElectricDrill.AstraRpgHealth.Damage.DamageTypeSO.DamageMitigationFn
+  fullName: ElectricDrill.AstraRpgHealth.Damage.DamageTypeSO.DamageMitigationFn
+  nameWithType: DamageTypeSO.DamageMitigationFn
+- uid: ElectricDrill.AstraRpgHealth.Damage.DamageTypeSO.DamageMitigationFn*
+  name: DamageMitigationFn
+  href: api/ElectricDrill.AstraRpgHealth.Damage.DamageTypeSO.html#ElectricDrill_AstraRpgHealth_Damage_DamageTypeSO_DamageMitigationFn_
+  commentId: Overload:ElectricDrill.AstraRpgHealth.Damage.DamageTypeSO.DamageMitigationFn
   isSpec: "True"
-  fullName: ElectricDrill.AstraRpgHealth.Damage.DamageTypeSO.DamageReductionFn
-  nameWithType: DamageTypeSO.DamageReductionFn
-- uid: ElectricDrill.AstraRpgHealth.Damage.DamageTypeSO.DefenseReductionFn
-  name: DefenseReductionFn
-  href: api/ElectricDrill.AstraRpgHealth.Damage.DamageTypeSO.html#ElectricDrill_AstraRpgHealth_Damage_DamageTypeSO_DefenseReductionFn
-  commentId: P:ElectricDrill.AstraRpgHealth.Damage.DamageTypeSO.DefenseReductionFn
-  fullName: ElectricDrill.AstraRpgHealth.Damage.DamageTypeSO.DefenseReductionFn
-  nameWithType: DamageTypeSO.DefenseReductionFn
-- uid: ElectricDrill.AstraRpgHealth.Damage.DamageTypeSO.DefenseReductionFn*
-  name: DefenseReductionFn
-  href: api/ElectricDrill.AstraRpgHealth.Damage.DamageTypeSO.html#ElectricDrill_AstraRpgHealth_Damage_DamageTypeSO_DefenseReductionFn_
-  commentId: Overload:ElectricDrill.AstraRpgHealth.Damage.DamageTypeSO.DefenseReductionFn
+  fullName: ElectricDrill.AstraRpgHealth.Damage.DamageTypeSO.DamageMitigationFn
+  nameWithType: DamageTypeSO.DamageMitigationFn
+- uid: ElectricDrill.AstraRpgHealth.Damage.DamageTypeSO.DefensePenetrationFn
+  name: DefensePenetrationFn
+  href: api/ElectricDrill.AstraRpgHealth.Damage.DamageTypeSO.html#ElectricDrill_AstraRpgHealth_Damage_DamageTypeSO_DefensePenetrationFn
+  commentId: P:ElectricDrill.AstraRpgHealth.Damage.DamageTypeSO.DefensePenetrationFn
+  fullName: ElectricDrill.AstraRpgHealth.Damage.DamageTypeSO.DefensePenetrationFn
+  nameWithType: DamageTypeSO.DefensePenetrationFn
+- uid: ElectricDrill.AstraRpgHealth.Damage.DamageTypeSO.DefensePenetrationFn*
+  name: DefensePenetrationFn
+  href: api/ElectricDrill.AstraRpgHealth.Damage.DamageTypeSO.html#ElectricDrill_AstraRpgHealth_Damage_DamageTypeSO_DefensePenetrationFn_
+  commentId: Overload:ElectricDrill.AstraRpgHealth.Damage.DamageTypeSO.DefensePenetrationFn
   isSpec: "True"
-  fullName: ElectricDrill.AstraRpgHealth.Damage.DamageTypeSO.DefenseReductionFn
-  nameWithType: DamageTypeSO.DefenseReductionFn
+  fullName: ElectricDrill.AstraRpgHealth.Damage.DamageTypeSO.DefensePenetrationFn
+  nameWithType: DamageTypeSO.DefensePenetrationFn
 - uid: ElectricDrill.AstraRpgHealth.Damage.DamageTypeSO.DefensiveStat
   name: DefensiveStat
   href: api/ElectricDrill.AstraRpgHealth.Damage.DamageTypeSO.html#ElectricDrill_AstraRpgHealth_Damage_DamageTypeSO_DefensiveStat
@@ -4178,207 +4178,207 @@ references:
   isSpec: "True"
   fullName: ElectricDrill.AstraRpgHealth.Damage.PreDamageInfo.Type
   nameWithType: PreDamageInfo.Type
-- uid: ElectricDrill.AstraRpgHealth.DamageReductionFunctions
-  name: ElectricDrill.AstraRpgHealth.DamageReductionFunctions
-  href: api/ElectricDrill.AstraRpgHealth.DamageReductionFunctions.html
-  commentId: N:ElectricDrill.AstraRpgHealth.DamageReductionFunctions
-  fullName: ElectricDrill.AstraRpgHealth.DamageReductionFunctions
-  nameWithType: ElectricDrill.AstraRpgHealth.DamageReductionFunctions
-- uid: ElectricDrill.AstraRpgHealth.DamageReductionFunctions.DamageReductionFn
-  name: DamageReductionFn
-  href: api/ElectricDrill.AstraRpgHealth.DamageReductionFunctions.DamageReductionFn.html
-  commentId: T:ElectricDrill.AstraRpgHealth.DamageReductionFunctions.DamageReductionFn
-  fullName: ElectricDrill.AstraRpgHealth.DamageReductionFunctions.DamageReductionFn
-  nameWithType: DamageReductionFn
-- uid: ElectricDrill.AstraRpgHealth.DamageReductionFunctions.DamageReductionFn.ReducedDmg(System.Int64,System.Double)
+- uid: ElectricDrill.AstraRpgHealth.DamageMitigationFunctions
+  name: ElectricDrill.AstraRpgHealth.DamageMitigationFunctions
+  href: api/ElectricDrill.AstraRpgHealth.DamageMitigationFunctions.html
+  commentId: N:ElectricDrill.AstraRpgHealth.DamageMitigationFunctions
+  fullName: ElectricDrill.AstraRpgHealth.DamageMitigationFunctions
+  nameWithType: ElectricDrill.AstraRpgHealth.DamageMitigationFunctions
+- uid: ElectricDrill.AstraRpgHealth.DamageMitigationFunctions.DamageMitigationFn
+  name: DamageMitigationFn
+  href: api/ElectricDrill.AstraRpgHealth.DamageMitigationFunctions.DamageMitigationFn.html
+  commentId: T:ElectricDrill.AstraRpgHealth.DamageMitigationFunctions.DamageMitigationFn
+  fullName: ElectricDrill.AstraRpgHealth.DamageMitigationFunctions.DamageMitigationFn
+  nameWithType: DamageMitigationFn
+- uid: ElectricDrill.AstraRpgHealth.DamageMitigationFunctions.DamageMitigationFn.ReducedDmg(System.Int64,System.Double)
   name: ReducedDmg(long, double)
-  href: api/ElectricDrill.AstraRpgHealth.DamageReductionFunctions.DamageReductionFn.html#ElectricDrill_AstraRpgHealth_DamageReductionFunctions_DamageReductionFn_ReducedDmg_System_Int64_System_Double_
-  commentId: M:ElectricDrill.AstraRpgHealth.DamageReductionFunctions.DamageReductionFn.ReducedDmg(System.Int64,System.Double)
+  href: api/ElectricDrill.AstraRpgHealth.DamageMitigationFunctions.DamageMitigationFn.html#ElectricDrill_AstraRpgHealth_DamageMitigationFunctions_DamageMitigationFn_ReducedDmg_System_Int64_System_Double_
+  commentId: M:ElectricDrill.AstraRpgHealth.DamageMitigationFunctions.DamageMitigationFn.ReducedDmg(System.Int64,System.Double)
   name.vb: ReducedDmg(Long, Double)
-  fullName: ElectricDrill.AstraRpgHealth.DamageReductionFunctions.DamageReductionFn.ReducedDmg(long, double)
-  fullName.vb: ElectricDrill.AstraRpgHealth.DamageReductionFunctions.DamageReductionFn.ReducedDmg(Long, Double)
-  nameWithType: DamageReductionFn.ReducedDmg(long, double)
-  nameWithType.vb: DamageReductionFn.ReducedDmg(Long, Double)
-- uid: ElectricDrill.AstraRpgHealth.DamageReductionFunctions.DamageReductionFn.ReducedDmg*
+  fullName: ElectricDrill.AstraRpgHealth.DamageMitigationFunctions.DamageMitigationFn.ReducedDmg(long, double)
+  fullName.vb: ElectricDrill.AstraRpgHealth.DamageMitigationFunctions.DamageMitigationFn.ReducedDmg(Long, Double)
+  nameWithType: DamageMitigationFn.ReducedDmg(long, double)
+  nameWithType.vb: DamageMitigationFn.ReducedDmg(Long, Double)
+- uid: ElectricDrill.AstraRpgHealth.DamageMitigationFunctions.DamageMitigationFn.ReducedDmg*
   name: ReducedDmg
-  href: api/ElectricDrill.AstraRpgHealth.DamageReductionFunctions.DamageReductionFn.html#ElectricDrill_AstraRpgHealth_DamageReductionFunctions_DamageReductionFn_ReducedDmg_
-  commentId: Overload:ElectricDrill.AstraRpgHealth.DamageReductionFunctions.DamageReductionFn.ReducedDmg
+  href: api/ElectricDrill.AstraRpgHealth.DamageMitigationFunctions.DamageMitigationFn.html#ElectricDrill_AstraRpgHealth_DamageMitigationFunctions_DamageMitigationFn_ReducedDmg_
+  commentId: Overload:ElectricDrill.AstraRpgHealth.DamageMitigationFunctions.DamageMitigationFn.ReducedDmg
   isSpec: "True"
-  fullName: ElectricDrill.AstraRpgHealth.DamageReductionFunctions.DamageReductionFn.ReducedDmg
-  nameWithType: DamageReductionFn.ReducedDmg
-- uid: ElectricDrill.AstraRpgHealth.DamageReductionFunctions.DamageReductionFnSO
-  name: DamageReductionFnSO
-  href: api/ElectricDrill.AstraRpgHealth.DamageReductionFunctions.DamageReductionFnSO.html
-  commentId: T:ElectricDrill.AstraRpgHealth.DamageReductionFunctions.DamageReductionFnSO
-  fullName: ElectricDrill.AstraRpgHealth.DamageReductionFunctions.DamageReductionFnSO
-  nameWithType: DamageReductionFnSO
-- uid: ElectricDrill.AstraRpgHealth.DamageReductionFunctions.DamageReductionFnSO.CalculateReducedDamage(System.Int64,System.Double)
+  fullName: ElectricDrill.AstraRpgHealth.DamageMitigationFunctions.DamageMitigationFn.ReducedDmg
+  nameWithType: DamageMitigationFn.ReducedDmg
+- uid: ElectricDrill.AstraRpgHealth.DamageMitigationFunctions.DamageMitigationFnSO
+  name: DamageMitigationFnSO
+  href: api/ElectricDrill.AstraRpgHealth.DamageMitigationFunctions.DamageMitigationFnSO.html
+  commentId: T:ElectricDrill.AstraRpgHealth.DamageMitigationFunctions.DamageMitigationFnSO
+  fullName: ElectricDrill.AstraRpgHealth.DamageMitigationFunctions.DamageMitigationFnSO
+  nameWithType: DamageMitigationFnSO
+- uid: ElectricDrill.AstraRpgHealth.DamageMitigationFunctions.DamageMitigationFnSO.CalculateReducedDamage(System.Int64,System.Double)
   name: CalculateReducedDamage(long, double)
-  href: api/ElectricDrill.AstraRpgHealth.DamageReductionFunctions.DamageReductionFnSO.html#ElectricDrill_AstraRpgHealth_DamageReductionFunctions_DamageReductionFnSO_CalculateReducedDamage_System_Int64_System_Double_
-  commentId: M:ElectricDrill.AstraRpgHealth.DamageReductionFunctions.DamageReductionFnSO.CalculateReducedDamage(System.Int64,System.Double)
+  href: api/ElectricDrill.AstraRpgHealth.DamageMitigationFunctions.DamageMitigationFnSO.html#ElectricDrill_AstraRpgHealth_DamageMitigationFunctions_DamageMitigationFnSO_CalculateReducedDamage_System_Int64_System_Double_
+  commentId: M:ElectricDrill.AstraRpgHealth.DamageMitigationFunctions.DamageMitigationFnSO.CalculateReducedDamage(System.Int64,System.Double)
   name.vb: CalculateReducedDamage(Long, Double)
-  fullName: ElectricDrill.AstraRpgHealth.DamageReductionFunctions.DamageReductionFnSO.CalculateReducedDamage(long, double)
-  fullName.vb: ElectricDrill.AstraRpgHealth.DamageReductionFunctions.DamageReductionFnSO.CalculateReducedDamage(Long, Double)
-  nameWithType: DamageReductionFnSO.CalculateReducedDamage(long, double)
-  nameWithType.vb: DamageReductionFnSO.CalculateReducedDamage(Long, Double)
-- uid: ElectricDrill.AstraRpgHealth.DamageReductionFunctions.DamageReductionFnSO.CalculateReducedDamage*
+  fullName: ElectricDrill.AstraRpgHealth.DamageMitigationFunctions.DamageMitigationFnSO.CalculateReducedDamage(long, double)
+  fullName.vb: ElectricDrill.AstraRpgHealth.DamageMitigationFunctions.DamageMitigationFnSO.CalculateReducedDamage(Long, Double)
+  nameWithType: DamageMitigationFnSO.CalculateReducedDamage(long, double)
+  nameWithType.vb: DamageMitigationFnSO.CalculateReducedDamage(Long, Double)
+- uid: ElectricDrill.AstraRpgHealth.DamageMitigationFunctions.DamageMitigationFnSO.CalculateReducedDamage*
   name: CalculateReducedDamage
-  href: api/ElectricDrill.AstraRpgHealth.DamageReductionFunctions.DamageReductionFnSO.html#ElectricDrill_AstraRpgHealth_DamageReductionFunctions_DamageReductionFnSO_CalculateReducedDamage_
-  commentId: Overload:ElectricDrill.AstraRpgHealth.DamageReductionFunctions.DamageReductionFnSO.CalculateReducedDamage
+  href: api/ElectricDrill.AstraRpgHealth.DamageMitigationFunctions.DamageMitigationFnSO.html#ElectricDrill_AstraRpgHealth_DamageMitigationFunctions_DamageMitigationFnSO_CalculateReducedDamage_
+  commentId: Overload:ElectricDrill.AstraRpgHealth.DamageMitigationFunctions.DamageMitigationFnSO.CalculateReducedDamage
   isSpec: "True"
-  fullName: ElectricDrill.AstraRpgHealth.DamageReductionFunctions.DamageReductionFnSO.CalculateReducedDamage
-  nameWithType: DamageReductionFnSO.CalculateReducedDamage
-- uid: ElectricDrill.AstraRpgHealth.DamageReductionFunctions.DamageReductionFnSO.Tags
+  fullName: ElectricDrill.AstraRpgHealth.DamageMitigationFunctions.DamageMitigationFnSO.CalculateReducedDamage
+  nameWithType: DamageMitigationFnSO.CalculateReducedDamage
+- uid: ElectricDrill.AstraRpgHealth.DamageMitigationFunctions.DamageMitigationFnSO.Tags
   name: Tags
-  href: api/ElectricDrill.AstraRpgHealth.DamageReductionFunctions.DamageReductionFnSO.html#ElectricDrill_AstraRpgHealth_DamageReductionFunctions_DamageReductionFnSO_Tags
-  commentId: P:ElectricDrill.AstraRpgHealth.DamageReductionFunctions.DamageReductionFnSO.Tags
-  fullName: ElectricDrill.AstraRpgHealth.DamageReductionFunctions.DamageReductionFnSO.Tags
-  nameWithType: DamageReductionFnSO.Tags
-- uid: ElectricDrill.AstraRpgHealth.DamageReductionFunctions.DamageReductionFnSO.Tags*
+  href: api/ElectricDrill.AstraRpgHealth.DamageMitigationFunctions.DamageMitigationFnSO.html#ElectricDrill_AstraRpgHealth_DamageMitigationFunctions_DamageMitigationFnSO_Tags
+  commentId: P:ElectricDrill.AstraRpgHealth.DamageMitigationFunctions.DamageMitigationFnSO.Tags
+  fullName: ElectricDrill.AstraRpgHealth.DamageMitigationFunctions.DamageMitigationFnSO.Tags
+  nameWithType: DamageMitigationFnSO.Tags
+- uid: ElectricDrill.AstraRpgHealth.DamageMitigationFunctions.DamageMitigationFnSO.Tags*
   name: Tags
-  href: api/ElectricDrill.AstraRpgHealth.DamageReductionFunctions.DamageReductionFnSO.html#ElectricDrill_AstraRpgHealth_DamageReductionFunctions_DamageReductionFnSO_Tags_
-  commentId: Overload:ElectricDrill.AstraRpgHealth.DamageReductionFunctions.DamageReductionFnSO.Tags
+  href: api/ElectricDrill.AstraRpgHealth.DamageMitigationFunctions.DamageMitigationFnSO.html#ElectricDrill_AstraRpgHealth_DamageMitigationFunctions_DamageMitigationFnSO_Tags_
+  commentId: Overload:ElectricDrill.AstraRpgHealth.DamageMitigationFunctions.DamageMitigationFnSO.Tags
   isSpec: "True"
-  fullName: ElectricDrill.AstraRpgHealth.DamageReductionFunctions.DamageReductionFnSO.Tags
-  nameWithType: DamageReductionFnSO.Tags
-- uid: ElectricDrill.AstraRpgHealth.DamageReductionFunctions.DamageReductionFunctions
-  name: ElectricDrill.AstraRpgHealth.DamageReductionFunctions.DamageReductionFunctions
-  href: api/ElectricDrill.AstraRpgHealth.DamageReductionFunctions.DamageReductionFunctions.html
-  commentId: N:ElectricDrill.AstraRpgHealth.DamageReductionFunctions.DamageReductionFunctions
-  fullName: ElectricDrill.AstraRpgHealth.DamageReductionFunctions.DamageReductionFunctions
-  nameWithType: ElectricDrill.AstraRpgHealth.DamageReductionFunctions.DamageReductionFunctions
-- uid: ElectricDrill.AstraRpgHealth.DamageReductionFunctions.DamageReductionFunctions.FlatDamageReductionFn
-  name: FlatDamageReductionFn
-  href: api/ElectricDrill.AstraRpgHealth.DamageReductionFunctions.DamageReductionFunctions.FlatDamageReductionFn.html
-  commentId: T:ElectricDrill.AstraRpgHealth.DamageReductionFunctions.DamageReductionFunctions.FlatDamageReductionFn
-  fullName: ElectricDrill.AstraRpgHealth.DamageReductionFunctions.DamageReductionFunctions.FlatDamageReductionFn
-  nameWithType: FlatDamageReductionFn
-- uid: ElectricDrill.AstraRpgHealth.DamageReductionFunctions.DamageReductionFunctions.FlatDamageReductionFn.ReducedDmg(System.Int64,System.Double)
+  fullName: ElectricDrill.AstraRpgHealth.DamageMitigationFunctions.DamageMitigationFnSO.Tags
+  nameWithType: DamageMitigationFnSO.Tags
+- uid: ElectricDrill.AstraRpgHealth.DamageMitigationFunctions.DamageMitigationFunctions
+  name: ElectricDrill.AstraRpgHealth.DamageMitigationFunctions.DamageMitigationFunctions
+  href: api/ElectricDrill.AstraRpgHealth.DamageMitigationFunctions.DamageMitigationFunctions.html
+  commentId: N:ElectricDrill.AstraRpgHealth.DamageMitigationFunctions.DamageMitigationFunctions
+  fullName: ElectricDrill.AstraRpgHealth.DamageMitigationFunctions.DamageMitigationFunctions
+  nameWithType: ElectricDrill.AstraRpgHealth.DamageMitigationFunctions.DamageMitigationFunctions
+- uid: ElectricDrill.AstraRpgHealth.DamageMitigationFunctions.DamageMitigationFunctions.FlatDamageMitigationFn
+  name: FlatDamageMitigationFn
+  href: api/ElectricDrill.AstraRpgHealth.DamageMitigationFunctions.DamageMitigationFunctions.FlatDamageMitigationFn.html
+  commentId: T:ElectricDrill.AstraRpgHealth.DamageMitigationFunctions.DamageMitigationFunctions.FlatDamageMitigationFn
+  fullName: ElectricDrill.AstraRpgHealth.DamageMitigationFunctions.DamageMitigationFunctions.FlatDamageMitigationFn
+  nameWithType: FlatDamageMitigationFn
+- uid: ElectricDrill.AstraRpgHealth.DamageMitigationFunctions.DamageMitigationFunctions.FlatDamageMitigationFn.ReducedDmg(System.Int64,System.Double)
   name: ReducedDmg(long, double)
-  href: api/ElectricDrill.AstraRpgHealth.DamageReductionFunctions.DamageReductionFunctions.FlatDamageReductionFn.html#ElectricDrill_AstraRpgHealth_DamageReductionFunctions_DamageReductionFunctions_FlatDamageReductionFn_ReducedDmg_System_Int64_System_Double_
-  commentId: M:ElectricDrill.AstraRpgHealth.DamageReductionFunctions.DamageReductionFunctions.FlatDamageReductionFn.ReducedDmg(System.Int64,System.Double)
+  href: api/ElectricDrill.AstraRpgHealth.DamageMitigationFunctions.DamageMitigationFunctions.FlatDamageMitigationFn.html#ElectricDrill_AstraRpgHealth_DamageMitigationFunctions_DamageMitigationFunctions_FlatDamageMitigationFn_ReducedDmg_System_Int64_System_Double_
+  commentId: M:ElectricDrill.AstraRpgHealth.DamageMitigationFunctions.DamageMitigationFunctions.FlatDamageMitigationFn.ReducedDmg(System.Int64,System.Double)
   name.vb: ReducedDmg(Long, Double)
-  fullName: ElectricDrill.AstraRpgHealth.DamageReductionFunctions.DamageReductionFunctions.FlatDamageReductionFn.ReducedDmg(long, double)
-  fullName.vb: ElectricDrill.AstraRpgHealth.DamageReductionFunctions.DamageReductionFunctions.FlatDamageReductionFn.ReducedDmg(Long, Double)
-  nameWithType: FlatDamageReductionFn.ReducedDmg(long, double)
-  nameWithType.vb: FlatDamageReductionFn.ReducedDmg(Long, Double)
-- uid: ElectricDrill.AstraRpgHealth.DamageReductionFunctions.DamageReductionFunctions.FlatDamageReductionFn.ReducedDmg*
+  fullName: ElectricDrill.AstraRpgHealth.DamageMitigationFunctions.DamageMitigationFunctions.FlatDamageMitigationFn.ReducedDmg(long, double)
+  fullName.vb: ElectricDrill.AstraRpgHealth.DamageMitigationFunctions.DamageMitigationFunctions.FlatDamageMitigationFn.ReducedDmg(Long, Double)
+  nameWithType: FlatDamageMitigationFn.ReducedDmg(long, double)
+  nameWithType.vb: FlatDamageMitigationFn.ReducedDmg(Long, Double)
+- uid: ElectricDrill.AstraRpgHealth.DamageMitigationFunctions.DamageMitigationFunctions.FlatDamageMitigationFn.ReducedDmg*
   name: ReducedDmg
-  href: api/ElectricDrill.AstraRpgHealth.DamageReductionFunctions.DamageReductionFunctions.FlatDamageReductionFn.html#ElectricDrill_AstraRpgHealth_DamageReductionFunctions_DamageReductionFunctions_FlatDamageReductionFn_ReducedDmg_
-  commentId: Overload:ElectricDrill.AstraRpgHealth.DamageReductionFunctions.DamageReductionFunctions.FlatDamageReductionFn.ReducedDmg
+  href: api/ElectricDrill.AstraRpgHealth.DamageMitigationFunctions.DamageMitigationFunctions.FlatDamageMitigationFn.html#ElectricDrill_AstraRpgHealth_DamageMitigationFunctions_DamageMitigationFunctions_FlatDamageMitigationFn_ReducedDmg_
+  commentId: Overload:ElectricDrill.AstraRpgHealth.DamageMitigationFunctions.DamageMitigationFunctions.FlatDamageMitigationFn.ReducedDmg
   isSpec: "True"
-  fullName: ElectricDrill.AstraRpgHealth.DamageReductionFunctions.DamageReductionFunctions.FlatDamageReductionFn.ReducedDmg
-  nameWithType: FlatDamageReductionFn.ReducedDmg
-- uid: ElectricDrill.AstraRpgHealth.DamageReductionFunctions.DamageReductionFunctions.LogDamageReductionFn
-  name: LogDamageReductionFn
-  href: api/ElectricDrill.AstraRpgHealth.DamageReductionFunctions.DamageReductionFunctions.LogDamageReductionFn.html
-  commentId: T:ElectricDrill.AstraRpgHealth.DamageReductionFunctions.DamageReductionFunctions.LogDamageReductionFn
-  fullName: ElectricDrill.AstraRpgHealth.DamageReductionFunctions.DamageReductionFunctions.LogDamageReductionFn
-  nameWithType: LogDamageReductionFn
-- uid: ElectricDrill.AstraRpgHealth.DamageReductionFunctions.DamageReductionFunctions.LogDamageReductionFn.ReducedDmg(System.Int64,System.Double)
+  fullName: ElectricDrill.AstraRpgHealth.DamageMitigationFunctions.DamageMitigationFunctions.FlatDamageMitigationFn.ReducedDmg
+  nameWithType: FlatDamageMitigationFn.ReducedDmg
+- uid: ElectricDrill.AstraRpgHealth.DamageMitigationFunctions.DamageMitigationFunctions.LogDamageMitigationFn
+  name: LogDamageMitigationFn
+  href: api/ElectricDrill.AstraRpgHealth.DamageMitigationFunctions.DamageMitigationFunctions.LogDamageMitigationFn.html
+  commentId: T:ElectricDrill.AstraRpgHealth.DamageMitigationFunctions.DamageMitigationFunctions.LogDamageMitigationFn
+  fullName: ElectricDrill.AstraRpgHealth.DamageMitigationFunctions.DamageMitigationFunctions.LogDamageMitigationFn
+  nameWithType: LogDamageMitigationFn
+- uid: ElectricDrill.AstraRpgHealth.DamageMitigationFunctions.DamageMitigationFunctions.LogDamageMitigationFn.ReducedDmg(System.Int64,System.Double)
   name: ReducedDmg(long, double)
-  href: api/ElectricDrill.AstraRpgHealth.DamageReductionFunctions.DamageReductionFunctions.LogDamageReductionFn.html#ElectricDrill_AstraRpgHealth_DamageReductionFunctions_DamageReductionFunctions_LogDamageReductionFn_ReducedDmg_System_Int64_System_Double_
-  commentId: M:ElectricDrill.AstraRpgHealth.DamageReductionFunctions.DamageReductionFunctions.LogDamageReductionFn.ReducedDmg(System.Int64,System.Double)
+  href: api/ElectricDrill.AstraRpgHealth.DamageMitigationFunctions.DamageMitigationFunctions.LogDamageMitigationFn.html#ElectricDrill_AstraRpgHealth_DamageMitigationFunctions_DamageMitigationFunctions_LogDamageMitigationFn_ReducedDmg_System_Int64_System_Double_
+  commentId: M:ElectricDrill.AstraRpgHealth.DamageMitigationFunctions.DamageMitigationFunctions.LogDamageMitigationFn.ReducedDmg(System.Int64,System.Double)
   name.vb: ReducedDmg(Long, Double)
-  fullName: ElectricDrill.AstraRpgHealth.DamageReductionFunctions.DamageReductionFunctions.LogDamageReductionFn.ReducedDmg(long, double)
-  fullName.vb: ElectricDrill.AstraRpgHealth.DamageReductionFunctions.DamageReductionFunctions.LogDamageReductionFn.ReducedDmg(Long, Double)
-  nameWithType: LogDamageReductionFn.ReducedDmg(long, double)
-  nameWithType.vb: LogDamageReductionFn.ReducedDmg(Long, Double)
-- uid: ElectricDrill.AstraRpgHealth.DamageReductionFunctions.DamageReductionFunctions.LogDamageReductionFn.ReducedDmg*
+  fullName: ElectricDrill.AstraRpgHealth.DamageMitigationFunctions.DamageMitigationFunctions.LogDamageMitigationFn.ReducedDmg(long, double)
+  fullName.vb: ElectricDrill.AstraRpgHealth.DamageMitigationFunctions.DamageMitigationFunctions.LogDamageMitigationFn.ReducedDmg(Long, Double)
+  nameWithType: LogDamageMitigationFn.ReducedDmg(long, double)
+  nameWithType.vb: LogDamageMitigationFn.ReducedDmg(Long, Double)
+- uid: ElectricDrill.AstraRpgHealth.DamageMitigationFunctions.DamageMitigationFunctions.LogDamageMitigationFn.ReducedDmg*
   name: ReducedDmg
-  href: api/ElectricDrill.AstraRpgHealth.DamageReductionFunctions.DamageReductionFunctions.LogDamageReductionFn.html#ElectricDrill_AstraRpgHealth_DamageReductionFunctions_DamageReductionFunctions_LogDamageReductionFn_ReducedDmg_
-  commentId: Overload:ElectricDrill.AstraRpgHealth.DamageReductionFunctions.DamageReductionFunctions.LogDamageReductionFn.ReducedDmg
+  href: api/ElectricDrill.AstraRpgHealth.DamageMitigationFunctions.DamageMitigationFunctions.LogDamageMitigationFn.html#ElectricDrill_AstraRpgHealth_DamageMitigationFunctions_DamageMitigationFunctions_LogDamageMitigationFn_ReducedDmg_
+  commentId: Overload:ElectricDrill.AstraRpgHealth.DamageMitigationFunctions.DamageMitigationFunctions.LogDamageMitigationFn.ReducedDmg
   isSpec: "True"
-  fullName: ElectricDrill.AstraRpgHealth.DamageReductionFunctions.DamageReductionFunctions.LogDamageReductionFn.ReducedDmg
-  nameWithType: LogDamageReductionFn.ReducedDmg
-- uid: ElectricDrill.AstraRpgHealth.DamageReductionFunctions.DamageReductionFunctions.PercentageDamageReductionFn
-  name: PercentageDamageReductionFn
-  href: api/ElectricDrill.AstraRpgHealth.DamageReductionFunctions.DamageReductionFunctions.PercentageDamageReductionFn.html
-  commentId: T:ElectricDrill.AstraRpgHealth.DamageReductionFunctions.DamageReductionFunctions.PercentageDamageReductionFn
-  fullName: ElectricDrill.AstraRpgHealth.DamageReductionFunctions.DamageReductionFunctions.PercentageDamageReductionFn
-  nameWithType: PercentageDamageReductionFn
-- uid: ElectricDrill.AstraRpgHealth.DamageReductionFunctions.DamageReductionFunctions.PercentageDamageReductionFn.ReducedDmg(System.Int64,System.Double)
+  fullName: ElectricDrill.AstraRpgHealth.DamageMitigationFunctions.DamageMitigationFunctions.LogDamageMitigationFn.ReducedDmg
+  nameWithType: LogDamageMitigationFn.ReducedDmg
+- uid: ElectricDrill.AstraRpgHealth.DamageMitigationFunctions.DamageMitigationFunctions.PercentageDamageMitigationFn
+  name: PercentageDamageMitigationFn
+  href: api/ElectricDrill.AstraRpgHealth.DamageMitigationFunctions.DamageMitigationFunctions.PercentageDamageMitigationFn.html
+  commentId: T:ElectricDrill.AstraRpgHealth.DamageMitigationFunctions.DamageMitigationFunctions.PercentageDamageMitigationFn
+  fullName: ElectricDrill.AstraRpgHealth.DamageMitigationFunctions.DamageMitigationFunctions.PercentageDamageMitigationFn
+  nameWithType: PercentageDamageMitigationFn
+- uid: ElectricDrill.AstraRpgHealth.DamageMitigationFunctions.DamageMitigationFunctions.PercentageDamageMitigationFn.ReducedDmg(System.Int64,System.Double)
   name: ReducedDmg(long, double)
-  href: api/ElectricDrill.AstraRpgHealth.DamageReductionFunctions.DamageReductionFunctions.PercentageDamageReductionFn.html#ElectricDrill_AstraRpgHealth_DamageReductionFunctions_DamageReductionFunctions_PercentageDamageReductionFn_ReducedDmg_System_Int64_System_Double_
-  commentId: M:ElectricDrill.AstraRpgHealth.DamageReductionFunctions.DamageReductionFunctions.PercentageDamageReductionFn.ReducedDmg(System.Int64,System.Double)
+  href: api/ElectricDrill.AstraRpgHealth.DamageMitigationFunctions.DamageMitigationFunctions.PercentageDamageMitigationFn.html#ElectricDrill_AstraRpgHealth_DamageMitigationFunctions_DamageMitigationFunctions_PercentageDamageMitigationFn_ReducedDmg_System_Int64_System_Double_
+  commentId: M:ElectricDrill.AstraRpgHealth.DamageMitigationFunctions.DamageMitigationFunctions.PercentageDamageMitigationFn.ReducedDmg(System.Int64,System.Double)
   name.vb: ReducedDmg(Long, Double)
-  fullName: ElectricDrill.AstraRpgHealth.DamageReductionFunctions.DamageReductionFunctions.PercentageDamageReductionFn.ReducedDmg(long, double)
-  fullName.vb: ElectricDrill.AstraRpgHealth.DamageReductionFunctions.DamageReductionFunctions.PercentageDamageReductionFn.ReducedDmg(Long, Double)
-  nameWithType: PercentageDamageReductionFn.ReducedDmg(long, double)
-  nameWithType.vb: PercentageDamageReductionFn.ReducedDmg(Long, Double)
-- uid: ElectricDrill.AstraRpgHealth.DamageReductionFunctions.DamageReductionFunctions.PercentageDamageReductionFn.ReducedDmg*
+  fullName: ElectricDrill.AstraRpgHealth.DamageMitigationFunctions.DamageMitigationFunctions.PercentageDamageMitigationFn.ReducedDmg(long, double)
+  fullName.vb: ElectricDrill.AstraRpgHealth.DamageMitigationFunctions.DamageMitigationFunctions.PercentageDamageMitigationFn.ReducedDmg(Long, Double)
+  nameWithType: PercentageDamageMitigationFn.ReducedDmg(long, double)
+  nameWithType.vb: PercentageDamageMitigationFn.ReducedDmg(Long, Double)
+- uid: ElectricDrill.AstraRpgHealth.DamageMitigationFunctions.DamageMitigationFunctions.PercentageDamageMitigationFn.ReducedDmg*
   name: ReducedDmg
-  href: api/ElectricDrill.AstraRpgHealth.DamageReductionFunctions.DamageReductionFunctions.PercentageDamageReductionFn.html#ElectricDrill_AstraRpgHealth_DamageReductionFunctions_DamageReductionFunctions_PercentageDamageReductionFn_ReducedDmg_
-  commentId: Overload:ElectricDrill.AstraRpgHealth.DamageReductionFunctions.DamageReductionFunctions.PercentageDamageReductionFn.ReducedDmg
+  href: api/ElectricDrill.AstraRpgHealth.DamageMitigationFunctions.DamageMitigationFunctions.PercentageDamageMitigationFn.html#ElectricDrill_AstraRpgHealth_DamageMitigationFunctions_DamageMitigationFunctions_PercentageDamageMitigationFn_ReducedDmg_
+  commentId: Overload:ElectricDrill.AstraRpgHealth.DamageMitigationFunctions.DamageMitigationFunctions.PercentageDamageMitigationFn.ReducedDmg
   isSpec: "True"
-  fullName: ElectricDrill.AstraRpgHealth.DamageReductionFunctions.DamageReductionFunctions.PercentageDamageReductionFn.ReducedDmg
-  nameWithType: PercentageDamageReductionFn.ReducedDmg
-- uid: ElectricDrill.AstraRpgHealth.DamageReductionFunctions.FlatDamageReductionFnSO
-  name: FlatDamageReductionFnSO
-  href: api/ElectricDrill.AstraRpgHealth.DamageReductionFunctions.FlatDamageReductionFnSO.html
-  commentId: T:ElectricDrill.AstraRpgHealth.DamageReductionFunctions.FlatDamageReductionFnSO
-  fullName: ElectricDrill.AstraRpgHealth.DamageReductionFunctions.FlatDamageReductionFnSO
-  nameWithType: FlatDamageReductionFnSO
-- uid: ElectricDrill.AstraRpgHealth.DamageReductionFunctions.FlatDamageReductionFnSO.CalculateReducedDamage(System.Int64,System.Double)
+  fullName: ElectricDrill.AstraRpgHealth.DamageMitigationFunctions.DamageMitigationFunctions.PercentageDamageMitigationFn.ReducedDmg
+  nameWithType: PercentageDamageMitigationFn.ReducedDmg
+- uid: ElectricDrill.AstraRpgHealth.DamageMitigationFunctions.FlatDamageMitigationFnSO
+  name: FlatDamageMitigationFnSO
+  href: api/ElectricDrill.AstraRpgHealth.DamageMitigationFunctions.FlatDamageMitigationFnSO.html
+  commentId: T:ElectricDrill.AstraRpgHealth.DamageMitigationFunctions.FlatDamageMitigationFnSO
+  fullName: ElectricDrill.AstraRpgHealth.DamageMitigationFunctions.FlatDamageMitigationFnSO
+  nameWithType: FlatDamageMitigationFnSO
+- uid: ElectricDrill.AstraRpgHealth.DamageMitigationFunctions.FlatDamageMitigationFnSO.CalculateReducedDamage(System.Int64,System.Double)
   name: CalculateReducedDamage(long, double)
-  href: api/ElectricDrill.AstraRpgHealth.DamageReductionFunctions.FlatDamageReductionFnSO.html#ElectricDrill_AstraRpgHealth_DamageReductionFunctions_FlatDamageReductionFnSO_CalculateReducedDamage_System_Int64_System_Double_
-  commentId: M:ElectricDrill.AstraRpgHealth.DamageReductionFunctions.FlatDamageReductionFnSO.CalculateReducedDamage(System.Int64,System.Double)
+  href: api/ElectricDrill.AstraRpgHealth.DamageMitigationFunctions.FlatDamageMitigationFnSO.html#ElectricDrill_AstraRpgHealth_DamageMitigationFunctions_FlatDamageMitigationFnSO_CalculateReducedDamage_System_Int64_System_Double_
+  commentId: M:ElectricDrill.AstraRpgHealth.DamageMitigationFunctions.FlatDamageMitigationFnSO.CalculateReducedDamage(System.Int64,System.Double)
   name.vb: CalculateReducedDamage(Long, Double)
-  fullName: ElectricDrill.AstraRpgHealth.DamageReductionFunctions.FlatDamageReductionFnSO.CalculateReducedDamage(long, double)
-  fullName.vb: ElectricDrill.AstraRpgHealth.DamageReductionFunctions.FlatDamageReductionFnSO.CalculateReducedDamage(Long, Double)
-  nameWithType: FlatDamageReductionFnSO.CalculateReducedDamage(long, double)
-  nameWithType.vb: FlatDamageReductionFnSO.CalculateReducedDamage(Long, Double)
-- uid: ElectricDrill.AstraRpgHealth.DamageReductionFunctions.FlatDamageReductionFnSO.CalculateReducedDamage*
+  fullName: ElectricDrill.AstraRpgHealth.DamageMitigationFunctions.FlatDamageMitigationFnSO.CalculateReducedDamage(long, double)
+  fullName.vb: ElectricDrill.AstraRpgHealth.DamageMitigationFunctions.FlatDamageMitigationFnSO.CalculateReducedDamage(Long, Double)
+  nameWithType: FlatDamageMitigationFnSO.CalculateReducedDamage(long, double)
+  nameWithType.vb: FlatDamageMitigationFnSO.CalculateReducedDamage(Long, Double)
+- uid: ElectricDrill.AstraRpgHealth.DamageMitigationFunctions.FlatDamageMitigationFnSO.CalculateReducedDamage*
   name: CalculateReducedDamage
-  href: api/ElectricDrill.AstraRpgHealth.DamageReductionFunctions.FlatDamageReductionFnSO.html#ElectricDrill_AstraRpgHealth_DamageReductionFunctions_FlatDamageReductionFnSO_CalculateReducedDamage_
-  commentId: Overload:ElectricDrill.AstraRpgHealth.DamageReductionFunctions.FlatDamageReductionFnSO.CalculateReducedDamage
+  href: api/ElectricDrill.AstraRpgHealth.DamageMitigationFunctions.FlatDamageMitigationFnSO.html#ElectricDrill_AstraRpgHealth_DamageMitigationFunctions_FlatDamageMitigationFnSO_CalculateReducedDamage_
+  commentId: Overload:ElectricDrill.AstraRpgHealth.DamageMitigationFunctions.FlatDamageMitigationFnSO.CalculateReducedDamage
   isSpec: "True"
-  fullName: ElectricDrill.AstraRpgHealth.DamageReductionFunctions.FlatDamageReductionFnSO.CalculateReducedDamage
-  nameWithType: FlatDamageReductionFnSO.CalculateReducedDamage
-- uid: ElectricDrill.AstraRpgHealth.DamageReductionFunctions.LogDamageReductionFnSO
-  name: LogDamageReductionFnSO
-  href: api/ElectricDrill.AstraRpgHealth.DamageReductionFunctions.LogDamageReductionFnSO.html
-  commentId: T:ElectricDrill.AstraRpgHealth.DamageReductionFunctions.LogDamageReductionFnSO
-  fullName: ElectricDrill.AstraRpgHealth.DamageReductionFunctions.LogDamageReductionFnSO
-  nameWithType: LogDamageReductionFnSO
-- uid: ElectricDrill.AstraRpgHealth.DamageReductionFunctions.LogDamageReductionFnSO.CalculateReducedDamage(System.Int64,System.Double)
+  fullName: ElectricDrill.AstraRpgHealth.DamageMitigationFunctions.FlatDamageMitigationFnSO.CalculateReducedDamage
+  nameWithType: FlatDamageMitigationFnSO.CalculateReducedDamage
+- uid: ElectricDrill.AstraRpgHealth.DamageMitigationFunctions.LogDamageMitigationFnSO
+  name: LogDamageMitigationFnSO
+  href: api/ElectricDrill.AstraRpgHealth.DamageMitigationFunctions.LogDamageMitigationFnSO.html
+  commentId: T:ElectricDrill.AstraRpgHealth.DamageMitigationFunctions.LogDamageMitigationFnSO
+  fullName: ElectricDrill.AstraRpgHealth.DamageMitigationFunctions.LogDamageMitigationFnSO
+  nameWithType: LogDamageMitigationFnSO
+- uid: ElectricDrill.AstraRpgHealth.DamageMitigationFunctions.LogDamageMitigationFnSO.CalculateReducedDamage(System.Int64,System.Double)
   name: CalculateReducedDamage(long, double)
-  href: api/ElectricDrill.AstraRpgHealth.DamageReductionFunctions.LogDamageReductionFnSO.html#ElectricDrill_AstraRpgHealth_DamageReductionFunctions_LogDamageReductionFnSO_CalculateReducedDamage_System_Int64_System_Double_
-  commentId: M:ElectricDrill.AstraRpgHealth.DamageReductionFunctions.LogDamageReductionFnSO.CalculateReducedDamage(System.Int64,System.Double)
+  href: api/ElectricDrill.AstraRpgHealth.DamageMitigationFunctions.LogDamageMitigationFnSO.html#ElectricDrill_AstraRpgHealth_DamageMitigationFunctions_LogDamageMitigationFnSO_CalculateReducedDamage_System_Int64_System_Double_
+  commentId: M:ElectricDrill.AstraRpgHealth.DamageMitigationFunctions.LogDamageMitigationFnSO.CalculateReducedDamage(System.Int64,System.Double)
   name.vb: CalculateReducedDamage(Long, Double)
-  fullName: ElectricDrill.AstraRpgHealth.DamageReductionFunctions.LogDamageReductionFnSO.CalculateReducedDamage(long, double)
-  fullName.vb: ElectricDrill.AstraRpgHealth.DamageReductionFunctions.LogDamageReductionFnSO.CalculateReducedDamage(Long, Double)
-  nameWithType: LogDamageReductionFnSO.CalculateReducedDamage(long, double)
-  nameWithType.vb: LogDamageReductionFnSO.CalculateReducedDamage(Long, Double)
-- uid: ElectricDrill.AstraRpgHealth.DamageReductionFunctions.LogDamageReductionFnSO.CalculateReducedDamage*
+  fullName: ElectricDrill.AstraRpgHealth.DamageMitigationFunctions.LogDamageMitigationFnSO.CalculateReducedDamage(long, double)
+  fullName.vb: ElectricDrill.AstraRpgHealth.DamageMitigationFunctions.LogDamageMitigationFnSO.CalculateReducedDamage(Long, Double)
+  nameWithType: LogDamageMitigationFnSO.CalculateReducedDamage(long, double)
+  nameWithType.vb: LogDamageMitigationFnSO.CalculateReducedDamage(Long, Double)
+- uid: ElectricDrill.AstraRpgHealth.DamageMitigationFunctions.LogDamageMitigationFnSO.CalculateReducedDamage*
   name: CalculateReducedDamage
-  href: api/ElectricDrill.AstraRpgHealth.DamageReductionFunctions.LogDamageReductionFnSO.html#ElectricDrill_AstraRpgHealth_DamageReductionFunctions_LogDamageReductionFnSO_CalculateReducedDamage_
-  commentId: Overload:ElectricDrill.AstraRpgHealth.DamageReductionFunctions.LogDamageReductionFnSO.CalculateReducedDamage
+  href: api/ElectricDrill.AstraRpgHealth.DamageMitigationFunctions.LogDamageMitigationFnSO.html#ElectricDrill_AstraRpgHealth_DamageMitigationFunctions_LogDamageMitigationFnSO_CalculateReducedDamage_
+  commentId: Overload:ElectricDrill.AstraRpgHealth.DamageMitigationFunctions.LogDamageMitigationFnSO.CalculateReducedDamage
   isSpec: "True"
-  fullName: ElectricDrill.AstraRpgHealth.DamageReductionFunctions.LogDamageReductionFnSO.CalculateReducedDamage
-  nameWithType: LogDamageReductionFnSO.CalculateReducedDamage
-- uid: ElectricDrill.AstraRpgHealth.DamageReductionFunctions.PercentageDamageReductionFnSO
-  name: PercentageDamageReductionFnSO
-  href: api/ElectricDrill.AstraRpgHealth.DamageReductionFunctions.PercentageDamageReductionFnSO.html
-  commentId: T:ElectricDrill.AstraRpgHealth.DamageReductionFunctions.PercentageDamageReductionFnSO
-  fullName: ElectricDrill.AstraRpgHealth.DamageReductionFunctions.PercentageDamageReductionFnSO
-  nameWithType: PercentageDamageReductionFnSO
-- uid: ElectricDrill.AstraRpgHealth.DamageReductionFunctions.PercentageDamageReductionFnSO.CalculateReducedDamage(System.Int64,System.Double)
+  fullName: ElectricDrill.AstraRpgHealth.DamageMitigationFunctions.LogDamageMitigationFnSO.CalculateReducedDamage
+  nameWithType: LogDamageMitigationFnSO.CalculateReducedDamage
+- uid: ElectricDrill.AstraRpgHealth.DamageMitigationFunctions.PercentageDamageMitigationFnSO
+  name: PercentageDamageMitigationFnSO
+  href: api/ElectricDrill.AstraRpgHealth.DamageMitigationFunctions.PercentageDamageMitigationFnSO.html
+  commentId: T:ElectricDrill.AstraRpgHealth.DamageMitigationFunctions.PercentageDamageMitigationFnSO
+  fullName: ElectricDrill.AstraRpgHealth.DamageMitigationFunctions.PercentageDamageMitigationFnSO
+  nameWithType: PercentageDamageMitigationFnSO
+- uid: ElectricDrill.AstraRpgHealth.DamageMitigationFunctions.PercentageDamageMitigationFnSO.CalculateReducedDamage(System.Int64,System.Double)
   name: CalculateReducedDamage(long, double)
-  href: api/ElectricDrill.AstraRpgHealth.DamageReductionFunctions.PercentageDamageReductionFnSO.html#ElectricDrill_AstraRpgHealth_DamageReductionFunctions_PercentageDamageReductionFnSO_CalculateReducedDamage_System_Int64_System_Double_
-  commentId: M:ElectricDrill.AstraRpgHealth.DamageReductionFunctions.PercentageDamageReductionFnSO.CalculateReducedDamage(System.Int64,System.Double)
+  href: api/ElectricDrill.AstraRpgHealth.DamageMitigationFunctions.PercentageDamageMitigationFnSO.html#ElectricDrill_AstraRpgHealth_DamageMitigationFunctions_PercentageDamageMitigationFnSO_CalculateReducedDamage_System_Int64_System_Double_
+  commentId: M:ElectricDrill.AstraRpgHealth.DamageMitigationFunctions.PercentageDamageMitigationFnSO.CalculateReducedDamage(System.Int64,System.Double)
   name.vb: CalculateReducedDamage(Long, Double)
-  fullName: ElectricDrill.AstraRpgHealth.DamageReductionFunctions.PercentageDamageReductionFnSO.CalculateReducedDamage(long, double)
-  fullName.vb: ElectricDrill.AstraRpgHealth.DamageReductionFunctions.PercentageDamageReductionFnSO.CalculateReducedDamage(Long, Double)
-  nameWithType: PercentageDamageReductionFnSO.CalculateReducedDamage(long, double)
-  nameWithType.vb: PercentageDamageReductionFnSO.CalculateReducedDamage(Long, Double)
-- uid: ElectricDrill.AstraRpgHealth.DamageReductionFunctions.PercentageDamageReductionFnSO.CalculateReducedDamage*
+  fullName: ElectricDrill.AstraRpgHealth.DamageMitigationFunctions.PercentageDamageMitigationFnSO.CalculateReducedDamage(long, double)
+  fullName.vb: ElectricDrill.AstraRpgHealth.DamageMitigationFunctions.PercentageDamageMitigationFnSO.CalculateReducedDamage(Long, Double)
+  nameWithType: PercentageDamageMitigationFnSO.CalculateReducedDamage(long, double)
+  nameWithType.vb: PercentageDamageMitigationFnSO.CalculateReducedDamage(Long, Double)
+- uid: ElectricDrill.AstraRpgHealth.DamageMitigationFunctions.PercentageDamageMitigationFnSO.CalculateReducedDamage*
   name: CalculateReducedDamage
-  href: api/ElectricDrill.AstraRpgHealth.DamageReductionFunctions.PercentageDamageReductionFnSO.html#ElectricDrill_AstraRpgHealth_DamageReductionFunctions_PercentageDamageReductionFnSO_CalculateReducedDamage_
-  commentId: Overload:ElectricDrill.AstraRpgHealth.DamageReductionFunctions.PercentageDamageReductionFnSO.CalculateReducedDamage
+  href: api/ElectricDrill.AstraRpgHealth.DamageMitigationFunctions.PercentageDamageMitigationFnSO.html#ElectricDrill_AstraRpgHealth_DamageMitigationFunctions_PercentageDamageMitigationFnSO_CalculateReducedDamage_
+  commentId: Overload:ElectricDrill.AstraRpgHealth.DamageMitigationFunctions.PercentageDamageMitigationFnSO.CalculateReducedDamage
   isSpec: "True"
-  fullName: ElectricDrill.AstraRpgHealth.DamageReductionFunctions.PercentageDamageReductionFnSO.CalculateReducedDamage
-  nameWithType: PercentageDamageReductionFnSO.CalculateReducedDamage
+  fullName: ElectricDrill.AstraRpgHealth.DamageMitigationFunctions.PercentageDamageMitigationFnSO.CalculateReducedDamage
+  nameWithType: PercentageDamageMitigationFnSO.CalculateReducedDamage
 - uid: ElectricDrill.AstraRpgHealth.Death
   name: ElectricDrill.AstraRpgHealth.Death
   href: api/ElectricDrill.AstraRpgHealth.Death.html
@@ -4480,207 +4480,207 @@ references:
   isSpec: "True"
   fullName: ElectricDrill.AstraRpgHealth.Death.OnDeathStrategy.Die
   nameWithType: OnDeathStrategy.Die
-- uid: ElectricDrill.AstraRpgHealth.DefenseReductionFunctions
-  name: ElectricDrill.AstraRpgHealth.DefenseReductionFunctions
-  href: api/ElectricDrill.AstraRpgHealth.DefenseReductionFunctions.html
-  commentId: N:ElectricDrill.AstraRpgHealth.DefenseReductionFunctions
-  fullName: ElectricDrill.AstraRpgHealth.DefenseReductionFunctions
-  nameWithType: ElectricDrill.AstraRpgHealth.DefenseReductionFunctions
-- uid: ElectricDrill.AstraRpgHealth.DefenseReductionFunctions.DefenseReductionFn
-  name: DefenseReductionFn
-  href: api/ElectricDrill.AstraRpgHealth.DefenseReductionFunctions.DefenseReductionFn.html
-  commentId: T:ElectricDrill.AstraRpgHealth.DefenseReductionFunctions.DefenseReductionFn
-  fullName: ElectricDrill.AstraRpgHealth.DefenseReductionFunctions.DefenseReductionFn
-  nameWithType: DefenseReductionFn
-- uid: ElectricDrill.AstraRpgHealth.DefenseReductionFunctions.DefenseReductionFn.ReducedDef(System.Int64,System.Int64,ElectricDrill.AstraRpgFramework.Stats.Stat,System.Boolean)
+- uid: ElectricDrill.AstraRpgHealth.DefensePenetrationFunctions
+  name: ElectricDrill.AstraRpgHealth.DefensePenetrationFunctions
+  href: api/ElectricDrill.AstraRpgHealth.DefensePenetrationFunctions.html
+  commentId: N:ElectricDrill.AstraRpgHealth.DefensePenetrationFunctions
+  fullName: ElectricDrill.AstraRpgHealth.DefensePenetrationFunctions
+  nameWithType: ElectricDrill.AstraRpgHealth.DefensePenetrationFunctions
+- uid: ElectricDrill.AstraRpgHealth.DefensePenetrationFunctions.DefensePenetrationFn
+  name: DefensePenetrationFn
+  href: api/ElectricDrill.AstraRpgHealth.DefensePenetrationFunctions.DefensePenetrationFn.html
+  commentId: T:ElectricDrill.AstraRpgHealth.DefensePenetrationFunctions.DefensePenetrationFn
+  fullName: ElectricDrill.AstraRpgHealth.DefensePenetrationFunctions.DefensePenetrationFn
+  nameWithType: DefensePenetrationFn
+- uid: ElectricDrill.AstraRpgHealth.DefensePenetrationFunctions.DefensePenetrationFn.ReducedDef(System.Int64,System.Int64,ElectricDrill.AstraRpgFramework.Stats.Stat,System.Boolean)
   name: ReducedDef(long, long, Stat, bool)
-  href: api/ElectricDrill.AstraRpgHealth.DefenseReductionFunctions.DefenseReductionFn.html#ElectricDrill_AstraRpgHealth_DefenseReductionFunctions_DefenseReductionFn_ReducedDef_System_Int64_System_Int64_ElectricDrill_AstraRpgFramework_Stats_Stat_System_Boolean_
-  commentId: M:ElectricDrill.AstraRpgHealth.DefenseReductionFunctions.DefenseReductionFn.ReducedDef(System.Int64,System.Int64,ElectricDrill.AstraRpgFramework.Stats.Stat,System.Boolean)
+  href: api/ElectricDrill.AstraRpgHealth.DefensePenetrationFunctions.DefensePenetrationFn.html#ElectricDrill_AstraRpgHealth_DefensePenetrationFunctions_DefensePenetrationFn_ReducedDef_System_Int64_System_Int64_ElectricDrill_AstraRpgFramework_Stats_Stat_System_Boolean_
+  commentId: M:ElectricDrill.AstraRpgHealth.DefensePenetrationFunctions.DefensePenetrationFn.ReducedDef(System.Int64,System.Int64,ElectricDrill.AstraRpgFramework.Stats.Stat,System.Boolean)
   name.vb: ReducedDef(Long, Long, Stat, Boolean)
-  fullName: ElectricDrill.AstraRpgHealth.DefenseReductionFunctions.DefenseReductionFn.ReducedDef(long, long, ElectricDrill.AstraRpgFramework.Stats.Stat, bool)
-  fullName.vb: ElectricDrill.AstraRpgHealth.DefenseReductionFunctions.DefenseReductionFn.ReducedDef(Long, Long, ElectricDrill.AstraRpgFramework.Stats.Stat, Boolean)
-  nameWithType: DefenseReductionFn.ReducedDef(long, long, Stat, bool)
-  nameWithType.vb: DefenseReductionFn.ReducedDef(Long, Long, Stat, Boolean)
-- uid: ElectricDrill.AstraRpgHealth.DefenseReductionFunctions.DefenseReductionFn.ReducedDef*
+  fullName: ElectricDrill.AstraRpgHealth.DefensePenetrationFunctions.DefensePenetrationFn.ReducedDef(long, long, ElectricDrill.AstraRpgFramework.Stats.Stat, bool)
+  fullName.vb: ElectricDrill.AstraRpgHealth.DefensePenetrationFunctions.DefensePenetrationFn.ReducedDef(Long, Long, ElectricDrill.AstraRpgFramework.Stats.Stat, Boolean)
+  nameWithType: DefensePenetrationFn.ReducedDef(long, long, Stat, bool)
+  nameWithType.vb: DefensePenetrationFn.ReducedDef(Long, Long, Stat, Boolean)
+- uid: ElectricDrill.AstraRpgHealth.DefensePenetrationFunctions.DefensePenetrationFn.ReducedDef*
   name: ReducedDef
-  href: api/ElectricDrill.AstraRpgHealth.DefenseReductionFunctions.DefenseReductionFn.html#ElectricDrill_AstraRpgHealth_DefenseReductionFunctions_DefenseReductionFn_ReducedDef_
-  commentId: Overload:ElectricDrill.AstraRpgHealth.DefenseReductionFunctions.DefenseReductionFn.ReducedDef
+  href: api/ElectricDrill.AstraRpgHealth.DefensePenetrationFunctions.DefensePenetrationFn.html#ElectricDrill_AstraRpgHealth_DefensePenetrationFunctions_DefensePenetrationFn_ReducedDef_
+  commentId: Overload:ElectricDrill.AstraRpgHealth.DefensePenetrationFunctions.DefensePenetrationFn.ReducedDef
   isSpec: "True"
-  fullName: ElectricDrill.AstraRpgHealth.DefenseReductionFunctions.DefenseReductionFn.ReducedDef
-  nameWithType: DefenseReductionFn.ReducedDef
-- uid: ElectricDrill.AstraRpgHealth.DefenseReductionFunctions.DefenseReductionFnSO
-  name: DefenseReductionFnSO
-  href: api/ElectricDrill.AstraRpgHealth.DefenseReductionFunctions.DefenseReductionFnSO.html
-  commentId: T:ElectricDrill.AstraRpgHealth.DefenseReductionFunctions.DefenseReductionFnSO
-  fullName: ElectricDrill.AstraRpgHealth.DefenseReductionFunctions.DefenseReductionFnSO
-  nameWithType: DefenseReductionFnSO
-- uid: ElectricDrill.AstraRpgHealth.DefenseReductionFunctions.DefenseReductionFnSO.CalculateReducedDefense(System.Int64,System.Int64,ElectricDrill.AstraRpgFramework.Stats.StatSO,System.Boolean)
+  fullName: ElectricDrill.AstraRpgHealth.DefensePenetrationFunctions.DefensePenetrationFn.ReducedDef
+  nameWithType: DefensePenetrationFn.ReducedDef
+- uid: ElectricDrill.AstraRpgHealth.DefensePenetrationFunctions.DefensePenetrationFnSO
+  name: DefensePenetrationFnSO
+  href: api/ElectricDrill.AstraRpgHealth.DefensePenetrationFunctions.DefensePenetrationFnSO.html
+  commentId: T:ElectricDrill.AstraRpgHealth.DefensePenetrationFunctions.DefensePenetrationFnSO
+  fullName: ElectricDrill.AstraRpgHealth.DefensePenetrationFunctions.DefensePenetrationFnSO
+  nameWithType: DefensePenetrationFnSO
+- uid: ElectricDrill.AstraRpgHealth.DefensePenetrationFunctions.DefensePenetrationFnSO.CalculateReducedDefense(System.Int64,System.Int64,ElectricDrill.AstraRpgFramework.Stats.StatSO,System.Boolean)
   name: CalculateReducedDefense(long, long, StatSO, bool)
-  href: api/ElectricDrill.AstraRpgHealth.DefenseReductionFunctions.DefenseReductionFnSO.html#ElectricDrill_AstraRpgHealth_DefenseReductionFunctions_DefenseReductionFnSO_CalculateReducedDefense_System_Int64_System_Int64_ElectricDrill_AstraRpgFramework_Stats_StatSO_System_Boolean_
-  commentId: M:ElectricDrill.AstraRpgHealth.DefenseReductionFunctions.DefenseReductionFnSO.CalculateReducedDefense(System.Int64,System.Int64,ElectricDrill.AstraRpgFramework.Stats.StatSO,System.Boolean)
+  href: api/ElectricDrill.AstraRpgHealth.DefensePenetrationFunctions.DefensePenetrationFnSO.html#ElectricDrill_AstraRpgHealth_DefensePenetrationFunctions_DefensePenetrationFnSO_CalculateReducedDefense_System_Int64_System_Int64_ElectricDrill_AstraRpgFramework_Stats_StatSO_System_Boolean_
+  commentId: M:ElectricDrill.AstraRpgHealth.DefensePenetrationFunctions.DefensePenetrationFnSO.CalculateReducedDefense(System.Int64,System.Int64,ElectricDrill.AstraRpgFramework.Stats.StatSO,System.Boolean)
   name.vb: CalculateReducedDefense(Long, Long, StatSO, Boolean)
-  fullName: ElectricDrill.AstraRpgHealth.DefenseReductionFunctions.DefenseReductionFnSO.CalculateReducedDefense(long, long, ElectricDrill.AstraRpgFramework.Stats.StatSO, bool)
-  fullName.vb: ElectricDrill.AstraRpgHealth.DefenseReductionFunctions.DefenseReductionFnSO.CalculateReducedDefense(Long, Long, ElectricDrill.AstraRpgFramework.Stats.StatSO, Boolean)
-  nameWithType: DefenseReductionFnSO.CalculateReducedDefense(long, long, StatSO, bool)
-  nameWithType.vb: DefenseReductionFnSO.CalculateReducedDefense(Long, Long, StatSO, Boolean)
-- uid: ElectricDrill.AstraRpgHealth.DefenseReductionFunctions.DefenseReductionFnSO.CalculateReducedDefense*
+  fullName: ElectricDrill.AstraRpgHealth.DefensePenetrationFunctions.DefensePenetrationFnSO.CalculateReducedDefense(long, long, ElectricDrill.AstraRpgFramework.Stats.StatSO, bool)
+  fullName.vb: ElectricDrill.AstraRpgHealth.DefensePenetrationFunctions.DefensePenetrationFnSO.CalculateReducedDefense(Long, Long, ElectricDrill.AstraRpgFramework.Stats.StatSO, Boolean)
+  nameWithType: DefensePenetrationFnSO.CalculateReducedDefense(long, long, StatSO, bool)
+  nameWithType.vb: DefensePenetrationFnSO.CalculateReducedDefense(Long, Long, StatSO, Boolean)
+- uid: ElectricDrill.AstraRpgHealth.DefensePenetrationFunctions.DefensePenetrationFnSO.CalculateReducedDefense*
   name: CalculateReducedDefense
-  href: api/ElectricDrill.AstraRpgHealth.DefenseReductionFunctions.DefenseReductionFnSO.html#ElectricDrill_AstraRpgHealth_DefenseReductionFunctions_DefenseReductionFnSO_CalculateReducedDefense_
-  commentId: Overload:ElectricDrill.AstraRpgHealth.DefenseReductionFunctions.DefenseReductionFnSO.CalculateReducedDefense
+  href: api/ElectricDrill.AstraRpgHealth.DefensePenetrationFunctions.DefensePenetrationFnSO.html#ElectricDrill_AstraRpgHealth_DefensePenetrationFunctions_DefensePenetrationFnSO_CalculateReducedDefense_
+  commentId: Overload:ElectricDrill.AstraRpgHealth.DefensePenetrationFunctions.DefensePenetrationFnSO.CalculateReducedDefense
   isSpec: "True"
-  fullName: ElectricDrill.AstraRpgHealth.DefenseReductionFunctions.DefenseReductionFnSO.CalculateReducedDefense
-  nameWithType: DefenseReductionFnSO.CalculateReducedDefense
-- uid: ElectricDrill.AstraRpgHealth.DefenseReductionFunctions.DefenseReductionFnSO.Tags
+  fullName: ElectricDrill.AstraRpgHealth.DefensePenetrationFunctions.DefensePenetrationFnSO.CalculateReducedDefense
+  nameWithType: DefensePenetrationFnSO.CalculateReducedDefense
+- uid: ElectricDrill.AstraRpgHealth.DefensePenetrationFunctions.DefensePenetrationFnSO.Tags
   name: Tags
-  href: api/ElectricDrill.AstraRpgHealth.DefenseReductionFunctions.DefenseReductionFnSO.html#ElectricDrill_AstraRpgHealth_DefenseReductionFunctions_DefenseReductionFnSO_Tags
-  commentId: P:ElectricDrill.AstraRpgHealth.DefenseReductionFunctions.DefenseReductionFnSO.Tags
-  fullName: ElectricDrill.AstraRpgHealth.DefenseReductionFunctions.DefenseReductionFnSO.Tags
-  nameWithType: DefenseReductionFnSO.Tags
-- uid: ElectricDrill.AstraRpgHealth.DefenseReductionFunctions.DefenseReductionFnSO.Tags*
+  href: api/ElectricDrill.AstraRpgHealth.DefensePenetrationFunctions.DefensePenetrationFnSO.html#ElectricDrill_AstraRpgHealth_DefensePenetrationFunctions_DefensePenetrationFnSO_Tags
+  commentId: P:ElectricDrill.AstraRpgHealth.DefensePenetrationFunctions.DefensePenetrationFnSO.Tags
+  fullName: ElectricDrill.AstraRpgHealth.DefensePenetrationFunctions.DefensePenetrationFnSO.Tags
+  nameWithType: DefensePenetrationFnSO.Tags
+- uid: ElectricDrill.AstraRpgHealth.DefensePenetrationFunctions.DefensePenetrationFnSO.Tags*
   name: Tags
-  href: api/ElectricDrill.AstraRpgHealth.DefenseReductionFunctions.DefenseReductionFnSO.html#ElectricDrill_AstraRpgHealth_DefenseReductionFunctions_DefenseReductionFnSO_Tags_
-  commentId: Overload:ElectricDrill.AstraRpgHealth.DefenseReductionFunctions.DefenseReductionFnSO.Tags
+  href: api/ElectricDrill.AstraRpgHealth.DefensePenetrationFunctions.DefensePenetrationFnSO.html#ElectricDrill_AstraRpgHealth_DefensePenetrationFunctions_DefensePenetrationFnSO_Tags_
+  commentId: Overload:ElectricDrill.AstraRpgHealth.DefensePenetrationFunctions.DefensePenetrationFnSO.Tags
   isSpec: "True"
-  fullName: ElectricDrill.AstraRpgHealth.DefenseReductionFunctions.DefenseReductionFnSO.Tags
-  nameWithType: DefenseReductionFnSO.Tags
-- uid: ElectricDrill.AstraRpgHealth.DefenseReductionFunctions.DefenseReductionFunctions
-  name: ElectricDrill.AstraRpgHealth.DefenseReductionFunctions.DefenseReductionFunctions
-  href: api/ElectricDrill.AstraRpgHealth.DefenseReductionFunctions.DefenseReductionFunctions.html
-  commentId: N:ElectricDrill.AstraRpgHealth.DefenseReductionFunctions.DefenseReductionFunctions
-  fullName: ElectricDrill.AstraRpgHealth.DefenseReductionFunctions.DefenseReductionFunctions
-  nameWithType: ElectricDrill.AstraRpgHealth.DefenseReductionFunctions.DefenseReductionFunctions
-- uid: ElectricDrill.AstraRpgHealth.DefenseReductionFunctions.DefenseReductionFunctions.FlatDefenseReductionFn
-  name: FlatDefenseReductionFn
-  href: api/ElectricDrill.AstraRpgHealth.DefenseReductionFunctions.DefenseReductionFunctions.FlatDefenseReductionFn.html
-  commentId: T:ElectricDrill.AstraRpgHealth.DefenseReductionFunctions.DefenseReductionFunctions.FlatDefenseReductionFn
-  fullName: ElectricDrill.AstraRpgHealth.DefenseReductionFunctions.DefenseReductionFunctions.FlatDefenseReductionFn
-  nameWithType: FlatDefenseReductionFn
-- uid: ElectricDrill.AstraRpgHealth.DefenseReductionFunctions.DefenseReductionFunctions.FlatDefenseReductionFn.ReducedDef(System.Int64,System.Int64,ElectricDrill.AstraRpgFramework.Stats.Stat,System.Boolean)
+  fullName: ElectricDrill.AstraRpgHealth.DefensePenetrationFunctions.DefensePenetrationFnSO.Tags
+  nameWithType: DefensePenetrationFnSO.Tags
+- uid: ElectricDrill.AstraRpgHealth.DefensePenetrationFunctions.DefensePenetrationFunctions
+  name: ElectricDrill.AstraRpgHealth.DefensePenetrationFunctions.DefensePenetrationFunctions
+  href: api/ElectricDrill.AstraRpgHealth.DefensePenetrationFunctions.DefensePenetrationFunctions.html
+  commentId: N:ElectricDrill.AstraRpgHealth.DefensePenetrationFunctions.DefensePenetrationFunctions
+  fullName: ElectricDrill.AstraRpgHealth.DefensePenetrationFunctions.DefensePenetrationFunctions
+  nameWithType: ElectricDrill.AstraRpgHealth.DefensePenetrationFunctions.DefensePenetrationFunctions
+- uid: ElectricDrill.AstraRpgHealth.DefensePenetrationFunctions.DefensePenetrationFunctions.FlatDefensePenetrationFn
+  name: FlatDefensePenetrationFn
+  href: api/ElectricDrill.AstraRpgHealth.DefensePenetrationFunctions.DefensePenetrationFunctions.FlatDefensePenetrationFn.html
+  commentId: T:ElectricDrill.AstraRpgHealth.DefensePenetrationFunctions.DefensePenetrationFunctions.FlatDefensePenetrationFn
+  fullName: ElectricDrill.AstraRpgHealth.DefensePenetrationFunctions.DefensePenetrationFunctions.FlatDefensePenetrationFn
+  nameWithType: FlatDefensePenetrationFn
+- uid: ElectricDrill.AstraRpgHealth.DefensePenetrationFunctions.DefensePenetrationFunctions.FlatDefensePenetrationFn.ReducedDef(System.Int64,System.Int64,ElectricDrill.AstraRpgFramework.Stats.Stat,System.Boolean)
   name: ReducedDef(long, long, Stat, bool)
-  href: api/ElectricDrill.AstraRpgHealth.DefenseReductionFunctions.DefenseReductionFunctions.FlatDefenseReductionFn.html#ElectricDrill_AstraRpgHealth_DefenseReductionFunctions_DefenseReductionFunctions_FlatDefenseReductionFn_ReducedDef_System_Int64_System_Int64_ElectricDrill_AstraRpgFramework_Stats_Stat_System_Boolean_
-  commentId: M:ElectricDrill.AstraRpgHealth.DefenseReductionFunctions.DefenseReductionFunctions.FlatDefenseReductionFn.ReducedDef(System.Int64,System.Int64,ElectricDrill.AstraRpgFramework.Stats.Stat,System.Boolean)
+  href: api/ElectricDrill.AstraRpgHealth.DefensePenetrationFunctions.DefensePenetrationFunctions.FlatDefensePenetrationFn.html#ElectricDrill_AstraRpgHealth_DefensePenetrationFunctions_DefensePenetrationFunctions_FlatDefensePenetrationFn_ReducedDef_System_Int64_System_Int64_ElectricDrill_AstraRpgFramework_Stats_Stat_System_Boolean_
+  commentId: M:ElectricDrill.AstraRpgHealth.DefensePenetrationFunctions.DefensePenetrationFunctions.FlatDefensePenetrationFn.ReducedDef(System.Int64,System.Int64,ElectricDrill.AstraRpgFramework.Stats.Stat,System.Boolean)
   name.vb: ReducedDef(Long, Long, Stat, Boolean)
-  fullName: ElectricDrill.AstraRpgHealth.DefenseReductionFunctions.DefenseReductionFunctions.FlatDefenseReductionFn.ReducedDef(long, long, ElectricDrill.AstraRpgFramework.Stats.Stat, bool)
-  fullName.vb: ElectricDrill.AstraRpgHealth.DefenseReductionFunctions.DefenseReductionFunctions.FlatDefenseReductionFn.ReducedDef(Long, Long, ElectricDrill.AstraRpgFramework.Stats.Stat, Boolean)
-  nameWithType: FlatDefenseReductionFn.ReducedDef(long, long, Stat, bool)
-  nameWithType.vb: FlatDefenseReductionFn.ReducedDef(Long, Long, Stat, Boolean)
-- uid: ElectricDrill.AstraRpgHealth.DefenseReductionFunctions.DefenseReductionFunctions.FlatDefenseReductionFn.ReducedDef*
+  fullName: ElectricDrill.AstraRpgHealth.DefensePenetrationFunctions.DefensePenetrationFunctions.FlatDefensePenetrationFn.ReducedDef(long, long, ElectricDrill.AstraRpgFramework.Stats.Stat, bool)
+  fullName.vb: ElectricDrill.AstraRpgHealth.DefensePenetrationFunctions.DefensePenetrationFunctions.FlatDefensePenetrationFn.ReducedDef(Long, Long, ElectricDrill.AstraRpgFramework.Stats.Stat, Boolean)
+  nameWithType: FlatDefensePenetrationFn.ReducedDef(long, long, Stat, bool)
+  nameWithType.vb: FlatDefensePenetrationFn.ReducedDef(Long, Long, Stat, Boolean)
+- uid: ElectricDrill.AstraRpgHealth.DefensePenetrationFunctions.DefensePenetrationFunctions.FlatDefensePenetrationFn.ReducedDef*
   name: ReducedDef
-  href: api/ElectricDrill.AstraRpgHealth.DefenseReductionFunctions.DefenseReductionFunctions.FlatDefenseReductionFn.html#ElectricDrill_AstraRpgHealth_DefenseReductionFunctions_DefenseReductionFunctions_FlatDefenseReductionFn_ReducedDef_
-  commentId: Overload:ElectricDrill.AstraRpgHealth.DefenseReductionFunctions.DefenseReductionFunctions.FlatDefenseReductionFn.ReducedDef
+  href: api/ElectricDrill.AstraRpgHealth.DefensePenetrationFunctions.DefensePenetrationFunctions.FlatDefensePenetrationFn.html#ElectricDrill_AstraRpgHealth_DefensePenetrationFunctions_DefensePenetrationFunctions_FlatDefensePenetrationFn_ReducedDef_
+  commentId: Overload:ElectricDrill.AstraRpgHealth.DefensePenetrationFunctions.DefensePenetrationFunctions.FlatDefensePenetrationFn.ReducedDef
   isSpec: "True"
-  fullName: ElectricDrill.AstraRpgHealth.DefenseReductionFunctions.DefenseReductionFunctions.FlatDefenseReductionFn.ReducedDef
-  nameWithType: FlatDefenseReductionFn.ReducedDef
-- uid: ElectricDrill.AstraRpgHealth.DefenseReductionFunctions.DefenseReductionFunctions.LogDefenseReductionFn
-  name: LogDefenseReductionFn
-  href: api/ElectricDrill.AstraRpgHealth.DefenseReductionFunctions.DefenseReductionFunctions.LogDefenseReductionFn.html
-  commentId: T:ElectricDrill.AstraRpgHealth.DefenseReductionFunctions.DefenseReductionFunctions.LogDefenseReductionFn
-  fullName: ElectricDrill.AstraRpgHealth.DefenseReductionFunctions.DefenseReductionFunctions.LogDefenseReductionFn
-  nameWithType: LogDefenseReductionFn
-- uid: ElectricDrill.AstraRpgHealth.DefenseReductionFunctions.DefenseReductionFunctions.LogDefenseReductionFn.ReducedDef(System.Int64,System.Int64,ElectricDrill.AstraRpgFramework.Stats.Stat,System.Boolean)
+  fullName: ElectricDrill.AstraRpgHealth.DefensePenetrationFunctions.DefensePenetrationFunctions.FlatDefensePenetrationFn.ReducedDef
+  nameWithType: FlatDefensePenetrationFn.ReducedDef
+- uid: ElectricDrill.AstraRpgHealth.DefensePenetrationFunctions.DefensePenetrationFunctions.LogDefensePenetrationFn
+  name: LogDefensePenetrationFn
+  href: api/ElectricDrill.AstraRpgHealth.DefensePenetrationFunctions.DefensePenetrationFunctions.LogDefensePenetrationFn.html
+  commentId: T:ElectricDrill.AstraRpgHealth.DefensePenetrationFunctions.DefensePenetrationFunctions.LogDefensePenetrationFn
+  fullName: ElectricDrill.AstraRpgHealth.DefensePenetrationFunctions.DefensePenetrationFunctions.LogDefensePenetrationFn
+  nameWithType: LogDefensePenetrationFn
+- uid: ElectricDrill.AstraRpgHealth.DefensePenetrationFunctions.DefensePenetrationFunctions.LogDefensePenetrationFn.ReducedDef(System.Int64,System.Int64,ElectricDrill.AstraRpgFramework.Stats.Stat,System.Boolean)
   name: ReducedDef(long, long, Stat, bool)
-  href: api/ElectricDrill.AstraRpgHealth.DefenseReductionFunctions.DefenseReductionFunctions.LogDefenseReductionFn.html#ElectricDrill_AstraRpgHealth_DefenseReductionFunctions_DefenseReductionFunctions_LogDefenseReductionFn_ReducedDef_System_Int64_System_Int64_ElectricDrill_AstraRpgFramework_Stats_Stat_System_Boolean_
-  commentId: M:ElectricDrill.AstraRpgHealth.DefenseReductionFunctions.DefenseReductionFunctions.LogDefenseReductionFn.ReducedDef(System.Int64,System.Int64,ElectricDrill.AstraRpgFramework.Stats.Stat,System.Boolean)
+  href: api/ElectricDrill.AstraRpgHealth.DefensePenetrationFunctions.DefensePenetrationFunctions.LogDefensePenetrationFn.html#ElectricDrill_AstraRpgHealth_DefensePenetrationFunctions_DefensePenetrationFunctions_LogDefensePenetrationFn_ReducedDef_System_Int64_System_Int64_ElectricDrill_AstraRpgFramework_Stats_Stat_System_Boolean_
+  commentId: M:ElectricDrill.AstraRpgHealth.DefensePenetrationFunctions.DefensePenetrationFunctions.LogDefensePenetrationFn.ReducedDef(System.Int64,System.Int64,ElectricDrill.AstraRpgFramework.Stats.Stat,System.Boolean)
   name.vb: ReducedDef(Long, Long, Stat, Boolean)
-  fullName: ElectricDrill.AstraRpgHealth.DefenseReductionFunctions.DefenseReductionFunctions.LogDefenseReductionFn.ReducedDef(long, long, ElectricDrill.AstraRpgFramework.Stats.Stat, bool)
-  fullName.vb: ElectricDrill.AstraRpgHealth.DefenseReductionFunctions.DefenseReductionFunctions.LogDefenseReductionFn.ReducedDef(Long, Long, ElectricDrill.AstraRpgFramework.Stats.Stat, Boolean)
-  nameWithType: LogDefenseReductionFn.ReducedDef(long, long, Stat, bool)
-  nameWithType.vb: LogDefenseReductionFn.ReducedDef(Long, Long, Stat, Boolean)
-- uid: ElectricDrill.AstraRpgHealth.DefenseReductionFunctions.DefenseReductionFunctions.LogDefenseReductionFn.ReducedDef*
+  fullName: ElectricDrill.AstraRpgHealth.DefensePenetrationFunctions.DefensePenetrationFunctions.LogDefensePenetrationFn.ReducedDef(long, long, ElectricDrill.AstraRpgFramework.Stats.Stat, bool)
+  fullName.vb: ElectricDrill.AstraRpgHealth.DefensePenetrationFunctions.DefensePenetrationFunctions.LogDefensePenetrationFn.ReducedDef(Long, Long, ElectricDrill.AstraRpgFramework.Stats.Stat, Boolean)
+  nameWithType: LogDefensePenetrationFn.ReducedDef(long, long, Stat, bool)
+  nameWithType.vb: LogDefensePenetrationFn.ReducedDef(Long, Long, Stat, Boolean)
+- uid: ElectricDrill.AstraRpgHealth.DefensePenetrationFunctions.DefensePenetrationFunctions.LogDefensePenetrationFn.ReducedDef*
   name: ReducedDef
-  href: api/ElectricDrill.AstraRpgHealth.DefenseReductionFunctions.DefenseReductionFunctions.LogDefenseReductionFn.html#ElectricDrill_AstraRpgHealth_DefenseReductionFunctions_DefenseReductionFunctions_LogDefenseReductionFn_ReducedDef_
-  commentId: Overload:ElectricDrill.AstraRpgHealth.DefenseReductionFunctions.DefenseReductionFunctions.LogDefenseReductionFn.ReducedDef
+  href: api/ElectricDrill.AstraRpgHealth.DefensePenetrationFunctions.DefensePenetrationFunctions.LogDefensePenetrationFn.html#ElectricDrill_AstraRpgHealth_DefensePenetrationFunctions_DefensePenetrationFunctions_LogDefensePenetrationFn_ReducedDef_
+  commentId: Overload:ElectricDrill.AstraRpgHealth.DefensePenetrationFunctions.DefensePenetrationFunctions.LogDefensePenetrationFn.ReducedDef
   isSpec: "True"
-  fullName: ElectricDrill.AstraRpgHealth.DefenseReductionFunctions.DefenseReductionFunctions.LogDefenseReductionFn.ReducedDef
-  nameWithType: LogDefenseReductionFn.ReducedDef
-- uid: ElectricDrill.AstraRpgHealth.DefenseReductionFunctions.DefenseReductionFunctions.PercentageDefenseReductionFn
-  name: PercentageDefenseReductionFn
-  href: api/ElectricDrill.AstraRpgHealth.DefenseReductionFunctions.DefenseReductionFunctions.PercentageDefenseReductionFn.html
-  commentId: T:ElectricDrill.AstraRpgHealth.DefenseReductionFunctions.DefenseReductionFunctions.PercentageDefenseReductionFn
-  fullName: ElectricDrill.AstraRpgHealth.DefenseReductionFunctions.DefenseReductionFunctions.PercentageDefenseReductionFn
-  nameWithType: PercentageDefenseReductionFn
-- uid: ElectricDrill.AstraRpgHealth.DefenseReductionFunctions.DefenseReductionFunctions.PercentageDefenseReductionFn.ReducedDef(System.Int64,System.Int64,ElectricDrill.AstraRpgFramework.Stats.Stat,System.Boolean)
+  fullName: ElectricDrill.AstraRpgHealth.DefensePenetrationFunctions.DefensePenetrationFunctions.LogDefensePenetrationFn.ReducedDef
+  nameWithType: LogDefensePenetrationFn.ReducedDef
+- uid: ElectricDrill.AstraRpgHealth.DefensePenetrationFunctions.DefensePenetrationFunctions.PercentageDefensePenetrationFn
+  name: PercentageDefensePenetrationFn
+  href: api/ElectricDrill.AstraRpgHealth.DefensePenetrationFunctions.DefensePenetrationFunctions.PercentageDefensePenetrationFn.html
+  commentId: T:ElectricDrill.AstraRpgHealth.DefensePenetrationFunctions.DefensePenetrationFunctions.PercentageDefensePenetrationFn
+  fullName: ElectricDrill.AstraRpgHealth.DefensePenetrationFunctions.DefensePenetrationFunctions.PercentageDefensePenetrationFn
+  nameWithType: PercentageDefensePenetrationFn
+- uid: ElectricDrill.AstraRpgHealth.DefensePenetrationFunctions.DefensePenetrationFunctions.PercentageDefensePenetrationFn.ReducedDef(System.Int64,System.Int64,ElectricDrill.AstraRpgFramework.Stats.Stat,System.Boolean)
   name: ReducedDef(long, long, Stat, bool)
-  href: api/ElectricDrill.AstraRpgHealth.DefenseReductionFunctions.DefenseReductionFunctions.PercentageDefenseReductionFn.html#ElectricDrill_AstraRpgHealth_DefenseReductionFunctions_DefenseReductionFunctions_PercentageDefenseReductionFn_ReducedDef_System_Int64_System_Int64_ElectricDrill_AstraRpgFramework_Stats_Stat_System_Boolean_
-  commentId: M:ElectricDrill.AstraRpgHealth.DefenseReductionFunctions.DefenseReductionFunctions.PercentageDefenseReductionFn.ReducedDef(System.Int64,System.Int64,ElectricDrill.AstraRpgFramework.Stats.Stat,System.Boolean)
+  href: api/ElectricDrill.AstraRpgHealth.DefensePenetrationFunctions.DefensePenetrationFunctions.PercentageDefensePenetrationFn.html#ElectricDrill_AstraRpgHealth_DefensePenetrationFunctions_DefensePenetrationFunctions_PercentageDefensePenetrationFn_ReducedDef_System_Int64_System_Int64_ElectricDrill_AstraRpgFramework_Stats_Stat_System_Boolean_
+  commentId: M:ElectricDrill.AstraRpgHealth.DefensePenetrationFunctions.DefensePenetrationFunctions.PercentageDefensePenetrationFn.ReducedDef(System.Int64,System.Int64,ElectricDrill.AstraRpgFramework.Stats.Stat,System.Boolean)
   name.vb: ReducedDef(Long, Long, Stat, Boolean)
-  fullName: ElectricDrill.AstraRpgHealth.DefenseReductionFunctions.DefenseReductionFunctions.PercentageDefenseReductionFn.ReducedDef(long, long, ElectricDrill.AstraRpgFramework.Stats.Stat, bool)
-  fullName.vb: ElectricDrill.AstraRpgHealth.DefenseReductionFunctions.DefenseReductionFunctions.PercentageDefenseReductionFn.ReducedDef(Long, Long, ElectricDrill.AstraRpgFramework.Stats.Stat, Boolean)
-  nameWithType: PercentageDefenseReductionFn.ReducedDef(long, long, Stat, bool)
-  nameWithType.vb: PercentageDefenseReductionFn.ReducedDef(Long, Long, Stat, Boolean)
-- uid: ElectricDrill.AstraRpgHealth.DefenseReductionFunctions.DefenseReductionFunctions.PercentageDefenseReductionFn.ReducedDef*
+  fullName: ElectricDrill.AstraRpgHealth.DefensePenetrationFunctions.DefensePenetrationFunctions.PercentageDefensePenetrationFn.ReducedDef(long, long, ElectricDrill.AstraRpgFramework.Stats.Stat, bool)
+  fullName.vb: ElectricDrill.AstraRpgHealth.DefensePenetrationFunctions.DefensePenetrationFunctions.PercentageDefensePenetrationFn.ReducedDef(Long, Long, ElectricDrill.AstraRpgFramework.Stats.Stat, Boolean)
+  nameWithType: PercentageDefensePenetrationFn.ReducedDef(long, long, Stat, bool)
+  nameWithType.vb: PercentageDefensePenetrationFn.ReducedDef(Long, Long, Stat, Boolean)
+- uid: ElectricDrill.AstraRpgHealth.DefensePenetrationFunctions.DefensePenetrationFunctions.PercentageDefensePenetrationFn.ReducedDef*
   name: ReducedDef
-  href: api/ElectricDrill.AstraRpgHealth.DefenseReductionFunctions.DefenseReductionFunctions.PercentageDefenseReductionFn.html#ElectricDrill_AstraRpgHealth_DefenseReductionFunctions_DefenseReductionFunctions_PercentageDefenseReductionFn_ReducedDef_
-  commentId: Overload:ElectricDrill.AstraRpgHealth.DefenseReductionFunctions.DefenseReductionFunctions.PercentageDefenseReductionFn.ReducedDef
+  href: api/ElectricDrill.AstraRpgHealth.DefensePenetrationFunctions.DefensePenetrationFunctions.PercentageDefensePenetrationFn.html#ElectricDrill_AstraRpgHealth_DefensePenetrationFunctions_DefensePenetrationFunctions_PercentageDefensePenetrationFn_ReducedDef_
+  commentId: Overload:ElectricDrill.AstraRpgHealth.DefensePenetrationFunctions.DefensePenetrationFunctions.PercentageDefensePenetrationFn.ReducedDef
   isSpec: "True"
-  fullName: ElectricDrill.AstraRpgHealth.DefenseReductionFunctions.DefenseReductionFunctions.PercentageDefenseReductionFn.ReducedDef
-  nameWithType: PercentageDefenseReductionFn.ReducedDef
-- uid: ElectricDrill.AstraRpgHealth.DefenseReductionFunctions.FlatDefenseReductionFnSO
-  name: FlatDefenseReductionFnSO
-  href: api/ElectricDrill.AstraRpgHealth.DefenseReductionFunctions.FlatDefenseReductionFnSO.html
-  commentId: T:ElectricDrill.AstraRpgHealth.DefenseReductionFunctions.FlatDefenseReductionFnSO
-  fullName: ElectricDrill.AstraRpgHealth.DefenseReductionFunctions.FlatDefenseReductionFnSO
-  nameWithType: FlatDefenseReductionFnSO
-- uid: ElectricDrill.AstraRpgHealth.DefenseReductionFunctions.FlatDefenseReductionFnSO.CalculateReducedDefense(System.Int64,System.Int64,ElectricDrill.AstraRpgFramework.Stats.StatSO,System.Boolean)
+  fullName: ElectricDrill.AstraRpgHealth.DefensePenetrationFunctions.DefensePenetrationFunctions.PercentageDefensePenetrationFn.ReducedDef
+  nameWithType: PercentageDefensePenetrationFn.ReducedDef
+- uid: ElectricDrill.AstraRpgHealth.DefensePenetrationFunctions.FlatDefensePenetrationFnSO
+  name: FlatDefensePenetrationFnSO
+  href: api/ElectricDrill.AstraRpgHealth.DefensePenetrationFunctions.FlatDefensePenetrationFnSO.html
+  commentId: T:ElectricDrill.AstraRpgHealth.DefensePenetrationFunctions.FlatDefensePenetrationFnSO
+  fullName: ElectricDrill.AstraRpgHealth.DefensePenetrationFunctions.FlatDefensePenetrationFnSO
+  nameWithType: FlatDefensePenetrationFnSO
+- uid: ElectricDrill.AstraRpgHealth.DefensePenetrationFunctions.FlatDefensePenetrationFnSO.CalculateReducedDefense(System.Int64,System.Int64,ElectricDrill.AstraRpgFramework.Stats.StatSO,System.Boolean)
   name: CalculateReducedDefense(long, long, StatSO, bool)
-  href: api/ElectricDrill.AstraRpgHealth.DefenseReductionFunctions.FlatDefenseReductionFnSO.html#ElectricDrill_AstraRpgHealth_DefenseReductionFunctions_FlatDefenseReductionFnSO_CalculateReducedDefense_System_Int64_System_Int64_ElectricDrill_AstraRpgFramework_Stats_StatSO_System_Boolean_
-  commentId: M:ElectricDrill.AstraRpgHealth.DefenseReductionFunctions.FlatDefenseReductionFnSO.CalculateReducedDefense(System.Int64,System.Int64,ElectricDrill.AstraRpgFramework.Stats.StatSO,System.Boolean)
+  href: api/ElectricDrill.AstraRpgHealth.DefensePenetrationFunctions.FlatDefensePenetrationFnSO.html#ElectricDrill_AstraRpgHealth_DefensePenetrationFunctions_FlatDefensePenetrationFnSO_CalculateReducedDefense_System_Int64_System_Int64_ElectricDrill_AstraRpgFramework_Stats_StatSO_System_Boolean_
+  commentId: M:ElectricDrill.AstraRpgHealth.DefensePenetrationFunctions.FlatDefensePenetrationFnSO.CalculateReducedDefense(System.Int64,System.Int64,ElectricDrill.AstraRpgFramework.Stats.StatSO,System.Boolean)
   name.vb: CalculateReducedDefense(Long, Long, StatSO, Boolean)
-  fullName: ElectricDrill.AstraRpgHealth.DefenseReductionFunctions.FlatDefenseReductionFnSO.CalculateReducedDefense(long, long, ElectricDrill.AstraRpgFramework.Stats.StatSO, bool)
-  fullName.vb: ElectricDrill.AstraRpgHealth.DefenseReductionFunctions.FlatDefenseReductionFnSO.CalculateReducedDefense(Long, Long, ElectricDrill.AstraRpgFramework.Stats.StatSO, Boolean)
-  nameWithType: FlatDefenseReductionFnSO.CalculateReducedDefense(long, long, StatSO, bool)
-  nameWithType.vb: FlatDefenseReductionFnSO.CalculateReducedDefense(Long, Long, StatSO, Boolean)
-- uid: ElectricDrill.AstraRpgHealth.DefenseReductionFunctions.FlatDefenseReductionFnSO.CalculateReducedDefense*
+  fullName: ElectricDrill.AstraRpgHealth.DefensePenetrationFunctions.FlatDefensePenetrationFnSO.CalculateReducedDefense(long, long, ElectricDrill.AstraRpgFramework.Stats.StatSO, bool)
+  fullName.vb: ElectricDrill.AstraRpgHealth.DefensePenetrationFunctions.FlatDefensePenetrationFnSO.CalculateReducedDefense(Long, Long, ElectricDrill.AstraRpgFramework.Stats.StatSO, Boolean)
+  nameWithType: FlatDefensePenetrationFnSO.CalculateReducedDefense(long, long, StatSO, bool)
+  nameWithType.vb: FlatDefensePenetrationFnSO.CalculateReducedDefense(Long, Long, StatSO, Boolean)
+- uid: ElectricDrill.AstraRpgHealth.DefensePenetrationFunctions.FlatDefensePenetrationFnSO.CalculateReducedDefense*
   name: CalculateReducedDefense
-  href: api/ElectricDrill.AstraRpgHealth.DefenseReductionFunctions.FlatDefenseReductionFnSO.html#ElectricDrill_AstraRpgHealth_DefenseReductionFunctions_FlatDefenseReductionFnSO_CalculateReducedDefense_
-  commentId: Overload:ElectricDrill.AstraRpgHealth.DefenseReductionFunctions.FlatDefenseReductionFnSO.CalculateReducedDefense
+  href: api/ElectricDrill.AstraRpgHealth.DefensePenetrationFunctions.FlatDefensePenetrationFnSO.html#ElectricDrill_AstraRpgHealth_DefensePenetrationFunctions_FlatDefensePenetrationFnSO_CalculateReducedDefense_
+  commentId: Overload:ElectricDrill.AstraRpgHealth.DefensePenetrationFunctions.FlatDefensePenetrationFnSO.CalculateReducedDefense
   isSpec: "True"
-  fullName: ElectricDrill.AstraRpgHealth.DefenseReductionFunctions.FlatDefenseReductionFnSO.CalculateReducedDefense
-  nameWithType: FlatDefenseReductionFnSO.CalculateReducedDefense
-- uid: ElectricDrill.AstraRpgHealth.DefenseReductionFunctions.LogDefenseReductionFnSO
-  name: LogDefenseReductionFnSO
-  href: api/ElectricDrill.AstraRpgHealth.DefenseReductionFunctions.LogDefenseReductionFnSO.html
-  commentId: T:ElectricDrill.AstraRpgHealth.DefenseReductionFunctions.LogDefenseReductionFnSO
-  fullName: ElectricDrill.AstraRpgHealth.DefenseReductionFunctions.LogDefenseReductionFnSO
-  nameWithType: LogDefenseReductionFnSO
-- uid: ElectricDrill.AstraRpgHealth.DefenseReductionFunctions.LogDefenseReductionFnSO.CalculateReducedDefense(System.Int64,System.Int64,ElectricDrill.AstraRpgFramework.Stats.StatSO,System.Boolean)
+  fullName: ElectricDrill.AstraRpgHealth.DefensePenetrationFunctions.FlatDefensePenetrationFnSO.CalculateReducedDefense
+  nameWithType: FlatDefensePenetrationFnSO.CalculateReducedDefense
+- uid: ElectricDrill.AstraRpgHealth.DefensePenetrationFunctions.LogDefensePenetrationFnSO
+  name: LogDefensePenetrationFnSO
+  href: api/ElectricDrill.AstraRpgHealth.DefensePenetrationFunctions.LogDefensePenetrationFnSO.html
+  commentId: T:ElectricDrill.AstraRpgHealth.DefensePenetrationFunctions.LogDefensePenetrationFnSO
+  fullName: ElectricDrill.AstraRpgHealth.DefensePenetrationFunctions.LogDefensePenetrationFnSO
+  nameWithType: LogDefensePenetrationFnSO
+- uid: ElectricDrill.AstraRpgHealth.DefensePenetrationFunctions.LogDefensePenetrationFnSO.CalculateReducedDefense(System.Int64,System.Int64,ElectricDrill.AstraRpgFramework.Stats.StatSO,System.Boolean)
   name: CalculateReducedDefense(long, long, StatSO, bool)
-  href: api/ElectricDrill.AstraRpgHealth.DefenseReductionFunctions.LogDefenseReductionFnSO.html#ElectricDrill_AstraRpgHealth_DefenseReductionFunctions_LogDefenseReductionFnSO_CalculateReducedDefense_System_Int64_System_Int64_ElectricDrill_AstraRpgFramework_Stats_StatSO_System_Boolean_
-  commentId: M:ElectricDrill.AstraRpgHealth.DefenseReductionFunctions.LogDefenseReductionFnSO.CalculateReducedDefense(System.Int64,System.Int64,ElectricDrill.AstraRpgFramework.Stats.StatSO,System.Boolean)
+  href: api/ElectricDrill.AstraRpgHealth.DefensePenetrationFunctions.LogDefensePenetrationFnSO.html#ElectricDrill_AstraRpgHealth_DefensePenetrationFunctions_LogDefensePenetrationFnSO_CalculateReducedDefense_System_Int64_System_Int64_ElectricDrill_AstraRpgFramework_Stats_StatSO_System_Boolean_
+  commentId: M:ElectricDrill.AstraRpgHealth.DefensePenetrationFunctions.LogDefensePenetrationFnSO.CalculateReducedDefense(System.Int64,System.Int64,ElectricDrill.AstraRpgFramework.Stats.StatSO,System.Boolean)
   name.vb: CalculateReducedDefense(Long, Long, StatSO, Boolean)
-  fullName: ElectricDrill.AstraRpgHealth.DefenseReductionFunctions.LogDefenseReductionFnSO.CalculateReducedDefense(long, long, ElectricDrill.AstraRpgFramework.Stats.StatSO, bool)
-  fullName.vb: ElectricDrill.AstraRpgHealth.DefenseReductionFunctions.LogDefenseReductionFnSO.CalculateReducedDefense(Long, Long, ElectricDrill.AstraRpgFramework.Stats.StatSO, Boolean)
-  nameWithType: LogDefenseReductionFnSO.CalculateReducedDefense(long, long, StatSO, bool)
-  nameWithType.vb: LogDefenseReductionFnSO.CalculateReducedDefense(Long, Long, StatSO, Boolean)
-- uid: ElectricDrill.AstraRpgHealth.DefenseReductionFunctions.LogDefenseReductionFnSO.CalculateReducedDefense*
+  fullName: ElectricDrill.AstraRpgHealth.DefensePenetrationFunctions.LogDefensePenetrationFnSO.CalculateReducedDefense(long, long, ElectricDrill.AstraRpgFramework.Stats.StatSO, bool)
+  fullName.vb: ElectricDrill.AstraRpgHealth.DefensePenetrationFunctions.LogDefensePenetrationFnSO.CalculateReducedDefense(Long, Long, ElectricDrill.AstraRpgFramework.Stats.StatSO, Boolean)
+  nameWithType: LogDefensePenetrationFnSO.CalculateReducedDefense(long, long, StatSO, bool)
+  nameWithType.vb: LogDefensePenetrationFnSO.CalculateReducedDefense(Long, Long, StatSO, Boolean)
+- uid: ElectricDrill.AstraRpgHealth.DefensePenetrationFunctions.LogDefensePenetrationFnSO.CalculateReducedDefense*
   name: CalculateReducedDefense
-  href: api/ElectricDrill.AstraRpgHealth.DefenseReductionFunctions.LogDefenseReductionFnSO.html#ElectricDrill_AstraRpgHealth_DefenseReductionFunctions_LogDefenseReductionFnSO_CalculateReducedDefense_
-  commentId: Overload:ElectricDrill.AstraRpgHealth.DefenseReductionFunctions.LogDefenseReductionFnSO.CalculateReducedDefense
+  href: api/ElectricDrill.AstraRpgHealth.DefensePenetrationFunctions.LogDefensePenetrationFnSO.html#ElectricDrill_AstraRpgHealth_DefensePenetrationFunctions_LogDefensePenetrationFnSO_CalculateReducedDefense_
+  commentId: Overload:ElectricDrill.AstraRpgHealth.DefensePenetrationFunctions.LogDefensePenetrationFnSO.CalculateReducedDefense
   isSpec: "True"
-  fullName: ElectricDrill.AstraRpgHealth.DefenseReductionFunctions.LogDefenseReductionFnSO.CalculateReducedDefense
-  nameWithType: LogDefenseReductionFnSO.CalculateReducedDefense
-- uid: ElectricDrill.AstraRpgHealth.DefenseReductionFunctions.PercentageDefenseReductionFnSO
-  name: PercentageDefenseReductionFnSO
-  href: api/ElectricDrill.AstraRpgHealth.DefenseReductionFunctions.PercentageDefenseReductionFnSO.html
-  commentId: T:ElectricDrill.AstraRpgHealth.DefenseReductionFunctions.PercentageDefenseReductionFnSO
-  fullName: ElectricDrill.AstraRpgHealth.DefenseReductionFunctions.PercentageDefenseReductionFnSO
-  nameWithType: PercentageDefenseReductionFnSO
-- uid: ElectricDrill.AstraRpgHealth.DefenseReductionFunctions.PercentageDefenseReductionFnSO.CalculateReducedDefense(System.Int64,System.Int64,ElectricDrill.AstraRpgFramework.Stats.StatSO,System.Boolean)
+  fullName: ElectricDrill.AstraRpgHealth.DefensePenetrationFunctions.LogDefensePenetrationFnSO.CalculateReducedDefense
+  nameWithType: LogDefensePenetrationFnSO.CalculateReducedDefense
+- uid: ElectricDrill.AstraRpgHealth.DefensePenetrationFunctions.PercentageDefensePenetrationFnSO
+  name: PercentageDefensePenetrationFnSO
+  href: api/ElectricDrill.AstraRpgHealth.DefensePenetrationFunctions.PercentageDefensePenetrationFnSO.html
+  commentId: T:ElectricDrill.AstraRpgHealth.DefensePenetrationFunctions.PercentageDefensePenetrationFnSO
+  fullName: ElectricDrill.AstraRpgHealth.DefensePenetrationFunctions.PercentageDefensePenetrationFnSO
+  nameWithType: PercentageDefensePenetrationFnSO
+- uid: ElectricDrill.AstraRpgHealth.DefensePenetrationFunctions.PercentageDefensePenetrationFnSO.CalculateReducedDefense(System.Int64,System.Int64,ElectricDrill.AstraRpgFramework.Stats.StatSO,System.Boolean)
   name: CalculateReducedDefense(long, long, StatSO, bool)
-  href: api/ElectricDrill.AstraRpgHealth.DefenseReductionFunctions.PercentageDefenseReductionFnSO.html#ElectricDrill_AstraRpgHealth_DefenseReductionFunctions_PercentageDefenseReductionFnSO_CalculateReducedDefense_System_Int64_System_Int64_ElectricDrill_AstraRpgFramework_Stats_StatSO_System_Boolean_
-  commentId: M:ElectricDrill.AstraRpgHealth.DefenseReductionFunctions.PercentageDefenseReductionFnSO.CalculateReducedDefense(System.Int64,System.Int64,ElectricDrill.AstraRpgFramework.Stats.StatSO,System.Boolean)
+  href: api/ElectricDrill.AstraRpgHealth.DefensePenetrationFunctions.PercentageDefensePenetrationFnSO.html#ElectricDrill_AstraRpgHealth_DefensePenetrationFunctions_PercentageDefensePenetrationFnSO_CalculateReducedDefense_System_Int64_System_Int64_ElectricDrill_AstraRpgFramework_Stats_StatSO_System_Boolean_
+  commentId: M:ElectricDrill.AstraRpgHealth.DefensePenetrationFunctions.PercentageDefensePenetrationFnSO.CalculateReducedDefense(System.Int64,System.Int64,ElectricDrill.AstraRpgFramework.Stats.StatSO,System.Boolean)
   name.vb: CalculateReducedDefense(Long, Long, StatSO, Boolean)
-  fullName: ElectricDrill.AstraRpgHealth.DefenseReductionFunctions.PercentageDefenseReductionFnSO.CalculateReducedDefense(long, long, ElectricDrill.AstraRpgFramework.Stats.StatSO, bool)
-  fullName.vb: ElectricDrill.AstraRpgHealth.DefenseReductionFunctions.PercentageDefenseReductionFnSO.CalculateReducedDefense(Long, Long, ElectricDrill.AstraRpgFramework.Stats.StatSO, Boolean)
-  nameWithType: PercentageDefenseReductionFnSO.CalculateReducedDefense(long, long, StatSO, bool)
-  nameWithType.vb: PercentageDefenseReductionFnSO.CalculateReducedDefense(Long, Long, StatSO, Boolean)
-- uid: ElectricDrill.AstraRpgHealth.DefenseReductionFunctions.PercentageDefenseReductionFnSO.CalculateReducedDefense*
+  fullName: ElectricDrill.AstraRpgHealth.DefensePenetrationFunctions.PercentageDefensePenetrationFnSO.CalculateReducedDefense(long, long, ElectricDrill.AstraRpgFramework.Stats.StatSO, bool)
+  fullName.vb: ElectricDrill.AstraRpgHealth.DefensePenetrationFunctions.PercentageDefensePenetrationFnSO.CalculateReducedDefense(Long, Long, ElectricDrill.AstraRpgFramework.Stats.StatSO, Boolean)
+  nameWithType: PercentageDefensePenetrationFnSO.CalculateReducedDefense(long, long, StatSO, bool)
+  nameWithType.vb: PercentageDefensePenetrationFnSO.CalculateReducedDefense(Long, Long, StatSO, Boolean)
+- uid: ElectricDrill.AstraRpgHealth.DefensePenetrationFunctions.PercentageDefensePenetrationFnSO.CalculateReducedDefense*
   name: CalculateReducedDefense
-  href: api/ElectricDrill.AstraRpgHealth.DefenseReductionFunctions.PercentageDefenseReductionFnSO.html#ElectricDrill_AstraRpgHealth_DefenseReductionFunctions_PercentageDefenseReductionFnSO_CalculateReducedDefense_
-  commentId: Overload:ElectricDrill.AstraRpgHealth.DefenseReductionFunctions.PercentageDefenseReductionFnSO.CalculateReducedDefense
+  href: api/ElectricDrill.AstraRpgHealth.DefensePenetrationFunctions.PercentageDefensePenetrationFnSO.html#ElectricDrill_AstraRpgHealth_DefensePenetrationFunctions_PercentageDefensePenetrationFnSO_CalculateReducedDefense_
+  commentId: Overload:ElectricDrill.AstraRpgHealth.DefensePenetrationFunctions.PercentageDefensePenetrationFnSO.CalculateReducedDefense
   isSpec: "True"
-  fullName: ElectricDrill.AstraRpgHealth.DefenseReductionFunctions.PercentageDefenseReductionFnSO.CalculateReducedDefense
-  nameWithType: PercentageDefenseReductionFnSO.CalculateReducedDefense
+  fullName: ElectricDrill.AstraRpgHealth.DefensePenetrationFunctions.PercentageDefensePenetrationFnSO.CalculateReducedDefense
+  nameWithType: PercentageDefensePenetrationFnSO.CalculateReducedDefense
 - uid: ElectricDrill.AstraRpgHealth.EntityHealth
   name: EntityHealth
   href: api/ElectricDrill.AstraRpgHealth.EntityHealth.html

@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Class LogDamageReductionFn | Astra RPG Health </title>
+      <title>Class LogDamageMitigationFnSO | Astra RPG Health </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Class LogDamageReductionFn | Astra RPG Health ">
+      <meta name="title" content="Class LogDamageMitigationFnSO | Astra RPG Health ">
       
       
       <link rel="icon" href="../images/astra-health-ico.ico">
@@ -16,7 +16,7 @@
       <meta name="docfx:rel" content="../">
       
       
-      <meta name="docfx:docurl" content="https://github.com/Cis8/AstraRPGHealth/new/main/apiSpec/new?filename=ElectricDrill_AstraRpgHealth_DamageReductionFunctions_DamageReductionFunctions_LogDamageReductionFn.md&amp;value=---%0Auid%3A%20ElectricDrill.AstraRpgHealth.DamageReductionFunctions.DamageReductionFunctions.LogDamageReductionFn%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="docfx:docurl" content="https://github.com/Cis8/AstraRPGHealth/new/main/apiSpec/new?filename=ElectricDrill_AstraRpgHealth_DamageMitigationFunctions_LogDamageMitigationFnSO.md&amp;value=---%0Auid%3A%20ElectricDrill.AstraRpgHealth.DamageMitigationFunctions.LogDamageMitigationFnSO%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -84,16 +84,16 @@
           <nav id="breadcrumb"></nav>
         </div>
 
-        <article data-uid="ElectricDrill.AstraRpgHealth.DamageReductionFunctions.DamageReductionFunctions.LogDamageReductionFn">
+        <article data-uid="ElectricDrill.AstraRpgHealth.DamageMitigationFunctions.LogDamageMitigationFnSO">
 
 
 
-  <h1 id="ElectricDrill_AstraRpgHealth_DamageReductionFunctions_DamageReductionFunctions_LogDamageReductionFn" data-uid="ElectricDrill.AstraRpgHealth.DamageReductionFunctions.DamageReductionFunctions.LogDamageReductionFn" class="text-break">
-Class LogDamageReductionFn  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/DamageReductionFunctions/DamageReductionFunctions/LogDamageReductionFn.cs/#L6"><i class="bi bi-code-slash"></i></a>
+  <h1 id="ElectricDrill_AstraRpgHealth_DamageMitigationFunctions_LogDamageMitigationFnSO" data-uid="ElectricDrill.AstraRpgHealth.DamageMitigationFunctions.LogDamageMitigationFnSO" class="text-break">
+Class LogDamageMitigationFnSO  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/DamageMitigationFunctions/LogDamageMitigationFnSO.cs/#L6"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
-    <dl><dt>Namespace</dt><dd><a class="xref" href="ElectricDrill.html">ElectricDrill</a>.<a class="xref" href="ElectricDrill.AstraRpgHealth.html">AstraRpgHealth</a>.<a class="xref" href="ElectricDrill.AstraRpgHealth.DamageReductionFunctions.html">DamageReductionFunctions</a>.<a class="xref" href="ElectricDrill.AstraRpgHealth.DamageReductionFunctions.DamageReductionFunctions.html">DamageReductionFunctions</a></dd></dl>
+    <dl><dt>Namespace</dt><dd><a class="xref" href="ElectricDrill.html">ElectricDrill</a>.<a class="xref" href="ElectricDrill.AstraRpgHealth.html">AstraRpgHealth</a>.<a class="xref" href="ElectricDrill.AstraRpgHealth.DamageMitigationFunctions.html">DamageMitigationFunctions</a></dd></dl>
   <dl><dt>Assembly</dt><dd>com.electricdrill.astra-rpg-health.Runtime.dll</dd></dl>
   </div>
 
@@ -101,8 +101,7 @@ Class LogDamageReductionFn  <a class="header-action link-secondary" title="View 
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[CreateAssetMenu(fileName = &quot;Log Dmg Reduction Fn&quot;, menuName = &quot;Astra RPG Health/Dmg Reduction Functions/Log Dmg Reduction&quot;)]
-public class LogDamageReductionFn : DamageReductionFn</code></pre>
+    <pre><code class="lang-csharp hljs">public class LogDamageMitigationFnSO : DamageMitigationFnSO, ITaggable</code></pre>
   </div>
 
 
@@ -114,13 +113,26 @@ public class LogDamageReductionFn : DamageReductionFn</code></pre>
       <div><span class="xref">object</span></div>
       <div><a class="xref" href="https://docs.unity3d.com/ScriptReference/Object.html">Object</a></div>
       <div><a class="xref" href="https://docs.unity3d.com/ScriptReference/ScriptableObject.html">ScriptableObject</a></div>
-      <div><a class="xref" href="ElectricDrill.AstraRpgHealth.DamageReductionFunctions.DamageReductionFn.html">DamageReductionFn</a></div>
-      <div><span class="xref">LogDamageReductionFn</span></div>
+      <div><a class="xref" href="ElectricDrill.AstraRpgHealth.DamageMitigationFunctions.DamageMitigationFnSO.html">DamageMitigationFnSO</a></div>
+      <div><span class="xref">LogDamageMitigationFnSO</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><span class="xref">ITaggable</span></div>
     </dd>
   </dl>
 
 
-
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="ElectricDrill.AstraRpgHealth.DamageMitigationFunctions.DamageMitigationFnSO.html#ElectricDrill_AstraRpgHealth_DamageMitigationFunctions_DamageMitigationFnSO_Tags">DamageMitigationFnSO.Tags</a>
+    </div>
+  </dd></dl>
 
 
 
@@ -131,11 +143,11 @@ public class LogDamageReductionFn : DamageReductionFn</code></pre>
 </h2>
 
 
-  <a id="ElectricDrill_AstraRpgHealth_DamageReductionFunctions_DamageReductionFunctions_LogDamageReductionFn_ReducedDmg_" data-uid="ElectricDrill.AstraRpgHealth.DamageReductionFunctions.DamageReductionFunctions.LogDamageReductionFn.ReducedDmg*"></a>
+  <a id="ElectricDrill_AstraRpgHealth_DamageMitigationFunctions_LogDamageMitigationFnSO_CalculateReducedDamage_" data-uid="ElectricDrill.AstraRpgHealth.DamageMitigationFunctions.LogDamageMitigationFnSO.CalculateReducedDamage*"></a>
 
-  <h3 id="ElectricDrill_AstraRpgHealth_DamageReductionFunctions_DamageReductionFunctions_LogDamageReductionFn_ReducedDmg_System_Int64_System_Double_" data-uid="ElectricDrill.AstraRpgHealth.DamageReductionFunctions.DamageReductionFunctions.LogDamageReductionFn.ReducedDmg(System.Int64,System.Double)">
-  ReducedDmg(long, double)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/DamageReductionFunctions/DamageReductionFunctions/LogDamageReductionFn.cs/#L34"><i class="bi bi-code-slash"></i></a>
+  <h3 id="ElectricDrill_AstraRpgHealth_DamageMitigationFunctions_LogDamageMitigationFnSO_CalculateReducedDamage_System_Int64_System_Double_" data-uid="ElectricDrill.AstraRpgHealth.DamageMitigationFunctions.LogDamageMitigationFnSO.CalculateReducedDamage(System.Int64,System.Double)">
+  CalculateReducedDamage(long, double)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/DamageMitigationFunctions/LogDamageMitigationFnSO.cs/#L33"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Reduces damage using a logarithmic formula that produces diminishing returns as
@@ -144,7 +156,7 @@ the defensive stat increases.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override long ReducedDmg(long amount, double defensiveStatValue)</code></pre>
+    <pre><code class="lang-csharp hljs">public override long CalculateReducedDamage(long amount, double defensiveStatValue)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -170,7 +182,7 @@ the defensive stat increases.</p>
 
 
 
-  <h4 class="section" id="ElectricDrill_AstraRpgHealth_DamageReductionFunctions_DamageReductionFunctions_LogDamageReductionFn_ReducedDmg_System_Int64_System_Double__remarks">Remarks</h4>
+  <h4 class="section" id="ElectricDrill_AstraRpgHealth_DamageMitigationFunctions_LogDamageMitigationFnSO_CalculateReducedDamage_System_Int64_System_Double__remarks">Remarks</h4>
   <div class="markdown level1 remarks"><p>Formula:
 Reduced Damage = Damage * (BaseValue / (BaseValue + Log(1 + DefensiveStat * ScaleFactor)))</p>
 <p>If <code class="paramref">defensiveStatValue</code> is zero or negative the original damage is returned.

@@ -113,7 +113,7 @@ This can happen if, for example, you change from 10 base max HP to 25 by deletin
 <li><strong>Restore HP On Level Up</strong>: Boolean indicating whether the entity is fully healed when leveling up.</li>
 </ul>
 <h2 id="damage">Damage</h2>
-<p>For a better understanding of the first two properties of this section, I recommend taking a look at the <a href="damage.html#damage-calculation-strategy">Damage Calculation Strategy</a> documentation. Simply put, a Damage Calculation Strategy defines how the damage an entity is about to take is calculated (e.g., applying damage reduction for the defensive stat first, or damage absorption by the barrier first, when to apply the critical multiplier, etc.).
+<p>For a better understanding of the first two properties of this section, I recommend taking a look at the <a href="damage.html#damage-calculation-strategy">Damage Calculation Strategy</a> documentation. Simply put, a Damage Calculation Strategy defines how the damage an entity is about to take is calculated (e.g., applying damage mitigation for the defensive stat first, or damage absorption by the barrier first, when to apply the critical multiplier, etc.).
 Also recall that a default strategy can be assigned via configuration. See <a href="package-configuration.html#default-damage-calculation-strategy">Default Damage Calculation Strategy</a>.</p>
 <ul>
 <li><strong>Custom Damage Calculation Strategy</strong>: Field of type <code>DamageCalculationStrategy</code>. If the entity should use a custom damage calculation strategy, you can specify it here. This, if defined, takes precedence over the default one defined via configuration. A common use case could be, for example, a boss that cannot take more than 10% of its max health in damage at a time.</li>

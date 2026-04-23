@@ -1813,7 +1813,7 @@ This allows systems to react before any damage calculations occur.</li><li><b>Da
 track the damage through the calculation pipeline.</li><li><b>Immunity Check</b>: If the entity is immune (IsImmune is true), the damage is marked as
 prevented with EntityImmune reason. This happens before the pipeline to short-circuit processing.</li><li><b>Damage Calculation Pipeline</b>: If damage is not already prevented, the configured
 DamageCalculationStrategy processes the damage. The pipeline can apply:
-<ul><li>Damage reduction based on defensive stats</li><li>Barrier consumption (temporary HP absorption)</li><li>Critical hit calculations</li><li>General damage and/or damage type and damage source modifiers</li><li>Custom pipeline stages defined in the strategy</li></ul>
+<ul><li>Damage mitigation based on defensive stats</li><li>Barrier consumption (temporary HP absorption)</li><li>Critical hit calculations</li><li>General damage and/or damage type and damage source modifiers</li><li>Custom pipeline stages defined in the strategy</li></ul>
 The pipeline can also mark damage as prevented for various reasons.</li><li><b>Prevention Check</b>: If the damage was prevented (either by immunity or during the pipeline):
 <ul><li>Creates a DamageResolutionContext.Prevented result with all prevention reasons</li><li>Raises the DamageResolutionGameEvent</li><li>Returns immediately without affecting health</li></ul></li><li><b>Health Reduction</b>: If damage was not prevented, the final calculated damage amount
 is subtracted from the entity's current health via RemoveHealth(). This may trigger the HealthChangedGameEvent.</li><li><b>Damage Resolution Event</b>: Raises the DamageResolutionGameEvent with the applied

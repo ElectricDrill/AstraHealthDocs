@@ -2,11 +2,11 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Class FlatDefenseReductionFnSO | Astra RPG Health </title>
+      <title>Class LogDamageMitigationFn | Astra RPG Health </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Class FlatDefenseReductionFnSO | Astra RPG Health ">
+      <meta name="title" content="Class LogDamageMitigationFn | Astra RPG Health ">
       
-      <meta name="description" content="Reduces defense by subtracting a scaled amount of the piercing stat from the pierced defense. The result is clamped to the stat&#39;s min/max bounds. Create instances via Assets -&amp;gt; Create -&amp;gt; Astra RPG Health / Def Reduction Functions / Flat Def Reduction.">
+      
       <link rel="icon" href="../images/astra-health-ico.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -16,7 +16,7 @@
       <meta name="docfx:rel" content="../">
       
       
-      <meta name="docfx:docurl" content="https://github.com/Cis8/AstraRPGHealth/new/main/apiSpec/new?filename=ElectricDrill_AstraRpgHealth_DefenseReductionFunctions_FlatDefenseReductionFnSO.md&amp;value=---%0Auid%3A%20ElectricDrill.AstraRpgHealth.DefenseReductionFunctions.FlatDefenseReductionFnSO%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="docfx:docurl" content="https://github.com/Cis8/AstraRPGHealth/new/main/apiSpec/new?filename=ElectricDrill_AstraRpgHealth_DamageMitigationFunctions_DamageMitigationFunctions_LogDamageMitigationFn.md&amp;value=---%0Auid%3A%20ElectricDrill.AstraRpgHealth.DamageMitigationFunctions.DamageMitigationFunctions.LogDamageMitigationFn%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -84,27 +84,25 @@
           <nav id="breadcrumb"></nav>
         </div>
 
-        <article data-uid="ElectricDrill.AstraRpgHealth.DefenseReductionFunctions.FlatDefenseReductionFnSO">
+        <article data-uid="ElectricDrill.AstraRpgHealth.DamageMitigationFunctions.DamageMitigationFunctions.LogDamageMitigationFn">
 
 
 
-  <h1 id="ElectricDrill_AstraRpgHealth_DefenseReductionFunctions_FlatDefenseReductionFnSO" data-uid="ElectricDrill.AstraRpgHealth.DefenseReductionFunctions.FlatDefenseReductionFnSO" class="text-break">
-Class FlatDefenseReductionFnSO  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/DefenseReductionFunctions/FlatDefenseReductionFnSO.cs/#L10"><i class="bi bi-code-slash"></i></a>
+  <h1 id="ElectricDrill_AstraRpgHealth_DamageMitigationFunctions_DamageMitigationFunctions_LogDamageMitigationFn" data-uid="ElectricDrill.AstraRpgHealth.DamageMitigationFunctions.DamageMitigationFunctions.LogDamageMitigationFn" class="text-break">
+Class LogDamageMitigationFn  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/DamageMitigationFunctions/DamageMitigationFunctions/LogDamageMitigationFn.cs/#L6"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
-    <dl><dt>Namespace</dt><dd><a class="xref" href="ElectricDrill.html">ElectricDrill</a>.<a class="xref" href="ElectricDrill.AstraRpgHealth.html">AstraRpgHealth</a>.<a class="xref" href="ElectricDrill.AstraRpgHealth.DefenseReductionFunctions.html">DefenseReductionFunctions</a></dd></dl>
+    <dl><dt>Namespace</dt><dd><a class="xref" href="ElectricDrill.html">ElectricDrill</a>.<a class="xref" href="ElectricDrill.AstraRpgHealth.html">AstraRpgHealth</a>.<a class="xref" href="ElectricDrill.AstraRpgHealth.DamageMitigationFunctions.html">DamageMitigationFunctions</a>.<a class="xref" href="ElectricDrill.AstraRpgHealth.DamageMitigationFunctions.DamageMitigationFunctions.html">DamageMitigationFunctions</a></dd></dl>
   <dl><dt>Assembly</dt><dd>com.electricdrill.astra-rpg-health.Runtime.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>Reduces defense by subtracting a scaled amount of the piercing stat from the pierced defense.
-The result is clamped to the stat's min/max bounds.
-Create instances via Assets -&gt; Create -&gt; Astra RPG Health / Def Reduction Functions / Flat Def Reduction.</p>
-</div>
+  <div class="markdown summary"></div>
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class FlatDefenseReductionFnSO : DefenseReductionFnSO, ITaggable</code></pre>
+    <pre><code class="lang-csharp hljs">[CreateAssetMenu(fileName = &quot;Log Dmg Mitigation Fn&quot;, menuName = &quot;Astra RPG Health/Dmg Mitigation Functions/Log Dmg Mitigation&quot;)]
+public class LogDamageMitigationFn : DamageMitigationFn</code></pre>
   </div>
 
 
@@ -116,26 +114,13 @@ Create instances via Assets -&gt; Create -&gt; Astra RPG Health / Def Reduction 
       <div><span class="xref">object</span></div>
       <div><a class="xref" href="https://docs.unity3d.com/ScriptReference/Object.html">Object</a></div>
       <div><a class="xref" href="https://docs.unity3d.com/ScriptReference/ScriptableObject.html">ScriptableObject</a></div>
-      <div><a class="xref" href="ElectricDrill.AstraRpgHealth.DefenseReductionFunctions.DefenseReductionFnSO.html">DefenseReductionFnSO</a></div>
-      <div><span class="xref">FlatDefenseReductionFnSO</span></div>
-    </dd>
-  </dl>
-
-  <dl class="typelist implements">
-    <dt>Implements</dt>
-    <dd>
-      <div><span class="xref">ITaggable</span></div>
+      <div><a class="xref" href="ElectricDrill.AstraRpgHealth.DamageMitigationFunctions.DamageMitigationFn.html">DamageMitigationFn</a></div>
+      <div><span class="xref">LogDamageMitigationFn</span></div>
     </dd>
   </dl>
 
 
-  <dl class="typelist inheritedMembers">
-    <dt>Inherited Members</dt>
-    <dd>
-    <div>
-      <a class="xref" href="ElectricDrill.AstraRpgHealth.DefenseReductionFunctions.DefenseReductionFnSO.html#ElectricDrill_AstraRpgHealth_DefenseReductionFunctions_DefenseReductionFnSO_Tags">DefenseReductionFnSO.Tags</a>
-    </div>
-  </dd></dl>
+
 
 
 
@@ -146,41 +131,36 @@ Create instances via Assets -&gt; Create -&gt; Astra RPG Health / Def Reduction 
 </h2>
 
 
-  <a id="ElectricDrill_AstraRpgHealth_DefenseReductionFunctions_FlatDefenseReductionFnSO_CalculateReducedDefense_" data-uid="ElectricDrill.AstraRpgHealth.DefenseReductionFunctions.FlatDefenseReductionFnSO.CalculateReducedDefense*"></a>
+  <a id="ElectricDrill_AstraRpgHealth_DamageMitigationFunctions_DamageMitigationFunctions_LogDamageMitigationFn_ReducedDmg_" data-uid="ElectricDrill.AstraRpgHealth.DamageMitigationFunctions.DamageMitigationFunctions.LogDamageMitigationFn.ReducedDmg*"></a>
 
-  <h3 id="ElectricDrill_AstraRpgHealth_DefenseReductionFunctions_FlatDefenseReductionFnSO_CalculateReducedDefense_System_Int64_System_Int64_ElectricDrill_AstraRpgFramework_Stats_StatSO_System_Boolean_" data-uid="ElectricDrill.AstraRpgHealth.DefenseReductionFunctions.FlatDefenseReductionFnSO.CalculateReducedDefense(System.Int64,System.Int64,ElectricDrill.AstraRpgFramework.Stats.StatSO,System.Boolean)">
-  CalculateReducedDefense(long, long, StatSO, bool)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/DefenseReductionFunctions/FlatDefenseReductionFnSO.cs/#L22"><i class="bi bi-code-slash"></i></a>
+  <h3 id="ElectricDrill_AstraRpgHealth_DamageMitigationFunctions_DamageMitigationFunctions_LogDamageMitigationFn_ReducedDmg_System_Int64_System_Double_" data-uid="ElectricDrill.AstraRpgHealth.DamageMitigationFunctions.DamageMitigationFunctions.LogDamageMitigationFn.ReducedDmg(System.Int64,System.Double)">
+  ReducedDmg(long, double)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/DamageMitigationFunctions/DamageMitigationFunctions/LogDamageMitigationFn.cs/#L34"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Subtracts (piercingStatValue * factor) from the pierced defense and optionally clamps the result to the stat's bounds.</p>
+  <div class="markdown level1 summary"><p>Reduces damage using a logarithmic formula that produces diminishing returns as
+the defensive stat increases.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override double CalculateReducedDefense(long piercingStatValue, long defensiveStatValue, StatSO defensiveStat, bool applyClamp = true)</code></pre>
+    <pre><code class="lang-csharp hljs">public override long ReducedDmg(long amount, double defensiveStatValue)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>piercingStatValue</code> <span class="xref">long</span></dt>
-    <dd><p>The attacker's piercing stat value used to reduce defense.</p>
+    <dt><code>amount</code> <span class="xref">long</span></dt>
+    <dd><p>Incoming damage amount.</p>
 </dd>
-    <dt><code>defensiveStatValue</code> <span class="xref">long</span></dt>
-    <dd><p>The defender's original defense stat value to be reduced.</p>
-</dd>
-    <dt><code>defensiveStat</code> <span class="xref">StatSO</span></dt>
-    <dd><p>The defensive stat object used to clamp the result.</p>
-</dd>
-    <dt><code>applyClamp</code> <span class="xref">bool</span></dt>
-    <dd><p>Whether to apply stat clamping to the result.</p>
+    <dt><code>defensiveStatValue</code> <span class="xref">double</span></dt>
+    <dd><p>Defensive statistic value used to compute the reduction multiplier.</p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><span class="xref">double</span></dt>
-    <dd><p>The reduced defense value (clamped to stat's min/max bounds if applyClamp is true).</p>
+    <dt><span class="xref">long</span></dt>
+    <dd><p>The reduced damage as a non-negative <span class="xref">long</span> (rounded).</p>
 </dd>
   </dl>
 
@@ -190,6 +170,12 @@ Create instances via Assets -&gt; Create -&gt; Astra RPG Health / Def Reduction 
 
 
 
+  <h4 class="section" id="ElectricDrill_AstraRpgHealth_DamageMitigationFunctions_DamageMitigationFunctions_LogDamageMitigationFn_ReducedDmg_System_Int64_System_Double__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Formula:
+Reduced Damage = Damage * (BaseValue / (BaseValue + Log(1 + DefensiveStat * ScaleFactor)))</p>
+<p>If <code class="paramref">defensiveStatValue</code> is zero or negative the original damage is returned.
+The final result is clamped to be non-negative and rounded to the nearest integer.</p>
+</div>
 
 
 

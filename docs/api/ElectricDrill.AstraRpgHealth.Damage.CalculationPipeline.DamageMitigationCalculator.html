@@ -2,11 +2,11 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Class DamageReductionCalculator | Astra RPG Health </title>
+      <title>Class DamageMitigationCalculator | Astra RPG Health </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Class DamageReductionCalculator | Astra RPG Health ">
+      <meta name="title" content="Class DamageMitigationCalculator | Astra RPG Health ">
       
-      <meta name="description" content="Pure, stateless helpers that compute damage after defensive and damage reduction functions are applied. The class is policy-free: callers are responsible for validating their  configuration (for example, the consistency warnings in ).">
+      <meta name="description" content="Pure, stateless helpers that compute damage after defensive and damage mitigation functions are applied. The class is policy-free: callers are responsible for validating their  configuration (for example, the consistency warnings in ).">
       <link rel="icon" href="../images/astra-health-ico.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -16,7 +16,7 @@
       <meta name="docfx:rel" content="../">
       
       
-      <meta name="docfx:docurl" content="https://github.com/Cis8/AstraRPGHealth/new/main/apiSpec/new?filename=ElectricDrill_AstraRpgHealth_Damage_CalculationPipeline_DamageReductionCalculator.md&amp;value=---%0Auid%3A%20ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.DamageReductionCalculator%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="docfx:docurl" content="https://github.com/Cis8/AstraRPGHealth/new/main/apiSpec/new?filename=ElectricDrill_AstraRpgHealth_Damage_CalculationPipeline_DamageMitigationCalculator.md&amp;value=---%0Auid%3A%20ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.DamageMitigationCalculator%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -84,12 +84,12 @@
           <nav id="breadcrumb"></nav>
         </div>
 
-        <article data-uid="ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.DamageReductionCalculator">
+        <article data-uid="ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.DamageMitigationCalculator">
 
 
 
-  <h1 id="ElectricDrill_AstraRpgHealth_Damage_CalculationPipeline_DamageReductionCalculator" data-uid="ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.DamageReductionCalculator" class="text-break">
-Class DamageReductionCalculator  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/Damage/CalculationPipeline/DamageReductionCalculator.cs/#L14"><i class="bi bi-code-slash"></i></a>
+  <h1 id="ElectricDrill_AstraRpgHealth_Damage_CalculationPipeline_DamageMitigationCalculator" data-uid="ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.DamageMitigationCalculator" class="text-break">
+Class DamageMitigationCalculator  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/Damage/CalculationPipeline/DamageMitigationCalculator.cs/#L14"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -105,7 +105,7 @@ responsible for validating their <a class="xref" href="ElectricDrill.AstraRpgHea
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static class DamageReductionCalculator</code></pre>
+    <pre><code class="lang-csharp hljs">public static class DamageMitigationCalculator</code></pre>
   </div>
 
 
@@ -115,7 +115,7 @@ responsible for validating their <a class="xref" href="ElectricDrill.AstraRpgHea
     <dt>Inheritance</dt>
     <dd>
       <div><span class="xref">object</span></div>
-      <div><span class="xref">DamageReductionCalculator</span></div>
+      <div><span class="xref">DamageMitigationCalculator</span></div>
     </dd>
   </dl>
 
@@ -131,20 +131,20 @@ responsible for validating their <a class="xref" href="ElectricDrill.AstraRpgHea
 </h2>
 
 
-  <a id="ElectricDrill_AstraRpgHealth_Damage_CalculationPipeline_DamageReductionCalculator_ApplyDamageReduction_" data-uid="ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.DamageReductionCalculator.ApplyDamageReduction*"></a>
+  <a id="ElectricDrill_AstraRpgHealth_Damage_CalculationPipeline_DamageMitigationCalculator_ApplyDamageMitigation_" data-uid="ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.DamageMitigationCalculator.ApplyDamageMitigation*"></a>
 
-  <h3 id="ElectricDrill_AstraRpgHealth_Damage_CalculationPipeline_DamageReductionCalculator_ApplyDamageReduction_System_Int64_System_Double_ElectricDrill_AstraRpgHealth_DamageReductionFunctions_DamageReductionFnSO_" data-uid="ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.DamageReductionCalculator.ApplyDamageReduction(System.Int64,System.Double,ElectricDrill.AstraRpgHealth.DamageReductionFunctions.DamageReductionFnSO)">
-  ApplyDamageReduction(long, double, DamageReductionFnSO)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/Damage/CalculationPipeline/DamageReductionCalculator.cs/#L101"><i class="bi bi-code-slash"></i></a>
+  <h3 id="ElectricDrill_AstraRpgHealth_Damage_CalculationPipeline_DamageMitigationCalculator_ApplyDamageMitigation_System_Int64_System_Double_ElectricDrill_AstraRpgHealth_DamageMitigationFunctions_DamageMitigationFnSO_" data-uid="ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.DamageMitigationCalculator.ApplyDamageMitigation(System.Int64,System.Double,ElectricDrill.AstraRpgHealth.DamageMitigationFunctions.DamageMitigationFnSO)">
+  ApplyDamageMitigation(long, double, DamageMitigationFnSO)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/Damage/CalculationPipeline/DamageMitigationCalculator.cs/#L101"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Applies <code class="paramref">damageReductionFn</code> to <code class="paramref">amount</code>
+  <div class="markdown level1 summary"><p>Applies <code class="paramref">damageMitigationFn</code> to <code class="paramref">amount</code>
 using a (possibly already reduced) defensive stat value.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static long ApplyDamageReduction(long amount, double reducedDefensiveStatValue, DamageReductionFnSO damageReductionFn)</code></pre>
+    <pre><code class="lang-csharp hljs">public static long ApplyDamageMitigation(long amount, double reducedDefensiveStatValue, DamageMitigationFnSO damageMitigationFn)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -153,10 +153,10 @@ using a (possibly already reduced) defensive stat value.</p>
     <dd><p>The damage amount to reduce.</p>
 </dd>
     <dt><code>reducedDefensiveStatValue</code> <span class="xref">double</span></dt>
-    <dd><p>The defensive stat value after defense reduction was applied.</p>
+    <dd><p>The defensive stat value after defense penetration was applied.</p>
 </dd>
-    <dt><code>damageReductionFn</code> <a class="xref" href="ElectricDrill.AstraRpgHealth.DamageReductionFunctions.DamageReductionFnSO.html">DamageReductionFnSO</a></dt>
-    <dd><p>The damage reduction function. May be <code>null</code>, in which case <code class="paramref">amount</code> is returned unchanged.</p>
+    <dt><code>damageMitigationFn</code> <a class="xref" href="ElectricDrill.AstraRpgHealth.DamageMitigationFunctions.DamageMitigationFnSO.html">DamageMitigationFnSO</a></dt>
+    <dd><p>The damage mitigation function. May be <code>null</code>, in which case <code class="paramref">amount</code> is returned unchanged.</p>
 </dd>
   </dl>
 
@@ -177,20 +177,20 @@ using a (possibly already reduced) defensive stat value.</p>
 
 
 
-  <a id="ElectricDrill_AstraRpgHealth_Damage_CalculationPipeline_DamageReductionCalculator_CalculateReducedDefense_" data-uid="ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.DamageReductionCalculator.CalculateReducedDefense*"></a>
+  <a id="ElectricDrill_AstraRpgHealth_Damage_CalculationPipeline_DamageMitigationCalculator_CalculateReducedDefense_" data-uid="ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.DamageMitigationCalculator.CalculateReducedDefense*"></a>
 
-  <h3 id="ElectricDrill_AstraRpgHealth_Damage_CalculationPipeline_DamageReductionCalculator_CalculateReducedDefense_System_Int64_System_Int64_ElectricDrill_AstraRpgHealth_DefenseReductionFunctions_DefenseReductionFnSO_ElectricDrill_AstraRpgFramework_Stats_StatSO_System_Boolean_" data-uid="ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.DamageReductionCalculator.CalculateReducedDefense(System.Int64,System.Int64,ElectricDrill.AstraRpgHealth.DefenseReductionFunctions.DefenseReductionFnSO,ElectricDrill.AstraRpgFramework.Stats.StatSO,System.Boolean)">
-  CalculateReducedDefense(long, long, DefenseReductionFnSO, StatSO, bool)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/Damage/CalculationPipeline/DamageReductionCalculator.cs/#L81"><i class="bi bi-code-slash"></i></a>
+  <h3 id="ElectricDrill_AstraRpgHealth_Damage_CalculationPipeline_DamageMitigationCalculator_CalculateReducedDefense_System_Int64_System_Int64_ElectricDrill_AstraRpgHealth_DefensePenetrationFunctions_DefensePenetrationFnSO_ElectricDrill_AstraRpgFramework_Stats_StatSO_System_Boolean_" data-uid="ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.DamageMitigationCalculator.CalculateReducedDefense(System.Int64,System.Int64,ElectricDrill.AstraRpgHealth.DefensePenetrationFunctions.DefensePenetrationFnSO,ElectricDrill.AstraRpgFramework.Stats.StatSO,System.Boolean)">
+  CalculateReducedDefense(long, long, DefensePenetrationFnSO, StatSO, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/Damage/CalculationPipeline/DamageMitigationCalculator.cs/#L81"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Calculates the effective defensive stat value after the attacker's
-piercing has been applied through <code class="paramref">defenseReductionFn</code>.</p>
+piercing has been applied through <code class="paramref">defensePenetrationFn</code>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static double CalculateReducedDefense(long piercingStatValue, long defensiveStatValue, DefenseReductionFnSO defenseReductionFn, StatSO defensiveStat, bool applyClamp = true)</code></pre>
+    <pre><code class="lang-csharp hljs">public static double CalculateReducedDefense(long piercingStatValue, long defensiveStatValue, DefensePenetrationFnSO defensePenetrationFn, StatSO defensiveStat, bool applyClamp = true)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -201,11 +201,11 @@ piercing has been applied through <code class="paramref">defenseReductionFn</cod
     <dt><code>defensiveStatValue</code> <span class="xref">long</span></dt>
     <dd><p>The defender's defensive stat value.</p>
 </dd>
-    <dt><code>defenseReductionFn</code> <a class="xref" href="ElectricDrill.AstraRpgHealth.DefenseReductionFunctions.DefenseReductionFnSO.html">DefenseReductionFnSO</a></dt>
+    <dt><code>defensePenetrationFn</code> <a class="xref" href="ElectricDrill.AstraRpgHealth.DefensePenetrationFunctions.DefensePenetrationFnSO.html">DefensePenetrationFnSO</a></dt>
     <dd><p>The reduction function. May be <code>null</code>, in which case <code class="paramref">defensiveStatValue</code> is returned unchanged.</p>
 </dd>
     <dt><code>defensiveStat</code> <span class="xref">StatSO</span></dt>
-    <dd><p>The defensive <span class="xref">ElectricDrill.AstraRpgFramework.Stats.StatSO</span> definition. May be <code>null</code> when <code class="paramref">defenseReductionFn</code> is <code>null</code>.</p>
+    <dd><p>The defensive <span class="xref">ElectricDrill.AstraRpgFramework.Stats.StatSO</span> definition. May be <code>null</code> when <code class="paramref">defensePenetrationFn</code> is <code>null</code>.</p>
 </dd>
     <dt><code>applyClamp</code> <span class="xref">bool</span></dt>
     <dd><p>Whether to apply stat clamping. Defaults to <code>true</code>.</p>
@@ -229,11 +229,11 @@ piercing has been applied through <code class="paramref">defenseReductionFn</cod
 
 
 
-  <a id="ElectricDrill_AstraRpgHealth_Damage_CalculationPipeline_DamageReductionCalculator_CalculateReducedDmg_" data-uid="ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.DamageReductionCalculator.CalculateReducedDmg*"></a>
+  <a id="ElectricDrill_AstraRpgHealth_Damage_CalculationPipeline_DamageMitigationCalculator_CalculateReducedDmg_" data-uid="ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.DamageMitigationCalculator.CalculateReducedDmg*"></a>
 
-  <h3 id="ElectricDrill_AstraRpgHealth_Damage_CalculationPipeline_DamageReductionCalculator_CalculateReducedDmg_System_Int64_System_Int64_ElectricDrill_AstraRpgHealth_DefenseReductionFunctions_DefenseReductionFnSO_System_Int64_ElectricDrill_AstraRpgFramework_Stats_StatSO_ElectricDrill_AstraRpgHealth_DamageReductionFunctions_DamageReductionFnSO_System_Boolean_" data-uid="ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.DamageReductionCalculator.CalculateReducedDmg(System.Int64,System.Int64,ElectricDrill.AstraRpgHealth.DefenseReductionFunctions.DefenseReductionFnSO,System.Int64,ElectricDrill.AstraRpgFramework.Stats.StatSO,ElectricDrill.AstraRpgHealth.DamageReductionFunctions.DamageReductionFnSO,System.Boolean)">
-  CalculateReducedDmg(long, long, DefenseReductionFnSO, long, StatSO, DamageReductionFnSO, bool)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/Damage/CalculationPipeline/DamageReductionCalculator.cs/#L29"><i class="bi bi-code-slash"></i></a>
+  <h3 id="ElectricDrill_AstraRpgHealth_Damage_CalculationPipeline_DamageMitigationCalculator_CalculateReducedDmg_System_Int64_System_Int64_ElectricDrill_AstraRpgHealth_DefensePenetrationFunctions_DefensePenetrationFnSO_System_Int64_ElectricDrill_AstraRpgFramework_Stats_StatSO_ElectricDrill_AstraRpgHealth_DamageMitigationFunctions_DamageMitigationFnSO_System_Boolean_" data-uid="ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.DamageMitigationCalculator.CalculateReducedDmg(System.Int64,System.Int64,ElectricDrill.AstraRpgHealth.DefensePenetrationFunctions.DefensePenetrationFnSO,System.Int64,ElectricDrill.AstraRpgFramework.Stats.StatSO,ElectricDrill.AstraRpgHealth.DamageMitigationFunctions.DamageMitigationFnSO,System.Boolean)">
+  CalculateReducedDmg(long, long, DefensePenetrationFnSO, long, StatSO, DamageMitigationFnSO, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/Damage/CalculationPipeline/DamageMitigationCalculator.cs/#L29"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Calculates the reduced damage amount by first reducing the defensive
@@ -243,7 +243,7 @@ reduction function.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static long CalculateReducedDmg(long amount, long piercingStatValue, DefenseReductionFnSO defenseReductionFn, long defensiveStatValue, StatSO defensiveStat, DamageReductionFnSO damageReductionFn, bool applyClamp = true)</code></pre>
+    <pre><code class="lang-csharp hljs">public static long CalculateReducedDmg(long amount, long piercingStatValue, DefensePenetrationFnSO defensePenetrationFn, long defensiveStatValue, StatSO defensiveStat, DamageMitigationFnSO damageMitigationFn, bool applyClamp = true)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -254,27 +254,27 @@ reduction function.</p>
     <dt><code>piercingStatValue</code> <span class="xref">long</span></dt>
     <dd><p>The attacker's piercing stat value.</p>
 </dd>
-    <dt><code>defenseReductionFn</code> <a class="xref" href="ElectricDrill.AstraRpgHealth.DefenseReductionFunctions.DefenseReductionFnSO.html">DefenseReductionFnSO</a></dt>
+    <dt><code>defensePenetrationFn</code> <a class="xref" href="ElectricDrill.AstraRpgHealth.DefensePenetrationFunctions.DefensePenetrationFnSO.html">DefensePenetrationFnSO</a></dt>
     <dd><p>Function used to reduce the defensive stat with the piercing value. May be <code>null</code>, in which case the defensive stat is passed through unchanged.</p>
 </dd>
     <dt><code>defensiveStatValue</code> <span class="xref">long</span></dt>
     <dd><p>The defender's defensive stat value.</p>
 </dd>
     <dt><code>defensiveStat</code> <span class="xref">StatSO</span></dt>
-    <dd><p>The defensive <span class="xref">ElectricDrill.AstraRpgFramework.Stats.StatSO</span> definition. May be <code>null</code> when <code class="paramref">defenseReductionFn</code> is <code>null</code>.</p>
+    <dd><p>The defensive <span class="xref">ElectricDrill.AstraRpgFramework.Stats.StatSO</span> definition. May be <code>null</code> when <code class="paramref">defensePenetrationFn</code> is <code>null</code>.</p>
 </dd>
-    <dt><code>damageReductionFn</code> <a class="xref" href="ElectricDrill.AstraRpgHealth.DamageReductionFunctions.DamageReductionFnSO.html">DamageReductionFnSO</a></dt>
+    <dt><code>damageMitigationFn</code> <a class="xref" href="ElectricDrill.AstraRpgHealth.DamageMitigationFunctions.DamageMitigationFnSO.html">DamageMitigationFnSO</a></dt>
     <dd><p>Function used to reduce the damage based on the (possibly reduced) defensive stat. May be <code>null</code>, in which case <code class="paramref">amount</code> is returned unchanged.</p>
 </dd>
     <dt><code>applyClamp</code> <span class="xref">bool</span></dt>
-    <dd><p>Whether to apply stat clamping in defense reduction. Defaults to <code>true</code> for gameplay; pass <code>false</code> for analysis tools that want to visualize the unclamped formula.</p>
+    <dd><p>Whether to apply stat clamping in defense penetration. Defaults to <code>true</code> for gameplay; pass <code>false</code> for analysis tools that want to visualize the unclamped formula.</p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><span class="xref">long</span></dt>
-    <dd><p>The damage amount after defense and damage reduction have been applied.</p>
+    <dd><p>The damage amount after defense and damage mitigation have been applied.</p>
 </dd>
   </dl>
 
@@ -288,15 +288,15 @@ reduction function.</p>
 
 
 
-  <a id="ElectricDrill_AstraRpgHealth_Damage_CalculationPipeline_DamageReductionCalculator_CalculateReducedDmg_" data-uid="ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.DamageReductionCalculator.CalculateReducedDmg*"></a>
+  <a id="ElectricDrill_AstraRpgHealth_Damage_CalculationPipeline_DamageMitigationCalculator_CalculateReducedDmg_" data-uid="ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.DamageMitigationCalculator.CalculateReducedDmg*"></a>
 
-  <h3 id="ElectricDrill_AstraRpgHealth_Damage_CalculationPipeline_DamageReductionCalculator_CalculateReducedDmg_System_Int64_System_Int64_System_Int64_ElectricDrill_AstraRpgHealth_Damage_DamageTypeSO_System_Boolean_" data-uid="ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.DamageReductionCalculator.CalculateReducedDmg(System.Int64,System.Int64,System.Int64,ElectricDrill.AstraRpgHealth.Damage.DamageTypeSO,System.Boolean)">
+  <h3 id="ElectricDrill_AstraRpgHealth_Damage_CalculationPipeline_DamageMitigationCalculator_CalculateReducedDmg_System_Int64_System_Int64_System_Int64_ElectricDrill_AstraRpgHealth_Damage_DamageTypeSO_System_Boolean_" data-uid="ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.DamageMitigationCalculator.CalculateReducedDmg(System.Int64,System.Int64,System.Int64,ElectricDrill.AstraRpgHealth.Damage.DamageTypeSO,System.Boolean)">
   CalculateReducedDmg(long, long, long, DamageTypeSO, bool)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/Damage/CalculationPipeline/DamageReductionCalculator.cs/#L54"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/Damage/CalculationPipeline/DamageMitigationCalculator.cs/#L54"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Convenience overload that reads <a class="xref" href="ElectricDrill.AstraRpgHealth.Damage.DamageTypeSO.html#ElectricDrill_AstraRpgHealth_Damage_DamageTypeSO_DefenseReductionFn">DefenseReductionFn</a>,
-<a class="xref" href="ElectricDrill.AstraRpgHealth.Damage.DamageTypeSO.html#ElectricDrill_AstraRpgHealth_Damage_DamageTypeSO_DamageReductionFn">DamageReductionFn</a> and <a class="xref" href="ElectricDrill.AstraRpgHealth.Damage.DamageTypeSO.html#ElectricDrill_AstraRpgHealth_Damage_DamageTypeSO_DefensiveStat">DefensiveStat</a>
+  <div class="markdown level1 summary"><p>Convenience overload that reads <a class="xref" href="ElectricDrill.AstraRpgHealth.Damage.DamageTypeSO.html#ElectricDrill_AstraRpgHealth_Damage_DamageTypeSO_DefensePenetrationFn">DefensePenetrationFn</a>,
+<a class="xref" href="ElectricDrill.AstraRpgHealth.Damage.DamageTypeSO.html#ElectricDrill_AstraRpgHealth_Damage_DamageTypeSO_DamageMitigationFn">DamageMitigationFn</a> and <a class="xref" href="ElectricDrill.AstraRpgHealth.Damage.DamageTypeSO.html#ElectricDrill_AstraRpgHealth_Damage_DamageTypeSO_DefensiveStat">DefensiveStat</a>
 from <code class="paramref">damageType</code> instead of requiring the caller to pass them explicitly.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -320,14 +320,14 @@ from <code class="paramref">damageType</code> instead of requiring the caller to
     <dd><p>The damage type asset that supplies the reduction functions and defensive stat.</p>
 </dd>
     <dt><code>applyClamp</code> <span class="xref">bool</span></dt>
-    <dd><p>Whether to apply stat clamping in defense reduction. Defaults to <code>true</code> for gameplay.</p>
+    <dd><p>Whether to apply stat clamping in defense penetration. Defaults to <code>true</code> for gameplay.</p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><span class="xref">long</span></dt>
-    <dd><p>The damage amount after defense and damage reduction have been applied.</p>
+    <dd><p>The damage amount after defense and damage mitigation have been applied.</p>
 </dd>
   </dl>
 

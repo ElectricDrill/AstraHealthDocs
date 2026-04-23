@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Namespace ElectricDrill.AstraRpgHealth.DamageReductionFunctions | Astra RPG Health </title>
+      <title>Namespace ElectricDrill.AstraRpgHealth.DefensePenetrationFunctions.DefensePenetrationFunctions | Astra RPG Health </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Namespace ElectricDrill.AstraRpgHealth.DamageReductionFunctions | Astra RPG Health ">
+      <meta name="title" content="Namespace ElectricDrill.AstraRpgHealth.DefensePenetrationFunctions.DefensePenetrationFunctions | Astra RPG Health ">
       
       
       <link rel="icon" href="../images/astra-health-ico.ico">
@@ -84,9 +84,9 @@
           <nav id="breadcrumb"></nav>
         </div>
 
-        <article data-uid="ElectricDrill.AstraRpgHealth.DamageReductionFunctions">
+        <article data-uid="ElectricDrill.AstraRpgHealth.DefensePenetrationFunctions.DefensePenetrationFunctions">
 
-  <h1 id="ElectricDrill_AstraRpgHealth_DamageReductionFunctions" data-uid="ElectricDrill.AstraRpgHealth.DamageReductionFunctions" class="text-break">Namespace ElectricDrill.AstraRpgHealth.DamageReductionFunctions</h1>
+  <h1 id="ElectricDrill_AstraRpgHealth_DefensePenetrationFunctions_DefensePenetrationFunctions" data-uid="ElectricDrill.AstraRpgHealth.DefensePenetrationFunctions.DefensePenetrationFunctions" class="text-break">Namespace ElectricDrill.AstraRpgHealth.DefensePenetrationFunctions.DefensePenetrationFunctions</h1>
   <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
   <div class="markdown level0 remarks"></div>
@@ -95,22 +95,24 @@
 Classes
 </h3>
     <dl class="jumplist">
-      <dt><a class="xref" href="ElectricDrill.AstraRpgHealth.DamageReductionFunctions.DamageReductionFnSO.html">DamageReductionFnSO</a></dt>
-      <dd><p>Base type for damage reduction functions.
-Implementations compute how an incoming damage amount is reduced using a defensive statistic value.</p>
+      <dt><a class="xref" href="ElectricDrill.AstraRpgHealth.DefensePenetrationFunctions.DefensePenetrationFunctions.FlatDefensePenetrationFn.html">FlatDefensePenetrationFn</a></dt>
+      <dd><p>Reduces defense by subtracting a scaled amount of the piercing stat from the pierced defense.
+The result is clamped to the stat's min/max bounds.
+Create instances via Assets -&gt; Create -&gt; Astra RPG Health / Def Penetration Functions / Flat Def Penetration.</p>
 </dd>
     </dl>
     <dl class="jumplist">
-      <dt><a class="xref" href="ElectricDrill.AstraRpgHealth.DamageReductionFunctions.FlatDamageReductionFnSO.html">FlatDamageReductionFnSO</a></dt>
-      <dd></dd>
+      <dt><a class="xref" href="ElectricDrill.AstraRpgHealth.DefensePenetrationFunctions.DefensePenetrationFunctions.LogDefensePenetrationFn.html">LogDefensePenetrationFn</a></dt>
+      <dd><p>Applies a logarithmic divisive reduction to defense to provide diminishing returns as piercing increases.
+Create instances via Assets -&gt; Create -&gt; Astra RPG Health / Def Penetration Functions / Log Def Penetration.</p>
+</dd>
     </dl>
     <dl class="jumplist">
-      <dt><a class="xref" href="ElectricDrill.AstraRpgHealth.DamageReductionFunctions.LogDamageReductionFnSO.html">LogDamageReductionFnSO</a></dt>
-      <dd></dd>
-    </dl>
-    <dl class="jumplist">
-      <dt><a class="xref" href="ElectricDrill.AstraRpgHealth.DamageReductionFunctions.PercentageDamageReductionFnSO.html">PercentageDamageReductionFnSO</a></dt>
-      <dd></dd>
+      <dt><a class="xref" href="ElectricDrill.AstraRpgHealth.DefensePenetrationFunctions.DefensePenetrationFunctions.PercentageDefensePenetrationFn.html">PercentageDefensePenetrationFn</a></dt>
+      <dd><p>Reduces defense by subtracting a percentage of the pierced defense equal to the piercing stat percentage.
+Example: piercingStatValue = 20 -&gt; reduces defense by 20%.
+Create isntances via Assets -&gt; Create -&gt; Astra RPG Health / Def Penetration Functions / Log Def Penetration.</p>
+</dd>
     </dl>
 
 
