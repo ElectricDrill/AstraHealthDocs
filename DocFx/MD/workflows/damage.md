@@ -583,16 +583,16 @@ The step looks for a component implementing `IDamageFloor` on the target entity 
 
 ### Damage Bound Components
 
-`ApplyDamageCapStep` and `ApplyDamageFloorStep` are pure logic steps — they do not hold the bound value themselves. The value is provided at runtime by a component attached to the target entity that implements one of two interfaces: `IDamageCap` (upper bound) or `IDamageFloor` (lower bound). The package ships a concrete `MonoBehaviour` implementation for each.
+`ApplyDamageCapStep` and `ApplyDamageFloorStep` are pure logic steps — they do not hold the bound value themselves. The value is provided at runtime by a component attached to the target entity that implements one of two interfaces: `IDamageCap` (upper bound) or `IDamageFloor` (lower bound). The package ships a concrete `MonoBehaviour` implementation for each, but the interfaces are also the extension point if you want to provide a custom bound from your own component.
 
-- **`DamageCap`** — implements `IDamageCap`. Attach it to any entity to activate an upper bound on incoming damage.
-- **`DamageFloor`** — implements `IDamageFloor`. Attach it to any entity to activate a lower bound on incoming damage.
+- **`DamageCap`** — implements `IDamageCap`. Attach it alongside `EntityHealth` on an entity to activate an upper bound on incoming damage. `ApplyDamageCapStep` queries it via `GetDamageCap()`.
+- **`DamageFloor`** — implements `IDamageFloor`. Attach it alongside `EntityHealth` on an entity to activate a lower bound on incoming damage. `ApplyDamageFloorStep` queries it via `GetDamageFloor()`.
 
 Both components share the same configuration structure. The **Source** field (a `DamageBoundSource` enum) selects how the bound value is computed at runtime:
 
 - **Fixed Value** — a constant `long` configured directly on the component (e.g., "never take more than 200 damage per hit").
-- **Health Scaling** — a fraction of a chosen health metric at the moment the step executes. Two inline fields control the result: **Health Metric** (Current HP, Max HP, or Missing HP) and **Portion** (0.0 to 1.0). Setting Health Metric to **Max HP** and Portion to **0.1**, for instance, yields a cap or floor equal to 10% of the entity's max HP — evaluated dynamically each time a hit is processed.
-- **Scaling Component** — delegates the calculation to any `ScalingComponent` ScriptableObject asset. Useful when the bound logic is already captured in a reusable scaling asset, or when it depends on values beyond the entity's health pool.
+- **Health Scaling** — a fraction of a chosen health metric at the moment the step executes. Two inline fields control the result: **Health Metric** (Current HP, Max HP, or Missing HP) and **Portion** (0.0 to 1.0). Setting Health Metric to **Max HP** and Portion to **0.1**, for instance, yields a cap or floor equal to 10% of the entity's max HP — evaluated dynamically each time a hit is processed. This mode effectively inlines the same idea exposed by `HealthScalingComponentSO`, but without requiring a separate asset.
+- **Scaling Component** — delegates the calculation to any `ScalingComponent` ScriptableObject asset. Useful when the bound logic is already captured in a reusable scaling asset, or when it depends on values beyond the entity's health pool. Any `ScalingComponent` subtype is valid, including `HealthScalingComponentSO`.
 
 The inspector adapts to the selected source, showing only the fields relevant to the current mode:
 
@@ -606,6 +606,8 @@ The inspector adapts to the selected source, showing only the fields relevant to
 
 > [!WARNING]
 > Both `DamageCap` and `DamageFloor` require an `EntityCore` component on the same `GameObject`. The **Health Scaling** source additionally requires an `EntityHealth` component on the same entity. If `EntityHealth` is missing when Health Scaling is selected, a warning is logged at runtime and the bound evaluates to 0, effectively disabling it for that hit.
+>
+> The **Scaling Component** source also silently becomes ineffective if no asset is assigned: the component returns 0, and the corresponding cap or floor is ignored for that hit. The custom editor surfaces this with a warning box in the Inspector.
 
 ### Damage Calculation Strategy
 
