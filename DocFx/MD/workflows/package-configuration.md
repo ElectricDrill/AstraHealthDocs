@@ -413,40 +413,99 @@ Global Events are `GameEvent` ScriptableObjects that broadcast health-related in
 **Required:** Yes  
 **Description:** Raised before any entity takes damage and before the [damage calculation pipeline](./damage.md#damage-calculation-pipeline) runs. Carries the full `PreDamageContext` (raw amount, type, source, dealer, critical state). Subscribe to this event to implement effects that inspect or modify incoming damage, such as damage-amplifying debuffs or conditional immunity logic.
 
+**Per-entity extra events API:**
+```csharp
+entityHealth.Subscribe<PreDamageGameEvent>(myEntitySpecificEvent);
+entityHealth.Unsubscribe<PreDamageGameEvent>(myEntitySpecificEvent);
+```
+
 #### Global Damage Resolution Event <span style="color:red;">*</span>
 **Type:** `DamageResolutionGameEvent`  
 **Required:** Yes  
 **Description:** Raised after any entity takes or ignores damage. Carries the full `DamageResolutionContext` including the outcome (`Applied` or `Prevented`), net amount, and prevention reasons. Also used internally by the framework for lifesteal resolution.
+
+**Per-entity extra events API:**
+```csharp
+entityHealth.Subscribe<DamageResolutionGameEvent>(myEntitySpecificEvent);
+entityHealth.Unsubscribe<DamageResolutionGameEvent>(myEntitySpecificEvent);
+```
 
 #### Global Entity Died Event <span style="color:red;">*</span>
 **Type:** `EntityDiedGameEvent`  
 **Required:** Yes  
 **Description:** Raised when an entity's HP reaches the death threshold. Carries `EntityDiedContext` with the entity reference and the damage context that caused the death. Used by the [Experience Collection](experience-collection.md) system.
 
+**Per-entity extra events API:**
+```csharp
+entityHealth.Subscribe<EntityDiedGameEvent>(myEntitySpecificEvent);
+entityHealth.Unsubscribe<EntityDiedGameEvent>(myEntitySpecificEvent);
+```
+
 #### Global Max Health Changed Event
 **Type:** `EntityMaxHealthChangedGameEvent`  
 **Required:** No  
 **Description:** Raised when any entity's total max HP changes (both increases and decreases). Carries `EntityMaxHealthChangedContext`. Useful for updating UI, recalculating derived stats, or triggering game-wide reactions to stat changes.
+
+**Per-entity extra events API:**
+```csharp
+entityHealth.Subscribe<EntityMaxHealthChangedGameEvent>(myEntitySpecificEvent);
+entityHealth.Unsubscribe<EntityMaxHealthChangedGameEvent>(myEntitySpecificEvent);
+```
 
 #### Global Health Changed Event
 **Type:** `EntityHealthChangedGameEvent`<br>
 **Required:** No<br>
 **Description:** Raised whenever any entity's current HP changes, whether increasing or decreasing. Carries `EntityHealthChangedContext`. This is the global event resolved by the corresponding Health Changed Event Channel on each `EntityHealth`, and replaces the previous split between gained-health and lost-health global events.
 
+**Per-entity extra events API:**
+```csharp
+entityHealth.Subscribe<EntityHealthChangedGameEvent>(myEntitySpecificEvent);
+entityHealth.Unsubscribe<EntityHealthChangedGameEvent>(myEntitySpecificEvent);
+```
+
 #### Global Pre Heal Event
 **Type:** `PreHealGameEvent`  
 **Required:** No  
 **Description:** Raised before any entity is healed and before healing modifiers are applied. Carries `PreHealContext` (base amount, source, healer, target). Subscribe to modify heal amounts or trigger pre-heal effects.
+
+**Per-entity extra events API:**
+```csharp
+entityHealth.Subscribe<PreHealGameEvent>(myEntitySpecificEvent);
+entityHealth.Unsubscribe<PreHealGameEvent>(myEntitySpecificEvent);
+```
 
 #### Global Entity Healed Event
 **Type:** `EntityHealedGameEvent`  
 **Required:** No  
 **Description:** Raised after any entity is healed. Carries `ReceivedHealContext` with the final net heal amount after all modifiers.
 
+**Per-entity extra events API:**
+```csharp
+entityHealth.Subscribe<EntityHealedGameEvent>(myEntitySpecificEvent);
+entityHealth.Unsubscribe<EntityHealedGameEvent>(myEntitySpecificEvent);
+```
+
 #### Global Entity Resurrected Event
 **Type:** `EntityResurrectedGameEvent`  
 **Required:** No  
 **Description:** Raised after any entity is resurrected. Carries `ResurrectionContext` with HP before and after resurrection.
+
+**Per-entity extra events API:**
+```csharp
+entityHealth.Subscribe<EntityResurrectedGameEvent>(myEntitySpecificEvent);
+entityHealth.Unsubscribe<EntityResurrectedGameEvent>(myEntitySpecificEvent);
+```
+
+#### Global Health Ratio Changed Event
+**Type:** `HealthRatioChangedGameEvent`  
+**Required:** No  
+**Description:** Raised whenever the HP/MaxHP ratio changes — either because current HP changed (`AddHealth`/`RemoveHealth`) or because MaxHP changed (`RecalculateMaxHp`). Carries `HealthRatioChangedContext` with raw HP and MaxHP values before and after the change, plus `PreviousValue` and `NewValue` as integer HP percentages (0–100). Use this event to implement HP-ratio-based reactions such as entering a low-health state or triggering threshold-gated abilities.
+
+**Per-entity extra events API:**
+```csharp
+entityHealth.Subscribe<HealthRatioChangedGameEvent>(myEntitySpecificEvent);
+entityHealth.Unsubscribe<HealthRatioChangedGameEvent>(myEntitySpecificEvent);
+```
 
 ---
 

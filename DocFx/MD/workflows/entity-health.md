@@ -79,6 +79,18 @@ When the relevant action occurs (e.g., the entity takes damage, the entity dies,
 
 Extra Events are therefore not an alternative to Event Channels: they are the entity-specific events stored inside them. A practical example is the communication between the player's `EntityHealth` and the HUD displaying their HP: only the player possesses a dedicated HUD, so it is useful to assign an exclusive extra event on the appropriate channel for this interaction. In this way, the HUD does not receive events from all entities, but only those relevant to the player, while the global event is still available for game-wide systems.
 
+`EntityHealth` implements `IEventRegistrar`, which provides `Subscribe<TEvent>` and `Unsubscribe<TEvent>` for adding and removing extra events at runtime:
+
+```csharp
+// Register a per-entity listener at runtime
+entityHealth.Subscribe<EntityDiedGameEvent>(myEntitySpecificDeathEvent);
+
+// Unregister it
+entityHealth.Unsubscribe<EntityDiedGameEvent>(myEntitySpecificDeathEvent);
+```
+
+Replace `EntityDiedGameEvent` with the concrete event type for the channel you want to target (e.g., `PreDamageGameEvent`, `DamageResolutionGameEvent`, `EntityHealthChangedGameEvent`, `HealthRatioChangedGameEvent`, etc.).
+
 ### Events Breakdown
 Here is a detailed description of each event. Each signal has a corresponding Event Channel on `EntityHealth`; that channel raises the global event configured in `AstraRpgHealthConfig` and any extra events assigned to the entity, so it is sufficient to describe each signal once.
 
@@ -100,6 +112,8 @@ Refer to the [EntityHealthChangedContext](xref:ElectricDrill.AstraRpgHealth.Even
 
 - **Max Health Changed Event**: Event raised when an entity's total max health points change. This event is raised both when total max hp increase and when they decrease.
 See [EntityMaxHealthChangedContext](xref:ElectricDrill.AstraRpgHealth.Events.EntityMaxHealthChangedContext) API for more details on the context parameter.
+- **Health Ratio Changed Event**: Event raised whenever the HP/MaxHP ratio changes — whether because current HP changed (via `AddHealth`/`RemoveHealth`) or because MaxHP changed (via `RecalculateMaxHp`). Carries `HealthRatioChangedContext` with raw `PreviousHp`, `NewHp`, `PreviousMaxHp`, and `NewMaxHp` values, plus `PreviousValue` and `NewValue` as integer HP percentages (0–100). Useful for HP-ratio-based conditions — for example, triggering an ability when an entity drops below 25% HP.
+See [HealthRatioChangedContext](xref:ElectricDrill.AstraRpgHealth.Events.Contexts.HealthRatioChangedContext) API for more details on the context parameter.
 - **Entity Died Event**: Event raised when the entity dies. See [EntityDiedContext](xref:ElectricDrill.AstraRpgHealth.Events.EntityDiedContext) API for more details on the context parameter.
 
 #### Healing Related Events
