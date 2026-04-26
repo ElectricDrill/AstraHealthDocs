@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Namespace ElectricDrill.AstraRpgHealth.Conditions | Astra RPG Health </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Namespace ElectricDrill.AstraRpgHealth.Conditions | Astra RPG Health ">
+      
+      
+      <link rel="icon" href="../images/astra-health-ico.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/logo-health.svg" alt="Astra RPG Health">
+            Astra RPG Health
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="ElectricDrill.AstraRpgHealth.Conditions">
+
+  <h1 id="ElectricDrill_AstraRpgHealth_Conditions" data-uid="ElectricDrill.AstraRpgHealth.Conditions" class="text-break">Namespace ElectricDrill.AstraRpgHealth.Conditions</h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="markdown level0 remarks"></div>
+
+    <h3 id="classes">
+Classes
+</h3>
+    <dl class="jumplist">
+      <dt><a class="xref" href="ElectricDrill.AstraRpgHealth.Conditions.BarrierThresholdCondition.html">BarrierThresholdCondition</a></dt>
+      <dd><p>Condition that compares the resolved target entity's barrier (temporary HP) against a threshold.</p>
+<p>
+When <span class="xref">ElectricDrill.AstraRpgFramework.Conditions.ThresholdMode.Absolute</span>, compares barrier directly against the configured value.<br>
+When <span class="xref">ElectricDrill.AstraRpgFramework.Conditions.ThresholdMode.Percentage</span>, compares barrier as a percentage of MaxHP
+(Barrier / MaxHP × 100, clamped [0–100]) against the configured percentage threshold.
+Returns <code>false</code> if MaxHP is zero.
+</p><p>Use <span class="xref">ElectricDrill.AstraRpgFramework.Conditions.ComparisonMode.Greater</span> with threshold 0 to check "has any barrier".</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="ElectricDrill.AstraRpgHealth.Conditions.DamageAmountThresholdCondition.html">DamageAmountThresholdCondition</a></dt>
+      <dd><p>Condition that compares a damage amount against a threshold.</p>
+<p><a class="xref" href="ElectricDrill.AstraRpgHealth.Conditions.DamageAmountComponent.html#ElectricDrill_AstraRpgHealth_Conditions_DamageAmountComponent_RawAmount">RawAmount</a>: the raw pre-modifier amount from <a class="xref" href="ElectricDrill.AstraRpgHealth.Damage.PreDamageContext.html#ElectricDrill_AstraRpgHealth_Damage_PreDamageContext_Amount">Amount</a>.<br><a class="xref" href="ElectricDrill.AstraRpgHealth.Conditions.DamageAmountComponent.html#ElectricDrill_AstraRpgHealth_Conditions_DamageAmountComponent_FinalAmount">FinalAmount</a>: the final applied amount; returns <code>false</code> when damage was prevented.
+</p><p>
+When <span class="xref">ElectricDrill.AstraRpgFramework.Conditions.ThresholdMode.Percentage</span>, the amount is expressed as a percentage of the target's MaxHP
+(amount / MaxHP × 100). Returns <code>false</code> if MaxHP is zero or target cannot be resolved.
+</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="ElectricDrill.AstraRpgHealth.Conditions.DamageIsCriticalCondition.html">DamageIsCriticalCondition</a></dt>
+      <dd><p>Condition that returns <code>true</code> when the damage payload is flagged as a critical hit.
+Supports <a class="xref" href="ElectricDrill.AstraRpgHealth.Damage.PreDamageContext.html">PreDamageContext</a>, <a class="xref" href="ElectricDrill.AstraRpgHealth.Damage.DamageResolutionContext.html">DamageResolutionContext</a>, and <a class="xref" href="ElectricDrill.AstraRpgHealth.Events.Contexts.EntityDiedContext.html">EntityDiedContext</a> payloads.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="ElectricDrill.AstraRpgHealth.Conditions.DamageOutcomeCondition.html">DamageOutcomeCondition</a></dt>
+      <dd><p>Condition that returns <code>true</code> when the damage resolution outcome matches the configured value.
+Supports <a class="xref" href="ElectricDrill.AstraRpgHealth.Damage.DamageResolutionContext.html">DamageResolutionContext</a> and <a class="xref" href="ElectricDrill.AstraRpgHealth.Events.Contexts.EntityDiedContext.html">EntityDiedContext</a> payloads.
+Returns <code>false</code> for <a class="xref" href="ElectricDrill.AstraRpgHealth.Damage.PreDamageContext.html">PreDamageContext</a> (resolution not yet available).</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="ElectricDrill.AstraRpgHealth.Conditions.DamagePreventionReasonCondition.html">DamagePreventionReasonCondition</a></dt>
+      <dd><p>Condition that checks whether the damage resolution context's prevention reasons
+include any or all of the configured flags.
+Supports <a class="xref" href="ElectricDrill.AstraRpgHealth.Damage.DamageResolutionContext.html">DamageResolutionContext</a> and <a class="xref" href="ElectricDrill.AstraRpgHealth.Events.Contexts.EntityDiedContext.html">EntityDiedContext</a> payloads.
+Returns <code>false</code> for <a class="xref" href="ElectricDrill.AstraRpgHealth.Damage.PreDamageContext.html">PreDamageContext</a> or when no prevention reasons match.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="ElectricDrill.AstraRpgHealth.Conditions.DamageSourceMatchCondition.html">DamageSourceMatchCondition</a></dt>
+      <dd><p>Condition that returns <code>true</code> when the damage payload's source matches the configured reference.
+Supports <a class="xref" href="ElectricDrill.AstraRpgHealth.Damage.PreDamageContext.html">PreDamageContext</a>, <a class="xref" href="ElectricDrill.AstraRpgHealth.Damage.DamageResolutionContext.html">DamageResolutionContext</a>, and <a class="xref" href="ElectricDrill.AstraRpgHealth.Events.Contexts.EntityDiedContext.html">EntityDiedContext</a> payloads.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="ElectricDrill.AstraRpgHealth.Conditions.DamageTypeMatchCondition.html">DamageTypeMatchCondition</a></dt>
+      <dd><p>Condition that returns <code>true</code> when the damage payload's type matches the configured reference.
+Supports <a class="xref" href="ElectricDrill.AstraRpgHealth.Damage.PreDamageContext.html">PreDamageContext</a>, <a class="xref" href="ElectricDrill.AstraRpgHealth.Damage.DamageResolutionContext.html">DamageResolutionContext</a>, and <a class="xref" href="ElectricDrill.AstraRpgHealth.Events.Contexts.EntityDiedContext.html">EntityDiedContext</a> payloads.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="ElectricDrill.AstraRpgHealth.Conditions.EntityIsAliveCondition.html">EntityIsAliveCondition</a></dt>
+      <dd><p>Condition that returns <code>true</code> when the resolved target entity is alive.
+Returns <code>false</code> if the entity or its <a class="xref" href="ElectricDrill.AstraRpgHealth.EntityHealth.html">EntityHealth</a> component cannot be resolved.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="ElectricDrill.AstraRpgHealth.Conditions.EntityIsDeadCondition.html">EntityIsDeadCondition</a></dt>
+      <dd><p>Condition that returns <code>true</code> when the resolved target entity is dead.
+Returns <code>false</code> if the entity or its <a class="xref" href="ElectricDrill.AstraRpgHealth.EntityHealth.html">EntityHealth</a> component cannot be resolved.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="ElectricDrill.AstraRpgHealth.Conditions.EntityIsImmuneCondition.html">EntityIsImmuneCondition</a></dt>
+      <dd><p>Condition that returns <code>true</code> when the resolved target entity is immune to all damage.
+Returns <code>false</code> if the entity or its <a class="xref" href="ElectricDrill.AstraRpgHealth.EntityHealth.html">EntityHealth</a> component cannot be resolved.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="ElectricDrill.AstraRpgHealth.Conditions.HealAmountThresholdCondition.html">HealAmountThresholdCondition</a></dt>
+      <dd><p>Condition that compares a heal amount against a threshold.</p>
+<p><a class="xref" href="ElectricDrill.AstraRpgHealth.Conditions.HealAmountComponent.html#ElectricDrill_AstraRpgHealth_Conditions_HealAmountComponent_RawAmount">RawAmount</a>: raw requested heal amount.<br><a class="xref" href="ElectricDrill.AstraRpgHealth.Conditions.HealAmountComponent.html#ElectricDrill_AstraRpgHealth_Conditions_HealAmountComponent_AfterModifierAmount">AfterModifierAmount</a>: after stat/modifier adjustments.<br><a class="xref" href="ElectricDrill.AstraRpgHealth.Conditions.HealAmountComponent.html#ElectricDrill_AstraRpgHealth_Conditions_HealAmountComponent_NetAmount">NetAmount</a>: actual health gained (capped at remaining capacity).<br><a class="xref" href="ElectricDrill.AstraRpgHealth.Conditions.HealAmountComponent.html#ElectricDrill_AstraRpgHealth_Conditions_HealAmountComponent_OverhealAmount">OverhealAmount</a>: AfterModifierAmount − NetAmount (≥ 0); returns <code>false</code> from <a class="xref" href="ElectricDrill.AstraRpgHealth.Heal.PreHealContext.html">PreHealContext</a>.
+</p><p>
+When <span class="xref">ElectricDrill.AstraRpgFramework.Conditions.ThresholdMode.Percentage</span>, the amount is expressed as a percentage of the target's MaxHP.
+Returns <code>false</code> if MaxHP is zero or target cannot be resolved.
+</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="ElectricDrill.AstraRpgHealth.Conditions.HealIsCriticalCondition.html">HealIsCriticalCondition</a></dt>
+      <dd><p>Condition that returns <code>true</code> when the heal payload is flagged as a critical heal.
+Supports <a class="xref" href="ElectricDrill.AstraRpgHealth.Heal.PreHealContext.html">PreHealContext</a>, <a class="xref" href="ElectricDrill.AstraRpgHealth.Heal.ReceivedHealContext.html">ReceivedHealContext</a>, and <a class="xref" href="ElectricDrill.AstraRpgHealth.Events.Contexts.ResurrectionContext.html">ResurrectionContext</a> payloads.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="ElectricDrill.AstraRpgHealth.Conditions.HealSourceMatchCondition.html">HealSourceMatchCondition</a></dt>
+      <dd><p>Condition that returns <code>true</code> when the heal payload's source matches the configured reference.
+Supports <a class="xref" href="ElectricDrill.AstraRpgHealth.Heal.PreHealContext.html">PreHealContext</a>, <a class="xref" href="ElectricDrill.AstraRpgHealth.Heal.ReceivedHealContext.html">ReceivedHealContext</a>, and <a class="xref" href="ElectricDrill.AstraRpgHealth.Events.Contexts.ResurrectionContext.html">ResurrectionContext</a> payloads.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="ElectricDrill.AstraRpgHealth.Conditions.HealthRatioThresholdTransitionCondition.html">HealthRatioThresholdTransitionCondition</a></dt>
+      <dd><p>Condition that detects when an HP ratio metric crosses a threshold in a <a class="xref" href="ElectricDrill.AstraRpgHealth.Events.Contexts.HealthRatioChangedContext.html">HealthRatioChangedContext</a> payload.</p>
+<p>
+Fires on the <code>HealthRatioChanged</code> event, which is raised whenever HP or MaxHP changes.
+This makes it reliable for threshold crossing detection regardless of whether HP, MaxHP, or both changed.
+</p><p>
+Supported components:
+<ul><li><a class="xref" href="ElectricDrill.AstraRpgHealth.Conditions.HealthRatioComponent.html#ElectricDrill_AstraRpgHealth_Conditions_HealthRatioComponent_CurrentHpPercentage">CurrentHpPercentage</a> — HP / MaxHP × 100; uses percentage threshold.</li><li><a class="xref" href="ElectricDrill.AstraRpgHealth.Conditions.HealthRatioComponent.html#ElectricDrill_AstraRpgHealth_Conditions_HealthRatioComponent_MissingHpAbsolute">MissingHpAbsolute</a> — MaxHP − HP; uses absolute threshold.</li><li><a class="xref" href="ElectricDrill.AstraRpgHealth.Conditions.HealthRatioComponent.html#ElectricDrill_AstraRpgHealth_Conditions_HealthRatioComponent_MissingHpPercentage">MissingHpPercentage</a> — (MaxHP − HP) / MaxHP × 100; uses percentage threshold.</li></ul>
+Returns <code>false</code> when MaxHP is zero for percentage-based components.
+
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="ElectricDrill.AstraRpgHealth.Conditions.HealthThresholdCondition.html">HealthThresholdCondition</a></dt>
+      <dd><p>Condition that compares the resolved target entity's current HP against a threshold.</p>
+<p>
+When <span class="xref">ElectricDrill.AstraRpgFramework.Conditions.ThresholdMode.Absolute</span>, compares HP directly against the configured value.<br>
+When <span class="xref">ElectricDrill.AstraRpgFramework.Conditions.ThresholdMode.Percentage</span>, compares HP% (HP / MaxHP × 100, clamped [0–100])
+against the configured percentage threshold. Returns <code>false</code> if MaxHP is zero.
+</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="ElectricDrill.AstraRpgHealth.Conditions.MaxHealthThresholdCondition.html">MaxHealthThresholdCondition</a></dt>
+      <dd><p>Condition that compares the resolved target entity's maximum HP against an absolute threshold.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="ElectricDrill.AstraRpgHealth.Conditions.MissingHealthThresholdCondition.html">MissingHealthThresholdCondition</a></dt>
+      <dd><p>Condition that compares the resolved target entity's missing HP (MaxHP − HP) against a threshold.</p>
+<p>
+When <span class="xref">ElectricDrill.AstraRpgFramework.Conditions.ThresholdMode.Absolute</span>, compares missing HP directly against the configured value.<br>
+When <span class="xref">ElectricDrill.AstraRpgFramework.Conditions.ThresholdMode.Percentage</span>, compares missing HP% ((MaxHP − HP) / MaxHP × 100, clamped [0–100])
+against the configured percentage threshold. Returns <code>false</code> if MaxHP is zero.
+</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="ElectricDrill.AstraRpgHealth.Conditions.PayloadIsReactableCondition.html">PayloadIsReactableCondition</a></dt>
+      <dd><p>Condition that returns <code>true</code> when the event payload implements <a class="xref" href="ElectricDrill.AstraRpgHealth.IReactable.html">IReactable</a>
+and its <a class="xref" href="ElectricDrill.AstraRpgHealth.IReactable.html#ElectricDrill_AstraRpgHealth_IReactable_IsReactable">IsReactable</a> flag is <code>true</code>.</p>
+<p>
+Use this to restrict reactive mechanics to first-order events only (direct damage, skills, abilities),
+preventing infinite chain reactions from secondary effects.
+</p><p>Returns <code>false</code> when the payload does not implement <a class="xref" href="ElectricDrill.AstraRpgHealth.IReactable.html">IReactable</a>.</p>
+</dd>
+    </dl>
+    <h3 id="enums">
+Enums
+</h3>
+    <dl class="jumplist">
+      <dt><a class="xref" href="ElectricDrill.AstraRpgHealth.Conditions.DamageAmountComponent.html">DamageAmountComponent</a></dt>
+      <dd><p>Selects which damage amount to extract from a damage payload.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="ElectricDrill.AstraRpgHealth.Conditions.HealAmountComponent.html">HealAmountComponent</a></dt>
+      <dd><p>Selects which heal amount to extract from a heal payload.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="ElectricDrill.AstraRpgHealth.Conditions.HealthRatioComponent.html">HealthRatioComponent</a></dt>
+      <dd><p>Selects which HP ratio component to evaluate in a Leaf.HealthRatioThresholdTransitionCondition.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="ElectricDrill.AstraRpgHealth.Conditions.ReasonMatchMode.html">ReasonMatchMode</a></dt>
+      <dd><p>Determines how multiple <a class="xref" href="ElectricDrill.AstraRpgHealth.Damage.DamagePreventionReason.html">DamagePreventionReason</a> flags are matched.</p>
+</dd>
+    </dl>
+
+
+</article>
+
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
