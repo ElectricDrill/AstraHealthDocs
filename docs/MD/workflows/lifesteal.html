@@ -102,6 +102,10 @@ The stat that drives the lifesteal percentage. At runtime, the attacker reads th
 <p>heal amount = basis damage × (lifesteal stat value / 100)</p>
 </blockquote>
 <p>The stat value is read as a <code>Percentage</code> type, meaning the raw <code>long</code> value stored in the stat is divided by 100 internally. A stat value of <code>15</code> therefore corresponds to 15% lifesteal. For lifesteal to activate, this stat must be present in the dealing entity's <code>StatSet</code>.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>The computed heal amount is rounded to a <code>long</code> using the <strong>Lifesteal Rounding Mode</strong> from <a href="package-configuration.html#rounding-settings"><code>HealthRoundingSettings</code></a> (default: <strong>Round</strong>). This rounding is applied independently to each lifesteal contribution (generic and damage-type) before they are summed or applied as separate heals.</p>
+</div>
 <p><strong>Lifesteal Source</strong><br>
 The <code>HealSourceSO</code> used when applying the lifesteal heal. As with any heal in the framework, the heal source determines which heal modifiers — flat and percentage — are applied to the resulting heal, so lifesteal heals can be boosted or reduced by modifiers associated with the configured <code>HealSourceSO</code>. See <a href="healing.html#heal-source">Heal Source</a> for details on <code>HealSourceSO</code> configuration.</p>
 <p><strong>Amount Selector</strong><br>

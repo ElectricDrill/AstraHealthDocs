@@ -710,10 +710,22 @@ var preDamageContext = PreDamageContext.Builder
 <h5>Note</h5>
 <p>The position of <code>ApplyCriticalMultiplierStep</code> in the pipeline determines what value the multiplier is applied to. Placing it before <code>ApplyDefenseStep</code> amplifies damage prior to defensive mitigation; placing it after scales post-defense damage. Design your strategy order accordingly.</p>
 </div>
+<div class="NOTE">
+<h5>Note</h5>
+<p>The multiplied amount is rounded to a <code>long</code> using the <strong>Critical Damage Multiplier Rounding Mode</strong> from <a href="package-configuration.html#rounding-settings"><code>HealthRoundingSettings</code></a> (default: <strong>Round</strong>).</p>
+</div>
 <h4 id="applydefensestep">ApplyDefenseStep</h4>
 <p>This step applies the target entity's defensive stat for this damage type — the primary stat-based mitigation layer in a typical RPG setup. For example, for a Physical damage type with Armor as its <strong>Defensive Stat</strong>, this step reads the target's Armor value, optionally reduces it by any armor penetration, then feeds the result into the <strong>Damage Reduction Fn</strong> to compute the mitigated damage. This is usually the step that eliminates most of the incoming damage for well-armored targets.</p>
 <p>Applies defensive stat-based damage reduction as configured in the <code>DamageTypeSO</code>. The step reads the <strong>Defensive Stat</strong> and <strong>Damage Reduction Fn</strong>, and optionally the <strong>Defense Penetration Stat</strong> and <strong>Defense Reduction Fn</strong> (see <a href="#defense-penetration">Defense Penetration</a>).</p>
 <p>The step is a no-op when both <strong>Defensive Stat</strong> and <strong>Damage Reduction Fn</strong> are unset — which is the intended configuration for a damage type that should never be mitigated by defenses. If the configuration is inconsistent (one field set, the other null), a warning is logged and the step is skipped. The effective defensive value is computed after applying any penetration reduction, then fed into the <strong>Damage Reduction Fn</strong> to yield the final reduced amount. If the result is ≤ 0, <code>DamagePreventionReason.DefenseAbsorbed</code> is set.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>Two rounding modes from <a href="package-configuration.html#rounding-settings"><code>HealthRoundingSettings</code></a> are applied within this step:</p>
+<ul>
+<li><strong>Defense Penetration Rounding Mode</strong> — rounds the effective defense value after the defense-penetration function reduces it (only when defense penetration is configured).</li>
+<li><strong>Damage Mitigation Rounding Mode</strong> — rounds the final damage amount returned by the damage-mitigation function.</li>
+</ul>
+</div>
 <h4 id="applybarrierstep">ApplyBarrierStep</h4>
 <p>Barriers act as a temporary shield layer in front of an entity's health pool: incoming damage hits the barrier first, and only what the barrier cannot absorb continues on to the next step. This step is the mechanism behind shielding abilities and any temporary protective layer you implement with the barrier system. Its position in the pipeline determines how much barrier is actually consumed: placing it after <code>ApplyDefenseStep</code> means the barrier only ever sees damage that already survived defensive mitigation, so the barrier is drained more slowly. Placing it before defensive steps causes the barrier to absorb the full, unreduced hit — making it a purer shield but one that depletes faster.</p>
 <p>Consumes the target entity's barrier (temporary shield) to reduce incoming damage before it reaches health. If the <code>DamageTypeSO</code> has <strong>Ignore Barrier</strong> enabled, this step is skipped entirely. If the target has no <code>EntityHealth</code> component or its barrier is zero, the step is also a no-op.</p>
@@ -734,6 +746,10 @@ var preDamageContext = PreDamageContext.Builder
 <div class="NOTE">
 <h5>Note</h5>
 <p>If the cumulative percentage is ≤ −100%, <code>DamageInfo.Amounts.Current</code> clamps to a minimum of 0: percentage modifiers cannot bring damage below zero. In such case, the damage is prevented with <code>DamagePreventionReason.PipelineReducedToZero</code>.</p>
+</div>
+<div class="NOTE">
+<h5>Note</h5>
+<p>The scaled amount is rounded to a <code>long</code> using the <strong>Percentage Damage Modifier Rounding Mode</strong> from <a href="package-configuration.html#rounding-settings"><code>HealthRoundingSettings</code></a> (default: <strong>Round</strong>).</p>
 </div>
 <h4 id="applyflatdmgmodifiersstep">ApplyFlatDmgModifiersStep</h4>
 <p>Where percentage modifiers scale damage proportionally, flat modifiers add or subtract a fixed amount regardless of the hit's magnitude. A −15 flat absorb always removes 15 damage, whether the incoming hit was 20 or 2000. Flat modifiers are typically placed after percentage modifiers so they adjust the already-scaled value — but you are free to order them as your game design requires.</p>

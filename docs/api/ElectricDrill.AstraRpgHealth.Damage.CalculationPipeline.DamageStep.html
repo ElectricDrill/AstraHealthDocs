@@ -227,7 +227,7 @@ reduces a positive amount to zero or less.</p>
 
   <h3 id="ElectricDrill_AstraRpgHealth_Damage_CalculationPipeline_DamageStep_ProcessStep_ElectricDrill_AstraRpgHealth_Damage_CalculationPipeline_DamageInfo_" data-uid="ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.DamageStep.ProcessStep(ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.DamageInfo)">
   ProcessStep(DamageInfo)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/Damage/CalculationPipeline/DamageStep.cs/#L57"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/Damage/CalculationPipeline/DamageStep.cs/#L66"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Implement this method in derived classes to perform the actual transformation of the pipeline state.</p>
@@ -258,6 +258,15 @@ reduces a positive amount to zero or less.</p>
 
 
 
+  <h4 class="section" id="ElectricDrill_AstraRpgHealth_Damage_CalculationPipeline_DamageStep_ProcessStep_ElectricDrill_AstraRpgHealth_Damage_CalculationPipeline_DamageInfo__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p><b>Accessing external services from a step:</b>
+Use pre-resolved properties on <code class="paramref">data</code> for core framework dependencies
+(<code>data.TargetStats</code>, <code>data.TargetBarrier</code>, <code>data.PerformerStats</code>).
+For services provided by external packages, use
+<code>data.Target.TryGetComponent&lt;IYourInterface&gt;(out var svc)</code> — the same pattern
+used by <code>ApplyDamageCapStep</code> and <code>ApplyDamageFloorStep</code>.
+This keeps <a class="xref" href="ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.DamageInfo.html">DamageInfo</a> lean while allowing full extensibility.</p>
+</div>
 
 
 

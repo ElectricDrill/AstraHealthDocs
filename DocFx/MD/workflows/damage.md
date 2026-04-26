@@ -513,6 +513,9 @@ Both the critical flag and the multiplier are set in the `PreDamageContext` when
 > [!NOTE]
 > The position of `ApplyCriticalMultiplierStep` in the pipeline determines what value the multiplier is applied to. Placing it before `ApplyDefenseStep` amplifies damage prior to defensive mitigation; placing it after scales post-defense damage. Design your strategy order accordingly.
 
+> [!NOTE]
+> The multiplied amount is rounded to a `long` using the **Critical Damage Multiplier Rounding Mode** from [`HealthRoundingSettings`](../workflows/package-configuration.md#rounding-settings) (default: **Round**).
+
 #### ApplyDefenseStep
 
 This step applies the target entity's defensive stat for this damage type — the primary stat-based mitigation layer in a typical RPG setup. For example, for a Physical damage type with Armor as its **Defensive Stat**, this step reads the target's Armor value, optionally reduces it by any armor penetration, then feeds the result into the **Damage Reduction Fn** to compute the mitigated damage. This is usually the step that eliminates most of the incoming damage for well-armored targets.
@@ -520,6 +523,11 @@ This step applies the target entity's defensive stat for this damage type — th
 Applies defensive stat-based damage reduction as configured in the `DamageTypeSO`. The step reads the **Defensive Stat** and **Damage Reduction Fn**, and optionally the **Defense Penetration Stat** and **Defense Reduction Fn** (see [Defense Penetration](#defense-penetration)).
 
 The step is a no-op when both **Defensive Stat** and **Damage Reduction Fn** are unset — which is the intended configuration for a damage type that should never be mitigated by defenses. If the configuration is inconsistent (one field set, the other null), a warning is logged and the step is skipped. The effective defensive value is computed after applying any penetration reduction, then fed into the **Damage Reduction Fn** to yield the final reduced amount. If the result is ≤ 0, `DamagePreventionReason.DefenseAbsorbed` is set.
+
+> [!NOTE]
+> Two rounding modes from [`HealthRoundingSettings`](../workflows/package-configuration.md#rounding-settings) are applied within this step:
+> - **Defense Penetration Rounding Mode** — rounds the effective defense value after the defense-penetration function reduces it (only when defense penetration is configured).
+> - **Damage Mitigation Rounding Mode** — rounds the final damage amount returned by the damage-mitigation function.
 
 #### ApplyBarrierStep
 
@@ -545,6 +553,9 @@ Each layer is evaluated individually for full immunity before contributions are 
 
 > [!NOTE]
 > If the cumulative percentage is ≤ −100%, `DamageInfo.Amounts.Current` clamps to a minimum of 0: percentage modifiers cannot bring damage below zero. In such case, the damage is prevented with `DamagePreventionReason.PipelineReducedToZero`.
+
+> [!NOTE]
+> The scaled amount is rounded to a `long` using the **Percentage Damage Modifier Rounding Mode** from [`HealthRoundingSettings`](../workflows/package-configuration.md#rounding-settings) (default: **Round**).
 
 #### ApplyFlatDmgModifiersStep
 

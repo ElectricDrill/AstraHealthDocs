@@ -205,6 +205,26 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.Barrier.IBarrierContainer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ElectricDrill.AstraRpgHealth.Barrier.IBarrierContainer.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.Barrier.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ElectricDrill.AstraRpgHealth.Barrier.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/ElectricDrill.AstraRpgHealth.Conditions.BarrierThresholdCondition.yml",
       "output": {
         ".html": {
@@ -485,6 +505,16 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.Config.HealthRoundingSettings.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ElectricDrill.AstraRpgHealth.Config.HealthRoundingSettings.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/ElectricDrill.AstraRpgHealth.Config.IAstraRpgHealthConfig.yml",
       "output": {
         ".html": {
@@ -669,6 +699,16 @@
       "output": {
         ".html": {
           "relative_path": "api/ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.DamageInfo.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.DamageMitigationCalculator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.DamageMitigationCalculator.html"
         }
       },
       "version": ""
@@ -1045,6 +1085,56 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.DamageMitigationFunctions.DamageMitigationFnSO.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ElectricDrill.AstraRpgHealth.DamageMitigationFunctions.DamageMitigationFnSO.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.DamageMitigationFunctions.FlatDamageMitigationFnSO.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ElectricDrill.AstraRpgHealth.DamageMitigationFunctions.FlatDamageMitigationFnSO.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.DamageMitigationFunctions.LogDamageMitigationFnSO.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ElectricDrill.AstraRpgHealth.DamageMitigationFunctions.LogDamageMitigationFnSO.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.DamageMitigationFunctions.PercentageDamageMitigationFnSO.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ElectricDrill.AstraRpgHealth.DamageMitigationFunctions.PercentageDamageMitigationFnSO.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.DamageMitigationFunctions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ElectricDrill.AstraRpgHealth.DamageMitigationFunctions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/ElectricDrill.AstraRpgHealth.DamageReductionFunctions.DamageReductionFn.yml",
       "output": {
         ".html": {
@@ -1205,6 +1295,56 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.DefensePenetrationFunctions.DefensePenetrationFnSO.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ElectricDrill.AstraRpgHealth.DefensePenetrationFunctions.DefensePenetrationFnSO.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.DefensePenetrationFunctions.FlatDefensePenetrationFnSO.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ElectricDrill.AstraRpgHealth.DefensePenetrationFunctions.FlatDefensePenetrationFnSO.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.DefensePenetrationFunctions.LogDefensePenetrationFnSO.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ElectricDrill.AstraRpgHealth.DefensePenetrationFunctions.LogDefensePenetrationFnSO.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.DefensePenetrationFunctions.PercentageDefensePenetrationFnSO.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ElectricDrill.AstraRpgHealth.DefensePenetrationFunctions.PercentageDefensePenetrationFnSO.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.DefensePenetrationFunctions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ElectricDrill.AstraRpgHealth.DefensePenetrationFunctions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/ElectricDrill.AstraRpgHealth.DefenseReductionFunctions.DefenseReductionFn.yml",
       "output": {
         ".html": {
@@ -1329,6 +1469,16 @@
       "output": {
         ".html": {
           "relative_path": "api/ElectricDrill.AstraRpgHealth.EntityHealth.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.EntityPassiveHpRegeneration.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ElectricDrill.AstraRpgHealth.EntityPassiveHpRegeneration.html"
         }
       },
       "version": ""
@@ -1985,6 +2135,16 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.Heal.HealOutcome.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ElectricDrill.AstraRpgHealth.Heal.HealOutcome.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/ElectricDrill.AstraRpgHealth.Heal.HealSource.yml",
       "output": {
         ".html": {
@@ -2335,6 +2495,26 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.ReductionFunctions.ReductionFnSO.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ElectricDrill.AstraRpgHealth.ReductionFunctions.ReductionFnSO.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.ReductionFunctions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ElectricDrill.AstraRpgHealth.ReductionFunctions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/ElectricDrill.AstraRpgHealth.Resurrection.DoNothingOnResurrectionStrategy.yml",
       "output": {
         ".html": {
@@ -2579,6 +2759,16 @@
       "output": {
         ".html": {
           "relative_path": "api/ElectricDrill.AstraRpgHealth.Utils.EntityCoreHealthExtensions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.Utils.RoundingModeLongExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ElectricDrill.AstraRpgHealth.Utils.RoundingModeLongExtensions.html"
         }
       },
       "version": ""

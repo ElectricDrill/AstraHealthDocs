@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Class DamageTypeSO | Astra RPG Health ">
       
-      <meta name="description" content="Scriptable asset that describes a damage category (for example: Physical, Fire, Poison). A DamageType declares which stat reduces this damage, which reduction functions to use, whether a stat pierces its defensive stats and whether it ignores barriers. Create instances via Assets -&amp;gt; Create -&amp;gt; Astra RPG Health / DamageType.">
+      <meta name="description" content="Scriptable asset that describes a damage category (for example: Physical, Fire, Poison). A DamageType declares which stat reduces this damage, which mitigation/penetration functions to use, whether a stat pierces its defensive stats and whether it ignores barriers. Create instances via Assets -&amp;gt; Create -&amp;gt; Astra RPG Health / DamageType.">
       <link rel="icon" href="../images/astra-health-ico.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -98,7 +98,7 @@ Class DamageTypeSO  <a class="header-action link-secondary" title="View source" 
   </div>
 
   <div class="markdown summary"><p>Scriptable asset that describes a damage category (for example: Physical, Fire, Poison).
-A DamageType declares which stat reduces this damage, which reduction functions to use,
+A DamageType declares which stat reduces this damage, which mitigation/penetration functions to use,
 whether a stat pierces its defensive stats and whether it ignores barriers.
 Create instances via Assets -&gt; Create -&gt; Astra RPG Health / DamageType.</p>
 </div>
@@ -139,21 +139,21 @@ Create instances via Assets -&gt; Create -&gt; Astra RPG Health / DamageType.</p
 </h2>
 
 
-  <a id="ElectricDrill_AstraRpgHealth_Damage_DamageTypeSO_DamageReductionFn_" data-uid="ElectricDrill.AstraRpgHealth.Damage.DamageTypeSO.DamageReductionFn*"></a>
+  <a id="ElectricDrill_AstraRpgHealth_Damage_DamageTypeSO_DamageMitigationFn_" data-uid="ElectricDrill.AstraRpgHealth.Damage.DamageTypeSO.DamageMitigationFn*"></a>
 
-  <h3 id="ElectricDrill_AstraRpgHealth_Damage_DamageTypeSO_DamageReductionFn" data-uid="ElectricDrill.AstraRpgHealth.Damage.DamageTypeSO.DamageReductionFn">
-  DamageReductionFn
+  <h3 id="ElectricDrill_AstraRpgHealth_Damage_DamageTypeSO_DamageMitigationFn" data-uid="ElectricDrill.AstraRpgHealth.Damage.DamageTypeSO.DamageMitigationFn">
+  DamageMitigationFn
   <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/Damage/DamageTypeSO.cs/#L64"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>The reduction function used to compute how the damage amount is modified by
+  <div class="markdown level1 summary"><p>The mitigation function used to compute how the damage amount is modified by
 the reducing stat (see <a class="xref" href="ElectricDrill.AstraRpgHealth.Damage.DamageTypeSO.html#ElectricDrill_AstraRpgHealth_Damage_DamageTypeSO_DefensiveStat">DefensiveStat</a>). This may implement flat, percentage, logarithmic,
-or custom reduction behaviour.</p>
+or custom mitigation behaviour.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public DamageReductionFnSO DamageReductionFn { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public DamageMitigationFnSO DamageMitigationFn { get; }</code></pre>
   </div>
 
 
@@ -162,7 +162,7 @@ or custom reduction behaviour.</p>
 
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="ElectricDrill.AstraRpgHealth.DamageReductionFunctions.DamageReductionFnSO.html">DamageReductionFnSO</a></dt>
+    <dt><a class="xref" href="ElectricDrill.AstraRpgHealth.DamageMitigationFunctions.DamageMitigationFnSO.html">DamageMitigationFnSO</a></dt>
     <dd></dd>
   </dl>
 
@@ -173,21 +173,21 @@ or custom reduction behaviour.</p>
 
 
 
-  <a id="ElectricDrill_AstraRpgHealth_Damage_DamageTypeSO_DefenseReductionFn_" data-uid="ElectricDrill.AstraRpgHealth.Damage.DamageTypeSO.DefenseReductionFn*"></a>
+  <a id="ElectricDrill_AstraRpgHealth_Damage_DamageTypeSO_DefensePenetrationFn_" data-uid="ElectricDrill.AstraRpgHealth.Damage.DamageTypeSO.DefensePenetrationFn*"></a>
 
-  <h3 id="ElectricDrill_AstraRpgHealth_Damage_DamageTypeSO_DefenseReductionFn" data-uid="ElectricDrill.AstraRpgHealth.Damage.DamageTypeSO.DefenseReductionFn">
-  DefenseReductionFn
+  <h3 id="ElectricDrill_AstraRpgHealth_Damage_DamageTypeSO_DefensePenetrationFn" data-uid="ElectricDrill.AstraRpgHealth.Damage.DamageTypeSO.DefensePenetrationFn">
+  DefensePenetrationFn
   <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/Damage/DamageTypeSO.cs/#L57"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>The reduction function used to compute how the piercing stat modifies the defensive stat that reduces
+  <div class="markdown level1 summary"><p>The penetration function used to compute how the piercing stat modifies the defensive stat that reduces
 damage for this <a class="xref" href="ElectricDrill.AstraRpgHealth.Damage.DamageTypeSO.html">DamageTypeSO</a>. This may implement flat, percentage, logarithmic,
-or custom reduction behaviour.</p>
+or custom penetration behaviour.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public DefenseReductionFnSO DefenseReductionFn { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public DefensePenetrationFnSO DefensePenetrationFn { get; }</code></pre>
   </div>
 
 
@@ -196,7 +196,7 @@ or custom reduction behaviour.</p>
 
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="ElectricDrill.AstraRpgHealth.DefenseReductionFunctions.DefenseReductionFnSO.html">DefenseReductionFnSO</a></dt>
+    <dt><a class="xref" href="ElectricDrill.AstraRpgHealth.DefensePenetrationFunctions.DefensePenetrationFnSO.html">DefensePenetrationFnSO</a></dt>
     <dd></dd>
   </dl>
 

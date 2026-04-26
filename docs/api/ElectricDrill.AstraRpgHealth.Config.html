@@ -106,13 +106,23 @@ Classes
       <dt><a class="xref" href="ElectricDrill.AstraRpgHealth.Config.AstraRpgHealthGlobalSettingsSO.html">AstraRpgHealthGlobalSettingsSO</a></dt>
       <dd></dd>
     </dl>
+    <h3 id="structs">
+Structs
+</h3>
+    <dl class="jumplist">
+      <dt><a class="xref" href="ElectricDrill.AstraRpgHealth.Config.HealthRoundingSettings.html">HealthRoundingSettings</a></dt>
+      <dd><p>Configures how fractional health-combat values are rounded to integer gameplay amounts.</p>
+</dd>
+    </dl>
     <h3 id="interfaces">
 Interfaces
 </h3>
     <dl class="jumplist">
       <dt><a class="xref" href="ElectricDrill.AstraRpgHealth.Config.IAstraRpgHealthConfig.html">IAstraRpgHealthConfig</a></dt>
-      <dd><p>Interface for health system configuration.
-This allows for dependency injection and easier testing.</p>
+      <dd><p>Read-only view of the health system configuration used by runtime components.
+Consumers should read through this interface; mutation is reserved for the concrete
+<a class="xref" href="ElectricDrill.AstraRpgHealth.Config.AstraRpgHealthConfigSO.html">AstraRpgHealthConfigSO</a> asset (edited in the Inspector or by package-internal
+code via its <code>internal</code> setters).</p>
 </dd>
     </dl>
 

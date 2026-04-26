@@ -100,6 +100,15 @@ Classes
 Handles damage calculation, health regeneration, barriers (temporary HP), and death events.</p>
 </dd>
     </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="ElectricDrill.AstraRpgHealth.EntityPassiveHpRegeneration.html">EntityPassiveHpRegeneration</a></dt>
+      <dd><p>Adds passive health regeneration to an entity over time.
+Attach this component to any entity that should automatically regenerate health.
+The regeneration amount per tick is driven by the <a class="xref" href="ElectricDrill.AstraRpgHealth.Config.IAstraRpgHealthConfig.html#ElectricDrill_AstraRpgHealth_Config_IAstraRpgHealthConfig_PassiveHealthRegenerationStat">PassiveHealthRegenerationStat</a>
+and the tick interval by <a class="xref" href="ElectricDrill.AstraRpgHealth.Config.IAstraRpgHealthConfig.html#ElectricDrill_AstraRpgHealth_Config_IAstraRpgHealthConfig_PassiveHealthRegenerationInterval">PassiveHealthRegenerationInterval</a>.
+Entities that do not require passive regeneration should not carry this component.</p>
+</dd>
+    </dl>
     <h3 id="interfaces">
 Interfaces
 </h3>

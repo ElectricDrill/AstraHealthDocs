@@ -230,6 +230,35 @@ Applied by `ApplyPercentageDmgModifiersStep` when that step is included in the a
 > [!NOTE]
 > If the entity to be healed doesn't have the specified flat/percentage heal modification stats, they will be considered as having a value of 0 for those stats, and therefore no modification will be applied to the healing amount for that entity.
 
+#### Rounding Settings
+**Type:** `HealthRoundingSettings`  
+**Required:** No  
+**Description:** Controls how fractional intermediate results in health combat calculations are rounded to integer gameplay amounts. All five modes default to **Round** (midpoint-away-from-zero), preserving the behavior of versions that did not expose this setting.
+
+> [!NOTE]
+> All rounding settings — including lifesteal — are configured here, under **Damage**, because they are part of the global combat configuration asset (`AstraRpgHealthConfigSO`).
+
+`HealthRoundingSettings` exposes one `RoundingMode` field per mechanic:
+
+| Field | When it is applied |
+|---|---|
+| **Percentage Damage Modifier Rounding Mode** | After all percentage modifiers (generic, source-specific, type-specific) are combined and applied to the current damage amount in `ApplyPercentageDmgModifiersStep`. |
+| **Defense Penetration Rounding Mode** | After the defense-penetration function reduces the target's effective defensive stat value inside `ApplyDefenseStep`. |
+| **Damage Mitigation Rounding Mode** | After the damage-mitigation function converts the effective defense into a final reduced damage amount inside `ApplyDefenseStep`. |
+| **Critical Damage Multiplier Rounding Mode** | After the critical-hit multiplier is applied to the current damage amount in `ApplyCriticalMultiplierStep`. |
+| **Lifesteal Rounding Mode** | Applied independently to each lifesteal contribution (generic and damage-type) before amounts are summed or applied as heals. |
+
+`RoundingMode` has three values:
+
+| Value | Behaviour | Example |
+|---|---|---|
+| **Round** *(default)* | Nearest integer; midpoint rounds away from zero. | 2.5 → 3, 2.4 → 2 |
+| **Floor** | Largest integer ≤ the value. | 2.9 → 2, 2.1 → 2 |
+| **Ceil** | Smallest integer ≥ the value. | 2.1 → 3, 2.9 → 3 |
+
+> [!TIP]
+> **Floor** ensures defensive calculations never accidentally round up in the attacker's favour. **Ceil** guarantees that small offensive or heal amounts are never silently truncated to zero. **Round** (the default) provides neutral, balanced behaviour suitable for most games.
+
 ---
 
 ### Health Regeneration

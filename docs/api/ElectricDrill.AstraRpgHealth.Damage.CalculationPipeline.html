@@ -134,7 +134,7 @@ might reduce the value to zero.
     <dl class="jumplist">
       <dt><a class="xref" href="ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.ApplyDefenseStep.html">ApplyDefenseStep</a></dt>
       <dd><p>Damage step that applies defensive calculations based on the damage type's
-defensive and piercing stats and configured reduction functions.</p>
+defensive and piercing stats and configured mitigation and penetration functions.</p>
 </dd>
     </dl>
     <dl class="jumplist">
@@ -170,10 +170,10 @@ Holds the amounts being transformed, the source/type metadata and accumulated pr
 </dd>
     </dl>
     <dl class="jumplist">
-      <dt><a class="xref" href="ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.DamageReductionCalculator.html">DamageReductionCalculator</a></dt>
+      <dt><a class="xref" href="ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.DamageMitigationCalculator.html">DamageMitigationCalculator</a></dt>
       <dd><p>Pure, stateless helpers that compute damage after defensive and damage
-reduction functions are applied. The class is policy-free: callers are
-responsible for validating their <a class="xref" href="ElectricDrill.AstraRpgHealth.Damage.DamageTypeSO.html">DamageTypeSO</a> configuration
+reduction functions are applied. Callers are responsible for validating
+their <a class="xref" href="ElectricDrill.AstraRpgHealth.Damage.DamageTypeSO.html">DamageTypeSO</a> configuration
 (for example, the consistency warnings in <a class="xref" href="ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.ApplyDefenseStep.html">ApplyDefenseStep</a>).</p>
 </dd>
     </dl>

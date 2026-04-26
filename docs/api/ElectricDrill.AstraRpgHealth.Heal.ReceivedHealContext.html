@@ -144,7 +144,7 @@ Contains the resolved heal amount, source, involved entities and whether it was 
 
   <h3 id="ElectricDrill_AstraRpgHealth_Heal_ReceivedHealContext__ctor_ElectricDrill_AstraRpgHealth_Heal_HealAmountContext_ElectricDrill_AstraRpgHealth_Heal_PreHealContext_ElectricDrill_AstraRpgFramework_EntityCore_" data-uid="ElectricDrill.AstraRpgHealth.Heal.ReceivedHealContext.#ctor(ElectricDrill.AstraRpgHealth.Heal.HealAmountContext,ElectricDrill.AstraRpgHealth.Heal.PreHealContext,ElectricDrill.AstraRpgFramework.EntityCore)">
   ReceivedHealContext(HealAmountContext, PreHealContext, EntityCore)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/Heal/ReceivedHealContext.cs/#L67"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/Heal/ReceivedHealContext.cs/#L75"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Create a ReceivedHealContext from the computed heal amount and the pre-heal context.</p>
@@ -187,7 +187,7 @@ Contains the resolved heal amount, source, involved entities and whether it was 
 
   <h3 id="ElectricDrill_AstraRpgHealth_Heal_ReceivedHealContext_Builder" data-uid="ElectricDrill.AstraRpgHealth.Heal.ReceivedHealContext.Builder">
   Builder
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/Heal/ReceivedHealContext.cs/#L59"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/Heal/ReceivedHealContext.cs/#L67"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Entry point to build a <a class="xref" href="ElectricDrill.AstraRpgHealth.Heal.ReceivedHealContext.html">ReceivedHealContext</a> using a step builder.</p>
@@ -399,6 +399,41 @@ When <code>false</code>, reactive systems should not respond to this heal event.
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><span class="xref">bool</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="ElectricDrill_AstraRpgHealth_Heal_ReceivedHealContext_Outcome_" data-uid="ElectricDrill.AstraRpgHealth.Heal.ReceivedHealContext.Outcome*"></a>
+
+  <h3 id="ElectricDrill_AstraRpgHealth_Heal_ReceivedHealContext_Outcome" data-uid="ElectricDrill.AstraRpgHealth.Heal.ReceivedHealContext.Outcome">
+  Outcome
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/Heal/ReceivedHealContext.cs/#L60"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The overall result of this heal attempt.
+<a class="xref" href="ElectricDrill.AstraRpgHealth.Heal.HealOutcome.html#ElectricDrill_AstraRpgHealth_Heal_HealOutcome_Prevented">Prevented</a> when the heal was ignored (e.g. a listener set
+<a class="xref" href="ElectricDrill.AstraRpgHealth.Heal.PreHealContext.html#ElectricDrill_AstraRpgHealth_Heal_PreHealContext_Ignore">Ignore</a> to <code>true</code>); <a class="xref" href="ElectricDrill.AstraRpgHealth.Heal.HealOutcome.html#ElectricDrill_AstraRpgHealth_Heal_HealOutcome_Applied">Applied</a>
+otherwise.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public HealOutcome Outcome { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="ElectricDrill.AstraRpgHealth.Heal.HealOutcome.html">HealOutcome</a></dt>
     <dd></dd>
   </dl>
 

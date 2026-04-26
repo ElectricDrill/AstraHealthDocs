@@ -305,6 +305,76 @@ AstraRpgHealthConfigProvider.Reset();
 <h5>Note</h5>
 <p>If the entity to be healed doesn't have the specified flat/percentage heal modification stats, they will be considered as having a value of 0 for those stats, and therefore no modification will be applied to the healing amount for that entity.</p>
 </div>
+<h4 id="rounding-settings">Rounding Settings</h4>
+<p><strong>Type:</strong> <code>HealthRoundingSettings</code><br>
+<strong>Required:</strong> No<br>
+<strong>Description:</strong> Controls how fractional intermediate results in health combat calculations are rounded to integer gameplay amounts. All five modes default to <strong>Round</strong> (midpoint-away-from-zero), preserving the behavior of versions that did not expose this setting.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>All rounding settings — including lifesteal — are configured here, under <strong>Damage</strong>, because they are part of the global combat configuration asset (<code>AstraRpgHealthConfigSO</code>).</p>
+</div>
+<p><code>HealthRoundingSettings</code> exposes one <code>RoundingMode</code> field per mechanic:</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>When it is applied</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Percentage Damage Modifier Rounding Mode</strong></td>
+<td>After all percentage modifiers (generic, source-specific, type-specific) are combined and applied to the current damage amount in <code>ApplyPercentageDmgModifiersStep</code>.</td>
+</tr>
+<tr>
+<td><strong>Defense Penetration Rounding Mode</strong></td>
+<td>After the defense-penetration function reduces the target's effective defensive stat value inside <code>ApplyDefenseStep</code>.</td>
+</tr>
+<tr>
+<td><strong>Damage Mitigation Rounding Mode</strong></td>
+<td>After the damage-mitigation function converts the effective defense into a final reduced damage amount inside <code>ApplyDefenseStep</code>.</td>
+</tr>
+<tr>
+<td><strong>Critical Damage Multiplier Rounding Mode</strong></td>
+<td>After the critical-hit multiplier is applied to the current damage amount in <code>ApplyCriticalMultiplierStep</code>.</td>
+</tr>
+<tr>
+<td><strong>Lifesteal Rounding Mode</strong></td>
+<td>Applied independently to each lifesteal contribution (generic and damage-type) before amounts are summed or applied as heals.</td>
+</tr>
+</tbody>
+</table>
+<p><code>RoundingMode</code> has three values:</p>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Behaviour</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Round</strong> <em>(default)</em></td>
+<td>Nearest integer; midpoint rounds away from zero.</td>
+<td>2.5 → 3, 2.4 → 2</td>
+</tr>
+<tr>
+<td><strong>Floor</strong></td>
+<td>Largest integer ≤ the value.</td>
+<td>2.9 → 2, 2.1 → 2</td>
+</tr>
+<tr>
+<td><strong>Ceil</strong></td>
+<td>Smallest integer ≥ the value.</td>
+<td>2.1 → 3, 2.9 → 3</td>
+</tr>
+</tbody>
+</table>
+<div class="TIP">
+<h5>Tip</h5>
+<p><strong>Floor</strong> ensures defensive calculations never accidentally round up in the attacker's favour. <strong>Ceil</strong> guarantees that small offensive or heal amounts are never silently truncated to zero. <strong>Round</strong> (the default) provides neutral, balanced behaviour suitable for most games.</p>
+</div>
 <hr>
 <h3 id="health-regeneration">Health Regeneration</h3>
 <h4 id="health-regeneration-source">Health Regeneration Source</h4>
