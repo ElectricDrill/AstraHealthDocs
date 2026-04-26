@@ -12,7 +12,7 @@ The scene covers all the main features of Astra RPG Health:
 - Health System
 - Damage Types
 - Damage Sources
-- Damage Reduction
+- Damage Mitigation
 - Defense Penetration
 - Healing System
 - Heal and Damage Modifiers
@@ -54,7 +54,7 @@ If you now take a look at the scene hierarchy you will see that, in addition to 
 - A `HeroSelector` object. This object has as children the game objects representing the "\[D\] Next Hero" and "\[A\] Previous Hero" buttons.
 - A `PopupCanvas` object, which contains two sub-objects: `DamagePopupManager` and `HealPopupManager`. These objects are responsible for creating the damage and healing popups that appear above the characters' heads when they take damage or receive healing.
 
-**Each entity has the Astra components `EntityCore`, `EntityClass`, `EntityStats`, and the new `EntityHealth` on the root object.** The dummy does not have a class. This choice is not to discriminate against our wooden friend, but simply because it simplifies changing the dummy's statistics to facilitate testing the package's features. This way, if you wanted to change the Armor to see how the damage reduction changes in real-time, you don't need to go through the Growth Formula associated with that stat in the dummy's class, but you can simply modify its value through `EntityStats`. Simple and effective.
+**Each entity has the Astra components `EntityCore`, `EntityClass`, `EntityStats`, and the new `EntityHealth` on the root object.** The dummy does not have a class. This choice is not to discriminate against our wooden friend, but simply because it simplifies changing the dummy's statistics to facilitate testing the package's features. This way, if you wanted to change the Armor to see how the damage mitigation changes in real-time, you don't need to go through the Growth Formula associated with that stat in the dummy's class, but you can simply modify its value through `EntityStats`. Simple and effective.
 
 Each entity (including the dummy) also has two sub-objects: `Visuals` and `Skills`. The first contains all the objects responsible for the character's visual representation (sprite and health bar for the dummy, sprite and attack sprite for the player characters), while the second is used to specify the character's abilities.
 
@@ -94,7 +94,7 @@ In the `Classes` subfolder you will find all the classes for the 3 playable char
 In the `Sources - Damage` subfolder you will find two damage sources: `Skill` and `Environmental`. The scene does not make use of environmental damage, but the damage source is used in [Experience Collection](./workflows/experience-collection.md), particularly in the `Environmental Kill Exp Strategy` strategy. Therefore, although it cannot be tested in the scene, it has value as an example to show you how to create and configure a multiple strategy that uses both the direct kill and the environmental kill strategies.
 
 #### Damage Types
-In the `Damage Types` subfolder you will find the three damage types used in the sample scene: Physical, Magical and True, and two folders containing the three variants of Damage Reduction Functions and Defense Reduction Functions. Currently, both physical and magical damage use the logarithmic formula for damage reduction based on the defensive stat, and percentage reduction for defensive stat penetration. I have provided all three to make it easier for you to test should you want to swap the formulas on the fly.
+In the `Damage Types` subfolder you will find the three damage types used in the sample scene: Physical, Magical and True, and two folders containing the three variants of Damage Mitigation Functions and Defense Penetration Functions. Currently, both physical and magical damage use the logarithmic formula for damage mitigation based on the defensive stat, and percentage reduction for defensive stat penetration. I have provided all three to make it easier for you to test should you want to swap the formulas on the fly.
 
 #### Events
 In `Events` you will find all the instances of the game events used by the sample scene. All the instances belong to Astra RPG Health except for `Entity Leveled Up Game Event` and `Entity Leveled Down Game Event`.
@@ -147,13 +147,13 @@ If you press the "Don't crit" button, the text will change to "Do crit", and the
 ### Messing Around with Damage Types and Damage Calculation Strategy
 Here you can go wild and play with various settings to radically change the way damage is calculated. Let's start by observing the configuration of the damage types:
 
-| Damage Type | Defensive Stat | Damage Reduction Function | Defense Penetration Stat | Defense Penetration Function | Flat Damage Modifier Stat | Percentage Damage Modifier Stat | Ignores Barrier | Ignores Generic Perc. Dmg Modifiers | Ignores Generic Flat Dmg Modifiers |
+| Damage Type | Defensive Stat | Damage Mitigation Function | Defense Penetration Stat | Defense Penetration Function | Flat Damage Modifier Stat | Percentage Damage Modifier Stat | Ignores Barrier | Ignores Generic Perc. Dmg Modifiers | Ignores Generic Flat Dmg Modifiers |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | Physical | Armor | Logarithmic DR | Armor Penetration | Percentage DP | Physical Flat Dmg Mod | Physical Percentage Dmg Mod | ✗ | ✗ | ✗ |
 | Magical | Magic Resist | Logarithmic DR | Magic Penetration | Percentage DP | Magical Flat Dmg Mod | Magical Percentage Dmg Mod | ✗ | ✗ | ✗ |
 | True | None | None | None | None | None | None | ✓ | ✓ | ✓ |
 
-You can notice that physical and magical damage both use the same logarithmic formula for damage reduction and the same one for defense penetration, but clearly use different statistics for reduction and penetration. True damage instead has no associated defensive stat, so it does not suffer any reduction. Having no associated defensive stats, it also has no defense penetration.
+You can notice that physical and magical damage both use the same logarithmic formula for damage mitigation and the same one for defense penetration, but clearly use different statistics for reduction and penetration. True damage instead has no associated defensive stat, so it does not suffer any reduction. Having no associated defensive stats, it also has no defense penetration.
 In addition to the defensive stats and the related reduction and penetration formulas, physical and magical damage also define statistics for flat and percentage modifiers for the specific damage type. I refer you to the documentation on [Damage Type's Damage Modifiers](./workflows/damage.md#damage-types-damage-modifiers) for more details on how these stats work and how they are used in the damage calculation pipeline. You can test the impact of these stats by modifying their values in the Dummy's `EntityStats`. **Also remember that the order of application of flat and percentage modifiers is defined in the configured damage calculation strategy. In the sample scene you will find it under `Examples/Instances/Default Damage Calculation Strategy`.** Its initial configuration is:
 1. Apply Critical Multiplier
 2. Apply Defenses
@@ -171,7 +171,7 @@ An observation you might raise is "What if an entity has the generic damage perc
 Therefore, even if you did not set a lower bound of -100% on the percentage damage modifier stats, the system would still ensure that the damage does not drop below zero due to percentage modifiers; however, it is more semantically correct and clearer to set a -100% limit on these stats. This would also be useful when creating game interfaces for displaying these stats, as a player might be confused seeing a damage modifier of -150%, not knowing that in reality the damage cannot drop below zero.
 
 ### Playing with Passive HP Regeneration
-In the sample scene, passive health regeneration is enabled for all characters, but you can disable it by unchecking `Passive Health Regeneration` in the `EntityHealth` of the entity in question. By default, healing popups will also be shown for each passive regeneration tick. If these popups bother you, you can disable them as follows:
+In the sample scene, passive health regeneration is enabled for all characters through the dedicated `EntityPassiveHpRegeneration` component. You can disable it for a specific entity by removing that component or disabling it in the inspector. By default, healing popups will also be shown for each passive regeneration tick. If these popups bother you, you can disable them as follows:
 1. From the hierarchy, open the `PopupCanvas` game object
 2. Select the `HealPopupManager` game object
 3. In the inspector, in the `Heal Popup Manager` component, expand the `Heal Sources To Ignore` section and press the `+` button. Drag the `HP Regeneration HS` Heal Source found in `Examples/Instances/Sources - Heal` here.
@@ -180,7 +180,7 @@ This way, the `Heal Popup Manager` will ignore all healing events that have `HP 
 
 Even from this simple example, the value of creating and using different heal sources becomes clear. Heals coming from different mechanics can raise different use cases.
 
-I have configured the regeneration tick rate to 1 second. If you wanted to change the tick rate of passive regeneration, you can do so by modifying the `Passive HP Regeneration Interval` value in the `Astra Rpg Health Config` configuration instance found in `Examples/Resources`. I also refer you to the documentation on [Package Configuration | Health Regeneration](./workflows/package-configuration.md#health-regeneration) and on [Healing | Passive Health Regeneration](./workflows/healing.md#passive-health-regeneration) for details.
+I have configured the regeneration tick rate to 1 second. If you wanted to change the tick rate of passive regeneration, you can do so by modifying the `Passive Health Regeneration Interval` value in the `Astra Rpg Health Config` configuration instance found in `Examples/Resources`. I also refer you to the documentation on [Package Configuration | Health Regeneration](./workflows/package-configuration.md#health-regeneration) and on [Healing | Passive Health Regeneration](./workflows/healing.md#passive-health-regeneration) for details.
 
 To modify the passively regenerated health, you need to change the value of the `Passive Regeneration` stat. For the three playable characters, this stat is controlled through the Growth Formulas associated with their respective classes, while for the Dummy you can modify it directly through `EntityStats`.
 

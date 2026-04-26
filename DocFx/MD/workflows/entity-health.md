@@ -6,6 +6,9 @@ Here is an example of the `EntityHealth` component:
 
 The events section is collapsed by default since there are many events, and it is more practical to expand it only when necessary.
 
+> [!NOTE]
+> Automatic time-based regeneration is handled by the dedicated `EntityPassiveHpRegeneration` MonoBehaviour, which you attach alongside `EntityHealth` on entities that should regenerate over time. See [Passive Health Regeneration](./healing.md#passive-health-regeneration) for setup details.
+
 Let's proceed in order and analyze every property of the `EntityHealth` component.
 
 ## Health
@@ -19,11 +22,10 @@ Let's proceed in order and analyze every property of the `EntityHealth` componen
 > This can happen if, for example, you change from 10 base max HP to 25 by deleting the text box with backspace: 10 (backspace) -> 1 (backspace) -> 0 (2 pressed) -> 2 (5 pressed) -> 25. Note that by deleting all numbers and leaving the box empty, `Base Max HP` becomes 0, and consequently `Current HP` also becomes 0. At this point, the entity is considered dead.
 
 - **Barrier**: LongRef representing any barrier points (or temporary HP) of the entity. The barrier absorbs damage before it affects the entity's health points.
-- **Passive Health Regeneration**: Boolean that decrees whether the entity passively regenerates HP over time or not. The regeneration frequency, as well as the statistic to consider for the amount of passively regenerated HP, are defined in the [Astra RPG Health Config](package-configuration.md#health-regeneration) configuration.
 - **Restore HP On Level Up**: Boolean indicating whether the entity is fully healed when leveling up.
 
 ## Damage
-For a better understanding of the first two properties of this section, I recommend taking a look at the [Damage Calculation Strategy](damage.md#damage-calculation-strategy) documentation. Simply put, a Damage Calculation Strategy defines how the damage an entity is about to take is calculated (e.g., applying damage reduction for the defensive stat first, or damage absorption by the barrier first, when to apply the critical multiplier, etc.).
+For a better understanding of the first two properties of this section, I recommend taking a look at the [Damage Calculation Strategy](damage.md#damage-calculation-strategy) documentation. Simply put, a Damage Calculation Strategy defines how the damage an entity is about to take is calculated (e.g., applying damage mitigation for the defensive stat first, or damage absorption by the barrier first, when to apply the critical multiplier, etc.).
 Also recall that a default strategy can be assigned via configuration. See [Default Damage Calculation Strategy](package-configuration.md#default-damage-calculation-strategy).
 
 - **Custom Damage Calculation Strategy**: Field of type `DamageCalculationStrategy`. If the entity should use a custom damage calculation strategy, you can specify it here. This, if defined, takes precedence over the default one defined via configuration. A common use case could be, for example, a boss that cannot take more than 10% of its max health in damage at a time.
@@ -77,6 +79,18 @@ When the relevant action occurs (e.g., the entity takes damage, the entity dies,
 
 Extra Events are therefore not an alternative to Event Channels: they are the entity-specific events stored inside them. A practical example is the communication between the player's `EntityHealth` and the HUD displaying their HP: only the player possesses a dedicated HUD, so it is useful to assign an exclusive extra event on the appropriate channel for this interaction. In this way, the HUD does not receive events from all entities, but only those relevant to the player, while the global event is still available for game-wide systems.
 
+`EntityHealth` implements `IEventRegistrar`, which provides `Subscribe<TEvent>` and `Unsubscribe<TEvent>` for adding and removing extra events at runtime:
+
+```csharp
+// Register a per-entity listener at runtime
+entityHealth.Subscribe<EntityDiedGameEvent>(myEntitySpecificDeathEvent);
+
+// Unregister it
+entityHealth.Unsubscribe<EntityDiedGameEvent>(myEntitySpecificDeathEvent);
+```
+
+Replace `EntityDiedGameEvent` with the concrete event type for the channel you want to target (e.g., `PreDamageGameEvent`, `DamageResolutionGameEvent`, `EntityHealthChangedGameEvent`, `HealthRatioChangedGameEvent`, etc.).
+
 ### Events Breakdown
 Here is a detailed description of each event. Each signal has a corresponding Event Channel on `EntityHealth`; that channel raises the global event configured in `AstraRpgHealthConfig` and any extra events assigned to the entity, so it is sufficient to describe each signal once.
 
@@ -98,6 +112,8 @@ Refer to the [EntityHealthChangedContext](xref:ElectricDrill.AstraRpgHealth.Even
 
 - **Max Health Changed Event**: Event raised when an entity's total max health points change. This event is raised both when total max hp increase and when they decrease.
 See [EntityMaxHealthChangedContext](xref:ElectricDrill.AstraRpgHealth.Events.EntityMaxHealthChangedContext) API for more details on the context parameter.
+- **Health Ratio Changed Event**: Event raised whenever the HP/MaxHP ratio changes — whether because current HP changed (via `AddHealth`/`RemoveHealth`) or because MaxHP changed (via `RecalculateMaxHp`). Carries `HealthRatioChangedContext` with raw `PreviousHp`, `NewHp`, `PreviousMaxHp`, and `NewMaxHp` values, plus `PreviousValue` and `NewValue` as integer HP percentages (0–100). Useful for HP-ratio-based conditions — for example, triggering an ability when an entity drops below 25% HP.
+See [HealthRatioChangedContext](xref:ElectricDrill.AstraRpgHealth.Events.Contexts.HealthRatioChangedContext) API for more details on the context parameter.
 - **Entity Died Event**: Event raised when the entity dies. See [EntityDiedContext](xref:ElectricDrill.AstraRpgHealth.Events.EntityDiedContext) API for more details on the context parameter.
 
 #### Healing Related Events
