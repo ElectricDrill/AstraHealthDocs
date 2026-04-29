@@ -75,7 +75,7 @@ The **origin of val values** also differs between the two. Defensive stat values
 ## How is Astra Health organized and how does it work?
 
 ### <img src="../images/AstraRPG/astra-health_astra-rpg-health-config.png" alt="attribute" width="30" class="icon-background"/> Astra Health Config
-The `AstraHealthConfig` is a `ScriptableObject` that serves as the central configuration point for the Astra Health package. It has several properties that allow you to define how the health and damage systems should behave in your game.
+The `AstraHealthConfigSO` is a `ScriptableObject` that serves as the central configuration point for the Astra Health package. It has several properties that allow you to define how the health and damage systems should behave in your game.
 
 Astra Health needs to be configured to work around the actual instances of the base framework's components defined for your game. For example, if you defined a certain statistic for general damage mitigation in your game with Astra Framework, you need to inform Astra Health about it so that it can use it when calculating damage.
 The needed configuration is kept minimal, and convention-over-configuration is applied where possible to reduce the amount of setup required.  

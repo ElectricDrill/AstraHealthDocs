@@ -121,7 +121,7 @@ If for any reason you need to create a new `AstraHealthConfigSO` asset, you can 
 ### Via Asset Menu
 
 1. Right-click in the **Project Window**
-2. Select **Create → Astra Health → Configuration**
+2. Select **Create → Astra Health → Config → Astra Health Config**
 3. Name your configuration
 4. Assign it in Project Settings or in the Global Settings asset
 

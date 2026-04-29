@@ -64,7 +64,7 @@ In the image, you don't see any assigned event. Therefore, this is the view of t
 Through `EntityHealth` we can configure entity-scoped _Event Channels_. For each signal (e.g., Pre Damage Info Event, Entity Died Event, etc.), the corresponding Event Channel is the per-entity mechanism that orchestrates the raise flow.
 
 ### Global Events
-Global Events broadcast health-related information to the entire game and are configured once at the project level in the [AstraHealthConfig](package-configuration.md#global-events) asset — not per entity on `EntityHealth`. This guarantees a single authoritative source for framework-level communication and eliminates the risk of misconfiguration caused by different entities referencing different event assets.
+Global Events broadcast health-related information to the entire game and are configured once at the project level in the [AstraHealthConfigSO](package-configuration.md#global-events) asset — not per entity on `EntityHealth`. This guarantees a single authoritative source for framework-level communication and eliminates the risk of misconfiguration caused by different entities referencing different event assets.
 
 The framework uses several global events internally: for example, the _Damage Resolution_ event powers lifesteal, and the _Entity Died_ event is what experience collectors listen to for XP awards. See [Global Events](package-configuration.md#global-events) in Package Configuration for the full reference, including which events are required and which framework features depend on each.
 
@@ -72,7 +72,7 @@ The framework uses several global events internally: for example, the _Damage Re
 Event Channels are assigned directly on the `EntityHealth` component. They are designed to bridge the package-level global communication with optional per-entity communication.
 
 Each Event Channel contains:
-- a resolver that retrieves the corresponding Global Event from `AstraHealthConfig`
+- a resolver that retrieves the corresponding Global Event from `AstraHealthConfigSO`
 - a list of _Extra Events_ that you can assign directly on that specific entity
 
 When the relevant action occurs (e.g., the entity takes damage, the entity dies, etc.), `EntityHealth` raises the corresponding Event Channel. The channel then raises the resolved Global Event configured at package level, if any, and, in the same flow, all Extra Events assigned to that channel.
@@ -92,7 +92,7 @@ entityHealth.Unsubscribe<EntityDiedGameEvent>(myEntitySpecificDeathEvent);
 Replace `EntityDiedGameEvent` with the concrete event type for the channel you want to target (e.g., `PreDamageGameEvent`, `DamageResolutionGameEvent`, `EntityHealthChangedGameEvent`, `HealthRatioChangedGameEvent`, etc.).
 
 ### Events Breakdown
-Here is a detailed description of each event. Each signal has a corresponding Event Channel on `EntityHealth`; that channel raises the global event configured in `AstraHealthConfig` and any extra events assigned to the entity, so it is sufficient to describe each signal once.
+Here is a detailed description of each event. Each signal has a corresponding Event Channel on `EntityHealth`; that channel raises the global event configured in `AstraHealthConfigSO` and any extra events assigned to the entity, so it is sufficient to describe each signal once.
 
 #### Damage Related Events
 To better understand the first two events of this section, I recommend taking a look at the [Damage](damage.md) documentation to get a better understanding of damage in Astra Health.

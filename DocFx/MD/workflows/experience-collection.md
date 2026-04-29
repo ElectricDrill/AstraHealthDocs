@@ -36,8 +36,8 @@ The custom `ExpCollector` inspector includes a status indicator that shows at a 
 
 - **Info — "Using custom strategy: [name]"**: a **Custom Exp Collection Strategy** is assigned on this component.
 - **Info — "Using default strategy from config: [name]"**: no custom strategy is assigned, but a default is found in the `AstraHealthConfigSO`.
-- **Warning — "No AstraHealthConfig found…"**: no package configuration asset is in scope. See [Package Configuration](package-configuration.md) for setup details.
-- **Warning — "No default experience collection strategy configured in AstraHealthConfig…"**: a configuration asset exists but no **Default Exp Collection Strategy** is set on it.
+- **Warning — "No AstraRpgHealthConfig found…"**: no package configuration asset is in scope. See [Package Configuration](package-configuration.md) for setup details.
+- **Warning — "No default experience collection strategy configured in AstraRpgHealthConfig…"**: a configuration asset exists but no **Default Exp Collection Strategy** is set on it.
 
 
 ## Default Strategy in Package Configuration
