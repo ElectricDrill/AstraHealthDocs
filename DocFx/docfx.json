@@ -57,8 +57,8 @@
         "modern"
       ],
       "globalMetadata": {
-          "_appName": "Astra RPG Health",
-          "_appTitle": "Astra RPG Health",
+          "_appName": "Astra Health",
+          "_appTitle": "Astra Health",
           "_appLogoPath": "images/logo-health.svg",
           "_appFaviconPath": "images/astra-health-ico.ico",
           "_enableSearch": true,

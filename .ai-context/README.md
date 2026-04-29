@@ -1,6 +1,6 @@
 # _ai-context — AI Session Context Archive
 
-This folder contains structured knowledge files for AI assistants working on the Astra RPG Health documentation. Read all four files at the start of every new session.
+This folder contains structured knowledge files for AI assistants working on the Astra Health documentation. Read all four files at the start of every new session.
 
 ## Files
 

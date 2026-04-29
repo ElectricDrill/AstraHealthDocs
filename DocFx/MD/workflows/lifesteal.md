@@ -4,10 +4,10 @@ Lifesteal is a mechanic that lets an entity recover health proportional to the d
 
 The system supports **two lifesteal layers**:
 
-1. **Generic Lifesteal** — configured once in `AstraRpgHealthConfigSO` and applied to all damage dealt by the entity.
+1. **Generic Lifesteal** — configured once in `AstraHealthConfigSO` and applied to all damage dealt by the entity.
 2. **Damage-Type Lifesteal** — configured directly inside each `DamageTypeSO` and applied only when that specific damage type is dealt.
 
-Both layers use the same `LifestealStatConfig` structure, so designers configure the same three concepts in both places: the lifesteal stat, the heal source, and the damage amount selector. If both layers are configured for the same hit, their heal amounts stack. Depending on the `Unify Lifesteal Heals` flag in `AstraRpgHealthConfigSO`, those stacked amounts can be applied either as two separate heals or as a single unified heal.
+Both layers use the same `LifestealStatConfig` structure, so designers configure the same three concepts in both places: the lifesteal stat, the heal source, and the damage amount selector. If both layers are configured for the same hit, their heal amounts stack. Depending on the `Unify Lifesteal Heals` flag in `AstraHealthConfigSO`, those stacked amounts can be applied either as two separate heals or as a single unified heal.
 
 ## LifestealStatConfig
 
@@ -30,7 +30,7 @@ Determines which damage value is used as the basis for the lifesteal computation
 
 ## Generic Lifesteal
 
-`AstraRpgHealthConfigSO` exposes a **Generic Lifesteal** field of type `LifestealStatConfig`.
+`AstraHealthConfigSO` exposes a **Generic Lifesteal** field of type `LifestealStatConfig`.
 
 If its **Lifesteal Stat** is configured and the damage dealer has that stat in its `StatSet`, every successful hit can generate lifesteal from this generic configuration regardless of the hit's `DamageTypeSO`.
 
@@ -93,7 +93,7 @@ This is useful when generic lifesteal is meant to be an invisible baseline bonus
 
 By default, lifesteal heals raise the standard healing events (`Pre Heal` and `Entity Healed`). In games where many entities deal lifesteal damage frequently — for example, a horde of enemies all with a lifesteal stat, each landing hits several times per second — the volume of heal events generated can become significant, especially when the global `Entity Healed Event` has multiple listeners.
 
-If profiling reveals this to be a bottleneck, the **Suppress Lifesteal Events** flag in `AstraRpgHealthConfigSO` disables healing event emission for lifesteal heals entirely. The heal is still applied; only the events are suppressed. This option is appropriate when you do not need to react to lifesteal heals through event listeners — for example, when your UI or combat log does not track lifesteal healing specifically.
+If profiling reveals this to be a bottleneck, the **Suppress Lifesteal Events** flag in `AstraHealthConfigSO` disables healing event emission for lifesteal heals entirely. The heal is still applied; only the events are suppressed. This option is appropriate when you do not need to react to lifesteal heals through event listeners — for example, when your UI or combat log does not track lifesteal healing specifically.
 
 A similar consideration applies to passive health regeneration, which can also generate a high volume of heal events under certain conditions. See [Performance Considerations](healing.md#performance-considerations) in the Healing documentation for a broader discussion.
 
@@ -104,7 +104,7 @@ A similar consideration applies to passive health regeneration, which can also g
 > - The dealing entity is the source of the damage. Lifesteal does not trigger on damage dealt by others.
 > - The dealing entity is alive at the moment of damage resolution.
 > - At least one lifesteal layer is configured for the hit:
->   - **Generic Lifesteal** in `AstraRpgHealthConfigSO`, and/or
+>   - **Generic Lifesteal** in `AstraHealthConfigSO`, and/or
 >   - **Lifesteal** on the hit's `DamageTypeSO`.
 > - For each configured layer, the corresponding **Lifesteal Stat** is present in the dealing entity's `StatSet`.
 > - The computed heal amount for that layer is greater than zero. A lifesteal stat of 0% produces no heal contribution.

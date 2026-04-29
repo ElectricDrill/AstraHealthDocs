@@ -1,10 +1,10 @@
-# Project Overview — Astra RPG Health
+# Project Overview — Astra Health
 
 > **For AI assistants**: read all four files in this folder at the start of each session before touching any documentation or source code.
 
 ## What This Is
 
-**Astra RPG Health** is a Unity package built on top of **Astra RPG Framework**. It adds health, damage, healing, death/resurrection, lifesteal, barrier, experience collection, and health scaling mechanics to entities managed by the Framework's stat/attribute system.
+**Astra Health** is a Unity package built on top of **Astra RPG Framework**. It adds health, damage, healing, death/resurrection, lifesteal, barrier, experience collection, and health scaling mechanics to entities managed by the Framework's stat/attribute system.
 
 The user is writing English documentation for this package using DocFx. All conversations happen in Italian; documentation is always written in English.
 
@@ -15,7 +15,7 @@ The user is writing English documentation for this package using DocFx. All conv
 On Windows workstation, the relevant paths are:
 | Asset | Path |
 |---|---|
-| Health package source | `C:\Users\emaci\Documents\AstraRpgPublishing_6_3\Packages\com.electricdrill.astra-rpg-health\` |
+| Health package source | `C:\Users\emaci\Documents\AstraRpgPublishing_6_3\Packages\com.electricdrill.astra-health\` |
 | Framework source | `C:\Users\emaci\Documents\AstraRpgPublishing_6_3\Packages\com.electricdrill.astra-rpg-framework\` |
 | Documentation markdown | `C:\Users\emaci\Documents\AstraRpgHealthDocs\DocFx\MD\` |
 | Documentation images | `C:\Users\emaci\Documents\AstraRpgHealthDocs\DocFx\images\AstraRPG\` |
@@ -24,7 +24,7 @@ On Windows workstation, the relevant paths are:
 On Ubuntu workstation, the paths are:
 | Asset | Path |
 |---|---|
-| Health package source | `/home/emanuele/RiderProjects/Geometrical-Invaders/Packages/com.electricdrill.astra-rpg-health/` |
+| Health package source | `/home/emanuele/RiderProjects/Geometrical-Invaders/Packages/com.electricdrill.astra-health/` |
 | Framework source | `/home/emanuele/RiderProjects/Geometrical-Invaders/Packages/com.electricdrill.astra-rpg-framework/` |
 | Documentation markdown | `/home/emanuele/Documents/Personal/ElectricDrill/AstraRpgHealthDocs/DocFx/MD/` |
 | Documentation images | `/home/emanuele/Documents/Personal/ElectricDrill/AstraRpgHealthDocs/DocFx/images/AstraRPG/` |
@@ -48,10 +48,10 @@ The Framework provides the foundation. Key systems relevant to the Health packag
 
 ---
 
-## Astra RPG Health — Systems Overview
+## Astra Health — Systems Overview
 
 ### 1. Config System
-Global configuration asset accessed via `AstraRpgHealthConfigProvider` (static singleton). Covers all subsystems.
+Global configuration asset accessed via `AstraHealthConfigProvider` (static singleton). Covers all subsystems.
 
 ### 2. Damage System
 Fluent builder (`PreDamageContext`) → pipeline of `DamageStep` instances defined in `DamageCalculationStrategySO` → result in `DamageResolutionContext`.
@@ -86,11 +86,11 @@ Temporary HP absorbed before real health by `ApplyBarrierStep` in the damage pip
 ### Config (`Config/`)
 | Class | Purpose |
 |---|---|
-| `IAstraRpgHealthConfig` | Interface: all configurable parameters for every subsystem |
-| `AstraRpgHealthConfigSO` | Concrete SO implementation of `IAstraRpgHealthConfig` |
-| `AstraRpgHealthGlobalSettingsSO` | Holds pointer to active config; must live in `Resources/` |
-| `AstraRpgHealthConfigProvider` | Static service; lazy-loads config with 3-step fallback |
-| `AstraRpgHealthBootstrap` | `[RuntimeInitializeOnLoadMethod]` warm-load on startup |
+| `IAstraHealthConfig` | Interface: all configurable parameters for every subsystem |
+| `AstraHealthConfigSO` | Concrete SO implementation of `IAstraHealthConfig` |
+| `AstraHealthGlobalSettingsSO` | Holds pointer to active config; must live in `Resources/` |
+| `AstraHealthConfigProvider` | Static service; lazy-loads config with 3-step fallback |
+| `AstraHealthBootstrap` | `[RuntimeInitializeOnLoadMethod]` warm-load on startup |
 
 ### Damage (`Damage/`)
 | Class | Purpose |
@@ -191,22 +191,22 @@ Game events (SO assets) and listeners (MonoBehaviour) are auto-generated for: `E
 ### Root
 | Class | Purpose |
 |---|---|
-| `AstraRpgHealthAssetCreation` | 13 asset-creation menu items under `Assets/Create/Astra RPG Health/` |
+| `AstraRpgHealthAssetCreation` | 13 asset-creation menu items under `Assets/Create/Astra Health/` |
 | `EntityHealthEditor` | Complex inspector: Health, Damage, Death, Events sections; foldouts; extra event channel management |
 
 ### Window (`Window/`)
 | Class | Opened by | Purpose |
 |---|---|---|
-| `LogDamageReductionGraphWindow` | `LogDamageReductionFnEditor` button or `Window → Astra RPG Health → Log Damage Reduction Graph` | Two graphs: Base Value varying / Scale Factor varying; 5 curves each; hover tooltip |
+| `LogDamageReductionGraphWindow` | `LogDamageReductionFnEditor` button or `Window → Astra Health → Log Damage Reduction Graph` | Two graphs: Base Value varying / Scale Factor varying; 5 curves each; hover tooltip |
 | `DmgReductionGraphWindow` | **"Make a Damage Reduction Simulation" button in `DamageTypeEditor`** | Shows actual clamped (green) + unclamped (yellow) damage reduction for a `DamageTypeSO`; supports piercing stat + growth formula |
 | `LogDefenseReductionGraphWindow` | `LogDefenseReductionFnEditor` button | Same layout as LogDamageReductionGraphWindow but for defense (piercing) reduction |
 
 ### Config (`Config/`)
 | Class | Purpose |
 |---|---|
-| `AstraRpgHealthSettingsProviderEditor` | Project Settings panel; active config selection with ✓/⚠/🛑 status indicators |
-| `AstraRpgHealthConfigEditor` | Inspector for `AstraRpgHealthConfigSO`; 6 organized sections |
-| `AstraRpgHealthEditorBootstrapper` | `[InitializeOnLoad]` auto-creates GlobalSettings and assigns fallback config |
+| `AstraHealthSettingsProviderEditor` | Project Settings panel; active config selection with ✓/⚠/🛑 status indicators |
+| `AstraHealthConfigEditor` | Inspector for `AstraHealthConfigSO`; 6 organized sections |
+| `AstraHealthEditorBootstrapper` | `[InitializeOnLoad]` auto-creates GlobalSettings and assigns fallback config |
 
 ### Damage (`Damage/`)
 | Class | Purpose |
@@ -249,12 +249,12 @@ Defined in `DamageTypeEditor.cs`:
 - **True Damage — IgnoresBarrier**: `ApplyBarrierStep` is skipped entirely.
 - **True Damage — IgnoreGenericFlatDamageModifiers / IgnoreGenericPercentageDamageModifiers**: generic modifier steps skip the global config stat for this damage type.
 - **Pipeline short-circuit**: `DamageStep.Process()` skips execution if damage is already prevented or reduced to 0 by a previous step.
-- **Config fallback**: `AstraRpgHealthConfigProvider` tries GlobalSettings → Resources conventional location → logs error.
+- **Config fallback**: `AstraHealthConfigProvider` tries GlobalSettings → Resources conventional location → logs error.
 - **Dead entity**: `TakeDamage` returns `Prevented` with reason `EntityDead` immediately; `DeadEntityException` is thrown on illegal health ops.
 
 ---
 
-## AstraRpgHealthConfig — Sections
+## AstraHealthConfig — Sections
 
 | Section | Key fields |
 |---|---|

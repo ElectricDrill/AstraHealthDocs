@@ -1,14 +1,14 @@
 # Samples
 
 ## No More Utils Folder
-Unlike Astra RPG Framework, in this package you will not find a `Utils` folder among the various samples. I made this decision because I believe it is wiser and more robust to let you create your own instances. This is because if you build your project around the instances I provide in the samples, and then decide to import a new version of the package and reimport the samples, you risk getting confused about which instances from which version you are currently using for your project. By letting you create all the framework object instances yourself, this problem is completely avoided.
+Unlike Astra Framework, in this package you will not find a `Utils` folder among the various samples. I made this decision because I believe it is wiser and more robust to let you create your own instances. This is because if you build your project around the instances I provide in the samples, and then decide to import a new version of the package and reimport the samples, you risk getting confused about which instances from which version you are currently using for your project. By letting you create all the framework object instances yourself, this problem is completely avoided.
 Furthermore, the instances present in the sample scene's samples are marked with a `(Astra Health Samples)` suffix, making them easily identifiable and distinguishable from any instances you might create for your own project.
 
 If you want to draw inspiration from the instances in the samples, feel free to do so, but I recommend creating new instances for your project to avoid any future confusion.
 
 ## Examples Folder - Overview
-Inside the `Examples` folder you will find a sample scene: it is your sandbox for trying out the features of Astra RPG Health. Compared to the minimal one in Astra RPG Framework, this scene has more content and features to explore.
-The scene covers all the main features of Astra RPG Health:
+Inside the `Examples` folder you will find a sample scene: it is your sandbox for trying out the features of Astra Health. Compared to the minimal one in Astra Framework, this scene has more content and features to explore.
+The scene covers all the main features of Astra Health:
 - Health System
 - Damage Types
 - Damage Sources
@@ -26,8 +26,8 @@ The scene covers all the main features of Astra RPG Health:
 ![Screenshot of the sample scene](../images/AstraRPG/samples/scene-overview.png)
 _Sample scene as you enter in play mode_
 
-If you open and start the sample scene, you will see a stylized fighter on the left (Duelist) and a dummy on the right (Dummy). Without much surprise, you can unleash the wrath of your character against the poor dummy in order to test the features of Astra RPG Health.
-Before taking it out on the dummy, let's take a look at the rest of the scene. Above the duelist there is a panel containing the character's name, level, optional class, health bar, and finally the character's stat values. A similar panel is present above the dummy. You can scroll with the mouse wheel on these panels to view all the statistics. You will notice that unlike the Astra RPG Framework sample scene, the panels in this scene do not show attributes. This is because I intentionally excluded their use in this scene, in order to focus on the features of Astra RPG Health. Had I included attributes as well, it would have been more complex to reason about the effect of damage calculation formulas, reductions, penetrations and so on, since the stat values would also have been influenced by the attributes. Therefore, for simplicity, in this sample scene you will only need to focus on statistics.
+If you open and start the sample scene, you will see a stylized fighter on the left (Duelist) and a dummy on the right (Dummy). Without much surprise, you can unleash the wrath of your character against the poor dummy in order to test the features of Astra Health.
+Before taking it out on the dummy, let's take a look at the rest of the scene. Above the duelist there is a panel containing the character's name, level, optional class, health bar, and finally the character's stat values. A similar panel is present above the dummy. You can scroll with the mouse wheel on these panels to view all the statistics. You will notice that unlike the Astra Framework sample scene, the panels in this scene do not show attributes. This is because I intentionally excluded their use in this scene, in order to focus on the features of Astra Health. Had I included attributes as well, it would have been more complex to reason about the effect of damage calculation formulas, reductions, penetrations and so on, since the stat values would also have been influenced by the attributes. Therefore, for simplicity, in this sample scene you will only need to focus on statistics.
 
 In addition to the stats panels, you will notice that there are also buttons with one or two icons to their left. These represent the abilities that each character can use. And yes, even the dummy has a say in this and can take revenge for the mistreatment it has suffered in various video games over the decades.
 Each character has 3 abilities; each row of icon(s) + 2 buttons constitutes a single ability. For each ability, the first button contains its name and is the activation point. The button to its right is a toggle that defines whether the ability will perform a critical hit or not. Finally, the icon, or icons, to the left of the ability name represent the damage types that the various effects of the ability can inflict, or a heal if the ability's effect is a healing one. A single icon means the ability has a single effect, while two icons indicate the ability has two or more effects. If there are 3 or more effects, only the icons of the first 2 effects will be shown.
@@ -40,8 +40,8 @@ The icons you will find are 4 in total:
 The sword, the flame and the perforated shield therefore represent damage effects, and are associated with the respective damage types. The green cross instead represents a healing effect.
 
 > [!WARNING]
-> I want to specify that the implementation given for abilities in this sample scene is simplistic and does not represent a complete ability system. It was necessary to introduce a minimal ability system to demonstrate the features of Astra RPG Health, but do not consider this implementation as a reference point for creating a more complex ability system.
-> It will be the responsibility of a future Astra extension package to provide a complete and flexible ability system. For now, consider this implementation as a simple tool for testing the features of Astra RPG Health.
+> I want to specify that the implementation given for abilities in this sample scene is simplistic and does not represent a complete ability system. It was necessary to introduce a minimal ability system to demonstrate the features of Astra Health, but do not consider this implementation as a reference point for creating a more complex ability system.
+> It will be the responsibility of a future Astra extension package to provide a complete and flexible ability system. For now, consider this implementation as a simple tool for testing the features of Astra Health.
 
 You will also notice that just above the duelist's head there are a couple of buttons, reading "\[D\] Next Hero" and "\[A\] Previous Hero". These buttons allow you to change your character. Alternatively to the buttons you can use the D and A keys on the keyboard. In addition to the duelist, who focuses on abilities that deal physical damage and healing, there are 2 other characters, each with a different focus. The second character, the Assassin, focuses on abilities that deal physical and pure damage, sometimes with scaling based on the enemy's health. The third character, the Mage, focuses on abilities that deal magical damage.
 
@@ -64,18 +64,18 @@ The objects related to the entity canvases instead have the following sub-object
 
 In the resource explorer, in the package samples, in addition to the sample scene, you will have these folders:
 - **Art**: Contains all the artistic resources used in the sample scene.
-- **Instances**: This is the most important folder, as it contains all the instances of the objects provided by Astra RPG Health. You will find yourself interacting a lot with these instances to test the package's features, and you can draw inspiration from them to create your own custom instances for your project.
+- **Instances**: This is the most important folder, as it contains all the instances of the objects provided by Astra Health. You will find yourself interacting a lot with these instances to test the package's features, and you can draw inspiration from them to create your own custom instances for your project.
 - **Prefabs**: Contains the prefabs of all the objects present in the sample scene.
-- **Resources**: Contains the Astra RPG Health configuration instance for the sample scene.
+- **Resources**: Contains the Astra Health configuration instance for the sample scene.
 - **Scripts**: Contains all the scripts used in the sample scene.
 
 
 > [!WARNING]
-> A note regarding `Resources`. As explained in [Global Settings](./workflows/package-configuration.md#global-settings), Astra RPG Health uses an `AstraRpgHealthConfigSO` instance to configure its features in your Unity project. This specific instance provided in the samples has been configured for the sample scene. The scene works right out of the box because the configuration resource, being named exactly `Astra Rpg Health Config`, is automatically loaded by Astra RPG Health upon package import and assigned in the package's global configuration.
+> A note regarding `Resources`. As explained in [Global Settings](./workflows/package-configuration.md#global-settings), Astra Health uses an `AstraHealthConfigSO` instance to configure its features in your Unity project. This specific instance provided in the samples has been configured for the sample scene. The scene works right out of the box because the configuration resource, being named exactly `Astra Health Config`, is automatically loaded by Astra Health upon package import and assigned in the package's global configuration.
 >
-> When you go to create your own `AstraRpgHealthConfigSO` configuration instance for your project, you will need to assign it manually to the global configuration of Astra RPG Health, as explained in [Project Settings](./workflows/package-configuration.md#project-settings) through the project settings, or alternatively, as explained in [Manual Configuration](./workflows/package-configuration.md#manual-configuration-alternative-to-project-settings), by assigning it directly to the `AstraRpgHealthGlobalSettings` instance found in the `Assets/Resources` folder (this resources folder is located at the root of Assets, not in the package samples).
+> When you go to create your own `AstraHealthConfigSO` configuration instance for your project, you will need to assign it manually to the global configuration of Astra Health, as explained in [Project Settings](./workflows/package-configuration.md#project-settings) through the project settings, or alternatively, as explained in [Manual Configuration](./workflows/package-configuration.md#manual-configuration-alternative-to-project-settings), by assigning it directly to the `AstraHealthGlobalSettings` instance found in the `Assets/Resources` folder (this resources folder is located at the root of Assets, not in the package samples).
 >
-> If you do not assign your configuration instance to the global configuration of Astra RPG Health, the package will continue to use the samples configuration, creating confusion and potential configuration issues.
+> If you do not assign your configuration instance to the global configuration of Astra Health, the package will continue to use the samples configuration, creating confusion and potential configuration issues.
 
 ### Instances Folder
 Now we will focus on the `Instances` folder, which is the most relevant one for you.
@@ -97,8 +97,8 @@ In the `Sources - Damage` subfolder you will find two damage sources: `Skill` an
 In the `Damage Types` subfolder you will find the three damage types used in the sample scene: Physical, Magical and True, and two folders containing the three variants of Damage Mitigation Functions and Defense Penetration Functions. Currently, both physical and magical damage use the logarithmic formula for damage mitigation based on the defensive stat, and percentage reduction for defensive stat penetration. I have provided all three to make it easier for you to test should you want to swap the formulas on the fly.
 
 #### Events
-In `Events` you will find all the instances of the game events used by the sample scene. All the instances belong to Astra RPG Health except for `Entity Leveled Up Game Event` and `Entity Leveled Down Game Event`.
-These events have been connected as [global events](./workflows/package-configuration.md#global-events) in the `AstraRpgHealthConfigSO` configuration.
+In `Events` you will find all the instances of the game events used by the sample scene. All the instances belong to Astra Health except for `Entity Leveled Up Game Event` and `Entity Leveled Down Game Event`.
+These events have been connected as [global events](./workflows/package-configuration.md#global-events) in the `AstraHealthConfigSO` configuration.
 
 All communications between the various objects in the sample scene are handled through these events.
 
@@ -119,13 +119,13 @@ In `Game Actions` you will find `On Death Game Actions` and `On Resurrection Gam
 Finally, in the `Skills` folder you will find all the instances of the abilities used in the sample scene, divided by character. Each ability has its own `SkillSO` instance, and a `ScalingFormula` with one or more associated `ScalingComponent`s. Some abilities, as mentioned before, can have more than one effect. In that case, they have a scaling formula for each effect.
 
 #### Passives
-In the `Passives` folder you will find the object instances needed for the passive abilities implemented for the sample scene to work. We will look at passive abilities later in [Implementing Custom Passive Abilities](#implementig-custom-passive-abilities).
+In the `Passives` folder you will find the object instances needed for the passive abilities implemented for the sample scene to work. We will look at passive abilities later in [Implementing Custom Passive Abilities](#implementing-custom-passive-abilities).
 
 ## Interacting with the Scene
 Now that we have explored the sample scene, the hierarchy and the project files, let me give you some information about some specific configurations that deserve a bit more explanation.
 
 ### Casting Skills to Deal Damage and Heal
-The skills of the sample scene can be summarized, from a technical standpoint, as builders of `PreDamageContext` and `PreHealContext` that route these contexts toward the target entities. The target will process these contexts in its `heal` and `TakeDamage` methods. The damage calculation that takes place inside `TakeDamage`, as we have seen in the workflows, passes through the damage calculation pipeline. The pipeline uses the strategy that has been configured at the `AstraRPGHealthConfigSO` configuration level.
+The skills of the sample scene can be summarized, from a technical standpoint, as builders of `PreDamageContext` and `PreHealContext` that route these contexts toward the target entities. The target will process these contexts in its `heal` and `TakeDamage` methods. The damage calculation that takes place inside `TakeDamage`, as we have seen in the workflows, passes through the damage calculation pipeline. The pipeline uses the strategy that has been configured at the `AstraHealthConfigSO` configuration level.
 When the entity is healed or takes damage, it will invoke the respective Global Events also configured in the package configuration. And the heal and damage pop-up managers found in the hierarchy are listening to these two events respectively. When they receive the event, they create a pop-up above the target character's head showing the amount of damage taken or healing received. The damage pop-ups will have different colors and icons based on the type of damage dealt. The icons (and color) will match those you see to the left of the ability you cast.
 
 ![Casting Skills](../images/AstraRPG/samples/casting-skills.gif)  
@@ -180,7 +180,7 @@ This way, the `Heal Popup Manager` will ignore all healing events that have `HP 
 
 Even from this simple example, the value of creating and using different heal sources becomes clear. Heals coming from different mechanics can raise different use cases.
 
-I have configured the regeneration tick rate to 1 second. If you wanted to change the tick rate of passive regeneration, you can do so by modifying the `Passive Health Regeneration Interval` value in the `Astra Rpg Health Config` configuration instance found in `Examples/Resources`. I also refer you to the documentation on [Package Configuration | Health Regeneration](./workflows/package-configuration.md#health-regeneration) and on [Healing | Passive Health Regeneration](./workflows/healing.md#passive-health-regeneration) for details.
+I have configured the regeneration tick rate to 1 second. If you wanted to change the tick rate of passive regeneration, you can do so by modifying the `Passive Health Regeneration Interval` value in the `Astra Health Config` configuration instance found in `Examples/Resources`. I also refer you to the documentation on [Package Configuration | Health Regeneration](./workflows/package-configuration.md#health-regeneration) and on [Healing | Passive Health Regeneration](./workflows/healing.md#passive-health-regeneration) for details.
 
 To modify the passively regenerated health, you need to change the value of the `Passive Regeneration` stat. For the three playable characters, this stat is controlled through the Growth Formulas associated with their respective classes, while for the Dummy you can modify it directly through `EntityStats`.
 
@@ -198,7 +198,7 @@ Some abilities use a `HealthScalingComponent` to scale their damage based on the
 You can explore the details of the abilities through the popup that appears on hover over the respective buttons, and you can inspect the scaling formulas and scaling components associated with each ability to see how the health-based scaling has been configured.
 
 ### Experience Collection and Death & Resurrection
-In the sample scene you have the opportunity to see both the base package's `ExpSource` and the brand new `ExpCollector` of Astra RPG Health in action. I refer you to the documentation on [Experience Collection](./workflows/experience-collection.md) for details on `ExpCollector`.
+In the sample scene you have the opportunity to see both the base package's `ExpSource` and the brand new `ExpCollector` of Astra Health in action. I refer you to the documentation on [Experience Collection](./workflows/experience-collection.md) for details on `ExpCollector`.
 
 All three playable characters, who have classes and therefore a level progression, have an associated `ExpCollector`. The Dummy instead has an associated `ExpSource`, and acts as a source of experience for the playable characters. As explained in the Experience Collection documentation, `ExpCollector` relies on an `ExpCollectionStrategySO` to define the experience collection rules. In the sample scene, the playable characters use a multiple strategy that involves both collecting experience through the `Direct Kill Exp Strategy` and through the `Environmental Kill Exp Strategy`, all thanks to the `FirstMatchExpStrategySO` which considers the first strategy that matches the experience collection conditions. I refer you to the configuration documentation [Package Configuration | Default Exp Collection Strategy](./workflows/package-configuration.md#default-damage-calculation-strategy) for configuring the package's default experience collection strategy.
 However, I remind you that the sample scene does not involve the use of environmental damage, so the `Environmental Kill Exp Strategy` will never be activated. I have nonetheless included this strategy in the sample scene to show you how to create and configure a multiple strategy that uses both the direct kill and the environmental kill strategies.
@@ -213,7 +213,7 @@ The `Default On Resurrection Game Action` is also a `CompositeComponentGameActio
 1. `ToggleActiveGameObjectGameAction`: used in contrast to the one in the `Default On Death Game Action` that deactivates the game object upon death.
 2. `ToggleHarvestedExpSourceGameAction`: allows you to decide whether to mark as harvested or unharvested the `ExpSource` passed as context (in this case, the `ExpSource` of the resurrected entity). In this case, it is configured to mark the `ExpSource` as unharvested.
 
-### Implementig Custom Passive Abilities
+### Implementing Custom Passive Abilities
 
 Although this package does not deal with defining high-level constructs for abilities and passives (and it will be the responsibility of a future framework extension to do so), it is still possible to implement certain passive abilities for your characters in a simple and fast way using the constructs of this package and the base one. Below are some examples.
 

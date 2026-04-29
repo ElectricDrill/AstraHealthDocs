@@ -1,4 +1,4 @@
-# Style Guide — Astra RPG Health Documentation
+# Style Guide — Astra Health Documentation
 
 > All documentation is written in **English**. Conversations with the user happen in **Italian**.
 > Adhere to this guide strictly. When in doubt, look at existing written sections in `damage.md` as the canonical reference.
@@ -25,7 +25,7 @@
 | Paths (Unity asset menu paths) | `*Relative path:* \`...\`` | `*Relative path:* \`Dmg Reduction Functions -> Flat Dmg Reduction\`` |
 
 > [!IMPORTANT]
-> All ScriptableObject types in Astra RPG Health use the `SO` suffix in their C# class name (e.g., `DamageTypeSO`, `DamageSourceSO`, `HealSourceSO`, `LifestealConfigSO`, `AstraRpgHealthConfigSO`). When referencing one of these types inside backticks — whether introducing the asset, describing its fields, or using member-access notation — always include the full SO suffix. **Never** use the bare name without SO in code spans (e.g., `` `DamageType` `` is wrong; `` `DamageTypeSO` `` is correct).
+> All ScriptableObject types in Astra Health use the `SO` suffix in their C# class name (e.g., `DamageTypeSO`, `DamageSourceSO`, `HealSourceSO`, `LifestealConfigSO`, `AstraHealthConfigSO`). When referencing one of these types inside backticks — whether introducing the asset, describing its fields, or using member-access notation — always include the full SO suffix. **Never** use the bare name without SO in code spans (e.g., `` `DamageType` `` is wrong; `` `DamageTypeSO` `` is correct).
 
 ---
 
@@ -41,7 +41,7 @@ Always precede an image with its Unity relative path on a separate line:
 Image base path from `MD/workflows/`: `../../images/AstraRPG/workflows/`
 
 > [!IMPORTANT]
-> `*Relative path:*` refers exclusively to the **asset creation path in the Unity context menu** (i.e., `Assets > Create > Astra RPG Health > ...`). Use it only when documenting a standalone `ScriptableObject` type that the user creates via that menu. Do **not** use it for inspector subsections that are part of an existing SO (for example, the **True Damage Options** section of a `DamageType` inspector). In those cases, add an image directly with no path prefix.
+> `*Relative path:*` refers exclusively to the **asset creation path in the Unity context menu** (i.e., `Assets > Create > Astra Health > ...`). Use it only when documenting a standalone `ScriptableObject` type that the user creates via that menu. Do **not** use it for inspector subsections that are part of an existing SO (for example, the **True Damage Options** section of a `DamageType` inspector). In those cases, add an image directly with no path prefix.
 
 **Be proactive about adding images.** Study the existing documentation to understand where screenshots are used (inspector views, custom windows, example configurations) and apply the same pattern in new sections. When a screenshot would naturally belong in a section — for example, to show a new inspector section, a custom editor window, or a configuration example — add the image reference using the conventional format even if the file does not yet exist on disk. The user will provide the missing screenshots and place them in the correct folder.
 
@@ -158,7 +158,7 @@ Order: Use Cases → Pros → Cons (when all three are present).
 | Same-file anchor | `[Title](#anchor)` | `[Damage Reduction](#damage-reduction)` |
 | Other file in same folder | `[Text](./filename.md)` | `[Package Configuration](./package-configuration.md)` |
 | Other file + anchor | `[Text](./filename.md#anchor)` | `[Generic Modifiers](./package-configuration.md#generic-flat-damage-modification-stat)` |
-| API type | `[ClassName](xref:Namespace.ClassName)` | `[DamageReductionFnSO](xref:ElectricDrill.AstraRpgHealth.DamageReductionFunctions.DamageReductionFnSO)` |
+| API type | `[ClassName](xref:Namespace.ClassName)` | `[DamageReductionFnSO](xref:ElectricDrill.AstraHealth.DamageReductionFunctions.DamageReductionFnSO)` |
 | External URL | Plain text `https://...` | Not wrapped in markdown |
 
 Anchor IDs are generated from heading text: lowercase, spaces replaced by hyphens.
@@ -166,8 +166,8 @@ Anchor IDs are generated from heading text: lowercase, spaces replaced by hyphen
 **Forward references within the same page**: when a section mentions a class, step, or system that is documented in a later section of the same page, always wrap the name in a same-file anchor link pointing to that section. This lets the reader navigate directly to the explanation without losing context. For example, when mentioning `ApplyBarrierStep` before the pipeline section has been reached, write `[ApplyBarrierStep](#damage-calculation-pipeline)` rather than plain inline code.
 
 Known namespaces (xref):
-- `ElectricDrill.AstraRpgHealth.DamageReductionFunctions` → `DamageReductionFnSO`
-- `ElectricDrill.AstraRpgHealth.DefenseReductionFunctions` → `DefenseReductionFnSO`
+- `ElectricDrill.AstraHealth.DamageReductionFunctions` → `DamageReductionFnSO`
+- `ElectricDrill.AstraHealth.DefenseReductionFunctions` → `DefenseReductionFnSO`
 
 > **Known typo in existing docs**: some existing xrefs use `ElctricDrill` (missing 'e'). New xrefs should use the correct `ElectricDrill`. Do not "fix" existing ones unless explicitly asked.
 
@@ -219,7 +219,7 @@ Backtick wrapping (`inline code`) is used universally for:
 - Class/type names: `EntityHealth`, `DamageTypeSO`
 - Method names: `TakeDamage`, `CalculateReducedDamage`
 - Variable/field names in code context: `BaseValue`, `ScaleFactor`
-- Unity menu paths: `` `Create > Astra RPG` ``, `` `Window > Astra RPG Health > Log Damage Reduction Graph` ``
+- Unity menu paths: `` `Create > Astra RPG` ``, `` `Window > Astra Health > Log Damage Reduction Graph` ``
 - Folder/asset paths: `` `Assets/Events/GeneratedEvents` ``
 
 No bold+code combination. Use one or the other.

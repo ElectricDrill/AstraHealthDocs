@@ -1,9 +1,9 @@
-# Code Reference — Astra RPG Health
+# Code Reference — Astra Health
 
 > Maps source files to their corresponding documentation sections.
 > Use this to quickly know which files to read before writing or editing a given documentation section.
 
-Base path for all source files: `C:\Users\emaci\Documents\AstraRpgPublishing_6_3\Packages\com.electricdrill.astra-rpg-health\`
+Base path for all source files: `C:\Users\emaci\Documents\AstraRpgPublishing_6_3\Packages\com.electricdrill.astra-health\`
 
 ---
 
@@ -11,14 +11,14 @@ Base path for all source files: `C:\Users\emaci\Documents\AstraRpgPublishing_6_3
 
 | File | What it contains |
 |---|---|
-| `Runtime\Config\IAstraRpgHealthConfig.cs` | Interface; all configurable fields for every subsystem |
-| `Runtime\Config\AstraRpgHealthConfigSO.cs` | Concrete SO; 6 inspector sections (Health, Damage, HealthRegeneration, Lifesteal, Death, Experience) |
-| `Runtime\Config\AstraRpgHealthGlobalSettingsSO.cs` | Pointer to active config; must be in `Resources/` |
-| `Runtime\Config\AstraRpgHealthConfigProvider.cs` | Static singleton; 3-step fallback load strategy |
-| `Runtime\Config\AstraRpgHealthBootstrap.cs` | Runtime warm-load on startup |
-| `Editor\Config\AstraRpgHealthConfigEditor.cs` | Inspector for config SO; 6 organized foldable sections |
-| `Editor\Config\AstraRpgHealthSettingsProviderEditor.cs` | Project Settings panel; status indicators for active config |
-| `Editor\Config\AstraRpgHealthEditorBootstrapper.cs` | [InitializeOnLoad]; auto-creates GlobalSettings and assigns fallback |
+| `Runtime\Config\IAstraHealthConfig.cs` | Interface; all configurable fields for every subsystem |
+| `Runtime\Config\AstraHealthConfigSO.cs` | Concrete SO; 6 inspector sections (Health, Damage, HealthRegeneration, Lifesteal, Death, Experience) |
+| `Runtime\Config\AstraHealthGlobalSettingsSO.cs` | Pointer to active config; must be in `Resources/` |
+| `Runtime\Config\AstraHealthConfigProvider.cs` | Static singleton; 3-step fallback load strategy |
+| `Runtime\Config\AstraHealthBootstrap.cs` | Runtime warm-load on startup |
+| `Editor\Config\AstraHealthConfigEditor.cs` | Inspector for config SO; 6 organized foldable sections |
+| `Editor\Config\AstraHealthSettingsProviderEditor.cs` | Project Settings panel; status indicators for active config |
+| `Editor\Config\AstraHealthEditorBootstrapper.cs` | [InitializeOnLoad]; auto-creates GlobalSettings and assigns fallback |
 
 ---
 
@@ -107,7 +107,7 @@ Same source files as Damage Reduction above (all fields on DamageTypeSO, handled
 |---|---|
 | `Runtime\Damage\CalculationPipeline\ApplyFlatDmgModifiersStep.cs` | Reads generic flat stat + source flat stat + type flat stat; sums additively |
 | `Runtime\Damage\CalculationPipeline\ApplyPercentageDmgModifiersStep.cs` | Reads generic % stat + source % stat + type % stat; immunity checks at <= -100 per category |
-| `Runtime\Config\AstraRpgHealthConfigSO.cs` | GenericFlatDamageModificationStat, GenericPercentageDamageModificationStat |
+| `Runtime\Config\AstraHealthConfigSO.cs` | GenericFlatDamageModificationStat, GenericPercentageDamageModificationStat |
 | `Runtime\Damage\DamageSourceSO.cs` | Source-specific PercentageModificationStat, FlatModificationStat |
 | `Runtime\Damage\DamageTypeSO.cs` | Type-specific PercentageDamageModificationStat, FlatDamageModificationStat |
 

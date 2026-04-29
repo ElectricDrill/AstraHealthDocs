@@ -1,4 +1,4 @@
-  In questa cartella, all'interno di DocFx/MD trovi la documentazione per un package Unity che sto sviluppando: Astra RPG Health. Questo e' il secondo package di un ecosistema  di packages pensato per giochi primariamente per giochi RPG, ma che si adattano bene ad altri giochi vista la flessibilita' offerta.
+  In questa cartella, all'interno di DocFx/MD trovi la documentazione per un package Unity che sto sviluppando: Astra Health. Questo e' il secondo package di un ecosistema  di packages pensato per giochi primariamente per giochi RPG, ma che si adattano bene ad altri giochi vista la flessibilita' offerta.
 
 
 
@@ -28,7 +28,7 @@ Quindi, dopo aver scansionato attentamente la documentazione ed eventualmente se
   
 ---------------------------------------------------------------------------------------------------------------------
   
-  Piano Marketing - Astra RPG Health
+  Piano Marketing - Astra Health
 
   Analisi dello stile slide esistenti (Astra RPG Framework)
 
@@ -61,7 +61,7 @@ Quindi, dopo aver scansionato attentamente la documentazione ed eventualmente se
     - Death, Resurrection & Game Actions
     - Experience Collection System
     - And more...
-  - Screenshot a destra: l'inspector di AstraRpgHealthConfigSO con tutti i campi visibili
+  - Screenshot a destra: l'inspector di AstraHealthConfigSO con tutti i campi visibili
 
   Screenshot da catturare: Il config SO aperto nell'inspector con tutte le sezioni espanse o parzialmente visibili.
 
@@ -254,7 +254,7 @@ Quindi, dopo aver scansionato attentamente la documentazione ed eventualmente se
   0:08 - 0:18 | SOLUTION (Schermata nera + transizione a editor)
 
   Testo a comparsa:
-  ▎ "Astra RPG Health"
+  ▎ "Astra Health"
   ▎ "A complete, configurable health & damage system"
   ▎ "All from the Inspector. Zero boilerplate."
 
@@ -263,7 +263,7 @@ Quindi, dopo aver scansionato attentamente la documentazione ed eventualmente se
   ---
   0:18 - 0:30 | OVERVIEW RAPIDO (Editor)
 
-  Ripresa editor: Scroll veloce del AstraRpgHealthConfigSO mostrando tutte le sezioni (Health, Damage, Regen, Lifesteal, Experience, Death, Events).
+  Ripresa editor: Scroll veloce del AstraHealthConfigSO mostrando tutte le sezioni (Health, Damage, Regen, Lifesteal, Experience, Death, Events).
 
   Voce/testo overlay: "One configuration asset. Every aspect of your health system."
 
@@ -355,7 +355,7 @@ Quindi, dopo aver scansionato attentamente la documentazione ed eventualmente se
   1:55 - 2:00 | CTA & ECOSYSTEM (Schermata nera)
 
   Testo a comparsa:
-  ▎ "Astra RPG Health"
+  ▎ "Astra Health"
   ▎ "Part of the Astra RPG ecosystem"
   ▎ "Available now on the Unity Asset Store"
   ▎ Logo Astra + link Discord

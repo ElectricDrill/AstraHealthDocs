@@ -155,7 +155,7 @@ If this becomes a performance issue for your game, you have several levers avail
 I would like to reiterate that, unless you have identified a real performance problem through profiling, it is not necessary to take any of these actions to optimize performance. You probably won't have any performance issues even with a thousand entities and dozens of listeners subscribed to the global Entity Healed Event.
 
 ### Manual Health Regeneration
-Manual regeneration is instead triggered manually through the [`ManualHealthRegenerationTick()`](xref:ElectricDrill.AstraRpgHealth.EntityHealth.ManualHealthRegenerationTick) API method.
+Manual regeneration is instead triggered manually through the [`ManualHealthRegenerationTick()`](xref:ElectricDrill.AstraHealth.EntityHealth.ManualHealthRegenerationTick) API method.
 
 This method, when called, triggers a regeneration tick for the entity. Note that the statistic considered for the health calculation does NOT coincide with the one configured for passive regeneration, but is a separate statistic, also set via the package configuration, specifically: [Manual Health Regeneration Stat](package-configuration.md#manual-health-regeneration-stat).
 The value of this statistic determines the amount of HP regenerated at each manual regeneration tick. Obviously, healing modifiers, both generic and those specific to the heal source configured for regeneration, will also affect manual regeneration, just like passive regeneration.

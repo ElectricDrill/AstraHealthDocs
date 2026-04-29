@@ -1,11 +1,11 @@
 # Experience Collection
 
-_Experience collection_ is the mechanism through which entities earn experience points when they contribute to enemy kills (or entities deaths in general in some cases). In Astra RPG Health, the system revolves around two actors: the _collector_, the entity that receives experience, and the _victim_, the entity that dies and provides it.
+_Experience collection_ is the mechanism through which entities earn experience points when they contribute to enemy kills (or entities deaths in general in some cases). In Astra Health, the system revolves around two actors: the _collector_, the entity that receives experience, and the _victim_, the entity that dies and provides it.
 
 When a victim dies, its `EntityHealth` raises the [Global Entity Died](package-configuration.md#global-entity-died-event-) event. Any `ExpCollector` component listening to that event evaluates its configured strategy to determine whether XP should be awarded — and if so, extracts the XP amount from the victim and forwards it to the collector's `EntityLevel`. The entire validation and collection logic lives inside a dedicated _Experience Collection Strategy_ asset, making it straightforward to swap, extend, or compose strategies without touching any component code.
 
 > [!IMPORTANT]
-> Experience collection relies on the **Global Entity Died** event configured in your `AstraRpgHealthConfigSO`. Ensure this event is assigned before entering Play Mode — without it, `ExpCollector` will never be notified of kills. See [Global Entity Died Event](package-configuration.md#global-entity-died-event-) for details.
+> Experience collection relies on the **Global Entity Died** event configured in your `AstraHealthConfigSO`. Ensure this event is assigned before entering Play Mode — without it, `ExpCollector` will never be notified of kills. See [Global Entity Died Event](package-configuration.md#global-entity-died-event-) for details.
 
 ## Prerequisites
 
@@ -13,7 +13,7 @@ Before setting up experience collection, ensure the following are in place.
 
 On each **victim** entity:
 
-- **The victim must expose experience through an `ExpSource` component**. The Astra RPG Framework provides a concrete `ExpSource : MonoBehaviour` that stores the XP amount and a harvested flag. Attach this component to any entity that should provide XP when it dies, and configure the amount accordingly. Refer to the Framework documentation for details: https://electricdrill.github.io/AstraRpgFrameworkDocs/MD/workflows.html#exp-source
+- **The victim must expose experience through an `ExpSource` component**. The Astra Framework provides a concrete `ExpSource : MonoBehaviour` that stores the XP amount and a harvested flag. Attach this component to any entity that should provide XP when it dies, and configure the amount accordingly. Refer to the Framework documentation for details: https://electricdrill.github.io/AstraRpgFrameworkDocs/MD/workflows.html#exp-source
 
 On the **collector** entity:
 
@@ -23,40 +23,40 @@ On the **collector** entity:
 
 `ExpCollector` is the component that bridges the global death event and the configured strategy. Add it to any entity that should receive XP from kills.
 
-`ExpCollector` automatically subscribes to the [Global Entity Died Event](package-configuration.md#global-entity-died-event-) configured in `AstraRpgHealthConfigSO` — no manual event wiring is required. Whenever any entity dies, the component evaluates its configured strategy to determine whether XP should be awarded.
+`ExpCollector` automatically subscribes to the [Global Entity Died Event](package-configuration.md#global-entity-died-event-) configured in `AstraHealthConfigSO` — no manual event wiring is required. Whenever any entity dies, the component evaluates its configured strategy to determine whether XP should be awarded.
 
 The following image shows the `ExpCollector` inspector:  
 ![ExpCollector inspector](../../images/AstraRPG/workflows/experience-collection/exp-collector.png)
 
-**Custom Exp Collection Strategy** is the optional per-entity override. Assign a strategy here to give this specific collector its own behavior — for example, a boss that earns XP only from specific kill types, or a trap system with its own award logic. When left empty, the collector falls back to the project-wide default configured in `AstraRpgHealthConfigSO` (see [Default Strategy in Package Configuration](#default-strategy-in-package-configuration)).
+**Custom Exp Collection Strategy** is the optional per-entity override. Assign a strategy here to give this specific collector its own behavior — for example, a boss that earns XP only from specific kill types, or a trap system with its own award logic. When left empty, the collector falls back to the project-wide default configured in `AstraHealthConfigSO` (see [Default Strategy in Package Configuration](#default-strategy-in-package-configuration)).
 
 ### Inspector Status Box
 
 The custom `ExpCollector` inspector includes a status indicator that shows at a glance whether an active strategy is in place:
 
 - **Info — "Using custom strategy: [name]"**: a **Custom Exp Collection Strategy** is assigned on this component.
-- **Info — "Using default strategy from config: [name]"**: no custom strategy is assigned, but a default is found in the `AstraRpgHealthConfigSO`.
-- **Warning — "No AstraRpgHealthConfig found…"**: no package configuration asset is in scope. See [Package Configuration](package-configuration.md) for setup details.
-- **Warning — "No default experience collection strategy configured in AstraRpgHealthConfig…"**: a configuration asset exists but no **Default Exp Collection Strategy** is set on it.
+- **Info — "Using default strategy from config: [name]"**: no custom strategy is assigned, but a default is found in the `AstraHealthConfigSO`.
+- **Warning — "No AstraHealthConfig found…"**: no package configuration asset is in scope. See [Package Configuration](package-configuration.md) for setup details.
+- **Warning — "No default experience collection strategy configured in AstraHealthConfig…"**: a configuration asset exists but no **Default Exp Collection Strategy** is set on it.
 
 
 ## Default Strategy in Package Configuration
 
-Collectors without a **Custom Exp Collection Strategy** fall back to the **Default Exp Collection Strategy** set in the `AstraRpgHealthConfigSO` (see [Package Configuration - Experience](package-configuration.md#experience)). Configuring this field once means every bare `ExpCollector` in the project inherits the same behavior without needing an explicit assignment on each one.
+Collectors without a **Custom Exp Collection Strategy** fall back to the **Default Exp Collection Strategy** set in the `AstraHealthConfigSO` (see [Package Configuration - Experience](package-configuration.md#experience)). Configuring this field once means every bare `ExpCollector` in the project inherits the same behavior without needing an explicit assignment on each one.
 
 Strategy resolution at runtime follows this order:
 
 1. **Custom strategy** assigned on the `ExpCollector` → used directly.
-2. **No custom strategy** → default strategy from `AstraRpgHealthConfigSO` → used.
+2. **No custom strategy** → default strategy from `AstraHealthConfigSO` → used.
 3. **No custom strategy and no config or default** → a warning is logged and no XP is collected.
 
 ## Built-in Strategies
 
-Three strategies are provided out of the box. Each is a `ScriptableObject` asset you create, configure, and assign to an `ExpCollector` or set as the project default in `AstraRpgHealthConfigSO`.
+Three strategies are provided out of the box. Each is a `ScriptableObject` asset you create, configure, and assign to an `ExpCollector` or set as the project default in `AstraHealthConfigSO`.
 
 ### Direct Kill
 
-*Relative path:* `Astra RPG Health -> Exp Collection Strategies -> Direct Kill`
+*Relative path:* `Astra Health -> Exp Collection Strategies -> Direct Kill`
 
 `DirectKillExpStrategySO` is the most straightforward strategy: the collector receives XP only if it personally dealt the finishing blow. This is the natural choice for games where XP belongs exclusively to the entity that secured the kill.
 
@@ -75,7 +75,7 @@ The harvested check ensures that a single kill cannot be claimed twice when mult
 
 ### Damage Source Kill
 
-*Relative path:* `Astra RPG Health -> Exp Collection Strategies -> Damage Source Kill`
+*Relative path:* `Astra Health -> Exp Collection Strategies -> Damage Source Kill`
 
 `DamageSourceKillExpStrategySO` grants XP to the collector whenever a kill is delivered by a specific `DamageSourceSO`, regardless of which entity caused it. This is the right strategy for scenarios where the _cause_ of death — rather than the attacker — determines who is rewarded.
 
@@ -97,7 +97,7 @@ Now whenever an enemy is killed by environmental damage, the player's collector 
 
 ### First Match Composite
 
-*Relative path:* `Astra RPG Health -> Exp Collection Strategies -> First Match`
+*Relative path:* `Astra Health -> Exp Collection Strategies -> First Match`
 
 With the previous strategies, you are bound to a single condition for XP collection: either the collector must deal the killing blow, or the kill must come from a specific damage source. What if you want a more complex setup where multiple conditions can grant XP, each with its own priority?
 
@@ -132,4 +132,4 @@ The table below lists the available override points:
 
 For most custom strategies, overriding `Validate` is sufficient: implement your conditions, set the multiplier, and return `true` or `false`. Override `CollectExp` only when the collection action itself must differ — for example, to split the XP reward across multiple entities simultaneously.
 
-For more information about the API and extension points, refer to the [`ExpCollectionStrategySO`](xref:ElectricDrill.AstraRpgHealth.Experience.ExpCollectionStrategySO) API documentation.
+For more information about the API and extension points, refer to the [`ExpCollectionStrategySO`](xref:ElectricDrill.AstraHealth.Experience.ExpCollectionStrategySO) API documentation.

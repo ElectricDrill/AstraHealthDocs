@@ -1,2 +1,2 @@
-# Astra RPG Health Docs
-Documentation for the Astra RPG Health Unity Package
+# Astra Health Docs
+Documentation for the Astra Health Unity Package

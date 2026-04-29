@@ -1,6 +1,6 @@
 > [!NOTE]
-> Join the Astra RPG Discord server!  
-> There is now a dedicated **Discord server** for Astra RPG Framework and its extensions.
+> Join the Astra Discord server!  
+> There is now a dedicated **Discord server** for Astra Framework and its extensions.
 > Join to **receive notifications** about new extension releases and important updates, **ask for new features**, **report bugs**, **share ideas**, and **showcase your Astra creations** with other developers.  
 > <span style="font-size:1.18em; font-weight:600;">💬 Join the Discord Server: https://discord.gg/nJVRMkGrZg</span>
 
@@ -20,12 +20,12 @@
 - Death & Resurrection
 -->
 
-Astra RPG Health extends the base framework, [](Astra RPG Framework), by adding functionality for managing health and calculating damage for entities.
+Astra Health extends the base framework, [](Astra Framework), by adding functionality for managing health and calculating damage for entities.
 The package is designed with the same design philosophy as the base asset: a Scriptable Object-based architecture to encourage flexibility, modularity, and testability. If you're already familiar with the base package, you'll feel right at home with its features.
 
 You can define your own damage types, designate defensive statistics used to reduce each damage type, configure the damage calculation pipeline with the desired steps, configure both generic and damage-type-specific lifesteal, define strategies to execute upon entity death, and much more.
 
-## Astra RPG Health Vocabulary
+## Astra Health Vocabulary
 
 ### Damage Type
 Damage types represent the different categories of damage that can be inflicted on entities. Common examples include "Physical", "Magical", "Bleeding", "Drowning", etc. You can create custom damage types to suit your game's needs.
@@ -72,12 +72,12 @@ The **origin of val values** also differs between the two. Defensive stat values
 
 
 
-## How is Astra RPG Health organized and how does it work?
+## How is Astra Health organized and how does it work?
 
-### <img src="../images/AstraRPG/astra-health_astra-rpg-health-config.png" alt="attribute" width="30" class="icon-background"/> Astra RPG Health Config
-The `AstraRPGHealthConfig` is a `ScriptableObject` that serves as the central configuration point for the Astra RPG Health package. It has several properties that allow you to define how the health and damage systems should behave in your game.
+### <img src="../images/AstraRPG/astra-health_astra-rpg-health-config.png" alt="attribute" width="30" class="icon-background"/> Astra Health Config
+The `AstraHealthConfig` is a `ScriptableObject` that serves as the central configuration point for the Astra Health package. It has several properties that allow you to define how the health and damage systems should behave in your game.
 
-With Astra RPG Framework, no configuration was needed. However, Astra RPG Health needs to be configured to work around the actual instances of the base framework's components defined for your game. For example, if you defined a certain statistic for general damage mitigation in your game with Astra RPG Framework, you need to inform Astra RPG Health about it so that it can use it when calculating damage.
+Astra Health needs to be configured to work around the actual instances of the base framework's components defined for your game. For example, if you defined a certain statistic for general damage mitigation in your game with Astra Framework, you need to inform Astra Health about it so that it can use it when calculating damage.
 The needed configuration is kept minimal, and convention-over-configuration is applied where possible to reduce the amount of setup required.  
 Configuration will be deeply discussed later in [Package Configuration](workflows/package-configuration.md).
 
@@ -115,16 +115,16 @@ The damage calculation pipeline is the component of the framework responsible fo
 Therefore, a `DamageCalculationStrategy` is a `ScriptableObject` that defines a sequence of `DamageStep`s to be executed in order when calculating damage.
 
 ### <img src="../images/AstraRPG/astra-health_game-action.png" alt="attribute" width="30" class="icon-background"/> On-death & on-resurrection `GameAction`s
-Astra RPG Framework v1.4.0 introduced the concept of <TODO link here>GameAction: a modular and reusable unit of game logic that can be assigned via the inspector to various components to define custom behaviors.
+Astra Framework v1.4.0 introduced the concept of <TODO link here>GameAction: a modular and reusable unit of game logic that can be assigned via the inspector to various components to define custom behaviors.
 
-Astra RPG Health leverages Game Actions to define custom behaviors when an entity dies or is resurrected. The framework allows you to assign a default on-death Game Action that will be executed when any entity dies, unless the entity has its own custom on-death Game Action assigned. Similarly, a default on-resurrection Game Action can be assigned to be executed when an entity is resurrected.
+Astra Health leverages Game Actions to define custom behaviors when an entity dies or is resurrected. The framework allows you to assign a default on-death Game Action that will be executed when any entity dies, unless the entity has its own custom on-death Game Action assigned. Similarly, a default on-resurrection Game Action can be assigned to be executed when an entity is resurrected.
 
 ### <img src="../images/AstraRPG/astra-health_lifesteal-config.png" alt="attribute" width="30" class="icon-background"/> Lifesteal
-Lifesteal is configured through two complementary layers. `AstraRpgHealthConfigSO` can define a **Generic Lifesteal** that applies to all outgoing damage, while each `DamageTypeSO` can define its own **Lifesteal** configuration that applies only to that specific damage type.  
+Lifesteal is configured through two complementary layers. `AstraHealthConfigSO` can define a **Generic Lifesteal** that applies to all outgoing damage, while each `DamageTypeSO` can define its own **Lifesteal** configuration that applies only to that specific damage type.  
 Both layers use the same data structure — lifesteal stat, heal source, and amount selector — and can stack on the same hit. When both are active, you can choose whether they should remain two separate heals or be merged into a single heal through the `Unify Lifesteal Heals` flag in the global configuration. We will see this in detail later in the Workflows.
 
 ### <img src="../images/AstraRPG/astra-health_health-scaling-component.png" alt="attribute" width="30" class="icon-background"/> Health Scaling Component
-Astra RPG Health provides a brand new `HealthScalingComponent` that you can use in your `ScalingFormula`s to have skills or abilities scale based on either the attacker or the target's health. You can choose to scale upon one or more among Maximum HP, Current HP, and Missing HP.
+Astra Health provides a brand new `HealthScalingComponent` that you can use in your `ScalingFormula`s to have skills or abilities scale based on either the attacker or the target's health. You can choose to scale upon one or more among Maximum HP, Current HP, and Missing HP.
 
 ### <img src="../images/AstraRPG/astra-health_experience-collector.png" alt="attribute" width="30" class="icon-background"/> Experience Collector
 An `ExpCollector` is a `MonoBehaviour` that you can add to your entities to allow them to collect experience points from entities that die and have an <img src="../images/AstraRPG/astra-health_experience-source.png" alt="attribute" width="17" class="icon-background"/> `ExpSource` component attached. The `ExpCollector` can be configured with different strategies (<img src="../images/AstraRPG/astra-health_experience-collection-strategy.png" alt="attribute" width="17" class="icon-background"/> `ExpCollectionStrategy`) to define under which conditions experience is collected from the dead entity.
@@ -133,7 +133,7 @@ An `ExpCollector` is a `MonoBehaviour` that you can add to your entities to allo
 An `ExpCollectionStrategy` is a `ScriptableObject` that defines the logic for determining if an entity collects experience upon the death of another entity.
 
 ### <img src="../images/AstraRPG/event.png" alt="attribute" width="30" class="icon-background"/> More Game Events
-Astra RPG Health comes with many new Game Events that you can use to react to health&damage-related events in your game. Some of the most important ones are:
+Astra Health comes with many new Game Events that you can use to react to health&damage-related events in your game. Some of the most important ones are:
 - `PreDamageGameEvent`: Triggered before damage is applied to an entity. Useful for modifying or canceling damage. Use this for implementing custom passives or effects that need to react before damage is taken.
 - `DamageResolutionGameEvent`: Triggered when an entity takes damage. Can be used to react to damage being applied.
 - `EntityDiedGameEvent`: Triggered when an entity dies.

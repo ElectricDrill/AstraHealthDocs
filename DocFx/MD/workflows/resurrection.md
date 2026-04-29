@@ -6,7 +6,7 @@ The requested HP amount is a **base** value before modifiers. Internally, resurr
 
 ## Package Configuration
 
-Before resurrection can be triggered, two fields in the `AstraRpgHealthConfigSO` need attention:
+Before resurrection can be triggered, two fields in the `AstraHealthConfigSO` need attention:
 
 ### Default Resurrection Source
 

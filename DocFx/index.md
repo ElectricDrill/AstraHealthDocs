@@ -3,18 +3,18 @@ _layout: landing
 ---
 
 > [!NOTE]
-> Join the Astra RPG Discord server!  
-> There is now a dedicated **Discord server** for Astra RPG Framework and its extensions.
+> Join the Astra Discord server!  
+> There is now a dedicated **Discord server** for Astra Framework and its extensions.
 > Join to **receive notifications** about new extension releases and important updates, to **ask for new features**, **report bugs**, **share ideas**, and **showcase your Astra creations** with other developers.  
 > <span style="font-size:1.18em; font-weight:600;">💬 Join the Discord Server: https://discord.gg/nJVRMkGrZg</span>
 
-## 💚 Astra RPG Health
+## 💚 Astra Health
 
 ### 👉 Introduction
 
-**A complete health and damage system built on Astra RPG Framework's data-driven foundation.**
+**A complete health and damage system built on Astra Framework's data-driven foundation.**
 
-Astra RPG Health adds robust health management to your entities. Handle damage, healing, death, and resurrection with a flexible pipeline that adapts to your game's mechanics.
+Astra Health adds robust health management to your entities. Handle damage, healing, death, and resurrection with a flexible pipeline that adapts to your game's mechanics.
 
 Simple to set up, powerful in action. Customize damage types, reduction formulas, and calculation pipelines without touching code.
 
@@ -114,7 +114,7 @@ When an entity dies, a Game Action can be executed, allowing for custom behavior
 
 A default on-death Game Action for all entities can be set, and custom on-death Game Actions can be assigned to specific entities as needed.
 
-The base package, Astra RPG Framework, comes with the following pre-defined Game Actions useful for reacting to death events:
+The base package, Astra Framework, comes with the following pre-defined Game Actions useful for reacting to death events:
 
 - **Toggle Active Game Object:** Enables or disables the entity's game object upon death. Useful for disabling entities that can resurrect.
 - **Destroy Game Object:** Destroys the entity's game object upon death. Suitable for entities that do not need to be resurrected or reused.
@@ -149,7 +149,7 @@ Wire these events to your game logic for abilities, UI updates, sound effects, p
 
 ### 🛒 Where to Buy
 
-Unity Asset Store: [Astra RPG Health](#) *(coming soon)*
+Unity Asset Store: [Astra Health](#) *(coming soon)*
 
 ---
 
@@ -157,6 +157,6 @@ Unity Asset Store: [Astra RPG Health](#) *(coming soon)*
 
 Questions, feedback, or bugs? Email us at [electricdrill.info@gmail.com](mailto:electricdrill.info@gmail.com).
 
-Unity Forum: [Astra RPG Health Discussion](#) *(coming soon)*
+Unity Forum: [Astra Health Discussion](#) *(coming soon)*
 
-Discord: [Astra RPG Discord Server](https://discord.gg/nJVRMkGrZg)
+Discord: [Astra Discord Server](https://discord.gg/nJVRMkGrZg)

@@ -115,7 +115,7 @@ Both parameters must be set to strictly positive values.
 **Log Damage Mitigation Graph**  
 Because the non-linear nature of the formula makes it difficult to reason about the effect of Base Value and Scale Factor at a glance, the package includes a dedicated visualization window. You can open it in two ways:
 - Clicking the **Open Graph Visualizer** button in the inspector of any `Log Dmg Mitigation` asset.
-- From the Unity menu: `Window → Astra RPG Health → Log Damage Mitigation Graph`.
+- From the Unity menu: `Window → Astra Health → Log Damage Mitigation Graph`.
 
 The graph visualizer window should look like this:
 ![Log Dmg Mitigation Graph](../../images/AstraRPG/workflows/damage/damage-type/log-dmg-red-graph-visualizer.png)
@@ -149,7 +149,7 @@ The legend labels each curve with its exact parameter value, and the middle curv
 - More complex to debug and tune: the non-linear relationship between the stat and the reduction requires more careful analysis and testing during development.
 
 #### Damage Mitigation Functions - Custom Dmg Mitigation Functions
-If you want to provide your own custom damage mitigation function, you can create a new class that inherits from [DamageMitigationFnSO](xref:ElectricDrill.AstraRpgHealth.DamageMitigationFunctions.DamageMitigationFnSO) and implement the `CalculateReducedDamage` method. Remember to use the `CreateAssetMenu` attribute (or the `MenuItem` attribute) to make it creatable from the Unity editor.  
+If you want to provide your own custom damage mitigation function, you can create a new class that inherits from [DamageMitigationFnSO](xref:ElectricDrill.AstraHealth.DamageMitigationFunctions.DamageMitigationFnSO) and implement the `CalculateReducedDamage` method. Remember to use the `CreateAssetMenu` attribute (or the `MenuItem` attribute) to make it creatable from the Unity editor.  
 You can take a look at the existing damage mitigation functions implementations for reference.
 
 #### Defense Penetration
@@ -186,7 +186,7 @@ The package provides three built-in Defense Penetration Functions — Flat, Perc
 *Relative path:* `Def Penetration Functions -> Log Def Penetration`  
 ![Log Def Penetration](../../images/AstraRPG/workflows/damage/damage-type/defense-reduction-functions-log.png)
 
-If none of the built-in Defense Penetration Functions suits your needs, you can implement a custom one by creating a class that inherits from [DefensePenetrationFnSO](xref:ElectricDrill.AstraRpgHealth.DefensePenetrationFunctions.DefensePenetrationFnSO) and implementing the `CalculateReducedDefense` method. As with the Damage Mitigation Functions, remember to use the `CreateAssetMenu` attribute (or the `MenuItem` attribute) to make it creatable from the Unity editor.
+If none of the built-in Defense Penetration Functions suits your needs, you can implement a custom one by creating a class that inherits from [DefensePenetrationFnSO](xref:ElectricDrill.AstraHealth.DefensePenetrationFunctions.DefensePenetrationFnSO) and implementing the `CalculateReducedDefense` method. As with the Damage Mitigation Functions, remember to use the `CreateAssetMenu` attribute (or the `MenuItem` attribute) to make it creatable from the Unity editor.
 
 ### Damage Type's Damage Modifiers
 
@@ -200,12 +200,12 @@ The **True Damage Options** section of a `DamageTypeSO` exposes three boolean fl
 
 - **Ignore Barrier**: when enabled, the [`ApplyBarrierStep`](#damage-step) is skipped entirely for this `DamageTypeSO`. Damage bypasses the target's barrier and is applied directly to its health pool. Use this for damage types that are meant to be unavoidable through shielding — for example, a pure true damage type, fall damage, or damage-over-time effects that should not interact with temporary shields.
 
-- **Ignore Generic Percentage Modifiers**: when enabled, the [`ApplyPercentageDmgModifiersStep`](#damage-step) skips the **Generic Percentage Damage Modification Stat** configured in `AstraRpgHealthConfigSO`. Percentage modifiers from the `DamageSourceSO` or from this `DamageTypeSO` itself still apply normally.
+- **Ignore Generic Percentage Modifiers**: when enabled, the [`ApplyPercentageDmgModifiersStep`](#damage-step) skips the **Generic Percentage Damage Modification Stat** configured in `AstraHealthConfigSO`. Percentage modifiers from the `DamageSourceSO` or from this `DamageTypeSO` itself still apply normally.
 
-- **Ignore Generic Flat Modifiers**: when enabled, the [`ApplyFlatDmgModifiersStep`](#damage-step) skips the **Generic Flat Damage Modification Stat** configured in `AstraRpgHealthConfigSO`. Flat modifiers from the `DamageSourceSO` or from this `DamageTypeSO` itself still apply normally.
+- **Ignore Generic Flat Modifiers**: when enabled, the [`ApplyFlatDmgModifiersStep`](#damage-step) skips the **Generic Flat Damage Modification Stat** configured in `AstraHealthConfigSO`. Flat modifiers from the `DamageSourceSO` or from this `DamageTypeSO` itself still apply normally.
 
 > [!NOTE]
-> **Ignore Generic Percentage Modifiers** and **Ignore Generic Flat Modifiers** bypass only the _generic_ modifier layer — the global stats configured in `AstraRpgHealthConfigSO`. Source-specific and type-specific modifier stats are never bypassed by these flags and always participate in the pipeline normally.
+> **Ignore Generic Percentage Modifiers** and **Ignore Generic Flat Modifiers** bypass only the _generic_ modifier layer — the global stats configured in `AstraHealthConfigSO`. Source-specific and type-specific modifier stats are never bypassed by these flags and always participate in the pipeline normally.
 >
 > However, if a `DamageSourceSO` or this `DamageTypeSO` has no modifier stats assigned, those layers contribute nothing by construction — which effectively produces the same result as a bypass. Enabling all three flags while also leaving all modifier stats unset on the source and type produces a fully modifier-free damage type.
 
@@ -222,7 +222,7 @@ When its **Lifesteal Stat** is configured and the damage dealer has that stat in
 - **Lifesteal Source**
 - **Amount Selector**
 
-This contribution applies only to hits whose resolved `DamageTypeSO` is this asset. It stacks with the **Generic Lifesteal** configured in `AstraRpgHealthConfigSO`.
+This contribution applies only to hits whose resolved `DamageTypeSO` is this asset. It stacks with the **Generic Lifesteal** configured in `AstraHealthConfigSO`.
 
 For the full behavior — including how this stacks with generic lifesteal and how the `Unify Lifesteal Heals` flag affects the resulting healing events — see [Lifesteal](lifesteal.md).
 
@@ -412,7 +412,7 @@ Three categories of damage modifiers exist, and they all stack additively with o
 - **DamageType modifiers**: apply only when the damage is of a specific `DamageTypeSO`.
 
 ### Generic Damage Modifiers
-Generic modifiers are configured in the `AstraRpgHealthConfigSO` asset and apply universally to every instance of damage received by an entity. The two relevant fields are **Generic Flat Damage Modification Stat** and **Generic Percentage Damage Modification Stat**, described in detail in the [Package Configuration](./package-configuration.md#generic-flat-damage-modification-stat) page.
+Generic modifiers are configured in the `AstraHealthConfigSO` asset and apply universally to every instance of damage received by an entity. The two relevant fields are **Generic Flat Damage Modification Stat** and **Generic Percentage Damage Modification Stat**, described in detail in the [Package Configuration](./package-configuration.md#generic-flat-damage-modification-stat) page.
 
 As a quick recap:
 - **Generic Flat Damage Modification Stat**: a `Stat` whose value is added to (or subtracted from) the incoming damage amount as a flat quantity. A positive value increases the damage received; a negative value decreases it.
@@ -488,7 +488,7 @@ The pipeline uses a small set of dedicated types to keep concerns cleanly separa
 
 ### Damage Step
 
-Each station in the pipeline is a `DamageStep` — an independent, composable unit of work that applies one focused transformation to the damage in flight. The seven built-in steps cover the most common scenarios out of the box. If your game needs specialised behaviour — for example, a step that triggers a status effect when damage exceeds a certain threshold — you can implement a custom step by creating a class that inherits from [`DamageStep`](xref:ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.DamageStep) and implements `ProcessStep()`.
+Each station in the pipeline is a `DamageStep` — an independent, composable unit of work that applies one focused transformation to the damage in flight. The seven built-in steps cover the most common scenarios out of the box. If your game needs specialised behaviour — for example, a step that triggers a status effect when damage exceeds a certain threshold — you can implement a custom step by creating a class that inherits from [`DamageStep`](xref:ElectricDrill.AstraHealth.Damage.CalculationPipeline.DamageStep) and implements `ProcessStep()`.
 
 Step order matters. Each step receives the output of the one before it, so a different arrangement of the same steps produces a different result. Placing a critical multiplier step before defensive steps amplifies the pre-mitigation damage; placing it after scales a lower, post-mitigation value. We will see how to compose and reorder steps from the Inspector in the [Damage Calculation Strategy](#damage-calculation-strategy) section.
 
@@ -545,7 +545,7 @@ The step subtracts from `DamageInfo.Amounts.Current` the portion absorbed by the
 Percentage modifiers scale the incoming damage by a fraction. The three modifier layers (generic, source-specific, type-specific) each correspond to a stat whose value the target entity holds at runtime. A negative value reduces damage, a positive value amplifies it. When a single modifier layer reaches −100% or below on its own, the entity becomes immune to that entire category of damage for this hit.
 
 Applies percentage-based damage modifiers from up to three layers, in order:
-1. **Generic** — reads `AstraRpgHealthConfigSO.GenericPercentageDamageModificationStat` from the target's stats. Skipped if the `DamageTypeSO` has **Ignore Generic Percentage Modifiers** enabled.
+1. **Generic** — reads `AstraHealthConfigSO.GenericPercentageDamageModificationStat` from the target's stats. Skipped if the `DamageTypeSO` has **Ignore Generic Percentage Modifiers** enabled.
 2. **DamageSource-specific** — reads `DamageSourceSO.PercentageDamageModificationStat` from the target's stats.
 3. **DamageType-specific** — reads `DamageTypeSO.PercentageDamageModificationStat` from the target's stats.
 
@@ -562,7 +562,7 @@ Each layer is evaluated individually for full immunity before contributions are 
 Where percentage modifiers scale damage proportionally, flat modifiers add or subtract a fixed amount regardless of the hit's magnitude. A −15 flat absorb always removes 15 damage, whether the incoming hit was 20 or 2000. Flat modifiers are typically placed after percentage modifiers so they adjust the already-scaled value — but you are free to order them as your game design requires.
 
 Applies flat damage modifiers from the same three layers as `ApplyPercentageDmgModifiersStep`:
-1. **Generic** — reads `AstraRpgHealthConfigSO.GenericFlatDamageModificationStat` from the target's stats. Skipped if the `DamageTypeSO` has **Ignore Generic Flat Modifiers** enabled.
+1. **Generic** — reads `AstraHealthConfigSO.GenericFlatDamageModificationStat` from the target's stats. Skipped if the `DamageTypeSO` has **Ignore Generic Flat Modifiers** enabled.
 2. **DamageSource-specific** — reads `DamageSourceSO.FlatDamageModificationStat` from the target's stats.
 3. **DamageType-specific** — reads `DamageTypeSO.FlatDamageModificationStat` from the target's stats.
 
@@ -624,7 +624,7 @@ The inspector adapts to the selected source, showing only the fields relevant to
 
 *Relative path:* `Damage Calculation Strategy`
 
-Rather than embedding damage calculation logic in scripts, Astra RPG Health externalises the pipeline into a `DamageCalculationStrategy` asset — a `ScriptableObject` you control entirely from the Inspector. Each strategy holds an ordered list of steps; changing the list changes the pipeline. This separation lets you design, tune, and swap calculation behaviours without touching any code. A boss encounter can use a custom strategy with a specific subset of steps (e.g., an [ApplyDamageCapStep](#applydamagecapstep) as its final step that limits the incoming damage to a maximum of 10% of the Max HP); regular enemies fall back to the project-wide default; a runtime debuff can temporarily replace an entity's strategy to alter how it takes damage during a special encounter phase (e.g., all lightning damage is doubled).
+Rather than embedding damage calculation logic in scripts, Astra Health externalises the pipeline into a `DamageCalculationStrategy` asset — a `ScriptableObject` you control entirely from the Inspector. Each strategy holds an ordered list of steps; changing the list changes the pipeline. This separation lets you design, tune, and swap calculation behaviours without touching any code. A boss encounter can use a custom strategy with a specific subset of steps (e.g., an [ApplyDamageCapStep](#applydamagecapstep) as its final step that limits the incoming damage to a maximum of 10% of the Max HP); regular enemies fall back to the project-wide default; a runtime debuff can temporarily replace an entity's strategy to alter how it takes damage during a special encounter phase (e.g., all lightning damage is doubled).
 
 In the Inspector, the strategy exposes a reorderable list labelled **Damage Pipeline Steps**. Steps can be added via a type-selection dropdown (the "Step" suffix is trimmed from display names for readability), removed, and reordered via drag. A newly created, empty strategy looks like this:
 
@@ -637,10 +637,10 @@ Once steps are added and arranged, the Inspector shows them as a numbered list r
 Every `EntityHealth` component resolves the active strategy at runtime through a **three-tier priority**:
 1. **Override Damage Calculation Strategy** — takes precedence over all other settings. Intended for temporary runtime effects (e.g., a debuff that temporarily changes how an entity takes damage) or for testing when a custom strategy is already assigned.
 2. **Custom Damage Calculation Strategy** — an entity-specific strategy that overrides the global default but can itself be overridden at runtime by the tier above.
-3. **Default Damage Calculation Strategy** — configured in `AstraRpgHealthConfigSO` and applied to every entity that defines neither a custom nor an override strategy.
+3. **Default Damage Calculation Strategy** — configured in `AstraHealthConfigSO` and applied to every entity that defines neither a custom nor an override strategy.
 
 > [!IMPORTANT]
-> If no strategy is resolved — neither custom nor override is set on the entity, and no default is configured in `AstraRpgHealthConfigSO` — `TakeDamage` logs an error and the pipeline does not run.
+> If no strategy is resolved — neither custom nor override is set on the entity, and no default is configured in `AstraHealthConfigSO` — `TakeDamage` logs an error and the pipeline does not run.
 
 #### Extending a Strategy Without Duplication
 
@@ -650,7 +650,7 @@ To address this, each `DamageCalculationStrategySO` exposes a **Pre-Strategy** s
 
 Both sections share the same layout:
 - **Enabled** toggle — when enabled, the strategy in this section will run before (for Pre) or after (for Post) the steps defined on this asset.
-- **Use Default Pipeline** checkbox — when checked, the global default `DamageCalculationStrategy` configured in `AstraRpgHealthConfigSO` is used. When unchecked, a **Custom Strategy** drag-and-drop field appears to assign any other `DamageCalculationStrategySO` asset explicitly.
+- **Use Default Pipeline** checkbox — when checked, the global default `DamageCalculationStrategy` configured in `AstraHealthConfigSO` is used. When unchecked, a **Custom Strategy** drag-and-drop field appears to assign any other `DamageCalculationStrategySO` asset explicitly.
 
 A typical example: to create a boss pipeline that applies all standard mitigation and then limits incoming damage to 10% of the boss's max HP, configure the strategy asset as follows:
 - **Pre-Strategy**: enabled → **Use Default Pipeline** checked (runs the project-wide default pipeline first).

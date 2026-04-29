@@ -1,6 +1,6 @@
 # Game Actions
 
-Astra RPG Health extends the framework's [`GameAction`](https://electricdrill.github.io/AstraRpgFrameworkDocs/MD/workflows.html#game-actions) system with a set of health-specific actions for resurrection, override management, and damage reactions. Each action is a `ScriptableObject` built on top of `GameAction<TContext>` and integrates directly with `EntityHealth` and the event system.
+Astra Health extends the framework's [`GameAction`](https://electricdrill.github.io/AstraRpgFrameworkDocs/MD/workflows.html#game-actions) system with a set of health-specific actions for resurrection, override management, and damage reactions. Each action is a `ScriptableObject` built on top of `GameAction<TContext>` and integrates directly with `EntityHealth` and the event system.
 
 For an introduction to the `GameAction` execution model, execution with Unity Events, and the difference between `ExecuteAsync` and `RunFireAndForget`, refer to the [Game Actions](https://electricdrill.github.io/AstraRpgFrameworkDocs/MD/workflows.html#game-actions) section of the Astra RPG Framework documentation.
 

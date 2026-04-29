@@ -1,4 +1,4 @@
-# Documentation Progress — Astra RPG Health
+# Documentation Progress — Astra Health
 
 > Update this file whenever a section is completed or its status changes.
 > Last updated: 2026-03-09
