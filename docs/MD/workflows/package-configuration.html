@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Package Configuration | Astra RPG Health </title>
+      <title>Package Configuration | Astra Health </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Package Configuration | Astra RPG Health ">
+      <meta name="title" content="Package Configuration | Astra Health ">
       
       
       <link rel="icon" href="../../images/astra-health-ico.ico">
@@ -44,8 +44,8 @@
       <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
         <div class="container-xxl flex-nowrap">
           <a class="navbar-brand" href="../../index.html">
-            <img id="logo" class="svg" src="../../images/logo-health.svg" alt="Astra RPG Health">
-            Astra RPG Health
+            <img id="logo" class="svg" src="../../images/logo-health.svg" alt="Astra Health">
+            Astra Health
           </a>
           <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
             <i class="bi bi-three-dots"></i>
@@ -87,13 +87,13 @@
         <article data-uid="">
 <h1 id="package-configuration">Package Configuration</h1>
 
-<p>Astra RPG Framework needed no configuration. The health package, however, needs to be configured to have the system work around the specific instances of your game. For example, if you defined a &quot;Super Duper All-damage resistance&quot; <code>Stat</code> in your game, you need to tell Astra RPG Health to use it when calculating damage.</p>
+<p>Astra RPG Framework needed no configuration. The health package, however, needs to be configured to have the system work around the specific instances of your game. For example, if you defined a &quot;Super Duper All-damage resistance&quot; <code>Stat</code> in your game, you need to tell Astra Health to use it when calculating damage.</p>
 <p>The package uses a flexible configuration system that balances convenience with explicit control. This page explains how to set up and configure the health system for your game.</p>
 <h2 id="configuration-overview">Configuration Overview</h2>
-<p>The Astra RPG Health system uses a <strong>two-tier configuration architecture</strong>:</p>
+<p>The Astra Health system uses a <strong>two-tier configuration architecture</strong>:</p>
 <ol>
-<li><strong>Global Settings</strong> (<code>AstraRpgHealthGlobalSettings</code>) - A lightweight pointer stored in <code>Resources</code> that references your active configuration</li>
-<li><strong>Gameplay Configuration</strong> (<code>AstraRpgHealthConfigSO</code>) - The actual configuration containing all gameplay parameters</li>
+<li><strong>Global Settings</strong> (<code>AstraHealthGlobalSettings</code>) - A lightweight pointer stored in <code>Resources</code> that references your active configuration</li>
+<li><strong>Gameplay Configuration</strong> (<code>AstraHealthConfigSO</code>) - The actual configuration containing all gameplay parameters</li>
 </ol>
 <p>This separation allows you to:</p>
 <ul>
@@ -107,19 +107,19 @@
 <p>The package automatically creates the Global Settings asset on first import or when the editor loads. You don't need to do anything manually.</p>
 <p><strong>What happens automatically:</strong></p>
 <ol>
-<li>The <code>AstraRpgHealthGlobalSettings.asset</code> is created in <code>Assets/Resources/</code></li>
+<li>The <code>AstraHealthGlobalSettings.asset</code> is created in <code>Assets/Resources/</code></li>
 <li>If a default configuration exists (e.g., from imported samples), it's automatically assigned</li>
 <li>The system is immediately ready to use</li>
 </ol>
 <div class="NOTE">
 <h5>Note</h5>
-<p>Default location: <code>Assets/Resources/AstraRpgHealthGlobalSettings.asset</code></p>
+<p>Default location: <code>Assets/Resources/AstraHealthGlobalSettings.asset</code></p>
 </div>
 <h3 id="project-settings">Project Settings</h3>
 <p>You can manage the package configuration through Unity's Project Settings window:</p>
 <ol>
 <li>Open <strong>Edit → Project Settings</strong></li>
-<li>Navigate to <strong>Astra RPG Health</strong></li>
+<li>Navigate to <strong>Astra Health</strong></li>
 <li>Assign your desired <strong>Active Config Profile</strong></li>
 </ol>
 <p><strong>Status Indicators:</strong></p>
@@ -133,13 +133,13 @@
 <li><strong>Create New Config Asset</strong> - Opens a save dialog to create a new configuration</li>
 </ul>
 <h3 id="manual-configuration-alternative-to-project-settings">Manual Configuration (alternative to Project Settings)</h3>
-<p>You can also manage the package configuration manually by directly editing the <code>AstraRpgHealthGlobalSettings</code> asset in the <code>Assets/Resources</code> folder. This approach allows you to assign a specific <code>AstraRpgHealthConfigSO</code> asset without using the Project Settings window.</p>
+<p>You can also manage the package configuration manually by directly editing the <code>AstraHealthGlobalSettings</code> asset in the <code>Assets/Resources</code> folder. This approach allows you to assign a specific <code>AstraHealthConfigSO</code> asset without using the Project Settings window.</p>
 <h3 id="convention-over-configuration">Convention Over Configuration</h3>
 <p>The package follows a <strong>convention-over-configuration</strong> philosophy to reduce setup friction:</p>
 <h4 id="fallback-resolution">Fallback Resolution</h4>
 <p>If no explicit configuration is assigned in Project Settings, the system automatically searches for a configuration named:</p>
 <blockquote>
-<p><strong><code>Astra Rpg Health Config</code></strong></p>
+<p><strong><code>Astra Health Config</code></strong></p>
 </blockquote>
 <p>located in any <strong><code>Resources</code></strong> folder in your project.</p>
 <h4 id="search-order">Search Order</h4>
@@ -147,13 +147,13 @@
 <ol>
 <li><p><strong>Explicit Configuration</strong> (Project Settings)</p>
 <ul>
-<li>Loads <code>AstraRpgHealthGlobalSettings</code> from <code>Resources/AstraRpgHealthGlobalSettings</code></li>
+<li>Loads <code>AstraHealthGlobalSettings</code> from <code>Resources/AstraHealthGlobalSettings</code></li>
 <li>If it has an <code>ActiveConfig</code> assigned, use it</li>
 </ul>
 </li>
 <li><p><strong>Convention-Based Fallback</strong></p>
 <ul>
-<li>Searches for <code>Astra Rpg Health Config</code> in any <code>Resources</code> folder</li>
+<li>Searches for <code>Astra Health Config</code> in any <code>Resources</code> folder</li>
 <li>Logs a warning indicating fallback usage</li>
 </ul>
 </li>
@@ -172,26 +172,26 @@
 <h2 id="configuration-loading-strategy">Configuration Loading Strategy</h2>
 <p>The health configuration is loaded lazily on first access and cached for performance:</p>
 <pre><code class="lang-csharp">// Automatically loads configuration on first access
-var config = AstraRpgHealthConfigProvider.Instance;
+var config = AstraHealthConfigProvider.Instance;
 
 // Pre-load during initialization to avoid runtime overhead
-AstraRpgHealthConfigProvider.WarmUp();
+AstraHealthConfigProvider.WarmUp();
 
 // Force reload (useful for testing)
-AstraRpgHealthConfigProvider.Reset();
+AstraHealthConfigProvider.Reset();
 </code></pre>
 <p><strong>When is the configuration loaded?</strong></p>
 <ul>
 <li>Automatically before the first scene loads (via <code>RuntimeInitializeOnLoadMethod</code>)</li>
-<li>Lazily when first accessed via <code>AstraRpgHealthConfigProvider.Instance</code></li>
+<li>Lazily when first accessed via <code>AstraHealthConfigProvider.Instance</code></li>
 <li>Explicitly when calling <code>WarmUp()</code></li>
 </ul>
 <hr>
 <h2 id="creating-configuration-assets">Creating Configuration Assets</h2>
-<p>If for any reason you need to create a new <code>AstraRpgHealthConfigSO</code> asset, you can do so via two methods:</p>
+<p>If for any reason you need to create a new <code>AstraHealthConfigSO</code> asset, you can do so via two methods:</p>
 <h3 id="via-project-settings">Via Project Settings</h3>
 <ol>
-<li>Open <strong>Edit → Project Settings → Astra RPG Health</strong></li>
+<li>Open <strong>Edit → Project Settings → Astra Health</strong></li>
 <li>Unassign any existing configuration, if any</li>
 <li>Click <strong>Create New Config Asset</strong></li>
 <li>Choose a save location</li>
@@ -200,7 +200,7 @@ AstraRpgHealthConfigProvider.Reset();
 <h3 id="via-asset-menu">Via Asset Menu</h3>
 <ol>
 <li>Right-click in the <strong>Project Window</strong></li>
-<li>Select <strong>Create → Astra RPG Health → Configuration</strong></li>
+<li>Select <strong>Create → Astra Health → Config → Astra Health Config</strong></li>
 <li>Name your configuration</li>
 <li>Assign it in Project Settings or in the Global Settings asset</li>
 </ol>
@@ -210,9 +210,9 @@ AstraRpgHealthConfigProvider.Reset();
 <h2 id="health-configuration-reference">Health Configuration Reference</h2>
 <div class="NOTE">
 <h5>Note</h5>
-<p>In the <code>AstraRpgHealthConfigSO</code> asset, you can hover over each field to see a tooltip with a brief description.</p>
+<p>In the <code>AstraHealthConfigSO</code> asset, you can hover over each field to see a tooltip with a brief description.</p>
 </div>
-<p>The <code>AstraRpgHealthConfigSO</code> asset contains all gameplay parameters for the health system. Below is a detailed explanation of each field.</p>
+<p>The <code>AstraHealthConfigSO</code> asset contains all gameplay parameters for the health system. Below is a detailed explanation of each field.</p>
 <h3 id="health">Health</h3>
 <h4 id="health-attributes-scaling">Health Attributes Scaling</h4>
 <p><strong>Type:</strong> <code>AttributesScalingComponent</code><br>
@@ -469,7 +469,7 @@ entityHealth.ManualHealthRegenerationTick();
 <h3 id="lifesteal">Lifesteal</h3>
 <p>Lifesteal has <strong>two configuration layers</strong>:</p>
 <ul>
-<li>a <strong>generic</strong> layer configured in <code>AstraRpgHealthConfigSO</code></li>
+<li>a <strong>generic</strong> layer configured in <code>AstraHealthConfigSO</code></li>
 <li>an optional <strong>type-specific</strong> layer configured directly on each <code>DamageTypeSO</code></li>
 </ul>
 <p>Both layers use <code>LifestealStatConfig</code> and can stack on the same hit.</p>
@@ -627,15 +627,15 @@ entityHealth.Unsubscribe&lt;HealthRatioChangedGameEvent&gt;(myEntitySpecificEven
 <p><strong>Cause:</strong> No configuration is assigned and no fallback exists.</p>
 <p><strong>Solution:</strong></p>
 <ol>
-<li>Check <strong>Project Settings → Astra RPG Health</strong></li>
+<li>Check <strong>Project Settings → Astra Health</strong></li>
 <li>Assign a configuration or create a new one</li>
-<li>Alternatively, create a config named <code>Astra Rpg Health Config</code> in a <code>Resources</code> folder</li>
+<li>Alternatively, create a config named <code>Astra Health Config</code> in a <code>Resources</code> folder</li>
 </ol>
 <h3 id="using-fallback-warning">&quot;Using Fallback&quot; warning</h3>
 <p><strong>Cause:</strong> No explicit configuration assigned in Project Settings.</p>
 <p><strong>Solution:</strong></p>
 <ol>
-<li>Open <strong>Project Settings → Astra RPG Health</strong></li>
+<li>Open <strong>Project Settings → Astra Health</strong></li>
 <li>Assign the fallback configuration explicitly</li>
 <li>This warning is just informational and won't break functionality</li>
 </ol>
@@ -643,7 +643,7 @@ entityHealth.Unsubscribe&lt;HealthRatioChangedGameEvent&gt;(myEntitySpecificEven
 <p><strong>Cause:</strong> Configuration is cached on first access.</p>
 <p><strong>Solution:</strong></p>
 <pre><code class="lang-csharp">// Force reload
-AstraRpgHealthConfigProvider.Reset();
+AstraHealthConfigProvider.Reset();
 </code></pre>
 <h3 id="missing-resources-folder">Missing Resources folder</h3>
 <p><strong>Cause:</strong> The <code>Assets/Resources/</code> folder doesn't exist.</p>

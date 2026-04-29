@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>EntityHealth Component | Astra RPG Health </title>
+      <title>EntityHealth Component | Astra Health </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="EntityHealth Component | Astra RPG Health ">
+      <meta name="title" content="EntityHealth Component | Astra Health ">
       
       
       <link rel="icon" href="../../images/astra-health-ico.ico">
@@ -44,8 +44,8 @@
       <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
         <div class="container-xxl flex-nowrap">
           <a class="navbar-brand" href="../../index.html">
-            <img id="logo" class="svg" src="../../images/logo-health.svg" alt="Astra RPG Health">
-            Astra RPG Health
+            <img id="logo" class="svg" src="../../images/logo-health.svg" alt="Astra Health">
+            Astra Health
           </a>
           <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
             <i class="bi bi-three-dots"></i>
@@ -87,7 +87,7 @@
         <article data-uid="">
 <h1 id="entityhealth-component"><code>EntityHealth</code> Component</h1>
 
-<p>With Astra RPG Health, the new <code>EntityHealth</code> MonoBehaviour allows you to add health points to an entity. In this way, the entity can take damage and, consequently, die.</p>
+<p>With Astra Health, the new <code>EntityHealth</code> MonoBehaviour allows you to add health points to an entity. In this way, the entity can take damage and, consequently, die.</p>
 <p>Here is an example of the <code>EntityHealth</code> component:
 <img src="../../images/AstraRPG/workflows/entity-health/entity-health-fresh-component.png" alt="EntityHealth"></p>
 <p>The events section is collapsed by default since there are many events, and it is more practical to expand it only when necessary.</p>
@@ -146,13 +146,13 @@ Unsurprisingly, <code>Heal</code> and <code>TakeDamage</code> internally use <co
 <p>In the image, you don't see any assigned event. Therefore, this is the view of the inspector you should get when you freshly add the <code>EntityHealth</code> component to an entity.</p>
 <p>Through <code>EntityHealth</code> we can configure entity-scoped <em>Event Channels</em>. For each signal (e.g., Pre Damage Info Event, Entity Died Event, etc.), the corresponding Event Channel is the per-entity mechanism that orchestrates the raise flow.</p>
 <h3 id="global-events">Global Events</h3>
-<p>Global Events broadcast health-related information to the entire game and are configured once at the project level in the <a href="package-configuration.html#global-events">AstraRpgHealthConfig</a> asset — not per entity on <code>EntityHealth</code>. This guarantees a single authoritative source for framework-level communication and eliminates the risk of misconfiguration caused by different entities referencing different event assets.</p>
+<p>Global Events broadcast health-related information to the entire game and are configured once at the project level in the <a href="package-configuration.html#global-events">AstraHealthConfigSO</a> asset — not per entity on <code>EntityHealth</code>. This guarantees a single authoritative source for framework-level communication and eliminates the risk of misconfiguration caused by different entities referencing different event assets.</p>
 <p>The framework uses several global events internally: for example, the <em>Damage Resolution</em> event powers lifesteal, and the <em>Entity Died</em> event is what experience collectors listen to for XP awards. See <a href="package-configuration.html#global-events">Global Events</a> in Package Configuration for the full reference, including which events are required and which framework features depend on each.</p>
 <h3 id="event-channels">Event Channels</h3>
 <p>Event Channels are assigned directly on the <code>EntityHealth</code> component. They are designed to bridge the package-level global communication with optional per-entity communication.</p>
 <p>Each Event Channel contains:</p>
 <ul>
-<li>a resolver that retrieves the corresponding Global Event from <code>AstraRpgHealthConfig</code></li>
+<li>a resolver that retrieves the corresponding Global Event from <code>AstraHealthConfigSO</code></li>
 <li>a list of <em>Extra Events</em> that you can assign directly on that specific entity</li>
 </ul>
 <p>When the relevant action occurs (e.g., the entity takes damage, the entity dies, etc.), <code>EntityHealth</code> raises the corresponding Event Channel. The channel then raises the resolved Global Event configured at package level, if any, and, in the same flow, all Extra Events assigned to that channel.</p>
@@ -166,19 +166,19 @@ entityHealth.Unsubscribe&lt;EntityDiedGameEvent&gt;(myEntitySpecificDeathEvent);
 </code></pre>
 <p>Replace <code>EntityDiedGameEvent</code> with the concrete event type for the channel you want to target (e.g., <code>PreDamageGameEvent</code>, <code>DamageResolutionGameEvent</code>, <code>EntityHealthChangedGameEvent</code>, <code>HealthRatioChangedGameEvent</code>, etc.).</p>
 <h3 id="events-breakdown">Events Breakdown</h3>
-<p>Here is a detailed description of each event. Each signal has a corresponding Event Channel on <code>EntityHealth</code>; that channel raises the global event configured in <code>AstraRpgHealthConfig</code> and any extra events assigned to the entity, so it is sufficient to describe each signal once.</p>
+<p>Here is a detailed description of each event. Each signal has a corresponding Event Channel on <code>EntityHealth</code>; that channel raises the global event configured in <code>AstraHealthConfigSO</code> and any extra events assigned to the entity, so it is sufficient to describe each signal once.</p>
 <h4 id="damage-related-events">Damage Related Events</h4>
-<p>To better understand the first two events of this section, I recommend taking a look at the <a href="damage.html">Damage</a> documentation to get a better understanding of damage in Astra RPG Health.</p>
+<p>To better understand the first two events of this section, I recommend taking a look at the <a href="damage.html">Damage</a> documentation to get a better understanding of damage in Astra Health.</p>
 <ul>
-<li><strong>Pre Damage Info Event</strong>: Event raised before the entity takes damage, and before the <a href="damage.html#damage-calculation-pipeline">damage calculation pipeline</a> calculates the net damage. This event transmits information about the damage the entity is about to take, such as the damage type, the damage source (an entity, <code>null</code> if not applicable), the damage source type (e.g., environmental, skill, trap, etc.), the raw damage you intend to inflict, and other relevant information. For more details regarding the context parameter and its fields, refer to the API documentation <a class="xref" href="../../api/ElectricDrill.AstraRpgHealth.Damage.PreDamageContext.html">PreDamageContext</a>.
+<li><strong>Pre Damage Info Event</strong>: Event raised before the entity takes damage, and before the <a href="damage.html#damage-calculation-pipeline">damage calculation pipeline</a> calculates the net damage. This event transmits information about the damage the entity is about to take, such as the damage type, the damage source (an entity, <code>null</code> if not applicable), the damage source type (e.g., environmental, skill, trap, etc.), the raw damage you intend to inflict, and other relevant information. For more details regarding the context parameter and its fields, refer to the API documentation <a href="xref:ElectricDrill.AstraHealth.Damage.PreDamageContext">PreDamageContext</a>.
 This event can be useful for implementing passive abilities or, in general, advanced mechanics that trigger effects in response to specific conditions related to the damage an entity is about to take. For example, a debuff or status modifier that amplifies critical damage taken by 50% when the damage type is &quot;Fire&quot;, or a passive ability that negates all instances of damage currently being taken if they had raw damage less than 50.</li>
-<li><strong>Damage Resolution Event</strong>: Event raised after the entity has taken or ignored damage. Similarly to the context parameter of the previous event, this event transmits detailed information about the damage just taken or ignored. For more details regarding the context parameter and its fields, refer to the API documentation <a class="xref" href="../../api/ElectricDrill.AstraRpgHealth.Damage.DamageResolutionContext.html">DamageResolutionContext</a>.</li>
+<li><strong>Damage Resolution Event</strong>: Event raised after the entity has taken or ignored damage. Similarly to the context parameter of the previous event, this event transmits detailed information about the damage just taken or ignored. For more details regarding the context parameter and its fields, refer to the API documentation <a href="xref:ElectricDrill.AstraHealth.Damage.DamageResolutionContext">DamageResolutionContext</a>.</li>
 </ul>
 <p>In general, the thumb rule for deciding whether to use the Pre Damage Info Event or the Damage Resolution Event is the following: if you want to manipulate the damage an entity is about to take, it is better to subscribe to Pre Damage Info Event, and modify the context as desired; if instead you want to react to the damage an entity has just taken, and trigger effects in response to it, it is better to subscribe to Damage Resolution Event, and react based on the information transmitted by its context.</p>
 <h4 id="health-related-events">Health Related Events</h4>
 <ul>
 <li><strong>Health Changed Event</strong>: Event raised whenever the entity's current HP changes, whether the value increases or decreases. This includes healing, damage, resurrection, and other mechanics that directly modify current HP such as <code>AddHealth</code>, <code>RemoveHealth</code>, or max-HP-driven HP adjustments.
-Refer to the <a class="xref" href="../../api/ElectricDrill.AstraRpgHealth.Events.EntityHealthChangedContext.html">EntityHealthChangedContext</a> API for more details on the context parameter.</li>
+Refer to the <a href="xref:ElectricDrill.AstraHealth.Events.EntityHealthChangedContext">EntityHealthChangedContext</a> API for more details on the context parameter.</li>
 </ul>
 <div class="NOTE">
 <h5>Note</h5>
@@ -186,21 +186,21 @@ Refer to the <a class="xref" href="../../api/ElectricDrill.AstraRpgHealth.Events
 </div>
 <ul>
 <li><strong>Max Health Changed Event</strong>: Event raised when an entity's total max health points change. This event is raised both when total max hp increase and when they decrease.
-See <a class="xref" href="../../api/ElectricDrill.AstraRpgHealth.Events.EntityMaxHealthChangedContext.html">EntityMaxHealthChangedContext</a> API for more details on the context parameter.</li>
+See <a href="xref:ElectricDrill.AstraHealth.Events.EntityMaxHealthChangedContext">EntityMaxHealthChangedContext</a> API for more details on the context parameter.</li>
 <li><strong>Health Ratio Changed Event</strong>: Event raised whenever the HP/MaxHP ratio changes — whether because current HP changed (via <code>AddHealth</code>/<code>RemoveHealth</code>) or because MaxHP changed (via <code>RecalculateMaxHp</code>). Carries <code>HealthRatioChangedContext</code> with raw <code>PreviousHp</code>, <code>NewHp</code>, <code>PreviousMaxHp</code>, and <code>NewMaxHp</code> values, plus <code>PreviousValue</code> and <code>NewValue</code> as integer HP percentages (0–100). Useful for HP-ratio-based conditions — for example, triggering an ability when an entity drops below 25% HP.
-See <a class="xref" href="../../api/ElectricDrill.AstraRpgHealth.Events.Contexts.HealthRatioChangedContext.html">HealthRatioChangedContext</a> API for more details on the context parameter.</li>
-<li><strong>Entity Died Event</strong>: Event raised when the entity dies. See <a class="xref" href="../../api/ElectricDrill.AstraRpgHealth.Events.EntityDiedContext.html">EntityDiedContext</a> API for more details on the context parameter.</li>
+See <a href="xref:ElectricDrill.AstraHealth.Events.Contexts.HealthRatioChangedContext">HealthRatioChangedContext</a> API for more details on the context parameter.</li>
+<li><strong>Entity Died Event</strong>: Event raised when the entity dies. See <a href="xref:ElectricDrill.AstraHealth.Events.EntityDiedContext">EntityDiedContext</a> API for more details on the context parameter.</li>
 </ul>
 <h4 id="healing-related-events">Healing Related Events</h4>
 <ul>
-<li><strong>Pre Heal Event</strong>: Event raised before the entity is healed. This event transmits information about the healing the entity is about to receive, such as the amount of HP you intend to heal, the entity that provided the healing (<code>null</code> if not applicable), the heal source (e.g., skill, item, potion, etc.) and other relevant information. For more details regarding the context parameter and its fields, refer to the API documentation <a class="xref" href="../../api/ElectricDrill.AstraRpgHealth.Heal.PreHealContext.html">PreHealContext</a>.
+<li><strong>Pre Heal Event</strong>: Event raised before the entity is healed. This event transmits information about the healing the entity is about to receive, such as the amount of HP you intend to heal, the entity that provided the healing (<code>null</code> if not applicable), the heal source (e.g., skill, item, potion, etc.) and other relevant information. For more details regarding the context parameter and its fields, refer to the API documentation <a href="xref:ElectricDrill.AstraHealth.Heal.PreHealContext">PreHealContext</a>.
 The amount of health points intended to heal, transmitted by this event, is the value before applying any healing modifiers. This event can be useful for implementing passive abilities or, in general, advanced mechanics that trigger effects in response to specific conditions related to the healing an entity is about to receive. For example, a buff that amplifies healing derived from potions (heal source) by 30%.</li>
-<li><strong>Entity Healed Event</strong>: Event raised when the entity has been healed. This event transmits information about the healing just received, such as the amount of HP the entity actually gained after the application of any healing modifiers. For more on the context parameter see the <a class="xref" href="../../api/ElectricDrill.AstraRpgHealth.Heal.ReceivedHealContext.html">ReceivedHealContext</a> API.</li>
+<li><strong>Entity Healed Event</strong>: Event raised when the entity has been healed. This event transmits information about the healing just received, such as the amount of HP the entity actually gained after the application of any healing modifiers. For more on the context parameter see the <a href="xref:ElectricDrill.AstraHealth.Heal.ReceivedHealContext">ReceivedHealContext</a> API.</li>
 </ul>
 <p>Here too, as for damage events, the thumb rule for deciding whether to use the Pre Heal Event or the Entity Healed Event is the following: if you want to manipulate the healing an entity is about to receive, it is better to subscribe to Pre Heal Event, and modify the context as desired; if instead you want to react to the healing an entity has just received, and trigger effects in response to it, it is better to subscribe to Entity Healed Event, and react based on the information transmitted by its context.</p>
 <h4 id="resurrection-related-events">Resurrection Related Events</h4>
 <ul>
-<li><strong>Entity Resurrected Event</strong>: Event raised when the entity is resurrected. See <a class="xref" href="../../api/ElectricDrill.AstraRpgHealth.Resurrection.ResurrectionContext.html">ResurrectionContext</a> API for more details on the context parameter.</li>
+<li><strong>Entity Resurrected Event</strong>: Event raised when the entity is resurrected. See <a href="xref:ElectricDrill.AstraHealth.Resurrection.ResurrectionContext">ResurrectionContext</a> API for more details on the context parameter.</li>
 </ul>
 
 </article>

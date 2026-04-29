@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Lifesteal | Astra RPG Health </title>
+      <title>Lifesteal | Astra Health </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Lifesteal | Astra RPG Health ">
+      <meta name="title" content="Lifesteal | Astra Health ">
       
       
       <link rel="icon" href="../../images/astra-health-ico.ico">
@@ -44,8 +44,8 @@
       <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
         <div class="container-xxl flex-nowrap">
           <a class="navbar-brand" href="../../index.html">
-            <img id="logo" class="svg" src="../../images/logo-health.svg" alt="Astra RPG Health">
-            Astra RPG Health
+            <img id="logo" class="svg" src="../../images/logo-health.svg" alt="Astra Health">
+            Astra Health
           </a>
           <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
             <i class="bi bi-three-dots"></i>
@@ -90,10 +90,10 @@
 <p>Lifesteal is a mechanic that lets an entity recover health proportional to the damage it deals. When an entity successfully damages a target, a percentage of the damage — determined by a configurable stat — is healed back to the attacker.</p>
 <p>The system supports <strong>two lifesteal layers</strong>:</p>
 <ol>
-<li><strong>Generic Lifesteal</strong> — configured once in <code>AstraRpgHealthConfigSO</code> and applied to all damage dealt by the entity.</li>
+<li><strong>Generic Lifesteal</strong> — configured once in <code>AstraHealthConfigSO</code> and applied to all damage dealt by the entity.</li>
 <li><strong>Damage-Type Lifesteal</strong> — configured directly inside each <code>DamageTypeSO</code> and applied only when that specific damage type is dealt.</li>
 </ol>
-<p>Both layers use the same <code>LifestealStatConfig</code> structure, so designers configure the same three concepts in both places: the lifesteal stat, the heal source, and the damage amount selector. If both layers are configured for the same hit, their heal amounts stack. Depending on the <code>Unify Lifesteal Heals</code> flag in <code>AstraRpgHealthConfigSO</code>, those stacked amounts can be applied either as two separate heals or as a single unified heal.</p>
+<p>Both layers use the same <code>LifestealStatConfig</code> structure, so designers configure the same three concepts in both places: the lifesteal stat, the heal source, and the damage amount selector. If both layers are configured for the same hit, their heal amounts stack. Depending on the <code>Unify Lifesteal Heals</code> flag in <code>AstraHealthConfigSO</code>, those stacked amounts can be applied either as two separate heals or as a single unified heal.</p>
 <h2 id="lifestealstatconfig">LifestealStatConfig</h2>
 <p><code>LifestealStatConfig</code> is the reusable data structure used by both <strong>Generic Lifesteal</strong> and the per-<code>DamageTypeSO</code> <strong>Lifesteal</strong> section.</p>
 <p><strong>Lifesteal Stat</strong><br>
@@ -111,7 +111,7 @@ The <code>HealSourceSO</code> used when applying the lifesteal heal. As with any
 <p><strong>Amount Selector</strong><br>
 Determines which damage value is used as the basis for the lifesteal computation. See <a href="#amount-selector">Amount Selector</a> below.</p>
 <h2 id="generic-lifesteal">Generic Lifesteal</h2>
-<p><code>AstraRpgHealthConfigSO</code> exposes a <strong>Generic Lifesteal</strong> field of type <code>LifestealStatConfig</code>.</p>
+<p><code>AstraHealthConfigSO</code> exposes a <strong>Generic Lifesteal</strong> field of type <code>LifestealStatConfig</code>.</p>
 <p>If its <strong>Lifesteal Stat</strong> is configured and the damage dealer has that stat in its <code>StatSet</code>, every successful hit can generate lifesteal from this generic configuration regardless of the hit's <code>DamageTypeSO</code>.</p>
 <p>Use this when you want a broad mechanic such as &quot;all outgoing damage grants lifesteal&quot;, without repeating the same setup on every damage type.</p>
 <p>See also: <a href="package-configuration.html#lifesteal">Lifesteal</a> in Package Configuration.</p>
@@ -156,7 +156,7 @@ Determines which damage value is used as the basis for the lifesteal computation
 <p>Before making any considerations about performance, keep in mind that premature optimization is the root of all evil. A real performance problem should be identified through profiling before taking any action.</p>
 </div>
 <p>By default, lifesteal heals raise the standard healing events (<code>Pre Heal</code> and <code>Entity Healed</code>). In games where many entities deal lifesteal damage frequently — for example, a horde of enemies all with a lifesteal stat, each landing hits several times per second — the volume of heal events generated can become significant, especially when the global <code>Entity Healed Event</code> has multiple listeners.</p>
-<p>If profiling reveals this to be a bottleneck, the <strong>Suppress Lifesteal Events</strong> flag in <code>AstraRpgHealthConfigSO</code> disables healing event emission for lifesteal heals entirely. The heal is still applied; only the events are suppressed. This option is appropriate when you do not need to react to lifesteal heals through event listeners — for example, when your UI or combat log does not track lifesteal healing specifically.</p>
+<p>If profiling reveals this to be a bottleneck, the <strong>Suppress Lifesteal Events</strong> flag in <code>AstraHealthConfigSO</code> disables healing event emission for lifesteal heals entirely. The heal is still applied; only the events are suppressed. This option is appropriate when you do not need to react to lifesteal heals through event listeners — for example, when your UI or combat log does not track lifesteal healing specifically.</p>
 <p>A similar consideration applies to passive health regeneration, which can also generate a high volume of heal events under certain conditions. See <a href="healing.html#performance-considerations">Performance Considerations</a> in the Healing documentation for a broader discussion.</p>
 <h2 id="conditions">Conditions</h2>
 <div class="NOTE">
@@ -167,7 +167,7 @@ Determines which damage value is used as the basis for the lifesteal computation
 <li>The dealing entity is alive at the moment of damage resolution.</li>
 <li>At least one lifesteal layer is configured for the hit:
 <ul>
-<li><strong>Generic Lifesteal</strong> in <code>AstraRpgHealthConfigSO</code>, and/or</li>
+<li><strong>Generic Lifesteal</strong> in <code>AstraHealthConfigSO</code>, and/or</li>
 <li><strong>Lifesteal</strong> on the hit's <code>DamageTypeSO</code>.</li>
 </ul>
 </li>

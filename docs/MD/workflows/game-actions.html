@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Game Actions | Astra RPG Health </title>
+      <title>Game Actions | Astra Health </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Game Actions | Astra RPG Health ">
+      <meta name="title" content="Game Actions | Astra Health ">
       
       
       <link rel="icon" href="../../images/astra-health-ico.ico">
@@ -44,8 +44,8 @@
       <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
         <div class="container-xxl flex-nowrap">
           <a class="navbar-brand" href="../../index.html">
-            <img id="logo" class="svg" src="../../images/logo-health.svg" alt="Astra RPG Health">
-            Astra RPG Health
+            <img id="logo" class="svg" src="../../images/logo-health.svg" alt="Astra Health">
+            Astra Health
           </a>
           <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
             <i class="bi bi-three-dots"></i>
@@ -87,7 +87,7 @@
         <article data-uid="">
 <h1 id="game-actions">Game Actions</h1>
 
-<p>Astra RPG Health extends the framework's <a href="https://electricdrill.github.io/AstraRpgFrameworkDocs/MD/workflows.html#game-actions"><code>GameAction</code></a> system with a set of health-specific actions for resurrection, override management, and damage reactions. Each action is a <code>ScriptableObject</code> built on top of <code>GameAction&lt;TContext&gt;</code> and integrates directly with <code>EntityHealth</code> and the event system.</p>
+<p>Astra Health extends the framework's <a href="https://electricdrill.github.io/AstraRpgFrameworkDocs/MD/workflows.html#game-actions"><code>GameAction</code></a> system with a set of health-specific actions for resurrection, override management, and damage reactions. Each action is a <code>ScriptableObject</code> built on top of <code>GameAction&lt;TContext&gt;</code> and integrates directly with <code>EntityHealth</code> and the event system.</p>
 <p>For an introduction to the <code>GameAction</code> execution model, execution with Unity Events, and the difference between <code>ExecuteAsync</code> and <code>RunFireAndForget</code>, refer to the <a href="https://electricdrill.github.io/AstraRpgFrameworkDocs/MD/workflows.html#game-actions">Game Actions</a> section of the Astra RPG Framework documentation.</p>
 <h2 id="ihasentity-based-actions">IHasEntity-Based Actions</h2>
 <p>The recommended way to use the health game actions is through the <code>IHasEntity</code>-based variants. Most event context payloads raised by the health package — <code>DamageResolutionContext</code>, <code>EntityDiedContext</code>, <code>PreDamageContext</code>, <code>ResurrectionContext</code>, and others — implement the framework's <code>IHasEntity</code> interface, which exposes the primary <code>EntityCore</code> subject of the event. This means that any <code>GameEventListener</code> whose payload implements <code>IHasEntity</code> can drive these actions directly without any adapter or component extraction.</p>

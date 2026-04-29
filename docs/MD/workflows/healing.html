@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Healing | Astra RPG Health </title>
+      <title>Healing | Astra Health </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Healing | Astra RPG Health ">
+      <meta name="title" content="Healing | Astra Health ">
       
       
       <link rel="icon" href="../../images/astra-health-ico.ico">
@@ -44,8 +44,8 @@
       <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
         <div class="container-xxl flex-nowrap">
           <a class="navbar-brand" href="../../index.html">
-            <img id="logo" class="svg" src="../../images/logo-health.svg" alt="Astra RPG Health">
-            Astra RPG Health
+            <img id="logo" class="svg" src="../../images/logo-health.svg" alt="Astra Health">
+            Astra Health
           </a>
           <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
             <i class="bi bi-three-dots"></i>
@@ -246,7 +246,7 @@ If this becomes a performance issue for your game, you have several levers avail
 </ul>
 <p>I would like to reiterate that, unless you have identified a real performance problem through profiling, it is not necessary to take any of these actions to optimize performance. You probably won't have any performance issues even with a thousand entities and dozens of listeners subscribed to the global Entity Healed Event.</p>
 <h3 id="manual-health-regeneration">Manual Health Regeneration</h3>
-<p>Manual regeneration is instead triggered manually through the <a class="xref" href="../../api/ElectricDrill.AstraRpgHealth.EntityHealth.html#ElectricDrill_AstraRpgHealth_EntityHealth_ManualHealthRegenerationTick"><code>ManualHealthRegenerationTick()</code></a> API method.</p>
+<p>Manual regeneration is instead triggered manually through the <a href="xref:ElectricDrill.AstraHealth.Core.EntityHealth.ManualHealthRegenerationTick"><code>ManualHealthRegenerationTick()</code></a> API method.</p>
 <p>This method, when called, triggers a regeneration tick for the entity. Note that the statistic considered for the health calculation does NOT coincide with the one configured for passive regeneration, but is a separate statistic, also set via the package configuration, specifically: <a href="package-configuration.html#manual-health-regeneration-stat">Manual Health Regeneration Stat</a>.
 The value of this statistic determines the amount of HP regenerated at each manual regeneration tick. Obviously, healing modifiers, both generic and those specific to the heal source configured for regeneration, will also affect manual regeneration, just like passive regeneration.</p>
 <h3 id="passive-vs-manual-health-regeneration-which-one-should-i-use">Passive vs Manual Health Regeneration: Which One Should I Use?</h3>
