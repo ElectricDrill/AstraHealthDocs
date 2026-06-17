@@ -205,2590 +205,1790 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.Barrier.IBarrierContainer.yml",
+      "source_relative_path": "api/ElectricDrill.AstraHealth.Barrier.IBarrierContainer.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.Barrier.IBarrierContainer.html"
+          "relative_path": "api/ElectricDrill.AstraHealth.Barrier.IBarrierContainer.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.Barrier.yml",
+      "source_relative_path": "api/ElectricDrill.AstraHealth.Barrier.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.Barrier.html"
+          "relative_path": "api/ElectricDrill.AstraHealth.Barrier.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.Conditions.BarrierThresholdCondition.yml",
+      "source_relative_path": "api/ElectricDrill.AstraHealth.Conditions.BarrierThresholdCondition.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.Conditions.BarrierThresholdCondition.html"
+          "relative_path": "api/ElectricDrill.AstraHealth.Conditions.BarrierThresholdCondition.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.Conditions.DamageAmountComponent.yml",
+      "source_relative_path": "api/ElectricDrill.AstraHealth.Conditions.DamageAmountComponent.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.Conditions.DamageAmountComponent.html"
+          "relative_path": "api/ElectricDrill.AstraHealth.Conditions.DamageAmountComponent.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.Conditions.DamageAmountThresholdCondition.yml",
+      "source_relative_path": "api/ElectricDrill.AstraHealth.Conditions.DamageAmountThresholdCondition.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.Conditions.DamageAmountThresholdCondition.html"
+          "relative_path": "api/ElectricDrill.AstraHealth.Conditions.DamageAmountThresholdCondition.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.Conditions.DamageIsCriticalCondition.yml",
+      "source_relative_path": "api/ElectricDrill.AstraHealth.Conditions.DamageIsCriticalCondition.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.Conditions.DamageIsCriticalCondition.html"
+          "relative_path": "api/ElectricDrill.AstraHealth.Conditions.DamageIsCriticalCondition.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.Conditions.DamageOutcomeCondition.yml",
+      "source_relative_path": "api/ElectricDrill.AstraHealth.Conditions.DamageOutcomeCondition.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.Conditions.DamageOutcomeCondition.html"
+          "relative_path": "api/ElectricDrill.AstraHealth.Conditions.DamageOutcomeCondition.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.Conditions.DamagePreventionReasonCondition.yml",
+      "source_relative_path": "api/ElectricDrill.AstraHealth.Conditions.DamagePreventionReasonCondition.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.Conditions.DamagePreventionReasonCondition.html"
+          "relative_path": "api/ElectricDrill.AstraHealth.Conditions.DamagePreventionReasonCondition.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.Conditions.DamageSourceMatchCondition.yml",
+      "source_relative_path": "api/ElectricDrill.AstraHealth.Conditions.DamageSourceMatchCondition.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.Conditions.DamageSourceMatchCondition.html"
+          "relative_path": "api/ElectricDrill.AstraHealth.Conditions.DamageSourceMatchCondition.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.Conditions.DamageTypeMatchCondition.yml",
+      "source_relative_path": "api/ElectricDrill.AstraHealth.Conditions.DamageTypeMatchCondition.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.Conditions.DamageTypeMatchCondition.html"
+          "relative_path": "api/ElectricDrill.AstraHealth.Conditions.DamageTypeMatchCondition.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.Conditions.EntityIsAliveCondition.yml",
+      "source_relative_path": "api/ElectricDrill.AstraHealth.Conditions.EntityIsAliveCondition.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.Conditions.EntityIsAliveCondition.html"
+          "relative_path": "api/ElectricDrill.AstraHealth.Conditions.EntityIsAliveCondition.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.Conditions.EntityIsDeadCondition.yml",
+      "source_relative_path": "api/ElectricDrill.AstraHealth.Conditions.EntityIsDeadCondition.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.Conditions.EntityIsDeadCondition.html"
+          "relative_path": "api/ElectricDrill.AstraHealth.Conditions.EntityIsDeadCondition.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.Conditions.EntityIsImmuneCondition.yml",
+      "source_relative_path": "api/ElectricDrill.AstraHealth.Conditions.EntityIsImmuneCondition.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.Conditions.EntityIsImmuneCondition.html"
+          "relative_path": "api/ElectricDrill.AstraHealth.Conditions.EntityIsImmuneCondition.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.Conditions.HealAmountComponent.yml",
+      "source_relative_path": "api/ElectricDrill.AstraHealth.Conditions.HealAmountComponent.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.Conditions.HealAmountComponent.html"
+          "relative_path": "api/ElectricDrill.AstraHealth.Conditions.HealAmountComponent.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.Conditions.HealAmountThresholdCondition.yml",
+      "source_relative_path": "api/ElectricDrill.AstraHealth.Conditions.HealAmountThresholdCondition.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.Conditions.HealAmountThresholdCondition.html"
+          "relative_path": "api/ElectricDrill.AstraHealth.Conditions.HealAmountThresholdCondition.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.Conditions.HealIsCriticalCondition.yml",
+      "source_relative_path": "api/ElectricDrill.AstraHealth.Conditions.HealIsCriticalCondition.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.Conditions.HealIsCriticalCondition.html"
+          "relative_path": "api/ElectricDrill.AstraHealth.Conditions.HealIsCriticalCondition.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.Conditions.HealSourceMatchCondition.yml",
+      "source_relative_path": "api/ElectricDrill.AstraHealth.Conditions.HealSourceMatchCondition.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.Conditions.HealSourceMatchCondition.html"
+          "relative_path": "api/ElectricDrill.AstraHealth.Conditions.HealSourceMatchCondition.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.Conditions.HealthRatioComponent.yml",
+      "source_relative_path": "api/ElectricDrill.AstraHealth.Conditions.HealthRatioComponent.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.Conditions.HealthRatioComponent.html"
+          "relative_path": "api/ElectricDrill.AstraHealth.Conditions.HealthRatioComponent.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.Conditions.HealthRatioThresholdTransitionCondition.yml",
+      "source_relative_path": "api/ElectricDrill.AstraHealth.Conditions.HealthRatioThresholdTransitionCondition.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.Conditions.HealthRatioThresholdTransitionCondition.html"
+          "relative_path": "api/ElectricDrill.AstraHealth.Conditions.HealthRatioThresholdTransitionCondition.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.Conditions.HealthThresholdCondition.yml",
+      "source_relative_path": "api/ElectricDrill.AstraHealth.Conditions.HealthThresholdCondition.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.Conditions.HealthThresholdCondition.html"
+          "relative_path": "api/ElectricDrill.AstraHealth.Conditions.HealthThresholdCondition.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.Conditions.MaxHealthThresholdCondition.yml",
+      "source_relative_path": "api/ElectricDrill.AstraHealth.Conditions.MaxHealthThresholdCondition.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.Conditions.MaxHealthThresholdCondition.html"
+          "relative_path": "api/ElectricDrill.AstraHealth.Conditions.MaxHealthThresholdCondition.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.Conditions.MissingHealthThresholdCondition.yml",
+      "source_relative_path": "api/ElectricDrill.AstraHealth.Conditions.MissingHealthThresholdCondition.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.Conditions.MissingHealthThresholdCondition.html"
+          "relative_path": "api/ElectricDrill.AstraHealth.Conditions.MissingHealthThresholdCondition.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.Conditions.PayloadIsReactableCondition.yml",
+      "source_relative_path": "api/ElectricDrill.AstraHealth.Conditions.PayloadIsReactableCondition.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.Conditions.PayloadIsReactableCondition.html"
+          "relative_path": "api/ElectricDrill.AstraHealth.Conditions.PayloadIsReactableCondition.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.Conditions.ReasonMatchMode.yml",
+      "source_relative_path": "api/ElectricDrill.AstraHealth.Conditions.ReasonMatchMode.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.Conditions.ReasonMatchMode.html"
+          "relative_path": "api/ElectricDrill.AstraHealth.Conditions.ReasonMatchMode.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.Conditions.yml",
+      "source_relative_path": "api/ElectricDrill.AstraHealth.Conditions.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.Conditions.html"
+          "relative_path": "api/ElectricDrill.AstraHealth.Conditions.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.Config.AstraRpgHealthConfig.yml",
+      "source_relative_path": "api/ElectricDrill.AstraHealth.Config.AstraHealthConfigProvider.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.Config.AstraRpgHealthConfig.html"
+          "relative_path": "api/ElectricDrill.AstraHealth.Config.AstraHealthConfigProvider.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.Config.AstraRpgHealthConfigProvider.yml",
+      "source_relative_path": "api/ElectricDrill.AstraHealth.Config.AstraHealthConfigSO.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.Config.AstraRpgHealthConfigProvider.html"
+          "relative_path": "api/ElectricDrill.AstraHealth.Config.AstraHealthConfigSO.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.Config.AstraRpgHealthConfigSO.yml",
+      "source_relative_path": "api/ElectricDrill.AstraHealth.Config.AstraHealthGlobalSettingsSO.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.Config.AstraRpgHealthConfigSO.html"
+          "relative_path": "api/ElectricDrill.AstraHealth.Config.AstraHealthGlobalSettingsSO.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.Config.AstraRpgHealthGlobalSettings.yml",
+      "source_relative_path": "api/ElectricDrill.AstraHealth.Config.HealthRoundingSettings.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.Config.AstraRpgHealthGlobalSettings.html"
+          "relative_path": "api/ElectricDrill.AstraHealth.Config.HealthRoundingSettings.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.Config.AstraRpgHealthGlobalSettingsSO.yml",
+      "source_relative_path": "api/ElectricDrill.AstraHealth.Config.IAstraHealthConfig.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.Config.AstraRpgHealthGlobalSettingsSO.html"
+          "relative_path": "api/ElectricDrill.AstraHealth.Config.IAstraHealthConfig.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.Config.HealthRoundingSettings.yml",
+      "source_relative_path": "api/ElectricDrill.AstraHealth.Config.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.Config.HealthRoundingSettings.html"
+          "relative_path": "api/ElectricDrill.AstraHealth.Config.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.Config.IAstraRpgHealthConfig.yml",
+      "source_relative_path": "api/ElectricDrill.AstraHealth.Core.EntityHealth.HpBehaviourOnMaxHpDecrease.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.Config.IAstraRpgHealthConfig.html"
+          "relative_path": "api/ElectricDrill.AstraHealth.Core.EntityHealth.HpBehaviourOnMaxHpDecrease.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.Config.yml",
+      "source_relative_path": "api/ElectricDrill.AstraHealth.Core.EntityHealth.HpBehaviourOnMaxHpIncrease.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.Config.html"
+          "relative_path": "api/ElectricDrill.AstraHealth.Core.EntityHealth.HpBehaviourOnMaxHpIncrease.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.Damage.Bounds.DamageBoundSource.yml",
+      "source_relative_path": "api/ElectricDrill.AstraHealth.Core.EntityHealth.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.Damage.Bounds.DamageBoundSource.html"
+          "relative_path": "api/ElectricDrill.AstraHealth.Core.EntityHealth.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.Damage.Bounds.DamageCap.yml",
+      "source_relative_path": "api/ElectricDrill.AstraHealth.Core.EntityPassiveHpRegeneration.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.Damage.Bounds.DamageCap.html"
+          "relative_path": "api/ElectricDrill.AstraHealth.Core.EntityPassiveHpRegeneration.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.Damage.Bounds.DamageFloor.yml",
+      "source_relative_path": "api/ElectricDrill.AstraHealth.Core.IReactable.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.Damage.Bounds.DamageFloor.html"
+          "relative_path": "api/ElectricDrill.AstraHealth.Core.IReactable.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.Damage.Bounds.IDamageCap.yml",
+      "source_relative_path": "api/ElectricDrill.AstraHealth.Core.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.Damage.Bounds.IDamageCap.html"
+          "relative_path": "api/ElectricDrill.AstraHealth.Core.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.Damage.Bounds.IDamageFloor.yml",
+      "source_relative_path": "api/ElectricDrill.AstraHealth.Damage.Bounds.DamageBoundSource.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.Damage.Bounds.IDamageFloor.html"
+          "relative_path": "api/ElectricDrill.AstraHealth.Damage.Bounds.DamageBoundSource.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.Damage.Bounds.yml",
+      "source_relative_path": "api/ElectricDrill.AstraHealth.Damage.Bounds.DamageCap.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.Damage.Bounds.html"
+          "relative_path": "api/ElectricDrill.AstraHealth.Damage.Bounds.DamageCap.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.ApplyBarrierStep.yml",
+      "source_relative_path": "api/ElectricDrill.AstraHealth.Damage.Bounds.DamageFloor.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.ApplyBarrierStep.html"
+          "relative_path": "api/ElectricDrill.AstraHealth.Damage.Bounds.DamageFloor.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.ApplyCriticalMultiplierStep.yml",
+      "source_relative_path": "api/ElectricDrill.AstraHealth.Damage.Bounds.IDamageCap.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.ApplyCriticalMultiplierStep.html"
+          "relative_path": "api/ElectricDrill.AstraHealth.Damage.Bounds.IDamageCap.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.ApplyDamageCapStep.yml",
+      "source_relative_path": "api/ElectricDrill.AstraHealth.Damage.Bounds.IDamageFloor.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.ApplyDamageCapStep.html"
+          "relative_path": "api/ElectricDrill.AstraHealth.Damage.Bounds.IDamageFloor.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.ApplyDamageFloorStep.yml",
+      "source_relative_path": "api/ElectricDrill.AstraHealth.Damage.Bounds.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.ApplyDamageFloorStep.html"
+          "relative_path": "api/ElectricDrill.AstraHealth.Damage.Bounds.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.ApplyDefenseStep.yml",
+      "source_relative_path": "api/ElectricDrill.AstraHealth.Damage.CalculationPipeline.ApplyBarrierStep.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.ApplyDefenseStep.html"
+          "relative_path": "api/ElectricDrill.AstraHealth.Damage.CalculationPipeline.ApplyBarrierStep.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.ApplyDmgModifiersStep.yml",
+      "source_relative_path": "api/ElectricDrill.AstraHealth.Damage.CalculationPipeline.ApplyCriticalMultiplierStep.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.ApplyDmgModifiersStep.html"
+          "relative_path": "api/ElectricDrill.AstraHealth.Damage.CalculationPipeline.ApplyCriticalMultiplierStep.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.ApplyFlatDmgModifiersStep.yml",
+      "source_relative_path": "api/ElectricDrill.AstraHealth.Damage.CalculationPipeline.ApplyDamageCapStep.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.ApplyFlatDmgModifiersStep.html"
+          "relative_path": "api/ElectricDrill.AstraHealth.Damage.CalculationPipeline.ApplyDamageCapStep.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.ApplyPercentageDmgModifiersStep.yml",
+      "source_relative_path": "api/ElectricDrill.AstraHealth.Damage.CalculationPipeline.ApplyDamageFloorStep.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.ApplyPercentageDmgModifiersStep.html"
+          "relative_path": "api/ElectricDrill.AstraHealth.Damage.CalculationPipeline.ApplyDamageFloorStep.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.DamageCalculationStrategy.yml",
+      "source_relative_path": "api/ElectricDrill.AstraHealth.Damage.CalculationPipeline.ApplyDefenseStep.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.DamageCalculationStrategy.html"
+          "relative_path": "api/ElectricDrill.AstraHealth.Damage.CalculationPipeline.ApplyDefenseStep.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.DamageCalculationStrategySO.yml",
+      "source_relative_path": "api/ElectricDrill.AstraHealth.Damage.CalculationPipeline.ApplyFlatDmgModifiersStep.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.DamageCalculationStrategySO.html"
+          "relative_path": "api/ElectricDrill.AstraHealth.Damage.CalculationPipeline.ApplyFlatDmgModifiersStep.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.DamageInfo.yml",
+      "source_relative_path": "api/ElectricDrill.AstraHealth.Damage.CalculationPipeline.ApplyPercentageDmgModifiersStep.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.DamageInfo.html"
+          "relative_path": "api/ElectricDrill.AstraHealth.Damage.CalculationPipeline.ApplyPercentageDmgModifiersStep.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.DamageMitigationCalculator.yml",
+      "source_relative_path": "api/ElectricDrill.AstraHealth.Damage.CalculationPipeline.DamageCalculationStrategySO.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.DamageMitigationCalculator.html"
+          "relative_path": "api/ElectricDrill.AstraHealth.Damage.CalculationPipeline.DamageCalculationStrategySO.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.DamageReductionCalculator.yml",
+      "source_relative_path": "api/ElectricDrill.AstraHealth.Damage.CalculationPipeline.DamageInfo.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.DamageReductionCalculator.html"
+          "relative_path": "api/ElectricDrill.AstraHealth.Damage.CalculationPipeline.DamageInfo.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.DamageStep.yml",
+      "source_relative_path": "api/ElectricDrill.AstraHealth.Damage.CalculationPipeline.DamageMitigationCalculator.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.DamageStep.html"
+          "relative_path": "api/ElectricDrill.AstraHealth.Damage.CalculationPipeline.DamageMitigationCalculator.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.yml",
+      "source_relative_path": "api/ElectricDrill.AstraHealth.Damage.CalculationPipeline.DamageStep.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.Damage.CalculationPipeline.html"
+          "relative_path": "api/ElectricDrill.AstraHealth.Damage.CalculationPipeline.DamageStep.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.Damage.ContextDealerRole.yml",
+      "source_relative_path": "api/ElectricDrill.AstraHealth.Damage.CalculationPipeline.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.Damage.ContextDealerRole.html"
+          "relative_path": "api/ElectricDrill.AstraHealth.Damage.CalculationPipeline.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.Damage.ContextEntityRole.yml",
+      "source_relative_path": "api/ElectricDrill.AstraHealth.Damage.ContextDealerRole.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.Damage.ContextEntityRole.html"
+          "relative_path": "api/ElectricDrill.AstraHealth.Damage.ContextDealerRole.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.Damage.DamageAmountContext.StepAmountRecord.yml",
+      "source_relative_path": "api/ElectricDrill.AstraHealth.Damage.ContextEntityRole.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.Damage.DamageAmountContext.StepAmountRecord.html"
+          "relative_path": "api/ElectricDrill.AstraHealth.Damage.ContextEntityRole.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.Damage.DamageAmountContext.yml",
+      "source_relative_path": "api/ElectricDrill.AstraHealth.Damage.DamageAmountContext.StepAmountRecord.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.Damage.DamageAmountContext.html"
+          "relative_path": "api/ElectricDrill.AstraHealth.Damage.DamageAmountContext.StepAmountRecord.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.Damage.DamageAmountInfo.StepAmountRecord.yml",
+      "source_relative_path": "api/ElectricDrill.AstraHealth.Damage.DamageAmountContext.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.Damage.DamageAmountInfo.StepAmountRecord.html"
+          "relative_path": "api/ElectricDrill.AstraHealth.Damage.DamageAmountContext.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.Damage.DamageAmountInfo.yml",
+      "source_relative_path": "api/ElectricDrill.AstraHealth.Damage.DamageAmountMode.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.Damage.DamageAmountInfo.html"
+          "relative_path": "api/ElectricDrill.AstraHealth.Damage.DamageAmountMode.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.Damage.DamageAmountMode.yml",
+      "source_relative_path": "api/ElectricDrill.AstraHealth.Damage.DamageOutcome.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.Damage.DamageAmountMode.html"
+          "relative_path": "api/ElectricDrill.AstraHealth.Damage.DamageOutcome.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.Damage.DamageOutcome.yml",
+      "source_relative_path": "api/ElectricDrill.AstraHealth.Damage.DamagePreventionReason.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.Damage.DamageOutcome.html"
+          "relative_path": "api/ElectricDrill.AstraHealth.Damage.DamagePreventionReason.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.Damage.DamagePreventionReason.yml",
+      "source_relative_path": "api/ElectricDrill.AstraHealth.Damage.DamagePreventionReasonExtensions.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.Damage.DamagePreventionReason.html"
+          "relative_path": "api/ElectricDrill.AstraHealth.Damage.DamagePreventionReasonExtensions.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.Damage.DamagePreventionReasonExtensions.yml",
+      "source_relative_path": "api/ElectricDrill.AstraHealth.Damage.DamageResolutionContext.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.Damage.DamagePreventionReasonExtensions.html"
+          "relative_path": "api/ElectricDrill.AstraHealth.Damage.DamageResolutionContext.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.Damage.DamageResolution.yml",
+      "source_relative_path": "api/ElectricDrill.AstraHealth.Damage.DamageSourceSO.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.Damage.DamageResolution.html"
+          "relative_path": "api/ElectricDrill.AstraHealth.Damage.DamageSourceSO.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.Damage.DamageResolutionContext.yml",
+      "source_relative_path": "api/ElectricDrill.AstraHealth.Damage.DamageTypeSO.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.Damage.DamageResolutionContext.html"
+          "relative_path": "api/ElectricDrill.AstraHealth.Damage.DamageTypeSO.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.Damage.DamageSource.yml",
+      "source_relative_path": "api/ElectricDrill.AstraHealth.Damage.IDamageable.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.Damage.DamageSource.html"
+          "relative_path": "api/ElectricDrill.AstraHealth.Damage.IDamageable.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.Damage.DamageSourceSO.yml",
+      "source_relative_path": "api/ElectricDrill.AstraHealth.Damage.IHasAmount.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.Damage.DamageSourceSO.html"
+          "relative_path": "api/ElectricDrill.AstraHealth.Damage.IHasAmount.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.Damage.DamageType.yml",
+      "source_relative_path": "api/ElectricDrill.AstraHealth.Damage.PreDamageContext.DamageInfoAmount.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.Damage.DamageType.html"
+          "relative_path": "api/ElectricDrill.AstraHealth.Damage.PreDamageContext.DamageInfoAmount.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.Damage.DamageTypeSO.yml",
+      "source_relative_path": "api/ElectricDrill.AstraHealth.Damage.PreDamageContext.DamageInfoSource.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.Damage.DamageTypeSO.html"
+          "relative_path": "api/ElectricDrill.AstraHealth.Damage.PreDamageContext.DamageInfoSource.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.Damage.IDamageable.yml",
+      "source_relative_path": "api/ElectricDrill.AstraHealth.Damage.PreDamageContext.DamageInfoTarget.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.Damage.IDamageable.html"
+          "relative_path": "api/ElectricDrill.AstraHealth.Damage.PreDamageContext.DamageInfoTarget.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.Damage.IHasAmount.yml",
+      "source_relative_path": "api/ElectricDrill.AstraHealth.Damage.PreDamageContext.DamageInfoType.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.Damage.IHasAmount.html"
+          "relative_path": "api/ElectricDrill.AstraHealth.Damage.PreDamageContext.DamageInfoType.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.Damage.PreDamageContext.DamageInfoAmount.yml",
+      "source_relative_path": "api/ElectricDrill.AstraHealth.Damage.PreDamageContext.PreDamageInfoStepBuilder.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.Damage.PreDamageContext.DamageInfoAmount.html"
+          "relative_path": "api/ElectricDrill.AstraHealth.Damage.PreDamageContext.PreDamageInfoStepBuilder.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.Damage.PreDamageContext.DamageInfoDealer.yml",
+      "source_relative_path": "api/ElectricDrill.AstraHealth.Damage.PreDamageContext.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.Damage.PreDamageContext.DamageInfoDealer.html"
+          "relative_path": "api/ElectricDrill.AstraHealth.Damage.PreDamageContext.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.Damage.PreDamageContext.DamageInfoSource.yml",
+      "source_relative_path": "api/ElectricDrill.AstraHealth.Damage.PreDamageContextConfig.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.Damage.PreDamageContext.DamageInfoSource.html"
+          "relative_path": "api/ElectricDrill.AstraHealth.Damage.PreDamageContextConfig.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.Damage.PreDamageContext.DamageInfoTarget.yml",
+      "source_relative_path": "api/ElectricDrill.AstraHealth.Damage.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.Damage.PreDamageContext.DamageInfoTarget.html"
+          "relative_path": "api/ElectricDrill.AstraHealth.Damage.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.Damage.PreDamageContext.DamageInfoType.yml",
+      "source_relative_path": "api/ElectricDrill.AstraHealth.DamageMitigationFunctions.DamageMitigationFnSO.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.Damage.PreDamageContext.DamageInfoType.html"
+          "relative_path": "api/ElectricDrill.AstraHealth.DamageMitigationFunctions.DamageMitigationFnSO.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.Damage.PreDamageContext.PreDamageInfoStepBuilder.yml",
+      "source_relative_path": "api/ElectricDrill.AstraHealth.DamageMitigationFunctions.FlatDamageMitigationFnSO.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.Damage.PreDamageContext.PreDamageInfoStepBuilder.html"
+          "relative_path": "api/ElectricDrill.AstraHealth.DamageMitigationFunctions.FlatDamageMitigationFnSO.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.Damage.PreDamageContext.yml",
+      "source_relative_path": "api/ElectricDrill.AstraHealth.DamageMitigationFunctions.LogDamageMitigationFnSO.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.Damage.PreDamageContext.html"
+          "relative_path": "api/ElectricDrill.AstraHealth.DamageMitigationFunctions.LogDamageMitigationFnSO.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.Damage.PreDamageContextConfig.yml",
+      "source_relative_path": "api/ElectricDrill.AstraHealth.DamageMitigationFunctions.PercentageDamageMitigationFnSO.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.Damage.PreDamageContextConfig.html"
+          "relative_path": "api/ElectricDrill.AstraHealth.DamageMitigationFunctions.PercentageDamageMitigationFnSO.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.Damage.PreDamageInfo.DamageInfoAmount.yml",
+      "source_relative_path": "api/ElectricDrill.AstraHealth.DamageMitigationFunctions.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.Damage.PreDamageInfo.DamageInfoAmount.html"
+          "relative_path": "api/ElectricDrill.AstraHealth.DamageMitigationFunctions.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.Damage.PreDamageInfo.DamageInfoDealer.yml",
+      "source_relative_path": "api/ElectricDrill.AstraHealth.DefensePenetrationFunctions.DefensePenetrationFnSO.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.Damage.PreDamageInfo.DamageInfoDealer.html"
+          "relative_path": "api/ElectricDrill.AstraHealth.DefensePenetrationFunctions.DefensePenetrationFnSO.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.Damage.PreDamageInfo.DamageInfoSource.yml",
+      "source_relative_path": "api/ElectricDrill.AstraHealth.DefensePenetrationFunctions.FlatDefensePenetrationFnSO.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.Damage.PreDamageInfo.DamageInfoSource.html"
+          "relative_path": "api/ElectricDrill.AstraHealth.DefensePenetrationFunctions.FlatDefensePenetrationFnSO.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.Damage.PreDamageInfo.DamageInfoTarget.yml",
+      "source_relative_path": "api/ElectricDrill.AstraHealth.DefensePenetrationFunctions.LogDefensePenetrationFnSO.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.Damage.PreDamageInfo.DamageInfoTarget.html"
+          "relative_path": "api/ElectricDrill.AstraHealth.DefensePenetrationFunctions.LogDefensePenetrationFnSO.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.Damage.PreDamageInfo.DamageInfoType.yml",
+      "source_relative_path": "api/ElectricDrill.AstraHealth.DefensePenetrationFunctions.PercentageDefensePenetrationFnSO.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.Damage.PreDamageInfo.DamageInfoType.html"
+          "relative_path": "api/ElectricDrill.AstraHealth.DefensePenetrationFunctions.PercentageDefensePenetrationFnSO.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.Damage.PreDamageInfo.PreDamageInfoStepBuilder.yml",
+      "source_relative_path": "api/ElectricDrill.AstraHealth.DefensePenetrationFunctions.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.Damage.PreDamageInfo.PreDamageInfoStepBuilder.html"
+          "relative_path": "api/ElectricDrill.AstraHealth.DefensePenetrationFunctions.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.Damage.PreDamageInfo.yml",
+      "source_relative_path": "api/ElectricDrill.AstraHealth.Events.Contexts.EntityDiedContext.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.Damage.PreDamageInfo.html"
+          "relative_path": "api/ElectricDrill.AstraHealth.Events.Contexts.EntityDiedContext.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.Damage.yml",
+      "source_relative_path": "api/ElectricDrill.AstraHealth.Events.Contexts.EntityHealthChangedContext.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.Damage.html"
+          "relative_path": "api/ElectricDrill.AstraHealth.Events.Contexts.EntityHealthChangedContext.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.DamageMitigationFunctions.DamageMitigationFnSO.yml",
+      "source_relative_path": "api/ElectricDrill.AstraHealth.Events.Contexts.EntityMaxHealthChangedContext.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.DamageMitigationFunctions.DamageMitigationFnSO.html"
+          "relative_path": "api/ElectricDrill.AstraHealth.Events.Contexts.EntityMaxHealthChangedContext.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.DamageMitigationFunctions.FlatDamageMitigationFnSO.yml",
+      "source_relative_path": "api/ElectricDrill.AstraHealth.Events.Contexts.HealthRatioChangedContext.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.DamageMitigationFunctions.FlatDamageMitigationFnSO.html"
+          "relative_path": "api/ElectricDrill.AstraHealth.Events.Contexts.HealthRatioChangedContext.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.DamageMitigationFunctions.LogDamageMitigationFnSO.yml",
+      "source_relative_path": "api/ElectricDrill.AstraHealth.Events.Contexts.ResurrectionContext.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.DamageMitigationFunctions.LogDamageMitigationFnSO.html"
+          "relative_path": "api/ElectricDrill.AstraHealth.Events.Contexts.ResurrectionContext.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.DamageMitigationFunctions.PercentageDamageMitigationFnSO.yml",
+      "source_relative_path": "api/ElectricDrill.AstraHealth.Events.Contexts.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.DamageMitigationFunctions.PercentageDamageMitigationFnSO.html"
+          "relative_path": "api/ElectricDrill.AstraHealth.Events.Contexts.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.DamageMitigationFunctions.yml",
+      "source_relative_path": "api/ElectricDrill.AstraHealth.Events.DamageResolutionGameEvent.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.DamageMitigationFunctions.html"
+          "relative_path": "api/ElectricDrill.AstraHealth.Events.DamageResolutionGameEvent.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.DamageReductionFunctions.DamageReductionFn.yml",
+      "source_relative_path": "api/ElectricDrill.AstraHealth.Events.DamageResolutionGameEventListener.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.DamageReductionFunctions.DamageReductionFn.html"
+          "relative_path": "api/ElectricDrill.AstraHealth.Events.DamageResolutionGameEventListener.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.DamageReductionFunctions.DamageReductionFnSO.yml",
+      "source_relative_path": "api/ElectricDrill.AstraHealth.Events.EntityDiedGameEvent.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.DamageReductionFunctions.DamageReductionFnSO.html"
+          "relative_path": "api/ElectricDrill.AstraHealth.Events.EntityDiedGameEvent.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.DamageReductionFunctions.DamageReductionFunctions.FlatDamageReductionFn.yml",
+      "source_relative_path": "api/ElectricDrill.AstraHealth.Events.EntityDiedGameEventListener.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.DamageReductionFunctions.DamageReductionFunctions.FlatDamageReductionFn.html"
+          "relative_path": "api/ElectricDrill.AstraHealth.Events.EntityDiedGameEventListener.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.DamageReductionFunctions.DamageReductionFunctions.LogDamageReductionFn.yml",
+      "source_relative_path": "api/ElectricDrill.AstraHealth.Events.EntityHealedGameEvent.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.DamageReductionFunctions.DamageReductionFunctions.LogDamageReductionFn.html"
+          "relative_path": "api/ElectricDrill.AstraHealth.Events.EntityHealedGameEvent.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.DamageReductionFunctions.DamageReductionFunctions.PercentageDamageReductionFn.yml",
+      "source_relative_path": "api/ElectricDrill.AstraHealth.Events.EntityHealedGameEventListener.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.DamageReductionFunctions.DamageReductionFunctions.PercentageDamageReductionFn.html"
+          "relative_path": "api/ElectricDrill.AstraHealth.Events.EntityHealedGameEventListener.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.DamageReductionFunctions.DamageReductionFunctions.yml",
+      "source_relative_path": "api/ElectricDrill.AstraHealth.Events.EntityHealthChangedGameEvent.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.DamageReductionFunctions.DamageReductionFunctions.html"
+          "relative_path": "api/ElectricDrill.AstraHealth.Events.EntityHealthChangedGameEvent.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.DamageReductionFunctions.FlatDamageReductionFnSO.yml",
+      "source_relative_path": "api/ElectricDrill.AstraHealth.Events.EntityHealthChangedGameEventListener.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.DamageReductionFunctions.FlatDamageReductionFnSO.html"
+          "relative_path": "api/ElectricDrill.AstraHealth.Events.EntityHealthChangedGameEventListener.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.DamageReductionFunctions.LogDamageReductionFnSO.yml",
+      "source_relative_path": "api/ElectricDrill.AstraHealth.Events.EntityMaxHealthChangedGameEvent.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.DamageReductionFunctions.LogDamageReductionFnSO.html"
+          "relative_path": "api/ElectricDrill.AstraHealth.Events.EntityMaxHealthChangedGameEvent.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.DamageReductionFunctions.PercentageDamageReductionFnSO.yml",
+      "source_relative_path": "api/ElectricDrill.AstraHealth.Events.EntityMaxHealthChangedGameEventListener.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.DamageReductionFunctions.PercentageDamageReductionFnSO.html"
+          "relative_path": "api/ElectricDrill.AstraHealth.Events.EntityMaxHealthChangedGameEventListener.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.DamageReductionFunctions.yml",
+      "source_relative_path": "api/ElectricDrill.AstraHealth.Events.EntityResurrectedGameEvent.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.DamageReductionFunctions.html"
+          "relative_path": "api/ElectricDrill.AstraHealth.Events.EntityResurrectedGameEvent.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.Death.DestroyOnDeathStrategy.yml",
+      "source_relative_path": "api/ElectricDrill.AstraHealth.Events.EntityResurrectedGameEventListener.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.Death.DestroyOnDeathStrategy.html"
+          "relative_path": "api/ElectricDrill.AstraHealth.Events.EntityResurrectedGameEventListener.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.Death.DisableOnDeathStrategy.yml",
+      "source_relative_path": "api/ElectricDrill.AstraHealth.Events.HealthRatioChangedGameEvent.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.Death.DisableOnDeathStrategy.html"
+          "relative_path": "api/ElectricDrill.AstraHealth.Events.HealthRatioChangedGameEvent.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.Death.DoNothingOnDeathStrategy.yml",
+      "source_relative_path": "api/ElectricDrill.AstraHealth.Events.HealthRatioChangedGameEventListener.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.Death.DoNothingOnDeathStrategy.html"
+          "relative_path": "api/ElectricDrill.AstraHealth.Events.HealthRatioChangedGameEventListener.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.Death.MultipleOnDeathStrategy.yml",
+      "source_relative_path": "api/ElectricDrill.AstraHealth.Events.PreDamageGameEvent.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.Death.MultipleOnDeathStrategy.html"
+          "relative_path": "api/ElectricDrill.AstraHealth.Events.PreDamageGameEvent.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.Death.OnDeathStrategy.yml",
+      "source_relative_path": "api/ElectricDrill.AstraHealth.Events.PreDamageGameEventListener.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.Death.OnDeathStrategy.html"
+          "relative_path": "api/ElectricDrill.AstraHealth.Events.PreDamageGameEventListener.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.Death.yml",
+      "source_relative_path": "api/ElectricDrill.AstraHealth.Events.PreHealGameEvent.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.Death.html"
+          "relative_path": "api/ElectricDrill.AstraHealth.Events.PreHealGameEvent.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.DefensePenetrationFunctions.DefensePenetrationFnSO.yml",
+      "source_relative_path": "api/ElectricDrill.AstraHealth.Events.PreHealGameEventListener.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.DefensePenetrationFunctions.DefensePenetrationFnSO.html"
+          "relative_path": "api/ElectricDrill.AstraHealth.Events.PreHealGameEventListener.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.DefensePenetrationFunctions.FlatDefensePenetrationFnSO.yml",
+      "source_relative_path": "api/ElectricDrill.AstraHealth.Events.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.DefensePenetrationFunctions.FlatDefensePenetrationFnSO.html"
+          "relative_path": "api/ElectricDrill.AstraHealth.Events.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.DefensePenetrationFunctions.LogDefensePenetrationFnSO.yml",
+      "source_relative_path": "api/ElectricDrill.AstraHealth.Exceptions.DeadEntityException.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.DefensePenetrationFunctions.LogDefensePenetrationFnSO.html"
+          "relative_path": "api/ElectricDrill.AstraHealth.Exceptions.DeadEntityException.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.DefensePenetrationFunctions.PercentageDefensePenetrationFnSO.yml",
+      "source_relative_path": "api/ElectricDrill.AstraHealth.Exceptions.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.DefensePenetrationFunctions.PercentageDefensePenetrationFnSO.html"
+          "relative_path": "api/ElectricDrill.AstraHealth.Exceptions.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.DefensePenetrationFunctions.yml",
+      "source_relative_path": "api/ElectricDrill.AstraHealth.Experience.ExpCollectionStrategySO.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.DefensePenetrationFunctions.html"
+          "relative_path": "api/ElectricDrill.AstraHealth.Experience.ExpCollectionStrategySO.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.DefenseReductionFunctions.DefenseReductionFn.yml",
+      "source_relative_path": "api/ElectricDrill.AstraHealth.Experience.ExpCollector.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.DefenseReductionFunctions.DefenseReductionFn.html"
+          "relative_path": "api/ElectricDrill.AstraHealth.Experience.ExpCollector.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.DefenseReductionFunctions.DefenseReductionFnSO.yml",
+      "source_relative_path": "api/ElectricDrill.AstraHealth.Experience.Strategies.DamageSourceKillExpStrategySO.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.DefenseReductionFunctions.DefenseReductionFnSO.html"
+          "relative_path": "api/ElectricDrill.AstraHealth.Experience.Strategies.DamageSourceKillExpStrategySO.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.DefenseReductionFunctions.DefenseReductionFunctions.FlatDefenseReductionFn.yml",
+      "source_relative_path": "api/ElectricDrill.AstraHealth.Experience.Strategies.DirectKillExpStrategySO.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.DefenseReductionFunctions.DefenseReductionFunctions.FlatDefenseReductionFn.html"
+          "relative_path": "api/ElectricDrill.AstraHealth.Experience.Strategies.DirectKillExpStrategySO.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.DefenseReductionFunctions.DefenseReductionFunctions.LogDefenseReductionFn.yml",
+      "source_relative_path": "api/ElectricDrill.AstraHealth.Experience.Strategies.FirstMatchExpStrategySO.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.DefenseReductionFunctions.DefenseReductionFunctions.LogDefenseReductionFn.html"
+          "relative_path": "api/ElectricDrill.AstraHealth.Experience.Strategies.FirstMatchExpStrategySO.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.DefenseReductionFunctions.DefenseReductionFunctions.PercentageDefenseReductionFn.yml",
+      "source_relative_path": "api/ElectricDrill.AstraHealth.Experience.Strategies.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.DefenseReductionFunctions.DefenseReductionFunctions.PercentageDefenseReductionFn.html"
+          "relative_path": "api/ElectricDrill.AstraHealth.Experience.Strategies.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.DefenseReductionFunctions.DefenseReductionFunctions.yml",
+      "source_relative_path": "api/ElectricDrill.AstraHealth.Experience.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.DefenseReductionFunctions.DefenseReductionFunctions.html"
+          "relative_path": "api/ElectricDrill.AstraHealth.Experience.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.DefenseReductionFunctions.FlatDefenseReductionFnSO.yml",
+      "source_relative_path": "api/ElectricDrill.AstraHealth.GameActions.Actions.CounterDamageGameActionSO-1.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.DefenseReductionFunctions.FlatDefenseReductionFnSO.html"
+          "relative_path": "api/ElectricDrill.AstraHealth.GameActions.Actions.CounterDamageGameActionSO-1.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.DefenseReductionFunctions.LogDefenseReductionFnSO.yml",
+      "source_relative_path": "api/ElectricDrill.AstraHealth.GameActions.Actions.ResurrectEntityGameActionSO-1.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.DefenseReductionFunctions.LogDefenseReductionFnSO.html"
+          "relative_path": "api/ElectricDrill.AstraHealth.GameActions.Actions.ResurrectEntityGameActionSO-1.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.DefenseReductionFunctions.PercentageDefenseReductionFnSO.yml",
+      "source_relative_path": "api/ElectricDrill.AstraHealth.GameActions.Actions.SetEntityOverrideOnDeathGameActionSO-1.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.DefenseReductionFunctions.PercentageDefenseReductionFnSO.html"
+          "relative_path": "api/ElectricDrill.AstraHealth.GameActions.Actions.SetEntityOverrideOnDeathGameActionSO-1.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.DefenseReductionFunctions.yml",
+      "source_relative_path": "api/ElectricDrill.AstraHealth.GameActions.Actions.SetEntityOverrideOnResurrectionGameActionSO-1.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.DefenseReductionFunctions.html"
+          "relative_path": "api/ElectricDrill.AstraHealth.GameActions.Actions.SetEntityOverrideOnResurrectionGameActionSO-1.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.EntityHealth.HpBehaviourOnMaxHpDecrease.yml",
+      "source_relative_path": "api/ElectricDrill.AstraHealth.GameActions.Actions.WithDamageResolutionContext.CounterDamageOnDamageGameActionSO.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.EntityHealth.HpBehaviourOnMaxHpDecrease.html"
+          "relative_path": "api/ElectricDrill.AstraHealth.GameActions.Actions.WithDamageResolutionContext.CounterDamageOnDamageGameActionSO.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.EntityHealth.HpBehaviourOnMaxHpIncrease.yml",
+      "source_relative_path": "api/ElectricDrill.AstraHealth.GameActions.Actions.WithDamageResolutionContext.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.EntityHealth.HpBehaviourOnMaxHpIncrease.html"
+          "relative_path": "api/ElectricDrill.AstraHealth.GameActions.Actions.WithDamageResolutionContext.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.EntityHealth.yml",
+      "source_relative_path": "api/ElectricDrill.AstraHealth.GameActions.Actions.WithEntityDiedContext.CounterDamageOnDeathGameActionSO.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.EntityHealth.html"
+          "relative_path": "api/ElectricDrill.AstraHealth.GameActions.Actions.WithEntityDiedContext.CounterDamageOnDeathGameActionSO.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.EntityPassiveHpRegeneration.yml",
+      "source_relative_path": "api/ElectricDrill.AstraHealth.GameActions.Actions.WithEntityDiedContext.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.EntityPassiveHpRegeneration.html"
+          "relative_path": "api/ElectricDrill.AstraHealth.GameActions.Actions.WithEntityDiedContext.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.Events.Contexts.EntityDiedContext.yml",
+      "source_relative_path": "api/ElectricDrill.AstraHealth.GameActions.Actions.WithIHasEntity.EntityContextToDamageResolutionContextProjectionGameActionSO.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.Events.Contexts.EntityDiedContext.html"
+          "relative_path": "api/ElectricDrill.AstraHealth.GameActions.Actions.WithIHasEntity.EntityContextToDamageResolutionContextProjectionGameActionSO.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.Events.Contexts.EntityHealthChangedContext.yml",
+      "source_relative_path": "api/ElectricDrill.AstraHealth.GameActions.Actions.WithIHasEntity.EntityContextToEntityDiedContextProjectionGameActionSO.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.Events.Contexts.EntityHealthChangedContext.html"
+          "relative_path": "api/ElectricDrill.AstraHealth.GameActions.Actions.WithIHasEntity.EntityContextToEntityDiedContextProjectionGameActionSO.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.Events.Contexts.EntityMaxHealthChangedContext.yml",
+      "source_relative_path": "api/ElectricDrill.AstraHealth.GameActions.Actions.WithIHasEntity.EntityContextToPreDamageContextProjectionGameActionSO.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.Events.Contexts.EntityMaxHealthChangedContext.html"
+          "relative_path": "api/ElectricDrill.AstraHealth.GameActions.Actions.WithIHasEntity.EntityContextToPreDamageContextProjectionGameActionSO.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.Events.Contexts.HealthRatioChangedContext.yml",
+      "source_relative_path": "api/ElectricDrill.AstraHealth.GameActions.Actions.WithIHasEntity.ResurrectEntityIHasEntityGameActionSO.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.Events.Contexts.HealthRatioChangedContext.html"
+          "relative_path": "api/ElectricDrill.AstraHealth.GameActions.Actions.WithIHasEntity.ResurrectEntityIHasEntityGameActionSO.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.Events.Contexts.ResurrectionContext.yml",
+      "source_relative_path": "api/ElectricDrill.AstraHealth.GameActions.Actions.WithIHasEntity.SetEntityOverrideOnDeathIHasEntityGameActionSO.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.Events.Contexts.ResurrectionContext.html"
+          "relative_path": "api/ElectricDrill.AstraHealth.GameActions.Actions.WithIHasEntity.SetEntityOverrideOnDeathIHasEntityGameActionSO.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.Events.Contexts.yml",
+      "source_relative_path": "api/ElectricDrill.AstraHealth.GameActions.Actions.WithIHasEntity.SetEntityOverrideOnResurrectionIHasEntityGameActionSO.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.Events.Contexts.html"
+          "relative_path": "api/ElectricDrill.AstraHealth.GameActions.Actions.WithIHasEntity.SetEntityOverrideOnResurrectionIHasEntityGameActionSO.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.Events.DamageResolutionGameEvent.yml",
+      "source_relative_path": "api/ElectricDrill.AstraHealth.GameActions.Actions.WithIHasEntity.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.Events.DamageResolutionGameEvent.html"
+          "relative_path": "api/ElectricDrill.AstraHealth.GameActions.Actions.WithIHasEntity.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.Events.DamageResolutionGameEventListener.yml",
+      "source_relative_path": "api/ElectricDrill.AstraHealth.GameActions.Actions.WithPreDamageContext.CompositePreDamageContextGameActionSO.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.Events.DamageResolutionGameEventListener.html"
+          "relative_path": "api/ElectricDrill.AstraHealth.GameActions.Actions.WithPreDamageContext.CompositePreDamageContextGameActionSO.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.Events.EntityDiedContext.yml",
+      "source_relative_path": "api/ElectricDrill.AstraHealth.GameActions.Actions.WithPreDamageContext.CounterDamageOnPreDamageGameActionSO.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.Events.EntityDiedContext.html"
+          "relative_path": "api/ElectricDrill.AstraHealth.GameActions.Actions.WithPreDamageContext.CounterDamageOnPreDamageGameActionSO.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.Events.EntityDiedGameEvent.yml",
+      "source_relative_path": "api/ElectricDrill.AstraHealth.GameActions.Actions.WithPreDamageContext.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.Events.EntityDiedGameEvent.html"
+          "relative_path": "api/ElectricDrill.AstraHealth.GameActions.Actions.WithPreDamageContext.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.Events.EntityDiedGameEventListener.yml",
+      "source_relative_path": "api/ElectricDrill.AstraHealth.GameActions.Actions.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.Events.EntityDiedGameEventListener.html"
+          "relative_path": "api/ElectricDrill.AstraHealth.GameActions.Actions.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.Events.EntityGainedHealthGameEvent.yml",
+      "source_relative_path": "api/ElectricDrill.AstraHealth.Heal.HealAmountContext.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.Events.EntityGainedHealthGameEvent.html"
+          "relative_path": "api/ElectricDrill.AstraHealth.Heal.HealAmountContext.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.Events.EntityGainedHealthGameEventListener.yml",
+      "source_relative_path": "api/ElectricDrill.AstraHealth.Heal.HealOutcome.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.Events.EntityGainedHealthGameEventListener.html"
+          "relative_path": "api/ElectricDrill.AstraHealth.Heal.HealOutcome.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.Events.EntityHealedGameEvent.yml",
+      "source_relative_path": "api/ElectricDrill.AstraHealth.Heal.HealSourceSO.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.Events.EntityHealedGameEvent.html"
+          "relative_path": "api/ElectricDrill.AstraHealth.Heal.HealSourceSO.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.Events.EntityHealedGameEventListener.yml",
+      "source_relative_path": "api/ElectricDrill.AstraHealth.Heal.IHealable.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.Events.EntityHealedGameEventListener.html"
+          "relative_path": "api/ElectricDrill.AstraHealth.Heal.IHealable.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.Events.EntityHealthChangedContext.yml",
+      "source_relative_path": "api/ElectricDrill.AstraHealth.Heal.LifestealAmountSelector.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.Events.EntityHealthChangedContext.html"
+          "relative_path": "api/ElectricDrill.AstraHealth.Heal.LifestealAmountSelector.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.Events.EntityHealthChangedGameEvent.yml",
+      "source_relative_path": "api/ElectricDrill.AstraHealth.Heal.LifestealBasisMode.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.Events.EntityHealthChangedGameEvent.html"
+          "relative_path": "api/ElectricDrill.AstraHealth.Heal.LifestealBasisMode.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.Events.EntityHealthChangedGameEventListener.yml",
+      "source_relative_path": "api/ElectricDrill.AstraHealth.Heal.LifestealStatConfig.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.Events.EntityHealthChangedGameEventListener.html"
+          "relative_path": "api/ElectricDrill.AstraHealth.Heal.LifestealStatConfig.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.Events.EntityLostHealthGameEvent.yml",
+      "source_relative_path": "api/ElectricDrill.AstraHealth.Heal.PreHealContext.HealInfoAmount.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.Events.EntityLostHealthGameEvent.html"
+          "relative_path": "api/ElectricDrill.AstraHealth.Heal.PreHealContext.HealInfoAmount.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.Events.EntityLostHealthGameEventListener.yml",
+      "source_relative_path": "api/ElectricDrill.AstraHealth.Heal.PreHealContext.HealInfoSource.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.Events.EntityLostHealthGameEventListener.html"
+          "relative_path": "api/ElectricDrill.AstraHealth.Heal.PreHealContext.HealInfoSource.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.Events.EntityMaxHealthChangedContext.yml",
+      "source_relative_path": "api/ElectricDrill.AstraHealth.Heal.PreHealContext.HealInfoTarget.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.Events.EntityMaxHealthChangedContext.html"
+          "relative_path": "api/ElectricDrill.AstraHealth.Heal.PreHealContext.HealInfoTarget.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.Events.EntityMaxHealthChangedGameEvent.yml",
+      "source_relative_path": "api/ElectricDrill.AstraHealth.Heal.PreHealContext.PreHealInfoStepBuilder.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.Events.EntityMaxHealthChangedGameEvent.html"
+          "relative_path": "api/ElectricDrill.AstraHealth.Heal.PreHealContext.PreHealInfoStepBuilder.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.Events.EntityMaxHealthChangedGameEventListener.yml",
+      "source_relative_path": "api/ElectricDrill.AstraHealth.Heal.PreHealContext.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.Events.EntityMaxHealthChangedGameEventListener.html"
+          "relative_path": "api/ElectricDrill.AstraHealth.Heal.PreHealContext.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.Events.EntityResurrectedGameEvent.yml",
+      "source_relative_path": "api/ElectricDrill.AstraHealth.Heal.ReceivedHealContext.HealInfoAmount.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.Events.EntityResurrectedGameEvent.html"
+          "relative_path": "api/ElectricDrill.AstraHealth.Heal.ReceivedHealContext.HealInfoAmount.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.Events.EntityResurrectedGameEventListener.yml",
+      "source_relative_path": "api/ElectricDrill.AstraHealth.Heal.ReceivedHealContext.HealInfoSource.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.Events.EntityResurrectedGameEventListener.html"
+          "relative_path": "api/ElectricDrill.AstraHealth.Heal.ReceivedHealContext.HealInfoSource.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.Events.HealthRatioChangedGameEvent.yml",
+      "source_relative_path": "api/ElectricDrill.AstraHealth.Heal.ReceivedHealContext.HealInfoTarget.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.Events.HealthRatioChangedGameEvent.html"
+          "relative_path": "api/ElectricDrill.AstraHealth.Heal.ReceivedHealContext.HealInfoTarget.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.Events.HealthRatioChangedGameEventListener.yml",
+      "source_relative_path": "api/ElectricDrill.AstraHealth.Heal.ReceivedHealContext.ReceivedHealInfoStepBuilder.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.Events.HealthRatioChangedGameEventListener.html"
+          "relative_path": "api/ElectricDrill.AstraHealth.Heal.ReceivedHealContext.ReceivedHealInfoStepBuilder.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.Events.PreDamageGameEvent.yml",
+      "source_relative_path": "api/ElectricDrill.AstraHealth.Heal.ReceivedHealContext.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.Events.PreDamageGameEvent.html"
+          "relative_path": "api/ElectricDrill.AstraHealth.Heal.ReceivedHealContext.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.Events.PreDamageGameEventListener.yml",
+      "source_relative_path": "api/ElectricDrill.AstraHealth.Heal.StepValuePoint.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.Events.PreDamageGameEventListener.html"
+          "relative_path": "api/ElectricDrill.AstraHealth.Heal.StepValuePoint.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.Events.PreHealGameEvent.yml",
+      "source_relative_path": "api/ElectricDrill.AstraHealth.Heal.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.Events.PreHealGameEvent.html"
+          "relative_path": "api/ElectricDrill.AstraHealth.Heal.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.Events.PreHealGameEventListener.yml",
+      "source_relative_path": "api/ElectricDrill.AstraHealth.ReductionFunctions.ReductionFnSO.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.Events.PreHealGameEventListener.html"
+          "relative_path": "api/ElectricDrill.AstraHealth.ReductionFunctions.ReductionFnSO.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.Events.yml",
+      "source_relative_path": "api/ElectricDrill.AstraHealth.ReductionFunctions.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.Events.html"
+          "relative_path": "api/ElectricDrill.AstraHealth.ReductionFunctions.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.Exceptions.DeadEntityException.yml",
+      "source_relative_path": "api/ElectricDrill.AstraHealth.Resurrection.IResurrectable.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.Exceptions.DeadEntityException.html"
+          "relative_path": "api/ElectricDrill.AstraHealth.Resurrection.IResurrectable.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.Exceptions.yml",
+      "source_relative_path": "api/ElectricDrill.AstraHealth.Resurrection.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.Exceptions.html"
+          "relative_path": "api/ElectricDrill.AstraHealth.Resurrection.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.Experience.ExpCollectionStrategySO.yml",
+      "source_relative_path": "api/ElectricDrill.AstraHealth.Scaling.ScalingComponents.HealthScalingComponentSO.HealthScalingMetricValue.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.Experience.ExpCollectionStrategySO.html"
+          "relative_path": "api/ElectricDrill.AstraHealth.Scaling.ScalingComponents.HealthScalingComponentSO.HealthScalingMetricValue.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.Experience.ExpCollector.yml",
+      "source_relative_path": "api/ElectricDrill.AstraHealth.Scaling.ScalingComponents.HealthScalingComponentSO.HealthScalingMetrics.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.Experience.ExpCollector.html"
+          "relative_path": "api/ElectricDrill.AstraHealth.Scaling.ScalingComponents.HealthScalingComponentSO.HealthScalingMetrics.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.Experience.Strategies.DamageSourceKillExpStrategySO.yml",
+      "source_relative_path": "api/ElectricDrill.AstraHealth.Scaling.ScalingComponents.HealthScalingComponentSO.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.Experience.Strategies.DamageSourceKillExpStrategySO.html"
+          "relative_path": "api/ElectricDrill.AstraHealth.Scaling.ScalingComponents.HealthScalingComponentSO.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.Experience.Strategies.DirectKillExpStrategySO.yml",
+      "source_relative_path": "api/ElectricDrill.AstraHealth.Scaling.ScalingComponents.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.Experience.Strategies.DirectKillExpStrategySO.html"
+          "relative_path": "api/ElectricDrill.AstraHealth.Scaling.ScalingComponents.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.Experience.Strategies.FirstMatchExpStrategySO.yml",
+      "source_relative_path": "api/ElectricDrill.AstraHealth.Triggers.DamageResolutionGameEventTrigger.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.Experience.Strategies.FirstMatchExpStrategySO.html"
+          "relative_path": "api/ElectricDrill.AstraHealth.Triggers.DamageResolutionGameEventTrigger.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.Experience.Strategies.yml",
+      "source_relative_path": "api/ElectricDrill.AstraHealth.Triggers.EntityDiedGameEventTrigger.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.Experience.Strategies.html"
+          "relative_path": "api/ElectricDrill.AstraHealth.Triggers.EntityDiedGameEventTrigger.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.Experience.yml",
+      "source_relative_path": "api/ElectricDrill.AstraHealth.Triggers.EntityHealedGameEventTrigger.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.Experience.html"
+          "relative_path": "api/ElectricDrill.AstraHealth.Triggers.EntityHealedGameEventTrigger.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.GameActions.Actions.Component.ResurrectComponentGameActionSO.yml",
+      "source_relative_path": "api/ElectricDrill.AstraHealth.Triggers.EntityHealthChangedGameEventTrigger.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.GameActions.Actions.Component.ResurrectComponentGameActionSO.html"
+          "relative_path": "api/ElectricDrill.AstraHealth.Triggers.EntityHealthChangedGameEventTrigger.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.GameActions.Actions.Component.yml",
+      "source_relative_path": "api/ElectricDrill.AstraHealth.Triggers.EntityMaxHealthChangedGameEventTrigger.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.GameActions.Actions.Component.html"
+          "relative_path": "api/ElectricDrill.AstraHealth.Triggers.EntityMaxHealthChangedGameEventTrigger.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.GameActions.Actions.CounterDamageGameActionSO-1.yml",
+      "source_relative_path": "api/ElectricDrill.AstraHealth.Triggers.EntityResurrectedGameEventTrigger.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.GameActions.Actions.CounterDamageGameActionSO-1.html"
+          "relative_path": "api/ElectricDrill.AstraHealth.Triggers.EntityResurrectedGameEventTrigger.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.GameActions.Actions.ResurrectEntityGameActionSO-1.yml",
+      "source_relative_path": "api/ElectricDrill.AstraHealth.Triggers.HealthRatioChangedGameEventTrigger.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.GameActions.Actions.ResurrectEntityGameActionSO-1.html"
+          "relative_path": "api/ElectricDrill.AstraHealth.Triggers.HealthRatioChangedGameEventTrigger.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.GameActions.Actions.ResurrectGameActionSO-1.yml",
+      "source_relative_path": "api/ElectricDrill.AstraHealth.Triggers.PreDamageGameEventTrigger.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.GameActions.Actions.ResurrectGameActionSO-1.html"
+          "relative_path": "api/ElectricDrill.AstraHealth.Triggers.PreDamageGameEventTrigger.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.GameActions.Actions.SetEntityOverrideOnDeathGameActionSO-1.yml",
+      "source_relative_path": "api/ElectricDrill.AstraHealth.Triggers.PreHealGameEventTrigger.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.GameActions.Actions.SetEntityOverrideOnDeathGameActionSO-1.html"
+          "relative_path": "api/ElectricDrill.AstraHealth.Triggers.PreHealGameEventTrigger.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.GameActions.Actions.SetEntityOverrideOnResurrectionGameActionSO-1.yml",
+      "source_relative_path": "api/ElectricDrill.AstraHealth.Triggers.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.GameActions.Actions.SetEntityOverrideOnResurrectionGameActionSO-1.html"
+          "relative_path": "api/ElectricDrill.AstraHealth.Triggers.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.GameActions.Actions.WithDamageResolutionContext.CounterDamageOnDamageGameActionSO.yml",
+      "source_relative_path": "api/ElectricDrill.AstraHealth.Utils.EntityCoreHealthExtensions.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.GameActions.Actions.WithDamageResolutionContext.CounterDamageOnDamageGameActionSO.html"
+          "relative_path": "api/ElectricDrill.AstraHealth.Utils.EntityCoreHealthExtensions.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.GameActions.Actions.WithDamageResolutionContext.yml",
+      "source_relative_path": "api/ElectricDrill.AstraHealth.Utils.RoundingModeLongExtensions.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.GameActions.Actions.WithDamageResolutionContext.html"
+          "relative_path": "api/ElectricDrill.AstraHealth.Utils.RoundingModeLongExtensions.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.GameActions.Actions.WithEntityDiedContext.CounterDamageOnDeathGameActionSO.yml",
+      "source_relative_path": "api/ElectricDrill.AstraHealth.Utils.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.GameActions.Actions.WithEntityDiedContext.CounterDamageOnDeathGameActionSO.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.GameActions.Actions.WithEntityDiedContext.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.GameActions.Actions.WithEntityDiedContext.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.GameActions.Actions.WithIHasEntity.EntityContextToDamageResolutionContextProjectionGameAction.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.GameActions.Actions.WithIHasEntity.EntityContextToDamageResolutionContextProjectionGameAction.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.GameActions.Actions.WithIHasEntity.EntityContextToEntityDiedContextProjectionGameAction.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.GameActions.Actions.WithIHasEntity.EntityContextToEntityDiedContextProjectionGameAction.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.GameActions.Actions.WithIHasEntity.EntityContextToPreDamageContextProjectionGameAction.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.GameActions.Actions.WithIHasEntity.EntityContextToPreDamageContextProjectionGameAction.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.GameActions.Actions.WithIHasEntity.ResurrectEntityIHasEntityGameActionSO.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.GameActions.Actions.WithIHasEntity.ResurrectEntityIHasEntityGameActionSO.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.GameActions.Actions.WithIHasEntity.SetEntityOverrideOnDeathIHasEntityGameActionSo.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.GameActions.Actions.WithIHasEntity.SetEntityOverrideOnDeathIHasEntityGameActionSo.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.GameActions.Actions.WithIHasEntity.SetEntityOverrideOnResurrectionIHasEntityGameActionSo.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.GameActions.Actions.WithIHasEntity.SetEntityOverrideOnResurrectionIHasEntityGameActionSo.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.GameActions.Actions.WithIHasEntity.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.GameActions.Actions.WithIHasEntity.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.GameActions.Actions.WithPreDamageContext.CompositePreDamageContextGameActionSO.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.GameActions.Actions.WithPreDamageContext.CompositePreDamageContextGameActionSO.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.GameActions.Actions.WithPreDamageContext.CounterDamageOnPreDamageGameActionSO.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.GameActions.Actions.WithPreDamageContext.CounterDamageOnPreDamageGameActionSO.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.GameActions.Actions.WithPreDamageContext.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.GameActions.Actions.WithPreDamageContext.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.GameActions.Actions.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.GameActions.Actions.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.Heal.HealAmountContext.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.Heal.HealAmountContext.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.Heal.HealAmountInfo.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.Heal.HealAmountInfo.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.Heal.HealOutcome.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.Heal.HealOutcome.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.Heal.HealSource.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.Heal.HealSource.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.Heal.HealSourceSO.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.Heal.HealSourceSO.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.Heal.IHealable.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.Heal.IHealable.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.Heal.LifestealAmountSelector.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.Heal.LifestealAmountSelector.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.Heal.LifestealBasisMode.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.Heal.LifestealBasisMode.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.Heal.LifestealConfig.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.Heal.LifestealConfig.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.Heal.LifestealConfigSO.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.Heal.LifestealConfigSO.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.Heal.LifestealStatConfig.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.Heal.LifestealStatConfig.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.Heal.PreHealContext.HealInfoAmount.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.Heal.PreHealContext.HealInfoAmount.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.Heal.PreHealContext.HealInfoHealer.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.Heal.PreHealContext.HealInfoHealer.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.Heal.PreHealContext.HealInfoSource.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.Heal.PreHealContext.HealInfoSource.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.Heal.PreHealContext.HealInfoTarget.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.Heal.PreHealContext.HealInfoTarget.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.Heal.PreHealContext.PreHealInfoStepBuilder.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.Heal.PreHealContext.PreHealInfoStepBuilder.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.Heal.PreHealContext.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.Heal.PreHealContext.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.Heal.PreHealInfo.HealInfoAmount.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.Heal.PreHealInfo.HealInfoAmount.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.Heal.PreHealInfo.HealInfoHealer.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.Heal.PreHealInfo.HealInfoHealer.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.Heal.PreHealInfo.HealInfoSource.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.Heal.PreHealInfo.HealInfoSource.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.Heal.PreHealInfo.HealInfoTarget.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.Heal.PreHealInfo.HealInfoTarget.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.Heal.PreHealInfo.PreHealInfoStepBuilder.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.Heal.PreHealInfo.PreHealInfoStepBuilder.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.Heal.PreHealInfo.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.Heal.PreHealInfo.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.Heal.ReceivedHealContext.HealInfoAmount.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.Heal.ReceivedHealContext.HealInfoAmount.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.Heal.ReceivedHealContext.HealInfoHealer.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.Heal.ReceivedHealContext.HealInfoHealer.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.Heal.ReceivedHealContext.HealInfoSource.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.Heal.ReceivedHealContext.HealInfoSource.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.Heal.ReceivedHealContext.HealInfoTarget.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.Heal.ReceivedHealContext.HealInfoTarget.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.Heal.ReceivedHealContext.ReceivedHealInfoStepBuilder.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.Heal.ReceivedHealContext.ReceivedHealInfoStepBuilder.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.Heal.ReceivedHealContext.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.Heal.ReceivedHealContext.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.Heal.ReceivedHealInfo.HealInfoAmount.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.Heal.ReceivedHealInfo.HealInfoAmount.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.Heal.ReceivedHealInfo.HealInfoHealer.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.Heal.ReceivedHealInfo.HealInfoHealer.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.Heal.ReceivedHealInfo.HealInfoSource.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.Heal.ReceivedHealInfo.HealInfoSource.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.Heal.ReceivedHealInfo.HealInfoTarget.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.Heal.ReceivedHealInfo.HealInfoTarget.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.Heal.ReceivedHealInfo.ReceivedHealInfoStepBuilder.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.Heal.ReceivedHealInfo.ReceivedHealInfoStepBuilder.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.Heal.ReceivedHealInfo.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.Heal.ReceivedHealInfo.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.Heal.StepValuePoint.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.Heal.StepValuePoint.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.Heal.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.Heal.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.IReactable.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.IReactable.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.ReductionFunctions.ReductionFnSO.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.ReductionFunctions.ReductionFnSO.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.ReductionFunctions.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.ReductionFunctions.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.Resurrection.DoNothingOnResurrectionStrategy.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.Resurrection.DoNothingOnResurrectionStrategy.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.Resurrection.EnableOnResurrectionStrategy.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.Resurrection.EnableOnResurrectionStrategy.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.Resurrection.IResurrectable.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.Resurrection.IResurrectable.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.Resurrection.MultipleOnResurrectionStrategy.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.Resurrection.MultipleOnResurrectionStrategy.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.Resurrection.OnResurrectionStrategy.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.Resurrection.OnResurrectionStrategy.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.Resurrection.ResurrectionContext.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.Resurrection.ResurrectionContext.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.Resurrection.ResurrectionInfo.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.Resurrection.ResurrectionInfo.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.Resurrection.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.Resurrection.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.Scaling.ScalingComponents.HealthScalingComponent.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.Scaling.ScalingComponents.HealthScalingComponent.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.Scaling.ScalingComponents.HealthScalingComponentMenuItems.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.Scaling.ScalingComponents.HealthScalingComponentMenuItems.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.Scaling.ScalingComponents.HealthScalingComponentSO.HealthScalingMetricValue.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.Scaling.ScalingComponents.HealthScalingComponentSO.HealthScalingMetricValue.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.Scaling.ScalingComponents.HealthScalingComponentSO.HealthScalingMetrics.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.Scaling.ScalingComponents.HealthScalingComponentSO.HealthScalingMetrics.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.Scaling.ScalingComponents.HealthScalingComponentSO.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.Scaling.ScalingComponents.HealthScalingComponentSO.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.Scaling.ScalingComponents.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.Scaling.ScalingComponents.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.Triggers.DamageResolutionGameEventTrigger.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.Triggers.DamageResolutionGameEventTrigger.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.Triggers.EntityDiedGameEventTrigger.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.Triggers.EntityDiedGameEventTrigger.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.Triggers.EntityHealedGameEventTrigger.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.Triggers.EntityHealedGameEventTrigger.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.Triggers.EntityHealthChangedGameEventTrigger.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.Triggers.EntityHealthChangedGameEventTrigger.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.Triggers.EntityMaxHealthChangedGameEventTrigger.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.Triggers.EntityMaxHealthChangedGameEventTrigger.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.Triggers.EntityResurrectedGameEventTrigger.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.Triggers.EntityResurrectedGameEventTrigger.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.Triggers.HealthRatioChangedGameEventTrigger.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.Triggers.HealthRatioChangedGameEventTrigger.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.Triggers.PreDamageGameEventTrigger.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.Triggers.PreDamageGameEventTrigger.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.Triggers.PreHealGameEventTrigger.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.Triggers.PreHealGameEventTrigger.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.Triggers.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.Triggers.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.Utils.EntityCoreHealthExtensions.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.Utils.EntityCoreHealthExtensions.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.Utils.RoundingModeLongExtensions.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.Utils.RoundingModeLongExtensions.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.Utils.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.Utils.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/ElectricDrill.AstraRpgHealth.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/ElectricDrill.AstraRpgHealth.html"
+          "relative_path": "api/ElectricDrill.AstraHealth.Utils.html"
         }
       },
       "version": ""
@@ -3042,6 +2242,16 @@
       "output": {
         "resource": {
           "relative_path": "images/AstraRPG/samples/critical-hit-pop-up.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/AstraRPG/samples/duelist-conditional-ga.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/AstraRPG/samples/duelist-conditional-ga.png"
         }
       },
       "version": ""
@@ -3342,6 +2552,16 @@
       "output": {
         "resource": {
           "relative_path": "images/AstraRPG/workflows/game-actions/set-override-on-resurrection.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/AstraRPG/workflows/healing/entity-passive-hp-regeneration-component.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/AstraRPG/workflows/healing/entity-passive-hp-regeneration-component.png"
         }
       },
       "version": ""

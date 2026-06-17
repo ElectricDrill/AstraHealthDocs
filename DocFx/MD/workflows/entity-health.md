@@ -105,16 +105,16 @@ In general, the thumb rule for deciding whether to use the Pre Damage Info Event
 
 #### Health Related Events
 - **Health Changed Event**: Event raised whenever the entity's current HP changes, whether the value increases or decreases. This includes healing, damage, resurrection, and other mechanics that directly modify current HP such as `AddHealth`, `RemoveHealth`, or max-HP-driven HP adjustments.
-Refer to the [EntityHealthChangedContext](xref:ElectricDrill.AstraHealth.Events.EntityHealthChangedContext) API for more details on the context parameter.
+Refer to the [EntityHealthChangedContext](xref:ElectricDrill.AstraHealth.Events.Contexts.EntityHealthChangedContext) API for more details on the context parameter.
 
 > [!NOTE]
 > Because `TakeDamage` and `Heal` internally invoke `RemoveHealth` and `AddHealth`, calling these methods will also raise the `EntityHealthChanged` event.
 
 - **Max Health Changed Event**: Event raised when an entity's total max health points change. This event is raised both when total max hp increase and when they decrease.
-See [EntityMaxHealthChangedContext](xref:ElectricDrill.AstraHealth.Events.EntityMaxHealthChangedContext) API for more details on the context parameter.
+See [EntityMaxHealthChangedContext](xref:ElectricDrill.AstraHealth.Events.Contexts.EntityMaxHealthChangedContext) API for more details on the context parameter.
 - **Health Ratio Changed Event**: Event raised whenever the HP/MaxHP ratio changes — whether because current HP changed (via `AddHealth`/`RemoveHealth`) or because MaxHP changed (via `RecalculateMaxHp`). Carries `HealthRatioChangedContext` with raw `PreviousHp`, `NewHp`, `PreviousMaxHp`, and `NewMaxHp` values, plus `PreviousValue` and `NewValue` as integer HP percentages (0–100). Useful for HP-ratio-based conditions — for example, triggering an ability when an entity drops below 25% HP.
 See [HealthRatioChangedContext](xref:ElectricDrill.AstraHealth.Events.Contexts.HealthRatioChangedContext) API for more details on the context parameter.
-- **Entity Died Event**: Event raised when the entity dies. See [EntityDiedContext](xref:ElectricDrill.AstraHealth.Events.EntityDiedContext) API for more details on the context parameter.
+- **Entity Died Event**: Event raised when the entity dies. See [EntityDiedContext](xref:ElectricDrill.AstraHealth.Events.Contexts.EntityDiedContext) API for more details on the context parameter.
 
 #### Healing Related Events
 - **Pre Heal Event**: Event raised before the entity is healed. This event transmits information about the healing the entity is about to receive, such as the amount of HP you intend to heal, the entity that provided the healing (`null` if not applicable), the heal source (e.g., skill, item, potion, etc.) and other relevant information. For more details regarding the context parameter and its fields, refer to the API documentation [PreHealContext](xref:ElectricDrill.AstraHealth.Heal.PreHealContext).
@@ -124,4 +124,4 @@ The amount of health points intended to heal, transmitted by this event, is the 
 Here too, as for damage events, the thumb rule for deciding whether to use the Pre Heal Event or the Entity Healed Event is the following: if you want to manipulate the healing an entity is about to receive, it is better to subscribe to Pre Heal Event, and modify the context as desired; if instead you want to react to the healing an entity has just received, and trigger effects in response to it, it is better to subscribe to Entity Healed Event, and react based on the information transmitted by its context.
 
 #### Resurrection Related Events
-- **Entity Resurrected Event**: Event raised when the entity is resurrected. See [ResurrectionContext](xref:ElectricDrill.AstraHealth.Resurrection.ResurrectionContext) API for more details on the context parameter.
+- **Entity Resurrected Event**: Event raised when the entity is resurrected. See [ResurrectionContext](xref:ElectricDrill.AstraHealth.Events.Contexts.ResurrectionContext) API for more details on the context parameter.

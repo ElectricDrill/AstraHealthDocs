@@ -325,9 +325,39 @@ The <code>Default On Resurrection Game Action</code> is also a <code>CompositeCo
 <p>The implementation of this ability is slightly more complex than the previous one. To obtain the described effect we can resort to the <a href="workflows/game-actions.html#counter-damage"><code>CounterDamageOnDeathGameActionSO</code></a> provided by the package. This Game Action takes as input a parameter of type <code>entityDiedContext</code>, the same context that is passed by death events. Therefore, through an <code>EntityDiedGameEventListener</code> we can intercept the death of an entity and trigger this Game Action passing the intercepted death context. The Game Action uses the <code>DamageResolutionContext</code> contained in the death context to trace back to the amount of damage that caused the entity's death, and deals damage equal to 80% of this amount to the perpetrator of the lethal damage (multiplied by the Assassin's critical multiplier).
 However there is a problem: we don't want to trigger the Game Action at the death of any entity, but only at the death of the Assassin. This is where <a href="workflows/entity-health.html#event-channels">Event Channels</a> and Extra Events come into play. We can create a dedicated <code>EntityDiedGameEvent</code> to communicate only the Assassin's death, and assign it as an extra death event on the Assassin's death Event Channel in <code>EntityHealth</code>. When the Assassin dies, the death Event Channel raises both the global <code>Entity Died Game Event</code> configured in the package and this dedicated extra event. Therefore, instead of listening to the global <code>Entity Died Game Event</code> with our <code>EntityDiedGameEventListener</code>, we will listen to this specific extra event for the Assassin. This way, our Game Action will only be triggered when the Assassin dies, and not at the death of other entities.</p>
 <h4 id="passive-ability-sorcerer---glass-cannon">Passive Ability (Sorcerer) - Glass Cannon</h4>
-<p><em>Implementation difficulty: medium</em>
-The sorcerer has a passive ability that increases the critical hit multiplier by 75%, but every time he takes damage he also takes 15% of his Magic Power as extra magical damage.</p>
+<p><em>Implementation difficulty: medium</em></p>
+<p>The sorcerer has a passive ability that increases the critical hit multiplier by 75%, but every time he takes damage he also takes 15% of his Magic Power as extra magical damage.</p>
 <p>The implementation of this ability is somewhat a union of the previous two. To increase the critical hit multiplier, simply create a specific Growth Formula for the Sorcerer for the <code>Critical Multiplier</code> stat, which returns a value of 275% at all levels. As for the second effect, namely taking extra magical damage equal to 15% of Magic Power every time he takes damage, we can again resort to the <code>CounterDamageOnDamageGameActionSO</code> to deal extra magical damage every time the Sorcerer takes damage. However, unlike the Assassin, we want this game action to target the Sorcerer rather than whoever dealt the damage to us. For the damage amount, we use a dedicated <code>ScalingFormula</code>. Finally, also in this case, we don't want this game action to be triggered every time any entity takes damage, but only when the Sorcerer takes damage. Also in this case, we can resort to the damage Event Channel and its extra events. I created a dedicated <code>DamageResolutionGameEvent</code> to communicate when the Sorcerer takes damage, and assigned it as an extra damage-taken event on the Sorcerer's damage Event Channel in <code>EntityHealth</code>.</p>
+<h4 id="passive-ability-duelist---second-chance">Passive Ability (Duelist) - Second Chance</h4>
+<p><em>Implementation difficulty: advanced</em></p>
+<p>When the duelist reaches level 11, he unlocks a passive ability that grants him a one-time lethal damage prevention. When the duelist receives a lethal blow, he is resurrected with 33% of his maximum health. However, this ability can only trigger once.</p>
+<p>The implementation of this ability is the most complex. The core idea is to rely on the <a class="xref" href="../api/ElectricDrill.AstraHealth.GameActions.Actions.WithIHasEntity.SetEntityOverrideOnDeathIHasEntityGameActionSO.html"><code>SetEntityOverrideOnDeathIHasEntityGameActionSO</code></a> to override the default On Death Game Action for the duelist. Let's analyze step by step how to implement this:</p>
+<p>First of all we need a dedicated Entity Level Up extra event to assign to Duelist's <code>EntityCore</code> component, under his extra events. This will ensure that only Duelist's level up will be communicated through this event.
+Then, we can add a <code>EntityLevelUpGameEventListener</code> component to a dedicated child object of the Duelist, and wire the previously created extra event to it. We'll come back later on this listener later when we'll have the Game Action to assign to it ready.</p>
+<p>The game action we want to implement shall satisfy the following requirements:</p>
+<ol>
+<li>When the duelist reaches level 11, the on-death game action override is applied to him. Any level reached beyond 11 should not trigger any change, even if the second chance was already consumed.</li>
+<li>When the duelist receives a lethal blow, if the second chance is not yet consumed, the on-death behavior should immediately resurrect the duelist with 33% of his maximum health.</li>
+<li>Upon resurrection, the on-death game action override should be removed from the duelist. Any further lethal blow should cause the duelist's death, without triggering the second chance effect.</li>
+</ol>
+<p>The point (1) can be easily achieved by creating first a Conditional Game Action, and by configuring it as follows:</p>
+<p><img src="../images/AstraRPG/samples/duelist-conditional-ga.png" alt="Conditional Game Action Configuration"></p>
+<p>The assigned <code>Action</code> is a <code>SetEntityOverrideOnDeathIHasEntityGameActionSO</code> that sets the override on death for the duelist to the <code>Resurrect And Remove Second Chance (AH Samples)</code> Game Action (we will see soon how it is implemented and what it does).
+Notice that the used condition is <code>EntityLevelThresholdTransitionCondition</code>, which checks whether the entity has just reached a certain level threshold. This ensures that any transition beyond level 11 will not trigger this game action.</p>
+<p>The point (2) and (3) are satisfied by the <code>Resurrect And Remove Second Chance (AH Samples)</code> Game Action assigned as override on the Duelist's <code>EntityHealth</code> component. This Game Action is a <code>CompositeComponentGameAction</code> that contains the following Game Actions:</p>
+<ol>
+<li><code>Resurrect Game Action (AH Samples)</code> (point 2)</li>
+<li><code>Remove Second Chance Upon Death (AH Samples)</code> (point 3)</li>
+</ol>
+<p>The first is just a resurrection game action configured to resurrect with 33% of the Max HP. The second one is, once again, a <code>SetEntityOverrideOnDeathIHasEntityGameActionSO</code>, but this time configured to remove the override on death from the duelist, by setting it to <code>None</code>.</p>
+<p>With this setup, the flow of the second chance ability is as follows:</p>
+<ol>
+<li>When the duelist reaches level 11, the conditional game action is triggered, and the override on death is applied to the duelist.</li>
+<li>When the duelist receives a lethal blow, the on-death override triggers, and the <code>Resurrect And Remove Second Chance (AH Samples)</code> Game Action is executed.</li>
+<li>The duelist is immediately resurrected with 33% of his maximum health thanks to the <code>Resurrect Game Action (AH Samples)</code>, and the override on death is removed thanks to the <code>Remove Second Chance Upon Death (AH Samples)</code>.</li>
+<li>Any further lethal blow will cause the duelist's death, without triggering the second chance effect, as the override on death has been removed.</li>
+<li>Any level up beyond 11 will not trigger any change, as the conditional game action will not be triggered thanks to the <code>EntityLevelThresholdTransitionCondition</code> condition used.</li>
+</ol>
 
 </article>
 

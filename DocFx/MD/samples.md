@@ -234,6 +234,42 @@ However there is a problem: we don't want to trigger the Game Action at the deat
 
 #### Passive Ability (Sorcerer) - Glass Cannon
 *Implementation difficulty: medium*
+
 The sorcerer has a passive ability that increases the critical hit multiplier by 75%, but every time he takes damage he also takes 15% of his Magic Power as extra magical damage.
 
 The implementation of this ability is somewhat a union of the previous two. To increase the critical hit multiplier, simply create a specific Growth Formula for the Sorcerer for the `Critical Multiplier` stat, which returns a value of 275% at all levels. As for the second effect, namely taking extra magical damage equal to 15% of Magic Power every time he takes damage, we can again resort to the `CounterDamageOnDamageGameActionSO` to deal extra magical damage every time the Sorcerer takes damage. However, unlike the Assassin, we want this game action to target the Sorcerer rather than whoever dealt the damage to us. For the damage amount, we use a dedicated `ScalingFormula`. Finally, also in this case, we don't want this game action to be triggered every time any entity takes damage, but only when the Sorcerer takes damage. Also in this case, we can resort to the damage Event Channel and its extra events. I created a dedicated `DamageResolutionGameEvent` to communicate when the Sorcerer takes damage, and assigned it as an extra damage-taken event on the Sorcerer's damage Event Channel in `EntityHealth`.
+
+#### Passive Ability (Duelist) - Second Chance
+*Implementation difficulty: advanced*
+
+When the duelist reaches level 11, he unlocks a passive ability that grants him a one-time lethal damage prevention. When the duelist receives a lethal blow, he is resurrected with 33% of his maximum health. However, this ability can only trigger once.
+
+The implementation of this ability is the most complex. The core idea is to rely on the [`SetEntityOverrideOnDeathIHasEntityGameActionSO`](xref:ElectricDrill.AstraHealth.GameActions.Actions.WithIHasEntity.SetEntityOverrideOnDeathIHasEntityGameActionSO) to override the default On Death Game Action for the duelist. Let's analyze step by step how to implement this:
+
+First of all we need a dedicated Entity Level Up extra event to assign to Duelist's `EntityCore` component, under his extra events. This will ensure that only Duelist's level up will be communicated through this event.
+Then, we can add a `EntityLevelUpGameEventListener` component to a dedicated child object of the Duelist, and wire the previously created extra event to it. We'll come back later on this listener later when we'll have the Game Action to assign to it ready.
+
+The game action we want to implement shall satisfy the following requirements:
+1. When the duelist reaches level 11, the on-death game action override is applied to him. Any level reached beyond 11 should not trigger any change, even if the second chance was already consumed.
+2. When the duelist receives a lethal blow, if the second chance is not yet consumed, the on-death behavior should immediately resurrect the duelist with 33% of his maximum health.
+3. Upon resurrection, the on-death game action override should be removed from the duelist. Any further lethal blow should cause the duelist's death, without triggering the second chance effect.
+
+The point (1) can be easily achieved by creating first a Conditional Game Action, and by configuring it as follows:  
+
+![Conditional Game Action Configuration](../images/AstraRPG/samples/duelist-conditional-ga.png)
+
+The assigned `Action` is a `SetEntityOverrideOnDeathIHasEntityGameActionSO` that sets the override on death for the duelist to the `Resurrect And Remove Second Chance (AH Samples)` Game Action (we will see soon how it is implemented and what it does).
+Notice that the used condition is `EntityLevelThresholdTransitionCondition`, which checks whether the entity has just reached a certain level threshold. This ensures that any transition beyond level 11 will not trigger this game action.
+
+The point (2) and (3) are satisfied by the `Resurrect And Remove Second Chance (AH Samples)` Game Action assigned as override on the Duelist's `EntityHealth` component. This Game Action is a `CompositeComponentGameAction` that contains the following Game Actions:
+1. `Resurrect Game Action (AH Samples)` (point 2)
+2. `Remove Second Chance Upon Death (AH Samples)` (point 3)
+
+The first is just a resurrection game action configured to resurrect with 33% of the Max HP. The second one is, once again, a `SetEntityOverrideOnDeathIHasEntityGameActionSO`, but this time configured to remove the override on death from the duelist, by setting it to `None`.
+
+With this setup, the flow of the second chance ability is as follows:
+1. When the duelist reaches level 11, the conditional game action is triggered, and the override on death is applied to the duelist.
+2. When the duelist receives a lethal blow, the on-death override triggers, and the `Resurrect And Remove Second Chance (AH Samples)` Game Action is executed.
+3. The duelist is immediately resurrected with 33% of his maximum health thanks to the `Resurrect Game Action (AH Samples)`, and the override on death is removed thanks to the `Remove Second Chance Upon Death (AH Samples)`.
+4. Any further lethal blow will cause the duelist's death, without triggering the second chance effect, as the override on death has been removed.
+5. Any level up beyond 11 will not trigger any change, as the conditional game action will not be triggered thanks to the `EntityLevelThresholdTransitionCondition` condition used.

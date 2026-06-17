@@ -226,7 +226,6 @@ This package supports both passive and manual regeneration.</p>
 <h3 id="passive-health-regeneration">Passive Health Regeneration</h3>
 <p>Passive regeneration is handled by the dedicated <code>EntityPassiveHpRegeneration</code> MonoBehaviour. Attach <code>EntityPassiveHpRegeneration</code> alongside <code>EntityHealth</code> on every entity that should regenerate automatically over time.</p>
 <p><img src="../../images/AstraRPG/workflows/healing/entity-passive-hp-regeneration-component.png" alt="Entity Passive HP Regeneration Component"></p>
-<!-- IMAGE MISSING: entity-passive-hp-regeneration-component.png — inspector of the EntityPassiveHpRegeneration component attached alongside EntityHealth -->
 <p>The component reads its automatic-tick settings from the <a href="package-configuration.html#health-regeneration">Health Regeneration</a> section of the package configuration. The following parameters should be configured there:</p>
 <ul>
 <li><strong>Health Regeneration Source</strong>: the <code>HealSourceSO</code> to associate with regeneration (passive and manual). The package will use this <code>HealSourceSO</code> to create the healing contexts to pass to the <code>Heal</code> method when it's time to regenerate health.</li>
@@ -246,7 +245,7 @@ If this becomes a performance issue for your game, you have several levers avail
 </ul>
 <p>I would like to reiterate that, unless you have identified a real performance problem through profiling, it is not necessary to take any of these actions to optimize performance. You probably won't have any performance issues even with a thousand entities and dozens of listeners subscribed to the global Entity Healed Event.</p>
 <h3 id="manual-health-regeneration">Manual Health Regeneration</h3>
-<p>Manual regeneration is instead triggered manually through the <a href="xref:ElectricDrill.AstraHealth.Core.EntityHealth.ManualHealthRegenerationTick"><code>ManualHealthRegenerationTick()</code></a> API method.</p>
+<p>Manual regeneration is instead triggered manually through the <a class="xref" href="../../api/ElectricDrill.AstraHealth.Core.EntityHealth.html#ElectricDrill_AstraHealth_Core_EntityHealth_ManualHealthRegenerationTick"><code>ManualHealthRegenerationTick()</code></a> API method.</p>
 <p>This method, when called, triggers a regeneration tick for the entity. Note that the statistic considered for the health calculation does NOT coincide with the one configured for passive regeneration, but is a separate statistic, also set via the package configuration, specifically: <a href="package-configuration.html#manual-health-regeneration-stat">Manual Health Regeneration Stat</a>.
 The value of this statistic determines the amount of HP regenerated at each manual regeneration tick. Obviously, healing modifiers, both generic and those specific to the heal source configured for regeneration, will also affect manual regeneration, just like passive regeneration.</p>
 <h3 id="passive-vs-manual-health-regeneration-which-one-should-i-use">Passive vs Manual Health Regeneration: Which One Should I Use?</h3>

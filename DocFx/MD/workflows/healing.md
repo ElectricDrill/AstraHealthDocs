@@ -133,7 +133,7 @@ This package supports both passive and manual regeneration.
 Passive regeneration is handled by the dedicated `EntityPassiveHpRegeneration` MonoBehaviour. Attach `EntityPassiveHpRegeneration` alongside `EntityHealth` on every entity that should regenerate automatically over time.
 
 ![Entity Passive HP Regeneration Component](../../images/AstraRPG/workflows/healing/entity-passive-hp-regeneration-component.png)
-<!-- IMAGE MISSING: entity-passive-hp-regeneration-component.png — inspector of the EntityPassiveHpRegeneration component attached alongside EntityHealth -->
+
 
 The component reads its automatic-tick settings from the [Health Regeneration](package-configuration.md#health-regeneration) section of the package configuration. The following parameters should be configured there:
 - **Health Regeneration Source**: the `HealSourceSO` to associate with regeneration (passive and manual). The package will use this `HealSourceSO` to create the healing contexts to pass to the `Heal` method when it's time to regenerate health.
