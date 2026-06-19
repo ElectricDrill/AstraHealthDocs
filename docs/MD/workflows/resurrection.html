@@ -142,7 +142,7 @@ targetHealth.Resurrect(thirtyPercent);
 <p>If active negative heal modifiers are strong enough to reduce the effective HP to or below the entity's death threshold, the system applies a fallback and forces HP to <code>death threshold + 1</code>, guaranteeing the entity is always resurrected alive. <code>ResurrectionContext.NewValue</code> reflects this clamped value.</p>
 </div>
 <h2 id="the-resurrect-game-action">The Resurrect Game Action</h2>
-<p><em>Relative path:</em> <code>Astra RPG Framework/Game Actions/Context: Entity/Resurrect</code></p>
+<p><em>Relative path:</em> <code>Astra Framework/Game Actions/Context: Entity/Resurrect</code></p>
 <p><code>ResurrectEntityIHasEntityGameActionSO</code> is a ready-made <a href="https://electricdrill.github.io/AstraRpgFrameworkDocs/MD/workflows.html#game-actions">Game Action</a> that can be dropped into any Game Action slot in the inspector to resurrect an entity. It always uses the <strong>Default Resurrection Source</strong> from the configuration; no source field is exposed in the inspector.</p>
 <p>Because its context type is <code>IHasEntity</code>, it connects directly to any <code>GameEventListener</code> whose payload implements <code>IHasEntity</code> — which includes all health event listeners such as <code>EntityDiedGameEventListener</code>, <code>DamageResolutionGameEventListener</code>, and <code>EntityResurrectedGameEventListener</code> — without requiring a Component reference.</p>
 <p>The following image shows the <code>ResurrectEntityIHasEntityGameActionSO</code> inspector:<br>
