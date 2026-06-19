@@ -4,7 +4,7 @@
 
 ## What This Is
 
-**Astra Health** is a Unity package built on top of **Astra RPG Framework**. It adds health, damage, healing, death/resurrection, lifesteal, barrier, experience collection, and health scaling mechanics to entities managed by the Framework's stat/attribute system.
+**Astra Health** is a Unity package built on top of **Astra Framework**. It adds health, damage, healing, death/resurrection, lifesteal, barrier, experience collection, and health scaling mechanics to entities managed by the Framework's stat/attribute system.
 
 The user is writing English documentation for this package using DocFx. All conversations happen in Italian; documentation is always written in English.
 
@@ -32,7 +32,7 @@ On Ubuntu workstation, the paths are:
 
 ---
 
-## Astra RPG Framework — Key Concepts
+## Astra Framework — Key Concepts
 
 The Framework provides the foundation. Key systems relevant to the Health package:
 

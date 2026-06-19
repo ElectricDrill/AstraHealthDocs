@@ -1,4 +1,4 @@
 # Requirements
 
-- Astra RPG Framework
+- Astra Framework
 - Unity 6 or later

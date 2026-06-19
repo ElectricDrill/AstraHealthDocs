@@ -219,7 +219,7 @@ Backtick wrapping (`inline code`) is used universally for:
 - Class/type names: `EntityHealth`, `DamageTypeSO`
 - Method names: `TakeDamage`, `CalculateReducedDamage`
 - Variable/field names in code context: `BaseValue`, `ScaleFactor`
-- Unity menu paths: `` `Create > Astra RPG` ``, `` `Window > Astra Health > Log Damage Reduction Graph` ``
+- Unity menu paths: `` `Create > Astra` ``, `` `Window > Astra Health > Log Damage Reduction Graph` ``
 - Folder/asset paths: `` `Assets/Events/GeneratedEvents` ``
 
 No bold+code combination. Use one or the other.

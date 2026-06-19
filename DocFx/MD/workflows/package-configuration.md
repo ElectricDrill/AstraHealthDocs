@@ -1,6 +1,6 @@
 # Package Configuration
 
-Astra RPG Framework needed no configuration. The health package, however, needs to be configured to have the system work around the specific instances of your game. For example, if you defined a "Super Duper All-damage resistance" `Stat` in your game, you need to tell Astra Health to use it when calculating damage.
+Astra Framework needed no configuration. The health package, however, needs to be configured to have the system work around the specific instances of your game. For example, if you defined a "Super Duper All-damage resistance" `Stat` in your game, you need to tell Astra Health to use it when calculating damage.
 
 The package uses a flexible configuration system that balances convenience with explicit control. This page explains how to set up and configure the health system for your game.
 
@@ -144,7 +144,7 @@ The `AstraHealthConfigSO` asset contains all gameplay parameters for the health 
 **Required:** No  
 **Description:** Defines how entities' maximum health scales based on character attributes (e.g., Vitality, Endurance).
 
-See also: [Astra RPG Framework Scaling documentation](https://electricdrill.github.io/AstraRpgFrameworkDocs/MD/workflows.html#create-scaling-formulas)
+See also: [Astra Framework Scaling documentation](https://electricdrill.github.io/AstraRpgFrameworkDocs/MD/workflows.html#create-scaling-formulas)
 
 #### Generic Flat Heal Amount Modifier Stat
 **Type:** `Stat`  

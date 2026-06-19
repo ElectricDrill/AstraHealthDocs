@@ -1,6 +1,6 @@
 # Health Scaling Component
 *Relative path:* `Scaling -> Health Scaling Component`  
-*Base framework convenience relative path:* `Astra RPG Framework -> Scaling -> Health Scaling Component`  
+*Base framework convenience relative path:* `Astra Framework -> Scaling -> Health Scaling Component`  
 
 `HealthScalingComponentSO` is a ScalingComponent provided by Astra Health that calculates a scaled value from an entity's health metrics — current HP, maximum HP, or missing HP. It plugs into `ScalingFormula` assets as any other scaling component, enabling mechanics such as HP-based damage abilities and shields or heals that grow proportionally to an entity's health pool.
 
