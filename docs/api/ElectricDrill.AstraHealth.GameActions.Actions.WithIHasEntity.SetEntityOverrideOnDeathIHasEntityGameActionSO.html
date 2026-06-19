@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Class SetEntityOverrideOnDeathIHasEntityGameActionSO | Astra Health ">
       
-      <meta name="description" content="Assigns (or clears)  on the target entity. Provided as a ScriptableObject for easy assignment in the editor.  Connect to any GameEventListener whose payload implements , such as EntityDiedGameEventListener or DamageResolutionGameEventListener.  Create instances via Assets → Create → Astra RPG Framework/Game Actions/Context: Entity/Set Override On Death.">
+      <meta name="description" content="Assigns (or clears)  on the target entity. Provided as a ScriptableObject for easy assignment in the editor.  Connect to any GameEventListener whose payload implements , such as EntityDiedGameEventListener or DamageResolutionGameEventListener.  Create instances via Assets → Create → Astra Health/Game Actions/Context: Entity/Set Override On Death.">
       <link rel="icon" href="../images/astra-health-ico.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -103,12 +103,12 @@ Provided as a ScriptableObject for easy assignment in the editor.</p>
 Connect to any <code>GameEventListener</code> whose payload implements <span class="xref">ElectricDrill.AstraRpgFramework.Contexts.IHasEntity</span>,
 such as <code>EntityDiedGameEventListener</code> or <code>DamageResolutionGameEventListener</code>.
 </p>
-Create instances via Assets → Create → Astra RPG Framework/Game Actions/Context: Entity/Set Override On Death.
+Create instances via Assets → Create → Astra Health/Game Actions/Context: Entity/Set Override On Death.
 </div>
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[CreateAssetMenu(fileName = &quot;Set Override On Death Game Action&quot;, menuName = &quot;Astra Framework/Game Actions/Context: Entity/Set Override On Death&quot;)]
+    <pre><code class="lang-csharp hljs">[CreateAssetMenu(fileName = &quot;Set Override On Death Game Action&quot;, menuName = &quot;Astra Health/Game Actions/Context: Entity/Set Override On Death&quot;)]
 public class SetEntityOverrideOnDeathIHasEntityGameActionSO : SetEntityOverrideOnDeathGameActionSO&lt;IHasEntity&gt;, IExecutable&lt;IHasEntity&gt;, ITaggable</code></pre>
   </div>
 

@@ -8,14 +8,14 @@ For an introduction to the `GameAction` execution model, execution with Unity Ev
 
 The recommended way to use the health game actions is through the `IHasEntity`-based variants. Most event context payloads raised by the health package — `DamageResolutionContext`, `EntityDiedContext`, `PreDamageContext`, `ResurrectionContext`, and others — implement the framework's `IHasEntity` interface, which exposes the primary `EntityCore` subject of the event. This means that any `GameEventListener` whose payload implements `IHasEntity` can drive these actions directly without any adapter or component extraction.
 
-The `IHasEntity`-based variants are listed under `Astra Framework/Game Actions/Context: Entity/` in the asset creation menu and should be the first choice whenever actions are wired to a `GameEventListener` response.
+The `IHasEntity`-based variants are listed under `Astra Health/Game Actions/Context: Entity/` in the asset creation menu and should be the first choice whenever actions are wired to a `GameEventListener` response.
 
 ## Resurrect
 
 `ResurrectEntityGameActionSO<TContext>` is the abstract base action for resurrecting a dead entity. It resolves the `EntityHealth` component from `context.Entity` and calls the appropriate convenience `Resurrect` overload — either with a percentage of max HP or with a flat HP amount — depending on the inspector configuration.
 
 The sealed `ResurrectEntityIHasEntityGameActionSO` is the ready-to-use instantiable variant with `IHasEntity` as the context type.  
-*Relative path:* `Astra Framework/Game Actions/Context: Entity/Resurrect`
+*Relative path:* `Astra Health/Game Actions/Context: Entity/Resurrect`
 
 Its inspector fields, configuration options, and a common automatic-respawn use case are documented in the [Resurrect Game Action](./resurrection.md#the-resurrect-game-action) section of the Resurrection workflow.
 
@@ -23,7 +23,7 @@ Its inspector fields, configuration options, and a common automatic-respawn use 
 > Because all health event payloads implement `IHasEntity`, `ResurrectEntityIHasEntityGameActionSO` can be connected directly to any `GameEventListener` in the package — for example to an `EntityDiedGameEventListener` to trigger an automatic resurrection on death — without extracting a `Component` reference first.
 
 ## Set Override On Death
-*Relative path:* `Astra Framework/Game Actions/Context: Entity/Set Override On Death`  
+*Relative path:* `Astra Health/Game Actions/Context: Entity/Set Override On Death`  
 
 `SetEntityOverrideOnDeathGameActionSO<TContext>` assigns or clears the `OverrideOnDeathGameAction` property on an entity's `EntityHealth` component at runtime. It gives any system or workflow the ability to redirect what happens the next time a specific entity dies, without modifying the global configuration or the entity's inspector directly.
 
@@ -43,7 +43,7 @@ The sealed `SetEntityOverrideOnDeathIHasEntityGameActionSo` is the instantiable 
 ![Set Override On Death Game Action inspector](../../images/AstraRPG/workflows/game-actions/set-override-on-death.png)
 
 ## Set Override On Resurrection
-*Relative path:* `Astra Framework/Game Actions/Context: Entity/Set Override On Resurrection`  
+*Relative path:* `Astra Health/Game Actions/Context: Entity/Set Override On Resurrection`  
 
 `SetEntityOverrideOnResurrectionGameActionSO<TContext>` mirrors its death counterpart: it assigns or clears the `OverrideOnResurrectionGameAction` property on an entity's `EntityHealth` component, redirecting the post-resurrection behavior the next time that entity is resurrected.
 
@@ -63,11 +63,11 @@ Use these actions when a single `GameEventListener` needs to drive logic that li
 
 Three sealed implementations are provided:
 
-- **`EntityContextToDamageResolutionContextProjectionGameAction`** — narrows `IHasEntity` to `DamageResolutionContext` and forwards to a `GameAction<DamageResolutionContext>`. Created via `Astra Framework/Game Actions/Context: Entity/Projections/→ DamageResolutionContext Projection`
+- **`EntityContextToDamageResolutionContextProjectionGameAction`** — narrows `IHasEntity` to `DamageResolutionContext` and forwards to a `GameAction<DamageResolutionContext>`. Created via `Astra Health/Game Actions/Context: Entity/Projections/→ DamageResolutionContext Projection`
 
-- **`EntityContextToEntityDiedContextProjectionGameAction`** — narrows `IHasEntity` to `EntityDiedContext` and forwards to a `GameAction<EntityDiedContext>`. Created via `Astra Framework/Game Actions/Context: Entity/Projections/→ EntityDiedContext Projection`
+- **`EntityContextToEntityDiedContextProjectionGameAction`** — narrows `IHasEntity` to `EntityDiedContext` and forwards to a `GameAction<EntityDiedContext>`. Created via `Astra Health/Game Actions/Context: Entity/Projections/→ EntityDiedContext Projection`
 
-- **`EntityContextToPreDamageContextProjectionGameAction`** — narrows `IHasEntity` to `PreDamageContext` and forwards to a `GameAction<PreDamageContext>`. Created via `Astra Framework/Game Actions/Context: Entity/Projections/→ PreDamageContext Projection`
+- **`EntityContextToPreDamageContextProjectionGameAction`** — narrows `IHasEntity` to `PreDamageContext` and forwards to a `GameAction<PreDamageContext>`. Created via `Astra Health/Game Actions/Context: Entity/Projections/→ PreDamageContext Projection`
 
 The configurable field on each projection action is:
 
@@ -151,16 +151,16 @@ The `IsReactable` flag is also available on `PreHealContext` and `ReceivedHealCo
 
 Three sealed implementations are provided, each bound to a specific context type:
 
-- **`CounterDamageOnDamageGameActionSO`** — context: `DamageResolutionContext`. Reacts to a resolved damage event. Connect to a `DamageResolutionGameEventListener`'s UnityEvent response and select `ExecuteAsyncForUnityEvent(DamageResolutionContext)` as the dynamic invocation target. Created via `Astra Framework/Game Actions/Context: DamageResolutionContext/Counter Damage`
+- **`CounterDamageOnDamageGameActionSO`** — context: `DamageResolutionContext`. Reacts to a resolved damage event. Connect to a `DamageResolutionGameEventListener`'s UnityEvent response and select `ExecuteAsyncForUnityEvent(DamageResolutionContext)` as the dynamic invocation target. Created via `Astra Health/Game Actions/Context: DamageResolutionContext/Counter Damage`
 
-- **`CounterDamageOnDeathGameActionSO`** — context: `EntityDiedContext`. Reacts when an entity dies. Connect to an `EntityDiedGameEventListener`'s UnityEvent response and select `ExecuteAsyncForUnityEvent(EntityDiedContext)` as the dynamic invocation target. Created via `Astra Framework/Game Actions/Context: EntityDiedContext/Counter Damage`
+- **`CounterDamageOnDeathGameActionSO`** — context: `EntityDiedContext`. Reacts when an entity dies. Connect to an `EntityDiedGameEventListener`'s UnityEvent response and select `ExecuteAsyncForUnityEvent(EntityDiedContext)` as the dynamic invocation target. Created via `Astra Health/Game Actions/Context: EntityDiedContext/Counter Damage`
 
-- **`CounterDamageOnPreDamageGameActionSO`** — context: `PreDamageContext`. Reacts before the damage calculation pipeline runs. Connect to a `PreDamageGameEventListener`'s UnityEvent response and select `ExecuteAsyncForUnityEvent(PreDamageContext)` as the dynamic invocation target. Created via `Astra Framework/Game Actions/Context: PreDamageContext/Counter Damage`
+- **`CounterDamageOnPreDamageGameActionSO`** — context: `PreDamageContext`. Reacts before the damage calculation pipeline runs. Connect to a `PreDamageGameEventListener`'s UnityEvent response and select `ExecuteAsyncForUnityEvent(PreDamageContext)` as the dynamic invocation target. Created via `Astra Health/Game Actions/Context: PreDamageContext/Counter Damage`
 
 > [!NOTE]
 > When using `CounterDamageOnPreDamageGameActionSO`, `context.Amount` is the pre-modifier base damage amount rather than the final resolved damage. The **Execute Only On Effective Damage** check therefore evaluates the base amount, not the post-calculation result.
 
 ## Composite Pre-Damage Context
-*Relative path:* `Astra Framework/Game Actions/Context: PreDamageContext/Composite`  
+*Relative path:* `Astra Health/Game Actions/Context: PreDamageContext/Composite`  
 
 `CompositePreDamageContextGameActionSO` is a sealed implementation of the framework's `CompositeGameAction<PreDamageContext>`. It executes a list of `GameAction<PreDamageContext>` actions in sequence, passing the same `PreDamageContext` to each. Use it to chain multiple pre-damage context actions — for example, a `CounterDamageOnPreDamageGameActionSO` followed by a state modifier — within a single `PreDamageGameEventListener` response.

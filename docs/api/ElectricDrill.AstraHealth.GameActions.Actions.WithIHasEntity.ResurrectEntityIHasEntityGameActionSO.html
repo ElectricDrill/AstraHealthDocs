@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Class ResurrectEntityIHasEntityGameActionSO | Astra Health ">
       
-      <meta name="description" content="A game action used to resurrect an entity. Can be configured to resurrect with either a percentage of max HP or a flat HP amount. Provided as a ScriptableObject for easy assignment in the editor.  Connect to any GameEventListener whose payload implements , such as EntityDiedGameEventListener, EntityResurrectedGameEventListener, or directly from an EntityHealth reference.  Create instances via Assets → Create → Astra RPG Framework/Game Actions/Context: Entity/Resurrect.">
+      <meta name="description" content="A game action used to resurrect an entity. Can be configured to resurrect with either a percentage of max HP or a flat HP amount. Provided as a ScriptableObject for easy assignment in the editor.  Connect to any GameEventListener whose payload implements , such as EntityDiedGameEventListener, EntityResurrectedGameEventListener, or directly from an EntityHealth reference.  Create instances via Assets → Create → Astra Health/Game Actions/Context: Entity/Resurrect.">
       <link rel="icon" href="../images/astra-health-ico.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -105,12 +105,12 @@ Connect to any <code>GameEventListener</code> whose payload implements <span cla
 such as <code>EntityDiedGameEventListener</code>, <code>EntityResurrectedGameEventListener</code>, or
 directly from an <code>EntityHealth</code> reference.
 </p>
-Create instances via Assets → Create → Astra RPG Framework/Game Actions/Context: Entity/Resurrect.
+Create instances via Assets → Create → Astra Health/Game Actions/Context: Entity/Resurrect.
 </div>
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[CreateAssetMenu(fileName = &quot;Resurrect Game Action&quot;, menuName = &quot;Astra Framework/Game Actions/Context: Entity/Resurrect&quot;)]
+    <pre><code class="lang-csharp hljs">[CreateAssetMenu(fileName = &quot;Resurrect Game Action&quot;, menuName = &quot;Astra Health/Game Actions/Context: Entity/Resurrect&quot;)]
 public class ResurrectEntityIHasEntityGameActionSO : ResurrectEntityGameActionSO&lt;IHasEntity&gt;, IExecutable&lt;IHasEntity&gt;, ITaggable</code></pre>
   </div>
 

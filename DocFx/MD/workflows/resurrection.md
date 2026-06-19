@@ -80,7 +80,7 @@ The entity's HP after resurrection may therefore differ from the base amount req
 
 ## The Resurrect Game Action
 
-*Relative path:* `Astra Framework/Game Actions/Context: Entity/Resurrect`
+*Relative path:* `Astra Health/Game Actions/Context: Entity/Resurrect`
 
 `ResurrectEntityIHasEntityGameActionSO` is a ready-made [Game Action](https://electricdrill.github.io/AstraRpgFrameworkDocs/MD/workflows.html#game-actions) that can be dropped into any Game Action slot in the inspector to resurrect an entity. It always uses the **Default Resurrection Source** from the configuration; no source field is exposed in the inspector.
 
