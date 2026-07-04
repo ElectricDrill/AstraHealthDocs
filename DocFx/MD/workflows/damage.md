@@ -115,7 +115,7 @@ Both parameters must be set to strictly positive values.
 **Log Damage Mitigation Graph**  
 Because the non-linear nature of the formula makes it difficult to reason about the effect of Base Value and Scale Factor at a glance, the package includes a dedicated visualization window. You can open it in two ways:
 - Clicking the **Open Graph Visualizer** button in the inspector of any `Log Dmg Mitigation` asset.
-- From the Unity menu: `Window → Astra Health → Log Damage Mitigation Graph`.
+- From the Unity menu: `Tools → Astra Health → Log Damage Mitigation Graph`.
 
 The graph visualizer window should look like this:
 ![Log Dmg Mitigation Graph](../../images/AstraRPG/workflows/damage/damage-type/log-dmg-red-graph-visualizer.png)
