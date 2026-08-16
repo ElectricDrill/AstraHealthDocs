@@ -338,6 +338,38 @@ entityHealth.ManualHealthRegenerationTick();
 
 ---
 
+### Attribution
+
+Astra Framework lets one entity be marked as owned by another via `EntityCore.Owner` — for example, a `Primary Weapon` child entity owned by the `Spaceship` entity that carries it. See [Entity Ownership](https://electricdrill.github.io/AstraRpgFrameworkDocs/MD/workflows.html#entity-ownership) in the Framework documentation for how to configure **Owner** and **Owner Resolution**.
+
+When damage is dealt by an owned entity, several Astra Health systems need to decide whether the literal performer (e.g., the weapon) or its resolved owner (e.g., the ship) is the one that matters for a given outcome. Three independent fields control this, each an `EntityAttribution` value:
+
+| Value | Resolves to |
+|---|---|
+| **Direct** *(default)* | The performer itself, ignoring ownership. |
+| **Owner** | The performer's immediate `Owner`, or the performer itself if unowned. |
+| **Root** | The top-most entity in the performer's ownership chain, or the performer itself if unowned. |
+
+> [!NOTE]
+> **Direct** ignores ownership entirely and preserves the behavior of every project created before this feature existed. Set any of the three fields below to **Owner** or **Root** only for the systems that should look past the performer — they are independent, so redirecting lifesteal does not redirect kill credit or vice versa.
+
+#### Lifesteal Attribution
+**Type:** `EntityAttribution`  
+**Required:** No  
+**Description:** Resolves the lifesteal beneficiary from the damage performer. See [Lifesteal and Ownership](lifesteal.md#lifesteal-and-ownership).
+
+#### Kill Credit Attribution
+**Type:** `EntityAttribution`  
+**Required:** No  
+**Description:** Resolves the entity credited with a kill from the damage performer. Drives `EntityDiedContext.Performer` and the [Direct Kill](experience-collection.md#direct-kill) experience collection strategy.
+
+#### Damage Stats Attribution
+**Type:** `EntityAttribution`  
+**Required:** No  
+**Description:** Resolves the fallback entity whose stats supplement the damage performer's own stats in the [Damage Calculation Pipeline](damage.md#damage-calculation-pipeline) — for example, when a `DamageTypeSO`'s Defense Penetration relies on a stat that the performer doesn't define. The performer's own stats always take precedence; the resolved owner's stats are consulted only for stats the performer doesn't have. See [Defense Penetration](damage.md#defense-penetration).
+
+---
+
 ### Lifesteal
 
 Lifesteal has **two configuration layers**:
@@ -358,6 +390,18 @@ Both layers use `LifestealStatConfig` and can stack on the same hit.
 - Amount selector (initial, step, or final damage)
 
 If the embedded **Lifesteal Stat** is not assigned, generic lifesteal is effectively disabled. This generic contribution stacks with any lifesteal configured on the specific `DamageTypeSO` of the hit.
+
+#### Lifesteal Stat Source
+**Type:** `LifestealStatSource`  
+**Required:** No  
+**Description:** Selects whose stats feed the lifesteal rate lookup when **Lifesteal Attribution** resolves the performer to a different entity. See [Lifesteal and Ownership](lifesteal.md#lifesteal-and-ownership).
+
+| Value | Behavior |
+|---|---|
+| **Performer** *(default)* | Reads the **Lifesteal Stat** from the damage performer only. Preserves the pre-ownership behavior. |
+| **Beneficiary** | Reads the **Lifesteal Stat** from the resolved beneficiary only. |
+| **Performer Then Beneficiary** | Reads from the performer if it has the stat, otherwise falls back to the beneficiary's. |
+| **Sum** | Adds the performer's and the beneficiary's **Lifesteal Stat** values together. |
 
 #### Suppress Lifesteal Events
 **Type:** `bool`  

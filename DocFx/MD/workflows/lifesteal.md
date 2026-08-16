@@ -1,6 +1,6 @@
 # Lifesteal
 
-Lifesteal is a mechanic that lets an entity recover health proportional to the damage it deals. When an entity successfully damages a target, a percentage of the damage — determined by a configurable stat — is healed back to the attacker.
+Lifesteal is a mechanic that lets an entity recover health proportional to the damage it deals. When an entity successfully damages a target, a percentage of the damage — determined by a configurable stat — is healed back to the attacker (or, for entities composed of owned sub-entities, to whichever entity is resolved as responsible for the hit — see [Lifesteal and Ownership](#lifesteal-and-ownership)).
 
 The system supports **two lifesteal layers**:
 
@@ -14,10 +14,10 @@ Both layers use the same `LifestealStatConfig` structure, so designers configure
 `LifestealStatConfig` is the reusable data structure used by both **Generic Lifesteal** and the per-`DamageTypeSO` **Lifesteal** section.
 
 **Lifesteal Stat**  
-The stat that drives the lifesteal percentage. At runtime, the attacker reads this stat value from its own `StatSet` and computes the heal as:
+The stat that drives the lifesteal percentage. At runtime, its value is read according to the configured **Lifesteal Stat Source** (see [Lifesteal and Ownership](#lifesteal-and-ownership)) — by default, from the damage performer's own `StatSet` — and the heal is computed as:
 > heal amount = basis damage × (lifesteal stat value / 100)
 
-The stat value is read as a `Percentage` type, meaning the raw `long` value stored in the stat is divided by 100 internally. A stat value of `15` therefore corresponds to 15% lifesteal. For lifesteal to activate, this stat must be present in the dealing entity's `StatSet`.
+The stat value is read as a `Percentage` type, meaning the raw `long` value stored in the stat is divided by 100 internally. A stat value of `15` therefore corresponds to 15% lifesteal. For lifesteal to activate, this stat must be present in the `StatSet` of whichever entity or entities the configured **Lifesteal Stat Source** reads from.
 
 > [!NOTE]
 > The computed heal amount is rounded to a `long` using the **Lifesteal Rounding Mode** from [`HealthRoundingSettings`](../workflows/package-configuration.md#rounding-settings) (default: **Round**). This rounding is applied independently to each lifesteal contribution (generic and damage-type) before they are summed or applied as separate heals.
@@ -62,6 +62,46 @@ The following image shows the inspector when Step mode is selected:
 > [!NOTE]
 > If **Step** mode is selected but no step is configured, the system falls back to **Final** damage. The inspector displays a warning to indicate this condition.
 
+## Lifesteal and Ownership
+
+By default, lifesteal credits the entity that literally dealt the damage — the damage performer. This is straightforward for most entities, but it breaks down once an entity is composed of several owned sub-entities. Consider a `Spaceship` entity (`EntityCore` + `EntityStats` for armor and speed and `EntityHealth` for HP) with a `Primary Weapon` child entity of its own (`EntityCore` + `EntityStats` for bullet damage and a lifesteal stat). When the weapon fires, the weapon — not the ship — is the damage performer, so a lifesteal stat configured on the ship would never trigger: the ship never dealt the damage, only its weapon did.
+
+Astra Framework's [Entity Ownership](https://electricdrill.github.io/AstraRpgFrameworkDocs/MD/workflows.html#entity-ownership) system solves this with an opt-in `Owner` edge on `EntityCore`. Nesting `Primary Weapon` under `Spaceship` and setting its **Owner Resolution** to `NearestAncestor` (or assigning **Owner** explicitly) makes the weapon aware that the ship is responsible for it. Lifesteal resolves the **beneficiary** — the entity whose `EntityHealth` actually receives the heal — through this edge, controlled by the **Lifesteal Attribution** field in `AstraHealthConfigSO` (see [Attribution](package-configuration.md#attribution)):
+
+- **Direct** *(default)*: the beneficiary is the performer itself. Preserves the pre-ownership behavior — only the entity that dealt the damage can lifesteal from it.
+- **Owner**: the beneficiary is the performer's immediate `Owner`, or the performer itself if unowned.
+- **Root**: the beneficiary is the top-most entity in the performer's ownership chain, or the performer itself if unowned.
+
+> [!IMPORTANT]
+> The resolved beneficiary must have its own `EntityHealth` component to actually receive the heal — lifesteal resolution runs per `EntityHealth` and only applies when the beneficiary matches that entity. If **Lifesteal Attribution** resolves to a purely structural entity with no `EntityHealth` (for example, an intermediate mounting point), the lifesteal contribution is silently lost. Reach for **Root** instead of **Owner** when intermediate entities in the chain don't carry their own `EntityHealth`.
+
+### Multiple Nested Entities
+
+**Owner** and **Root** diverge once more than one ownership hop separates the performer from the entity that should benefit. Extend the spaceship example with a `Turret Mount` entity in between: `Spaceship` owns `Turret Mount`, which in turn owns `Primary Weapon`.
+
+- **Lifesteal Attribution = Owner**: a hit from `Primary Weapon` credits `Turret Mount` — its immediate owner — regardless of how deep the chain continues above it.
+- **Lifesteal Attribution = Root**: the same hit walks the full chain and credits `Spaceship`, the top-most entity, no matter how many intermediate entities sit in between.
+
+Use **Owner** when each link in the chain is itself a meaningful lifesteal beneficiary (for example, a `Turret Mount` with its own `EntityHealth` and shields to regenerate). Use **Root** when only the outermost entity should ever benefit, which is the more common case for a composed vehicle or creature.
+
+### Lifesteal Stat Source
+
+Resolving the beneficiary decides *who gets healed*; it does not decide *whose stat sets the percentage*. That is controlled separately by **Lifesteal Stat Source** in `AstraHealthConfigSO` (see [Lifesteal Stat Source](package-configuration.md#lifesteal-stat-source)), because the two concerns are often different: the ship may be the one that gets healed, while the rate should still come from the weapon's own lifesteal stat (a "vampiric rounds" mod on the gun itself, rather than a ship-wide trait).
+
+- **Performer** *(default)*: reads the **Lifesteal Stat** from the damage performer only (e.g. `Primary Weapon`). Preserves the pre-ownership behavior.
+- **Beneficiary**: reads the **Lifesteal Stat** from the resolved beneficiary only (e.g. `Spaceship`).
+- **Performer Then Beneficiary**: reads from the performer if it has the stat, otherwise falls back to the beneficiary's.
+- **Sum**: adds the performer's and the beneficiary's **Lifesteal Stat** values together, letting a weapon-level bonus stack additively with a ship-level trait.
+
+For example:
+- **Lifesteal Attribution**: `Root`.
+- **Lifesteal Stat Source**: `Sum`.
+- **Primary Weapon**'s Lifesteal Stat: 5 (5% lifesteal).
+- **Spaceship**'s Lifesteal Stat: 10 (10% lifesteal).
+- Damage dealt by `Primary Weapon` (Final Amount Selector): 200.
+
+In this case, the beneficiary resolves to `Spaceship` by walking the full ownership chain from the weapon through `Turret Mount`, and the lifesteal rate is 5% (weapon) + 10% (ship) = 15%, so the ship is healed for 200 × 0.15 = **30 HP**. This example assumes no other damage modifications are active.
+
 ## Separate vs Unified Heals
 
 When both **Generic Lifesteal** and **Damage-Type Lifesteal** contribute to the same hit, the framework can apply them in two different ways. By default, `Unify Lifesteal Heals` is enabled, so the two contributions are merged into a single heal.
@@ -101,12 +141,12 @@ A similar consideration applies to passive health regeneration, which can also g
 
 > [!NOTE]
 > Lifesteal is evaluated after every damage application. The following conditions must all be met for it to trigger:
-> - The dealing entity is the source of the damage. Lifesteal does not trigger on damage dealt by others.
-> - The dealing entity is alive at the moment of damage resolution.
+> - The entity checking for lifesteal must be the resolved beneficiary of the hit (see [Lifesteal and Ownership](#lifesteal-and-ownership)). Under the default **Direct** attribution this is the dealing entity itself, so lifesteal does not trigger for damage dealt by unrelated entities.
+> - The beneficiary is alive at the moment of damage resolution.
 > - At least one lifesteal layer is configured for the hit:
 >   - **Generic Lifesteal** in `AstraHealthConfigSO`, and/or
 >   - **Lifesteal** on the hit's `DamageTypeSO`.
-> - For each configured layer, the corresponding **Lifesteal Stat** is present in the dealing entity's `StatSet`.
+> - For each configured layer, the corresponding **Lifesteal Stat** is present according to the configured **Lifesteal Stat Source** — on the performer, the beneficiary, or both.
 > - The computed heal amount for that layer is greater than zero. A lifesteal stat of 0% produces no heal contribution.
 
 > [!IMPORTANT]

@@ -166,6 +166,9 @@ Two optional parameters of the `DamageTypeSO` control this behavior:
 > [!WARNING]
 > If the damage dealer entity lacks the statistic referenced by **Defensive Stat Pierced By**, an error will be logged when applying damage of that type. Ensure that all entities capable of dealing damage of this type have the relevant piercing statistic.
 
+> [!NOTE]
+> If the dealer is composed of owned sub-entities (see [Entity Ownership](https://electricdrill.github.io/AstraRpgFrameworkDocs/MD/workflows.html#entity-ownership) in the Framework documentation) — for example, a `Primary Weapon` entity dealing damage on behalf of the `Spaceship` that owns it — the **Damage Stats Attribution** field in `AstraHealthConfigSO` (see [Attribution](package-configuration.md#attribution)) controls whether the pipeline also consults the resolved owner's stats when the performer itself lacks **Defensive Stat Pierced By**. The performer's own stats always take precedence; the owner's stats are read only as a fallback for stats the performer doesn't define, so a lightly-statted weapon can still benefit from the ship's Armor Penetration stat without losing whatever piercing bonus the weapon itself provides.
+
 To illustrate how defense penetration interacts with the rest of the damage pipeline, consider the following example:
 - **Damage Type**: Physical damage.
 - **Defensive Stat for the Physical Damage Type**: Armor.

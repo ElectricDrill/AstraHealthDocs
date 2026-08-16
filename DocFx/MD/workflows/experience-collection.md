@@ -73,6 +73,9 @@ For XP to be awarded, all of the following must hold:
 
 The harvested check ensures that a single kill cannot be claimed twice when multiple `ExpCollector` entities use non-harvested-dependent strategies.
 
+> [!NOTE]
+> "The entity that dealt the final blow" is resolved through the **Kill Credit Attribution** field in `AstraHealthConfigSO` (see [Attribution](package-configuration.md#attribution)). Under the default **Direct** value this is the literal damage performer; setting it to **Owner** or **Root** lets an owning entity collect XP for kills dealt by an entity it owns — for example, crediting a `Spaceship`'s `ExpCollector` for kills scored by its `Primary Weapon` child entity. The same field also determines who appears as `EntityDiedContext.Performer` for any other system reacting to the death. See [Entity Ownership](https://electricdrill.github.io/AstraRpgFrameworkDocs/MD/workflows.html#entity-ownership) in the Framework documentation.
+
 ### Damage Source Kill
 
 *Relative path:* `Astra Health -> Exp Collection Strategies -> Damage Source Kill`
