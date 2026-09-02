@@ -251,6 +251,10 @@ You can take a look at the existing damage mitigation functions implementations 
 <h5>Warning</h5>
 <p>If the damage dealer entity lacks the statistic referenced by <strong>Defensive Stat Pierced By</strong>, an error will be logged when applying damage of that type. Ensure that all entities capable of dealing damage of this type have the relevant piercing statistic.</p>
 </div>
+<div class="NOTE">
+<h5>Note</h5>
+<p>If the dealer is composed of owned sub-entities (see <a href="https://electricdrill.github.io/AstraRpgFrameworkDocs/MD/workflows.html#entity-ownership">Entity Ownership</a> in the Framework documentation) — for example, a <code>Primary Weapon</code> entity dealing damage on behalf of the <code>Spaceship</code> that owns it — the <strong>Damage Stats Attribution</strong> field in <code>AstraHealthConfigSO</code> (see <a href="package-configuration.html#attribution">Attribution</a>) controls whether the pipeline also consults the resolved owner's stats when the performer itself lacks <strong>Defensive Stat Pierced By</strong>. The performer's own stats always take precedence; the owner's stats are read only as a fallback for stats the performer doesn't define, so a lightly-statted weapon can still benefit from the ship's Armor Penetration stat without losing whatever piercing bonus the weapon itself provides.</p>
+</div>
 <p>To illustrate how defense penetration interacts with the rest of the damage pipeline, consider the following example:</p>
 <ul>
 <li><strong>Damage Type</strong>: Physical damage.</li>

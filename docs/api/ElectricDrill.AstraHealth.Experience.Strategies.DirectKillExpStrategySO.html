@@ -89,7 +89,7 @@
 
 
   <h1 id="ElectricDrill_AstraHealth_Experience_Strategies_DirectKillExpStrategySO" data-uid="ElectricDrill.AstraHealth.Experience.Strategies.DirectKillExpStrategySO" class="text-break">
-Class DirectKillExpStrategySO  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/Experience/Strategies/DirectKillExpStrategySO.cs/#L11"><i class="bi bi-code-slash"></i></a>
+Class DirectKillExpStrategySO  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/Experience/Strategies/DirectKillExpStrategySO.cs/#L20"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -151,6 +151,13 @@ This is the default behavior - only the entity that dealt the final damage recei
 
 
 
+  <h2 id="ElectricDrill_AstraHealth_Experience_Strategies_DirectKillExpStrategySO_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p>Kill-credit attribution is Experimental — this API may still change.
+&quot;Dealer&quot; is resolved through <a class="xref" href="ElectricDrill.AstraHealth.Config.IAstraHealthConfig.html#ElectricDrill_AstraHealth_Config_IAstraHealthConfig_KillCreditAttribution">KillCreditAttribution</a>: under the
+default <span class="xref">ElectricDrill.AstraRpgFramework.Ownership.EntityAttribution.Direct</span> this is the literal damage performer; under
+<span class="xref">ElectricDrill.AstraRpgFramework.Ownership.EntityAttribution.Owner</span>/<span class="xref">ElectricDrill.AstraRpgFramework.Ownership.EntityAttribution.Root</span> it is the performer's
+resolved owner (e.g. a ship credited for a kill dealt by its weapon).</p>
+</div>
 
 
   <h2 class="section" id="methods">Methods
@@ -161,7 +168,7 @@ This is the default behavior - only the entity that dealt the final damage recei
 
   <h3 id="ElectricDrill_AstraHealth_Experience_Strategies_DirectKillExpStrategySO_Validate_ElectricDrill_AstraRpgFramework_EntityCore_ElectricDrill_AstraRpgFramework_EntityCore_ElectricDrill_AstraHealth_Damage_DamageResolutionContext_System_Single__" data-uid="ElectricDrill.AstraHealth.Experience.Strategies.DirectKillExpStrategySO.Validate(ElectricDrill.AstraRpgFramework.EntityCore,ElectricDrill.AstraRpgFramework.EntityCore,ElectricDrill.AstraHealth.Damage.DamageResolutionContext,System.Single@)">
   Validate(EntityCore, EntityCore, DamageResolutionContext, out float)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/Experience/Strategies/DirectKillExpStrategySO.cs/#L17"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/Experience/Strategies/DirectKillExpStrategySO.cs/#L26"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Override this method to implement the specific validation logic for the strategy.</p>

@@ -553,6 +553,19 @@ references:
   commentId: T:ElectricDrill.AstraHealth.Config.AstraHealthConfigSO
   fullName: ElectricDrill.AstraHealth.Config.AstraHealthConfigSO
   nameWithType: AstraHealthConfigSO
+- uid: ElectricDrill.AstraHealth.Config.AstraHealthConfigSO.DamageStatsAttribution
+  name: DamageStatsAttribution
+  href: api/ElectricDrill.AstraHealth.Config.AstraHealthConfigSO.html#ElectricDrill_AstraHealth_Config_AstraHealthConfigSO_DamageStatsAttribution
+  commentId: P:ElectricDrill.AstraHealth.Config.AstraHealthConfigSO.DamageStatsAttribution
+  fullName: ElectricDrill.AstraHealth.Config.AstraHealthConfigSO.DamageStatsAttribution
+  nameWithType: AstraHealthConfigSO.DamageStatsAttribution
+- uid: ElectricDrill.AstraHealth.Config.AstraHealthConfigSO.DamageStatsAttribution*
+  name: DamageStatsAttribution
+  href: api/ElectricDrill.AstraHealth.Config.AstraHealthConfigSO.html#ElectricDrill_AstraHealth_Config_AstraHealthConfigSO_DamageStatsAttribution_
+  commentId: Overload:ElectricDrill.AstraHealth.Config.AstraHealthConfigSO.DamageStatsAttribution
+  isSpec: "True"
+  fullName: ElectricDrill.AstraHealth.Config.AstraHealthConfigSO.DamageStatsAttribution
+  nameWithType: AstraHealthConfigSO.DamageStatsAttribution
 - uid: ElectricDrill.AstraHealth.Config.AstraHealthConfigSO.DefaultDamageCalculationCalculationStrategy
   name: DefaultDamageCalculationCalculationStrategy
   href: api/ElectricDrill.AstraHealth.Config.AstraHealthConfigSO.html#ElectricDrill_AstraHealth_Config_AstraHealthConfigSO_DefaultDamageCalculationCalculationStrategy
@@ -826,6 +839,45 @@ references:
   isSpec: "True"
   fullName: ElectricDrill.AstraHealth.Config.AstraHealthConfigSO.HealthRegenerationSource
   nameWithType: AstraHealthConfigSO.HealthRegenerationSource
+- uid: ElectricDrill.AstraHealth.Config.AstraHealthConfigSO.KillCreditAttribution
+  name: KillCreditAttribution
+  href: api/ElectricDrill.AstraHealth.Config.AstraHealthConfigSO.html#ElectricDrill_AstraHealth_Config_AstraHealthConfigSO_KillCreditAttribution
+  commentId: P:ElectricDrill.AstraHealth.Config.AstraHealthConfigSO.KillCreditAttribution
+  fullName: ElectricDrill.AstraHealth.Config.AstraHealthConfigSO.KillCreditAttribution
+  nameWithType: AstraHealthConfigSO.KillCreditAttribution
+- uid: ElectricDrill.AstraHealth.Config.AstraHealthConfigSO.KillCreditAttribution*
+  name: KillCreditAttribution
+  href: api/ElectricDrill.AstraHealth.Config.AstraHealthConfigSO.html#ElectricDrill_AstraHealth_Config_AstraHealthConfigSO_KillCreditAttribution_
+  commentId: Overload:ElectricDrill.AstraHealth.Config.AstraHealthConfigSO.KillCreditAttribution
+  isSpec: "True"
+  fullName: ElectricDrill.AstraHealth.Config.AstraHealthConfigSO.KillCreditAttribution
+  nameWithType: AstraHealthConfigSO.KillCreditAttribution
+- uid: ElectricDrill.AstraHealth.Config.AstraHealthConfigSO.LifestealAttribution
+  name: LifestealAttribution
+  href: api/ElectricDrill.AstraHealth.Config.AstraHealthConfigSO.html#ElectricDrill_AstraHealth_Config_AstraHealthConfigSO_LifestealAttribution
+  commentId: P:ElectricDrill.AstraHealth.Config.AstraHealthConfigSO.LifestealAttribution
+  fullName: ElectricDrill.AstraHealth.Config.AstraHealthConfigSO.LifestealAttribution
+  nameWithType: AstraHealthConfigSO.LifestealAttribution
+- uid: ElectricDrill.AstraHealth.Config.AstraHealthConfigSO.LifestealAttribution*
+  name: LifestealAttribution
+  href: api/ElectricDrill.AstraHealth.Config.AstraHealthConfigSO.html#ElectricDrill_AstraHealth_Config_AstraHealthConfigSO_LifestealAttribution_
+  commentId: Overload:ElectricDrill.AstraHealth.Config.AstraHealthConfigSO.LifestealAttribution
+  isSpec: "True"
+  fullName: ElectricDrill.AstraHealth.Config.AstraHealthConfigSO.LifestealAttribution
+  nameWithType: AstraHealthConfigSO.LifestealAttribution
+- uid: ElectricDrill.AstraHealth.Config.AstraHealthConfigSO.LifestealStatSource
+  name: LifestealStatSource
+  href: api/ElectricDrill.AstraHealth.Config.AstraHealthConfigSO.html#ElectricDrill_AstraHealth_Config_AstraHealthConfigSO_LifestealStatSource
+  commentId: P:ElectricDrill.AstraHealth.Config.AstraHealthConfigSO.LifestealStatSource
+  fullName: ElectricDrill.AstraHealth.Config.AstraHealthConfigSO.LifestealStatSource
+  nameWithType: AstraHealthConfigSO.LifestealStatSource
+- uid: ElectricDrill.AstraHealth.Config.AstraHealthConfigSO.LifestealStatSource*
+  name: LifestealStatSource
+  href: api/ElectricDrill.AstraHealth.Config.AstraHealthConfigSO.html#ElectricDrill_AstraHealth_Config_AstraHealthConfigSO_LifestealStatSource_
+  commentId: Overload:ElectricDrill.AstraHealth.Config.AstraHealthConfigSO.LifestealStatSource
+  isSpec: "True"
+  fullName: ElectricDrill.AstraHealth.Config.AstraHealthConfigSO.LifestealStatSource
+  nameWithType: AstraHealthConfigSO.LifestealStatSource
 - uid: ElectricDrill.AstraHealth.Config.AstraHealthConfigSO.ManualHealthRegenerationStat
   name: ManualHealthRegenerationStat
   href: api/ElectricDrill.AstraHealth.Config.AstraHealthConfigSO.html#ElectricDrill_AstraHealth_Config_AstraHealthConfigSO_ManualHealthRegenerationStat
@@ -1089,6 +1141,19 @@ references:
   commentId: T:ElectricDrill.AstraHealth.Config.IAstraHealthConfig
   fullName: ElectricDrill.AstraHealth.Config.IAstraHealthConfig
   nameWithType: IAstraHealthConfig
+- uid: ElectricDrill.AstraHealth.Config.IAstraHealthConfig.DamageStatsAttribution
+  name: DamageStatsAttribution
+  href: api/ElectricDrill.AstraHealth.Config.IAstraHealthConfig.html#ElectricDrill_AstraHealth_Config_IAstraHealthConfig_DamageStatsAttribution
+  commentId: P:ElectricDrill.AstraHealth.Config.IAstraHealthConfig.DamageStatsAttribution
+  fullName: ElectricDrill.AstraHealth.Config.IAstraHealthConfig.DamageStatsAttribution
+  nameWithType: IAstraHealthConfig.DamageStatsAttribution
+- uid: ElectricDrill.AstraHealth.Config.IAstraHealthConfig.DamageStatsAttribution*
+  name: DamageStatsAttribution
+  href: api/ElectricDrill.AstraHealth.Config.IAstraHealthConfig.html#ElectricDrill_AstraHealth_Config_IAstraHealthConfig_DamageStatsAttribution_
+  commentId: Overload:ElectricDrill.AstraHealth.Config.IAstraHealthConfig.DamageStatsAttribution
+  isSpec: "True"
+  fullName: ElectricDrill.AstraHealth.Config.IAstraHealthConfig.DamageStatsAttribution
+  nameWithType: IAstraHealthConfig.DamageStatsAttribution
 - uid: ElectricDrill.AstraHealth.Config.IAstraHealthConfig.DefaultDamageCalculationCalculationStrategy
   name: DefaultDamageCalculationCalculationStrategy
   href: api/ElectricDrill.AstraHealth.Config.IAstraHealthConfig.html#ElectricDrill_AstraHealth_Config_IAstraHealthConfig_DefaultDamageCalculationCalculationStrategy
@@ -1362,6 +1427,45 @@ references:
   isSpec: "True"
   fullName: ElectricDrill.AstraHealth.Config.IAstraHealthConfig.HealthRegenerationSource
   nameWithType: IAstraHealthConfig.HealthRegenerationSource
+- uid: ElectricDrill.AstraHealth.Config.IAstraHealthConfig.KillCreditAttribution
+  name: KillCreditAttribution
+  href: api/ElectricDrill.AstraHealth.Config.IAstraHealthConfig.html#ElectricDrill_AstraHealth_Config_IAstraHealthConfig_KillCreditAttribution
+  commentId: P:ElectricDrill.AstraHealth.Config.IAstraHealthConfig.KillCreditAttribution
+  fullName: ElectricDrill.AstraHealth.Config.IAstraHealthConfig.KillCreditAttribution
+  nameWithType: IAstraHealthConfig.KillCreditAttribution
+- uid: ElectricDrill.AstraHealth.Config.IAstraHealthConfig.KillCreditAttribution*
+  name: KillCreditAttribution
+  href: api/ElectricDrill.AstraHealth.Config.IAstraHealthConfig.html#ElectricDrill_AstraHealth_Config_IAstraHealthConfig_KillCreditAttribution_
+  commentId: Overload:ElectricDrill.AstraHealth.Config.IAstraHealthConfig.KillCreditAttribution
+  isSpec: "True"
+  fullName: ElectricDrill.AstraHealth.Config.IAstraHealthConfig.KillCreditAttribution
+  nameWithType: IAstraHealthConfig.KillCreditAttribution
+- uid: ElectricDrill.AstraHealth.Config.IAstraHealthConfig.LifestealAttribution
+  name: LifestealAttribution
+  href: api/ElectricDrill.AstraHealth.Config.IAstraHealthConfig.html#ElectricDrill_AstraHealth_Config_IAstraHealthConfig_LifestealAttribution
+  commentId: P:ElectricDrill.AstraHealth.Config.IAstraHealthConfig.LifestealAttribution
+  fullName: ElectricDrill.AstraHealth.Config.IAstraHealthConfig.LifestealAttribution
+  nameWithType: IAstraHealthConfig.LifestealAttribution
+- uid: ElectricDrill.AstraHealth.Config.IAstraHealthConfig.LifestealAttribution*
+  name: LifestealAttribution
+  href: api/ElectricDrill.AstraHealth.Config.IAstraHealthConfig.html#ElectricDrill_AstraHealth_Config_IAstraHealthConfig_LifestealAttribution_
+  commentId: Overload:ElectricDrill.AstraHealth.Config.IAstraHealthConfig.LifestealAttribution
+  isSpec: "True"
+  fullName: ElectricDrill.AstraHealth.Config.IAstraHealthConfig.LifestealAttribution
+  nameWithType: IAstraHealthConfig.LifestealAttribution
+- uid: ElectricDrill.AstraHealth.Config.IAstraHealthConfig.LifestealStatSource
+  name: LifestealStatSource
+  href: api/ElectricDrill.AstraHealth.Config.IAstraHealthConfig.html#ElectricDrill_AstraHealth_Config_IAstraHealthConfig_LifestealStatSource
+  commentId: P:ElectricDrill.AstraHealth.Config.IAstraHealthConfig.LifestealStatSource
+  fullName: ElectricDrill.AstraHealth.Config.IAstraHealthConfig.LifestealStatSource
+  nameWithType: IAstraHealthConfig.LifestealStatSource
+- uid: ElectricDrill.AstraHealth.Config.IAstraHealthConfig.LifestealStatSource*
+  name: LifestealStatSource
+  href: api/ElectricDrill.AstraHealth.Config.IAstraHealthConfig.html#ElectricDrill_AstraHealth_Config_IAstraHealthConfig_LifestealStatSource_
+  commentId: Overload:ElectricDrill.AstraHealth.Config.IAstraHealthConfig.LifestealStatSource
+  isSpec: "True"
+  fullName: ElectricDrill.AstraHealth.Config.IAstraHealthConfig.LifestealStatSource
+  nameWithType: IAstraHealthConfig.LifestealStatSource
 - uid: ElectricDrill.AstraHealth.Config.IAstraHealthConfig.ManualHealthRegenerationStat
   name: ManualHealthRegenerationStat
   href: api/ElectricDrill.AstraHealth.Config.IAstraHealthConfig.html#ElectricDrill_AstraHealth_Config_IAstraHealthConfig_ManualHealthRegenerationStat
@@ -1466,6 +1570,36 @@ references:
   isSpec: "True"
   fullName: ElectricDrill.AstraHealth.Config.IAstraHealthConfig.UnifyLifestealHeals
   nameWithType: IAstraHealthConfig.UnifyLifestealHeals
+- uid: ElectricDrill.AstraHealth.Config.LifestealStatSource
+  name: LifestealStatSource
+  href: api/ElectricDrill.AstraHealth.Config.LifestealStatSource.html
+  commentId: T:ElectricDrill.AstraHealth.Config.LifestealStatSource
+  fullName: ElectricDrill.AstraHealth.Config.LifestealStatSource
+  nameWithType: LifestealStatSource
+- uid: ElectricDrill.AstraHealth.Config.LifestealStatSource.Beneficiary
+  name: Beneficiary
+  href: api/ElectricDrill.AstraHealth.Config.LifestealStatSource.html#ElectricDrill_AstraHealth_Config_LifestealStatSource_Beneficiary
+  commentId: F:ElectricDrill.AstraHealth.Config.LifestealStatSource.Beneficiary
+  fullName: ElectricDrill.AstraHealth.Config.LifestealStatSource.Beneficiary
+  nameWithType: LifestealStatSource.Beneficiary
+- uid: ElectricDrill.AstraHealth.Config.LifestealStatSource.Performer
+  name: Performer
+  href: api/ElectricDrill.AstraHealth.Config.LifestealStatSource.html#ElectricDrill_AstraHealth_Config_LifestealStatSource_Performer
+  commentId: F:ElectricDrill.AstraHealth.Config.LifestealStatSource.Performer
+  fullName: ElectricDrill.AstraHealth.Config.LifestealStatSource.Performer
+  nameWithType: LifestealStatSource.Performer
+- uid: ElectricDrill.AstraHealth.Config.LifestealStatSource.PerformerThenBeneficiary
+  name: PerformerThenBeneficiary
+  href: api/ElectricDrill.AstraHealth.Config.LifestealStatSource.html#ElectricDrill_AstraHealth_Config_LifestealStatSource_PerformerThenBeneficiary
+  commentId: F:ElectricDrill.AstraHealth.Config.LifestealStatSource.PerformerThenBeneficiary
+  fullName: ElectricDrill.AstraHealth.Config.LifestealStatSource.PerformerThenBeneficiary
+  nameWithType: LifestealStatSource.PerformerThenBeneficiary
+- uid: ElectricDrill.AstraHealth.Config.LifestealStatSource.Sum
+  name: Sum
+  href: api/ElectricDrill.AstraHealth.Config.LifestealStatSource.html#ElectricDrill_AstraHealth_Config_LifestealStatSource_Sum
+  commentId: F:ElectricDrill.AstraHealth.Config.LifestealStatSource.Sum
+  fullName: ElectricDrill.AstraHealth.Config.LifestealStatSource.Sum
+  nameWithType: LifestealStatSource.Sum
 - uid: ElectricDrill.AstraHealth.Core
   name: ElectricDrill.AstraHealth.Core
   href: api/ElectricDrill.AstraHealth.Core.html
@@ -1549,6 +1683,19 @@ references:
   isSpec: "True"
   fullName: ElectricDrill.AstraHealth.Core.EntityHealth.Barrier
   nameWithType: EntityHealth.Barrier
+- uid: ElectricDrill.AstraHealth.Core.EntityHealth.BaseMaxHp
+  name: BaseMaxHp
+  href: api/ElectricDrill.AstraHealth.Core.EntityHealth.html#ElectricDrill_AstraHealth_Core_EntityHealth_BaseMaxHp
+  commentId: P:ElectricDrill.AstraHealth.Core.EntityHealth.BaseMaxHp
+  fullName: ElectricDrill.AstraHealth.Core.EntityHealth.BaseMaxHp
+  nameWithType: EntityHealth.BaseMaxHp
+- uid: ElectricDrill.AstraHealth.Core.EntityHealth.BaseMaxHp*
+  name: BaseMaxHp
+  href: api/ElectricDrill.AstraHealth.Core.EntityHealth.html#ElectricDrill_AstraHealth_Core_EntityHealth_BaseMaxHp_
+  commentId: Overload:ElectricDrill.AstraHealth.Core.EntityHealth.BaseMaxHp
+  isSpec: "True"
+  fullName: ElectricDrill.AstraHealth.Core.EntityHealth.BaseMaxHp
+  nameWithType: EntityHealth.BaseMaxHp
 - uid: ElectricDrill.AstraHealth.Core.EntityHealth.Class
   name: Class
   href: api/ElectricDrill.AstraHealth.Core.EntityHealth.html#ElectricDrill_AstraHealth_Core_EntityHealth_Class

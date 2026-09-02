@@ -466,6 +466,48 @@ If you need both to keep sending regeneration events and to minimize overhead, I
 entityHealth.ManualHealthRegenerationTick();
 </code></pre>
 <hr>
+<h3 id="attribution">Attribution</h3>
+<p>Astra Framework lets one entity be marked as owned by another via <code>EntityCore.Owner</code> — for example, a <code>Primary Weapon</code> child entity owned by the <code>Spaceship</code> entity that carries it. See <a href="https://electricdrill.github.io/AstraRpgFrameworkDocs/MD/workflows.html#entity-ownership">Entity Ownership</a> in the Framework documentation for how to configure <strong>Owner</strong> and <strong>Owner Resolution</strong>.</p>
+<p>When damage is dealt by an owned entity, several Astra Health systems need to decide whether the literal performer (e.g., the weapon) or its resolved owner (e.g., the ship) is the one that matters for a given outcome. Three independent fields control this, each an <code>EntityAttribution</code> value:</p>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Resolves to</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Direct</strong> <em>(default)</em></td>
+<td>The performer itself, ignoring ownership.</td>
+</tr>
+<tr>
+<td><strong>Owner</strong></td>
+<td>The performer's immediate <code>Owner</code>, or the performer itself if unowned.</td>
+</tr>
+<tr>
+<td><strong>Root</strong></td>
+<td>The top-most entity in the performer's ownership chain, or the performer itself if unowned.</td>
+</tr>
+</tbody>
+</table>
+<div class="NOTE">
+<h5>Note</h5>
+<p><strong>Direct</strong> ignores ownership entirely and preserves the behavior of every project created before this feature existed. Set any of the three fields below to <strong>Owner</strong> or <strong>Root</strong> only for the systems that should look past the performer — they are independent, so redirecting lifesteal does not redirect kill credit or vice versa.</p>
+</div>
+<h4 id="lifesteal-attribution">Lifesteal Attribution</h4>
+<p><strong>Type:</strong> <code>EntityAttribution</code><br>
+<strong>Required:</strong> No<br>
+<strong>Description:</strong> Resolves the lifesteal beneficiary from the damage performer. See <a href="lifesteal.html#lifesteal-and-ownership">Lifesteal and Ownership</a>.</p>
+<h4 id="kill-credit-attribution">Kill Credit Attribution</h4>
+<p><strong>Type:</strong> <code>EntityAttribution</code><br>
+<strong>Required:</strong> No<br>
+<strong>Description:</strong> Resolves the entity credited with a kill from the damage performer. Drives <code>EntityDiedContext.Performer</code> and the <a href="experience-collection.html#direct-kill">Direct Kill</a> experience collection strategy.</p>
+<h4 id="damage-stats-attribution">Damage Stats Attribution</h4>
+<p><strong>Type:</strong> <code>EntityAttribution</code><br>
+<strong>Required:</strong> No<br>
+<strong>Description:</strong> Resolves the fallback entity whose stats supplement the damage performer's own stats in the <a href="damage.html#damage-calculation-pipeline">Damage Calculation Pipeline</a> — for example, when a <code>DamageTypeSO</code>'s Defense Penetration relies on a stat that the performer doesn't define. The performer's own stats always take precedence; the resolved owner's stats are consulted only for stats the performer doesn't have. See <a href="damage.html#defense-penetration">Defense Penetration</a>.</p>
+<hr>
 <h3 id="lifesteal">Lifesteal</h3>
 <p>Lifesteal has <strong>two configuration layers</strong>:</p>
 <ul>
@@ -484,6 +526,36 @@ entityHealth.ManualHealthRegenerationTick();
 <li>Amount selector (initial, step, or final damage)</li>
 </ul>
 <p>If the embedded <strong>Lifesteal Stat</strong> is not assigned, generic lifesteal is effectively disabled. This generic contribution stacks with any lifesteal configured on the specific <code>DamageTypeSO</code> of the hit.</p>
+<h4 id="lifesteal-stat-source">Lifesteal Stat Source</h4>
+<p><strong>Type:</strong> <code>LifestealStatSource</code><br>
+<strong>Required:</strong> No<br>
+<strong>Description:</strong> Selects whose stats feed the lifesteal rate lookup when <strong>Lifesteal Attribution</strong> resolves the performer to a different entity. See <a href="lifesteal.html#lifesteal-and-ownership">Lifesteal and Ownership</a>.</p>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Behavior</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Performer</strong> <em>(default)</em></td>
+<td>Reads the <strong>Lifesteal Stat</strong> from the damage performer only. Preserves the pre-ownership behavior.</td>
+</tr>
+<tr>
+<td><strong>Beneficiary</strong></td>
+<td>Reads the <strong>Lifesteal Stat</strong> from the resolved beneficiary only.</td>
+</tr>
+<tr>
+<td><strong>Performer Then Beneficiary</strong></td>
+<td>Reads from the performer if it has the stat, otherwise falls back to the beneficiary's.</td>
+</tr>
+<tr>
+<td><strong>Sum</strong></td>
+<td>Adds the performer's and the beneficiary's <strong>Lifesteal Stat</strong> values together.</td>
+</tr>
+</tbody>
+</table>
 <h4 id="suppress-lifesteal-events">Suppress Lifesteal Events</h4>
 <p><strong>Type:</strong> <code>bool</code><br>
 <strong>Required:</strong> No<br>

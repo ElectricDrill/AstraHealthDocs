@@ -89,7 +89,7 @@
 
 
   <h1 id="ElectricDrill_AstraHealth_Config_AstraHealthConfigSO" data-uid="ElectricDrill.AstraHealth.Config.AstraHealthConfigSO" class="text-break">
-Class AstraHealthConfigSO  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/Config/AstraHealthConfigSO.cs/#L15"><i class="bi bi-code-slash"></i></a>
+Class AstraHealthConfigSO  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/Config/AstraHealthConfigSO.cs/#L16"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -136,11 +136,49 @@ Class AstraHealthConfigSO  <a class="header-action link-secondary" title="View s
 </h2>
 
 
+  <a id="ElectricDrill_AstraHealth_Config_AstraHealthConfigSO_DamageStatsAttribution_" data-uid="ElectricDrill.AstraHealth.Config.AstraHealthConfigSO.DamageStatsAttribution*"></a>
+
+  <h3 id="ElectricDrill_AstraHealth_Config_AstraHealthConfigSO_DamageStatsAttribution" data-uid="ElectricDrill.AstraHealth.Config.AstraHealthConfigSO.DamageStatsAttribution">
+  DamageStatsAttribution
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/Config/AstraHealthConfigSO.cs/#L128"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Experimental — this API may still change.
+Gets the policy used to resolve the fallback owner whose stats supplement
+<a class="xref" href="ElectricDrill.AstraHealth.Damage.CalculationPipeline.DamageInfo.html#ElectricDrill_AstraHealth_Damage_CalculationPipeline_DamageInfo_PerformerStats">PerformerStats</a> when the performer doesn't define a stat, through the
+framework's <span class="xref">ElectricDrill.AstraRpgFramework.EntityCore.Owner</span> edge (see
+<span class="xref">ElectricDrill.AstraRpgFramework.Ownership.EntityOwnership</span>). Default is <span class="xref">ElectricDrill.AstraRpgFramework.Ownership.EntityAttribution.Direct</span>, which
+preserves the pre-ownership behavior (only the performer's own stats are read) for every
+existing project.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public EntityAttribution DamageStatsAttribution { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">EntityAttribution</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="ElectricDrill_AstraHealth_Config_AstraHealthConfigSO_DefaultDamageCalculationCalculationStrategy_" data-uid="ElectricDrill.AstraHealth.Config.AstraHealthConfigSO.DefaultDamageCalculationCalculationStrategy*"></a>
 
   <h3 id="ElectricDrill_AstraHealth_Config_AstraHealthConfigSO_DefaultDamageCalculationCalculationStrategy" data-uid="ElectricDrill.AstraHealth.Config.AstraHealthConfigSO.DefaultDamageCalculationCalculationStrategy">
   DefaultDamageCalculationCalculationStrategy
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/Config/AstraHealthConfigSO.cs/#L59"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/Config/AstraHealthConfigSO.cs/#L60"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the default strategy used for calculating net damage when none is explicitly specified in the target entity.</p>
@@ -172,7 +210,7 @@ Class AstraHealthConfigSO  <a class="header-action link-secondary" title="View s
 
   <h3 id="ElectricDrill_AstraHealth_Config_AstraHealthConfigSO_DefaultExpCollectionStrategy" data-uid="ElectricDrill.AstraHealth.Config.AstraHealthConfigSO.DefaultExpCollectionStrategy">
   DefaultExpCollectionStrategy
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/Config/AstraHealthConfigSO.cs/#L154"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/Config/AstraHealthConfigSO.cs/#L186"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the default strategy used for determining when and how experience is collected from kills.
@@ -205,7 +243,7 @@ Individual ExpCollector components can override this with a custom strategy.</p>
 
   <h3 id="ElectricDrill_AstraHealth_Config_AstraHealthConfigSO_DefaultOnDeathGameAction" data-uid="ElectricDrill.AstraHealth.Config.AstraHealthConfigSO.DefaultOnDeathGameAction">
   DefaultOnDeathGameAction
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/Config/AstraHealthConfigSO.cs/#L135"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/Config/AstraHealthConfigSO.cs/#L167"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the default <span class="xref">ElectricDrill.AstraRpgFramework.GameActions.GameAction&lt;TContext&gt;</span> to execute when an entity dies, if no specific strategy is defined in the dying entity.</p>
@@ -237,7 +275,7 @@ Individual ExpCollector components can override this with a custom strategy.</p>
 
   <h3 id="ElectricDrill_AstraHealth_Config_AstraHealthConfigSO_DefaultOnResurrectionGameAction" data-uid="ElectricDrill.AstraHealth.Config.AstraHealthConfigSO.DefaultOnResurrectionGameAction">
   DefaultOnResurrectionGameAction
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/Config/AstraHealthConfigSO.cs/#L140"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/Config/AstraHealthConfigSO.cs/#L172"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the default <span class="xref">ElectricDrill.AstraRpgFramework.GameActions.GameAction&lt;TContext&gt;</span> to execute when an entity is resurrected, if no specific strategy is defined in the resurrected entity.</p>
@@ -269,7 +307,7 @@ Individual ExpCollector components can override this with a custom strategy.</p>
 
   <h3 id="ElectricDrill_AstraHealth_Config_AstraHealthConfigSO_DefaultResurrectionSource" data-uid="ElectricDrill.AstraHealth.Config.AstraHealthConfigSO.DefaultResurrectionSource">
   DefaultResurrectionSource
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/Config/AstraHealthConfigSO.cs/#L145"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/Config/AstraHealthConfigSO.cs/#L177"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the heal source used for resurrections heals.</p>
@@ -301,7 +339,7 @@ Individual ExpCollector components can override this with a custom strategy.</p>
 
   <h3 id="ElectricDrill_AstraHealth_Config_AstraHealthConfigSO_GenericFlatDamageModificationStat" data-uid="ElectricDrill.AstraHealth.Config.AstraHealthConfigSO.GenericFlatDamageModificationStat">
   GenericFlatDamageModificationStat
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/Config/AstraHealthConfigSO.cs/#L54"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/Config/AstraHealthConfigSO.cs/#L55"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the stat that provides flat damage modification, regardless of type or source.
@@ -334,7 +372,7 @@ Applied after percentage modifications. Stacks additively with other flat modifi
 
   <h3 id="ElectricDrill_AstraHealth_Config_AstraHealthConfigSO_GenericFlatHealAmountModifierStat" data-uid="ElectricDrill.AstraHealth.Config.AstraHealthConfigSO.GenericFlatHealAmountModifierStat">
   GenericFlatHealAmountModifierStat
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/Config/AstraHealthConfigSO.cs/#L37"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/Config/AstraHealthConfigSO.cs/#L38"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the stat that provides a flat heal amount modification, applied before percentage modifiers.</p>
@@ -366,7 +404,7 @@ Applied after percentage modifications. Stacks additively with other flat modifi
 
   <h3 id="ElectricDrill_AstraHealth_Config_AstraHealthConfigSO_GenericLifesteal" data-uid="ElectricDrill.AstraHealth.Config.AstraHealthConfigSO.GenericLifesteal">
   GenericLifesteal
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/Config/AstraHealthConfigSO.cs/#L114"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/Config/AstraHealthConfigSO.cs/#L140"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the generic lifesteal configuration applied regardless of damage type.
@@ -401,7 +439,7 @@ triggers lifesteal based on this config, stacking with any type-specific lifeste
 
   <h3 id="ElectricDrill_AstraHealth_Config_AstraHealthConfigSO_GenericPercentageDamageModificationStat" data-uid="ElectricDrill.AstraHealth.Config.AstraHealthConfigSO.GenericPercentageDamageModificationStat">
   GenericPercentageDamageModificationStat
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/Config/AstraHealthConfigSO.cs/#L49"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/Config/AstraHealthConfigSO.cs/#L50"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the stat that modifies any damage received with percentage, regardless of type or source.
@@ -434,7 +472,7 @@ Stacks additively with other percentage damage modifications.</p>
 
   <h3 id="ElectricDrill_AstraHealth_Config_AstraHealthConfigSO_GenericPercentageHealAmountModifierStat" data-uid="ElectricDrill.AstraHealth.Config.AstraHealthConfigSO.GenericPercentageHealAmountModifierStat">
   GenericPercentageHealAmountModifierStat
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/Config/AstraHealthConfigSO.cs/#L32"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/Config/AstraHealthConfigSO.cs/#L33"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the stat that modifies the amount of health healed with a percentage (e.g., 25 for +25% healing).
@@ -467,7 +505,7 @@ Percentage heal modifiers are applied after flat heal modifications.</p>
 
   <h3 id="ElectricDrill_AstraHealth_Config_AstraHealthConfigSO_GlobalDamageResolutionEvent" data-uid="ElectricDrill.AstraHealth.Config.AstraHealthConfigSO.GlobalDamageResolutionEvent">
   GlobalDamageResolutionEvent
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/Config/AstraHealthConfigSO.cs/#L175"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/Config/AstraHealthConfigSO.cs/#L207"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the global event raised after damage is fully resolved for any entity (whether applied or prevented).
@@ -501,7 +539,7 @@ and it drives lifesteal calculations.</p>
 
   <h3 id="ElectricDrill_AstraHealth_Config_AstraHealthConfigSO_GlobalEntityDiedEvent" data-uid="ElectricDrill.AstraHealth.Config.AstraHealthConfigSO.GlobalEntityDiedEvent">
   GlobalEntityDiedEvent
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/Config/AstraHealthConfigSO.cs/#L180"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/Config/AstraHealthConfigSO.cs/#L212"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the global event raised when any entity dies.
@@ -534,7 +572,7 @@ This event is required: all <a class="xref" href="ElectricDrill.AstraHealth.Core
 
   <h3 id="ElectricDrill_AstraHealth_Config_AstraHealthConfigSO_GlobalEntityHealedEvent" data-uid="ElectricDrill.AstraHealth.Config.AstraHealthConfigSO.GlobalEntityHealedEvent">
   GlobalEntityHealedEvent
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/Config/AstraHealthConfigSO.cs/#L200"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/Config/AstraHealthConfigSO.cs/#L232"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the global event raised after a heal is successfully applied to any entity.
@@ -567,7 +605,7 @@ Optional — leave null to skip this notification.</p>
 
   <h3 id="ElectricDrill_AstraHealth_Config_AstraHealthConfigSO_GlobalEntityResurrectedEvent" data-uid="ElectricDrill.AstraHealth.Config.AstraHealthConfigSO.GlobalEntityResurrectedEvent">
   GlobalEntityResurrectedEvent
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/Config/AstraHealthConfigSO.cs/#L205"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/Config/AstraHealthConfigSO.cs/#L237"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the global event raised when any entity is resurrected.
@@ -600,7 +638,7 @@ Optional — leave null to skip this notification.</p>
 
   <h3 id="ElectricDrill_AstraHealth_Config_AstraHealthConfigSO_GlobalHealthChangedEvent" data-uid="ElectricDrill.AstraHealth.Config.AstraHealthConfigSO.GlobalHealthChangedEvent">
   GlobalHealthChangedEvent
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/Config/AstraHealthConfigSO.cs/#L190"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/Config/AstraHealthConfigSO.cs/#L222"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the global event raised when any entity's health changes (gained or lost).
@@ -633,7 +671,7 @@ Optional — leave null to skip this notification.</p>
 
   <h3 id="ElectricDrill_AstraHealth_Config_AstraHealthConfigSO_GlobalHealthRatioChangedEvent" data-uid="ElectricDrill.AstraHealth.Config.AstraHealthConfigSO.GlobalHealthRatioChangedEvent">
   GlobalHealthRatioChangedEvent
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/Config/AstraHealthConfigSO.cs/#L212"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/Config/AstraHealthConfigSO.cs/#L244"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the global event raised whenever any entity's HP/MaxHP ratio changes
@@ -667,7 +705,7 @@ Optional — leave null to skip this notification.</p>
 
   <h3 id="ElectricDrill_AstraHealth_Config_AstraHealthConfigSO_GlobalMaxHealthChangedEvent" data-uid="ElectricDrill.AstraHealth.Config.AstraHealthConfigSO.GlobalMaxHealthChangedEvent">
   GlobalMaxHealthChangedEvent
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/Config/AstraHealthConfigSO.cs/#L185"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/Config/AstraHealthConfigSO.cs/#L217"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the global event raised when any entity's maximum health changes.
@@ -700,7 +738,7 @@ Optional — leave null to skip this notification.</p>
 
   <h3 id="ElectricDrill_AstraHealth_Config_AstraHealthConfigSO_GlobalPreDamageInfoEvent" data-uid="ElectricDrill.AstraHealth.Config.AstraHealthConfigSO.GlobalPreDamageInfoEvent">
   GlobalPreDamageInfoEvent
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/Config/AstraHealthConfigSO.cs/#L170"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/Config/AstraHealthConfigSO.cs/#L202"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the global event raised before damage is applied to any entity, allowing listeners to inspect or
@@ -734,7 +772,7 @@ This event is required: all <a class="xref" href="ElectricDrill.AstraHealth.Core
 
   <h3 id="ElectricDrill_AstraHealth_Config_AstraHealthConfigSO_GlobalPreHealEvent" data-uid="ElectricDrill.AstraHealth.Config.AstraHealthConfigSO.GlobalPreHealEvent">
   GlobalPreHealEvent
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/Config/AstraHealthConfigSO.cs/#L195"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/Config/AstraHealthConfigSO.cs/#L227"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the global event raised before a heal is applied to any entity.
@@ -767,7 +805,7 @@ Optional — leave null to skip this notification.</p>
 
   <h3 id="ElectricDrill_AstraHealth_Config_AstraHealthConfigSO_HealthAttributesScaling" data-uid="ElectricDrill.AstraHealth.Config.AstraHealthConfigSO.HealthAttributesScaling">
   HealthAttributesScaling
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/Config/AstraHealthConfigSO.cs/#L27"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/Config/AstraHealthConfigSO.cs/#L28"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the attributes scaling component that determines how health scales based on attributes.</p>
@@ -799,7 +837,7 @@ Optional — leave null to skip this notification.</p>
 
   <h3 id="ElectricDrill_AstraHealth_Config_AstraHealthConfigSO_HealthRegenerationSource" data-uid="ElectricDrill.AstraHealth.Config.AstraHealthConfigSO.HealthRegenerationSource">
   HealthRegenerationSource
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/Config/AstraHealthConfigSO.cs/#L79"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/Config/AstraHealthConfigSO.cs/#L80"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the heal source used for health regeneration effects.</p>
@@ -827,11 +865,121 @@ Optional — leave null to skip this notification.</p>
 
 
 
+  <a id="ElectricDrill_AstraHealth_Config_AstraHealthConfigSO_KillCreditAttribution_" data-uid="ElectricDrill.AstraHealth.Config.AstraHealthConfigSO.KillCreditAttribution*"></a>
+
+  <h3 id="ElectricDrill_AstraHealth_Config_AstraHealthConfigSO_KillCreditAttribution" data-uid="ElectricDrill.AstraHealth.Config.AstraHealthConfigSO.KillCreditAttribution">
+  KillCreditAttribution
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/Config/AstraHealthConfigSO.cs/#L122"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Experimental — this API may still change.
+Gets the policy used to resolve which entity is <b>credited with a kill</b> from the damage
+performer, through the framework's <span class="xref">ElectricDrill.AstraRpgFramework.EntityCore.Owner</span>
+edge (see <span class="xref">ElectricDrill.AstraRpgFramework.Ownership.EntityOwnership</span>). Consulted for
+<a class="xref" href="ElectricDrill.AstraHealth.Events.Contexts.EntityDiedContext.html#ElectricDrill_AstraHealth_Events_Contexts_EntityDiedContext_Performer">Performer</a> and by
+<a class="xref" href="ElectricDrill.AstraHealth.Experience.Strategies.DirectKillExpStrategySO.html">DirectKillExpStrategySO</a>. Default is
+<span class="xref">ElectricDrill.AstraRpgFramework.Ownership.EntityAttribution.Direct</span>, which preserves the pre-ownership behavior for every
+existing project.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public EntityAttribution KillCreditAttribution { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">EntityAttribution</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="ElectricDrill_AstraHealth_Config_AstraHealthConfigSO_LifestealAttribution_" data-uid="ElectricDrill.AstraHealth.Config.AstraHealthConfigSO.LifestealAttribution*"></a>
+
+  <h3 id="ElectricDrill_AstraHealth_Config_AstraHealthConfigSO_LifestealAttribution" data-uid="ElectricDrill.AstraHealth.Config.AstraHealthConfigSO.LifestealAttribution">
+  LifestealAttribution
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/Config/AstraHealthConfigSO.cs/#L116"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Experimental — this API may still change.
+Gets the policy used to resolve the lifesteal <b>beneficiary</b> from the damage performer,
+through the framework's <span class="xref">ElectricDrill.AstraRpgFramework.EntityCore.Owner</span> edge
+(see <span class="xref">ElectricDrill.AstraRpgFramework.Ownership.EntityOwnership</span>). Consulted by <span class="xref">ElectricDrill.AstraHealth.Heal.LifestealResolver</span>.
+Default is <span class="xref">ElectricDrill.AstraRpgFramework.Ownership.EntityAttribution.Direct</span>, which preserves the pre-ownership behavior
+(the performer is always used as-is) for every existing project.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public EntityAttribution LifestealAttribution { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">EntityAttribution</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="ElectricDrill_AstraHealth_Config_AstraHealthConfigSO_LifestealStatSource_" data-uid="ElectricDrill.AstraHealth.Config.AstraHealthConfigSO.LifestealStatSource*"></a>
+
+  <h3 id="ElectricDrill_AstraHealth_Config_AstraHealthConfigSO_LifestealStatSource" data-uid="ElectricDrill.AstraHealth.Config.AstraHealthConfigSO.LifestealStatSource">
+  LifestealStatSource
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/Config/AstraHealthConfigSO.cs/#L146"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets which entity's stats feed the lifesteal rate lookup when <a class="xref" href="ElectricDrill.AstraHealth.Config.IAstraHealthConfig.html#ElectricDrill_AstraHealth_Config_IAstraHealthConfig_LifestealAttribution">LifestealAttribution</a>
+resolves the damage performer to a different entity. Default is
+<a class="xref" href="ElectricDrill.AstraHealth.Config.LifestealStatSource.html#ElectricDrill_AstraHealth_Config_LifestealStatSource_Performer">Performer</a>, which preserves pre-ownership behavior.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public LifestealStatSource LifestealStatSource { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="ElectricDrill.AstraHealth.Config.LifestealStatSource.html">LifestealStatSource</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="ElectricDrill_AstraHealth_Config_AstraHealthConfigSO_ManualHealthRegenerationStat_" data-uid="ElectricDrill.AstraHealth.Config.AstraHealthConfigSO.ManualHealthRegenerationStat*"></a>
 
   <h3 id="ElectricDrill_AstraHealth_Config_AstraHealthConfigSO_ManualHealthRegenerationStat" data-uid="ElectricDrill.AstraHealth.Config.AstraHealthConfigSO.ManualHealthRegenerationStat">
   ManualHealthRegenerationStat
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/Config/AstraHealthConfigSO.cs/#L95"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/Config/AstraHealthConfigSO.cs/#L96"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets or sets the stat that determines manual health regeneration amount.
@@ -864,7 +1012,7 @@ Use the API to trigger manual regeneration ticks programmatically.</p>
 
   <h3 id="ElectricDrill_AstraHealth_Config_AstraHealthConfigSO_PassiveHealthRegenerationInterval" data-uid="ElectricDrill.AstraHealth.Config.AstraHealthConfigSO.PassiveHealthRegenerationInterval">
   PassiveHealthRegenerationInterval
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/Config/AstraHealthConfigSO.cs/#L87"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/Config/AstraHealthConfigSO.cs/#L88"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the interval (in seconds) between passive health regeneration ticks.
@@ -897,7 +1045,7 @@ Regenerated health is calculated based on the Passive Health Regeneration Stat.<
 
   <h3 id="ElectricDrill_AstraHealth_Config_AstraHealthConfigSO_PassiveHealthRegenerationStat" data-uid="ElectricDrill.AstraHealth.Config.AstraHealthConfigSO.PassiveHealthRegenerationStat">
   PassiveHealthRegenerationStat
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/Config/AstraHealthConfigSO.cs/#L83"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/Config/AstraHealthConfigSO.cs/#L84"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the stat that determines passive health regeneration amount.
@@ -930,7 +1078,7 @@ Stat value represents health regenerated per 10 seconds.</p>
 
   <h3 id="ElectricDrill_AstraHealth_Config_AstraHealthConfigSO_RoundingSettings" data-uid="ElectricDrill.AstraHealth.Config.AstraHealthConfigSO.RoundingSettings">
   RoundingSettings
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/Config/AstraHealthConfigSO.cs/#L65"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/Config/AstraHealthConfigSO.cs/#L66"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the rounding policy used by fractional damage, mitigation, critical and lifesteal calculations.</p>
@@ -962,7 +1110,7 @@ Stat value represents health regenerated per 10 seconds.</p>
 
   <h3 id="ElectricDrill_AstraHealth_Config_AstraHealthConfigSO_SuppressLifestealEvents" data-uid="ElectricDrill.AstraHealth.Config.AstraHealthConfigSO.SuppressLifestealEvents">
   SuppressLifestealEvents
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/Config/AstraHealthConfigSO.cs/#L119"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/Config/AstraHealthConfigSO.cs/#L151"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets whether to suppress PreHeal and ReceivedHeal events for lifesteal healing.
@@ -996,7 +1144,7 @@ Default is false (events are raised).</p>
 
   <h3 id="ElectricDrill_AstraHealth_Config_AstraHealthConfigSO_SuppressManualRegenerationEvents" data-uid="ElectricDrill.AstraHealth.Config.AstraHealthConfigSO.SuppressManualRegenerationEvents">
   SuppressManualRegenerationEvents
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/Config/AstraHealthConfigSO.cs/#L103"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/Config/AstraHealthConfigSO.cs/#L104"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets whether to suppress PreHeal and ReceivedHeal events for manual health regeneration.
@@ -1030,7 +1178,7 @@ Default is false (events are raised).</p>
 
   <h3 id="ElectricDrill_AstraHealth_Config_AstraHealthConfigSO_SuppressPassiveRegenerationEvents" data-uid="ElectricDrill.AstraHealth.Config.AstraHealthConfigSO.SuppressPassiveRegenerationEvents">
   SuppressPassiveRegenerationEvents
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/Config/AstraHealthConfigSO.cs/#L99"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/Config/AstraHealthConfigSO.cs/#L100"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets whether to suppress PreHeal and ReceivedHeal events for passive health regeneration.
@@ -1064,7 +1212,7 @@ Default is false (events are raised).</p>
 
   <h3 id="ElectricDrill_AstraHealth_Config_AstraHealthConfigSO_Tags" data-uid="ElectricDrill.AstraHealth.Config.AstraHealthConfigSO.Tags">
   Tags
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/Config/AstraHealthConfigSO.cs/#L20"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/Config/AstraHealthConfigSO.cs/#L21"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>The tags associated with this object.</p>
@@ -1096,7 +1244,7 @@ Default is false (events are raised).</p>
 
   <h3 id="ElectricDrill_AstraHealth_Config_AstraHealthConfigSO_UnifyLifestealHeals" data-uid="ElectricDrill.AstraHealth.Config.AstraHealthConfigSO.UnifyLifestealHeals">
   UnifyLifestealHeals
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/Config/AstraHealthConfigSO.cs/#L124"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRPGHealth/blob/main/Runtime/Config/AstraHealthConfigSO.cs/#L156"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>When true, generic and type-specific lifesteal amounts are summed into a single heal.

@@ -142,6 +142,10 @@
 <li>The victim's <code>ExpSource</code> has not already been harvested by another collector.</li>
 </ul>
 <p>The harvested check ensures that a single kill cannot be claimed twice when multiple <code>ExpCollector</code> entities use non-harvested-dependent strategies.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>&quot;The entity that dealt the final blow&quot; is resolved through the <strong>Kill Credit Attribution</strong> field in <code>AstraHealthConfigSO</code> (see <a href="package-configuration.html#attribution">Attribution</a>). Under the default <strong>Direct</strong> value this is the literal damage performer; setting it to <strong>Owner</strong> or <strong>Root</strong> lets an owning entity collect XP for kills dealt by an entity it owns — for example, crediting a <code>Spaceship</code>'s <code>ExpCollector</code> for kills scored by its <code>Primary Weapon</code> child entity. The same field also determines who appears as <code>EntityDiedContext.Performer</code> for any other system reacting to the death. See <a href="https://electricdrill.github.io/AstraRpgFrameworkDocs/MD/workflows.html#entity-ownership">Entity Ownership</a> in the Framework documentation.</p>
+</div>
 <h3 id="damage-source-kill">Damage Source Kill</h3>
 <p><em>Relative path:</em> <code>Astra Health -&gt; Exp Collection Strategies -&gt; Damage Source Kill</code></p>
 <p><code>DamageSourceKillExpStrategySO</code> grants XP to the collector whenever a kill is delivered by a specific <code>DamageSourceSO</code>, regardless of which entity caused it. This is the right strategy for scenarios where the <em>cause</em> of death — rather than the attacker — determines who is rewarded.</p>
